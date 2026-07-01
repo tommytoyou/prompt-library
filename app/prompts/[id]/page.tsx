@@ -280,8 +280,8 @@ export default function PromptPage({ params }: { params: { id: string } }) {
                 {prompt.variables.length > 0 ? (
                   <ul className="space-y-3">
                     {prompt.variables.map((v) => (
-                      <li key={v} className="flex items-start gap-3">
-                        <code className="flex-shrink-0 font-mono text-xs text-amber-700 bg-amber-50 border border-amber-100 px-1.5 py-0.5 rounded mt-0.5">
+                      <li key={v} className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                        <code className="font-mono text-xs text-amber-700 bg-amber-50 border border-amber-100 px-1.5 py-0.5 rounded whitespace-nowrap">
                           [{v}]
                         </code>
                         <span className="text-stone-500 text-sm leading-snug">
