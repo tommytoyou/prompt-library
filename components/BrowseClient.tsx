@@ -379,7 +379,7 @@ export default function BrowseClient({ allPrompts, allCategories }: Props) {
                     onClick={() => setQuery("")}
                     className="flex-shrink-0 flex items-center gap-1 px-3 py-2 rounded-lg text-xs font-medium bg-stone-800 text-white"
                   >
-                    "{query}" <span className="ml-0.5 opacity-70">×</span>
+                    &ldquo;{query}&rdquo; <span className="ml-0.5 opacity-70">×</span>
                   </button>
                 )}
                 {selectedCategories.map((id) => (
