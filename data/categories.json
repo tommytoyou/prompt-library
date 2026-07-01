@@ -1,0 +1,87 @@
+[
+  {
+    "id": "marketing",
+    "name": "Marketing",
+    "description": "Prompts to help you attract, engage, and convert your audience across all marketing channels.",
+    "subcategories": [
+      { "id": "social-media-captions", "name": "Social Media Captions" },
+      { "id": "email-newsletters", "name": "Email Newsletters" },
+      { "id": "ad-copy", "name": "Ad Copy" },
+      { "id": "brand-voice-and-messaging", "name": "Brand Voice and Messaging" },
+      { "id": "content-calendars", "name": "Content Calendars" },
+      { "id": "video-and-reel-scripts", "name": "Video and Reel Scripts" }
+    ]
+  },
+  {
+    "id": "sales",
+    "name": "Sales",
+    "description": "Prompts to help you start conversations, handle objections, and close more deals.",
+    "subcategories": [
+      { "id": "cold-outreach-emails", "name": "Cold Outreach Emails" },
+      { "id": "follow-up-sequences", "name": "Follow Up Sequences" },
+      { "id": "objection-handling", "name": "Objection Handling" },
+      { "id": "proposal-and-pitch-writing", "name": "Proposal and Pitch Writing" },
+      { "id": "discovery-call-questions", "name": "Discovery Call Questions" },
+      { "id": "upsell-messaging", "name": "Upsell Messaging" }
+    ]
+  },
+  {
+    "id": "content-creation",
+    "name": "Content Creation",
+    "description": "Prompts for writing, structuring, and repurposing content that builds authority and drives traffic.",
+    "subcategories": [
+      { "id": "blog-post-outlines", "name": "Blog Post Outlines" },
+      { "id": "seo-titles-and-meta-descriptions", "name": "SEO Titles and Meta Descriptions" },
+      { "id": "lead-magnets-and-ebooks", "name": "Lead Magnets and Ebooks" },
+      { "id": "podcast-show-notes", "name": "Podcast Show Notes" },
+      { "id": "repurposing-content", "name": "Repurposing Content" }
+    ]
+  },
+  {
+    "id": "product-and-business-ideas",
+    "name": "Product and Business Ideas",
+    "description": "Prompts to help you brainstorm, validate, name, and price new offers and business ventures.",
+    "subcategories": [
+      { "id": "brainstorming-offers", "name": "Brainstorming Offers" },
+      { "id": "validating-ideas", "name": "Validating Ideas" },
+      { "id": "naming-a-business", "name": "Naming a Business" },
+      { "id": "pricing-strategy", "name": "Pricing Strategy" },
+      { "id": "competitor-analysis", "name": "Competitor Analysis" }
+    ]
+  },
+  {
+    "id": "customer-service",
+    "name": "Customer Service",
+    "description": "Prompts for handling every stage of the customer relationship with professionalism and empathy.",
+    "subcategories": [
+      { "id": "responding-to-reviews", "name": "Responding to Reviews" },
+      { "id": "faq-writing", "name": "FAQ Writing" },
+      { "id": "refund-and-complaint-handling", "name": "Refund and Complaint Handling" },
+      { "id": "onboarding-emails", "name": "Onboarding Emails" },
+      { "id": "win-back-messages", "name": "Win Back Messages" }
+    ]
+  },
+  {
+    "id": "productivity-and-operations",
+    "name": "Productivity and Operations",
+    "description": "Prompts to systematize, delegate, and run your business more efficiently.",
+    "subcategories": [
+      { "id": "daily-and-weekly-planning", "name": "Daily and Weekly Planning" },
+      { "id": "meeting-notes-and-summaries", "name": "Meeting Notes and Summaries" },
+      { "id": "sop-writing", "name": "SOP Writing" },
+      { "id": "hiring-and-job-posts", "name": "Hiring and Job Posts" },
+      { "id": "automation-ideas", "name": "Automation Ideas" }
+    ]
+  },
+  {
+    "id": "visual-and-design",
+    "name": "Visual and Design",
+    "description": "Prompts for generating visual concepts, brand assets, and creative direction using AI image tools.",
+    "subcategories": [
+      { "id": "logo-and-brand-concepts", "name": "Logo and Brand Concepts" },
+      { "id": "social-media-graphics", "name": "Social Media Graphics" },
+      { "id": "product-mockups", "name": "Product Mockups" },
+      { "id": "ad-creative-concepts", "name": "Ad Creative Concepts" }
+    ]
+  }
+]
