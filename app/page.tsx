@@ -36,16 +36,16 @@ export default function HomePage() {
 
       {/* Hero */}
       <section className="bg-stone-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
-          <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 text-xs font-semibold px-3 py-1.5 rounded-full border border-amber-500/20 mb-7">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 text-center">
+          <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 text-xs font-semibold px-3 py-1.5 rounded-full border border-amber-500/20 mb-4">
             ⚡ 100+ prompts across 7 business categories
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] mb-5">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] mb-3">
             The AI prompt library
             <br />
             <span className="text-amber-500">built for business.</span>
           </h1>
-          <p className="text-stone-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-stone-400 text-lg sm:text-xl max-w-2xl mx-auto mb-5 leading-relaxed">
             Ready-to-use prompts for marketing, sales, content, and operations.
             Copy, customize, and get better results from AI — in seconds.
           </p>
@@ -58,9 +58,9 @@ export default function HomePage() {
       </section>
 
       {/* Categories */}
-      <section className="bg-stone-50 py-16 sm:py-20">
+      <section className="bg-stone-50 pt-4 pb-16 sm:pt-5 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
+          <div className="mb-4">
             <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 mb-2">
               Browse by Category
             </h2>
