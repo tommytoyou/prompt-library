@@ -83,5 +83,174 @@
       { "id": "product-mockups", "name": "Product Mockups" },
       { "id": "ad-creative-concepts", "name": "Ad Creative Concepts" }
     ]
+  },
+  {
+    "id": "finance-and-bookkeeping",
+    "name": "Finance and Bookkeeping",
+    "description": "Prompts to help you manage invoicing, expenses, budgeting, and the numbers that keep your business healthy.",
+    "subcategories": [
+      { "id": "invoicing-and-payment-reminders", "name": "Invoicing and Payment Reminders" },
+      { "id": "expense-tracking", "name": "Expense Tracking" },
+      { "id": "budget-planning", "name": "Budget Planning" },
+      { "id": "cash-flow-forecasting", "name": "Cash Flow Forecasting" },
+      { "id": "tax-prep-questions", "name": "Tax Prep Questions" },
+      { "id": "pricing-and-profit-analysis", "name": "Pricing and Profit Analysis" }
+    ]
+  },
+  {
+    "id": "legal-and-contracts",
+    "name": "Legal and Contracts",
+    "description": "Prompts to help you draft, understand, and manage the agreements and policies your business relies on.",
+    "subcategories": [
+      { "id": "service-agreements", "name": "Service Agreements" },
+      { "id": "freelance-contracts", "name": "Freelance Contracts" },
+      { "id": "terms-and-privacy-policies", "name": "Terms and Privacy Policies" },
+      { "id": "cease-and-desist-letters", "name": "Cease and Desist Letters" },
+      { "id": "nda-drafts", "name": "NDA Drafts" },
+      { "id": "client-onboarding-terms", "name": "Client Onboarding Terms" }
+    ]
+  },
+  {
+    "id": "email-and-communication",
+    "name": "Email and Communication",
+    "description": "Prompts to help you write clear, professional messages for every business situation.",
+    "subcategories": [
+      { "id": "professional-email-templates", "name": "Professional Email Templates" },
+      { "id": "meeting-requests", "name": "Meeting Requests" },
+      { "id": "follow-up-reminders", "name": "Follow Up Reminders" },
+      { "id": "difficult-conversations", "name": "Difficult Conversations" },
+      { "id": "networking-intros", "name": "Networking Intros" },
+      { "id": "out-of-office-and-auto-replies", "name": "Out of Office and Auto Replies" }
+    ]
+  },
+  {
+    "id": "seo-and-website",
+    "name": "SEO and Website",
+    "description": "Prompts to help you improve search rankings and turn website visitors into customers.",
+    "subcategories": [
+      { "id": "keyword-research", "name": "Keyword Research" },
+      { "id": "meta-descriptions", "name": "Meta Descriptions" },
+      { "id": "landing-page-copy", "name": "Landing Page Copy" },
+      { "id": "internal-linking-ideas", "name": "Internal Linking Ideas" },
+      { "id": "blog-seo-optimization", "name": "Blog SEO Optimization" },
+      { "id": "site-audit-checklists", "name": "Site Audit Checklists" }
+    ]
+  },
+  {
+    "id": "social-media-growth",
+    "name": "Social Media Growth",
+    "description": "Prompts to help you grow your audience, boost engagement, and build community across platforms.",
+    "subcategories": [
+      { "id": "content-hooks", "name": "Content Hooks" },
+      { "id": "hashtag-strategy", "name": "Hashtag Strategy" },
+      { "id": "engagement-replies", "name": "Engagement Replies" },
+      { "id": "community-building", "name": "Community Building" },
+      { "id": "viral-post-ideas", "name": "Viral Post Ideas" },
+      { "id": "platform-specific-formatting", "name": "Platform Specific Formatting" }
+    ]
+  },
+  {
+    "id": "branding-and-positioning",
+    "name": "Branding and Positioning",
+    "description": "Prompts to help you define your brand story, voice, and what sets you apart in the market.",
+    "subcategories": [
+      { "id": "brand-story", "name": "Brand Story" },
+      { "id": "value-proposition", "name": "Value Proposition" },
+      { "id": "tagline-and-slogans", "name": "Tagline and Slogans" },
+      { "id": "tone-of-voice-guides", "name": "Tone of Voice Guides" },
+      { "id": "competitor-differentiation", "name": "Competitor Differentiation" },
+      { "id": "rebrand-messaging", "name": "Rebrand Messaging" }
+    ]
+  },
+  {
+    "id": "hiring-and-team-management",
+    "name": "Hiring and Team Management",
+    "description": "Prompts to help you hire, onboard, and lead the people who help your business grow.",
+    "subcategories": [
+      { "id": "job-descriptions", "name": "Job Descriptions" },
+      { "id": "interview-questions", "name": "Interview Questions" },
+      { "id": "onboarding-plans", "name": "Onboarding Plans" },
+      { "id": "performance-feedback", "name": "Performance Feedback" },
+      { "id": "contractor-briefs", "name": "Contractor Briefs" },
+      { "id": "team-culture-docs", "name": "Team Culture Docs" }
+    ]
+  },
+  {
+    "id": "networking-and-partnerships",
+    "name": "Networking and Partnerships",
+    "description": "Prompts to help you build relationships, pitch collaborations, and grow through partnerships.",
+    "subcategories": [
+      { "id": "partnership-pitches", "name": "Partnership Pitches" },
+      { "id": "collaboration-proposals", "name": "Collaboration Proposals" },
+      { "id": "podcast-guest-outreach", "name": "Podcast Guest Outreach" },
+      { "id": "affiliate-recruitment", "name": "Affiliate Recruitment" },
+      { "id": "referral-requests", "name": "Referral Requests" },
+      { "id": "event-networking-scripts", "name": "Event Networking Scripts" }
+    ]
+  },
+  {
+    "id": "personal-growth-and-mindset",
+    "name": "Personal Growth and Mindset",
+    "description": "Prompts to help you set goals, build better habits, and stay resilient as a business owner.",
+    "subcategories": [
+      { "id": "goal-setting", "name": "Goal Setting" },
+      { "id": "overcoming-procrastination", "name": "Overcoming Procrastination" },
+      { "id": "decision-frameworks", "name": "Decision Frameworks" },
+      { "id": "burnout-prevention", "name": "Burnout Prevention" },
+      { "id": "habit-building", "name": "Habit Building" },
+      { "id": "reflection-prompts", "name": "Reflection Prompts" }
+    ]
+  },
+  {
+    "id": "analytics-and-reporting",
+    "name": "Analytics and Reporting",
+    "description": "Prompts to help you choose the right metrics, interpret data, and report on what matters.",
+    "subcategories": [
+      { "id": "kpi-selection", "name": "KPI Selection" },
+      { "id": "monthly-report-templates", "name": "Monthly Report Templates" },
+      { "id": "data-interpretation", "name": "Data Interpretation" },
+      { "id": "dashboard-planning", "name": "Dashboard Planning" },
+      { "id": "growth-metrics", "name": "Growth Metrics" },
+      { "id": "client-reporting", "name": "Client Reporting" }
+    ]
+  },
+  {
+    "id": "ecommerce-and-online-selling",
+    "name": "E-commerce and Online Selling",
+    "description": "Prompts to help you write listings, recover sales, and sell more across online stores and marketplaces.",
+    "subcategories": [
+      { "id": "product-descriptions", "name": "Product Descriptions" },
+      { "id": "listing-optimization", "name": "Listing Optimization" },
+      { "id": "abandoned-cart-emails", "name": "Abandoned Cart Emails" },
+      { "id": "review-requests", "name": "Review Requests" },
+      { "id": "bundle-and-cross-sell-ideas", "name": "Bundle and Cross Sell Ideas" },
+      { "id": "marketplace-optimization", "name": "Marketplace Optimization" }
+    ]
+  },
+  {
+    "id": "automation-and-workflows",
+    "name": "Automation and Workflows",
+    "description": "Prompts to help you map, automate, and streamline the repetitive processes in your business.",
+    "subcategories": [
+      { "id": "zapier-and-make-setups", "name": "Zapier and Make Setups" },
+      { "id": "email-automation", "name": "Email Automation" },
+      { "id": "task-automation-ideas", "name": "Task Automation Ideas" },
+      { "id": "workflow-mapping", "name": "Workflow Mapping" },
+      { "id": "tool-integration-planning", "name": "Tool Integration Planning" },
+      { "id": "recurring-process-templates", "name": "Recurring Process Templates" }
+    ]
+  },
+  {
+    "id": "learning-and-skill-building",
+    "name": "Learning and Skill Building",
+    "description": "Prompts to help you learn faster, plan your growth, and master new skills for your business.",
+    "subcategories": [
+      { "id": "skill-roadmaps", "name": "Skill Roadmaps" },
+      { "id": "course-outlines", "name": "Course Outlines" },
+      { "id": "study-plans", "name": "Study Plans" },
+      { "id": "concept-explainers", "name": "Concept Explainers" },
+      { "id": "practice-exercises", "name": "Practice Exercises" },
+      { "id": "resource-curation", "name": "Resource Curation" }
+    ]
   }
 ]
