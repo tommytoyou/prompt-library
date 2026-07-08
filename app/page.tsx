@@ -36,26 +36,37 @@ export default function HomePage() {
       <Nav />
 
       {/* Hero */}
-      <section className="bg-stone-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 text-center">
-          <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 text-xs font-semibold px-3 py-1.5 rounded-full border border-amber-500/20 mb-4">
-            ⚡ Today&apos;s count: {allPrompts.length.toLocaleString()} prompts and growing
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] mb-3">
-            The AI prompt library
+      <section className="bg-background">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-text leading-[1.1] mb-6">
+            Find the Right AI Prompt
             <br />
-            <span className="text-amber-500">built for business.</span>
+            in Seconds.
           </h1>
-          <p className="text-stone-400 text-lg sm:text-xl max-w-2xl mx-auto mb-5 leading-relaxed">
-            Ready-to-use prompts for marketing, sales, content, and operations.
-            Copy, customize, and get better results from AI — in seconds.
+          <p className="text-lg text-muted max-w-2xl mx-auto mb-8 leading-relaxed">
+            Search thousands of production-ready prompts for Claude, ChatGPT, Gemini, and other
+            leading AI models. Customize them instantly and integrate them into your workflow.
           </p>
 
-          <SearchBar />
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
+            <Link
+              href="/browse"
+              className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-white font-semibold hover:bg-primary-hover transition-colors duration-200"
+            >
+              Browse Library
+            </Link>
+            <Link
+              href="/browse"
+              className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-text font-semibold border border-border hover:bg-surface transition-colors duration-200"
+            >
+              Explore Categories
+            </Link>
+          </div>
+
+          <div className="max-w-2xl mx-auto">
+            <SearchBar />
+          </div>
           <DesignedFor />
-          <p className="text-stone-600 text-xs mt-3">
-            Search across all prompts by keyword, category, or AI tool
-          </p>
         </div>
       </section>
 

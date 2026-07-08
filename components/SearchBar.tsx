@@ -14,10 +14,10 @@ export default function SearchBar() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="relative max-w-xl mx-auto">
+    <form onSubmit={handleSubmit} className="relative w-full">
       <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
         <svg
-          className="w-5 h-5 text-stone-500"
+          className="w-5 h-5 text-muted"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -35,12 +35,12 @@ export default function SearchBar() {
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder='Search prompts… e.g. "cold email", "Instagram", "SOP"'
-        className="w-full bg-stone-800 border border-stone-700 text-stone-200 placeholder-stone-500 rounded-xl pl-12 pr-28 py-4 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+        className="w-full bg-white border border-border text-text placeholder-muted rounded-xl pl-12 pr-28 py-4 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
       />
       <div className="absolute inset-y-0 right-2 flex items-center">
         <button
           type="submit"
-          className="bg-amber-500 hover:bg-amber-600 text-stone-900 font-semibold text-sm px-4 py-2 rounded-lg transition-colors"
+          className="bg-primary hover:bg-primary-hover text-white font-semibold text-sm px-4 py-2 rounded-lg transition-colors duration-200"
         >
           Search
         </button>

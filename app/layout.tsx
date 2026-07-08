@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const jakarta = Plus_Jakarta_Sans({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-jakarta",
-  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-inter",
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://promptlibrary.vercel.app";
@@ -43,7 +42,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${jakarta.variable} font-sans antialiased bg-stone-50 text-stone-900`}>
+      <body className={`${inter.variable} font-sans antialiased bg-background text-text`}>
         {children}
       </body>
     </html>
