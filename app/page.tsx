@@ -38,7 +38,7 @@ export default function HomePage() {
       <section className="bg-stone-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 text-center">
           <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 text-xs font-semibold px-3 py-1.5 rounded-full border border-amber-500/20 mb-4">
-            ⚡ 100+ prompts across 7 business categories
+            ⚡ Today&apos;s count: {allPrompts.length.toLocaleString()} prompts and growing
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] mb-3">
             The AI prompt library
