@@ -3,6 +3,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import PromptCard from "@/components/PromptCard";
 import SearchBar from "@/components/SearchBar";
+import DesignedFor from "@/components/DesignedFor";
 import categoriesData from "@/data/categories.json";
 import promptsData from "@/data/prompts.json";
 import { Category, Prompt } from "@/types";
@@ -51,6 +52,7 @@ export default function HomePage() {
           </p>
 
           <SearchBar />
+          <DesignedFor />
           <p className="text-stone-600 text-xs mt-3">
             Search across all prompts by keyword, category, or AI tool
           </p>
