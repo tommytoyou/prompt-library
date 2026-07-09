@@ -38,6 +38,12 @@ export default function HomePage() {
       {/* Hero */}
       <section className="bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+          <div className="inline-flex items-center justify-center mx-auto gap-2 rounded-full bg-[#2563EB]/10 px-4 py-1.5 mb-6">
+            <span className="h-2 w-2 rounded-full bg-[#2563EB]" />
+            <span className="text-sm font-medium text-[#2563EB]">
+              Today&apos;s count: {allPrompts.length.toLocaleString()} prompts and growing
+            </span>
+          </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-text leading-[1.1] mb-6">
             Find the Right AI Prompt
             <br />
@@ -66,9 +72,6 @@ export default function HomePage() {
           <div className="max-w-2xl mx-auto">
             <SearchBar />
           </div>
-          <p className="text-sm text-muted text-center mt-4">
-            ⚡ Today&apos;s count: {allPrompts.length.toLocaleString()} prompts and growing
-          </p>
           <DesignedFor />
         </div>
       </section>
