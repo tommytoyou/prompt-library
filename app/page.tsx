@@ -66,7 +66,7 @@ export default function HomePage() {
           <div className="max-w-2xl mx-auto">
             <SearchBar />
           </div>
-          <p className="text-xs text-muted text-center mt-4">
+          <p className="text-sm text-muted text-center mt-4">
             ⚡ Today&apos;s count: {allPrompts.length.toLocaleString()} prompts and growing
           </p>
           <DesignedFor />
