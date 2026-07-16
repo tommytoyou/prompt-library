@@ -327,7 +327,7 @@ export default function BrowseClient({ allPrompts, allCategories }: Props) {
         <div className="flex gap-8 items-start">
 
           {/* ── Desktop sidebar ── */}
-          <aside className="hidden lg:block w-52 flex-shrink-0 sticky top-24">
+          <aside className="hidden lg:block w-52 flex-shrink-0 lg:sticky lg:top-24 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto pb-6">
             <div className="flex items-center justify-between mb-5">
               <h2 className="font-semibold text-stone-900 text-sm">Filters</h2>
               {hasFilters && (
