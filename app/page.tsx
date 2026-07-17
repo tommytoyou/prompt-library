@@ -83,7 +83,7 @@ export default function HomePage() {
             <h2 className="text-2xl sm:text-3xl font-bold text-stone-900 mb-2">
               Browse by Category
             </h2>
-            <p className="text-stone-500">Seven areas of your business, covered.</p>
+            <p className="text-stone-500">{categories.length} areas of your business, covered.</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {categories.map((cat) => {
