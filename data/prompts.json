@@ -27680,5 +27680,464 @@
       "lp-above-fold-builder",
       "lp-cta-writer"
     ]
+  },
+  {
+    "id": "ilink-opportunity-finder",
+    "title": "Find Internal Linking Opportunities",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me find internal linking opportunities across my [BUSINESS TYPE] site. My pages and what each covers are [LIST YOUR PAGES AND THEIR TOPICS]. Help me identify: which pages should link to which others based on how topics relate, where a link would genuinely help a reader rather than just exist, and the obvious connections I have probably missed. Note that internal links are for guiding readers first and search engines second, so a link that helps nobody read further is not worth adding. Give me the linking opportunities as pairs with a reason for each.",
+    "description": "Find internal linking opportunities across your pages based on how topics relate.",
+    "useCase": "Use this when your pages sit disconnected from each other. Finding where a link would genuinely help a reader continue matters more than link count, since internal links serve readers first and search engines second, and a link that helps nobody read further earns its place nowhere.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST YOUR PAGES AND THEIR TOPICS"
+    ],
+    "relatedPromptIds": [
+      "ilink-anchor-text-writer",
+      "ilink-orphan-page-finder",
+      "ilink-reader-first-checker"
+    ]
+  },
+  {
+    "id": "ilink-anchor-text-writer",
+    "title": "Write Anchor Text That Reads Naturally",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me write anchor text for internal links on my [BUSINESS TYPE] site. The link goes from [THE PAGE YOU ARE LINKING FROM] to [THE PAGE YOU ARE LINKING TO, AND WHAT IT COVERS], and the surrounding sentence is [PASTE THE SENTENCE, OR DESCRIBE THE CONTEXT]. Write anchor text that describes where the link goes so a reader knows what they will get, reads naturally in the sentence, and avoids both click here and awkwardly stuffed keywords. Note that anchor text is a promise about the destination, so click here breaks that promise and keyword stuffing reads as spam. Give me a few options.",
+    "description": "Write anchor text that tells the reader where the link goes and reads naturally.",
+    "useCase": "Use this whenever you add a link. Anchor text is a promise about the destination, so click here tells the reader nothing while a keyword jammed in awkwardly reads as spam, and describing where the link actually goes serves both the reader and search engines at once.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PAGE YOU ARE LINKING FROM",
+      "THE PAGE YOU ARE LINKING TO, AND WHAT IT COVERS",
+      "PASTE THE SENTENCE, OR DESCRIBE THE CONTEXT"
+    ],
+    "relatedPromptIds": [
+      "ilink-opportunity-finder",
+      "ilink-anchor-variety",
+      "ilink-reader-first-checker"
+    ]
+  },
+  {
+    "id": "ilink-orphan-page-finder",
+    "title": "Find Pages Nothing Links To",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me find orphan pages on my [BUSINESS TYPE] site that nothing else links to. My pages are [LIST YOUR PAGES], and my main navigation links to [WHAT IS IN YOUR NAV]. Help me work out: which pages are likely reachable only by direct link or search, why that is a problem for both readers and search engines, and where each orphan could be linked from naturally. Note that a page nothing links to is a page you are quietly hiding, and search engines struggle to value pages they can barely reach. Give me the likely orphans and where to link them from.",
+    "description": "Find pages nothing links to and where they could be linked from naturally.",
+    "useCase": "Use this to surface pages you are quietly hiding. A page nothing else links to is reachable only by direct link or search, which means readers rarely find it and search engines struggle to value it, and most sites have several sitting forgotten in exactly that state.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST YOUR PAGES",
+      "WHAT IS IN YOUR NAV"
+    ],
+    "relatedPromptIds": [
+      "ilink-opportunity-finder",
+      "ilink-depth-reducer",
+      "ilink-new-page-integrator"
+    ]
+  },
+  {
+    "id": "ilink-reader-first-checker",
+    "title": "Check Whether a Link Actually Helps",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether the internal links on a page actually help the reader, for my [BUSINESS TYPE] site. Here is the page and its links: [DESCRIBE THE PAGE AND LIST THE LINKS IT CONTAINS]. For each link, tell me honestly: whether a reader at that point would want to go there, whether it interrupts the flow, and whether it exists for the reader or only for SEO. Tell me which to keep, move, or cut. Note that a page cluttered with links nobody wants trains readers to ignore all of them, including the ones that matter. Give me the verdict on each.",
+    "description": "Check whether each internal link helps the reader or just exists for SEO.",
+    "useCase": "Use this on a page stuffed with links. A page cluttered with links nobody wants trains readers to ignore all of them, including the useful ones, so being honest about which serve the reader and which exist only for search engines is what keeps the important links visible.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DESCRIBE THE PAGE AND LIST THE LINKS IT CONTAINS"
+    ],
+    "relatedPromptIds": [
+      "ilink-anchor-text-writer",
+      "ilink-over-linking-fixer",
+      "ilink-opportunity-finder"
+    ]
+  },
+  {
+    "id": "ilink-cluster-connector",
+    "title": "Connect a Cluster of Related Pages",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me connect a cluster of related pages on my [BUSINESS TYPE] site. My main page on the topic is [THE CENTRAL PAGE], and my related pages are [LIST THE SUPPORTING PAGES]. Help me plan the linking: how the central page should link out to the supporting ones, how each supporting page should link back and to its siblings, and what structure makes the group read as a connected whole. Note that a well linked cluster signals depth on a topic and helps a reader move through it, while scattered unlinked pages on the same subject waste that depth. Give me the linking structure.",
+    "description": "Link a group of related pages into a connected cluster with clear structure.",
+    "useCase": "Use this when you have several pages on one topic sitting unconnected. Linking them into a cluster with a central page and supporting siblings signals depth on the subject and helps readers move through it, whereas the same pages scattered and unlinked waste the depth you built.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE CENTRAL PAGE",
+      "LIST THE SUPPORTING PAGES"
+    ],
+    "relatedPromptIds": [
+      "ilink-hub-page-planner",
+      "ilink-opportunity-finder",
+      "ilink-new-page-integrator"
+    ]
+  },
+  {
+    "id": "ilink-hub-page-planner",
+    "title": "Plan a Hub Page That Links Everything",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me plan a hub page that pulls together related content on my [BUSINESS TYPE] site. My topic is [THE BROAD TOPIC], and my existing content on it is [LIST THE PAGES]. Help me design a hub: what the hub page itself should say, how it should organize and link to the pieces, what order or grouping helps a reader, and whether I have gaps a hub would expose. Note that a hub page gives readers one place to find everything on a topic and gives search engines a clear map of how my content fits together. Give me the hub structure and what it should link to.",
+    "description": "Plan a hub page that organizes and links all your content on a topic.",
+    "useCase": "Use this to give readers one entry point to everything on a topic. A hub page organizes scattered content into a clear map that helps readers find what they need and shows search engines how your pages fit together, and planning it often exposes the gaps in your coverage.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE BROAD TOPIC",
+      "LIST THE PAGES"
+    ],
+    "relatedPromptIds": [
+      "ilink-cluster-connector",
+      "ilink-opportunity-finder",
+      "ilink-navigation-planner"
+    ]
+  },
+  {
+    "id": "ilink-depth-reducer",
+    "title": "Bring Buried Pages Closer to the Surface",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me bring buried pages closer to the surface on my [BUSINESS TYPE] site. My site structure is [DESCRIBE HOW PAGES NEST, E.G. HOMEPAGE TO CATEGORY TO SUBCATEGORY TO PAGE], and the pages I care about are [WHICH PAGES MATTER MOST]. Help me work out: which important pages sit too many clicks from the homepage, why that weakens them, and how to link them closer to the surface. Note that a valuable page five clicks deep is both hard for readers to find and treated as less important by search engines. Give me which pages to surface and how.",
+    "description": "Bring important pages that sit too deep closer to the homepage.",
+    "useCase": "Use this when valuable pages are buried deep in your structure. A page five clicks from the homepage is hard for readers to reach and treated as less important by search engines, so surfacing your money pages with closer links is a quiet but real improvement.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DESCRIBE HOW PAGES NEST, E.G. HOMEPAGE TO CATEGORY TO SUBCATEGORY TO PAGE",
+      "WHICH PAGES MATTER MOST"
+    ],
+    "relatedPromptIds": [
+      "ilink-orphan-page-finder",
+      "ilink-navigation-planner",
+      "ilink-priority-linker"
+    ]
+  },
+  {
+    "id": "ilink-priority-linker",
+    "title": "Send More Links to Your Important Pages",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me point more internal links at the pages that matter most on my [BUSINESS TYPE] site. My most important pages are [WHICH PAGES DRIVE BUSINESS, E.G. SERVICE PAGES, KEY PRODUCTS], and my other content is [LIST OR DESCRIBE YOUR BLOG AND SUPPORTING PAGES]. Help me find natural places in my existing content to link to the important pages, where the link genuinely fits the context. Note that a page many of my own pages link to is one I am telling search engines to treat as important, but a forced link that does not fit the context helps nobody. Give me the linking opportunities.",
+    "description": "Point internal links at your key pages from natural spots in existing content.",
+    "useCase": "Use this to strengthen the pages that actually drive business. Pointing internal links at your service or product pages from relevant content tells search engines those pages matter, provided the links fit the context, since a forced link jammed in where it does not belong helps neither the reader nor the ranking.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHICH PAGES DRIVE BUSINESS, E.G. SERVICE PAGES, KEY PRODUCTS",
+      "LIST OR DESCRIBE YOUR BLOG AND SUPPORTING PAGES"
+    ],
+    "relatedPromptIds": [
+      "ilink-depth-reducer",
+      "ilink-opportunity-finder",
+      "ilink-blog-to-money-page"
+    ]
+  },
+  {
+    "id": "ilink-blog-to-money-page",
+    "title": "Link Blog Posts to Your Service Pages",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me link my blog posts to my service or product pages on my [BUSINESS TYPE] site. My blog post is about [THE POST TOPIC], and my relevant service or product page is [WHAT IT OFFERS]. Help me find the natural bridge: where in the post a reader would genuinely be ready to learn about my offer, how to link there without it feeling like a jarring sales insert, and the anchor text that fits. Note that a reader learning about a problem is a reader who might want it solved, but a sales link dropped mid explanation breaks trust. Give me where and how to link.",
+    "description": "Link informational blog posts to your offer without a jarring sales insert.",
+    "useCase": "Use this to connect content to the pages that earn money. A reader learning about a problem is a reader who might want it solved, so linking from the post to your relevant service at the right moment converts interest, while a sales link dropped mid explanation breaks the trust the post was building.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE POST TOPIC",
+      "WHAT IT OFFERS"
+    ],
+    "relatedPromptIds": [
+      "ilink-priority-linker",
+      "ilink-anchor-text-writer",
+      "ilink-contextual-placement"
+    ]
+  },
+  {
+    "id": "ilink-contextual-placement",
+    "title": "Place Links Where They Fit the Content",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me place internal links naturally within a piece of content on my [BUSINESS TYPE] site. Here is my content: [PASTE OR DESCRIBE IT], and the pages I want to link to are [LIST THE PAGES AND WHAT EACH COVERS]. Help me find the spots where each link genuinely fits the flow of what I am saying, rather than bolting a links section onto the end. Tell me if a page does not fit anywhere naturally. Note that a link woven into the point being made gets clicked, while a related links list at the bottom mostly gets ignored. Give me where each link belongs.",
+    "description": "Weave links into the content where they fit rather than listing them at the end.",
+    "useCase": "Use this instead of dumping a related links list at the bottom. A link woven into the point being made gets clicked while a list at the end mostly gets ignored, and being told a page fits nowhere naturally saves you forcing a link that would only clutter the piece.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT",
+      "LIST THE PAGES AND WHAT EACH COVERS"
+    ],
+    "relatedPromptIds": [
+      "ilink-blog-to-money-page",
+      "ilink-anchor-text-writer",
+      "ilink-reader-first-checker"
+    ]
+  },
+  {
+    "id": "ilink-over-linking-fixer",
+    "title": "Fix a Page with Too Many Links",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me fix a page with too many internal links on my [BUSINESS TYPE] site. Here is the page and its links: [DESCRIBE THE PAGE AND LIST OR COUNT THE LINKS]. Help me cut it back: which links are essential, which are redundant because several point to the same place, which distract from the main path, and which just clutter. Note that when every other word is a link, readers stop trusting any of them and the important links lose their weight among the noise. Give me which links to keep and which to cut.",
+    "description": "Cut a page with too many links back to the ones that matter.",
+    "useCase": "Use this on a page where every other word is a link. When links are everywhere readers stop trusting any of them and the important ones lose their weight in the noise, so cutting back to the essential links is what makes the ones that remain actually get clicked.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DESCRIBE THE PAGE AND LIST OR COUNT THE LINKS"
+    ],
+    "relatedPromptIds": [
+      "ilink-reader-first-checker",
+      "ilink-contextual-placement",
+      "ilink-anchor-text-writer"
+    ]
+  },
+  {
+    "id": "ilink-new-page-integrator",
+    "title": "Integrate a New Page into Your Site",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me integrate a new page into my [BUSINESS TYPE] site with internal links. My new page is about [THE NEW PAGE TOPIC], and my existing related content is [LIST THE PAGES IT RELATES TO]. Help me plan: which existing pages should link to the new one so it does not launch as an orphan, which pages the new one should link out to, and the anchor text for each. Note that publishing a page and linking nothing to it means readers and search engines may take a long time to find it, if ever. Give me the links to add in both directions.",
+    "description": "Link a new page in both directions so it does not launch as an orphan.",
+    "useCase": "Use this every time you publish something new. A page with nothing linking to it can take a long time for readers and search engines to find, if ever, so adding links from existing content the moment you publish is what gives the new page a chance rather than leaving it stranded.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE NEW PAGE TOPIC",
+      "LIST THE PAGES IT RELATES TO"
+    ],
+    "relatedPromptIds": [
+      "ilink-orphan-page-finder",
+      "ilink-cluster-connector",
+      "ilink-opportunity-finder"
+    ]
+  },
+  {
+    "id": "ilink-anchor-variety",
+    "title": "Vary Anchor Text Across Links",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me vary the anchor text pointing to one page on my [BUSINESS TYPE] site. The destination page is about [WHAT THE PAGE COVERS], and it is currently linked from [LIST THE PAGES LINKING TO IT AND THE ANCHOR TEXT EACH USES, IF YOU KNOW]. Help me write natural variations so the links do not all use the identical phrase, while each still describes the destination clearly. Note that using the exact same keyword rich anchor everywhere can look manipulative, and natural writing produces varied anchors anyway. Give me varied anchor options that each fit their context.",
+    "description": "Vary the anchor text pointing to one page so it does not look manipulative.",
+    "useCase": "Use this when many pages link to one destination with the identical phrase. Using the exact same keyword rich anchor everywhere can look manipulative, whereas natural writing produces variation on its own, so varied anchors that each fit their own context read as genuine rather than engineered.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THE PAGE COVERS",
+      "LIST THE PAGES LINKING TO IT AND THE ANCHOR TEXT EACH USES, IF YOU KNOW"
+    ],
+    "relatedPromptIds": [
+      "ilink-anchor-text-writer",
+      "ilink-priority-linker",
+      "ilink-contextual-placement"
+    ]
+  },
+  {
+    "id": "ilink-navigation-planner",
+    "title": "Plan Navigation and Menu Links",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me plan the navigation menu for my [BUSINESS TYPE] site. My pages are [LIST THE MAIN PAGES AND SECTIONS], and my most important pages are [WHICH ONES MATTER MOST]. Help me design a menu that puts the important pages within easy reach, groups related items sensibly, and does not overwhelm with too many options. Note that navigation links appear on every page, so what I put in the menu is what I am telling both readers and search engines matters most, and a menu with thirty items helps nobody. Give me a navigation structure.",
+    "description": "Plan a navigation menu that surfaces important pages without overwhelming.",
+    "useCase": "Use this to design or fix your menu. Navigation links appear on every page, so what sits in the menu tells readers and search engines what matters most, and a menu crammed with thirty items helps nobody find the handful of pages that actually drive your business.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST THE MAIN PAGES AND SECTIONS",
+      "WHICH ONES MATTER MOST"
+    ],
+    "relatedPromptIds": [
+      "ilink-depth-reducer",
+      "ilink-hub-page-planner",
+      "ilink-footer-link-planner"
+    ]
+  },
+  {
+    "id": "ilink-footer-link-planner",
+    "title": "Decide What Belongs in the Footer",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me decide what internal links belong in my [BUSINESS TYPE] site footer. My pages are [LIST YOUR PAGES], and what is in my footer now is [WHAT IS THERE, OR WRITE NOTHING YET]. Help me work out: what genuinely belongs in the footer such as key pages and legal pages, what people expect to find there, and what should not be there just to spread links around. Note that a footer stuffed with links to every page dilutes the signal and looks like link spreading rather than helpful navigation. Give me what to include and what to leave out.",
+    "description": "Decide which internal links genuinely belong in your footer.",
+    "useCase": "Use this when planning or cleaning up your footer. Footers are useful for key pages and the legal pages people expect there, but stuffing one with links to every page dilutes the signal and reads as link spreading rather than helpful navigation, so knowing what to leave out matters.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST YOUR PAGES",
+      "WHAT IS THERE, OR WRITE NOTHING YET"
+    ],
+    "relatedPromptIds": [
+      "ilink-navigation-planner",
+      "ilink-priority-linker",
+      "ilink-reader-first-checker"
+    ]
+  },
+  {
+    "id": "ilink-related-content-suggester",
+    "title": "Suggest Related Content to Read Next",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me suggest what a reader should read next at the end of a page on my [BUSINESS TYPE] site. The page they just read is about [THE CURRENT TOPIC], and my other relevant content is [LIST YOUR RELATED PAGES]. Help me pick the two or three most genuinely relevant next reads for someone who finished this page, and write the framing that makes them want to click. Note that the best next read is the one that matches where the reader's curiosity naturally goes, not just anything vaguely on topic. Give me the suggested next reads and how to frame them.",
+    "description": "Suggest genuinely relevant next reads that match where curiosity goes.",
+    "useCase": "Use this for the end of a page. The best next read is the one matching where a reader's curiosity naturally goes after finishing, not just anything vaguely related, and two or three well chosen suggestions keep someone on your site rather than sending them back to search.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE CURRENT TOPIC",
+      "LIST YOUR RELATED PAGES"
+    ],
+    "relatedPromptIds": [
+      "ilink-contextual-placement",
+      "ilink-cluster-connector",
+      "ilink-reader-journey-mapper"
+    ]
+  },
+  {
+    "id": "ilink-reader-journey-mapper",
+    "title": "Map the Path You Want Readers to Take",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me map the path I want readers to take through my [BUSINESS TYPE] site. A reader usually arrives on [WHERE THEY LAND], what I ultimately want is [THE ACTION OR DESTINATION], and my relevant pages in between are [LIST THE PAGES THAT COULD BRIDGE THEM]. Help me design the link path: what a reader should be nudged toward at each step, how the links guide them from arrival toward the goal, and where the journey currently breaks. Note that most readers arrive on a random page and leave, and internal links are how I offer them a next step rather than a dead end. Give me the mapped path.",
+    "description": "Map a link path that guides readers from where they land toward your goal.",
+    "useCase": "Use this to turn random arrivals into guided journeys. Most readers land on some page and leave, and internal links are how you offer a next step rather than a dead end, so mapping the path from arrival toward your goal is what turns a visit into a direction.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHERE THEY LAND",
+      "THE ACTION OR DESTINATION",
+      "LIST THE PAGES THAT COULD BRIDGE THEM"
+    ],
+    "relatedPromptIds": [
+      "ilink-related-content-suggester",
+      "ilink-priority-linker",
+      "ilink-cluster-connector"
+    ]
+  },
+  {
+    "id": "ilink-broken-link-checker",
+    "title": "Plan a Check for Broken Internal Links",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me plan a check for broken internal links on my [BUSINESS TYPE] site. My situation is [WHAT HAS CHANGED, E.G. RENAMED PAGES, DELETED POSTS, RESTRUCTURED URLS, OR WRITE NOT SURE]. Help me work out: where broken internal links are most likely after these changes, how to find them, what to do with links pointing to pages I deleted, and how to avoid this next time. Note that a broken internal link frustrates readers and wastes the crawl budget search engines spend on my site, and they accumulate silently every time I move or delete a page. Give me a checking approach and fixes.",
+    "description": "Plan how to find and fix broken internal links after site changes.",
+    "useCase": "Use this after renaming, deleting, or restructuring pages. Broken internal links frustrate readers and waste the effort search engines spend crawling your site, and they accumulate silently every time you move or delete a page, so a deliberate check after changes catches what you would otherwise never notice.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT HAS CHANGED, E.G. RENAMED PAGES, DELETED POSTS, RESTRUCTURED URLS, OR WRITE NOT SURE"
+    ],
+    "relatedPromptIds": [
+      "ilink-orphan-page-finder",
+      "ilink-audit-planner",
+      "ilink-redirect-planner"
+    ]
+  },
+  {
+    "id": "ilink-redirect-planner",
+    "title": "Plan Redirects When You Move a Page",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me plan redirects and link updates for a page I am moving or deleting on my [BUSINESS TYPE] site. The page is [THE PAGE AND ITS CURRENT URL], what I am doing is [MOVING, DELETING, OR MERGING IT], and where it should go instead is [THE NEW DESTINATION, OR WRITE NOWHERE OBVIOUS]. Help me plan: where to redirect it, which internal links pointing to it need updating, and how to avoid leaving readers and search engines at a dead end. Note that a redirect handles outside links and old bookmarks, but internal links should be updated to point at the real destination rather than relying on the redirect. Give me the plan.",
+    "description": "Plan redirects and internal link updates when moving or deleting a page.",
+    "useCase": "Use this before you move or delete any page. A redirect catches outside links and old bookmarks, but internal links should be updated to point at the real destination rather than leaning on the redirect, and planning both together avoids leaving readers and search engines at a dead end.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PAGE AND ITS CURRENT URL",
+      "MOVING, DELETING, OR MERGING IT",
+      "THE NEW DESTINATION, OR WRITE NOWHERE OBVIOUS"
+    ],
+    "relatedPromptIds": [
+      "ilink-broken-link-checker",
+      "ilink-new-page-integrator",
+      "ilink-audit-planner"
+    ]
+  },
+  {
+    "id": "ilink-audit-planner",
+    "title": "Plan an Internal Linking Audit",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me plan an internal linking audit for my [BUSINESS TYPE] site. My site has [ROUGH SIZE AND STRUCTURE], and my concern is [WHAT PROMPTED THIS, E.G. POOR NAVIGATION, ORPHAN PAGES, MESSY GROWTH, OR WRITE GENERAL TIDY UP]. Help me plan what to check: orphan pages, pages buried too deep, important pages that need more links, broken links, over linked pages, and anchor text problems. Then tell me which to tackle first for the most benefit. Note that on a small site this is a manual read, and I should fix the few things that matter rather than obsess over a perfect link graph. Give me an audit plan and priorities.",
+    "description": "Plan an internal linking audit and prioritize the fixes that matter.",
+    "useCase": "Use this to tidy internal linking systematically. Checking for orphans, buried pages, and broken links in one pass is efficient, and prioritizing the few fixes that matter keeps you from obsessing over a perfect link graph on a small site where a manual read is all it needs.",
+    "variables": [
+      "BUSINESS TYPE",
+      "ROUGH SIZE AND STRUCTURE",
+      "WHAT PROMPTED THIS, E.G. POOR NAVIGATION, ORPHAN PAGES, MESSY GROWTH, OR WRITE GENERAL TIDY UP"
+    ],
+    "relatedPromptIds": [
+      "ilink-broken-link-checker",
+      "ilink-orphan-page-finder",
+      "ilink-priority-linker"
+    ]
+  },
+  {
+    "id": "ilink-old-content-refresher",
+    "title": "Add Links to Old Content",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me add internal links to my older content on my [BUSINESS TYPE] site. My old posts are about [DESCRIBE OR LIST THE OLDER CONTENT], and the newer pages they could link to are [LIST NEWER PAGES THAT DID NOT EXIST WHEN THE OLD ONES WERE WRITTEN]. Help me find where old posts could naturally link to newer content that came after them, updating the older pieces to point at what now exists. Note that old content was written before newer pages existed, so it often links to nothing recent, and adding those links revives forgotten posts while strengthening new ones. Give me the links to add.",
+    "description": "Update old posts to link to newer content that did not exist when they were written.",
+    "useCase": "Use this to revive forgotten posts. Old content was written before your newer pages existed, so it often links to nothing recent, and going back to add those links both revives the older piece and points valuable internal links at the new pages you actually care about now.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DESCRIBE OR LIST THE OLDER CONTENT",
+      "LIST NEWER PAGES THAT DID NOT EXIST WHEN THE OLD ONES WERE WRITTEN"
+    ],
+    "relatedPromptIds": [
+      "ilink-opportunity-finder",
+      "ilink-new-page-integrator",
+      "ilink-priority-linker"
+    ]
+  },
+  {
+    "id": "ilink-two-way-checker",
+    "title": "Check Links Make Sense Both Ways",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether my internal links make sense in both directions on my [BUSINESS TYPE] site. My two pages are [PAGE A AND WHAT IT COVERS] and [PAGE B AND WHAT IT COVERS], and currently [DESCRIBE WHICH LINKS TO WHICH, OR WRITE NOT SURE]. Help me judge: whether a link should go one way, both ways, or neither, based on where a reader would actually want to move. Note that two pages linking to each other is right when a reader of either might want the other, but forcing reciprocal links everywhere just to be tidy creates links nobody follows. Give me which direction the links should go and why.",
+    "description": "Judge whether links between two pages should go one way, both, or neither.",
+    "useCase": "Use this when deciding link direction between related pages. Mutual links make sense when a reader of either page might want the other, but forcing reciprocal links everywhere just for tidiness creates links nobody follows, so judging by where readers actually want to move is what keeps them useful.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PAGE A AND WHAT IT COVERS",
+      "PAGE B AND WHAT IT COVERS",
+      "DESCRIBE WHICH LINKS TO WHICH, OR WRITE NOT SURE"
+    ],
+    "relatedPromptIds": [
+      "ilink-opportunity-finder",
+      "ilink-reader-first-checker",
+      "ilink-cluster-connector"
+    ]
+  },
+  {
+    "id": "ilink-quick-suggestions",
+    "title": "Get Quick Internal Link Suggestions",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "internal-linking-ideas",
+    "aiTool": "Grok",
+    "promptText": "I need quick internal link suggestions for a page. The page is about [THE PAGE TOPIC], and my other relevant pages are [LIST THEM WITH WHAT EACH COVERS]. Give me the two or three most natural internal links to add, where in the page each fits, and simple anchor text for each. Keep it practical, no theory. Just give me the links to add.",
+    "description": "Get two or three natural internal links to add to a page fast.",
+    "useCase": "Use this when you just want links added to a page and moved on. Two or three natural suggestions with placement and anchor text covers what most pages need, and adding a couple of good links now beats leaving a page connected to nothing while you plan a perfect structure.",
+    "variables": [
+      "THE PAGE TOPIC",
+      "LIST THEM WITH WHAT EACH COVERS"
+    ],
+    "relatedPromptIds": [
+      "ilink-opportunity-finder",
+      "ilink-contextual-placement",
+      "ilink-anchor-text-writer"
+    ]
   }
 ]
