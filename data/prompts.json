@@ -27167,5 +27167,518 @@
       "metadesc-bulk-writer",
       "metadesc-length-fixer"
     ]
+  },
+  {
+    "id": "lp-headline-writer",
+    "title": "Write a Landing Page Headline",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me write the headline for a landing page on my [BUSINESS TYPE] site. What I offer is [YOUR OFFER], the visitor arrives from [WHERE THEY COME FROM, E.G. SEARCH, AN AD, SOCIAL], and what they want is [WHAT THEY ARE TRYING TO ACHIEVE]. Write headline options that say what this actually is rather than being clever, speak to the visitor's goal rather than describing my company, and pass the test of a stranger understanding it in three seconds. Note that a clever headline nobody understands is worse than a plain one that is instantly clear. Give me several options and mark the strongest.",
+    "description": "Write a landing page headline a stranger understands in three seconds.",
+    "useCase": "Use this on the line that decides whether anyone reads further. A clever headline nobody understands is worse than a plain one that lands instantly, and most landing pages fail here by describing the company rather than speaking to what the visitor came to do.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR OFFER",
+      "WHERE THEY COME FROM, E.G. SEARCH, AN AD, SOCIAL",
+      "WHAT THEY ARE TRYING TO ACHIEVE"
+    ],
+    "relatedPromptIds": [
+      "lp-above-fold-builder",
+      "lp-clarity-checker",
+      "lp-subheadline-writer"
+    ]
+  },
+  {
+    "id": "lp-subheadline-writer",
+    "title": "Write the Line Under Your Headline",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me write the subheadline under my landing page headline for my [BUSINESS TYPE]. My headline is [PASTE YOUR HEADLINE], my offer is [WHAT YOU OFFER], and who it is for is [YOUR AUDIENCE]. Write a subheadline that does the job the headline could not fit: naming who it is for, adding the specific detail that makes it credible, or answering the immediate question the headline raises. Note that repeating the headline in different words wastes the line, and that the subheadline is usually where you say who this is not for. Give me a few options.",
+    "description": "Write a subheadline that adds what the headline could not fit.",
+    "useCase": "Use this on the second most read line of the page. The subheadline is where you name who this is for or add the credible detail, and repeating the headline in different words wastes the one line you have before people either commit or leave.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE YOUR HEADLINE",
+      "WHAT YOU OFFER",
+      "YOUR AUDIENCE"
+    ],
+    "relatedPromptIds": [
+      "lp-headline-writer",
+      "lp-above-fold-builder",
+      "lp-audience-namer"
+    ]
+  },
+  {
+    "id": "lp-above-fold-builder",
+    "title": "Build the Top of Your Landing Page",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me build the top section of my landing page for my [BUSINESS TYPE]. My offer is [WHAT YOU OFFER], my visitor is [WHO ARRIVES AND WHAT THEY WANT], and my main action is [WHAT YOU WANT THEM TO DO]. Write the section a visitor sees before scrolling: headline, subheadline, and primary call to action, working together to answer what is this, is it for me, and what do I do next. Note that most visitors decide whether to stay based on this section alone, so everything essential belongs here rather than further down. Give me the full above the fold copy.",
+    "description": "Write the top section that answers what this is, who it is for, and what to do.",
+    "useCase": "Use this because most visitors decide whether to stay before scrolling. The top section has to answer what this is, whether it is for them, and what to do next, and anything essential buried further down is essential information most people will never see.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU OFFER",
+      "WHO ARRIVES AND WHAT THEY WANT",
+      "WHAT YOU WANT THEM TO DO"
+    ],
+    "relatedPromptIds": [
+      "lp-headline-writer",
+      "lp-cta-writer",
+      "lp-page-structure-planner"
+    ]
+  },
+  {
+    "id": "lp-page-structure-planner",
+    "title": "Plan the Structure of a Landing Page",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me plan the structure of a landing page for my [BUSINESS TYPE]. My offer is [WHAT YOU OFFER], my visitor is [WHO THEY ARE AND HOW WARM THEY ARE], and my goal is [THE ONE ACTION YOU WANT]. Plan the sections in order: what comes first, what each section needs to accomplish, what order builds toward the action, and where to place the calls to action. Note that a landing page is an argument in sequence, so a section in the wrong place asks people to decide before they have a reason to. Give me the section order and the job of each.",
+    "description": "Plan landing page sections in an order that builds toward the action.",
+    "useCase": "Use this before writing any copy. A landing page is an argument in sequence, and getting the order wrong means asking someone to decide before you have given them a reason to, which is why structure matters more than the polish of any individual section.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU OFFER",
+      "WHO THEY ARE AND HOW WARM THEY ARE",
+      "THE ONE ACTION YOU WANT"
+    ],
+    "relatedPromptIds": [
+      "lp-above-fold-builder",
+      "lp-single-goal-enforcer",
+      "lp-objection-handler"
+    ]
+  },
+  {
+    "id": "lp-single-goal-enforcer",
+    "title": "Cut Your Landing Page Down to One Goal",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me work out whether my landing page is trying to do too much, for my [BUSINESS TYPE]. Here is my page: [PASTE OR DESCRIBE IT], and the actions currently available are [LIST EVERY LINK, BUTTON, AND ASK ON THE PAGE]. Help me identify: the one action this page actually exists for, everything competing with it, what to cut, and what to keep. Be honest if I am asking visitors to choose between too many things. Note that a page offering five actions usually gets none of them taken, since a confused visitor leaves rather than choosing. Give me what to cut and why.",
+    "description": "Cut a landing page down to the single action it actually exists for.",
+    "useCase": "Use this when a page has accumulated links and asks. A page offering five actions usually gets none taken, because a confused visitor leaves rather than picks, and cutting back to one goal is almost always the highest impact change available.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT",
+      "LIST EVERY LINK, BUTTON, AND ASK ON THE PAGE"
+    ],
+    "relatedPromptIds": [
+      "lp-page-structure-planner",
+      "lp-cta-writer",
+      "lp-distraction-remover"
+    ]
+  },
+  {
+    "id": "lp-cta-writer",
+    "title": "Write a Call to Action Button",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me write the call to action for my landing page on my [BUSINESS TYPE] site. The action is [WHAT HAPPENS WHEN THEY CLICK], what they get is [WHAT THEY RECEIVE], and their hesitation is [WHAT MAKES THEM PAUSE]. Write button copy that names what actually happens rather than saying submit, uses their words rather than mine, and reduces the sense of commitment where the hesitation warrants it. Also suggest the small line under the button that removes the last doubt. Note that submit tells people nothing and quietly implies effort. Give me options.",
+    "description": "Write button copy that names what happens rather than saying submit.",
+    "useCase": "Use this on the button everything else leads to. Submit tells people nothing and quietly implies effort, whereas naming what actually happens when they click removes ambiguity, and the small line underneath is often what clears the last hesitation.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT HAPPENS WHEN THEY CLICK",
+      "WHAT THEY RECEIVE",
+      "WHAT MAKES THEM PAUSE"
+    ],
+    "relatedPromptIds": [
+      "lp-above-fold-builder",
+      "lp-friction-reducer",
+      "lp-single-goal-enforcer"
+    ]
+  },
+  {
+    "id": "lp-benefit-translator",
+    "title": "Turn Features into Reasons to Care",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me turn my features into things people actually care about, for my [BUSINESS TYPE] landing page. My features are [LIST WHAT YOUR OFFER INCLUDES], and my customer is [WHO THEY ARE AND WHAT THEY WANT]. For each feature, tell me what it actually means for them and why they would care, then write the benefit led version. Be honest if a feature has no real benefit and is just something I am proud of. Note that features describe the product while benefits describe the customer's life, and people buy the second one. Give me the translated list.",
+    "description": "Translate features into the benefits customers actually care about.",
+    "useCase": "Use this when your page lists what your offer includes rather than what it does for anyone. Features describe the product while benefits describe the customer's life, and being told honestly which features have no real benefit saves you selling something only you find impressive.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST WHAT YOUR OFFER INCLUDES",
+      "WHO THEY ARE AND WHAT THEY WANT"
+    ],
+    "relatedPromptIds": [
+      "lp-headline-writer",
+      "lp-page-structure-planner",
+      "lp-specificity-injector"
+    ]
+  },
+  {
+    "id": "lp-objection-handler",
+    "title": "Handle Objections on the Page",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me handle the objections stopping people converting on my [BUSINESS TYPE] landing page. My offer is [WHAT YOU OFFER], the price is [YOUR PRICE, OR WRITE FREE], and what I think holds people back is [YOUR GUESS, OR WRITE NOT SURE]. Help me identify the real hesitations someone has at this point, and write copy that addresses each one on the page rather than hoping they ignore it. Note that an unaddressed objection does not disappear, the visitor just leaves without telling me. Give me the objections and the copy that answers each.",
+    "description": "Identify the real hesitations and answer them on the page.",
+    "useCase": "Use this when traffic arrives and nobody converts. An unaddressed objection does not go away, the visitor simply leaves without telling you why, so naming the hesitations directly on the page is what turns a browser into someone who acts.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU OFFER",
+      "YOUR PRICE, OR WRITE FREE",
+      "YOUR GUESS, OR WRITE NOT SURE"
+    ],
+    "relatedPromptIds": [
+      "lp-page-structure-planner",
+      "lp-friction-reducer",
+      "lp-trust-builder"
+    ]
+  },
+  {
+    "id": "lp-friction-reducer",
+    "title": "Reduce the Friction Before the Click",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me reduce the friction around my landing page's main action for my [BUSINESS TYPE]. The action is [WHAT YOU ASK THEM TO DO], what it requires is [WHAT THEY MUST GIVE OR DO], and what happens after is [WHAT FOLLOWS]. Help me find the friction: what feels like too much commitment, what is unclear about what happens next, what they are afraid of, and what I am asking for that I do not actually need yet. Then write copy that removes it. Note that every extra field and unanswered what happens next costs conversions. Give me the friction points and fixes.",
+    "description": "Find and remove the friction sitting between a visitor and the action.",
+    "useCase": "Use this when people reach the button and stop. Every extra field and every unanswered question about what happens next costs conversions, and much of the friction on a page comes from asking for things you did not actually need at this stage.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU ASK THEM TO DO",
+      "WHAT THEY MUST GIVE OR DO",
+      "WHAT FOLLOWS"
+    ],
+    "relatedPromptIds": [
+      "lp-cta-writer",
+      "lp-objection-handler",
+      "lp-form-copy-writer"
+    ]
+  },
+  {
+    "id": "lp-trust-builder",
+    "title": "Build Trust When Nobody Knows You",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me build trust on my landing page when nobody has heard of me, for my [BUSINESS TYPE]. What I have to work with is [ANY PROOF YOU HAVE, E.G. TESTIMONIALS, RESULTS, EXPERIENCE, CREDENTIALS, OR WRITE ALMOST NOTHING], and my offer is [WHAT YOU OFFER]. Help me build credibility honestly with what I actually have, including when it is thin: showing rather than claiming, being specific rather than boastful, and using transparency itself as a trust signal. Note that fake or borrowed credibility is obvious and costs more than having none. Give me what to use and how.",
+    "description": "Build honest credibility on a page when you have little proof to show.",
+    "useCase": "Use this when you are unknown and have thin proof. Showing rather than claiming and being specific rather than boastful works with whatever you actually have, and transparency about being new often reads better than the fake credibility that people spot immediately.",
+    "variables": [
+      "BUSINESS TYPE",
+      "ANY PROOF YOU HAVE, E.G. TESTIMONIALS, RESULTS, EXPERIENCE, CREDENTIALS, OR WRITE ALMOST NOTHING",
+      "WHAT YOU OFFER"
+    ],
+    "relatedPromptIds": [
+      "lp-social-proof-placer",
+      "lp-objection-handler",
+      "lp-specificity-injector"
+    ]
+  },
+  {
+    "id": "lp-social-proof-placer",
+    "title": "Use Testimonials Where They Matter",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me use my testimonials properly on my [BUSINESS TYPE] landing page. My testimonials are [PASTE THEM], and my page sections are [DESCRIBE YOUR PAGE STRUCTURE]. Help me place them: which testimonial answers which objection, where each belongs in the page rather than dumped in one block, which to lead with, and which are too vague to be worth using. Note that a testimonial placed next to the doubt it resolves does far more than a wall of praise in a section nobody reads. Give me the placement and which to cut.",
+    "description": "Place testimonials next to the doubts they resolve rather than in one block.",
+    "useCase": "Use this if your testimonials sit in a block nobody reads. A testimonial placed directly beside the objection it answers does far more work than a wall of generic praise, and being told which ones are too vague to use saves the page from filler.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THEM",
+      "DESCRIBE YOUR PAGE STRUCTURE"
+    ],
+    "relatedPromptIds": [
+      "lp-trust-builder",
+      "lp-objection-handler",
+      "lp-page-structure-planner"
+    ]
+  },
+  {
+    "id": "lp-specificity-injector",
+    "title": "Replace Vague Claims with Specifics",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me replace the vague claims on my [BUSINESS TYPE] landing page with specifics. Here is my copy: [PASTE IT], and what I actually do or deliver is [THE REAL DETAIL]. Find every vague phrase such as high quality, tailored solutions, or industry leading, and replace it with something concrete and checkable. If I have no specific to replace it with, tell me the claim should go rather than be reworded. Note that a vague claim is one anyone could make, which is why nobody believes any of them. Give me the rewrite and what to cut.",
+    "description": "Replace unfalsifiable filler claims with concrete, checkable specifics.",
+    "useCase": "Use this on copy full of high quality and tailored solutions. A vague claim is one any competitor could make word for word, which is exactly why nobody believes it, and where you have no specific to replace it with the honest move is deleting it.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "THE REAL DETAIL"
+    ],
+    "relatedPromptIds": [
+      "lp-benefit-translator",
+      "lp-clarity-checker",
+      "lp-trust-builder"
+    ]
+  },
+  {
+    "id": "lp-clarity-checker",
+    "title": "Check Whether a Stranger Would Understand",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether a stranger would understand my [BUSINESS TYPE] landing page. Here is my copy: [PASTE IT]. Read it as someone who has never heard of me and knows nothing about my industry: tell me what you think I actually do, what confused you, what jargon lost you, and at what point you would have left. Be blunt rather than charitable, and do not fill in gaps using context I gave you. Note that I am too close to this to see what is missing. Give me an honest read and what to fix first.",
+    "description": "Get a blunt read on whether a stranger could understand your page at all.",
+    "useCase": "Use this because you are too close to your own page to see what is missing. A blunt read from someone filling in no gaps reveals the jargon and assumed knowledge that makes perfect sense to you and stops a visitor cold within the first few lines.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT"
+    ],
+    "relatedPromptIds": [
+      "lp-headline-writer",
+      "lp-specificity-injector",
+      "lp-jargon-remover"
+    ]
+  },
+  {
+    "id": "lp-jargon-remover",
+    "title": "Strip the Jargon Out",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me strip the jargon out of my [BUSINESS TYPE] landing page. Here is my copy: [PASTE IT], and my audience is [WHO THEY ARE AND HOW MUCH THEY KNOW]. Replace the industry language, acronyms, and insider terms with words my actual audience uses, while keeping any term they genuinely know and expect. Flag anything I kept that they probably will not understand. Note that jargon feels professional to write and reads as evasive, and that the terms my peers use are often invisible to my customers. Give me the plain version.",
+    "description": "Replace industry jargon with the words your audience actually uses.",
+    "useCase": "Use this when your page reads like an industry brochure. Jargon feels professional to write and reads as evasive to a visitor, and the vocabulary that impresses your peers is frequently invisible to the customers you are trying to reach.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHO THEY ARE AND HOW MUCH THEY KNOW"
+    ],
+    "relatedPromptIds": [
+      "lp-clarity-checker",
+      "lp-specificity-injector",
+      "lp-tone-matcher"
+    ]
+  },
+  {
+    "id": "lp-message-match-checker",
+    "title": "Match the Page to Where They Came From",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether my landing page matches what brought people there, for my [BUSINESS TYPE]. What they clicked was [THE AD, SEARCH RESULT, OR LINK THEY CAME FROM], and my page says [PASTE YOUR OPENING COPY]. Check the match: whether the page delivers what the click promised, whether the language carries over, and whether someone would feel they landed in the right place. Note that a mismatch between the promise and the page is one of the fastest ways to lose a visitor, since they bounce before reading anything. Give me the gaps and how to close them.",
+    "description": "Check that your page delivers what the click that brought them promised.",
+    "useCase": "Use this when traffic arrives and bounces instantly. A mismatch between what the ad or search result promised and what the page says loses people before they read a word, since the first job of a landing page is confirming they landed in the right place.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE AD, SEARCH RESULT, OR LINK THEY CAME FROM",
+      "PASTE YOUR OPENING COPY"
+    ],
+    "relatedPromptIds": [
+      "lp-headline-writer",
+      "lp-clarity-checker",
+      "lp-traffic-source-adapter"
+    ]
+  },
+  {
+    "id": "lp-traffic-source-adapter",
+    "title": "Adapt Copy to How Warm the Visitor Is",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me adapt my landing page copy to how warm my visitors are, for my [BUSINESS TYPE]. My traffic comes from [WHERE, E.G. COLD ADS, SEARCH, YOUR EMAIL LIST, A REFERRAL], my offer is [WHAT YOU OFFER], and my current copy is [PASTE IT]. Help me adjust: how much explaining a cold visitor needs versus how much a warm one finds patronizing, where to start the argument, and what to assume. Note that copy written for a cold stranger bores someone who already trusts me, and copy written for a warm lead baffles someone who just arrived. Give me the adapted version.",
+    "description": "Adapt copy to whether visitors arrive cold or already trusting you.",
+    "useCase": "Use this when one page serves different traffic sources. Copy written for a cold stranger bores someone who already trusts you, and copy for a warm lead baffles someone who just arrived, so knowing which you are writing for changes where the argument starts.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHERE, E.G. COLD ADS, SEARCH, YOUR EMAIL LIST, A REFERRAL",
+      "WHAT YOU OFFER",
+      "PASTE IT"
+    ],
+    "relatedPromptIds": [
+      "lp-message-match-checker",
+      "lp-page-structure-planner",
+      "lp-audience-namer"
+    ]
+  },
+  {
+    "id": "lp-audience-namer",
+    "title": "Say Who the Page Is For",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me make clear who my landing page is for in my [BUSINESS TYPE]. My offer is [WHAT YOU OFFER], my ideal customer is [WHO THEY ARE], and who it is not for is [WHO SHOULD NOT BUY, OR WRITE HELP ME WORK THIS OUT]. Write copy that names the right person so they recognize themselves immediately, and where useful says plainly who this is not for. Note that naming who it is not for makes the right person trust it more, and that a page trying to appeal to everyone speaks to nobody in particular. Give me the copy.",
+    "description": "Name who the page is for so the right person recognizes themselves.",
+    "useCase": "Use this when your page tries to appeal to everyone. Naming the right person makes them recognize themselves immediately, and saying plainly who it is not for makes the right person trust it more rather than fewer people buying.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU OFFER",
+      "WHO THEY ARE",
+      "WHO SHOULD NOT BUY, OR WRITE HELP ME WORK THIS OUT"
+    ],
+    "relatedPromptIds": [
+      "lp-subheadline-writer",
+      "lp-traffic-source-adapter",
+      "lp-headline-writer"
+    ]
+  },
+  {
+    "id": "lp-form-copy-writer",
+    "title": "Write the Copy Around a Form",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me write the copy around a form on my [BUSINESS TYPE] landing page. The form asks for [WHAT FIELDS YOU REQUEST], what they get is [WHAT THEY RECEIVE], and what happens after is [WHAT FOLLOWS]. Write the copy: the line above explaining what they get, the field labels, the button, and the reassurance underneath about what I will and will not do with their details. Also tell me honestly which fields I could drop. Note that every field costs completions, and asking for a phone number when I only need an email quietly halves the response. Give me the form copy.",
+    "description": "Write form copy that explains the trade and cuts fields you do not need.",
+    "useCase": "Use this on any form. Every field costs completions, and asking for a phone number when you only need an email quietly halves your response, while the reassurance line underneath about what happens to their details is often what tips someone into filling it in.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT FIELDS YOU REQUEST",
+      "WHAT THEY RECEIVE",
+      "WHAT FOLLOWS"
+    ],
+    "relatedPromptIds": [
+      "lp-friction-reducer",
+      "lp-cta-writer",
+      "lp-distraction-remover"
+    ]
+  },
+  {
+    "id": "lp-distraction-remover",
+    "title": "Remove What Is Pulling People Away",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me find what is pulling visitors away from the action on my [BUSINESS TYPE] landing page. My page has [DESCRIBE EVERYTHING ON IT, INCLUDING NAVIGATION, LINKS, SIDEBARS, AND FOOTERS], and my goal is [THE ONE ACTION]. Help me identify every exit route competing with my goal, which are genuinely necessary, and which exist only because they are on every other page of my site. Note that a landing page with full site navigation gives people fifteen ways to leave before deciding. Give me what to remove and what to keep.",
+    "description": "Find the links and navigation quietly pulling visitors off your landing page.",
+    "useCase": "Use this if your landing page carries your normal site navigation. Full navigation gives visitors fifteen ways to leave before they decide, and much of what sits on a landing page is there only because it is on every other page rather than because it earns its place.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DESCRIBE EVERYTHING ON IT, INCLUDING NAVIGATION, LINKS, SIDEBARS, AND FOOTERS",
+      "THE ONE ACTION"
+    ],
+    "relatedPromptIds": [
+      "lp-single-goal-enforcer",
+      "lp-form-copy-writer",
+      "lp-page-structure-planner"
+    ]
+  },
+  {
+    "id": "lp-length-decider",
+    "title": "Decide How Long the Page Should Be",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me decide how long my landing page should be for my [BUSINESS TYPE]. My offer is [WHAT YOU OFFER], the price or commitment is [WHAT IT COSTS THEM], and my visitor is [HOW MUCH THEY ALREADY KNOW AND TRUST ME]. Help me judge: whether this needs a short page or a long one, what determines it, and what my page actually needs to include. Note that short versus long is the wrong question, since the real one is whether the page answers everything a person needs before deciding, and a high commitment offer to a cold visitor needs more than a free download does. Give me a recommendation.",
+    "description": "Decide page length based on what the visitor needs before deciding.",
+    "useCase": "Use this when unsure whether to write short or long. Short versus long is the wrong question, since what matters is whether the page answers everything someone needs before deciding, and a high commitment offer to a cold visitor needs far more than a free download.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU OFFER",
+      "WHAT IT COSTS THEM",
+      "HOW MUCH THEY ALREADY KNOW AND TRUST ME"
+    ],
+    "relatedPromptIds": [
+      "lp-page-structure-planner",
+      "lp-objection-handler",
+      "lp-copy-trimmer"
+    ]
+  },
+  {
+    "id": "lp-copy-trimmer",
+    "title": "Cut the Copy That Is Not Working",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me cut the copy that is not earning its place on my [BUSINESS TYPE] landing page. Here is my copy: [PASTE IT], and my goal is [THE ACTION YOU WANT]. Cut hard: the throat clearing intro, the paragraphs that say nothing, the section about my company history nobody asked for, and anything that does not move someone toward the action. Tell me what you cut and why. Note that most landing pages are long because nobody edited them rather than because the length was needed. Give me the trimmed version.",
+    "description": "Cut landing page copy that does not move anyone toward the action.",
+    "useCase": "Use this on a page that grew without editing. Most landing pages are long because nobody cut anything rather than because the length was needed, and the company history section nobody asked for is usually sitting exactly where the argument should be building.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "THE ACTION YOU WANT"
+    ],
+    "relatedPromptIds": [
+      "lp-length-decider",
+      "lp-specificity-injector",
+      "lp-clarity-checker"
+    ]
+  },
+  {
+    "id": "lp-tone-matcher",
+    "title": "Match the Page to How You Actually Sound",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me make my landing page sound like me rather than a template, for my [BUSINESS TYPE]. Here is my copy: [PASTE IT], here is how I actually talk about my work: [PASTE AN EMAIL OR DESCRIBE HOW YOU EXPLAIN IT IN PERSON], and my audience is [WHO THEY ARE]. Rewrite the page in my actual voice while keeping it clear and persuasive. Note that most landing pages sound like every other landing page because people switch into marketing voice when they start writing, and the way I explain my work in an email is usually better than what I put on the page. Give me the rewrite.",
+    "description": "Rewrite a page in your real voice instead of default marketing tone.",
+    "useCase": "Use this when your page sounds like every other landing page. People switch into a borrowed marketing voice the moment they start writing copy, and the way you explain your work in a normal email is almost always clearer and more convincing than what ends up on the page.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "PASTE AN EMAIL OR DESCRIBE HOW YOU EXPLAIN IT IN PERSON",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "lp-jargon-remover",
+      "lp-clarity-checker",
+      "lp-specificity-injector"
+    ]
+  },
+  {
+    "id": "lp-conversion-diagnosis",
+    "title": "Work Out Why Nobody Is Converting",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me work out why my landing page is not converting in my [BUSINESS TYPE]. My page is [PASTE OR DESCRIBE IT], my traffic is [HOW MUCH AND FROM WHERE], and my conversion rate is [WHAT IT IS, OR WRITE ALMOST NOTHING]. Help me diagnose honestly: whether the copy is the problem, whether the traffic is wrong for the offer, whether the offer itself is the issue, or whether I simply do not have enough traffic to tell yet. Be honest if the answer is that the offer is the problem and no copy will fix it. Give me the likely cause and what to check.",
+    "description": "Diagnose whether the copy, the traffic, or the offer itself is the problem.",
+    "useCase": "Use this when a page is not converting and you assume it is the copy. Often the traffic is wrong for the offer, or the offer itself is the problem and no rewrite will fix it, and being told that honestly saves you three rounds of edits that were never going to work.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT",
+      "HOW MUCH AND FROM WHERE",
+      "WHAT IT IS, OR WRITE ALMOST NOTHING"
+    ],
+    "relatedPromptIds": [
+      "lp-objection-handler",
+      "lp-message-match-checker",
+      "lp-single-goal-enforcer"
+    ]
+  },
+  {
+    "id": "lp-seo-balance",
+    "title": "Balance Landing Page Copy Against SEO",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Claude",
+    "promptText": "Help me balance writing for conversion against writing for search on my [BUSINESS TYPE] landing page. My target keyword is [YOUR KEYWORD], my page is [PASTE OR DESCRIBE IT], and my main traffic source is [WHERE PEOPLE ACTUALLY COME FROM]. Help me judge: whether this page needs to rank at all or just convert the traffic I send it, where the two goals genuinely conflict, and which should win. Note that a page stuffed with keywords converts worse, and a page nobody can find converts nothing, so the answer depends on where the traffic comes from. Give me a recommendation.",
+    "description": "Judge whether a landing page needs to rank or just convert the traffic you send.",
+    "useCase": "Use this when torn between keywords and conversion. A page stuffed with keywords converts worse while a page nobody finds converts nothing, so the honest answer depends entirely on whether your traffic comes from search or from ads and links you control.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR KEYWORD",
+      "PASTE OR DESCRIBE IT",
+      "WHERE PEOPLE ACTUALLY COME FROM"
+    ],
+    "relatedPromptIds": [
+      "lp-conversion-diagnosis",
+      "lp-copy-trimmer",
+      "lp-traffic-source-adapter"
+    ]
+  },
+  {
+    "id": "lp-quick-page-copy",
+    "title": "Get Quick Landing Page Copy",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "landing-page-copy",
+    "aiTool": "Grok",
+    "promptText": "I need quick landing page copy. My offer is [WHAT YOU OFFER], my customer is [WHO THEY ARE], and the action I want is [WHAT THEY SHOULD DO]. Give me a headline, a subheadline, three benefit points, and a call to action. Keep it clear and specific, no marketing filler. Just give me copy I can put up right now.",
+    "description": "Get a fast, complete set of landing page copy ready to use.",
+    "useCase": "Use this when you need a page up rather than perfect. A headline, subheadline, three benefits, and a call to action covers the structure most simple pages need, and a live page you improve later beats a perfect one still sitting in a draft.",
+    "variables": [
+      "WHAT YOU OFFER",
+      "WHO THEY ARE",
+      "WHAT THEY SHOULD DO"
+    ],
+    "relatedPromptIds": [
+      "lp-headline-writer",
+      "lp-above-fold-builder",
+      "lp-cta-writer"
+    ]
   }
 ]
