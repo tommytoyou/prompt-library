@@ -29075,5 +29075,453 @@
       "audit-full-site-planner",
       "audit-priority-ranker"
     ]
+  },
+  {
+    "id": "hook-generator",
+    "title": "Generate Hooks for a Post",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Claude",
+    "promptText": "Help me write opening hooks for a social media post in my [BUSINESS TYPE]. My post is about [WHAT THE POST COVERS], my audience is [WHO THEY ARE], and the platform is [WHERE IT IS GOING]. Write several different hook options for the first line: some that open with a specific claim, some with a question, some with tension, some with a surprising fact. Make each one earn the next line rather than being clickbait that the post cannot deliver on. Note that the hook has one job, to stop the scroll and buy the second line, and a hook that overpromises loses the trust of anyone who keeps reading. Give me the options and mark the strongest.",
+    "description": "Generate several distinct opening hook options that stop the scroll honestly.",
+    "useCase": "Use this when you have a post but not an opening. The hook has one job, to stop the scroll and earn the second line, and generating several angles lets you pick one that fits rather than defaulting to whatever came first, which is rarely the strongest.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THE POST COVERS",
+      "WHO THEY ARE",
+      "WHERE IT IS GOING"
+    ],
+    "relatedPromptIds": [
+      "hook-first-line-fixer",
+      "hook-angle-finder",
+      "hook-overpromise-checker"
+    ]
+  },
+  {
+    "id": "hook-first-line-fixer",
+    "title": "Fix a Weak First Line",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Claude",
+    "promptText": "Help me fix the weak first line of my social media post in my [BUSINESS TYPE]. Here is my current opening: [PASTE YOUR FIRST LINE OR TWO], and the post is about [THE TOPIC]. Tell me honestly why it is not working: whether it starts with throat clearing, buries the interesting part, states something obvious, or gives no reason to read on. Then rewrite it several ways. Note that most posts hide their best line in the third sentence, and the fix is often just moving what is already there to the front rather than inventing something new. Give me the diagnosis and rewrites.",
+    "description": "Diagnose and rewrite a weak first line, often by surfacing what is buried.",
+    "useCase": "Use this when a post is not landing and you suspect the opening. Most posts hide their best line in the third sentence, so the fix is often moving what is already there to the front rather than inventing something new, and a blunt diagnosis shows you which.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE YOUR FIRST LINE OR TWO",
+      "THE TOPIC"
+    ],
+    "relatedPromptIds": [
+      "hook-generator",
+      "hook-buried-lede-finder",
+      "hook-first-three-seconds"
+    ]
+  },
+  {
+    "id": "hook-angle-finder",
+    "title": "Find a Fresh Angle for a Tired Topic",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Claude",
+    "promptText": "Help me find a fresh hook angle for a topic everyone in my [BUSINESS TYPE] posts about. My topic is [THE TOPIC], the usual take is [WHAT EVERYONE SAYS], and my real view or experience is [WHAT YOU ACTUALLY THINK OR HAVE SEEN]. Help me find an angle that stops the scroll because it is not the expected one: the honest contrarian take, the thing nobody admits, the specific story, or the myth worth puncturing. Note that the tenth identical post on a topic gets scrolled past, while an unexpected angle on the same topic earns attention, and honesty is usually more interesting than the safe take. Give me angle options.",
+    "description": "Find an unexpected hook angle on a topic everyone already posts about.",
+    "useCase": "Use this when your topic is saturated. The tenth identical take gets scrolled past while an unexpected angle on the same subject earns attention, and honesty is usually more interesting than the safe version, so finding the angle that is genuinely yours is what makes a tired topic land.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE TOPIC",
+      "WHAT EVERYONE SAYS",
+      "WHAT YOU ACTUALLY THINK OR HAVE SEEN"
+    ],
+    "relatedPromptIds": [
+      "hook-generator",
+      "hook-contrarian-builder",
+      "hook-curiosity-gap"
+    ]
+  },
+  {
+    "id": "hook-first-three-seconds",
+    "title": "Write the First Three Seconds of a Video",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Claude",
+    "promptText": "Help me write the first three seconds of a short video in my [BUSINESS TYPE]. My video is about [WHAT IT COVERS], my audience is [WHO THEY ARE], and the platform is [WHERE IT GOES]. Write opening line options for what I say and show in the first moments, since that is what decides whether anyone watches the rest. Cover both what I say and what should be on screen. Note that on video the first three seconds carry the whole thing, and a slow intro like hey guys welcome back is where most viewers swipe away before the content even starts. Give me the opening options.",
+    "description": "Write the opening seconds of a video, covering both what you say and show.",
+    "useCase": "Use this for short video. The first three seconds decide whether anyone watches the rest, and a slow intro like hey guys welcome back is where most viewers swipe away before the content starts, so opening on the actual hook rather than a greeting is what holds them.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT IT COVERS",
+      "WHO THEY ARE",
+      "WHERE IT GOES"
+    ],
+    "relatedPromptIds": [
+      "hook-generator",
+      "hook-first-line-fixer",
+      "hook-platform-adapter"
+    ]
+  },
+  {
+    "id": "hook-curiosity-gap",
+    "title": "Open a Curiosity Gap Honestly",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Claude",
+    "promptText": "Help me open a curiosity gap in my hook without it being cheap clickbait, for my [BUSINESS TYPE]. My post delivers [WHAT THE POST ACTUALLY GIVES THEM], and my audience is [WHO THEY ARE]. Help me write a hook that creates a genuine gap the reader wants closed, where the post actually closes it. Show me the difference between honest curiosity and the you will not believe what happened next bait that people have learned to ignore. Note that a curiosity gap the post genuinely pays off builds trust, while one that leads to a letdown trains people to never click me again. Give me hook options and why they are honest.",
+    "description": "Open a genuine curiosity gap the post actually pays off, not cheap bait.",
+    "useCase": "Use this to intrigue without the bait people learned to ignore. A curiosity gap the post genuinely closes builds trust while one leading to a letdown trains people never to click you again, so the honest version that pays off is the only kind worth using.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THE POST ACTUALLY GIVES THEM",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "hook-overpromise-checker",
+      "hook-generator",
+      "hook-angle-finder"
+    ]
+  },
+  {
+    "id": "hook-contrarian-builder",
+    "title": "Build a Contrarian Hook You Can Defend",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Claude",
+    "promptText": "Help me write a contrarian hook I can actually stand behind, for my [BUSINESS TYPE]. The common belief I disagree with is [THE BELIEF], my actual position is [WHAT YOU THINK INSTEAD], and my reasoning is [WHY YOU THINK IT]. Write hook options that challenge the common view in a way I can defend in the post, not just for shock. Note that a contrarian take I cannot back up gets me attention and then destroys my credibility when I cannot support it, so the hook must be a real position rather than a hot take I do not mean. Give me hooks I can genuinely defend.",
+    "description": "Build a contrarian hook that reflects a real position you can defend.",
+    "useCase": "Use this when you genuinely disagree with a common belief. A contrarian take you cannot back up gets attention and then destroys your credibility when the post fails to support it, so the hook must reflect a real position rather than a hot take you do not actually mean.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE BELIEF",
+      "WHAT YOU THINK INSTEAD",
+      "WHY YOU THINK IT"
+    ],
+    "relatedPromptIds": [
+      "hook-angle-finder",
+      "hook-overpromise-checker",
+      "hook-generator"
+    ]
+  },
+  {
+    "id": "hook-story-opener",
+    "title": "Open with a Story",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Claude",
+    "promptText": "Help me open a post with a story hook in my [BUSINESS TYPE]. The story is [WHAT HAPPENED], the point it leads to is [THE LESSON OR TAKEAWAY], and my audience is [WHO THEY ARE]. Help me write an opening line that drops the reader into the middle of the story rather than winding up to it, creating enough tension that they want to know what happened. Note that a story hook works when it starts at the tense moment, not with once upon a time context that nobody stays for, and the setup can come after the reader is already hooked. Give me story opening options.",
+    "description": "Open with a story hook that drops into the tense moment, not the windup.",
+    "useCase": "Use this when a real story illustrates your point. A story hook works when it starts at the tense moment rather than the setup nobody stays for, so dropping the reader into the middle and filling in context afterward is what holds them long enough to reach the lesson.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT HAPPENED",
+      "THE LESSON OR TAKEAWAY",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "hook-generator",
+      "hook-buried-lede-finder",
+      "hook-emotional-opener"
+    ]
+  },
+  {
+    "id": "hook-buried-lede-finder",
+    "title": "Find the Buried Lede in Your Draft",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Claude",
+    "promptText": "Help me find the buried lede in my social post draft, for my [BUSINESS TYPE]. Here is my draft: [PASTE IT]. Read it and tell me: what the single most interesting or surprising line in it is, wherever it currently sits, and whether that should become the hook. Then show me how it reads with that line moved to the front. Note that writers often warm up for several sentences before saying the interesting thing, and the best hook is frequently already in the draft, just in the wrong place. Give me the buried lede and a reordered version.",
+    "description": "Find the most interesting line already in your draft and move it to the front.",
+    "useCase": "Use this on any finished draft. Writers warm up for several sentences before saying the interesting thing, so the best hook is frequently already written, just sitting in the wrong place, and finding it is faster than inventing a new opening from nothing.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT"
+    ],
+    "relatedPromptIds": [
+      "hook-first-line-fixer",
+      "hook-story-opener",
+      "hook-generator"
+    ]
+  },
+  {
+    "id": "hook-emotional-opener",
+    "title": "Open on an Emotion Your Audience Feels",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Claude",
+    "promptText": "Help me write a hook that opens on a feeling my audience actually has, for my [BUSINESS TYPE]. My audience is [WHO THEY ARE], the feeling relevant to my post is [THE FRUSTRATION, WORRY, OR DESIRE THEY HAVE], and my post is about [THE TOPIC]. Write hooks that name that feeling so precisely the reader thinks that is exactly me. Note that a hook naming a feeling someone recognizes stops them cold, but only if it is specific and true, since a vague or manufactured emotion reads as manipulation and gets ignored. Give me hooks that name the real feeling.",
+    "description": "Open on a specific real feeling your audience recognizes as their own.",
+    "useCase": "Use this to make someone feel seen in the first line. A hook naming a feeling so precisely the reader thinks that is exactly me stops them cold, but only when it is specific and true, since a vague or manufactured emotion reads as manipulation and gets scrolled past.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO THEY ARE",
+      "THE FRUSTRATION, WORRY, OR DESIRE THEY HAVE",
+      "THE TOPIC"
+    ],
+    "relatedPromptIds": [
+      "hook-story-opener",
+      "hook-audience-language",
+      "hook-generator"
+    ]
+  },
+  {
+    "id": "hook-audience-language",
+    "title": "Hook Using Your Audience's Own Words",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Claude",
+    "promptText": "Help me write a hook using the exact words my audience uses, for my [BUSINESS TYPE]. My audience is [WHO THEY ARE], how they actually describe the problem or topic is [THEIR WORDS, FROM COMMENTS, EMAILS, OR CONVERSATIONS], and my post is about [THE TOPIC]. Help me write a hook in their language rather than my professional framing. Note that a hook in my industry terms slides past, while one in the reader's own words feels like it was written for them specifically, and the phrases people use in comments and DMs are the best source of these. Give me hooks in their language.",
+    "description": "Write a hook in your audience's exact words rather than industry framing.",
+    "useCase": "Use this when your hooks sound like your industry rather than your audience. A hook in professional terms slides past while one in the reader's own words feels written for them, and the phrases people use in your comments and messages are the richest source of that language.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO THEY ARE",
+      "THEIR WORDS, FROM COMMENTS, EMAILS, OR CONVERSATIONS",
+      "THE TOPIC"
+    ],
+    "relatedPromptIds": [
+      "hook-emotional-opener",
+      "hook-generator",
+      "hook-angle-finder"
+    ]
+  },
+  {
+    "id": "hook-list-opener",
+    "title": "Write a Hook for a List Post",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Claude",
+    "promptText": "Help me write the hook for a list post in my [BUSINESS TYPE]. My list is [WHAT THE LIST CONTAINS], the number of items is [HOW MANY], and my audience is [WHO THEY ARE]. Write opening line options that make the list feel worth reading: promising a specific payoff, hinting at the most surprising item, or framing why this list beats the generic version. Note that a list hook like five tips for X is generic and ignored, while one promising the specific valuable thing inside earns the read, and teasing the best item works better than just naming the topic. Give me hook options for the list.",
+    "description": "Write a list post hook that promises the specific payoff, not just the topic.",
+    "useCase": "Use this for list content. A generic list hook like five tips for X gets ignored while one promising the specific valuable thing inside earns the read, so teasing the best item or the payoff works far better than merely naming the topic and a number.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THE LIST CONTAINS",
+      "HOW MANY",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "hook-generator",
+      "hook-curiosity-gap",
+      "hook-specificity-injector"
+    ]
+  },
+  {
+    "id": "hook-specificity-injector",
+    "title": "Make a Vague Hook Specific",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Claude",
+    "promptText": "Help me make my vague hook specific, for my [BUSINESS TYPE]. Here is my hook: [PASTE IT], and the specifics behind it are [THE REAL NUMBERS, DETAILS, OR FACTS]. Rewrite it with the specificity added: replacing words like a lot or quickly or many with the actual figure, and swapping generic claims for concrete ones. Note that a specific hook is more believable and more arresting than a vague one, since I grew my list is forgettable while I added four hundred subscribers in nine days stops the scroll. Give me the specific version.",
+    "description": "Replace vague words in a hook with concrete numbers and details.",
+    "useCase": "Use this when a hook feels flat and generic. A specific hook is more believable and more arresting than a vague one, since I grew my list is forgettable while a concrete figure and timeframe stops the scroll, and the specifics are usually already sitting in your draft unused.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "THE REAL NUMBERS, DETAILS, OR FACTS"
+    ],
+    "relatedPromptIds": [
+      "hook-list-opener",
+      "hook-first-line-fixer",
+      "hook-overpromise-checker"
+    ]
+  },
+  {
+    "id": "hook-platform-adapter",
+    "title": "Adapt a Hook to Each Platform",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Claude",
+    "promptText": "Help me adapt my hook for different platforms in my [BUSINESS TYPE]. My core hook or post is [PASTE IT], and the platforms are [WHERE YOU ARE POSTING, E.G. LINKEDIN, INSTAGRAM, X, TIKTOK]. Help me adjust the hook for each: how much context each platform's audience needs, how the tone shifts, how long the opening can be before it cuts off, and what works on one platform but flops on another. Note that the same hook rarely lands identically everywhere, since a LinkedIn audience and a TikTok audience want different openings, and pasting one hook across all platforms wastes the ones it does not fit. Give me a version per platform.",
+    "description": "Adapt one hook to fit the different audiences and formats of each platform.",
+    "useCase": "Use this when posting across platforms. The same hook rarely lands identically everywhere, since a LinkedIn audience and a TikTok audience want different openings, so adapting tone, length, and context per platform beats pasting one version everywhere and wondering why it only worked in one place.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHERE YOU ARE POSTING, E.G. LINKEDIN, INSTAGRAM, X, TIKTOK"
+    ],
+    "relatedPromptIds": [
+      "hook-generator",
+      "hook-first-three-seconds",
+      "hook-length-fixer"
+    ]
+  },
+  {
+    "id": "hook-length-fixer",
+    "title": "Fit a Hook Before the Cutoff",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Claude",
+    "promptText": "Help me fit my hook into the space before the see more cutoff, for my [BUSINESS TYPE]. My hook is [PASTE IT], and the platform is [WHERE IT GOES, SO THE CUTOFF LENGTH IS KNOWN]. Trim it so the compelling part lands before the reader has to tap see more, since anything after the cutoff is invisible to someone deciding whether to expand. Keep what makes it work and cut what does not earn its place in that first visible window. Note that the hook only counts if it is visible before the fold, and a great line sitting just past the cutoff might as well not exist. Give me the trimmed hook.",
+    "description": "Trim a hook so its compelling part lands before the see more cutoff.",
+    "useCase": "Use this when your best line sits past the fold. The hook only counts if it is visible before the see more cutoff, since a great line just past it might as well not exist, so trimming to land the compelling part in the first visible window is what makes it work at all.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHERE IT GOES, SO THE CUTOFF LENGTH IS KNOWN"
+    ],
+    "relatedPromptIds": [
+      "hook-platform-adapter",
+      "hook-first-line-fixer",
+      "hook-generator"
+    ]
+  },
+  {
+    "id": "hook-overpromise-checker",
+    "title": "Check a Hook Against What You Deliver",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether my hook overpromises what my post delivers, for my [BUSINESS TYPE]. My hook is [PASTE IT], and what the post actually gives the reader is [WHAT IT DELIVERS]. Check honestly: whether the hook writes a cheque the post cannot cash, whether someone drawn in by the hook would feel let down, and whether it is exciting because it is true or because it is exaggerated. Then fix it if it overreaches. Note that a hook that overpromises might win one scroll stop and lose the follow, since people remember being baited and stop trusting my posts. Give me an honest read and a fix.",
+    "description": "Check whether a hook promises more than the post actually delivers.",
+    "useCase": "Use this before posting a hook that feels too good. A hook that overpromises might win one scroll stop and lose the follow, since people remember being baited and stop trusting your posts, so checking that the excitement comes from truth rather than exaggeration protects the relationship.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHAT IT DELIVERS"
+    ],
+    "relatedPromptIds": [
+      "hook-curiosity-gap",
+      "hook-generator",
+      "hook-contrarian-builder"
+    ]
+  },
+  {
+    "id": "hook-question-opener",
+    "title": "Open with a Question That Works",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Claude",
+    "promptText": "Help me write a question hook that actually works, for my [BUSINESS TYPE]. My topic is [THE TOPIC], my audience is [WHO THEY ARE], and what I want them to feel is [THE REACTION]. Write question hook options that make the reader answer in their head and want to know more, not the lazy kind. Note that a weak question hook like are you struggling with X gets ignored because everyone uses it and the answer is obvious, while a sharp specific question the reader has actually asked themselves stops them. Give me question hooks and flag any that are too generic to work.",
+    "description": "Write a specific question hook the reader has actually asked themselves.",
+    "useCase": "Use this when reaching for a question opener. The lazy kind like are you struggling with X gets ignored because everyone uses it and the answer is obvious, while a sharp question the reader has genuinely asked themselves stops them, so the specificity is what separates the two.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE TOPIC",
+      "WHO THEY ARE",
+      "THE REACTION"
+    ],
+    "relatedPromptIds": [
+      "hook-generator",
+      "hook-emotional-opener",
+      "hook-cliche-remover"
+    ]
+  },
+  {
+    "id": "hook-cliche-remover",
+    "title": "Cut the Cliches from Your Hooks",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Claude",
+    "promptText": "Help me cut the tired cliches from my hook, for my [BUSINESS TYPE]. Here is my hook: [PASTE IT]. Flag the overused hook formulas people now scroll straight past, such as unpopular opinion, let that sink in, here is why, and the like, and rewrite the hook without them. Note that a formula that once worked stops working once everyone copies it, and openers that felt clever a year ago now signal generic content and get ignored. Tell me if my hook is fine as is rather than inventing a problem. Give me a cliche free version.",
+    "description": "Cut worn out hook formulas your audience now scrolls straight past.",
+    "useCase": "Use this when your hook leans on a familiar formula. Openers that once worked stop working once everyone copies them, so phrases that felt clever a year ago now signal generic content and get scrolled past, and being told your hook is actually fine saves inventing a problem.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT"
+    ],
+    "relatedPromptIds": [
+      "hook-question-opener",
+      "hook-first-line-fixer",
+      "hook-angle-finder"
+    ]
+  },
+  {
+    "id": "hook-swipe-file-builder",
+    "title": "Build a Hook Formula Bank",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Claude",
+    "promptText": "Help me build a small bank of hook formulas I can reuse, for my [BUSINESS TYPE]. My niche is [YOUR TOPIC AREA], my audience is [WHO THEY ARE], and the kinds of posts I make are [YOUR USUAL CONTENT TYPES]. Help me create a set of reusable hook structures fitted to my content, with a fill in the blank pattern and an example for each, so I am not starting from zero every time. Note that formulas are a starting scaffold rather than a crutch, since leaning on the same one every post makes my feed predictable, so I should rotate them. Give me a hook formula bank.",
+    "description": "Build a small bank of reusable hook formulas fitted to your content.",
+    "useCase": "Use this to stop starting from zero every post. A set of hook structures fitted to your niche gives you scaffolding to build on, though rotating them matters since leaning on the same formula every time makes your feed predictable, so the bank is a starting point rather than a crutch.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR TOPIC AREA",
+      "WHO THEY ARE",
+      "YOUR USUAL CONTENT TYPES"
+    ],
+    "relatedPromptIds": [
+      "hook-generator",
+      "hook-cliche-remover",
+      "hook-batch-writer"
+    ]
+  },
+  {
+    "id": "hook-batch-writer",
+    "title": "Batch Write Hooks for the Week",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me batch write hooks for my week of content in my [BUSINESS TYPE]. My planned posts are [LIST THE TOPICS OR POSTS FOR THE WEEK], and my audience is [WHO THEY ARE]. Write a strong hook for each, varying the approach across the week so they do not all sound the same, and mark which is strongest. Note that batching hooks in one sitting is more efficient than writing them post by post, and varying the openers across the week keeps my feed from feeling repetitive to someone who sees several of my posts. Give me a hook per post.",
+    "description": "Batch write varied hooks for a week of planned content in one sitting.",
+    "useCase": "Use this to write a week of hooks at once. Batching is more efficient than writing them post by post, and deliberately varying the openers keeps your feed from feeling repetitive to someone who sees several of your posts in a row, which a single sitting makes easy to control.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST THE TOPICS OR POSTS FOR THE WEEK",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "hook-swipe-file-builder",
+      "hook-generator",
+      "hook-quick-hooks"
+    ]
+  },
+  {
+    "id": "hook-tester",
+    "title": "Compare Two Hooks",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Claude",
+    "promptText": "Help me choose between hook options for a post in my [BUSINESS TYPE]. My hook options are [PASTE THEM], the post is about [THE TOPIC], and my audience is [WHO THEY ARE]. Compare them: which stops the scroll hardest, which fits my audience, which overpromises, and which I can genuinely deliver on. Give me your pick and why, but note that hooks are genuinely hard to predict and the only real test is posting, so treat this as an informed guess rather than a certainty. Note that even good marketers guess wrong on hooks often, which is why testing beats theorizing. Give me a comparison and a pick.",
+    "description": "Compare hook options and get an informed pick, with honesty about the guesswork.",
+    "useCase": "Use this when torn between hook options. An informed comparison of which stops the scroll and which overpromises helps you choose, while the honesty that hooks are hard to predict and only posting truly tests them keeps you from overthinking a decision the audience settles anyway.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THEM",
+      "THE TOPIC",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "hook-generator",
+      "hook-overpromise-checker",
+      "hook-performance-reviewer"
+    ]
+  },
+  {
+    "id": "hook-performance-reviewer",
+    "title": "Learn from Which Hooks Worked",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Claude",
+    "promptText": "Help me learn from which of my hooks worked and which did not, for my [BUSINESS TYPE]. My hooks that performed well are [PASTE THE HOOKS AND ROUGHLY HOW THEY DID], and the ones that flopped are [PASTE THOSE]. Help me spot the pattern: what the winners have in common, what the flops share, and what to do more and less of. Note that a single post proves little, since luck and timing move numbers as much as the hook, but a pattern across many posts is worth learning from, so I should look for the trend rather than overreacting to one hit or miss. Give me the patterns and what to repeat.",
+    "description": "Find the pattern in which of your hooks worked, across many posts not one.",
+    "useCase": "Use this to learn from your own results. A single post proves little since luck and timing move numbers as much as the hook, but a pattern across many posts is worth learning from, so looking for the trend rather than overreacting to one hit or miss is what actually improves your hooks.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THE HOOKS AND ROUGHLY HOW THEY DID",
+      "PASTE THOSE"
+    ],
+    "relatedPromptIds": [
+      "hook-tester",
+      "hook-generator",
+      "hook-swipe-file-builder"
+    ]
+  },
+  {
+    "id": "hook-quick-hooks",
+    "title": "Get Quick Hooks Fast",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "content-hooks",
+    "aiTool": "Grok",
+    "promptText": "I need quick hooks for a post. The post is about [THE TOPIC], and my audience is [WHO THEY ARE]. Give me five different opening line options that would stop the scroll, each a different angle, punchy and ready to use. No explanation, just the hooks with the strongest marked. Give me the hooks.",
+    "description": "Get five quick, varied opening line options ready to use.",
+    "useCase": "Use this when you just need hook options fast. Five varied openers with the strongest marked gives you something to pick from immediately, and grabbing a solid hook now beats staring at a blank first line while the post you meant to publish sits unfinished.",
+    "variables": [
+      "THE TOPIC",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "hook-generator",
+      "hook-batch-writer",
+      "hook-first-line-fixer"
+    ]
   }
 ]
