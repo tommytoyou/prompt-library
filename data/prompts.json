@@ -26676,5 +26676,496 @@
       "kw-competitor-gap-finder",
       "kw-tracking-setup"
     ]
+  },
+  {
+    "id": "metadesc-writer",
+    "title": "Write a Meta Description That Earns the Click",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me write a meta description for a page on my [BUSINESS TYPE] site. The page is about [WHAT THE PAGE COVERS], the person searching is [WHO THEY ARE AND WHAT THEY WANT], and the target keyword is [YOUR KEYWORD]. Write a description that earns the click rather than just summarizing: leading with what the searcher gets, using their language, and being specific rather than generic. Keep it around 150 to 160 characters so it is unlikely to be cut off. Note that a meta description does not directly affect ranking, it affects whether anyone clicks. Give me a few options and mark the strongest.",
+    "description": "Write a meta description built to earn the click rather than summarize the page.",
+    "useCase": "Use this for any page you want clicked. A meta description does not affect ranking directly, it affects whether the person who already found you bothers to click, which makes it one of the few SEO elements where the job is persuasion rather than technical correctness.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THE PAGE COVERS",
+      "WHO THEY ARE AND WHAT THEY WANT",
+      "YOUR KEYWORD"
+    ],
+    "relatedPromptIds": [
+      "metadesc-google-rewrite-reality",
+      "metadesc-length-fixer",
+      "metadesc-click-optimizer"
+    ]
+  },
+  {
+    "id": "metadesc-google-rewrite-reality",
+    "title": "Understand Why Google Ignores Your Meta Description",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me understand why the meta description I wrote is not what appears in search results for my [BUSINESS TYPE] site. My page is [THE PAGE], what I wrote is [YOUR META DESCRIPTION], and what shows up instead is [WHAT ACTUALLY APPEARS, OR WRITE NOT SURE]. Explain honestly: that search engines frequently rewrite or ignore meta descriptions and pull text from the page instead, why they do it, when they are more likely to use mine, and what this means for how much effort meta descriptions deserve. Note that this is normal and not a mistake on my part. Give me an honest explanation and what to do about it.",
+    "description": "Understand why search engines often rewrite or ignore your meta description.",
+    "useCase": "Use this when what appears in search results is not what you wrote. Search engines rewrite meta descriptions frequently and pull text from the page instead, which is normal rather than a failure on your part, and understanding it tells you how much effort the field actually deserves.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PAGE",
+      "YOUR META DESCRIPTION",
+      "WHAT ACTUALLY APPEARS, OR WRITE NOT SURE"
+    ],
+    "relatedPromptIds": [
+      "metadesc-writer",
+      "metadesc-onpage-text-improver",
+      "metadesc-effort-allocator"
+    ]
+  },
+  {
+    "id": "metadesc-onpage-text-improver",
+    "title": "Improve the Page Text Search Engines Might Pull",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me improve the on page text a search engine might pull instead of my meta description, for my [BUSINESS TYPE] site. My page opens with [PASTE YOUR OPENING PARAGRAPH OR TWO], and the page is about [THE TOPIC]. Since search engines often ignore the meta description and grab text from the page itself, help me make my opening lines work as a description if pulled: front loading what the page delivers, being specific early, and avoiding a vague throat clearing intro. Note that a strong opening paragraph serves both readers and the snippet. Give me an improved opening.",
+    "description": "Improve your opening paragraph so it works as a snippet if search engines pull it.",
+    "useCase": "Use this because search engines frequently pull page text instead of your meta description. Making the opening paragraph front load what the page delivers means the pulled snippet works either way, and it happens to make the page better for the reader who does click.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE YOUR OPENING PARAGRAPH OR TWO",
+      "THE TOPIC"
+    ],
+    "relatedPromptIds": [
+      "metadesc-google-rewrite-reality",
+      "metadesc-writer",
+      "metadesc-effort-allocator"
+    ]
+  },
+  {
+    "id": "metadesc-length-fixer",
+    "title": "Fix a Meta Description That Gets Cut Off",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me fix a meta description that is getting truncated for my [BUSINESS TYPE] site. Here is my current description: [PASTE IT]. Trim it to around 150 to 160 characters while keeping the persuasive part intact, and make sure the important information sits early so it survives even if cut. Tell me what you removed. Note that truncation limits are based on pixel width rather than a fixed character count, so the guideline is approximate and front loading matters more than hitting an exact number. Give me the trimmed version.",
+    "description": "Trim an over long meta description while keeping the important part early.",
+    "useCase": "Use this when your description is getting cut off mid sentence. Trimming while front loading the important part matters more than hitting an exact count, since truncation is based on pixel width rather than characters and the guideline everyone quotes is only approximate.",
+    "variables": [
+      "PASTE IT",
+      "BUSINESS TYPE"
+    ],
+    "relatedPromptIds": [
+      "metadesc-writer",
+      "metadesc-click-optimizer",
+      "metadesc-bulk-writer"
+    ]
+  },
+  {
+    "id": "metadesc-click-optimizer",
+    "title": "Rewrite a Meta Description to Get More Clicks",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me rewrite a meta description that is not getting clicks for my [BUSINESS TYPE] site. My current description is [PASTE IT], the page ranks around [YOUR POSITION], and what I know about the searcher is [THEIR INTENT]. Help me diagnose why it might not be pulling clicks: whether it is generic, whether it fails to answer the searcher's question, whether it reads like every other result, or whether it promises nothing specific. Then rewrite it. Note that ranking well and being ignored is a description problem, not a ranking problem. Give me the diagnosis and rewrite.",
+    "description": "Diagnose and rewrite a meta description that ranks but does not get clicked.",
+    "useCase": "Use this when a page ranks but nobody clicks it. Ranking well and being ignored is a description problem rather than a ranking problem, and diagnosing whether yours is generic or promises nothing specific is faster than assuming you need to rank higher.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "YOUR POSITION",
+      "THEIR INTENT"
+    ],
+    "relatedPromptIds": [
+      "metadesc-writer",
+      "metadesc-competitor-differentiator",
+      "metadesc-length-fixer"
+    ]
+  },
+  {
+    "id": "metadesc-competitor-differentiator",
+    "title": "Stand Out from the Other Results",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me write a meta description that stands out from the competition for my [BUSINESS TYPE] site. My keyword is [YOUR KEYWORD], the other results on the page say [DESCRIBE WHAT COMPETING SNIPPETS SAY], and what makes me different is [YOUR ANGLE]. Help me write a description that does not sound like every other result: finding the angle they all miss, saying the specific thing they are too generic to say, and giving the searcher a reason to pick mine. Note that a page of near identical snippets means anything specific stands out. Give me the description and why it differs.",
+    "description": "Write a meta description that does not sound like every other result on the page.",
+    "useCase": "Use this when the search results page is a wall of identical sounding snippets. Finding the specific angle competitors are too generic to say gives searchers a reason to pick you, which matters because on a page of interchangeable descriptions anything concrete stands out.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR KEYWORD",
+      "DESCRIBE WHAT COMPETING SNIPPETS SAY",
+      "YOUR ANGLE"
+    ],
+    "relatedPromptIds": [
+      "metadesc-click-optimizer",
+      "metadesc-writer",
+      "metadesc-serp-preview-check"
+    ]
+  },
+  {
+    "id": "metadesc-bulk-writer",
+    "title": "Write Meta Descriptions for Many Pages at Once",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write meta descriptions for several pages at once on my [BUSINESS TYPE] site. Here are the pages with their topics and target keywords: [LIST EACH PAGE, ITS TOPIC, AND ITS KEYWORD]. Write a distinct description for each, tailored to that page rather than a template with the topic swapped in, each around 150 to 160 characters and written to earn the click. Note that near identical descriptions across pages are worse than none, since they signal nothing and may be ignored entirely. Give me the descriptions, one per page.",
+    "description": "Write distinct meta descriptions for multiple pages in one batch.",
+    "useCase": "Use this to clear a backlog of pages missing descriptions. Writing them in one batch is efficient, and getting distinct ones rather than a template with the topic swapped matters because near identical descriptions across a site signal nothing and often get ignored entirely.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST EACH PAGE, ITS TOPIC, AND ITS KEYWORD"
+    ],
+    "relatedPromptIds": [
+      "metadesc-site-audit",
+      "metadesc-writer",
+      "metadesc-template-avoider"
+    ]
+  },
+  {
+    "id": "metadesc-site-audit",
+    "title": "Audit the Meta Descriptions Across Your Site",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me audit the meta descriptions across my [BUSINESS TYPE] site. My pages and their descriptions are [LIST YOUR PAGES AND THEIR CURRENT DESCRIPTIONS, OR DESCRIBE THE SITUATION]. Help me find the problems: pages with none at all, duplicates across pages, descriptions that are too long or too short, ones that are generic filler, and ones that no longer match what the page actually says. Then tell me which to fix first based on which pages matter most. Note that fixing descriptions on pages nobody visits is wasted effort. Give me the audit and a priority order.",
+    "description": "Audit site wide meta descriptions and prioritize which are worth fixing.",
+    "useCase": "Use this if you have never checked your descriptions systematically. Finding the missing, duplicate, and stale ones is straightforward, and prioritizing by which pages actually get traffic prevents you spending a weekend perfecting descriptions on pages nobody has ever visited.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST YOUR PAGES AND THEIR CURRENT DESCRIPTIONS, OR DESCRIBE THE SITUATION"
+    ],
+    "relatedPromptIds": [
+      "metadesc-duplicate-fixer",
+      "metadesc-bulk-writer",
+      "metadesc-effort-allocator"
+    ]
+  },
+  {
+    "id": "metadesc-duplicate-fixer",
+    "title": "Fix Duplicate Meta Descriptions",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me fix duplicate meta descriptions on my [BUSINESS TYPE] site. The pages sharing a description are [LIST THE PAGES AND THE SHARED DESCRIPTION], and what makes each page different is [THE DIFFERENCE BETWEEN THEM]. Help me write a distinct description for each that captures what is actually specific about that page. Note that duplicates usually mean either the descriptions were templated or the pages themselves are too similar, and if it is the latter the real fix is merging the pages rather than rewriting the descriptions. Tell me honestly which problem I have. Give me the fix.",
+    "description": "Fix duplicate descriptions, or find out the pages themselves are the problem.",
+    "useCase": "Use this when several pages share a description. Rewriting them distinctly is the obvious fix, but duplicates often reveal that the pages themselves are too similar to justify existing separately, and being told that honestly saves you papering over a structural problem.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST THE PAGES AND THE SHARED DESCRIPTION",
+      "THE DIFFERENCE BETWEEN THEM"
+    ],
+    "relatedPromptIds": [
+      "metadesc-site-audit",
+      "metadesc-template-avoider",
+      "metadesc-bulk-writer"
+    ]
+  },
+  {
+    "id": "metadesc-template-avoider",
+    "title": "Escape Templated Meta Descriptions",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me move away from templated meta descriptions on my [BUSINESS TYPE] site. My template is [YOUR TEMPLATE OR PATTERN], and it covers [HOW MANY PAGES AND WHAT KIND]. Help me think through: where a template is genuinely fine because the pages are structurally similar, where it is costing me clicks because the pages differ meaningfully, and how to write distinct descriptions for the pages that matter without hand writing hundreds. Be honest if my template is fine as is. Note that templates are a reasonable compromise at scale and a lazy default on a small site. Give me an honest read and a plan.",
+    "description": "Work out where a description template is fine and where it is costing clicks.",
+    "useCase": "Use this if you templated descriptions across your site. Templates are a reasonable compromise at scale and a lazy default on a small site, so knowing honestly which situation you are in tells you whether to leave it alone or hand write the pages that matter.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR TEMPLATE OR PATTERN",
+      "HOW MANY PAGES AND WHAT KIND"
+    ],
+    "relatedPromptIds": [
+      "metadesc-duplicate-fixer",
+      "metadesc-effort-allocator",
+      "metadesc-bulk-writer"
+    ]
+  },
+  {
+    "id": "metadesc-effort-allocator",
+    "title": "Decide Which Pages Deserve a Written Description",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me decide which pages on my [BUSINESS TYPE] site actually deserve a hand written meta description. My site has [HOW MANY PAGES AND WHAT KINDS], my traffic is concentrated on [WHERE YOUR TRAFFIC ACTUALLY GOES, OR WRITE NOT SURE], and my capacity is [HOW MUCH TIME YOU HAVE]. Help me work out where the effort pays: which pages get enough impressions for a better description to matter, which are commercially important, and which are not worth touching. Note that meta descriptions are one of the lowest leverage SEO tasks, so spending a week on them is usually a mistake. Give me where to focus.",
+    "description": "Work out which pages justify hand written descriptions and which do not.",
+    "useCase": "Use this before spending real time on descriptions. They are one of the lowest leverage SEO tasks, so concentrating effort on the few pages with meaningful impressions or commercial value beats a site wide rewrite that changes nothing measurable.",
+    "variables": [
+      "BUSINESS TYPE",
+      "HOW MANY PAGES AND WHAT KINDS",
+      "WHERE YOUR TRAFFIC ACTUALLY GOES, OR WRITE NOT SURE",
+      "HOW MUCH TIME YOU HAVE"
+    ],
+    "relatedPromptIds": [
+      "metadesc-site-audit",
+      "metadesc-template-avoider",
+      "metadesc-google-rewrite-reality"
+    ]
+  },
+  {
+    "id": "metadesc-homepage-writer",
+    "title": "Write a Homepage Meta Description",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me write a meta description for my [BUSINESS TYPE] homepage. What I do is [YOUR BUSINESS IN PLAIN TERMS], who I serve is [YOUR CUSTOMERS], and what makes me worth choosing is [YOUR DIFFERENTIATOR]. Write a homepage description that works for two very different visitors: someone searching my name who already knows me, and someone who found me by accident and needs to grasp what I do in one line. Keep it under 160 characters. Note that the homepage description carries more weight than most, since it is what appears for branded searches. Give me a few options.",
+    "description": "Write a homepage description that works for both branded and cold searchers.",
+    "useCase": "Use this on the page that matters most. The homepage description appears for branded searches where people already know you and for cold discovery where they do not, and serving both without confusing either is what makes it harder than any other page on the site.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR BUSINESS IN PLAIN TERMS",
+      "YOUR CUSTOMERS",
+      "YOUR DIFFERENTIATOR"
+    ],
+    "relatedPromptIds": [
+      "metadesc-writer",
+      "metadesc-service-page-writer",
+      "metadesc-serp-preview-check"
+    ]
+  },
+  {
+    "id": "metadesc-service-page-writer",
+    "title": "Write Meta Descriptions for Service Pages",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me write meta descriptions for my service pages on my [BUSINESS TYPE] site. My services are [LIST YOUR SERVICES], my customers are [WHO THEY ARE], and my area is [YOUR LOCATION, OR WRITE ONLINE ONLY]. Write a description for each that speaks to someone actively looking to hire: naming the service plainly, addressing what they are worried about, and including location where relevant. Note that service page searchers are usually closer to buying than blog readers, so these descriptions are worth more effort than most. Give me a description per service.",
+    "description": "Write service page descriptions aimed at people actively looking to hire.",
+    "useCase": "Use this for the pages that bring in work. Service page searchers are usually far closer to hiring than blog readers, which makes these descriptions worth more effort than anything else on the site, since a click here is worth many clicks elsewhere.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST YOUR SERVICES",
+      "WHO THEY ARE",
+      "YOUR LOCATION, OR WRITE ONLINE ONLY"
+    ],
+    "relatedPromptIds": [
+      "metadesc-homepage-writer",
+      "metadesc-effort-allocator",
+      "metadesc-writer"
+    ]
+  },
+  {
+    "id": "metadesc-blog-post-writer",
+    "title": "Write Meta Descriptions for Blog Posts",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write a meta description for a blog post on my [BUSINESS TYPE] site. The post is about [THE TOPIC], the reader wants [WHAT THEY ARE TRYING TO FIND OUT], and the post's actual value is [WHAT MAKES IT WORTH READING]. Write a description that tells the searcher what they will learn without giving away the answer so completely that they do not need to click. Keep it around 155 characters. Note the tension here: too vague and nobody clicks, too complete and they got what they needed from the snippet. Give me a few options.",
+    "description": "Write a blog post description that entices without answering the question outright.",
+    "useCase": "Use this for informational posts. There is a real tension in these descriptions, since being too vague earns no clicks while answering the question completely means the searcher got what they needed from the snippet and never visited, and balancing that is the whole job.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE TOPIC",
+      "WHAT THEY ARE TRYING TO FIND OUT",
+      "WHAT MAKES IT WORTH READING"
+    ],
+    "relatedPromptIds": [
+      "metadesc-writer",
+      "metadesc-curiosity-balancer",
+      "metadesc-click-optimizer"
+    ]
+  },
+  {
+    "id": "metadesc-curiosity-balancer",
+    "title": "Balance Curiosity Against Clickbait",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me get the balance right between intriguing and misleading in my meta description for my [BUSINESS TYPE] site. My page is about [THE TOPIC], and my draft is [PASTE YOUR DESCRIPTION]. Check it honestly: whether it creates genuine interest or manufactures a fake gap, whether the page actually delivers what the description implies, and whether someone clicking would feel misled. Then improve it. Note that a description that overpromises earns a click and a bounce, which teaches search engines the result was bad. Give me an honest read and a better version.",
+    "description": "Check whether a description intrigues honestly or overpromises and misleads.",
+    "useCase": "Use this when tempted to make a description more exciting than the page. Overpromising earns the click and then the bounce, which signals to search engines that your result was a bad answer, making clickbait actively counterproductive rather than merely dishonest.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE TOPIC",
+      "PASTE YOUR DESCRIPTION"
+    ],
+    "relatedPromptIds": [
+      "metadesc-blog-post-writer",
+      "metadesc-click-optimizer",
+      "metadesc-promise-matcher"
+    ]
+  },
+  {
+    "id": "metadesc-promise-matcher",
+    "title": "Check the Description Matches the Page",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether my meta description actually matches my page for my [BUSINESS TYPE] site. My description says [PASTE YOUR DESCRIPTION], and here is what the page actually contains: [PASTE OR SUMMARIZE THE PAGE]. Check for mismatches: things the description promises that the page does not deliver, things the page does well that the description ignores, and whether someone arriving would find what they expected. Then fix whichever is wrong, the description or my expectation of the page. Note that a mismatch produces bounces, which is worse than a lower click rate. Give me the mismatches and the fix.",
+    "description": "Check whether your description promises what the page actually delivers.",
+    "useCase": "Use this when descriptions were written separately from the pages. A mismatch produces clicks followed by immediate bounces, which is worse than a lower click rate, and pages often drift over time until the description describes something that is no longer there.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE YOUR DESCRIPTION",
+      "PASTE OR SUMMARIZE THE PAGE"
+    ],
+    "relatedPromptIds": [
+      "metadesc-curiosity-balancer",
+      "metadesc-stale-description-finder",
+      "metadesc-site-audit"
+    ]
+  },
+  {
+    "id": "metadesc-stale-description-finder",
+    "title": "Find Descriptions That Went Stale",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me find meta descriptions that have gone stale on my [BUSINESS TYPE] site. What has changed in my business is [WHAT CHANGED, E.G. SERVICES, PRICING, POSITIONING, LOCATION, YEAR REFERENCES], and my pages are [LIST OR DESCRIBE THEM]. Help me identify: descriptions mentioning things I no longer offer, ones with dated references like a specific year, ones reflecting old positioning, and ones making claims that are no longer true. Note that descriptions are set once and forgotten, so they quietly go stale while nobody looks. Give me what to check and update.",
+    "description": "Find meta descriptions that quietly went stale as your business changed.",
+    "useCase": "Use this if your business has changed since you wrote your descriptions. They are set once and forgotten, so they quietly rot while nobody looks, and a description advertising a service you dropped or a year that has passed is actively working against you.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT CHANGED, E.G. SERVICES, PRICING, POSITIONING, LOCATION, YEAR REFERENCES",
+      "LIST OR DESCRIBE THEM"
+    ],
+    "relatedPromptIds": [
+      "metadesc-promise-matcher",
+      "metadesc-site-audit",
+      "metadesc-effort-allocator"
+    ]
+  },
+  {
+    "id": "metadesc-serp-preview-check",
+    "title": "Check How Your Result Will Actually Look",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me think about how my whole search result will look, not just the description, for my [BUSINESS TYPE] site. My title is [YOUR PAGE TITLE], my description is [YOUR DESCRIPTION], and my URL is [YOUR URL]. Check how these work together: whether the title and description repeat each other instead of complementing, whether the URL reads sensibly, and whether the three together give a searcher enough to choose me. Note that the description is one part of a result and people read the title first, so a great description under a weak title is wasted. Give me feedback on the whole result.",
+    "description": "Check how the title, description, and URL work together as one result.",
+    "useCase": "Use this to see your result the way a searcher does. The description is one part of a whole, and people read the title first, so a strong description sitting under a weak title is wasted effort while a title and description that just repeat each other waste half the space.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR PAGE TITLE",
+      "YOUR DESCRIPTION",
+      "YOUR URL"
+    ],
+    "relatedPromptIds": [
+      "metadesc-competitor-differentiator",
+      "metadesc-writer",
+      "metadesc-title-complement"
+    ]
+  },
+  {
+    "id": "metadesc-title-complement",
+    "title": "Make the Description Complement the Title",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me make my meta description complement my page title rather than repeat it, for my [BUSINESS TYPE] site. My title is [YOUR TITLE], my description is [YOUR DESCRIPTION], and the page is about [THE TOPIC]. Help me use the two together: letting the title do the identifying and keyword work, and using the description to add what the title could not fit, such as the specific benefit, the proof, or the reason to choose me. Note that repeating the title in the description wastes the only extra space I get. Give me a description that adds rather than echoes.",
+    "description": "Use the description to add what the title could not fit, rather than echoing it.",
+    "useCase": "Use this when your title and description say the same thing. The description is the only extra space you get in a search result, so spending it repeating the title above it wastes the one chance to add the benefit, proof, or reason to choose you.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR TITLE",
+      "YOUR DESCRIPTION",
+      "THE TOPIC"
+    ],
+    "relatedPromptIds": [
+      "metadesc-serp-preview-check",
+      "metadesc-writer",
+      "metadesc-competitor-differentiator"
+    ]
+  },
+  {
+    "id": "metadesc-local-writer",
+    "title": "Write Meta Descriptions for Local Pages",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me write meta descriptions for local pages on my [BUSINESS TYPE] site. My service is [WHAT YOU DO], my area is [YOUR CITY OR SERVICE AREA], and what local searchers care about is [WHAT MATTERS TO THEM, E.G. PROXIMITY, AVAILABILITY, LOCAL KNOWLEDGE]. Write descriptions that make the local relevance immediately obvious, include the location naturally rather than jammed in, and address what someone searching locally actually wants to know. Note that local searchers often want to act now, so practical details matter more than clever copy. Give me the descriptions.",
+    "description": "Write local page descriptions that make relevance obvious and answer practical questions.",
+    "useCase": "Use this for location pages. Local searchers are often ready to act right now, which means practical details like area coverage and availability serve them better than clever copy, and making the local relevance immediately obvious is what earns the click.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU DO",
+      "YOUR CITY OR SERVICE AREA",
+      "WHAT MATTERS TO THEM, E.G. PROXIMITY, AVAILABILITY, LOCAL KNOWLEDGE"
+    ],
+    "relatedPromptIds": [
+      "metadesc-service-page-writer",
+      "metadesc-writer",
+      "metadesc-bulk-writer"
+    ]
+  },
+  {
+    "id": "metadesc-product-writer",
+    "title": "Write Meta Descriptions for Product Pages",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me write a meta description for a product page on my [BUSINESS TYPE] site. The product is [WHAT IT IS], the buyer is [WHO BUYS IT], what they compare on is [WHAT MATTERS IN THEIR DECISION], and any practical detail worth including is [E.G. PRICE, SHIPPING, AVAILABILITY, OR WRITE NONE]. Write a description that helps someone comparing options decide mine is worth opening: leading with what differentiates it, including the practical detail that answers their unspoken question. Note that product searchers often have several tabs open, so the description competes directly. Give me a few options.",
+    "description": "Write a product page description for someone comparing several tabs at once.",
+    "useCase": "Use this for product pages. Someone searching a product usually has several tabs open comparing options, which means your description competes directly against the others on the page, and the practical detail answering their unspoken question is often what decides it.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT IT IS",
+      "WHO BUYS IT",
+      "WHAT MATTERS IN THEIR DECISION",
+      "E.G. PRICE, SHIPPING, AVAILABILITY, OR WRITE NONE"
+    ],
+    "relatedPromptIds": [
+      "metadesc-competitor-differentiator",
+      "metadesc-writer",
+      "metadesc-service-page-writer"
+    ]
+  },
+  {
+    "id": "metadesc-keyword-placement",
+    "title": "Handle Keywords in a Meta Description",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me handle keywords properly in my meta description for my [BUSINESS TYPE] site. My target keyword is [YOUR KEYWORD], and my draft description is [PASTE IT]. Explain honestly: that keywords in the description do not directly help ranking, that matching terms get bolded in results which helps them catch the eye, and that stuffing keywords makes a description read badly and earn fewer clicks. Then fix my draft so the keyword appears naturally if it belongs there. Note that writing for the human beats writing for the algorithm here. Give me an honest explanation and a fixed version.",
+    "description": "Handle keywords in a description without stuffing, and understand what they do.",
+    "useCase": "Use this if you have been stuffing keywords into descriptions. They do not directly help ranking, though matching terms get bolded which catches the eye, so a natural mention helps while cramming makes the description read badly and earn fewer clicks than none would.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR KEYWORD",
+      "PASTE IT"
+    ],
+    "relatedPromptIds": [
+      "metadesc-writer",
+      "metadesc-google-rewrite-reality",
+      "metadesc-click-optimizer"
+    ]
+  },
+  {
+    "id": "metadesc-cta-tester",
+    "title": "Decide Whether to Put a Call to Action In",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me decide whether my meta description needs a call to action for my [BUSINESS TYPE] site. My page is [THE PAGE AND ITS PURPOSE], my description is [PASTE IT], and the searcher's intent is [WHAT THEY WANT]. Help me weigh it: whether a call to action adds anything or wastes precious characters, whether it suits this page's intent, and whether the space is better spent on something specific. Note that learn more and click here waste characters telling people to do the thing they were already deciding whether to do. Give me an honest read and a version.",
+    "description": "Decide whether a call to action earns its characters in a description.",
+    "useCase": "Use this before adding a call to action out of habit. Phrases like learn more waste characters telling people to do the thing they were already deciding whether to do, and that space is almost always better spent on something specific about the page.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PAGE AND ITS PURPOSE",
+      "PASTE IT",
+      "WHAT THEY WANT"
+    ],
+    "relatedPromptIds": [
+      "metadesc-writer",
+      "metadesc-length-fixer",
+      "metadesc-click-optimizer"
+    ]
+  },
+  {
+    "id": "metadesc-quick-write",
+    "title": "Get a Quick Meta Description",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "meta-descriptions",
+    "aiTool": "Grok",
+    "promptText": "I need a quick meta description. The page is about [WHAT THE PAGE COVERS], the keyword is [YOUR KEYWORD], and the reader wants [WHAT THEY ARE LOOKING FOR]. Give me three options around 155 characters each, written to earn the click, specific rather than generic. No explanation, just the options with the strongest marked. Give me the descriptions.",
+    "description": "Get three quick meta description options ready to use.",
+    "useCase": "Use this when you just need a description written and moved on from. Three options at the right length with the strongest marked covers what most pages need, and given how often search engines rewrite them anyway, agonizing over one is rarely a good use of an afternoon.",
+    "variables": [
+      "WHAT THE PAGE COVERS",
+      "YOUR KEYWORD",
+      "WHAT THEY ARE LOOKING FOR"
+    ],
+    "relatedPromptIds": [
+      "metadesc-writer",
+      "metadesc-bulk-writer",
+      "metadesc-length-fixer"
+    ]
   }
 ]
