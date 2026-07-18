@@ -28139,5 +28139,479 @@
       "ilink-contextual-placement",
       "ilink-anchor-text-writer"
     ]
+  },
+  {
+    "id": "blogseo-post-optimizer",
+    "title": "Optimize a Blog Post to Rank",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me optimize an existing blog post to rank better, for my [BUSINESS TYPE]. Here is the post: [PASTE OR DESCRIBE IT], my target keyword is [YOUR KEYWORD], and how it is performing is [WHAT YOU SEE, OR WRITE NOT RANKING]. Help me improve it without ruining the writing: whether it actually answers the search intent, whether the important points are easy to find, where it is thinner than what ranks, and what is missing. Note that optimizing means making the post genuinely better for the reader searching, not sprinkling keywords into finished writing. Give me what to change and why.",
+    "description": "Optimize an existing post to rank by making it genuinely better for the searcher.",
+    "useCase": "Use this when a published post is not ranking. Real optimization means making the post better answer what the searcher wanted rather than sprinkling keywords into finished writing, and diagnosing where it is thinner than what ranks is faster than starting over.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT",
+      "YOUR KEYWORD",
+      "WHAT YOU SEE, OR WRITE NOT RANKING"
+    ],
+    "relatedPromptIds": [
+      "blogseo-intent-matcher",
+      "blogseo-thin-content-fixer",
+      "blogseo-keyword-naturalizer"
+    ]
+  },
+  {
+    "id": "blogseo-intent-matcher",
+    "title": "Match a Post to What Searchers Want",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether my blog post matches what people searching my keyword actually want, for my [BUSINESS TYPE]. My keyword is [YOUR KEYWORD], my post does [WHAT YOUR POST ACTUALLY DELIVERS], and what ranks on page one is [DESCRIBE THE TOP RESULTS AND THEIR FORMAT]. Help me judge: whether my post answers the intent behind the search or answers a different question, whether the format matches what searchers expect, and what I would need to change to fit. Note that a brilliant post answering the wrong intent will not rank, no matter how good it is. Give me the intent gap and how to close it.",
+    "description": "Check whether a post answers the actual search intent behind its keyword.",
+    "useCase": "Use this when a good post refuses to rank. A brilliant article answering the wrong intent will not rank no matter how well written, so comparing what your post delivers against what actually ranks reveals whether you answered the question people were really asking.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR KEYWORD",
+      "WHAT YOUR POST ACTUALLY DELIVERS",
+      "DESCRIBE THE TOP RESULTS AND THEIR FORMAT"
+    ],
+    "relatedPromptIds": [
+      "blogseo-post-optimizer",
+      "blogseo-competitor-comparer",
+      "blogseo-format-fixer"
+    ]
+  },
+  {
+    "id": "blogseo-keyword-naturalizer",
+    "title": "Work Keywords in Without Ruining the Writing",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me work my keyword into a blog post naturally, for my [BUSINESS TYPE]. My post is [PASTE OR DESCRIBE IT], my main keyword is [YOUR KEYWORD], and related terms I could use are [ANY VARIATIONS, OR WRITE HELP ME FIND SOME]. Help me place the keyword and its variations where they fit the writing: naturally in a few key places rather than stuffed everywhere, using natural variations the way a real writer would. Note that keyword stuffing reads badly to humans and is something search engines actively penalize, so writing that sounds natural is both better and safer. Give me where to place terms and a revised version.",
+    "description": "Place keywords naturally in a post rather than stuffing them everywhere.",
+    "useCase": "Use this when you are unsure how to include a keyword without it reading badly. Natural placement in a few key spots serves you better than cramming, since stuffing reads badly to humans and search engines actively penalize it, making natural writing both the better and the safer choice.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT",
+      "YOUR KEYWORD",
+      "ANY VARIATIONS, OR WRITE HELP ME FIND SOME"
+    ],
+    "relatedPromptIds": [
+      "blogseo-post-optimizer",
+      "blogseo-heading-optimizer",
+      "blogseo-intent-matcher"
+    ]
+  },
+  {
+    "id": "blogseo-heading-optimizer",
+    "title": "Fix Your Headings for Readers and Search",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me fix the headings in my blog post for my [BUSINESS TYPE]. Here are my current headings: [PASTE YOUR HEADING STRUCTURE], and the post is about [THE TOPIC]. Help me improve them: whether they follow a logical hierarchy, whether they describe what each section actually covers, whether someone skimming would understand the post from the headings alone, and where a heading could naturally reflect a search term. Note that most readers skim headings before deciding to read, and clear descriptive headings help both them and search engines understand the structure. Give me improved headings.",
+    "description": "Fix heading structure so skimmers and search engines understand the post.",
+    "useCase": "Use this because most readers skim headings before committing to read. Clear descriptive headings in a logical hierarchy help skimmers grasp the post at a glance and help search engines understand its structure, and a reader who cannot follow the headings usually leaves.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE YOUR HEADING STRUCTURE",
+      "THE TOPIC"
+    ],
+    "relatedPromptIds": [
+      "blogseo-skimmability-fixer",
+      "blogseo-keyword-naturalizer",
+      "blogseo-featured-snippet-targeter"
+    ]
+  },
+  {
+    "id": "blogseo-skimmability-fixer",
+    "title": "Make a Post Easier to Skim",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me make my blog post easier to skim, for my [BUSINESS TYPE]. Here is the post: [PASTE OR DESCRIBE IT]. Help me improve how it reads on a screen: breaking up walls of text, adding subheadings where the reader needs a landmark, using short paragraphs and lists where they fit, and surfacing the key points so a skimmer gets value without reading every word. Note that most people scan rather than read, and a dense wall of text loses them regardless of how good the content is. Do not turn it into fragments though, since choppy over formatting is its own problem. Give me the reformatted version.",
+    "description": "Make a post skimmable without chopping it into fragments.",
+    "useCase": "Use this on a post that is a wall of text. Most people scan rather than read, so subheadings, short paragraphs, and surfaced key points let a skimmer get value, while the opposite mistake of chopping everything into choppy fragments is worth avoiding too.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT"
+    ],
+    "relatedPromptIds": [
+      "blogseo-heading-optimizer",
+      "blogseo-post-optimizer",
+      "blogseo-intro-optimizer"
+    ]
+  },
+  {
+    "id": "blogseo-intro-optimizer",
+    "title": "Fix an Introduction That Loses Readers",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me fix the introduction of my blog post for my [BUSINESS TYPE]. Here is my current intro: [PASTE IT], my keyword is [YOUR KEYWORD], and the reader wants [WHAT THEY CAME FOR]. Help me tighten it: cutting the throat clearing preamble, getting to the point faster, confirming quickly that the post answers what they came for, and working the topic in naturally near the start. Note that a searcher who does not see their answer coming in the first few lines hits back, and a long windup about the importance of the topic is where most readers leave. Give me a tighter intro.",
+    "description": "Tighten a slow introduction that loses searchers before the answer.",
+    "useCase": "Use this when readers bounce before reaching your point. A searcher who does not see their answer coming in the first few lines hits back, and the long windup about why the topic matters is exactly where most people leave, so cutting to the point protects the whole post.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "YOUR KEYWORD",
+      "WHAT THEY CAME FOR"
+    ],
+    "relatedPromptIds": [
+      "blogseo-skimmability-fixer",
+      "blogseo-intent-matcher",
+      "blogseo-post-optimizer"
+    ]
+  },
+  {
+    "id": "blogseo-thin-content-fixer",
+    "title": "Fix a Post That Is Too Thin to Rank",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me work out whether my blog post is too thin to rank, for my [BUSINESS TYPE]. My post is [PASTE OR DESCRIBE IT AND ITS LENGTH], my keyword is [YOUR KEYWORD], and what ranks covers [WHAT THE TOP RESULTS INCLUDE]. Help me honestly assess: whether my post genuinely covers the topic or skims it, what substantive things are missing that readers actually want, and whether the fix is adding real value or whether the post was too slight to bother with. Note that thin means lacking substance, not lacking word count, and padding a shallow post with filler makes it worse rather than better. Give me an honest read and what to add.",
+    "description": "Assess whether a post is too thin to rank and what real substance to add.",
+    "useCase": "Use this when a short post is not ranking against fuller ones. Thin means lacking substance rather than word count, so the fix is adding what readers genuinely want to know, and being told a post was too slight to bother with saves you padding a shallow piece with filler that helps nothing.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT AND ITS LENGTH",
+      "YOUR KEYWORD",
+      "WHAT THE TOP RESULTS INCLUDE"
+    ],
+    "relatedPromptIds": [
+      "blogseo-competitor-comparer",
+      "blogseo-post-optimizer",
+      "blogseo-depth-adder"
+    ]
+  },
+  {
+    "id": "blogseo-competitor-comparer",
+    "title": "Compare Your Post to What Ranks",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me compare my blog post to what currently ranks for my keyword, in my [BUSINESS TYPE]. My post covers [WHAT YOURS DOES], my keyword is [YOUR KEYWORD], and the top ranking posts cover [DESCRIBE WHAT THEY INCLUDE AND HOW THEY APPROACH IT]. Help me see honestly: what they do that mine does not, what mine does better, where they are generic and I could go deeper, and what would make mine the more useful result. Note that I need to be more useful than what ranks, not just present, and matching them exactly gives searchers no reason to prefer mine. Give me the comparison and how to win.",
+    "description": "Compare your post to the ranking ones and find how to be more useful.",
+    "useCase": "Use this to understand what you are up against. You need to be more useful than what ranks rather than merely present, and comparing honestly reveals both where they go deeper and where they are generic enough that you could beat them by covering what they skimmed.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOURS DOES",
+      "YOUR KEYWORD",
+      "DESCRIBE WHAT THEY INCLUDE AND HOW THEY APPROACH IT"
+    ],
+    "relatedPromptIds": [
+      "blogseo-thin-content-fixer",
+      "blogseo-intent-matcher",
+      "blogseo-unique-angle-finder"
+    ]
+  },
+  {
+    "id": "blogseo-depth-adder",
+    "title": "Add Real Depth to a Surface Level Post",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me add genuine depth to a surface level blog post, for my [BUSINESS TYPE]. My post is [PASTE OR DESCRIBE IT], my topic is [THE TOPIC], and my own expertise or experience with it is [WHAT YOU ACTUALLY KNOW OR HAVE DONE]. Help me find where to add real value: the specifics only someone who has done this would include, the questions the surface version leaves unanswered, the examples that make it concrete, and where my own experience could set it apart. Note that depth means the hard won specifics, not more words, and generic added paragraphs do not count. Give me where and how to add depth.",
+    "description": "Add genuine depth from your own experience rather than more generic words.",
+    "useCase": "Use this to turn a generic post into one worth ranking. Depth means the hard won specifics only someone who has done the thing would include, so drawing on your actual experience sets it apart, whereas adding more generic paragraphs makes it longer without making it better.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT",
+      "THE TOPIC",
+      "WHAT YOU ACTUALLY KNOW OR HAVE DONE"
+    ],
+    "relatedPromptIds": [
+      "blogseo-thin-content-fixer",
+      "blogseo-unique-angle-finder",
+      "blogseo-competitor-comparer"
+    ]
+  },
+  {
+    "id": "blogseo-unique-angle-finder",
+    "title": "Find an Angle Nobody Else Has",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me find a unique angle for a blog post on a crowded topic, in my [BUSINESS TYPE]. My topic is [THE TOPIC], what everyone else says is [THE STANDARD TAKE], and my perspective or experience is [WHAT YOU SEE DIFFERENTLY OR HAVE LIVED]. Help me find the angle that is genuinely mine: the contrarian but honest take, the underserved sub audience, the specific experience others lack, or the honesty everyone else avoids. Note that being the hundredth generic post on a topic ranks nowhere, while a genuinely different angle can rank even on a crowded term. Give me angle options and which is strongest.",
+    "description": "Find a genuinely distinct angle on a crowded topic rather than repeating the standard take.",
+    "useCase": "Use this when your topic already has a thousand posts. The hundredth generic take ranks nowhere, while a genuinely different angle can rank even on a crowded term, so finding the perspective or experience that is actually yours is what gives the post a reason to exist.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE TOPIC",
+      "THE STANDARD TAKE",
+      "WHAT YOU SEE DIFFERENTLY OR HAVE LIVED"
+    ],
+    "relatedPromptIds": [
+      "blogseo-depth-adder",
+      "blogseo-competitor-comparer",
+      "blogseo-post-optimizer"
+    ]
+  },
+  {
+    "id": "blogseo-featured-snippet-targeter",
+    "title": "Format a Post for the Answer Box",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me format part of my blog post to win the answer box for my [BUSINESS TYPE]. My keyword is [YOUR KEYWORD, WHICH IS USUALLY A QUESTION], my post is [PASTE THE RELEVANT SECTION], and the current answer box shows [WHAT IS THERE NOW, IF ANYTHING]. Help me structure a clear direct answer that could win the featured position: a concise answer right after the question, formatted the way these are usually pulled, followed by the fuller explanation. Note that the answer box gives a big visibility boost but is never guaranteed, so this is worth doing without expecting it. Give me the optimized section.",
+    "description": "Structure a clear direct answer that could win the featured answer box.",
+    "useCase": "Use this for question based keywords. A concise answer placed right after the question, formatted the way these get pulled, gives you a shot at the answer box and its visibility boost, though it is never guaranteed, so it is worth doing without banking on it.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR KEYWORD, WHICH IS USUALLY A QUESTION",
+      "PASTE THE RELEVANT SECTION",
+      "WHAT IS THERE NOW, IF ANYTHING"
+    ],
+    "relatedPromptIds": [
+      "blogseo-heading-optimizer",
+      "blogseo-question-answerer",
+      "blogseo-format-fixer"
+    ]
+  },
+  {
+    "id": "blogseo-question-answerer",
+    "title": "Cover the Questions Readers Also Ask",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me cover the related questions readers have about my blog post topic, for my [BUSINESS TYPE]. My post is about [THE TOPIC], my main keyword is [YOUR KEYWORD], and my audience is [WHO THEY ARE]. Help me identify the follow up and related questions someone reading this would also have, and where in the post to answer them. Note that covering the natural follow up questions makes a post more complete for readers and can capture the related searches people make, but only the questions genuinely relevant to this post, not every tangent. Give me the questions worth answering and where they fit.",
+    "description": "Cover the related questions readers also have, without chasing every tangent.",
+    "useCase": "Use this to make a post more complete. Answering the follow up questions a reader would naturally have serves them and can capture related searches, provided you stick to questions genuinely relevant to the post rather than padding it with every loosely connected tangent.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE TOPIC",
+      "YOUR KEYWORD",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "blogseo-featured-snippet-targeter",
+      "blogseo-depth-adder",
+      "blogseo-intent-matcher"
+    ]
+  },
+  {
+    "id": "blogseo-format-fixer",
+    "title": "Match the Post Format to the Keyword",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me match my blog post format to what ranks for my keyword, in my [BUSINESS TYPE]. My keyword is [YOUR KEYWORD], my post is currently [THE FORMAT, E.G. A NARRATIVE ESSAY, A HOW TO, A LIST], and what ranks is [THE FORMAT OF THE TOP RESULTS, E.G. STEP BY STEP, COMPARISON, LIST]. Help me judge: whether my format matches what searchers and search engines expect for this term, whether reformatting would help, and how to restructure without losing the substance. Note that the right content in the wrong format struggles, since a searcher wanting steps does not want an essay. Give me a format recommendation.",
+    "description": "Match a post's format to what actually ranks for its keyword.",
+    "useCase": "Use this when good content in the wrong shape will not rank. A searcher wanting step by step instructions does not want a narrative essay, so matching the format that ranks for your keyword can matter as much as the content itself, and reformatting is often the whole fix.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR KEYWORD",
+      "THE FORMAT, E.G. A NARRATIVE ESSAY, A HOW TO, A LIST",
+      "THE FORMAT OF THE TOP RESULTS, E.G. STEP BY STEP, COMPARISON, LIST"
+    ],
+    "relatedPromptIds": [
+      "blogseo-intent-matcher",
+      "blogseo-heading-optimizer",
+      "blogseo-competitor-comparer"
+    ]
+  },
+  {
+    "id": "blogseo-internal-link-adder",
+    "title": "Add Internal Links to a Blog Post",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me add internal links to a blog post as part of optimizing it, for my [BUSINESS TYPE]. My post is about [THE POST TOPIC], and my other relevant pages are [LIST RELATED POSTS AND ANY SERVICE PAGES]. Help me find where the post could naturally link to my other content and to my relevant offer, using anchor text that fits the sentence. Note that internal links help readers go deeper and help search engines understand how my content connects, but only links that genuinely fit belong here. Give me the links to add and where they go.",
+    "description": "Add internal links to a post as part of optimizing it, where they fit.",
+    "useCase": "Use this while optimizing a post. Adding internal links to related content and your relevant offer helps readers go deeper and shows search engines how your content connects, provided the links genuinely fit the flow rather than being bolted on for their own sake.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE POST TOPIC",
+      "LIST RELATED POSTS AND ANY SERVICE PAGES"
+    ],
+    "relatedPromptIds": [
+      "blogseo-post-optimizer",
+      "blogseo-cta-adder",
+      "blogseo-question-answerer"
+    ]
+  },
+  {
+    "id": "blogseo-image-optimizer",
+    "title": "Optimize the Images in a Post",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me optimize the images in my blog post for my [BUSINESS TYPE]. My post is about [THE TOPIC], and my images are [DESCRIBE THEM, E.G. STOCK PHOTOS, SCREENSHOTS, DIAGRAMS]. Help me handle the SEO basics: writing alt text that describes each image usefully for accessibility and search, sensible file names, and where images genuinely help the reader versus where they are decorative filler. Note that alt text exists first for people using screen readers and should describe the image honestly, not be stuffed with keywords, and that decorative stock photos add nothing worth optimizing. Give me the alt text and file name guidance.",
+    "description": "Handle image alt text and file names, with honest accessibility first alt text.",
+    "useCase": "Use this to cover image SEO basics. Alt text exists first for people using screen readers and should describe images honestly rather than being stuffed with keywords, and being told which decorative stock photos add nothing saves you optimizing images that should not be there.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE TOPIC",
+      "DESCRIBE THEM, E.G. STOCK PHOTOS, SCREENSHOTS, DIAGRAMS"
+    ],
+    "relatedPromptIds": [
+      "blogseo-post-optimizer",
+      "blogseo-skimmability-fixer",
+      "blogseo-technical-checklist"
+    ]
+  },
+  {
+    "id": "blogseo-cta-adder",
+    "title": "Add a Call to Action Without Ruining the Post",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me add a call to action to my blog post without wrecking it, for my [BUSINESS TYPE]. My post is about [THE TOPIC], my offer is [WHAT YOU WANT THEM TO DO, E.G. SUBSCRIBE, BOOK A CALL, READ MORE], and my reader is [WHERE THEY ARE IN THEIR THINKING]. Help me place a call to action that fits: matching the reader's readiness rather than pushing a sale on someone just learning, positioned where it does not interrupt, and worded to suit the moment. Note that a hard sell dropped into an informational post feels like a bait and switch, while a well matched next step feels helpful. Give me the call to action and where it goes.",
+    "description": "Add a call to action matched to the reader's readiness, not a hard sell.",
+    "useCase": "Use this to make a post do more than inform. A next step matched to where the reader actually is feels helpful, whereas a hard sell dropped into an informational post feels like a bait and switch, so matching the ask to their readiness is what keeps it from backfiring.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE TOPIC",
+      "WHAT YOU WANT THEM TO DO, E.G. SUBSCRIBE, BOOK A CALL, READ MORE",
+      "WHERE THEY ARE IN THEIR THINKING"
+    ],
+    "relatedPromptIds": [
+      "blogseo-internal-link-adder",
+      "blogseo-post-optimizer",
+      "blogseo-conversion-checker"
+    ]
+  },
+  {
+    "id": "blogseo-refresh-updater",
+    "title": "Refresh an Old Post That Is Slipping",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me refresh an old blog post that is losing its ranking, for my [BUSINESS TYPE]. The post is about [THE TOPIC], it was written [ROUGHLY WHEN], and what has changed since is [WHAT IS NOW OUTDATED, OR WRITE NOT SURE]. Help me work out what to update: outdated facts and dated references, sections newer competitors now cover, anything factually wrong now, and what to add to make it current again. Note that refreshing a post that already has some standing is usually far more effective than writing something new, and search engines tend to reward genuinely updated content. Give me what to update.",
+    "description": "Refresh an old post that is slipping rather than writing something new.",
+    "useCase": "Use this when a once ranking post is sliding. Refreshing a post that already has standing is usually far more effective than writing new, since search engines tend to reward genuinely updated content, and older posts quietly accumulate outdated facts that drag them down.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE TOPIC",
+      "ROUGHLY WHEN",
+      "WHAT IS NOW OUTDATED, OR WRITE NOT SURE"
+    ],
+    "relatedPromptIds": [
+      "blogseo-post-optimizer",
+      "blogseo-decay-diagnoser",
+      "blogseo-depth-adder"
+    ]
+  },
+  {
+    "id": "blogseo-decay-diagnoser",
+    "title": "Work Out Why a Post Lost Its Ranking",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me work out why a blog post lost its ranking, for my [BUSINESS TYPE]. The post is about [THE TOPIC], it used to rank around [ITS OLD POSITION], and now [WHAT IS HAPPENING]. Help me think through the likely causes: whether newer competitors overtook it, whether the content went stale, whether search intent for the term shifted, whether the answer box now takes the clicks, or whether it is a broader change I cannot control. Note that some ranking loss is fixable by improving the post and some is not, so I need to know which before pouring effort in. Give me the likely causes and what is worth doing.",
+    "description": "Diagnose why a post lost ranking and whether it is worth trying to recover.",
+    "useCase": "Use this when a post that used to rank has dropped. Some ranking loss is fixable by improving the post and some is a broader shift you cannot control, so diagnosing which before pouring in effort saves you optimizing a post whose decline had nothing to do with its quality.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE TOPIC",
+      "ITS OLD POSITION",
+      "WHAT IS HAPPENING"
+    ],
+    "relatedPromptIds": [
+      "blogseo-refresh-updater",
+      "blogseo-competitor-comparer",
+      "blogseo-post-optimizer"
+    ]
+  },
+  {
+    "id": "blogseo-consolidation-planner",
+    "title": "Combine Overlapping Posts into One",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me decide whether to combine overlapping blog posts, for my [BUSINESS TYPE]. My posts covering similar ground are [LIST THE POSTS AND WHAT EACH COVERS], and how they perform is [ANYTHING YOU KNOW ABOUT THEIR TRAFFIC]. Help me work out: whether they are splitting my effort by competing for the same term, whether merging them into one strong post would rank better than several weak ones, what to keep from each, and where to redirect the ones I retire. Note that several thin posts on one topic often rank worse than one thorough post, but genuinely distinct posts should stay separate. Give me a recommendation.",
+    "description": "Decide whether to merge overlapping posts into one stronger piece.",
+    "useCase": "Use this when several posts cover similar ground. Multiple thin posts on one topic often rank worse than a single thorough one and split your effort competing for the same term, so consolidating can help, though genuinely distinct posts should stay separate rather than being force merged.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST THE POSTS AND WHAT EACH COVERS",
+      "ANYTHING YOU KNOW ABOUT THEIR TRAFFIC"
+    ],
+    "relatedPromptIds": [
+      "blogseo-decay-diagnoser",
+      "blogseo-refresh-updater",
+      "blogseo-competitor-comparer"
+    ]
+  },
+  {
+    "id": "blogseo-technical-checklist",
+    "title": "Run Through the Technical Basics",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me run through the technical SEO basics for a blog post, for my [BUSINESS TYPE]. My post is about [THE TOPIC], my keyword is [YOUR KEYWORD], and my setup is [YOUR PLATFORM, E.G. WORDPRESS, A STATIC SITE, SQUARESPACE]. Give me a plain checklist a non technical person can actually work through: the title tag, the meta description, the URL, the headings, the alt text, and internal links. Skip the advanced technical work that needs a developer, and flag anything that genuinely does. Note that most blog SEO is content rather than technical, so this is a quick check rather than the main event. Give me the checklist.",
+    "description": "Run a plain, non technical SEO checklist for a blog post.",
+    "useCase": "Use this to cover the basics before publishing. A plain checklist for the title tag, meta, URL, headings, and alt text catches the easy wins, and being told most blog SEO is content rather than technical keeps you from mistaking a five minute check for the real work.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE TOPIC",
+      "YOUR KEYWORD",
+      "YOUR PLATFORM, E.G. WORDPRESS, A STATIC SITE, SQUARESPACE"
+    ],
+    "relatedPromptIds": [
+      "blogseo-image-optimizer",
+      "blogseo-post-optimizer",
+      "blogseo-heading-optimizer"
+    ]
+  },
+  {
+    "id": "blogseo-conversion-checker",
+    "title": "Check Whether Traffic Actually Does Anything",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether my ranking blog posts actually do anything for my [BUSINESS TYPE]. My posts that get traffic are [WHICH POSTS AND ROUGHLY HOW MUCH TRAFFIC], my business goal is [WHAT YOU ACTUALLY WANT, E.G. LEADS, SALES, SUBSCRIBERS], and what happens after people read is [WHAT YOU KNOW, OR WRITE NOTHING]. Help me think through: whether the traffic connects to anything that matters, which posts attract people who could become customers versus pure passersby, and how to make the useful posts convert. Note that ranking is not the goal, it is a step toward one, and traffic that never does anything is a vanity number. Give me an honest read.",
+    "description": "Check whether ranking traffic connects to anything your business needs.",
+    "useCase": "Use this when you rank but see no business result. Ranking is a step toward a goal rather than the goal itself, so checking whether your traffic attracts potential customers or pure passersby tells you which posts are worth optimizing further and which are vanity numbers.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHICH POSTS AND ROUGHLY HOW MUCH TRAFFIC",
+      "WHAT YOU ACTUALLY WANT, E.G. LEADS, SALES, SUBSCRIBERS",
+      "WHAT YOU KNOW, OR WRITE NOTHING"
+    ],
+    "relatedPromptIds": [
+      "blogseo-cta-adder",
+      "blogseo-intent-matcher",
+      "blogseo-priority-picker"
+    ]
+  },
+  {
+    "id": "blogseo-priority-picker",
+    "title": "Decide Which Posts to Optimize First",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me decide which blog posts to optimize first, for my [BUSINESS TYPE]. My posts and roughly how they perform are [LIST POSTS WITH ANY TRAFFIC OR POSITION INFO YOU HAVE], and my capacity is [HOW MUCH TIME YOU HAVE]. Help me prioritize: the posts sitting just off page one where a push could break through, the ones getting traffic that could convert better, and the ones not worth touching. Note that a post ranking at the bottom of page one is usually a better bet than one on page five, since small improvements move it into view, and effort on a post nobody will ever find is wasted. Give me the priority order.",
+    "description": "Prioritize which posts to optimize based on where the effort pays off.",
+    "useCase": "Use this when you have many posts and limited time. A post sitting at the bottom of page one is usually a better bet than one on page five, since a small push moves it into view, so prioritizing by where effort actually pays beats optimizing whatever you happened to write last.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST POSTS WITH ANY TRAFFIC OR POSITION INFO YOU HAVE",
+      "HOW MUCH TIME YOU HAVE"
+    ],
+    "relatedPromptIds": [
+      "blogseo-conversion-checker",
+      "blogseo-decay-diagnoser",
+      "blogseo-post-optimizer"
+    ]
+  },
+  {
+    "id": "blogseo-quick-optimize",
+    "title": "Get a Quick Optimization Pass",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "blog-seo-optimization",
+    "aiTool": "Grok",
+    "promptText": "I need a quick SEO pass on a blog post. Here is the post: [PASTE OR DESCRIBE IT], and my keyword is [YOUR KEYWORD]. Give me the three or four highest impact changes to help it rank and read better, in plain terms I can act on now. Skip the long explanation, just the changes worth making. Give me the quick wins.",
+    "description": "Get the three or four highest impact optimization changes fast.",
+    "useCase": "Use this when you want quick wins rather than a full rework. The three or four highest impact changes cover most of what a single post needs, and acting on the obvious improvements now beats leaving a post untouched while you plan a thorough optimization you may never do.",
+    "variables": [
+      "PASTE OR DESCRIBE IT",
+      "YOUR KEYWORD"
+    ],
+    "relatedPromptIds": [
+      "blogseo-post-optimizer",
+      "blogseo-priority-picker",
+      "blogseo-technical-checklist"
+    ]
   }
 ]
