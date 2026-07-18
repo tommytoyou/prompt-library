@@ -29523,5 +29523,436 @@
       "hook-batch-writer",
       "hook-first-line-fixer"
     ]
+  },
+  {
+    "id": "hashtag-strategy-builder",
+    "title": "Build a Hashtag Strategy",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "Claude",
+    "promptText": "Help me build a hashtag strategy for my [BUSINESS TYPE]. My platform is [WHERE YOU POST], my niche is [YOUR TOPIC AREA], and my audience is [WHO THEY ARE]. Help me build an approach: what mix of broad and specific tags makes sense on my platform, how many to actually use, and how to group tags for different content types. Be honest about how much hashtags still matter on my platform versus how much is habit, since they carry very different weight on different platforms now. Note that hashtags are far less important than they were, and on some platforms they barely move anything, so this should be a light habit rather than an obsession. Give me a strategy and an honest weighting.",
+    "description": "Build a hashtag strategy weighted honestly to how much they matter on your platform.",
+    "useCase": "Use this to set a sensible hashtag approach. Hashtags carry very different weight across platforms and matter far less than they used to, so building a light strategy weighted to your specific platform keeps you from pouring effort into something that barely moves reach anymore.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHERE YOU POST",
+      "YOUR TOPIC AREA",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "hashtag-platform-reality",
+      "hashtag-mix-builder",
+      "hashtag-count-decider"
+    ]
+  },
+  {
+    "id": "hashtag-platform-reality",
+    "title": "Understand How Much Hashtags Matter Where You Post",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "Claude",
+    "promptText": "Help me understand how much hashtags actually matter on my platform, for my [BUSINESS TYPE]. My platform is [WHERE YOU POST], and how I use hashtags now is [WHAT YOU DO, OR WRITE NOT SURE]. Give me an honest picture: whether hashtags meaningfully affect reach on this platform or barely register, what the platform itself seems to reward instead, and how much of the common hashtag advice is outdated. Note that hashtag advice ages fast and a lot of it was written for how platforms worked years ago, so I want the current reality rather than the folklore. Give me an honest read on where hashtags actually stand on my platform.",
+    "description": "Get an honest read on whether hashtags still matter on your specific platform.",
+    "useCase": "Use this before investing in hashtags at all. Hashtag advice ages fast and much of it describes how platforms worked years ago, so an honest read on whether they still move reach on your platform tells you whether the effort is worth anything or pure habit.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHERE YOU POST",
+      "WHAT YOU DO, OR WRITE NOT SURE"
+    ],
+    "relatedPromptIds": [
+      "hashtag-strategy-builder",
+      "hashtag-overinvestment-check",
+      "hashtag-count-decider"
+    ]
+  },
+  {
+    "id": "hashtag-mix-builder",
+    "title": "Build a Mix of Broad and Niche Tags",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "Claude",
+    "promptText": "Help me build a balanced mix of hashtags for a post in my [BUSINESS TYPE]. My post is about [THE TOPIC], my niche is [YOUR AREA], and my platform is [WHERE IT GOES]. Help me build a set that mixes broad tags with a bigger audience where I am a small fish, and specific niche tags where I could actually be seen. Explain why the balance matters. Note that using only huge tags means my post is buried in seconds by bigger accounts, while only tiny tags means almost nobody searches them, so a mix reaches both, and there is no point piling on tags that do not fit the post. Give me a balanced set.",
+    "description": "Build a balanced mix of broad and niche hashtags that fit the post.",
+    "useCase": "Use this for a single post's tags. Only huge tags means being buried in seconds by bigger accounts while only tiny ones means almost nobody searches them, so a mix reaches both, and the balance matters more than the raw number of tags you pile on.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE TOPIC",
+      "YOUR AREA",
+      "WHERE IT GOES"
+    ],
+    "relatedPromptIds": [
+      "hashtag-strategy-builder",
+      "hashtag-niche-finder",
+      "hashtag-count-decider"
+    ]
+  },
+  {
+    "id": "hashtag-niche-finder",
+    "title": "Find Niche Hashtags You Can Actually Rank In",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "Claude",
+    "promptText": "Help me find specific niche hashtags where my [BUSINESS TYPE] content could actually be seen. My topic is [THE TOPIC], my audience is [WHO THEY ARE], and my typical reach is [ROUGHLY HOW MANY PEOPLE SEE MY POSTS]. Help me brainstorm the more specific tags where a smaller account like mine has a chance of showing up rather than being instantly buried. Note that I cannot verify tag sizes without checking the platform, so treat these as candidates to check, and the goal is tags active enough that people use them but small enough that I do not vanish. Give me niche tag candidates to verify.",
+    "description": "Brainstorm niche hashtag candidates a smaller account could actually rank in.",
+    "useCase": "Use this when big tags bury your posts instantly. Specific niche tags where a smaller account has a chance of showing up beat the giant ones you disappear into, and generating candidates to verify on the platform beats guessing at tags too big to ever surface you.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE TOPIC",
+      "WHO THEY ARE",
+      "ROUGHLY HOW MANY PEOPLE SEE MY POSTS"
+    ],
+    "relatedPromptIds": [
+      "hashtag-mix-builder",
+      "hashtag-research-method",
+      "hashtag-strategy-builder"
+    ]
+  },
+  {
+    "id": "hashtag-research-method",
+    "title": "Research Which Hashtags Your Audience Uses",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "Claude",
+    "promptText": "Help me research which hashtags my actual audience uses, for my [BUSINESS TYPE]. My audience is [WHO THEY ARE], my platform is [WHERE YOU POST], and who they follow or engage with is [SIMILAR ACCOUNTS, OR WRITE NOT SURE]. Help me plan how to find the tags that matter: looking at what similar accounts and my own audience use, checking what tags appear on posts that do well in my niche, and spotting community specific tags I would not guess. Note that the tags my audience actually follows and searches beat any generic list, and watching real posts in my niche teaches more than a tag generator. Give me a research approach.",
+    "description": "Research the hashtags your real audience uses rather than a generic list.",
+    "useCase": "Use this to find tags that fit your actual audience. The tags your audience follows and searches beat any generic list, and watching what performs in your niche and what community specific tags appear teaches more than a tag generator that knows nothing about your corner of the platform.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO THEY ARE",
+      "WHERE YOU POST",
+      "SIMILAR ACCOUNTS, OR WRITE NOT SURE"
+    ],
+    "relatedPromptIds": [
+      "hashtag-niche-finder",
+      "hashtag-community-finder",
+      "hashtag-strategy-builder"
+    ]
+  },
+  {
+    "id": "hashtag-count-decider",
+    "title": "Decide How Many Hashtags to Use",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "Claude",
+    "promptText": "Help me decide how many hashtags to use per post on my [BUSINESS TYPE] content. My platform is [WHERE YOU POST], and I currently use [HOW MANY, OR WRITE NOT SURE]. Give me an honest read: what number tends to work on this platform, whether stuffing the maximum helps or looks spammy, and whether a small focused set beats a big pile. Note that the right number varies a lot by platform, that more is not automatically better, and that a wall of thirty tags can look desperate on platforms where a few relevant ones do the job. Give me a recommended number and why.",
+    "description": "Decide how many hashtags to use, since more is not automatically better.",
+    "useCase": "Use this when unsure whether to max out the tag limit. The right number varies a lot by platform and more is not automatically better, since a wall of thirty tags can look desperate where a few relevant ones do the job, so matching the count to your platform beats stuffing the maximum.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHERE YOU POST",
+      "HOW MANY, OR WRITE NOT SURE"
+    ],
+    "relatedPromptIds": [
+      "hashtag-platform-reality",
+      "hashtag-strategy-builder",
+      "hashtag-spam-checker"
+    ]
+  },
+  {
+    "id": "hashtag-branded-creator",
+    "title": "Create a Branded Hashtag",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "Claude",
+    "promptText": "Help me create a branded hashtag for my [BUSINESS TYPE]. My business is [YOUR NAME AND WHAT YOU DO], and what I want the tag for is [YOUR GOAL, E.G. COLLECTING CUSTOMER POSTS, A CAMPAIGN, BUILDING COMMUNITY]. Help me come up with branded tag options that are short, memorable, easy to spell, and not already heavily used for something else. Then tell me honestly whether a branded tag makes sense for an account my size, since they mostly work once people actually care about a brand. Note that a branded hashtag with nobody using it is just a lonely tag, so it needs a reason for people to adopt it. Give me options and an honest read on whether I am ready for one.",
+    "description": "Create a branded hashtag, with an honest read on whether you are ready for one.",
+    "useCase": "Use this when considering a branded tag. Short memorable options that are not already taken are the easy part, but a branded hashtag nobody uses is just a lonely tag, so an honest read on whether an account your size has the pull to make people adopt it matters more than the name.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR NAME AND WHAT YOU DO",
+      "YOUR GOAL, E.G. COLLECTING CUSTOMER POSTS, A CAMPAIGN, BUILDING COMMUNITY"
+    ],
+    "relatedPromptIds": [
+      "hashtag-campaign-planner",
+      "hashtag-community-finder",
+      "hashtag-strategy-builder"
+    ]
+  },
+  {
+    "id": "hashtag-community-finder",
+    "title": "Find Community Hashtags to Join",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "Claude",
+    "promptText": "Help me find community hashtags where my [BUSINESS TYPE] audience actually gathers. My niche is [YOUR AREA], my audience is [WHO THEY ARE], and my platform is [WHERE YOU POST]. Help me identify the kinds of community and recurring tags worth joining: regular themed days, niche community tags, and the ones real people in my space actually follow and contribute to. Note that community tags are about participating rather than broadcasting, since posting into a community tag without engaging with it reads as spam, and the value is being part of the conversation. Give me community tag types to look for and how to join well.",
+    "description": "Find community hashtags where your audience gathers and how to join them well.",
+    "useCase": "Use this to become part of a community rather than shout into it. Community and recurring tags are about participating, so posting into one without engaging reads as spam, and the value comes from being part of the conversation rather than just adding your tag to the pile.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR AREA",
+      "WHO THEY ARE",
+      "WHERE YOU POST"
+    ],
+    "relatedPromptIds": [
+      "hashtag-research-method",
+      "hashtag-branded-creator",
+      "hashtag-strategy-builder"
+    ]
+  },
+  {
+    "id": "hashtag-campaign-planner",
+    "title": "Plan Hashtags for a Campaign",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "Claude",
+    "promptText": "Help me plan the hashtags for a specific campaign in my [BUSINESS TYPE]. My campaign is [WHAT IT IS AND ITS GOAL], it runs [HOW LONG], and my platform is [WHERE IT GOES]. Help me plan: whether a dedicated campaign tag makes sense, what mix of tags to use across the campaign posts, and how to keep them consistent so the campaign is trackable. Note that a campaign tag only works if I use it consistently and give people a reason to use it too, and a tag nobody but me uses does not build the momentum a campaign needs. Give me a campaign hashtag plan.",
+    "description": "Plan consistent, trackable hashtags for a specific campaign.",
+    "useCase": "Use this for a time bound campaign. A dedicated tag used consistently makes the campaign trackable, but it only builds momentum if people beyond you actually use it, so the plan has to give them a reason to rather than assuming a tag alone creates participation.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT IT IS AND ITS GOAL",
+      "HOW LONG",
+      "WHERE IT GOES"
+    ],
+    "relatedPromptIds": [
+      "hashtag-branded-creator",
+      "hashtag-strategy-builder",
+      "hashtag-performance-reviewer"
+    ]
+  },
+  {
+    "id": "hashtag-set-organizer",
+    "title": "Organize Reusable Hashtag Sets",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me organize reusable hashtag sets for my [BUSINESS TYPE] so I am not picking tags from scratch every post. My content falls into these types [LIST YOUR CONTENT CATEGORIES OR THEMES], my platform is [WHERE YOU POST], and my usual tags are [ANY YOU ALREADY USE]. Help me build a few saved sets, one per content type, that I can drop in and tweak per post. Note that saved sets save time but posting the identical block of tags on every post can look repetitive and may be down weighted on some platforms, so I should vary them rather than paste the same block forever. Give me organized reusable sets.",
+    "description": "Organize reusable hashtag sets per content type, to vary rather than repeat.",
+    "useCase": "Use this to stop picking tags from scratch each post. Saved sets per content type save time, though pasting the identical block every post can look repetitive and may be down weighted on some platforms, so the sets are a starting point to tweak rather than a block to repeat forever.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST YOUR CONTENT CATEGORIES OR THEMES",
+      "WHERE YOU POST",
+      "ANY YOU ALREADY USE"
+    ],
+    "relatedPromptIds": [
+      "hashtag-strategy-builder",
+      "hashtag-mix-builder",
+      "hashtag-refresh-checker"
+    ]
+  },
+  {
+    "id": "hashtag-relevance-checker",
+    "title": "Check Whether Your Tags Actually Fit",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether the hashtags on my post actually fit it, for my [BUSINESS TYPE]. My post is about [THE TOPIC], and my tags are [PASTE THEM]. Check honestly: whether each tag genuinely relates to the post, which are just popular tags jammed on to chase reach, and whether any could attract the wrong audience or look like I am reaching. Note that irrelevant tags used to chase reach can bring in people who bounce immediately, which tells the platform my content is a poor match and can hurt more than help. Give me which tags to keep and which to drop.",
+    "description": "Check whether each hashtag genuinely fits the post or is chasing reach.",
+    "useCase": "Use this when tempted to add popular but unrelated tags. Irrelevant tags chasing reach bring in people who bounce immediately, which tells the platform your content is a poor match and can hurt more than help, so checking each tag genuinely fits protects your reach rather than inflating it.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE TOPIC",
+      "PASTE THEM"
+    ],
+    "relatedPromptIds": [
+      "hashtag-spam-checker",
+      "hashtag-mix-builder",
+      "hashtag-performance-reviewer"
+    ]
+  },
+  {
+    "id": "hashtag-spam-checker",
+    "title": "Check Whether Your Tags Look Spammy",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether my hashtags look spammy, for my [BUSINESS TYPE]. My tags are [PASTE THEM], and my platform is [WHERE YOU POST]. Check honestly: whether the count is excessive for this platform, whether any tags are banned or associated with spam and engagement farming, whether they look like a desperate reach grab, and whether the overall impression is professional or thirsty. Note that some tags are flagged or banned and using them can suppress a whole post, and a giant block of generic tags can make good content look like spam. Give me an honest read and a cleaner set.",
+    "description": "Check whether your tags look spammy or include flagged and banned ones.",
+    "useCase": "Use this before a big tag block goes out. Some tags are flagged or banned and using them can suppress a whole post, while a giant block of generic tags can make good content look like spam, so an honest check protects a post that the tags themselves could otherwise sink.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THEM",
+      "WHERE YOU POST"
+    ],
+    "relatedPromptIds": [
+      "hashtag-relevance-checker",
+      "hashtag-count-decider",
+      "hashtag-strategy-builder"
+    ]
+  },
+  {
+    "id": "hashtag-placement-decider",
+    "title": "Decide Where to Put Your Hashtags",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "Claude",
+    "promptText": "Help me decide where to put hashtags on my posts, for my [BUSINESS TYPE]. My platform is [WHERE YOU POST], and my usual format is [HOW YOUR POSTS ARE STRUCTURED]. Help me weigh the options: in the caption versus the first comment, mixed into the text versus grouped at the end, and what looks clean versus cluttered on my platform. Note that placement matters more for how the post looks to a reader than for reach on most platforms now, so the main goal is keeping the caption readable rather than hunting a ranking trick. Give me a placement recommendation.",
+    "description": "Decide where to place hashtags, mainly for readability rather than a reach trick.",
+    "useCase": "Use this when unsure where tags should go. Placement matters more for how the post looks to a reader than for reach on most platforms now, so keeping the caption clean is the real goal, and hunting a placement trick that boosts ranking is mostly chasing folklore.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHERE YOU POST",
+      "HOW YOUR POSTS ARE STRUCTURED"
+    ],
+    "relatedPromptIds": [
+      "hashtag-count-decider",
+      "hashtag-strategy-builder",
+      "hashtag-platform-reality"
+    ]
+  },
+  {
+    "id": "hashtag-trending-evaluator",
+    "title": "Decide Whether to Use a Trending Tag",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "Claude",
+    "promptText": "Help me decide whether to jump on a trending hashtag, for my [BUSINESS TYPE]. The trending tag is [THE TAG AND WHAT IT IS ABOUT], my post idea is [WHAT YOU WOULD POST], and my brand is [HOW YOU WANT TO COME ACROSS]. Help me judge honestly: whether my content genuinely fits the trend or would look like forced bandwagoning, whether the trend suits my brand, and whether there is any risk in associating with it. Note that jumping on a trend my content does not fit reads as desperate and can backfire, and some trends carry context I might not want to be attached to. Give me an honest read on whether to use it.",
+    "description": "Decide whether a trending tag genuinely fits or would look like bandwagoning.",
+    "useCase": "Use this when a trend is tempting. Jumping on one your content does not fit reads as desperate and can backfire, and some trends carry context you would not want to be attached to, so an honest read on genuine fit beats chasing reach onto a bandwagon that makes you look forced.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE TAG AND WHAT IT IS ABOUT",
+      "WHAT YOU WOULD POST",
+      "HOW YOU WANT TO COME ACROSS"
+    ],
+    "relatedPromptIds": [
+      "hashtag-relevance-checker",
+      "hashtag-strategy-builder",
+      "hashtag-spam-checker"
+    ]
+  },
+  {
+    "id": "hashtag-performance-reviewer",
+    "title": "Work Out Whether Your Hashtags Do Anything",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "Claude",
+    "promptText": "Help me work out whether my hashtags are actually doing anything, for my [BUSINESS TYPE]. My platform is [WHERE YOU POST], and any insight I have on where my reach comes from is [WHAT YOUR ANALYTICS SHOW, E.G. REACH FROM HASHTAGS, OR WRITE NOT SURE]. Help me think through: how to tell whether hashtags bring meaningful reach or barely register, what my platform's analytics can show about tag driven reach, and how to test whether they matter for me specifically. Note that the honest answer for many accounts is that hashtags do very little, and it is worth finding that out rather than cargo culting them forever. Give me how to check and what it likely means.",
+    "description": "Work out whether your hashtags bring real reach or barely register.",
+    "useCase": "Use this to stop cargo culting hashtags. The honest answer for many accounts is that they do very little, so checking your platform analytics for tag driven reach and testing whether they matter for you specifically is worth doing before spending more effort on them out of habit.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHERE YOU POST",
+      "WHAT YOUR ANALYTICS SHOW, E.G. REACH FROM HASHTAGS, OR WRITE NOT SURE"
+    ],
+    "relatedPromptIds": [
+      "hashtag-overinvestment-check",
+      "hashtag-platform-reality",
+      "hashtag-campaign-planner"
+    ]
+  },
+  {
+    "id": "hashtag-overinvestment-check",
+    "title": "Check Whether You Are Overthinking Hashtags",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether I am spending too much energy on hashtags, for my [BUSINESS TYPE]. How much time I spend on tags per post is [ROUGHLY HOW LONG], and how my content itself is doing is [HONESTLY, IS THE CONTENT GOOD]. Give me an honest read: whether hashtags are worth the time I give them versus what else that time could go to, and whether I am tweaking tags to avoid the harder work of making better content. Note that hashtags are one of the lowest leverage parts of social media, and time spent perfecting them is usually better spent on the hook, the content, or actually engaging with people. Give me an honest read and where my time should go.",
+    "description": "Check whether hashtag effort is displacing higher leverage work.",
+    "useCase": "Use this if you spend real time on tags. Hashtags are one of the lowest leverage parts of social media, so time perfecting them is usually better spent on the hook, the content, or engaging with people, and tweaking tags is often a way to avoid the harder work that actually moves things.",
+    "variables": [
+      "BUSINESS TYPE",
+      "ROUGHLY HOW LONG",
+      "HONESTLY, IS THE CONTENT GOOD"
+    ],
+    "relatedPromptIds": [
+      "hashtag-performance-reviewer",
+      "hashtag-platform-reality",
+      "hashtag-strategy-builder"
+    ]
+  },
+  {
+    "id": "hashtag-refresh-checker",
+    "title": "Refresh Stale Hashtag Sets",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "Claude",
+    "promptText": "Help me refresh my hashtag sets that have gone stale, for my [BUSINESS TYPE]. My current sets are [PASTE THEM], my platform is [WHERE YOU POST], and how long I have used them is [HOW LONG]. Help me check: which tags may have become banned or spammy since I chose them, which have grown too big to be useful, which are dead, and what fresher tags could replace them. Note that hashtag sets rot over time as tags get saturated, banned, or abandoned, and pasting the same set for a year means some are probably working against me now. Give me a refreshed set and what to drop.",
+    "description": "Refresh hashtag sets that have gone stale, banned, or oversaturated.",
+    "useCase": "Use this if you have used the same tags for a while. Hashtag sets rot as tags get saturated, banned, or abandoned, so pasting the same block for a year means some are probably working against you now, and a periodic refresh catches the ones that quietly turned into liabilities.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THEM",
+      "WHERE YOU POST",
+      "HOW LONG"
+    ],
+    "relatedPromptIds": [
+      "hashtag-set-organizer",
+      "hashtag-spam-checker",
+      "hashtag-performance-reviewer"
+    ]
+  },
+  {
+    "id": "hashtag-competitor-analyzer",
+    "title": "Learn from Competitor Hashtags",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "Claude",
+    "promptText": "Help me learn from the hashtags my successful competitors use, for my [BUSINESS TYPE]. My competitors or similar accounts are [WHO THEY ARE], and the tags I have noticed them using are [PASTE ANY YOU HAVE SEEN, OR WRITE HELP ME KNOW WHAT TO LOOK FOR]. Help me analyze: what patterns their tags show, which look genuinely useful versus habitual, and what I could adapt for my own account. Note that a competitor using a tag does not prove it works for them, since I cannot see their analytics, so this is a source of ideas to test rather than a formula to copy. Give me what to learn and what to try.",
+    "description": "Learn from competitor hashtags as ideas to test, not a formula to copy.",
+    "useCase": "Use this to mine competitor tags for ideas. A competitor using a tag does not prove it works, since you cannot see their analytics, so treating their choices as ideas to test rather than a formula to copy keeps you from importing habits that may be doing nothing for them either.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO THEY ARE",
+      "PASTE ANY YOU HAVE SEEN, OR WRITE HELP ME KNOW WHAT TO LOOK FOR"
+    ],
+    "relatedPromptIds": [
+      "hashtag-research-method",
+      "hashtag-niche-finder",
+      "hashtag-performance-reviewer"
+    ]
+  },
+  {
+    "id": "hashtag-local-builder",
+    "title": "Build Local Hashtags",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "Claude",
+    "promptText": "Help me build local hashtags for my [BUSINESS TYPE]. My area is [YOUR CITY, REGION, OR SERVICE AREA], my business is [WHAT YOU DO], and my platform is [WHERE YOU POST]. Help me build location tags: city and neighbourhood tags, local community and event tags, and the ones real locals actually use rather than official place names. Note that local tags are often genuinely useful for a location based business since local searchers use them and the competition is thinner, and this is one of the cases where hashtags still earn their place. Give me local tag candidates to verify.",
+    "description": "Build local hashtags for a location based business, where tags still earn their place.",
+    "useCase": "Use this if you serve a specific area. Local tags are one of the cases where hashtags still genuinely help, since locals use them and competition is thinner, and using the informal place names locals actually type beats the official ones nobody searches.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR CITY, REGION, OR SERVICE AREA",
+      "WHAT YOU DO",
+      "WHERE YOU POST"
+    ],
+    "relatedPromptIds": [
+      "hashtag-niche-finder",
+      "hashtag-community-finder",
+      "hashtag-strategy-builder"
+    ]
+  },
+  {
+    "id": "hashtag-content-matcher",
+    "title": "Match Tags to Different Content Types",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "Claude",
+    "promptText": "Help me match hashtags to my different content types, for my [BUSINESS TYPE]. My content types are [LIST THEM, E.G. TIPS, BEHIND THE SCENES, PRODUCT POSTS, PERSONAL], my niche is [YOUR AREA], and my platform is [WHERE YOU POST]. Help me work out which kinds of tags suit which content, since an educational post and a behind the scenes post reach different people. Note that using the identical tags regardless of content means half of them do not fit any given post, and matching tags to the actual content reaches the right people rather than a generic blur. Give me tag guidance per content type.",
+    "description": "Match hashtag types to different kinds of content rather than using one set for all.",
+    "useCase": "Use this if you use the same tags on every post. An educational post and a behind the scenes post reach different people, so matching tags to the content reaches the right ones, whereas an identical block regardless of content means half the tags fit nothing you actually posted.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST THEM, E.G. TIPS, BEHIND THE SCENES, PRODUCT POSTS, PERSONAL",
+      "YOUR AREA",
+      "WHERE YOU POST"
+    ],
+    "relatedPromptIds": [
+      "hashtag-set-organizer",
+      "hashtag-mix-builder",
+      "hashtag-strategy-builder"
+    ]
+  },
+  {
+    "id": "hashtag-quick-set",
+    "title": "Get a Quick Hashtag Set",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "hashtag-strategy",
+    "aiTool": "Grok",
+    "promptText": "I need a quick hashtag set for a post. The post is about [THE TOPIC], my niche is [YOUR AREA], and my platform is [WHERE IT GOES]. Give me a practical set mixing a few broad tags with several niche ones that fit the post, ready to use. Note these are candidates to sanity check on the platform. No long explanation, just the set. Give me the hashtags.",
+    "description": "Get a quick, practical hashtag set mixing broad and niche tags.",
+    "useCase": "Use this when you just want tags for a post now. A practical mix of broad and niche tags that fit the post covers what most need, and given how little hashtags move on many platforms, a quick sensible set beats agonizing over a decision that rarely changes much.",
+    "variables": [
+      "THE TOPIC",
+      "YOUR AREA",
+      "WHERE IT GOES"
+    ],
+    "relatedPromptIds": [
+      "hashtag-mix-builder",
+      "hashtag-strategy-builder",
+      "hashtag-relevance-checker"
+    ]
   }
 ]
