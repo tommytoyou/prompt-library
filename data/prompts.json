@@ -28613,5 +28613,467 @@
       "blogseo-priority-picker",
       "blogseo-technical-checklist"
     ]
+  },
+  {
+    "id": "audit-full-site-planner",
+    "title": "Plan a Full Site Audit",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me plan a full audit of my [BUSINESS TYPE] website. My site is [DESCRIBE IT, ITS SIZE, AND YOUR PLATFORM], my technical comfort is [HOW TECHNICAL YOU ARE], and what prompted this is [WHY YOU ARE AUDITING, OR WRITE GENERAL HEALTH CHECK]. Help me plan the audit: what areas to cover such as content, technical basics, user experience, and conversion, what order to work through them, and roughly how long each takes. Then tell me which parts I can do myself and which genuinely need a developer. Note that a full audit is overwhelming if tackled at once, so a plan that breaks it into sessions is what makes it actually happen. Give me the audit plan.",
+    "description": "Plan a full site audit broken into manageable sessions for a solo operator.",
+    "useCase": "Use this when you know your site needs a review but do not know where to start. A full audit is overwhelming tackled at once, so a plan that breaks it into sessions is what makes it happen, and being told which parts need a developer keeps you from stalling on work you cannot do.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DESCRIBE IT, ITS SIZE, AND YOUR PLATFORM",
+      "HOW TECHNICAL YOU ARE",
+      "WHY YOU ARE AUDITING, OR WRITE GENERAL HEALTH CHECK"
+    ],
+    "relatedPromptIds": [
+      "audit-priority-ranker",
+      "audit-diy-vs-developer",
+      "audit-quick-health-check"
+    ]
+  },
+  {
+    "id": "audit-quick-health-check",
+    "title": "Run a Quick Site Health Check",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me run a quick health check on my [BUSINESS TYPE] website in under an hour. My site is [DESCRIBE IT AND YOUR PLATFORM], and my main concern is [WHAT WORRIES YOU, OR WRITE JUST CHECKING]. Give me a short list of the highest impact things to check fast: whether pages load, whether the site works on a phone, whether the main action works, whether anything is obviously broken, and whether the basics are in place. Note that this is a triage check to catch anything urgent, not a thorough audit, so it finds fires rather than fixing everything. Give me the quick check list.",
+    "description": "Run a fast triage check that catches urgent problems in under an hour.",
+    "useCase": "Use this when you want reassurance the site is not on fire. A quick check of whether pages load, the phone version works, and the main action functions catches urgent problems fast, and knowing it is triage rather than a full audit keeps expectations honest about what an hour can find.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DESCRIBE IT AND YOUR PLATFORM",
+      "WHAT WORRIES YOU, OR WRITE JUST CHECKING"
+    ],
+    "relatedPromptIds": [
+      "audit-full-site-planner",
+      "audit-mobile-checker",
+      "audit-broken-things-finder"
+    ]
+  },
+  {
+    "id": "audit-priority-ranker",
+    "title": "Decide Which Problems to Fix First",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me prioritize the problems I found auditing my [BUSINESS TYPE] website. Here is what I found: [LIST THE ISSUES], and my capacity is [HOW MUCH TIME OR BUDGET YOU HAVE]. Help me rank them by what to fix first: which are actively costing me customers or rankings now, which are quick wins, which are big projects that can wait, and which are not worth fixing at all. Note that an audit produces a scary long list, and the mistake is either doing everything or doing nothing, when the answer is fixing the few things that actually matter first. Give me a prioritized order with reasoning.",
+    "description": "Rank audit findings so you fix what matters instead of freezing at the list.",
+    "useCase": "Use this when an audit handed you an intimidating list. The mistake is either doing everything or doing nothing, so ranking by what actively costs customers now versus what can wait turns a paralyzing list into a short sequence of things actually worth your time.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST THE ISSUES",
+      "HOW MUCH TIME OR BUDGET YOU HAVE"
+    ],
+    "relatedPromptIds": [
+      "audit-full-site-planner",
+      "audit-diy-vs-developer",
+      "audit-quick-health-check"
+    ]
+  },
+  {
+    "id": "audit-diy-vs-developer",
+    "title": "Work Out What Needs a Developer",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me work out which of my website issues I can fix myself and which need a developer, for my [BUSINESS TYPE]. My issues are [LIST THEM], my technical skill is [HOW COMFORTABLE YOU ARE], and my platform is [YOUR PLATFORM]. For each issue, tell me honestly: whether a non technical person can fix it, roughly how, or whether it genuinely needs a developer and what to ask them for. Note that some fixes are a five minute settings change and others quietly need real technical work, and knowing which saves me either breaking something or paying for something I could have done myself. Give me the breakdown.",
+    "description": "Sort issues into what you can fix yourself and what needs a developer.",
+    "useCase": "Use this before either breaking something or overpaying. Some fixes are a five minute settings change and others quietly need real technical work, so knowing which is which saves you both from breaking your own site and from paying a developer for something you could have done in minutes.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST THEM",
+      "HOW COMFORTABLE YOU ARE",
+      "YOUR PLATFORM"
+    ],
+    "relatedPromptIds": [
+      "audit-priority-ranker",
+      "audit-developer-brief-writer",
+      "audit-full-site-planner"
+    ]
+  },
+  {
+    "id": "audit-developer-brief-writer",
+    "title": "Write a Brief for a Developer",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me write a brief for a developer to fix issues on my [BUSINESS TYPE] website. The issues I need fixed are [LIST THEM], my platform is [YOUR PLATFORM], and my understanding of the technical side is [HOW MUCH YOU KNOW]. Help me write a clear brief: describing each problem in terms a developer can act on, what outcome I want rather than how to do it, and the questions to ask so I can compare quotes. Note that a vague brief gets vague quotes and scope creep, while a clear one gets accurate pricing, and I do not need to know the solution to describe the problem well. Give me the brief.",
+    "description": "Write a clear developer brief that describes problems and desired outcomes.",
+    "useCase": "Use this before hiring a developer for fixes. A vague brief gets vague quotes and scope creep while a clear one gets accurate pricing, and you do not need to know the solution to describe the problem well, which is exactly what a good brief does.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST THEM",
+      "YOUR PLATFORM",
+      "HOW MUCH YOU KNOW"
+    ],
+    "relatedPromptIds": [
+      "audit-diy-vs-developer",
+      "audit-priority-ranker",
+      "audit-full-site-planner"
+    ]
+  },
+  {
+    "id": "audit-mobile-checker",
+    "title": "Audit How Your Site Works on a Phone",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me audit how my [BUSINESS TYPE] website works on a phone. My site is [DESCRIBE IT AND YOUR PLATFORM], and how I usually check it is [ON DESKTOP, ON PHONE, OR NOT SURE]. Give me a checklist to work through on an actual phone: whether text is readable without zooming, whether buttons are tappable, whether the main action works, whether anything overflows or breaks, and whether it loads reasonably on mobile data. Note that most of my visitors are probably on phones while I built and check the site on a desktop, so problems I never see are the ones costing me the most. Give me the mobile checklist.",
+    "description": "Audit your site on an actual phone, where most visitors actually are.",
+    "useCase": "Use this because most visitors are on phones while you build on a desktop. The problems you never see because you check on a big screen are exactly the ones costing you customers, so working through a checklist on an actual phone surfaces what your desktop view hides.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DESCRIBE IT AND YOUR PLATFORM",
+      "ON DESKTOP, ON PHONE, OR NOT SURE"
+    ],
+    "relatedPromptIds": [
+      "audit-quick-health-check",
+      "audit-speed-checker",
+      "audit-usability-checker"
+    ]
+  },
+  {
+    "id": "audit-speed-checker",
+    "title": "Audit Your Site Speed",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me audit and understand my [BUSINESS TYPE] website speed. My platform is [YOUR PLATFORM], and any speed test results I have are [PASTE SCORES, OR WRITE HAVE NOT TESTED]. Help me: understand what actually matters for speed versus what is a vanity score, identify the common culprits like huge images and too many plugins that I can fix myself, and know when a slow site needs a developer. Note that a perfect speed score is not the goal, a site that feels fast to a real person on a phone is, and chasing the last few points of a score usually is not worth it. Give me what to check and fix.",
+    "description": "Audit site speed, focusing on what a real visitor feels over the score.",
+    "useCase": "Use this when your site feels slow or you saw a bad score. Focusing on what a real person on a phone experiences over a vanity number keeps you sane, and knowing the common self fixable culprits like huge images saves chasing the last few points of a score that changes nothing.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR PLATFORM",
+      "PASTE SCORES, OR WRITE HAVE NOT TESTED"
+    ],
+    "relatedPromptIds": [
+      "audit-mobile-checker",
+      "audit-image-checker",
+      "audit-diy-vs-developer"
+    ]
+  },
+  {
+    "id": "audit-broken-things-finder",
+    "title": "Find Broken Things on Your Site",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me find broken things on my [BUSINESS TYPE] website. My site is [DESCRIBE IT AND YOUR PLATFORM], and what has changed recently is [ANY RECENT CHANGES, OR WRITE NOTHING SPECIFIC]. Give me a checklist to find what is broken: dead links, buttons that do nothing, forms that fail, images that do not load, pages that error, and anything that stopped working after a change. Tell me how to check each without technical tools. Note that things break silently and I am usually the last to know, since visitors just leave rather than telling me a link is dead. Give me the checklist.",
+    "description": "Find dead links, broken forms, and other silent failures on your site.",
+    "useCase": "Use this to catch what breaks silently. Visitors rarely tell you a link is dead or a form failed, they just leave, so you are usually the last to know, which makes a deliberate check for broken things the only way to find what is quietly turning people away.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DESCRIBE IT AND YOUR PLATFORM",
+      "ANY RECENT CHANGES, OR WRITE NOTHING SPECIFIC"
+    ],
+    "relatedPromptIds": [
+      "audit-quick-health-check",
+      "audit-form-checker",
+      "audit-content-checker"
+    ]
+  },
+  {
+    "id": "audit-form-checker",
+    "title": "Audit Your Forms and Contact Methods",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me audit the forms and contact methods on my [BUSINESS TYPE] website. My forms and contact options are [LIST THEM, E.G. CONTACT FORM, BOOKING FORM, EMAIL LINK], and my platform is [YOUR PLATFORM]. Give me a checklist: actually submitting each form myself to confirm it works, checking the submission actually reaches me, confirming the confirmation message and any auto reply fire, and making sure my contact details are correct everywhere. Note that a broken contact form loses leads invisibly and I might not notice for months, so testing them myself is the only way to be sure. Give me the checklist and how to test each.",
+    "description": "Audit forms by actually submitting them and confirming they reach you.",
+    "useCase": "Use this because a broken form loses leads invisibly. You might not notice for months that submissions stopped reaching you, so actually submitting each form and confirming it arrives is the only reliable check, and it is the single audit item most worth doing.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST THEM, E.G. CONTACT FORM, BOOKING FORM, EMAIL LINK",
+      "YOUR PLATFORM"
+    ],
+    "relatedPromptIds": [
+      "audit-broken-things-finder",
+      "audit-conversion-path-checker",
+      "audit-quick-health-check"
+    ]
+  },
+  {
+    "id": "audit-content-checker",
+    "title": "Audit Your Content for What Is Stale",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me audit my [BUSINESS TYPE] website content for what has gone stale. My pages are [LIST OR DESCRIBE THEM], and what has changed in my business is [WHAT IS DIFFERENT NOW, E.G. SERVICES, PRICING, TEAM, POSITIONING]. Give me a checklist to find outdated content: old dates and years, services I no longer offer, prices that changed, mentions of people who left, dead references, and anything that no longer reflects reality. Note that content ages silently and a visitor finding outdated information wonders what else is wrong, so stale content quietly damages trust. Give me the checklist and where stale content usually hides.",
+    "description": "Audit content for outdated dates, services, prices, and dead references.",
+    "useCase": "Use this because content ages silently. A visitor who finds outdated information wonders what else on the site is wrong, so stale prices, dropped services, and old years quietly damage trust, and they hide in exactly the pages you stopped looking at long ago.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST OR DESCRIBE THEM",
+      "WHAT IS DIFFERENT NOW, E.G. SERVICES, PRICING, TEAM, POSITIONING"
+    ],
+    "relatedPromptIds": [
+      "audit-broken-things-finder",
+      "audit-message-clarity-checker",
+      "audit-full-site-planner"
+    ]
+  },
+  {
+    "id": "audit-seo-basics-checker",
+    "title": "Audit Your SEO Basics",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me audit the SEO basics across my [BUSINESS TYPE] website. My site is [DESCRIBE IT AND YOUR PLATFORM], and my SEO knowledge is [HOW MUCH YOU KNOW]. Give me a plain checklist covering the fundamentals: whether pages have titles and descriptions, whether headings are used properly, whether images have alt text, whether the site is indexed by search engines at all, and whether anything is accidentally blocking search engines. Flag the one or two things that would be genuinely serious if wrong. Note that most small sites have a couple of basic SEO problems rather than needing a deep technical audit. Give me the checklist.",
+    "description": "Audit SEO fundamentals with a plain checklist, flagging the serious ones.",
+    "useCase": "Use this to cover SEO fundamentals without a deep technical audit. Most small sites have a couple of basic problems rather than complex ones, and flagging the genuinely serious issues like accidentally blocking search engines tells you where an easy oversight could be quietly hiding your whole site.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DESCRIBE IT AND YOUR PLATFORM",
+      "HOW MUCH YOU KNOW"
+    ],
+    "relatedPromptIds": [
+      "audit-indexing-checker",
+      "audit-content-checker",
+      "audit-diy-vs-developer"
+    ]
+  },
+  {
+    "id": "audit-indexing-checker",
+    "title": "Check Whether Search Engines Can Find You",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether search engines can actually find and index my [BUSINESS TYPE] website. My site is [DESCRIBE IT AND YOUR PLATFORM], and my situation is [E.G. NEW SITE, NOT SHOWING UP, RECENTLY REBUILT, OR JUST CHECKING]. Help me check the things that could make my site invisible to search: whether it is being indexed at all, whether a setting is accidentally blocking search engines, whether a leftover setting from building the site is still live, and how to confirm. Note that a single wrong setting can hide an entire site from search, and this is the first thing to rule out when a site gets no search traffic. Give me what to check and how.",
+    "description": "Check whether a wrong setting is hiding your whole site from search.",
+    "useCase": "Use this first when a site gets no search traffic. A single leftover setting from when the site was built can hide it entirely from search engines, so ruling that out before anything else saves you optimizing content on a site search engines were never allowed to see.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DESCRIBE IT AND YOUR PLATFORM",
+      "E.G. NEW SITE, NOT SHOWING UP, RECENTLY REBUILT, OR JUST CHECKING"
+    ],
+    "relatedPromptIds": [
+      "audit-seo-basics-checker",
+      "audit-diy-vs-developer",
+      "audit-quick-health-check"
+    ]
+  },
+  {
+    "id": "audit-usability-checker",
+    "title": "Audit Whether Your Site Is Easy to Use",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me audit whether my [BUSINESS TYPE] website is actually easy to use. My site is [DESCRIBE IT AND ITS MAIN PAGES], and what I want a visitor to do is [THE MAIN GOAL]. Give me a checklist to assess usability as a first time visitor would: whether it is obvious what I do, whether navigation makes sense, whether the path to the main action is clear, whether anything confuses or frustrates, and where a visitor might get stuck. Note that I know my site too well to see its confusions, so I should test this by watching someone unfamiliar try to use it if I can. Give me the checklist and what to watch for.",
+    "description": "Audit usability from a first time visitor's perspective, not your own.",
+    "useCase": "Use this because you know your own site too well to see its confusions. A checklist assessing whether a stranger could tell what you do and find the main action surfaces the friction you are blind to, and watching an unfamiliar person try to use it reveals even more.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DESCRIBE IT AND ITS MAIN PAGES",
+      "THE MAIN GOAL"
+    ],
+    "relatedPromptIds": [
+      "audit-mobile-checker",
+      "audit-conversion-path-checker",
+      "audit-message-clarity-checker"
+    ]
+  },
+  {
+    "id": "audit-conversion-path-checker",
+    "title": "Audit the Path to Your Main Action",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me audit the path a visitor takes to my main action on my [BUSINESS TYPE] website. The action I want is [WHAT YOU WANT THEM TO DO], and the steps to get there are [DESCRIBE THE PATH, FROM LANDING TO COMPLETING THE ACTION]. Walk through the path as a visitor: where the next step is unclear, where friction or doubt creeps in, how many clicks it takes, and where people likely drop off. Note that every extra step and unclear moment loses people, and the fix is often removing steps rather than adding persuasion, since a clear short path converts better than a clever long one. Give me the weak points and fixes.",
+    "description": "Walk the path to your main action and find where visitors drop off.",
+    "useCase": "Use this to find where your funnel leaks. Every extra step and unclear moment on the path to your main action loses people, and the fix is often removing steps rather than adding persuasion, since a short clear path converts better than a clever long one.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU WANT THEM TO DO",
+      "DESCRIBE THE PATH, FROM LANDING TO COMPLETING THE ACTION"
+    ],
+    "relatedPromptIds": [
+      "audit-form-checker",
+      "audit-usability-checker",
+      "audit-cta-checker"
+    ]
+  },
+  {
+    "id": "audit-cta-checker",
+    "title": "Audit Your Calls to Action",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me audit the calls to action across my [BUSINESS TYPE] website. My main pages and what I want visitors to do on each are [LIST PAGES AND THEIR INTENDED ACTION]. Give me a checklist: whether every important page has a clear next step, whether the calls to action are obvious rather than buried, whether pages have too many competing actions, and whether any important page leaves the visitor with nowhere to go. Note that a page with no clear next step is a dead end where the visitor leaves, and a page with five competing actions is one where they choose none. Give me what to check and fix.",
+    "description": "Audit calls to action so every page has one clear next step.",
+    "useCase": "Use this to find pages that dead end or overwhelm. A page with no clear next step is where a visitor leaves and a page with five competing actions is where they choose none, so checking that every important page offers one obvious next step is a quiet conversion win.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST PAGES AND THEIR INTENDED ACTION"
+    ],
+    "relatedPromptIds": [
+      "audit-conversion-path-checker",
+      "audit-usability-checker",
+      "audit-priority-ranker"
+    ]
+  },
+  {
+    "id": "audit-message-clarity-checker",
+    "title": "Audit Whether Your Message Is Clear",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me audit whether my [BUSINESS TYPE] website makes clear what I do. Here is my homepage and key copy: [PASTE OR DESCRIBE IT]. Read it as a first time visitor who knows nothing about me: tell me whether it is instantly clear what I offer and who it is for, where jargon or vagueness lost you, and whether I lead with what I do or bury it under a clever tagline. Be blunt. Note that the most common website problem is that the visitor cannot tell what the business does within a few seconds, and no amount of design fixes a message that is not clear. Give me an honest read and what to fix.",
+    "description": "Audit whether a first time visitor can tell what you do within seconds.",
+    "useCase": "Use this on the most common website problem. Visitors who cannot tell what you do within a few seconds leave, and no amount of design fixes an unclear message, so a blunt read on whether your homepage leads with what you offer or buries it under a clever tagline is worth having.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT"
+    ],
+    "relatedPromptIds": [
+      "audit-usability-checker",
+      "audit-content-checker",
+      "audit-cta-checker"
+    ]
+  },
+  {
+    "id": "audit-image-checker",
+    "title": "Audit Your Images",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me audit the images across my [BUSINESS TYPE] website. My site uses [DESCRIBE YOUR IMAGES, E.G. STOCK PHOTOS, REAL PHOTOS, GRAPHICS], and my platform is [YOUR PLATFORM]. Give me a checklist: whether images are slowing the site with oversized files, whether they have alt text, whether generic stock photos are doing any work or just filling space, and whether the images actually help visitors understand or trust me. Note that huge image files are one of the most common self fixable speed problems, and a generic stock photo of a handshake adds nothing a visitor cares about. Give me the checklist and what to fix.",
+    "description": "Audit images for oversized files, missing alt text, and useless stock photos.",
+    "useCase": "Use this to catch a common speed and trust issue at once. Huge image files are one of the most self fixable speed problems, and a generic stock handshake photo adds nothing a visitor cares about, so an image audit often finds both easy speed wins and filler worth cutting.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DESCRIBE YOUR IMAGES, E.G. STOCK PHOTOS, REAL PHOTOS, GRAPHICS",
+      "YOUR PLATFORM"
+    ],
+    "relatedPromptIds": [
+      "audit-speed-checker",
+      "audit-content-checker",
+      "audit-mobile-checker"
+    ]
+  },
+  {
+    "id": "audit-trust-signals-checker",
+    "title": "Audit Your Trust Signals",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me audit the trust signals on my [BUSINESS TYPE] website. My site currently has [WHAT YOU HAVE, E.G. TESTIMONIALS, CONTACT INFO, ABOUT PAGE, POLICIES], and my visitors are [WHO THEY ARE AND WHAT THEY WORRY ABOUT]. Give me a checklist: whether a stranger has reason to trust me, whether basic trust signals like real contact details and an about page are present, whether my proof is visible or hidden, and what a cautious visitor would look for and not find. Note that a visitor who cannot find a reason to trust me leaves, and missing basics like a real address or a way to reach a human quietly cost sales. Give me what to check and add.",
+    "description": "Audit whether a cautious stranger has reason to trust your site.",
+    "useCase": "Use this to see your site through a cautious visitor's eyes. Someone who cannot find a reason to trust you leaves, and missing basics like real contact details or an about page quietly cost sales, so checking what a careful visitor looks for and does not find is worth doing.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU HAVE, E.G. TESTIMONIALS, CONTACT INFO, ABOUT PAGE, POLICIES",
+      "WHO THEY ARE AND WHAT THEY WORRY ABOUT"
+    ],
+    "relatedPromptIds": [
+      "audit-message-clarity-checker",
+      "audit-legal-pages-checker",
+      "audit-usability-checker"
+    ]
+  },
+  {
+    "id": "audit-legal-pages-checker",
+    "title": "Check Your Legal and Policy Pages",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether my [BUSINESS TYPE] website has the legal and policy pages it should. My site does [WHAT IT DOES, E.G. COLLECTS EMAILS, SELLS PRODUCTS, RUNS ADS], my location is [WHERE YOU AND YOUR CUSTOMERS ARE], and what I have now is [WHAT POLICY PAGES EXIST, OR WRITE NONE]. Help me understand which basic pages a site like mine typically needs and why, such as a privacy policy or terms, and where they should be linked. Note that I am not a lawyer and neither are you, so this is a general checklist of what sites like mine usually have, not legal advice, and anything specific to my situation needs a professional. Give me the checklist with that caveat clear.",
+    "description": "Check which basic legal and policy pages a site like yours usually has.",
+    "useCase": "Use this to spot obviously missing policy pages. A general checklist of what sites like yours typically have catches gaps like a missing privacy policy, while being clear this is not legal advice, since anything specific to your jurisdiction and situation genuinely needs a professional rather than a checklist.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT IT DOES, E.G. COLLECTS EMAILS, SELLS PRODUCTS, RUNS ADS",
+      "WHERE YOU AND YOUR CUSTOMERS ARE",
+      "WHAT POLICY PAGES EXIST, OR WRITE NONE"
+    ],
+    "relatedPromptIds": [
+      "audit-trust-signals-checker",
+      "audit-content-checker",
+      "audit-full-site-planner"
+    ]
+  },
+  {
+    "id": "audit-analytics-checker",
+    "title": "Check Whether You Can Measure Anything",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether I can actually measure what happens on my [BUSINESS TYPE] website. My setup is [WHAT ANALYTICS OR TRACKING YOU HAVE, OR WRITE NONE OR NOT SURE], and what I want to know is [WHAT YOU WISH YOU KNEW, E.G. WHERE VISITORS COME FROM, WHAT THEY DO]. Help me check: whether tracking is installed and actually working, whether it is capturing the things that matter, whether my own visits are skewing the numbers, and what basic things I should be able to see but cannot. Note that flying blind means I cannot tell what is working, and that broken or missing tracking is common and easy to overlook. Give me what to check.",
+    "description": "Check whether analytics are installed, working, and capturing what matters.",
+    "useCase": "Use this before trusting or lamenting your numbers. Broken or missing tracking is common and easy to overlook, and flying blind means you cannot tell what works, so confirming analytics are installed, functioning, and not skewed by your own visits is worth doing early.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT ANALYTICS OR TRACKING YOU HAVE, OR WRITE NONE OR NOT SURE",
+      "WHAT YOU WISH YOU KNEW, E.G. WHERE VISITORS COME FROM, WHAT THEY DO"
+    ],
+    "relatedPromptIds": [
+      "audit-full-site-planner",
+      "audit-conversion-path-checker",
+      "audit-priority-ranker"
+    ]
+  },
+  {
+    "id": "audit-competitor-comparison",
+    "title": "Audit Your Site Against Competitors",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me audit my [BUSINESS TYPE] website against my competitors. My site is [DESCRIBE IT], my competitors are [WHO THEY ARE AND THEIR SITES], and what I want to learn is [YOUR GOAL]. Help me compare honestly: what their sites do that mine does not, where mine is actually better, what a customer comparing us would notice, and what is worth copying versus what is just different. Note that the goal is to learn from them rather than copy them, and that a competitor doing something does not make it right, since they may be making the same mistakes I am. Give me the comparison and what to act on.",
+    "description": "Audit your site against competitors to learn rather than blindly copy.",
+    "useCase": "Use this to learn from competitors without copying their mistakes. Comparing what a customer choosing between you would notice is useful, while remembering that a competitor doing something does not make it right keeps you from copying choices they may regret as much as you would.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DESCRIBE IT",
+      "WHO THEY ARE AND THEIR SITES",
+      "YOUR GOAL"
+    ],
+    "relatedPromptIds": [
+      "audit-message-clarity-checker",
+      "audit-trust-signals-checker",
+      "audit-priority-ranker"
+    ]
+  },
+  {
+    "id": "audit-recurring-schedule",
+    "title": "Set Up a Recurring Audit Routine",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Claude",
+    "promptText": "Help me set up a simple recurring audit routine for my [BUSINESS TYPE] website so it does not rot. My site is [DESCRIBE IT AND YOUR PLATFORM], and how often I realistically look at it is [BE HONEST]. Help me build a light routine: what to check weekly, monthly, and a few times a year, kept small enough that I actually do it. Note that a big audit once a year misses problems that appear and cost me for months, while a five minute monthly check catches most things early, and a routine only works if it is small enough not to get skipped. Give me a recurring check schedule.",
+    "description": "Set up a light recurring audit routine small enough that you keep doing it.",
+    "useCase": "Use this so your site does not quietly rot between big audits. A five minute monthly check catches most problems early, where a once a year audit misses issues that appear and cost you for months, and the routine only works if it stays small enough that you never skip it.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DESCRIBE IT AND YOUR PLATFORM",
+      "BE HONEST"
+    ],
+    "relatedPromptIds": [
+      "audit-quick-health-check",
+      "audit-full-site-planner",
+      "audit-broken-things-finder"
+    ]
+  },
+  {
+    "id": "audit-quick-checklist",
+    "title": "Get a Quick Audit Checklist",
+    "categoryId": "seo-and-website",
+    "subcategoryId": "site-audit-checklists",
+    "aiTool": "Grok",
+    "promptText": "I need a quick website audit checklist. My site is [DESCRIBE IT AND YOUR PLATFORM], and my main concern is [WHAT WORRIES YOU, OR WRITE GENERAL CHECK]. Give me a short practical checklist of the most important things to check, the kind a non technical owner can actually work through, ordered by what matters most. No long explanation, just the checklist. Give me the list.",
+    "description": "Get a short, practical audit checklist ordered by what matters most.",
+    "useCase": "Use this when you just want a checklist to work through now. A short practical list ordered by importance covers what most small sites need, and actually running through the top items today beats planning a thorough audit you keep postponing.",
+    "variables": [
+      "DESCRIBE IT AND YOUR PLATFORM",
+      "WHAT WORRIES YOU, OR WRITE GENERAL CHECK"
+    ],
+    "relatedPromptIds": [
+      "audit-quick-health-check",
+      "audit-full-site-planner",
+      "audit-priority-ranker"
+    ]
   }
 ]
