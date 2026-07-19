@@ -29954,5 +29954,435 @@
       "hashtag-strategy-builder",
       "hashtag-relevance-checker"
     ]
+  },
+  {
+    "id": "reply-comment-writer",
+    "title": "Reply to Comments on Your Posts",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "Claude",
+    "promptText": "Help me reply to comments on my social post in my [BUSINESS TYPE]. My post was about [THE TOPIC], and the comments are [PASTE THEM]. Write replies that keep the conversation going rather than just saying thanks: adding something, asking a follow up, or genuinely engaging with what they said. Match my voice, which is [YOUR TONE]. Note that replies that only say thank you or a heart end the conversation, while a reply that adds something invites more, and comments plus replies are what tells the platform a post is worth showing to more people. Give me a reply for each comment.",
+    "description": "Reply to comments in a way that continues the conversation rather than ending it.",
+    "useCase": "Use this on a post that is getting comments. Replies that only say thanks end the conversation while ones that add something invite more, and since comments and replies signal to the platform that a post is worth showing wider, engaging replies quietly extend your reach.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE TOPIC",
+      "PASTE THEM",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "reply-conversation-extender",
+      "reply-batch-handler",
+      "reply-thanks-upgrader"
+    ]
+  },
+  {
+    "id": "reply-thanks-upgrader",
+    "title": "Turn a Thanks into a Conversation",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "Claude",
+    "promptText": "Help me stop replying to every comment with just thanks, for my [BUSINESS TYPE]. The kinds of comments I get are [WHAT PEOPLE USUALLY SAY, E.G. GREAT POST, COMPLIMENTS, QUICK REACTIONS], and my voice is [YOUR TONE]. Help me build a handful of ways to respond that turn a dead end into a conversation: asking a genuine question back, adding a related thought, or sharing something specific. Note that thanks is polite but ends things, while a reply that opens a door keeps someone in the conversation and makes them more likely to come back, and I do not need a clever reply, just one that continues rather than closes. Give me better ways to respond.",
+    "description": "Turn reflexive thank you replies into responses that continue the conversation.",
+    "useCase": "Use this if you reply to everything with thanks. It is polite but ends things, whereas a reply that opens a door keeps someone in the conversation and more likely to return, and you do not need cleverness, just a response that continues rather than closes.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT PEOPLE USUALLY SAY, E.G. GREAT POST, COMPLIMENTS, QUICK REACTIONS",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "reply-comment-writer",
+      "reply-conversation-extender",
+      "reply-question-answerer"
+    ]
+  },
+  {
+    "id": "reply-conversation-extender",
+    "title": "Keep a Comment Thread Going",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "Claude",
+    "promptText": "Help me keep a comment thread going, for my [BUSINESS TYPE]. Here is the thread so far: [PASTE THE BACK AND FORTH], and my voice is [YOUR TONE]. Help me write the next reply that moves the conversation forward naturally rather than letting it fizzle: building on what they said, sharing something relevant, or inviting them to go deeper. Note that a good thread in the comments is valuable both for the relationship and because active threads signal the post is worth surfacing, but there is a point where it should end naturally rather than being forced. Give me a reply and tell me if this is where it should wind down.",
+    "description": "Write the next reply in a thread to keep it going, or spot where to end it.",
+    "useCase": "Use this mid conversation in your comments. A good thread is valuable for the relationship and signals the post is worth surfacing, so moving it forward naturally matters, while being told when to let it wind down keeps you from forcing a conversation past its natural end.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THE BACK AND FORTH",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "reply-comment-writer",
+      "reply-thanks-upgrader",
+      "reply-dead-end-avoider"
+    ]
+  },
+  {
+    "id": "reply-question-answerer",
+    "title": "Answer a Question in Your Comments",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "Claude",
+    "promptText": "Help me answer a question someone asked in my comments, for my [BUSINESS TYPE]. Their question is [PASTE IT], the context is [WHAT YOUR POST WAS ABOUT], and my voice is [YOUR TONE]. Write a reply that genuinely answers them, is useful to others reading who had the same question, and where relevant opens a door to more. Note that a question in the comments is a gift, since others reading likely wondered the same thing, so a good public answer serves many people and shows I actually help rather than just broadcast. Give me a reply.",
+    "description": "Answer a comment question usefully for the asker and everyone else reading.",
+    "useCase": "Use this when someone asks a question publicly. A question in the comments is a gift, since others reading likely wondered the same thing, so a genuinely useful public answer serves many people at once and shows you actually help rather than just broadcast at people.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHAT YOUR POST WAS ABOUT",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "reply-comment-writer",
+      "reply-conversation-extender",
+      "reply-comment-to-content"
+    ]
+  },
+  {
+    "id": "reply-outbound-commenter",
+    "title": "Comment on Other People's Posts",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "Claude",
+    "promptText": "Help me comment meaningfully on other people's posts in my [BUSINESS TYPE] space. The post I want to comment on is [PASTE OR DESCRIBE IT], the account is [WHOSE IT IS AND MY RELATIONSHIP], and my voice is [YOUR TONE]. Write a comment that adds something genuine to the conversation rather than a generic great post: a real reaction, a specific thought, or a useful addition. Note that thoughtful comments on others' posts are one of the most underused growth tactics, since people notice a good comment and click through, while great post nice adds nothing and gets ignored. Give me comment options.",
+    "description": "Write genuine comments on others' posts as an underused growth tactic.",
+    "useCase": "Use this to grow by engaging outward. Thoughtful comments on others' posts are one of the most underused growth tactics, since people notice a good comment and click through, whereas a generic great post adds nothing and gets ignored along with your name attached to it.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT",
+      "WHOSE IT IS AND MY RELATIONSHIP",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "reply-engagement-strategy",
+      "reply-value-adder",
+      "reply-comment-writer"
+    ]
+  },
+  {
+    "id": "reply-value-adder",
+    "title": "Add Real Value in a Comment",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "Claude",
+    "promptText": "Help me add genuine value in a comment on someone else's post, for my [BUSINESS TYPE]. The post is about [THE TOPIC], my relevant knowledge or experience is [WHAT YOU KNOW OR HAVE DONE], and my voice is [YOUR TONE]. Help me write a comment that contributes something the post did not cover, shares a useful perspective, or adds a specific example, without hijacking the post or making it about me. Note that a comment that genuinely helps the original poster's audience earns attention and goodwill, while one that pivots to self promotion reads as spam and gets me nowhere. Give me a value adding comment.",
+    "description": "Add genuine value in a comment without hijacking the post or self promoting.",
+    "useCase": "Use this when you can genuinely contribute to someone's post. A comment that helps the original poster's audience earns attention and goodwill, while one that pivots to promoting yourself reads as spam, so adding value without making it about you is what actually gets you noticed.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE TOPIC",
+      "WHAT YOU KNOW OR HAVE DONE",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "reply-outbound-commenter",
+      "reply-engagement-strategy",
+      "reply-self-promo-avoider"
+    ]
+  },
+  {
+    "id": "reply-dm-responder",
+    "title": "Respond to Direct Messages",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "Claude",
+    "promptText": "Help me respond to a direct message, for my [BUSINESS TYPE]. The message is [PASTE IT], who sent it is [WHAT YOU KNOW ABOUT THEM], and my voice is [YOUR TONE]. Write a reply that is warm and human, matches what they actually want, and does not jump to selling if they were just being friendly. Note that a DM is a more personal channel, so a canned or salesy reply feels colder there than in public, and someone who reaches out privately is worth a genuine response rather than a template. Give me a reply.",
+    "description": "Respond to a DM warmly and personally rather than with a canned reply.",
+    "useCase": "Use this for messages that land in your DMs. A DM is a more personal channel, so a canned or salesy reply feels colder there than in public, and someone who reached out privately is worth a genuine human response rather than a template that treats them like a lead.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHAT YOU KNOW ABOUT THEM",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "reply-dm-opportunity",
+      "reply-cold-dm-handler",
+      "reply-comment-writer"
+    ]
+  },
+  {
+    "id": "reply-dm-opportunity",
+    "title": "Handle a DM That Could Be Business",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "Claude",
+    "promptText": "Help me handle a DM that might turn into business, for my [BUSINESS TYPE]. The message is [PASTE IT], what I offer is [YOUR SERVICE OR PRODUCT], and my voice is [YOUR TONE]. Help me reply in a way that is helpful first and explores the opportunity naturally, without pouncing on them like a sales target the moment they show interest. Note that someone testing the water in a DM gets scared off by an immediate pitch, so being genuinely helpful and letting the conversation develop converts better than jumping straight to selling. Give me a reply and how to move it forward naturally.",
+    "description": "Handle a promising DM by being helpful first rather than pouncing to sell.",
+    "useCase": "Use this when a DM hints at potential business. Someone testing the water gets scared off by an immediate pitch, so being genuinely helpful and letting the conversation develop converts better than pouncing the moment they show interest and treating them like a target.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "YOUR SERVICE OR PRODUCT",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "reply-dm-responder",
+      "reply-comment-to-content",
+      "reply-cold-dm-handler"
+    ]
+  },
+  {
+    "id": "reply-cold-dm-handler",
+    "title": "Handle Cold Sales DMs You Receive",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "Claude",
+    "promptText": "Help me handle cold sales DMs I receive, for my [BUSINESS TYPE]. The message is [PASTE IT], and how I want to handle it is [IGNORE, DECLINE POLITELY, OR SOMETHING ELSE]. Help me respond appropriately: a brief polite decline when warranted, or simply guidance on when not to respond at all. Note that I owe a cold pitcher nothing, and a polite no or no reply at all is completely fine, so I should not feel obligated to give a lengthy explanation to someone who mass messaged me. Give me a response or advice on whether to bother replying.",
+    "description": "Handle cold sales DMs with a brief decline or no reply, without obligation.",
+    "useCase": "Use this for the sales pitches that fill your inbox. You owe a cold pitcher nothing, so a polite no or no reply at all is completely fine, and this frees you from feeling obligated to write a lengthy explanation to someone who mass messaged a hundred people including you.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "IGNORE, DECLINE POLITELY, OR SOMETHING ELSE"
+    ],
+    "relatedPromptIds": [
+      "reply-dm-responder",
+      "reply-negative-handler",
+      "reply-self-promo-avoider"
+    ]
+  },
+  {
+    "id": "reply-negative-handler",
+    "title": "Reply to a Critical Comment",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "Claude",
+    "promptText": "Help me reply to a critical or negative comment on my post, for my [BUSINESS TYPE]. The comment is [PASTE IT], the context is [WHAT YOUR POST SAID], and my voice is [YOUR TONE]. Help me respond in a way that stays calm and professional, engages with a fair point genuinely or holds my ground gracefully on an unfair one, and does not get defensive or start a fight in public. Also tell me honestly whether this one is worth replying to at all. Note that how I handle criticism in public is watched by everyone reading, so a measured reply earns respect while a defensive one costs me more than the original comment did. Give me a reply or advice to leave it.",
+    "description": "Reply to criticism calmly in public, or judge whether to engage at all.",
+    "useCase": "Use this when a critical comment lands. Everyone reading watches how you handle criticism, so a measured reply earns respect while a defensive one costs more than the original comment did, and being told when to simply leave it saves you feeding a fight not worth having.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHAT YOUR POST SAID",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "reply-troll-handler",
+      "reply-comment-writer",
+      "reply-cold-dm-handler"
+    ]
+  },
+  {
+    "id": "reply-troll-handler",
+    "title": "Handle Trolls and Bad Faith Comments",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "Claude",
+    "promptText": "Help me handle a troll or bad faith comment on my post, for my [BUSINESS TYPE]. The comment is [PASTE IT], and how it is affecting me is [BE HONEST, E.G. ANNOYING, UPSETTING, JUST NOISE]. Help me decide the right move: ignore, delete, block, or a brief reply, based on whether they are worth any energy. Note that engaging a troll usually gives them exactly what they want and drags out something that would have died on its own, so ignoring, deleting, or blocking is often the strongest move rather than the reply I feel like writing. Give me the best move and, if a reply is warranted, what to say.",
+    "description": "Decide whether to ignore, delete, block, or reply to a troll.",
+    "useCase": "Use this when a bad faith comment tempts a response. Engaging a troll usually gives them what they want and drags out something that would have died on its own, so ignoring, deleting, or blocking is often stronger than the satisfying reply you feel like writing but should not send.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "BE HONEST, E.G. ANNOYING, UPSETTING, JUST NOISE"
+    ],
+    "relatedPromptIds": [
+      "reply-negative-handler",
+      "reply-cold-dm-handler",
+      "reply-comment-writer"
+    ]
+  },
+  {
+    "id": "reply-batch-handler",
+    "title": "Reply to a Batch of Comments Fast",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me reply to a batch of comments efficiently, for my [BUSINESS TYPE]. My comments are [PASTE THEM], the post was about [THE TOPIC], and my voice is [YOUR TONE]. Write a reply for each that fits the specific comment rather than the same line pasted everywhere, keeping them genuine but efficient since I have a lot to get through. Note that people can tell when they get the identical copied reply as everyone else, which feels worse than no reply, so even quick replies should respond to what the person actually said. Give me a tailored reply per comment.",
+    "description": "Reply to many comments efficiently while still fitting each one.",
+    "useCase": "Use this when a post blew up and you have many comments. Efficiency matters, but people can tell when they got the identical pasted reply as everyone else, which feels worse than no reply, so even quick responses should fit what the person actually said.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THEM",
+      "THE TOPIC",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "reply-comment-writer",
+      "reply-thanks-upgrader",
+      "reply-first-hour-strategy"
+    ]
+  },
+  {
+    "id": "reply-first-hour-strategy",
+    "title": "Engage in the First Hour After Posting",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "Claude",
+    "promptText": "Help me plan how to engage in the crucial window right after I post, for my [BUSINESS TYPE]. My platform is [WHERE YOU POST], my usual posting time is [WHEN], and how I engage now is [WHAT YOU DO, OR WRITE NOTHING]. Help me plan: how to be available to reply quickly after posting, what to do with early comments, and how to prompt conversation early. Note that early engagement often shapes how far a post travels, since fast replies and active comments in the first window signal the post is worth showing wider, so posting and disappearing wastes the moment that matters most. Give me a first window engagement plan.",
+    "description": "Plan engagement for the crucial window right after posting.",
+    "useCase": "Use this because posting and vanishing wastes the key window. Early engagement often shapes how far a post travels, since fast replies and active comments in the first window signal it is worth showing wider, so being present right after you post is one of the highest leverage habits available.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHERE YOU POST",
+      "WHEN",
+      "WHAT YOU DO, OR WRITE NOTHING"
+    ],
+    "relatedPromptIds": [
+      "reply-batch-handler",
+      "reply-engagement-strategy",
+      "reply-comment-writer"
+    ]
+  },
+  {
+    "id": "reply-engagement-strategy",
+    "title": "Build a Genuine Engagement Routine",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "Claude",
+    "promptText": "Help me build a sustainable engagement routine for my [BUSINESS TYPE]. My platform is [WHERE YOU POST], my time for this is [HOW MUCH YOU REALISTICALLY HAVE], and my goal is [WHAT YOU WANT, E.G. GROWTH, RELATIONSHIPS, VISIBILITY]. Help me build a routine: replying to my own comments, commenting on others, and engaging in my space, sized to fit my actual time. Note that engagement compounds slowly through real relationships rather than through engagement pods or reciprocal like schemes, which platforms detect and which build nothing real, so the routine should be genuine participation I can sustain. Give me a realistic engagement routine.",
+    "description": "Build a sustainable, genuine engagement routine rather than gaming schemes.",
+    "useCase": "Use this to engage consistently without burning out or gaming it. Engagement compounds through real relationships rather than pods or reciprocal like schemes that platforms detect and that build nothing real, so a genuine routine sized to your actual time is what actually grows an account.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHERE YOU POST",
+      "HOW MUCH YOU REALISTICALLY HAVE",
+      "WHAT YOU WANT, E.G. GROWTH, RELATIONSHIPS, VISIBILITY"
+    ],
+    "relatedPromptIds": [
+      "reply-first-hour-strategy",
+      "reply-outbound-commenter",
+      "reply-relationship-builder"
+    ]
+  },
+  {
+    "id": "reply-relationship-builder",
+    "title": "Turn Repeat Commenters into Relationships",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "Claude",
+    "promptText": "Help me build real relationships with people who regularly engage with my [BUSINESS TYPE] content. My regulars are [WHO KEEPS SHOWING UP, IF YOU KNOW], and my voice is [YOUR TONE]. Help me deepen these connections: recognizing regulars, engaging back on their content, and moving beyond surface replies to genuine connection. Note that the people who comment repeatedly are quietly my most valuable audience, and a handful of real relationships is worth more than a large indifferent following, so noticing and nurturing them matters more than chasing new reach. Give me ways to build these relationships.",
+    "description": "Deepen relationships with the people who regularly engage with you.",
+    "useCase": "Use this to nurture your most valuable audience. The people who comment repeatedly are quietly your most valuable followers, and a handful of real relationships is worth more than a large indifferent following, so noticing and nurturing regulars beats endlessly chasing new reach.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO KEEPS SHOWING UP, IF YOU KNOW",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "reply-engagement-strategy",
+      "reply-comment-writer",
+      "reply-dm-responder"
+    ]
+  },
+  {
+    "id": "reply-comment-to-content",
+    "title": "Turn a Comment into a Post",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "Claude",
+    "promptText": "Help me turn a great comment or question into new content, for my [BUSINESS TYPE]. The comment or question is [PASTE IT], and my usual content is [WHAT YOU POST]. Help me develop it into a full post: what angle to take, how to expand the answer, and how to credit or reference the original question. Note that a question in my comments is proof at least one real person wants this, and often many silently do, so answering it as a full post is content that is guaranteed to be relevant to my audience rather than guessed at. Give me the post idea and how to build it.",
+    "description": "Turn a good comment or question into a full post your audience wants.",
+    "useCase": "Use this when a comment sparks a bigger answer. A question in your comments is proof at least one real person wants it and often many silently do, so building it into a full post gives you content guaranteed relevant to your audience rather than guessed at from a blank page.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHAT YOU POST"
+    ],
+    "relatedPromptIds": [
+      "reply-question-answerer",
+      "reply-dm-opportunity",
+      "reply-relationship-builder"
+    ]
+  },
+  {
+    "id": "reply-prompt-writer",
+    "title": "Write Posts That Invite Replies",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "Claude",
+    "promptText": "Help me write posts that actually invite replies, for my [BUSINESS TYPE]. My topic is [WHAT YOU POST ABOUT], my audience is [WHO THEY ARE], and my goal is [WHAT KIND OF CONVERSATION YOU WANT]. Help me find genuine ways to invite engagement: real questions people want to answer, prompts that are easy to respond to, and openings that make someone feel their reply matters. Note that a lazy engagement bait question like drop a yes below insults people and attracts nothing real, while a genuine question people actually have an opinion on earns real replies. Give me post prompts that invite genuine conversation.",
+    "description": "Write posts that invite genuine replies rather than lazy engagement bait.",
+    "useCase": "Use this to earn conversation rather than beg for it. A lazy bait question like drop a yes below insults people and attracts nothing real, while a genuine question people actually have an opinion on earns real replies, so building the invitation into the post itself is what starts conversations.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU POST ABOUT",
+      "WHO THEY ARE",
+      "WHAT KIND OF CONVERSATION YOU WANT"
+    ],
+    "relatedPromptIds": [
+      "reply-comment-writer",
+      "reply-engagement-bait-avoider",
+      "reply-first-hour-strategy"
+    ]
+  },
+  {
+    "id": "reply-engagement-bait-avoider",
+    "title": "Invite Engagement Without Cheap Bait",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "Claude",
+    "promptText": "Help me invite engagement without resorting to cheap bait, for my [BUSINESS TYPE]. What I have tried is [WHAT YOU DO NOW, OR WRITE NOTHING], and my audience is [WHO THEY ARE]. Help me tell the difference between genuine engagement prompts and the manipulative bait that platforms increasingly penalize and audiences resent, such as comment yes if you agree or tag three friends. Then give me honest alternatives. Note that engagement bait can get flagged and suppressed, and even when it works it attracts hollow interactions from people who will never actually care, so genuine conversation is worth more than inflated numbers. Give me honest ways to invite engagement.",
+    "description": "Invite engagement genuinely, avoiding bait that platforms penalize.",
+    "useCase": "Use this if you have leaned on engagement bait. It can get flagged and suppressed, and even when it works it attracts hollow interactions from people who will never care, so knowing the difference between genuine prompts and manipulative bait protects both your reach and your audience's respect.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU DO NOW, OR WRITE NOTHING",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "reply-prompt-writer",
+      "reply-engagement-strategy",
+      "reply-self-promo-avoider"
+    ]
+  },
+  {
+    "id": "reply-dead-end-avoider",
+    "title": "Stop Killing Conversations by Accident",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "Claude",
+    "promptText": "Help me stop accidentally killing conversations in my comments, for my [BUSINESS TYPE]. Here are some of my typical replies: [PASTE A FEW]. Point out where my replies close the door without meaning to: one word answers, replies that leave nothing to respond to, or ones that sound final. Then show me how to keep them open instead. Note that many conversation enders are accidental, since a reply that fully wraps things up gives the other person no natural way back in, and a small change like ending on a light question keeps the door open. Give me what is closing my conversations and how to fix it.",
+    "description": "Spot replies that accidentally end conversations and learn to keep them open.",
+    "useCase": "Use this if your comment threads keep dying. Many conversation enders are accidental, since a reply that fully wraps things up gives the other person no way back in, so spotting where your replies close the door and ending on a light opening instead keeps threads alive.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE A FEW"
+    ],
+    "relatedPromptIds": [
+      "reply-conversation-extender",
+      "reply-thanks-upgrader",
+      "reply-comment-writer"
+    ]
+  },
+  {
+    "id": "reply-self-promo-avoider",
+    "title": "Engage Without Being Self Promotional",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "Claude",
+    "promptText": "Help me engage in my [BUSINESS TYPE] space without coming across as self promotional. Where I want to engage is [WHERE, E.G. OTHERS' COMMENTS, GROUPS, THREADS], and what I offer is [YOUR SERVICE OR PRODUCT]. Help me contribute genuinely without every interaction becoming an advert: adding value first, mentioning what I do only when it is genuinely relevant and invited, and building recognition through being useful rather than pitching. Note that people spot the person who only shows up to promote and tune them out, while the one who is consistently helpful becomes the obvious choice when a need arises, so restraint converts better than pitching. Give me how to engage without self promoting.",
+    "description": "Engage helpfully without turning every interaction into an advert.",
+    "useCase": "Use this to build recognition without pitching. People spot the person who only shows up to promote and tune them out, while the consistently helpful one becomes the obvious choice when a need arises, so restraint and value convert better than working a mention into every reply.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHERE, E.G. OTHERS' COMMENTS, GROUPS, THREADS",
+      "YOUR SERVICE OR PRODUCT"
+    ],
+    "relatedPromptIds": [
+      "reply-value-adder",
+      "reply-outbound-commenter",
+      "reply-engagement-strategy"
+    ]
+  },
+  {
+    "id": "reply-quick-replies",
+    "title": "Get Quick Replies to Comments",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "engagement-replies",
+    "aiTool": "Grok",
+    "promptText": "I need quick replies to comments on my post. The comments are [PASTE THEM], the post was about [THE TOPIC], and my tone is [YOUR TONE]. Give me a genuine reply for each that fits what the person said and keeps the conversation open rather than just saying thanks. No explanation, just the replies. Give me the replies.",
+    "description": "Get quick, genuine replies to a set of comments that keep conversations open.",
+    "useCase": "Use this when you want to clear your comments fast. A genuine reply per comment that fits what the person said and keeps the door open beats pasting thanks everywhere, and replying quickly while a post is active is worth more than a perfect reply written days later.",
+    "variables": [
+      "PASTE THEM",
+      "THE TOPIC",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "reply-comment-writer",
+      "reply-batch-handler",
+      "reply-thanks-upgrader"
+    ]
   }
 ]
