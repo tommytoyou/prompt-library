@@ -30384,5 +30384,456 @@
       "reply-batch-handler",
       "reply-thanks-upgrader"
     ]
+  },
+  {
+    "id": "format-adapt-one-post",
+    "title": "Adapt One Post for Each Platform",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "Claude",
+    "promptText": "Help me take one piece of content and format it correctly for each platform I use for my [BUSINESS TYPE]. The core content is [WHAT THE POST SAYS], and the platforms I post to are [LIST YOUR PLATFORMS]. Give me a version shaped for each one: the right length, the right opening, the way links and hashtags are handled there, and the tone that fits. Note that the same words pasted everywhere underperform because each platform rewards a different shape, and reformatting the same idea for each place is far less work than writing something new while getting far more out of it. Give me the versions.",
+    "description": "Reshape one piece of content into the right format for each platform you use.",
+    "useCase": "Use this when you have one idea and several places to post it. The same words pasted everywhere underperform because each platform rewards a different shape, so reformatting the same idea for each place gets far more from it than one generic version, without the work of writing something new each time.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THE POST SAYS",
+      "LIST YOUR PLATFORMS"
+    ],
+    "relatedPromptIds": [
+      "format-repurpose-long-to-short",
+      "format-length-fixer",
+      "format-cross-post-checker"
+    ]
+  },
+  {
+    "id": "format-instagram-caption",
+    "title": "Format a Caption for Instagram",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me format a caption for Instagram for my [BUSINESS TYPE]. My post is about [WHAT THE POST IS], my audience is [WHO THEY ARE], and my usual tone is [YOUR TONE]. Shape it for how Instagram actually reads: a strong first line before the more button cuts it off, short scannable lines rather than a wall of text, and hashtags placed where they do not clutter the message. Note that most of the caption is hidden until someone taps more, so the first line has to earn the tap, and the rest only gets read if that opening line does its job. Give me the formatted caption.",
+    "description": "Shape a caption for how Instagram truncates and displays text.",
+    "useCase": "Use this when writing for Instagram specifically. Most of the caption is hidden until someone taps more, so the first line has to earn that tap and the text needs to be scannable rather than a block, and formatting for how the app actually shows it beats pasting in a paragraph.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THE POST IS",
+      "WHO THEY ARE",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "format-first-line-hook",
+      "format-hashtag-placement",
+      "format-line-breaks"
+    ]
+  },
+  {
+    "id": "format-linkedin-post",
+    "title": "Format a Post for LinkedIn",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "Claude",
+    "promptText": "Help me format a post for LinkedIn for my [BUSINESS TYPE]. My topic is [WHAT YOU WANT TO SAY], my audience is [WHO THEY ARE], and the point I want to land is [YOUR TAKEAWAY]. Shape it the way LinkedIn reads: a hook line that pulls the reader before the see more cutoff, short single line paragraphs with white space, and a professional but human tone rather than stiff corporate speak. Note that LinkedIn hides most of a post behind see more and favors posts that keep people reading in the app, so a strong first two lines and easy scanning matter more here than polish, and links in the comments sometimes travel better than links in the post. Give me the formatted post.",
+    "description": "Shape a post for how LinkedIn reads, from the hook to the spacing.",
+    "useCase": "Use this when posting to LinkedIn. The platform hides most of a post behind see more and rewards posts that keep people reading in the app, so a strong opening and airy single line spacing matter more than polish, and this shapes your idea to how the feed actually works.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU WANT TO SAY",
+      "WHO THEY ARE",
+      "YOUR TAKEAWAY"
+    ],
+    "relatedPromptIds": [
+      "format-first-line-hook",
+      "format-line-breaks",
+      "format-link-handling"
+    ]
+  },
+  {
+    "id": "format-x-thread",
+    "title": "Format a Post or Thread for X",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me format content for X for my [BUSINESS TYPE]. What I want to share is [YOUR CONTENT], and my audience is [WHO THEY ARE]. Tell me whether this works better as a single sharp post or a short thread, then format it that way: tight within the character limit, front loaded so the point survives being cut off, and a first post that earns the click into the thread if it is one. Note that the character limit rewards being concise and the feed moves fast, so a post that buries its point in the second half loses people, and a thread only earns the read if the first post is strong enough on its own. Give me the formatted version.",
+    "description": "Format content for X as a tight single post or a short earned thread.",
+    "useCase": "Use this when posting to X. The character limit rewards concision and the fast feed punishes a buried point, so this decides between a single sharp post and a thread and formats it front loaded, with a first post strong enough to earn the read either way.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR CONTENT",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "format-length-fixer",
+      "format-first-line-hook",
+      "format-adapt-one-post"
+    ]
+  },
+  {
+    "id": "format-facebook-post",
+    "title": "Format a Post for Facebook",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "Gemini",
+    "promptText": "Help me format a post for Facebook for my [BUSINESS TYPE]. My topic is [WHAT THE POST IS ABOUT], my audience is [WHO THEY ARE], and my goal is [WHAT YOU WANT FROM IT]. Shape it for how Facebook reads: a conversational opening, a length that suits the feed, and a clear reason to comment or share, keeping in mind the crowd here often skews toward existing customers and local community. Note that Facebook tends to favor posts that spark conversation among people who already know me, so a post that invites a genuine reply usually travels further here than a polished announcement nobody responds to. Give me the formatted post.",
+    "description": "Shape a post for Facebook's conversational, community leaning feed.",
+    "useCase": "Use this when posting to Facebook. The feed favors posts that spark conversation among people who already know you, so a post that invites a genuine reply travels further here than a polished announcement, and this shapes your content to that community leaning behavior.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THE POST IS ABOUT",
+      "WHO THEY ARE",
+      "WHAT YOU WANT FROM IT"
+    ],
+    "relatedPromptIds": [
+      "format-adapt-one-post",
+      "format-cta-placement",
+      "format-line-breaks"
+    ]
+  },
+  {
+    "id": "format-tiktok-caption",
+    "title": "Format a Caption and Hook for Short Video",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "Claude",
+    "promptText": "Help me format the caption and on screen text for a short video for my [BUSINESS TYPE]. The video is about [WHAT IT SHOWS], my audience is [WHO THEY ARE], and my platform is [WHERE IT POSTS]. Give me a short punchy caption, a spoken or on screen hook for the first seconds, and a note on where text should appear so it does not sit under the interface buttons. Note that on short video the first seconds and the on screen text carry most of the weight while the caption is secondary, so the hook has to land immediately and the caption should support the video rather than explain it. Give me the caption and hook.",
+    "description": "Format the caption, hook, and on screen text for a short video platform.",
+    "useCase": "Use this when posting a short video. The first seconds and on screen text carry most of the weight while the caption is secondary, so this gives you a hook that lands immediately and keeps text clear of the interface buttons, shaped for how short video is actually watched.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT IT SHOWS",
+      "WHO THEY ARE",
+      "WHERE IT POSTS"
+    ],
+    "relatedPromptIds": [
+      "format-first-line-hook",
+      "format-repurpose-long-to-short",
+      "format-cta-placement"
+    ]
+  },
+  {
+    "id": "format-quick-reformat",
+    "title": "Quickly Reformat a Post for a Platform",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "Grok",
+    "promptText": "I have a post and need it formatted right for one platform, fast. Here is the post: [PASTE THE POST]. The platform is [WHERE IT IS GOING]. Reformat it for that platform: fix the length, the opening line, the spacing, and hashtag or link placement. No long explanation, just the reformatted post. Give me the version.",
+    "description": "Quickly reformat an existing post to fit one specific platform.",
+    "useCase": "Use this when you have a post and just need it fixed for one platform now. A fast reformat that fixes length, opening, spacing, and tag placement covers what most quick posts need, and getting it shaped right in seconds beats posting a version that clearly ignores how the platform reads.",
+    "variables": [
+      "PASTE THE POST",
+      "WHERE IT IS GOING"
+    ],
+    "relatedPromptIds": [
+      "format-adapt-one-post",
+      "format-length-fixer",
+      "format-line-breaks"
+    ]
+  },
+  {
+    "id": "format-first-line-hook",
+    "title": "Write the First Line for a Truncated Feed",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "Claude",
+    "promptText": "Help me write a strong first line for a post on a platform that cuts text off for my [BUSINESS TYPE]. My post is about [WHAT THE POST COVERS], the platform is [WHERE IT POSTS], and my audience is [WHO THEY ARE]. Give me a few first line options that work as the visible teaser before the more button hides the rest, each one giving a real reason to keep reading without being clickbait the post cannot deliver. Note that on Instagram, LinkedIn, and Facebook only the first line or two shows before the cutoff, so that line decides whether anyone expands the post, and a weak opening wastes everything written after it. Give me the options.",
+    "description": "Write first line options built to survive the feed's see more cutoff.",
+    "useCase": "Use this for platforms that hide most of a post behind a cutoff. Only the first line or two shows before the more button, so that line decides whether anyone reads the rest, and having a few strong options that earn the expand without overpromising is what keeps the post from dying at the fold.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THE POST COVERS",
+      "WHERE IT POSTS",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "format-instagram-caption",
+      "format-linkedin-post",
+      "format-x-thread"
+    ]
+  },
+  {
+    "id": "format-hashtag-placement",
+    "title": "Place Hashtags the Right Way per Platform",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "Gemini",
+    "promptText": "Help me handle hashtags correctly for each platform I post to for my [BUSINESS TYPE]. My platforms are [LIST YOUR PLATFORMS], and a typical post of mine is about [WHAT YOU POST]. Tell me for each platform how many hashtags make sense, where to put them so they do not clutter the message, and whether they even matter much there. Note that hashtag norms differ a lot by platform, a pile that helps on one looks like spam on another, and on some platforms hashtags barely move anything, so matching the local norm matters more than using a fixed set everywhere. Give me the per platform guidance.",
+    "description": "Match hashtag count and placement to each platform's norms.",
+    "useCase": "Use this when the same hashtag habit follows you across platforms. Norms differ a lot, a pile that helps on one looks like spam on another, and on some platforms tags barely move anything, so matching the local norm per platform beats reusing one fixed set everywhere.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST YOUR PLATFORMS",
+      "WHAT YOU POST"
+    ],
+    "relatedPromptIds": [
+      "format-instagram-caption",
+      "format-adapt-one-post",
+      "format-cross-post-checker"
+    ]
+  },
+  {
+    "id": "format-length-fixer",
+    "title": "Fix the Length for a Platform",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me fix the length of a post for the platform it is going on for my [BUSINESS TYPE]. Here is the post: [PASTE THE POST], and the platform is [WHERE IT IS GOING]. If it is too long for the platform, trim it to fit while keeping the point, and if it is too short and thin for a platform that rewards depth, tell me and suggest what to add. Note that every platform has a natural length that performs best, a post too long for a fast feed gets skipped and one too thin for a slower feed gets ignored, so fitting the length to the place is part of the post working at all. Give me the resized version.",
+    "description": "Trim or expand a post to the length that fits its platform.",
+    "useCase": "Use this when a post feels the wrong size for where it is going. Every platform has a natural length that performs best, so a post too long for a fast feed gets skipped and one too thin for a slower feed gets ignored, and fitting the length to the place is part of the post landing at all.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THE POST",
+      "WHERE IT IS GOING"
+    ],
+    "relatedPromptIds": [
+      "format-quick-reformat",
+      "format-repurpose-long-to-short",
+      "format-x-thread"
+    ]
+  },
+  {
+    "id": "format-line-breaks",
+    "title": "Add Line Breaks and White Space",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "Claude",
+    "promptText": "Help me break up a dense post so it is easy to read on a phone for my [BUSINESS TYPE]. Here is the post: [PASTE THE POST], and the platform is [WHERE IT POSTS]. Reformat it with short paragraphs, line breaks, and white space so it scans easily on a small screen, without changing the words much. Note that almost everyone reads these on a phone where a solid block of text looks exhausting and gets scrolled past, while the same words with breathing room feel effortless to read, so spacing alone can decide whether a post gets read at all. Give me the spaced out version.",
+    "description": "Reformat a dense post with breaks and white space for phone reading.",
+    "useCase": "Use this when a post reads as a wall of text. Almost everyone reads on a phone, where a solid block looks exhausting and gets scrolled past while the same words with breathing room feel effortless, so spacing alone can decide whether a post gets read.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THE POST",
+      "WHERE IT POSTS"
+    ],
+    "relatedPromptIds": [
+      "format-quick-reformat",
+      "format-instagram-caption",
+      "format-linkedin-post"
+    ]
+  },
+  {
+    "id": "format-cta-placement",
+    "title": "Place the Call to Action per Platform",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "Gemini",
+    "promptText": "Help me place the call to action in a post the right way for each platform for my [BUSINESS TYPE]. My post is about [WHAT THE POST IS], the action I want is [WHAT YOU WANT THEM TO DO], and my platforms are [LIST YOUR PLATFORMS]. Tell me for each platform where the call to action should go and how direct it should be, given how each one treats links and selling. Note that some platforms quietly push down posts with outbound links or hard selling while others accept a direct ask, so the same call to action placed the same way everywhere can hurt reach in some places, and fitting it to each platform protects both the reach and the result. Give me the placement per platform.",
+    "description": "Position and phrase your call to action to fit each platform's treatment of links.",
+    "useCase": "Use this when your call to action feels off on some platforms. Some quietly push down posts with outbound links or hard selling while others accept a direct ask, so the same placement everywhere can cost reach, and fitting where and how you ask to each platform protects both reach and result.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THE POST IS",
+      "WHAT YOU WANT THEM TO DO",
+      "LIST YOUR PLATFORMS"
+    ],
+    "relatedPromptIds": [
+      "format-link-handling",
+      "format-adapt-one-post",
+      "format-facebook-post"
+    ]
+  },
+  {
+    "id": "format-link-handling",
+    "title": "Handle Links Without Hurting Reach",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "Claude",
+    "promptText": "Help me handle a link in a post the smart way for each platform for my [BUSINESS TYPE]. The link goes to [WHERE THE LINK LEADS], my post is about [WHAT THE POST IS], and my platforms are [LIST YOUR PLATFORMS]. For each platform tell me whether to put the link in the post, in the comments, in the bio, or skip it, based on how each one treats outbound links. Note that several platforms show posts with links to fewer people because they would rather keep users in the app, so where the link goes can matter as much as the post itself, and a workaround like link in comments or link in bio often reaches far more people. Give me the per platform approach.",
+    "description": "Decide where each platform's link should live to protect reach.",
+    "useCase": "Use this when links might be quietly costing you reach. Several platforms show posts with outbound links to fewer people because they want to keep users in the app, so where the link goes can matter as much as the post, and knowing the workaround per platform protects the reach.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHERE THE LINK LEADS",
+      "WHAT THE POST IS",
+      "LIST YOUR PLATFORMS"
+    ],
+    "relatedPromptIds": [
+      "format-cta-placement",
+      "format-linkedin-post",
+      "format-adapt-one-post"
+    ]
+  },
+  {
+    "id": "format-repurpose-long-to-short",
+    "title": "Repurpose Long Content Into Short Posts",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me turn one long piece of content into several short platform ready posts for my [BUSINESS TYPE]. The long content is [WHAT IT IS, E.G. A BLOG POST, VIDEO, OR NEWSLETTER], my platforms are [LIST YOUR PLATFORMS], and my audience is [WHO THEY ARE]. Pull out the strongest points and format each into a short standalone post shaped for a platform, so one piece of work becomes a week of posts. Note that most people already have plenty of good content sitting in long form, so mining what exists into short posts is far less work than making everything fresh, and each short post should stand on its own rather than read like a fragment. Give me the short posts.",
+    "description": "Break one long piece into several standalone short posts per platform.",
+    "useCase": "Use this when you have long content and empty feeds. Most people already have good material sitting in blog posts, videos, or newsletters, so mining it into short standalone posts is far less work than making everything fresh, and it turns one piece into a week of platform ready content.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT IT IS, E.G. A BLOG POST, VIDEO, OR NEWSLETTER",
+      "LIST YOUR PLATFORMS",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "format-adapt-one-post",
+      "format-tiktok-caption",
+      "format-length-fixer"
+    ]
+  },
+  {
+    "id": "format-cross-post-checker",
+    "title": "Check a Post Before Cross Posting",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "Claude",
+    "promptText": "Help me check a post before I cross post it everywhere for my [BUSINESS TYPE]. Here is the post: [PASTE THE POST], and the platforms I want to put it on are [LIST YOUR PLATFORMS]. Flag anything that will not translate: a reference to a feature one platform does not have, a format that breaks, an at mention or tag that only works in one place, or a tone that fits one crowd but not another. Note that auto cross posting the exact same thing often leaves obvious seams, like telling people to link in bio on a platform with no bio, and those small mismatches make a business look careless, so a quick check catches them before they go live. Give me the flags and fixes.",
+    "description": "Catch what breaks or misfits before you cross post to several platforms.",
+    "useCase": "Use this before pushing one post to every platform. Auto cross posting the same thing leaves obvious seams, like link in bio where there is no bio, and those small mismatches make a business look careless, so a quick check catches them before they go live.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THE POST",
+      "LIST YOUR PLATFORMS"
+    ],
+    "relatedPromptIds": [
+      "format-adapt-one-post",
+      "format-hashtag-placement",
+      "format-platform-mistakes"
+    ]
+  },
+  {
+    "id": "format-emoji-style",
+    "title": "Match Emoji and Style to a Platform",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "Gemini",
+    "promptText": "Help me get the emoji and styling right for a platform for my [BUSINESS TYPE]. My post is [PASTE THE POST], the platform is [WHERE IT POSTS], and my brand tone is [YOUR TONE]. Tell me whether emoji fit here and how many, whether bold or caps styling helps or hurts, and adjust the post to match what reads as normal on that platform. Note that the same emoji load that feels warm on one platform looks unprofessional on another, and style cues that signal effort in one place signal trying too hard in another, so matching the local style keeps the post from feeling out of place. Give me the adjusted post.",
+    "description": "Tune emoji use and styling to what reads as normal on the platform.",
+    "useCase": "Use this when your styling might not fit the platform. The same emoji load that feels warm on one looks unprofessional on another, and cues that signal effort in one place read as trying too hard elsewhere, so matching the local style keeps a post from feeling out of place.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THE POST",
+      "WHERE IT POSTS",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "format-line-breaks",
+      "format-adapt-one-post",
+      "format-cross-post-checker"
+    ]
+  },
+  {
+    "id": "format-image-text-fit",
+    "title": "Fit Text to Image and Video Dimensions",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "Claude",
+    "promptText": "Help me place text on an image or video so it fits each platform for my [BUSINESS TYPE]. What I am posting is [WHAT THE VISUAL IS], the platforms are [LIST YOUR PLATFORMS], and the text I want on it is [WHAT THE TEXT SAYS]. Tell me where the safe area is for each platform so my text is not covered by the caption, buttons, or profile picture, and whether the shape suits a vertical, square, or wide format there. Note that each platform crops and overlays interface elements differently, so text placed fine on one can end up hidden behind a button or cut off on another, and checking the safe zones before posting saves remaking the whole thing. Give me the placement guidance.",
+    "description": "Keep on screen text inside each platform's safe area and aspect ratio.",
+    "useCase": "Use this when text on your visuals gets covered or cropped. Each platform overlays buttons and crops differently, so text placed fine on one ends up hidden or cut off on another, and checking the safe zones and aspect ratio before posting saves remaking the whole thing.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THE VISUAL IS",
+      "LIST YOUR PLATFORMS",
+      "WHAT THE TEXT SAYS"
+    ],
+    "relatedPromptIds": [
+      "format-tiktok-caption",
+      "format-cross-post-checker",
+      "format-platform-mistakes"
+    ]
+  },
+  {
+    "id": "format-bio-per-platform",
+    "title": "Write a Bio for Each Platform",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write a profile bio shaped for each platform for my [BUSINESS TYPE]. What I do is [WHAT YOU OFFER], who I help is [WHO THEY ARE], and my platforms are [LIST YOUR PLATFORMS]. Give me a bio for each one that fits its character limit and style, makes clear what I do and for whom, and uses the one link or contact each platform allows well. Note that the bio is often the first thing a new visitor reads and each platform gives a different amount of room and a different link setup, so a single copied bio wastes the space some give and overflows others, and tailoring each makes the most of that first impression. Give me the bios.",
+    "description": "Write a fitted profile bio for each platform's limits and link setup.",
+    "useCase": "Use this when the same bio is copied across every profile. The bio is often the first thing a new visitor reads, and each platform gives different room and a different link setup, so one copied bio wastes the space some give and overflows others, while a fitted one makes the most of the first impression.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU OFFER",
+      "WHO THEY ARE",
+      "LIST YOUR PLATFORMS"
+    ],
+    "relatedPromptIds": [
+      "format-link-handling",
+      "format-adapt-one-post",
+      "format-cta-placement"
+    ]
+  },
+  {
+    "id": "format-alt-text",
+    "title": "Write Alt Text for Your Images",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "Claude",
+    "promptText": "Help me write alt text for the images in a post for my [BUSINESS TYPE]. The image shows [WHAT IS IN THE IMAGE], and the post is about [WHAT THE POST IS]. Write a clear, plain description of the image that someone using a screen reader would find genuinely useful, describing what is actually there rather than stuffing keywords. Note that alt text exists first so people who cannot see the image can still follow along, so it should describe the image honestly, and while some platforms also read it for context, writing it for real accessibility rather than for gaming reach is both the right call and the version that reads naturally. Give me the alt text.",
+    "description": "Write honest, useful alt text that describes your images for screen readers.",
+    "useCase": "Use this to make your posts accessible and complete. Alt text exists first so people who cannot see the image can still follow along, so an honest plain description is what it is for, and writing it for real accessibility rather than to game reach is both right and the version that reads naturally.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT IS IN THE IMAGE",
+      "WHAT THE POST IS"
+    ],
+    "relatedPromptIds": [
+      "format-image-text-fit",
+      "format-cross-post-checker",
+      "format-platform-mistakes"
+    ]
+  },
+  {
+    "id": "format-platform-mistakes",
+    "title": "Spot Formatting Mistakes That Signal Amateur",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "Claude",
+    "promptText": "Help me catch the formatting mistakes that make a business look amateur on social for my [BUSINESS TYPE]. My platforms are [LIST YOUR PLATFORMS], and a few of my recent posts are [PASTE OR DESCRIBE THEM]. Point out the tells: a watermark from another app, an aspect ratio that got cropped, a link in bio reference where there is no bio, hashtags jammed into the wrong place, or text buried under interface buttons. Note that these small formatting slips quietly signal that someone does not really know the platform, and fixing them costs almost nothing while noticeably raising how polished a small business looks. Give me what to fix.",
+    "description": "Catch small formatting tells that make a business look like it does not know the platform.",
+    "useCase": "Use this to find the formatting slips that quietly undercut you. Small tells like another app's watermark, a link in bio reference where there is no bio, or cropped text signal that someone does not know the platform, and fixing them costs almost nothing while noticeably raising how polished you look.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST YOUR PLATFORMS",
+      "PASTE OR DESCRIBE THEM"
+    ],
+    "relatedPromptIds": [
+      "format-cross-post-checker",
+      "format-image-text-fit",
+      "format-emoji-style"
+    ]
+  },
+  {
+    "id": "format-posting-time-note",
+    "title": "Format a Post for How Each Feed Sorts",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me shape a post for how each platform decides what to show for my [BUSINESS TYPE]. My post is about [WHAT THE POST IS], my platforms are [LIST YOUR PLATFORMS], and my audience is [WHO THEY ARE]. For each platform tell me what the feed tends to reward, early engagement, watch time, saves, comments, or freshness, and how to shape the post to give that platform the signal it favors. Note that a chronological feed and a ranked feed reward completely different things, so the same post shaped the same way leans into one platform's strengths while working against another's, and knowing what each feed favors lets me shape for it. Give me the per platform shaping.",
+    "description": "Shape a post around the signal each platform's feed actually rewards.",
+    "useCase": "Use this when a post does well on one platform and vanishes on another. A chronological feed and a ranked feed reward different things, from watch time to saves to freshness, so shaping the post to give each feed the signal it favors matters as much as the content itself.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THE POST IS",
+      "LIST YOUR PLATFORMS",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "format-adapt-one-post",
+      "format-cta-placement",
+      "format-first-line-hook"
+    ]
+  },
+  {
+    "id": "format-style-guide-builder",
+    "title": "Build a Simple Formatting Cheat Sheet",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "platform-specific-formatting",
+    "aiTool": "Claude",
+    "promptText": "Help me build a simple formatting cheat sheet for the platforms I use so I stop relearning each one every time for my [BUSINESS TYPE]. My platforms are [LIST YOUR PLATFORMS], and the kind of content I usually post is [WHAT YOU POST]. Pull it into one short reference: per platform, the ideal length, hashtag norm, link handling, first line rule, and any format quirk to remember. Note that keeping the rules in my head means I re decide the same things every post and forget details on the platforms I use less, so a one page reference I can glance at makes formatting fast and consistent instead of a guess each time. Give me the cheat sheet.",
+    "description": "Turn per platform formatting rules into one short reference you reuse.",
+    "useCase": "Use this once so you stop relearning each platform every post. Keeping the rules in your head means re deciding the same things each time and forgetting details on platforms you use less, so a one page reference on length, tags, links, and quirks makes formatting fast and consistent.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST YOUR PLATFORMS",
+      "WHAT YOU POST"
+    ],
+    "relatedPromptIds": [
+      "format-adapt-one-post",
+      "format-hashtag-placement",
+      "format-platform-mistakes"
+    ]
   }
 ]
