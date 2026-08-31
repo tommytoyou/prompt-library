@@ -30835,5 +30835,439 @@
       "format-hashtag-placement",
       "format-platform-mistakes"
     ]
+  },
+  {
+    "id": "story-founder-origin",
+    "title": "Write Your Founder Origin Story",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "Claude",
+    "promptText": "Help me write the origin story of my [BUSINESS TYPE]. Why I started it is [WHAT LED YOU TO IT], the moment or problem that pushed me to begin was [THE TURNING POINT], and who I serve is [WHO THEY ARE]. Shape it into a short honest story that a customer would find believable and human, not a polished myth. Note that people connect with a real reason someone started, so the specific true details matter more than sounding impressive, and a story that quietly inflates the struggle to seem more heroic tends to ring false to the exact people I want to reach. Give me the origin story.",
+    "description": "Turn why you started into a short, honest founder origin story.",
+    "useCase": "Use this when you need the story behind why your business exists. People connect with a real reason someone started, so the specific true details land harder than a polished myth, and an honest origin gives customers a human reason to care that a list of services never will.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT LED YOU TO IT",
+      "THE TURNING POINT",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "story-why-statement",
+      "story-about-page",
+      "story-elevator-version"
+    ]
+  },
+  {
+    "id": "story-why-statement",
+    "title": "Define Why Your Business Exists",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "Claude",
+    "promptText": "Help me put into words why my [BUSINESS TYPE] exists beyond making money. What I do is [WHAT YOU OFFER], who it helps is [WHO THEY ARE], and the difference I want to make for them is [THE CHANGE YOU WANT TO CREATE]. Give me a clear why statement I could stand behind, plus a short explanation of it. Note that a why only helps if it is true and specific to me, since a generic mission about empowering everyone says nothing and customers see through it, so the useful version names a real belief I actually hold rather than borrowing one that sounds good. Give me the why statement.",
+    "description": "Put into words the real reason your business exists beyond profit.",
+    "useCase": "Use this when your business feels like a list of services with no center. A why only helps if it is true and specific to you, since a generic empower everyone mission says nothing, so naming a real belief you hold gives your brand a center customers can actually connect to.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU OFFER",
+      "WHO THEY ARE",
+      "THE CHANGE YOU WANT TO CREATE"
+    ],
+    "relatedPromptIds": [
+      "story-founder-origin",
+      "story-mission-statement",
+      "story-values-into-story"
+    ]
+  },
+  {
+    "id": "story-about-page",
+    "title": "Write Your About Page Story",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write the story for my About page for my [BUSINESS TYPE]. My background is [YOUR RELEVANT BACKGROUND], why I do this work is [YOUR REASON], and who I help is [WHO THEY ARE]. Write it so it is about the reader as much as me, connecting my story to why it matters for them, rather than a resume of everything I have ever done. Note that the About page is one of the most visited pages on a small site, and visitors read it to decide whether to trust me, so a story that quickly shows who I help and why beats a long timeline of my career that answers a question nobody asked. Give me the About page story.",
+    "description": "Write an About page story that connects your background to the reader.",
+    "useCase": "Use this when your About page reads like a resume. It is one of the most visited pages on a small site and people read it to decide whether to trust you, so a story that ties who you are to why it matters for them beats a career timeline that answers a question nobody asked.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR RELEVANT BACKGROUND",
+      "YOUR REASON",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "story-founder-origin",
+      "story-customer-as-hero",
+      "story-elevator-version"
+    ]
+  },
+  {
+    "id": "story-quick-draft",
+    "title": "Get a Quick Brand Story Draft",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "Grok",
+    "promptText": "I need a quick brand story draft to work from. My business is [WHAT YOU DO], why I started is [SHORT REASON], and who I serve is [WHO THEY ARE]. Give me a short honest paragraph telling my story that I can edit, no theory or long explanation, just the draft. Give me the paragraph.",
+    "description": "Get a short editable brand story paragraph to start from.",
+    "useCase": "Use this when a blank page is the problem. A short honest draft covering why you started and who you help gives you something concrete to react to and fix, and editing a rough paragraph is far faster than writing your story from nothing.",
+    "variables": [
+      "WHAT YOU DO",
+      "SHORT REASON",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "story-founder-origin",
+      "story-elevator-version",
+      "story-about-page"
+    ]
+  },
+  {
+    "id": "story-customer-as-hero",
+    "title": "Make the Customer the Hero",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "Claude",
+    "promptText": "Help me reframe my brand story so the customer is the hero and my [BUSINESS TYPE] is the guide, not the star. My current story is [PASTE OR DESCRIBE IT], my customer is [WHO THEY ARE], and the problem they face is [THEIR STRUGGLE]. Rewrite it so their journey and their win are at the center, with my business as the thing that helps them get there. Note that customers care about their own story far more than mine, so a brand story that makes them the hero and me the helpful guide connects better than one where I am the genius they should admire, and this shift usually makes the story more persuasive without making it less true. Give me the reframed story.",
+    "description": "Reframe your story so the customer is the hero and you are the guide.",
+    "useCase": "Use this when your story is all about you. Customers care about their own story far more than yours, so casting them as the hero and your business as the guide that helps them win connects better than positioning yourself as the genius, and the shift makes the story more persuasive while staying true.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT",
+      "WHO THEY ARE",
+      "THEIR STRUGGLE"
+    ],
+    "relatedPromptIds": [
+      "story-about-page",
+      "story-why-statement",
+      "story-emotional-core"
+    ]
+  },
+  {
+    "id": "story-elevator-version",
+    "title": "Write a Short Elevator Version",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me boil my brand story down to a few sentences I could say out loud for my [BUSINESS TYPE]. The longer version is [PASTE OR DESCRIBE YOUR STORY], and who I serve is [WHO THEY ARE]. Give me a short spoken version I could use when someone asks what I do, that captures the heart of the story without sounding rehearsed. Note that most of the time I will only get a sentence or two before someone decides if they are interested, so the short version is the one that actually gets used, and it should sound like something a real person would say rather than a memorized tagline. Give me the elevator version.",
+    "description": "Boil your brand story down to a few natural spoken sentences.",
+    "useCase": "Use this for when someone asks what you do. Most of the time you get only a sentence or two before someone decides if they are interested, so the short version is the one that gets used, and it should sound like a real person talking rather than a memorized pitch.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE YOUR STORY",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "story-founder-origin",
+      "story-quick-draft",
+      "story-about-page"
+    ]
+  },
+  {
+    "id": "story-mission-statement",
+    "title": "Write an Honest Mission Statement",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "Claude",
+    "promptText": "Help me write a mission statement for my [BUSINESS TYPE] that does not sound like every other one. What I actually do is [WHAT YOU OFFER], who I do it for is [WHO THEY ARE], and what I genuinely care about in the work is [WHAT MATTERS TO YOU]. Give me a mission statement that is specific and true to my business, and steer me away from the empty buzzwords that make these all sound identical. Note that most mission statements are interchangeable because they reach for grand vague words, so the honest useful version says something specific enough that a competitor could not copy it word for word, and specific beats lofty here. Give me the mission statement.",
+    "description": "Write a specific, honest mission statement free of interchangeable buzzwords.",
+    "useCase": "Use this when you want a mission statement that means something. Most are interchangeable because they reach for grand vague words, so the useful version is specific enough that a competitor could not copy it, and specific and true beats lofty and empty every time.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU OFFER",
+      "WHO THEY ARE",
+      "WHAT MATTERS TO YOU"
+    ],
+    "relatedPromptIds": [
+      "story-why-statement",
+      "story-values-into-story",
+      "story-vision-statement"
+    ]
+  },
+  {
+    "id": "story-values-into-story",
+    "title": "Turn Your Values Into a Story",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "Gemini",
+    "promptText": "Help me show my business values through a story rather than just listing them for my [BUSINESS TYPE]. The values I care about are [YOUR VALUES], and a real example of one of them in action was [A TIME YOU LIVED A VALUE]. Turn that into a short story that demonstrates the value instead of just claiming it. Note that anyone can list values like honesty and quality and they mean nothing on their own, while a specific story of a time I actually chose the harder honest option proves the value in a way a list never can, so showing beats telling here. Give me the story.",
+    "description": "Demonstrate a value through a real story instead of listing it.",
+    "useCase": "Use this when your values page is just words. Anyone can list honesty and quality and they mean nothing alone, while a specific story of a time you actually lived a value proves it in a way a list cannot, so showing beats telling when it comes to what you stand for.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR VALUES",
+      "A TIME YOU LIVED A VALUE"
+    ],
+    "relatedPromptIds": [
+      "story-mission-statement",
+      "story-why-statement",
+      "story-behind-the-name"
+    ]
+  },
+  {
+    "id": "story-emotional-core",
+    "title": "Find the Emotional Core of Your Story",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "Claude",
+    "promptText": "Help me find the emotional heart of my brand story for my [BUSINESS TYPE]. My story so far is [PASTE OR DESCRIBE IT], and who I serve is [WHO THEY ARE]. Point me to the one feeling or truth at the center of it that people would actually connect with, and suggest how to bring that forward instead of burying it under facts. Note that a story full of dates and facts but no feeling does not stick, and often the most connecting part is the bit I am tempted to leave out because it feels too personal, so finding the real emotional core matters more than adding more detail. Give me the core and how to lead with it.",
+    "description": "Find the one feeling at the center of your story and lead with it.",
+    "useCase": "Use this when your story is accurate but flat. A story full of facts and no feeling does not stick, and often the most connecting part is the bit you want to leave out because it feels too personal, so finding the emotional core matters more than adding detail.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "story-customer-as-hero",
+      "story-founder-origin",
+      "story-vulnerable-honesty"
+    ]
+  },
+  {
+    "id": "story-behind-the-name",
+    "title": "Tell the Story Behind Your Name",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me tell the story behind my business name for my [BUSINESS TYPE]. My name is [YOUR BUSINESS NAME], and where it came from is [THE REAL REASON OR ORIGIN]. Turn it into a short story I could share on my About page or in a post. If the real origin is not that interesting, tell me honestly and help me find a genuine angle rather than inventing a fake meaning. Note that a real story behind a name adds a little charm and memorability, but a made up profound meaning tends to feel forced, so an honest small origin beats a grand invented one, and if the name has no story it is fine to just say so. Give me the story or the honest verdict.",
+    "description": "Turn the real origin of your business name into a short shareable story.",
+    "useCase": "Use this when people ask about your name or you want a small story for your About page. A real origin adds charm and memorability, but an invented profound meaning feels forced, so an honest small story beats a grand fake one, and it is fine if the name simply has no story to tell.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR BUSINESS NAME",
+      "THE REAL REASON OR ORIGIN"
+    ],
+    "relatedPromptIds": [
+      "story-values-into-story",
+      "story-about-page",
+      "story-quick-draft"
+    ]
+  },
+  {
+    "id": "story-vision-statement",
+    "title": "Write a Vision of Where You Are Headed",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "Claude",
+    "promptText": "Help me write a short vision of where my [BUSINESS TYPE] is headed that feels genuine rather than grandiose. What I want the business to become is [YOUR REAL AMBITION], who it will keep serving is [WHO THEY ARE], and what I do not want it to turn into is [WHAT TO AVOID]. Give me a vision statement grounded in what I actually want. Note that a vision of dominating the industry or changing the world rings hollow for most small businesses, while an honest picture of the kind of business I want to build and the difference it makes for a real group of people is both more believable and more useful to guide decisions. Give me the vision.",
+    "description": "Write a grounded vision of where your business is headed, not a grandiose one.",
+    "useCase": "Use this when you want a sense of direction without empty grandeur. A vision of dominating the industry rings hollow for a small business, while an honest picture of what you actually want to build and who it serves is more believable and more useful for guiding real decisions.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR REAL AMBITION",
+      "WHO THEY ARE",
+      "WHAT TO AVOID"
+    ],
+    "relatedPromptIds": [
+      "story-mission-statement",
+      "story-why-statement",
+      "story-founder-origin"
+    ]
+  },
+  {
+    "id": "story-vulnerable-honesty",
+    "title": "Decide How Much of Yourself to Share",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "Claude",
+    "promptText": "Help me decide how personal to get in my brand story for my [BUSINESS TYPE]. The personal part of my story is [WHAT YOU MIGHT SHARE], who my audience is [WHO THEY ARE], and how comfortable I am being open is [BE HONEST]. Help me find the line between a story that feels genuine and real versus oversharing something I will regret putting out publicly. Note that a bit of honest vulnerability makes a brand story connect, but there is a real limit, and something shared for connection can later feel exposing or attract the wrong attention, so the goal is the true detail that builds trust without handing over more of my private life than I actually want public. Give me where the line is for my situation.",
+    "description": "Find the line between genuine vulnerability and oversharing in your story.",
+    "useCase": "Use this when deciding how personal your brand story should get. A bit of honest vulnerability makes a story connect, but there is a real limit, and something shared for connection can later feel exposing, so this helps you find the true detail that builds trust without handing over more than you want public.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU MIGHT SHARE",
+      "WHO THEY ARE",
+      "BE HONEST"
+    ],
+    "relatedPromptIds": [
+      "story-emotional-core",
+      "story-founder-origin",
+      "story-customer-as-hero"
+    ]
+  },
+  {
+    "id": "story-differentiate-through-story",
+    "title": "Stand Out Through Your Story",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "Gemini",
+    "promptText": "Help me use my story to stand apart from competitors who offer the same thing for my [BUSINESS TYPE]. What I offer is [WHAT YOU DO], my competitors are [WHO OR WHAT THEY ARE], and what is genuinely different about my path or approach is [WHAT SETS YOU APART]. Show me how to lead with the part of my story that competitors cannot copy, since they cannot have my exact history. Note that when the product is similar the story is often the real differentiator, because anyone can match a feature but no one else has my specific background and reasons, so leaning on what is true and unrepeatable about me is more durable than claiming to be better at the same things. Give me how to differentiate through story.",
+    "description": "Use the unrepeatable parts of your story to stand apart from similar competitors.",
+    "useCase": "Use this when competitors offer basically the same thing. When products are similar the story is often the real differentiator, because anyone can match a feature but no one has your exact history, so leaning on what is true and unrepeatable about you is more durable than claiming to be better at the same things.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU DO",
+      "WHO OR WHAT THEY ARE",
+      "WHAT SETS YOU APART"
+    ],
+    "relatedPromptIds": [
+      "story-why-statement",
+      "story-founder-origin",
+      "story-values-into-story"
+    ]
+  },
+  {
+    "id": "story-story-into-content",
+    "title": "Turn Your Story Into Ongoing Content",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me break my brand story into smaller pieces I can share as content over time for my [BUSINESS TYPE]. My full story is [PASTE OR DESCRIBE IT], my platform is [WHERE YOU POST], and my audience is [WHO THEY ARE]. Pull out the moments, lessons, and turning points that could each become their own post, so my story becomes a well I draw from rather than a single About page nobody revisits. Note that a brand story tucked on an About page gets read once at most, while sharing pieces of it across my content is how people actually absorb who I am over time, so the story works hardest when it is spread out rather than filed away. Give me the content pieces.",
+    "description": "Break your brand story into moments you can share as content over time.",
+    "useCase": "Use this so your story does more than sit on an About page. A story filed away gets read once at most, while sharing its moments and turning points across your content is how people actually absorb who you are over time, turning one story into a well of posts.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT",
+      "WHERE YOU POST",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "story-about-page",
+      "story-emotional-core",
+      "story-elevator-version"
+    ]
+  },
+  {
+    "id": "story-fix-boring-story",
+    "title": "Fix a Story That Feels Boring",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "Claude",
+    "promptText": "Help me fix my brand story, which feels flat and forgettable, for my [BUSINESS TYPE]. Here is my current story: [PASTE IT], and who I serve is [WHO THEY ARE]. Tell me honestly why it is not landing, whether it is too generic, buries the interesting part, sounds like everyone else, or has no tension, then show me how to fix it. Note that most boring brand stories are not boring lives, they just lead with the dull parts and skip the real moment of doubt or change, so the fix is usually reordering and cutting rather than inventing drama, and I should not fabricate a struggle that did not happen. Give me the diagnosis and the fix.",
+    "description": "Diagnose why a brand story falls flat and fix it without inventing drama.",
+    "useCase": "Use this when your story is true but forgettable. Most boring brand stories are not boring lives, they just lead with the dull parts and skip the real moment of change, so the fix is usually reordering and cutting rather than adding fake drama you did not live.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "story-emotional-core",
+      "story-founder-origin",
+      "story-differentiate-through-story"
+    ]
+  },
+  {
+    "id": "story-no-dramatic-origin",
+    "title": "Tell a Story Without a Dramatic Origin",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "Claude",
+    "promptText": "Help me write a brand story when I do not have a dramatic origin for my [BUSINESS TYPE]. The honest truth is [WHY YOU REALLY STARTED, EVEN IF ORDINARY], what I do is [WHAT YOU OFFER], and who I serve is [WHO THEY ARE]. Help me build a genuine story from ordinary beginnings rather than inventing a rags to riches tale. Note that plenty of good businesses started simply, because someone was good at something and decided to do it for themselves, and that plain truth told with a little care connects better than a fabricated dramatic backstory that I would then have to keep up, so honest and ordinary beats invented and grand. Give me the story.",
+    "description": "Build a genuine brand story from ordinary beginnings, no drama required.",
+    "useCase": "Use this when you feel your start was too plain for a story. Plenty of good businesses began simply, because someone was good at something and went out on their own, and that plain truth told with care connects better than a fabricated dramatic backstory you would have to keep up.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHY YOU REALLY STARTED, EVEN IF ORDINARY",
+      "WHAT YOU OFFER",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "story-founder-origin",
+      "story-fix-boring-story",
+      "story-quick-draft"
+    ]
+  },
+  {
+    "id": "story-team-or-solo",
+    "title": "Tell Your Story as a Solo or Small Team",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "Gemini",
+    "promptText": "Help me tell my brand story honestly about being a solo operator or small team for my [BUSINESS TYPE]. The reality is [SOLO, OR HOW SMALL YOUR TEAM IS], what I offer is [WHAT YOU DO], and who I serve is [WHO THEY ARE]. Help me frame my size as a genuine strength where it is one, without pretending to be a bigger company than I am. Note that many customers actively prefer working with the actual person or a small team and value the direct access and care, so being honest about my size and leaning into what that makes possible beats using we to imply a large company that a customer later feels misled by. Give me the story.",
+    "description": "Frame being solo or a small team honestly, as a strength where it is one.",
+    "useCase": "Use this when you feel pressure to seem bigger than you are. Many customers prefer working with the actual person and value the direct access, so being honest about your size and leaning into what it makes possible beats using we to imply a large company that a customer later feels misled by.",
+    "variables": [
+      "BUSINESS TYPE",
+      "SOLO, OR HOW SMALL YOUR TEAM IS",
+      "WHAT YOU DO",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "story-differentiate-through-story",
+      "story-about-page",
+      "story-vulnerable-honesty"
+    ]
+  },
+  {
+    "id": "story-check-authenticity",
+    "title": "Check If Your Story Sounds True",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether my brand story sounds authentic or like marketing for my [BUSINESS TYPE]. Here is my story: [PASTE IT], and my audience is [WHO THEY ARE]. Point out any lines that sound like hollow marketing speak, exaggeration, or claims a skeptical reader would not believe, and suggest more honest wording. Note that people have a strong radar for brand stories that feel fake, and one inflated line can make them doubt the whole thing, so a story that stays believable throughout builds more trust than one with a few impressive but shaky claims, and cutting the parts that sound too good is usually the right move. Give me what to fix.",
+    "description": "Check your story for lines that read as fake or exaggerated and fix them.",
+    "useCase": "Use this before publishing your story. People have a strong radar for brand stories that feel fake, and one inflated line can make them doubt the whole thing, so catching the parts that sound too good and making them honest builds more trust than a few impressive but shaky claims.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "story-fix-boring-story",
+      "story-no-dramatic-origin",
+      "story-emotional-core"
+    ]
+  },
+  {
+    "id": "story-connect-to-offer",
+    "title": "Connect Your Story to What You Sell",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me connect my brand story to what I actually sell for my [BUSINESS TYPE]. My story is [PASTE OR DESCRIBE IT], what I sell is [YOUR OFFER], and who buys it is [WHO THEY ARE]. Show me how to draw a clear line from my story to why my product exists and why I am the right person to provide it, so the story earns its place rather than being a nice tale that goes nowhere. Note that a brand story only pays off when it makes the offer make more sense, since a lovely story disconnected from what I sell is just entertainment, so the version that helps the business ties my why directly to why someone should buy from me. Give me the connection.",
+    "description": "Draw a clear line from your story to why your offer exists and why you.",
+    "useCase": "Use this when your story feels nice but disconnected from sales. A brand story only pays off when it makes the offer make more sense, since a lovely story that goes nowhere is just entertainment, so tying your why directly to why someone should buy from you is what makes the story work for the business.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT",
+      "YOUR OFFER",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "story-customer-as-hero",
+      "story-differentiate-through-story",
+      "story-why-statement"
+    ]
+  },
+  {
+    "id": "story-refresh-old-story",
+    "title": "Refresh a Story That No Longer Fits",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "Claude",
+    "promptText": "Help me update a brand story that no longer matches where my [BUSINESS TYPE] is now. My old story was [PASTE OR DESCRIBE IT], what has changed since is [WHAT IS DIFFERENT NOW], and who I serve today is [WHO THEY ARE]. Help me refresh it so it reflects the business as it actually is, while keeping the true through line that has not changed. Note that businesses evolve and a story written at the start can quietly become inaccurate, which customers sense, but the fix is not throwing out the whole story, it is updating what changed while keeping the genuine core that still holds, so honesty about the evolution beats clinging to an outdated origin. Give me the refreshed story.",
+    "description": "Update a brand story to match where the business is now, keeping the true core.",
+    "useCase": "Use this when your story describes a business you no longer are. A story written at the start can quietly become inaccurate as you evolve, and customers sense it, but the fix is updating what changed while keeping the genuine core, not throwing out the whole thing.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT",
+      "WHAT IS DIFFERENT NOW",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "story-founder-origin",
+      "story-vision-statement",
+      "story-check-authenticity"
+    ]
+  },
+  {
+    "id": "story-tone-of-story",
+    "title": "Match Your Story to Your Brand Voice",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "brand-story",
+    "aiTool": "Gemini",
+    "promptText": "Help me tell my brand story in a voice that matches the rest of my [BUSINESS TYPE]. My story is [PASTE OR DESCRIBE IT], the tone I use elsewhere is [YOUR USUAL TONE, E.G. WARM, PLAYFUL, STRAIGHT TALKING], and my audience is [WHO THEY ARE]. Rewrite the story so it sounds like the same business a customer meets everywhere else, not a formal press release stapled onto a casual brand. Note that a story told in a stiff corporate voice on an otherwise warm and personal brand creates a jarring mismatch that makes the whole thing feel less genuine, so the story should sound like me, and matching the voice matters as much as the content of the story. Give me the story in my voice.",
+    "description": "Rewrite your brand story so its voice matches the rest of your brand.",
+    "useCase": "Use this when your story reads more formal than the rest of your brand. A stiff corporate voice on an otherwise warm personal brand creates a jarring mismatch that makes it feel less genuine, so the story should sound like the same business customers meet everywhere else.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT",
+      "YOUR USUAL TONE, E.G. WARM, PLAYFUL, STRAIGHT TALKING",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "story-check-authenticity",
+      "story-about-page",
+      "story-story-into-content"
+    ]
   }
 ]
