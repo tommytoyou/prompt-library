@@ -31269,5 +31269,414 @@
       "story-about-page",
       "story-story-into-content"
     ]
+  },
+  {
+    "id": "value-core-builder",
+    "title": "Build Your Core Value Proposition",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "value-proposition",
+    "aiTool": "Claude",
+    "promptText": "Help me write the core value proposition for my [BUSINESS TYPE]. What I do is [WHAT YOU OFFER], who it is for is [WHO THEY ARE], and the main result they get is [THE OUTCOME]. Give me a clear statement of what I offer, for whom, and why it is worth choosing, in plain language a customer would understand at a glance. Note that a value proposition is a promise about the result for the customer, not a description of my features, so the useful version leads with what they get rather than what I do, and it has to be specific enough to be believable rather than a vague claim to be the best. Give me the value proposition.",
+    "description": "Write a clear core value proposition focused on the customer's result.",
+    "useCase": "Use this when you cannot say in one line why someone should choose you. A value proposition is a promise about the customer's result, not a list of your features, so leading with what they get and staying specific enough to believe is what makes it land rather than a vague claim to be the best.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU OFFER",
+      "WHO THEY ARE",
+      "THE OUTCOME"
+    ],
+    "relatedPromptIds": [
+      "value-features-to-benefits",
+      "value-one-sentence",
+      "value-for-who"
+    ]
+  },
+  {
+    "id": "value-features-to-benefits",
+    "title": "Turn Features Into Benefits",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "value-proposition",
+    "aiTool": "Claude",
+    "promptText": "Help me turn the features of my [BUSINESS TYPE] into benefits customers actually care about. My features are [LIST WHAT YOU DO OR INCLUDE], and my customer is [WHO THEY ARE]. For each feature, tell me the real benefit behind it, the so what that matters to the customer, and flag any feature that has no meaningful benefit worth mentioning. Note that customers do not buy features, they buy what the feature does for them, so a list of specs leaves them to work out the value themselves while naming the benefit hands it to them, and a feature I cannot connect to a real benefit is probably not worth leading with. Give me the feature to benefit translation.",
+    "description": "Translate your features into the benefits customers actually care about.",
+    "useCase": "Use this when your marketing lists what you do but not why it matters. Customers do not buy features, they buy what the feature does for them, so naming the benefit behind each one hands them the value instead of leaving them to work it out, and a feature with no real benefit is not worth leading with.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST WHAT YOU DO OR INCLUDE",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "value-core-builder",
+      "value-outcome-focus",
+      "value-headline-writer"
+    ]
+  },
+  {
+    "id": "value-one-sentence",
+    "title": "Say What You Do in One Sentence",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "value-proposition",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me say what my [BUSINESS TYPE] does in one clear sentence. What I offer is [WHAT YOU DO], who I help is [WHO THEY ARE], and the outcome is [THE RESULT]. Give me a few one sentence options that a stranger would immediately understand, without jargon or clever wordplay that hides the meaning. Note that if someone cannot tell what I do in one sentence they usually move on, so clarity beats cleverness here, and a plain sentence that lands beats a witty one that leaves people guessing what I actually sell. Give me the one sentence options.",
+    "description": "Write a few plain one sentence explanations of what you do.",
+    "useCase": "Use this when explaining your business takes a paragraph. If someone cannot tell what you do in one sentence they usually move on, so clarity beats cleverness, and a plain sentence that lands immediately beats a witty one that leaves people guessing what you actually sell.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU DO",
+      "WHO THEY ARE",
+      "THE RESULT"
+    ],
+    "relatedPromptIds": [
+      "value-core-builder",
+      "value-headline-writer",
+      "value-jargon-cutter"
+    ]
+  },
+  {
+    "id": "value-quick-draft",
+    "title": "Get a Quick Value Proposition Draft",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "value-proposition",
+    "aiTool": "Grok",
+    "promptText": "I need a quick value proposition to work from. My business is [WHAT YOU DO], my customer is [WHO THEY ARE], and the result they get is [THE OUTCOME]. Give me a short clear value proposition I can edit, plus one alternate version, no theory, just the drafts. Give me the two options.",
+    "description": "Get two quick editable value proposition drafts to start from.",
+    "useCase": "Use this when you just need something on the page to react to. Two short clear drafts covering what you do, for whom, and the result give you a concrete starting point, and sharpening a rough version is faster than writing your value proposition from scratch.",
+    "variables": [
+      "WHAT YOU DO",
+      "WHO THEY ARE",
+      "THE OUTCOME"
+    ],
+    "relatedPromptIds": [
+      "value-core-builder",
+      "value-one-sentence",
+      "value-headline-writer"
+    ]
+  },
+  {
+    "id": "value-for-who",
+    "title": "Get Specific About Who It Is For",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "value-proposition",
+    "aiTool": "Claude",
+    "promptText": "Help me get specific about exactly who my [BUSINESS TYPE] is for in my value proposition. Right now I describe my customer as [YOUR CURRENT DESCRIPTION, MAYBE BROAD], what I offer is [WHAT YOU DO], and the people who most need it are [WHO GETS THE MOST VALUE]. Help me narrow the who so the value proposition speaks directly to the right person. Note that trying to appeal to everyone usually appeals to no one, because a message aimed at all small businesses feels generic to each, while naming a specific person makes that person feel it was written for them, so narrowing the who often makes the proposition stronger rather than smaller. Give me the sharper who and how it changes the proposition.",
+    "description": "Narrow who your value proposition speaks to so it lands with the right person.",
+    "useCase": "Use this when your value proposition tries to speak to everyone. A message aimed at all small businesses feels generic to each, while naming a specific person makes them feel it was written for them, so narrowing the who usually makes the proposition stronger rather than smaller.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR CURRENT DESCRIPTION, MAYBE BROAD",
+      "WHAT YOU DO",
+      "WHO GETS THE MOST VALUE"
+    ],
+    "relatedPromptIds": [
+      "value-core-builder",
+      "value-outcome-focus",
+      "value-different-not-better"
+    ]
+  },
+  {
+    "id": "value-outcome-focus",
+    "title": "Lead With the Outcome Customers Want",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "value-proposition",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me rewrite my value proposition to lead with the outcome my customers actually want for my [BUSINESS TYPE]. What I do is [YOUR PROCESS OR SERVICE], and the deeper result the customer is really after is [WHAT THEY TRULY WANT]. Reframe the proposition around that end result rather than the process I use to deliver it. Note that customers care about the destination more than the vehicle, so leading with the outcome they want connects faster than explaining my method, though I still need to back the promise up, so the outcome should be one I can genuinely deliver rather than an inflated result. Give me the outcome led version.",
+    "description": "Reframe your value proposition around the outcome, not your process.",
+    "useCase": "Use this when your proposition explains your method instead of the result. Customers care about the destination more than the vehicle, so leading with the outcome they want connects faster than describing your process, as long as it is a result you can genuinely deliver.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR PROCESS OR SERVICE",
+      "WHAT THEY TRULY WANT"
+    ],
+    "relatedPromptIds": [
+      "value-features-to-benefits",
+      "value-for-who",
+      "value-headline-writer"
+    ]
+  },
+  {
+    "id": "value-different-not-better",
+    "title": "Be Different, Not Just Better",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "value-proposition",
+    "aiTool": "Claude",
+    "promptText": "Help me build a value proposition around being different rather than just claiming to be better for my [BUSINESS TYPE]. What I offer is [WHAT YOU DO], my competitors are [WHO OR WHAT THEY ARE], and what is genuinely different about my approach is [WHAT YOU DO DIFFERENTLY]. Help me lead with that real difference instead of a better or higher quality claim anyone could make. Note that everyone claims to be better and customers have learned to ignore it, while a specific difference gives them a concrete reason to choose me, so a true point of difference is more persuasive than a generic superiority claim, and if I cannot name a real difference that is worth knowing before writing the proposition. Give me the difference led proposition.",
+    "description": "Build a value proposition on a real difference, not a better claim.",
+    "useCase": "Use this when your proposition just says you are better. Everyone claims that and customers ignore it, while a specific difference gives a concrete reason to choose you, so leading with a true point of difference is more persuasive, and struggling to name one is worth knowing before you write.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU DO",
+      "WHO OR WHAT THEY ARE",
+      "WHAT YOU DO DIFFERENTLY"
+    ],
+    "relatedPromptIds": [
+      "value-for-who",
+      "value-core-builder",
+      "value-proof-backing"
+    ]
+  },
+  {
+    "id": "value-headline-writer",
+    "title": "Write a Value Proposition Headline",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "value-proposition",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write a headline for my homepage or landing page that carries my value proposition for my [BUSINESS TYPE]. What I offer is [WHAT YOU DO], who it is for is [WHO THEY ARE], and the main benefit is [THE BENEFIT]. Give me a few headline options that make the value clear in the few seconds a visitor spends before deciding to stay or leave, plus a supporting subhead for each. Note that the headline is often the only thing a visitor reads before deciding, so it has to communicate the value fast rather than be clever, and a clear headline with a specific benefit keeps people reading while a vague or cute one loses them. Give me the headline options.",
+    "description": "Write homepage headline options that carry your value proposition fast.",
+    "useCase": "Use this for the top of your homepage or landing page. The headline is often the only thing a visitor reads before deciding to stay, so it has to make the value clear fast, and a specific benefit keeps people reading while a vague or cute one loses them in seconds.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU DO",
+      "WHO THEY ARE",
+      "THE BENEFIT"
+    ],
+    "relatedPromptIds": [
+      "value-one-sentence",
+      "value-outcome-focus",
+      "value-core-builder"
+    ]
+  },
+  {
+    "id": "value-jargon-cutter",
+    "title": "Cut the Jargon From Your Proposition",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "value-proposition",
+    "aiTool": "Claude",
+    "promptText": "Help me cut the jargon and buzzwords from my value proposition for my [BUSINESS TYPE]. Here is my current version: [PASTE IT], and my customer is [WHO THEY ARE]. Point out the vague industry speak, the words that sound impressive but say nothing, and rewrite it in plain language a normal customer would use. Note that words like solutions, seamless, and cutting edge feel professional to write but wash over the reader without meaning, so plain concrete language communicates more than polished jargon, and if a phrase would sound odd said out loud to a customer it probably does not belong. Give me the plain language version.",
+    "description": "Strip the buzzwords from your value proposition and make it plain.",
+    "useCase": "Use this when your proposition sounds professional but says nothing. Words like solutions, seamless, and cutting edge feel impressive to write but wash over the reader, so plain concrete language communicates more, and a phrase that sounds odd said out loud to a customer probably does not belong.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "value-one-sentence",
+      "value-headline-writer",
+      "value-test-clarity"
+    ]
+  },
+  {
+    "id": "value-proof-backing",
+    "title": "Back Your Claim With Proof",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "value-proposition",
+    "aiTool": "Claude",
+    "promptText": "Help me back up my value proposition with proof so it is believable for my [BUSINESS TYPE]. My claim is [WHAT YOU PROMISE], and the evidence I actually have is [RESULTS, EXPERIENCE, GUARANTEES, TESTIMONIALS, OR HONESTLY LITTLE YET]. Show me how to support the promise with what I genuinely have, and if I am short on proof, how to make an honest claim I can back rather than one I cannot. Note that a bold promise with nothing behind it invites doubt, while a slightly smaller claim I can prove builds more trust, so matching the size of the claim to the proof I have is what keeps the proposition credible, and it is better to promise less and deliver than the reverse. Give me how to back the claim.",
+    "description": "Support your value proposition with the proof you genuinely have.",
+    "useCase": "Use this when your promise might sound too good to believe. A bold claim with nothing behind it invites doubt, while a slightly smaller one you can prove builds trust, so matching the size of the claim to your actual proof keeps the proposition credible, and promising less and delivering beats the reverse.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU PROMISE",
+      "RESULTS, EXPERIENCE, GUARANTEES, TESTIMONIALS, OR HONESTLY LITTLE YET"
+    ],
+    "relatedPromptIds": [
+      "value-different-not-better",
+      "value-test-clarity",
+      "value-core-builder"
+    ]
+  },
+  {
+    "id": "value-pain-point-match",
+    "title": "Match Your Proposition to a Real Pain Point",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "value-proposition",
+    "aiTool": "Gemini",
+    "promptText": "Help me anchor my value proposition to the real problem my customers have for my [BUSINESS TYPE]. The problem they struggle with is [THEIR PAIN POINT], what I offer is [WHAT YOU DO], and how it helps is [HOW IT SOLVES THE PROBLEM]. Rewrite the proposition so it names the problem clearly and then presents my offer as the relief. Note that people feel their problem more sharply than they feel any solution, so leading with the pain they recognize pulls them in faster than opening with my offer, though I should name the problem honestly rather than exaggerating it into fear, since overstating the pain reads as manipulative. Give me the problem anchored proposition.",
+    "description": "Anchor your value proposition to the real problem customers feel.",
+    "useCase": "Use this when your proposition talks about your offer before the problem. People feel their problem more sharply than any solution, so naming the pain they recognize pulls them in faster than opening with what you sell, as long as you name it honestly rather than exaggerating it into fear.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THEIR PAIN POINT",
+      "WHAT YOU DO",
+      "HOW IT SOLVES THE PROBLEM"
+    ],
+    "relatedPromptIds": [
+      "value-outcome-focus",
+      "value-for-who",
+      "value-core-builder"
+    ]
+  },
+  {
+    "id": "value-multiple-versions",
+    "title": "Write Versions for Different Places",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "value-proposition",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write versions of my value proposition sized for different places for my [BUSINESS TYPE]. My core proposition is [PASTE OR DESCRIBE IT], and the places I need it are [WHERE, E.G. HOMEPAGE, SOCIAL BIO, ELEVATOR PITCH, EMAIL SIGNATURE]. Give me a version for each: a full one, a one line one, and a few word one, all saying the same thing at different lengths. Note that the same proposition has to work as a headline, a bio, and a spoken line, so having sized versions ready keeps the message consistent everywhere instead of me improvising a different description each time, and consistency across places is part of what makes a proposition stick. Give me the sized versions.",
+    "description": "Create full, one line, and few word versions of your proposition.",
+    "useCase": "Use this when you describe your business differently in every place. The same proposition has to work as a headline, a bio, and a spoken line, so having sized versions ready keeps the message consistent instead of improvising each time, and that consistency is part of what makes it stick.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT",
+      "WHERE, E.G. HOMEPAGE, SOCIAL BIO, ELEVATOR PITCH, EMAIL SIGNATURE"
+    ],
+    "relatedPromptIds": [
+      "value-one-sentence",
+      "value-headline-writer",
+      "value-core-builder"
+    ]
+  },
+  {
+    "id": "value-test-clarity",
+    "title": "Test If Your Proposition Is Clear",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "value-proposition",
+    "aiTool": "Claude",
+    "promptText": "Help me test whether my value proposition is actually clear for my [BUSINESS TYPE]. Here it is: [PASTE IT]. Read it as a first time visitor who knows nothing about me and tell me honestly: can you tell what I do, who it is for, and why it matters, in a few seconds. Point out anything confusing, ambiguous, or that made you pause. Note that I am too close to my own business to judge my proposition, since what is obvious to me is often unclear to a stranger, so reading it cold as an outsider catches the gaps I cannot see, and if a newcomer has to work to understand it that is a problem worth fixing. Give me the honest first read.",
+    "description": "Stress test your value proposition by reading it cold as a stranger.",
+    "useCase": "Use this before you commit to a value proposition. You are too close to your business to judge it, and what is obvious to you is often unclear to a stranger, so a cold read as a first time visitor catches the gaps you cannot see, and any confusion a newcomer hits is worth fixing.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT"
+    ],
+    "relatedPromptIds": [
+      "value-jargon-cutter",
+      "value-proof-backing",
+      "value-one-sentence"
+    ]
+  },
+  {
+    "id": "value-b2b-vs-b2c",
+    "title": "Adjust the Proposition for Your Buyer Type",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "value-proposition",
+    "aiTool": "Gemini",
+    "promptText": "Help me adjust my value proposition for the kind of buyer I sell to for my [BUSINESS TYPE]. My buyer is [A BUSINESS OR A CONSUMER], what I offer is [WHAT YOU DO], and what they care about most in a decision is [THEIR MAIN CONCERN]. Shape the proposition to speak to how this type of buyer actually decides. Note that a business buyer often weighs return, risk, and time saved while a consumer often weighs how something makes them feel or look, so the same offer needs a different emphasis for each, and matching the proposition to what my specific buyer values beats a generic version that half fits both. Give me the adjusted proposition.",
+    "description": "Shape your value proposition to how your specific buyer type decides.",
+    "useCase": "Use this when you are not sure your proposition fits your buyer. A business buyer often weighs return, risk, and time saved while a consumer weighs how something feels, so the same offer needs a different emphasis for each, and matching to what your buyer values beats a version that half fits both.",
+    "variables": [
+      "BUSINESS TYPE",
+      "A BUSINESS OR A CONSUMER",
+      "WHAT YOU DO",
+      "THEIR MAIN CONCERN"
+    ],
+    "relatedPromptIds": [
+      "value-for-who",
+      "value-outcome-focus",
+      "value-pain-point-match"
+    ]
+  },
+  {
+    "id": "value-premium-justify",
+    "title": "Justify a Premium Price in Your Proposition",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "value-proposition",
+    "aiTool": "Claude",
+    "promptText": "Help me build a value proposition that justifies charging more than cheaper competitors for my [BUSINESS TYPE]. What I offer is [WHAT YOU DO], why I cost more is [WHAT JUSTIFIES THE PRICE], and my customer is [WHO THEY ARE]. Help me make the case for the value that supports my price without badmouthing cheaper options. Note that competing on being the cheapest is a race I usually cannot win, so the stronger move is making the higher value clear enough that the price feels fair, and this only works if the extra value is real, since a premium price with no substance behind it just loses the sale. Give me the value justified proposition.",
+    "description": "Build a proposition that makes a higher price feel worth it.",
+    "useCase": "Use this when you cost more than competitors and need to justify it. Competing on being cheapest is a race you usually cannot win, so making the higher value clear enough that the price feels fair is the stronger move, and it only works when the extra value is genuinely real.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU DO",
+      "WHAT JUSTIFIES THE PRICE",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "value-different-not-better",
+      "value-proof-backing",
+      "value-outcome-focus"
+    ]
+  },
+  {
+    "id": "value-fix-generic",
+    "title": "Fix a Generic Value Proposition",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "value-proposition",
+    "aiTool": "Claude",
+    "promptText": "Help me fix my value proposition, which sounds like every other business in my field, for my [BUSINESS TYPE]. Here it is: [PASTE IT], my competitors are [WHO THEY ARE], and what is actually true and specific about me is [YOUR REAL SPECIFICS]. Tell me which parts are interchangeable filler and rebuild it around what only I can honestly say. Note that a good test is whether a competitor could put their name on my exact proposition, and if they could, it is not really mine, so the fix is trading generic claims for specific true ones, and specificity is usually what separates a proposition that works from one that blends in. Give me the sharpened version.",
+    "description": "Rebuild a generic value proposition around what only you can say.",
+    "useCase": "Use this when your proposition could belong to any competitor. A good test is whether a rival could put their name on it unchanged, and if they could it is not really yours, so trading generic claims for specific true ones is the fix, and that specificity is usually what separates a proposition that works.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHO THEY ARE",
+      "YOUR REAL SPECIFICS"
+    ],
+    "relatedPromptIds": [
+      "value-different-not-better",
+      "value-test-clarity",
+      "value-for-who"
+    ]
+  },
+  {
+    "id": "value-elevator-pitch",
+    "title": "Turn Your Proposition Into a Spoken Pitch",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "value-proposition",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me turn my value proposition into something natural to say when someone asks what I do for my [BUSINESS TYPE]. My written proposition is [PASTE IT], and the setting is [WHERE, E.G. NETWORKING, A PARTY, A NEW CLIENT CALL]. Give me a spoken version that sounds like a real person talking, not a memorized marketing line. Note that a proposition written for a page often sounds stiff or salesy said out loud, so the spoken version needs to feel like natural conversation while still landing the value, and something I can actually say comfortably beats a polished line I would feel awkward delivering. Give me the spoken version.",
+    "description": "Turn your written proposition into a natural spoken answer.",
+    "useCase": "Use this when your written proposition sounds stiff said aloud. A line written for a page often comes across as salesy in conversation, so the spoken version needs to feel natural while still landing the value, and something you can say comfortably beats a polished line you would feel awkward delivering.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHERE, E.G. NETWORKING, A PARTY, A NEW CLIENT CALL"
+    ],
+    "relatedPromptIds": [
+      "value-one-sentence",
+      "value-multiple-versions",
+      "value-core-builder"
+    ]
+  },
+  {
+    "id": "value-multiple-offers",
+    "title": "Find the Value Proposition Across Offers",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "value-proposition",
+    "aiTool": "Claude",
+    "promptText": "Help me find one clear value proposition that ties together the different things I offer for my [BUSINESS TYPE]. The offers I have are [LIST WHAT YOU SELL], and who I serve is [WHO THEY ARE]. Help me find the common thread so I have one overarching proposition rather than a confusing list of unrelated services. Note that a business offering many things can leave customers unsure what it really does, so finding the through line that connects the offers gives people one clear idea to remember, and if the offers genuinely do not connect that is useful to know too, since it may point to a focus problem worth addressing. Give me the unifying proposition.",
+    "description": "Find one value proposition that ties your different offers together.",
+    "useCase": "Use this when you offer several things and the message feels scattered. A business offering many things can leave customers unsure what it really does, so finding the through line gives people one clear idea to remember, and offers that genuinely do not connect may point to a focus problem worth knowing about.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST WHAT YOU SELL",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "value-core-builder",
+      "value-for-who",
+      "value-fix-generic"
+    ]
+  },
+  {
+    "id": "value-before-after",
+    "title": "Frame the Before and After You Deliver",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "value-proposition",
+    "aiTool": "Gemini",
+    "promptText": "Help me frame my value proposition as the before and after my customer goes through for my [BUSINESS TYPE]. Where the customer starts is [THEIR SITUATION BEFORE], where they end up after working with me is [THEIR SITUATION AFTER], and what I do is [WHAT YOU OFFER]. Turn that shift into a proposition that shows the transformation clearly. Note that the value of what I do is clearest in the gap between before and after, so showing that shift communicates worth better than describing my service in the abstract, though the after has to be an honest outcome I can deliver rather than a dream state, since an inflated after undermines trust. Give me the before and after proposition.",
+    "description": "Frame your proposition as the honest before and after you deliver.",
+    "useCase": "Use this when the worth of what you do is hard to convey. The value is clearest in the gap between where a customer starts and where they end up, so showing that shift communicates worth better than describing your service in the abstract, as long as the after is an honest outcome you can deliver.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THEIR SITUATION BEFORE",
+      "THEIR SITUATION AFTER",
+      "WHAT YOU OFFER"
+    ],
+    "relatedPromptIds": [
+      "value-outcome-focus",
+      "value-pain-point-match",
+      "value-proof-backing"
+    ]
+  },
+  {
+    "id": "value-audit-existing",
+    "title": "Audit Your Current Value Proposition",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "value-proposition",
+    "aiTool": "Claude",
+    "promptText": "Help me audit the value proposition I am currently using for my [BUSINESS TYPE]. Here is what I have across my site and profiles: [PASTE OR DESCRIBE IT], and my customer is [WHO THEY ARE]. Go through it and tell me what is working, what is vague, whether it leads with benefit or feature, whether it is specific to me, and the one or two changes that would improve it most. Note that most propositions are not broken so much as fuzzy, and small fixes like leading with the outcome or cutting one buzzword often do more than a full rewrite, so an honest audit that finds the highest value fixes beats starting over from a blank page. Give me the audit and the priority fixes.",
+    "description": "Audit your existing value proposition and find the highest value fixes.",
+    "useCase": "Use this when your proposition is fine but not sharp. Most are not broken so much as fuzzy, and small fixes like leading with the outcome or cutting a buzzword often do more than a rewrite, so an audit that finds the highest value changes beats starting over from a blank page.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "value-test-clarity",
+      "value-fix-generic",
+      "value-jargon-cutter"
+    ]
   }
 ]
