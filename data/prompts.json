@@ -31678,5 +31678,393 @@
       "value-fix-generic",
       "value-jargon-cutter"
     ]
+  },
+  {
+    "id": "tagline-generator",
+    "title": "Generate Tagline Options",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tagline-and-slogans",
+    "aiTool": "Claude",
+    "promptText": "Help me come up with tagline options for my [BUSINESS TYPE]. What I do is [WHAT YOU OFFER], who I serve is [WHO THEY ARE], and the feeling or idea I want to leave people with is [THE IMPRESSION]. Give me a range of tagline options in different directions: some clear and descriptive, some benefit led, some with a little personality, each short enough to remember. Note that a tagline has to be short and stick, so a clear line people remember beats a clever one they do not understand, and it is worth generating many options because the first idea is rarely the best and the strong one often emerges a few tries in. Give me the options grouped by direction.",
+    "description": "Generate a range of tagline options across clear, benefit led, and personality directions.",
+    "useCase": "Use this when you need a tagline and want real choices. A tagline has to be short and stick, so generating many options across different directions beats settling on the first idea, since the first is rarely the best and the strong one usually emerges a few tries in.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU OFFER",
+      "WHO THEY ARE",
+      "THE IMPRESSION"
+    ],
+    "relatedPromptIds": [
+      "tagline-from-value-prop",
+      "tagline-clear-vs-clever",
+      "tagline-shortlist-picker"
+    ]
+  },
+  {
+    "id": "tagline-from-value-prop",
+    "title": "Turn Your Value Proposition Into a Tagline",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tagline-and-slogans",
+    "aiTool": "Claude",
+    "promptText": "Help me distill my value proposition into a short tagline for my [BUSINESS TYPE]. My value proposition is [PASTE OR DESCRIBE IT], and my customer is [WHO THEY ARE]. Pull out the single most important idea and turn it into a few words that capture the heart of it. Note that a tagline cannot carry the whole proposition, it can only point at the one thing that matters most, so the job is choosing what to drop as much as what to keep, and a focused line about one clear benefit beats a crammed one trying to say everything at once. Give me the tagline options.",
+    "description": "Distill your value proposition down to a short tagline built on one idea.",
+    "useCase": "Use this when you have a value proposition but need a short line from it. A tagline cannot carry the whole proposition, only the one thing that matters most, so the job is choosing what to drop, and a focused line about one clear benefit beats a crammed one trying to say everything.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "tagline-generator",
+      "tagline-one-idea",
+      "tagline-benefit-led"
+    ]
+  },
+  {
+    "id": "tagline-quick-options",
+    "title": "Get Quick Tagline Ideas",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tagline-and-slogans",
+    "aiTool": "Grok",
+    "promptText": "I need some quick tagline ideas to react to. My business is [WHAT YOU DO], my customer is [WHO THEY ARE], and the vibe I want is [THE FEELING]. Give me a short list of tagline options, a mix of clear and characterful, no explanation, just the lines. Give me the list.",
+    "description": "Get a quick list of tagline options to react to.",
+    "useCase": "Use this when you want a fast batch of lines to spark something. A quick mix of clear and characterful options gives you material to react to, and seeing a range of directions at once often surfaces the angle worth developing faster than staring at a blank page.",
+    "variables": [
+      "WHAT YOU DO",
+      "WHO THEY ARE",
+      "THE FEELING"
+    ],
+    "relatedPromptIds": [
+      "tagline-generator",
+      "tagline-shortlist-picker",
+      "tagline-benefit-led"
+    ]
+  },
+  {
+    "id": "tagline-clear-vs-clever",
+    "title": "Choose Between Clear and Clever",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tagline-and-slogans",
+    "aiTool": "Claude",
+    "promptText": "Help me decide between a clear tagline and a clever one for my [BUSINESS TYPE]. My clear option is [THE STRAIGHTFORWARD LINE], my clever option is [THE WORDPLAY LINE], and my customer is [WHO THEY ARE]. Weigh them honestly for my situation and tell me which serves me better. Note that clever wordplay is satisfying to land but often makes people work to get it, and a tagline that needs explaining has already failed, so for a business people do not know yet, clear usually wins, while a clever line only earns its place if the meaning lands instantly. Give me the honest call and why.",
+    "description": "Weigh a clear tagline against a clever one and pick the right fit.",
+    "useCase": "Use this when torn between a plain line and a witty one. Clever wordplay is satisfying but often makes people work to get it, and a tagline that needs explaining has failed, so for a business people do not know yet clear usually wins unless the clever meaning lands instantly.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE STRAIGHTFORWARD LINE",
+      "THE WORDPLAY LINE",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "tagline-generator",
+      "tagline-test-memorable",
+      "tagline-shortlist-picker"
+    ]
+  },
+  {
+    "id": "tagline-benefit-led",
+    "title": "Write a Benefit Led Tagline",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tagline-and-slogans",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write a tagline built around the benefit my customer gets for my [BUSINESS TYPE]. What I do is [WHAT YOU OFFER], and the main benefit is [THE RESULT THEY GET]. Give me several short tagline options that put that benefit front and center rather than describing what I do. Note that a tagline naming what the customer gets tends to connect faster than one describing my process, since people care about the result more than the method, though the benefit has to be real and specific, because a vague promise like better results feels as empty in a tagline as anywhere else. Give me the benefit led options.",
+    "description": "Write tagline options centered on the benefit the customer gets.",
+    "useCase": "Use this when you want the tagline to sell the result. A line naming what the customer gets connects faster than one describing your process, since people care about the result more than the method, as long as the benefit is real and specific rather than a vague promise.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU OFFER",
+      "THE RESULT THEY GET"
+    ],
+    "relatedPromptIds": [
+      "tagline-from-value-prop",
+      "tagline-generator",
+      "tagline-one-idea"
+    ]
+  },
+  {
+    "id": "tagline-test-memorable",
+    "title": "Test If a Tagline Is Memorable",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tagline-and-slogans",
+    "aiTool": "Claude",
+    "promptText": "Help me test whether my tagline is actually memorable for my [BUSINESS TYPE]. My tagline is [PASTE IT], and my customer is [WHO THEY ARE]. Tell me honestly whether it is easy to say, easy to recall, and whether it sticks or slides right out of the head, and what specifically helps or hurts its memorability. Note that a tagline only works if people remember it, and length, rhythm, and how easily it rolls off the tongue matter as much as the meaning, so a line that is accurate but clunky to say will be forgotten, and testing this before committing saves putting a forgettable line everywhere. Give me the honest read.",
+    "description": "Test whether a tagline is easy to say, recall, and actually sticks.",
+    "useCase": "Use this before committing to a tagline. A tagline only works if people remember it, and rhythm and how easily it rolls off the tongue matter as much as meaning, so a line that is accurate but clunky gets forgotten, and testing this first saves putting a forgettable line everywhere.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "tagline-clear-vs-clever",
+      "tagline-say-out-loud",
+      "tagline-shortlist-picker"
+    ]
+  },
+  {
+    "id": "tagline-one-idea",
+    "title": "Focus a Tagline on One Idea",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tagline-and-slogans",
+    "aiTool": "Claude",
+    "promptText": "Help me fix a tagline that is trying to say too much for my [BUSINESS TYPE]. My current line is [PASTE IT], and my customer is [WHO THEY ARE]. Point out how many ideas it is juggling, help me pick the single strongest one, and rewrite it around that alone. Note that a tagline crammed with two or three ideas dilutes all of them and becomes a mouthful nobody remembers, so cutting down to the one idea that matters most makes the line sharper and more memorable, and the hard part is usually letting go of the good ideas that do not make the cut. Give me the focused rewrites.",
+    "description": "Cut a crowded tagline down to its single strongest idea.",
+    "useCase": "Use this when your tagline tries to say everything. A line juggling two or three ideas dilutes all of them and becomes a mouthful nobody remembers, so cutting to the one idea that matters most makes it sharper, and the hard part is letting go of the good ideas that do not make the cut.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "tagline-from-value-prop",
+      "tagline-benefit-led",
+      "tagline-shorten"
+    ]
+  },
+  {
+    "id": "tagline-personality",
+    "title": "Add Personality to a Flat Tagline",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tagline-and-slogans",
+    "aiTool": "Gemini",
+    "promptText": "Help me add some personality to my tagline, which is accurate but flat, for my [BUSINESS TYPE]. My current line is [PASTE IT], my brand tone is [YOUR TONE, E.G. WARM, BOLD, PLAYFUL, NO NONSENSE], and my customer is [WHO THEY ARE]. Give me versions that keep the meaning but carry more of my brand character. Note that a technically correct tagline with no personality is forgettable, but personality has to match the brand, since a jokey line on a serious service or a stiff line on a fun brand both feel wrong, so the goal is character that fits rather than character for its own sake. Give me the versions with more personality.",
+    "description": "Inject brand appropriate personality into a flat but accurate tagline.",
+    "useCase": "Use this when your tagline is correct but forgettable. A technically fine line with no personality slides out of the head, but the character has to match the brand, since a jokey line on a serious service feels as wrong as a stiff line on a fun one, so the goal is character that fits.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "YOUR TONE, E.G. WARM, BOLD, PLAYFUL, NO NONSENSE",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "tagline-generator",
+      "tagline-match-brand-voice",
+      "tagline-clear-vs-clever"
+    ]
+  },
+  {
+    "id": "tagline-shorten",
+    "title": "Shorten a Tagline That Is Too Long",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tagline-and-slogans",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me shorten my tagline, which runs too long, for my [BUSINESS TYPE]. My current line is [PASTE IT], and the idea I need to keep is [THE CORE MEANING]. Cut it down to something tight and punchy without losing the point, and show me a few lengths so I can pick. Note that most taglines are stronger with fewer words, and every word that does not earn its place weakens the line and makes it harder to remember, so ruthless trimming usually improves a tagline, and the shortest version that still carries the meaning is almost always the best one. Give me the shorter versions.",
+    "description": "Trim an overlong tagline to something tight and punchy.",
+    "useCase": "Use this when your tagline is a sentence, not a tagline. Most are stronger with fewer words, and every word that does not earn its place weakens the line and makes it harder to recall, so ruthless trimming improves it, and the shortest version that still carries the meaning is usually best.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "THE CORE MEANING"
+    ],
+    "relatedPromptIds": [
+      "tagline-one-idea",
+      "tagline-test-memorable",
+      "tagline-say-out-loud"
+    ]
+  },
+  {
+    "id": "tagline-match-brand-voice",
+    "title": "Match Your Tagline to Your Brand Voice",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tagline-and-slogans",
+    "aiTool": "Gemini",
+    "promptText": "Help me make sure my tagline matches the rest of my brand voice for my [BUSINESS TYPE]. My tagline options are [PASTE THEM], the tone I use across my brand is [YOUR TONE], and my customer is [WHO THEY ARE]. Tell me which options fit my voice and which feel like a different brand wrote them. Note that a tagline sits next to everything else I say, so a line in a tone that clashes with my website and posts creates a jarring mismatch, and consistency matters more than picking the objectively cleverest line, so the best tagline is the strong one that also sounds like the rest of me. Give me which fit and why.",
+    "description": "Check which tagline options fit your brand voice and which clash.",
+    "useCase": "Use this when choosing among tagline options. A tagline sits next to everything else you say, so a line whose tone clashes with your site and posts creates a jarring mismatch, and consistency matters more than picking the cleverest line, so the best is the strong one that sounds like the rest of you.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THEM",
+      "YOUR TONE",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "tagline-personality",
+      "tagline-shortlist-picker",
+      "tagline-clear-vs-clever"
+    ]
+  },
+  {
+    "id": "tagline-say-out-loud",
+    "title": "Check How a Tagline Sounds Out Loud",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tagline-and-slogans",
+    "aiTool": "Claude",
+    "promptText": "Help me check how my tagline sounds when said out loud for my [BUSINESS TYPE]. My tagline is [PASTE IT]. Read it for rhythm and flow: does it trip on any words, have an awkward mouthful in the middle, or land cleanly, and are there any accidental double meanings or unfortunate sounds when spoken. Note that taglines get said aloud far more than people expect, in ads, introductions, and word of mouth, so a line that looks fine written but stumbles when spoken causes trouble, and reading it out loud catches clunky rhythm and unlucky word combinations that the eye misses. Give me the sound and rhythm read.",
+    "description": "Check a tagline for rhythm, flow, and awkward sounds when spoken aloud.",
+    "useCase": "Use this before finalizing a tagline. Taglines get said aloud more than people expect, so a line that looks fine written but stumbles when spoken causes trouble, and reading it out loud catches clunky rhythm and unlucky word combinations the eye misses on the page.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT"
+    ],
+    "relatedPromptIds": [
+      "tagline-test-memorable",
+      "tagline-shorten",
+      "tagline-check-cliche"
+    ]
+  },
+  {
+    "id": "tagline-check-cliche",
+    "title": "Check a Tagline for Clichés",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tagline-and-slogans",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether my tagline is a tired cliché for my [BUSINESS TYPE]. My tagline is [PASTE IT], and my field is [YOUR INDUSTRY]. Tell me honestly if it uses overused phrasing, a formula every business in my space already uses, or words so common they say nothing, and suggest fresher directions. Note that lines built on your success, our passion, or where quality meets service feel meaningful to write but are so worn that customers glaze over them, so a cliché tagline actively signals a generic business, and catching this before committing keeps me from blending into every competitor who used the same tired formula. Give me the honest verdict and fresher angles.",
+    "description": "Catch whether a tagline leans on worn out clichés and find fresher angles.",
+    "useCase": "Use this before you commit a tagline. Lines like your success, our passion feel meaningful to write but are so worn that customers glaze over them, so a cliche tagline signals a generic business, and catching it early keeps you from blending into every competitor using the same formula.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "YOUR INDUSTRY"
+    ],
+    "relatedPromptIds": [
+      "tagline-say-out-loud",
+      "tagline-differentiate",
+      "tagline-shortlist-picker"
+    ]
+  },
+  {
+    "id": "tagline-differentiate",
+    "title": "Make a Tagline That Stands Apart",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tagline-and-slogans",
+    "aiTool": "Claude",
+    "promptText": "Help me write a tagline that sets me apart from competitors for my [BUSINESS TYPE]. What competitors tend to say is [THEIR TYPICAL TAGLINES OR CLAIMS], what is genuinely different about me is [YOUR DIFFERENCE], and my customer is [WHO THEY ARE]. Give me tagline options that lean on my difference so I do not sound like everyone else. Note that if my tagline could sit on a competitor's site unchanged it is not doing its job, so the useful test is whether the line is true specifically for me, and a tagline built on a real difference stands out where a generic quality claim disappears into the crowd. Give me the distinctive options.",
+    "description": "Write tagline options built on a real difference so you stand apart.",
+    "useCase": "Use this when your tagline could belong to any competitor. If a line could sit on a rival's site unchanged it is not doing its job, so the test is whether it is true specifically for you, and a tagline built on a real difference stands out where a generic quality claim disappears into the crowd.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THEIR TYPICAL TAGLINES OR CLAIMS",
+      "YOUR DIFFERENCE",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "tagline-check-cliche",
+      "tagline-from-value-prop",
+      "tagline-generator"
+    ]
+  },
+  {
+    "id": "tagline-campaign-slogan",
+    "title": "Write a Slogan for a Campaign",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tagline-and-slogans",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write a slogan for a specific campaign or promotion for my [BUSINESS TYPE]. The campaign is about [WHAT IT IS], the audience is [WHO IT IS FOR], and the action I want is [WHAT YOU WANT THEM TO DO]. Give me slogan options that fit this campaign, punchier and more time bound than my permanent tagline. Note that a campaign slogan is different from a brand tagline, it can be bolder and more specific because it does not have to last forever, so it should push the particular offer or moment rather than sum up the whole business, and it is fine for it to be disposable since the campaign is too. Give me the campaign slogan options.",
+    "description": "Write punchy campaign slogan options distinct from your permanent tagline.",
+    "useCase": "Use this for a specific promotion or campaign. A campaign slogan is different from a brand tagline, it can be bolder and more specific because it does not have to last forever, so it should push the particular offer rather than sum up the whole business, and being disposable is fine.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT IT IS",
+      "WHO IT IS FOR",
+      "WHAT YOU WANT THEM TO DO"
+    ],
+    "relatedPromptIds": [
+      "tagline-generator",
+      "tagline-benefit-led",
+      "tagline-usage-guide"
+    ]
+  },
+  {
+    "id": "tagline-shortlist-picker",
+    "title": "Pick the Best From Your Shortlist",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tagline-and-slogans",
+    "aiTool": "Claude",
+    "promptText": "Help me choose the best tagline from my shortlist for my [BUSINESS TYPE]. My finalists are [PASTE THE OPTIONS], my customer is [WHO THEY ARE], and the impression I want to leave is [THE FEELING]. Compare them on clarity, memorability, fit with my brand, and how well they stand apart, and tell me which one you would pick and why. Note that at the shortlist stage the options are usually all decent, so the decision is about tradeoffs rather than right or wrong, and a clear rundown of what each one gains and gives up helps me commit instead of endlessly second guessing, since agonizing between good options wastes more than picking a solid one and moving on. Give me the comparison and your pick.",
+    "description": "Compare your tagline finalists and get a clear recommended pick.",
+    "useCase": "Use this when you have a few taglines you like and cannot decide. At the shortlist stage the options are all usually decent, so it is about tradeoffs not right or wrong, and a clear rundown of what each gains and gives up helps you commit rather than endlessly second guessing good options.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THE OPTIONS",
+      "WHO THEY ARE",
+      "THE FEELING"
+    ],
+    "relatedPromptIds": [
+      "tagline-generator",
+      "tagline-test-memorable",
+      "tagline-match-brand-voice"
+    ]
+  },
+  {
+    "id": "tagline-rework-existing",
+    "title": "Rework a Tagline That Is Not Landing",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tagline-and-slogans",
+    "aiTool": "Claude",
+    "promptText": "Help me rework my current tagline, which is not landing, for my [BUSINESS TYPE]. My tagline is [PASTE IT], what I think is wrong with it is [YOUR HUNCH, OR WRITE NOT SURE], and my customer is [WHO THEY ARE]. Diagnose why it is falling flat, whether it is unclear, generic, clunky, or off tone, then give me reworked versions that fix the actual problem. Note that a tagline can be near miss rather than a total failure, where a small change in one word or the order fixes it, so the diagnosis matters, and I should not throw out a line that just needs a tune up any more than I should keep polishing one that is fundamentally wrong. Give me the diagnosis and reworks.",
+    "description": "Diagnose why a tagline falls flat and rework it to fix the real problem.",
+    "useCase": "Use this when your tagline is not working but you are not sure why. A tagline can be a near miss where changing one word fixes it, so the diagnosis matters, and you should not scrap a line that just needs a tune up any more than keep polishing one that is fundamentally wrong.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "YOUR HUNCH, OR WRITE NOT SURE",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "tagline-check-cliche",
+      "tagline-one-idea",
+      "tagline-shortlist-picker"
+    ]
+  },
+  {
+    "id": "tagline-usage-guide",
+    "title": "Decide Where and How to Use a Tagline",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tagline-and-slogans",
+    "aiTool": "Gemini",
+    "promptText": "Help me figure out where and how to actually use my new tagline for my [BUSINESS TYPE]. My tagline is [PASTE IT], and the places I show up are [WHERE, E.G. WEBSITE, SOCIAL BIOS, SIGNAGE, EMAIL]. Tell me where a tagline helps, where it just adds clutter, and how to place it so it reinforces the brand without being repeated to the point of annoyance. Note that a tagline works through consistent repetition in the right places, but slapping it onto everything can make it feel forced, so knowing where it earns its place versus where it is noise matters, and a tagline used well in a few key spots beats one crammed everywhere. Give me the usage guide.",
+    "description": "Decide where a tagline earns its place and where it just adds clutter.",
+    "useCase": "Use this once you have a tagline you like. A tagline works through consistent repetition in the right places, but slapping it on everything makes it feel forced, so knowing where it earns its place versus where it is noise matters, and a tagline used well in a few key spots beats one crammed everywhere.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHERE, E.G. WEBSITE, SOCIAL BIOS, SIGNAGE, EMAIL"
+    ],
+    "relatedPromptIds": [
+      "tagline-campaign-slogan",
+      "tagline-shortlist-picker",
+      "tagline-match-brand-voice"
+    ]
+  },
+  {
+    "id": "tagline-no-tagline-check",
+    "title": "Decide If You Even Need a Tagline",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tagline-and-slogans",
+    "aiTool": "Claude",
+    "promptText": "Help me decide whether my [BUSINESS TYPE] actually needs a tagline right now. What I do is [WHAT YOU OFFER], where I show up is [YOUR MAIN PLACES], and why I think I might need one is [YOUR REASON]. Tell me honestly whether a tagline would help me now or whether a clear description of what I do would serve me better at this stage. Note that plenty of small businesses do fine with a clear plain description and no tagline, and a forced mediocre tagline is worse than none, so it is worth checking whether I actually need one before spending effort on it, since chasing a clever line can be a distraction from clearer work that matters more. Give me the honest verdict.",
+    "description": "Check honestly whether you need a tagline or a clear description serves better.",
+    "useCase": "Use this before pouring effort into a tagline. Plenty of small businesses do fine with a clear description and no tagline, and a forced mediocre one is worse than none, so it is worth checking whether you actually need one, since chasing a clever line can distract from work that matters more.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU OFFER",
+      "YOUR MAIN PLACES",
+      "YOUR REASON"
+    ],
+    "relatedPromptIds": [
+      "tagline-clear-vs-clever",
+      "tagline-usage-guide",
+      "tagline-from-value-prop"
+    ]
+  },
+  {
+    "id": "tagline-variations-tone",
+    "title": "Write the Same Tagline in Different Tones",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tagline-and-slogans",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me see my tagline idea written in a few different tones so I can feel which fits my [BUSINESS TYPE]. The core idea is [THE MEANING YOU WANT], and my customer is [WHO THEY ARE]. Give me the same underlying message as a warm version, a bold version, a playful version, and a straight professional version, so I can compare. Note that the right tone for a tagline is hard to judge in the abstract, and seeing the same idea in several tones side by side often makes the fit obvious in a way that describing the tone I want does not, so this is about feeling the options rather than reasoning them out. Give me the tonal variations.",
+    "description": "See one tagline idea rendered in several tones to feel the right fit.",
+    "useCase": "Use this when you know the message but not the tone. The right tone is hard to judge in the abstract, and seeing the same idea as warm, bold, playful, and professional side by side often makes the fit obvious in a way that describing the tone you want does not, so you feel it rather than reason it.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE MEANING YOU WANT",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "tagline-personality",
+      "tagline-match-brand-voice",
+      "tagline-shortlist-picker"
+    ]
   }
 ]
