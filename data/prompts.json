@@ -32066,5 +32066,391 @@
       "tagline-match-brand-voice",
       "tagline-shortlist-picker"
     ]
+  },
+  {
+    "id": "tone-guide-builder",
+    "title": "Build Your Tone of Voice Guide",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tone-of-voice-guides",
+    "aiTool": "Claude",
+    "promptText": "Help me build a tone of voice guide for my [BUSINESS TYPE]. What I do is [WHAT YOU OFFER], my customer is [WHO THEY ARE], and how I want to come across is [THE IMPRESSION YOU WANT]. Give me a simple guide covering three or four voice traits, a short description of each, and how they show up in writing, in plain terms I can actually apply. Note that a voice guide only helps if it is specific enough to guide real decisions, so friendly and professional are too vague to be useful on their own, and the useful version names traits distinct enough that two people writing from them would sound alike. Give me the tone of voice guide.",
+    "description": "Build a simple, specific tone of voice guide with a few distinct traits.",
+    "useCase": "Use this when your writing sounds different every time and you want a standard. A voice guide only helps if it is specific enough to guide real decisions, since friendly and professional are too vague alone, so naming a few distinct traits gives you something two people could write from and still sound alike.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU OFFER",
+      "WHO THEY ARE",
+      "THE IMPRESSION YOU WANT"
+    ],
+    "relatedPromptIds": [
+      "tone-traits-definer",
+      "tone-dos-and-donts",
+      "tone-from-samples"
+    ]
+  },
+  {
+    "id": "tone-traits-definer",
+    "title": "Define Your Three Voice Traits",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tone-of-voice-guides",
+    "aiTool": "Claude",
+    "promptText": "Help me pin down three voice traits that define how my [BUSINESS TYPE] should sound. What I do is [WHAT YOU OFFER], my customer is [WHO THEY ARE], and words I would use to describe my ideal vibe are [YOUR ROUGH WORDS]. Turn my rough words into three clear traits, each with a short definition, and steer me away from generic ones everyone claims. Note that three traits is usually enough to guide writing without being impossible to hold in mind, and traits that everyone picks like professional and approachable do little work, so the useful set is specific to me, and a trait that would surprise a competitor is often the one that actually shapes my voice. Give me the three traits defined.",
+    "description": "Turn rough vibe words into three specific, distinctive voice traits.",
+    "useCase": "Use this when you know the feeling you want but not how to name it. Three traits is enough to guide writing without overwhelming, and generic ones like professional do little work, so a set specific to you, including a trait a competitor would not claim, is what actually shapes your voice.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU OFFER",
+      "WHO THEY ARE",
+      "YOUR ROUGH WORDS"
+    ],
+    "relatedPromptIds": [
+      "tone-guide-builder",
+      "tone-spectrum-placer",
+      "tone-dos-and-donts"
+    ]
+  },
+  {
+    "id": "tone-quick-guide",
+    "title": "Get a Quick Voice Guide",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tone-of-voice-guides",
+    "aiTool": "Grok",
+    "promptText": "I need a quick tone of voice guide to work from. My business is [WHAT YOU DO], my customer is [WHO THEY ARE], and the vibe I want is [THE FEELING]. Give me three voice traits with a one line description each and one quick dos and don'ts pair, no long theory, just the guide. Give me the quick guide.",
+    "description": "Get a quick three trait voice guide with dos and don'ts to start from.",
+    "useCase": "Use this when you want a usable voice guide fast. Three traits with a one line description and a dos and don'ts pair covers enough to start writing consistently, and a quick draft you can refine beats having no shared standard while you post day to day.",
+    "variables": [
+      "WHAT YOU DO",
+      "WHO THEY ARE",
+      "THE FEELING"
+    ],
+    "relatedPromptIds": [
+      "tone-guide-builder",
+      "tone-traits-definer",
+      "tone-dos-and-donts"
+    ]
+  },
+  {
+    "id": "tone-from-samples",
+    "title": "Build a Voice Guide From Your Best Writing",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tone-of-voice-guides",
+    "aiTool": "Claude",
+    "promptText": "Help me build a voice guide by studying writing of mine that already sounds right for my [BUSINESS TYPE]. Here are a few pieces I feel good about: [PASTE SAMPLES]. Read them and tell me the voice traits, word choices, and patterns that make them sound like me, then turn that into a guide I can follow deliberately. Note that my best natural writing already contains my real voice, so pulling the guide out of what I have actually written beats inventing a voice from scratch, and this captures how I genuinely sound rather than an aspirational voice I would struggle to keep up. Give me the guide drawn from my samples.",
+    "description": "Reverse engineer a voice guide from writing that already sounds like you.",
+    "useCase": "Use this when some of your writing already feels right. Your best natural writing already contains your real voice, so pulling the guide out of what you have written beats inventing one from scratch, and it captures how you genuinely sound rather than an aspirational voice you would struggle to sustain.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE SAMPLES"
+    ],
+    "relatedPromptIds": [
+      "tone-guide-builder",
+      "tone-traits-definer",
+      "tone-apply-to-writing"
+    ]
+  },
+  {
+    "id": "tone-dos-and-donts",
+    "title": "Write Voice Dos and Don'ts",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tone-of-voice-guides",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me turn my voice traits into practical dos and don'ts for my [BUSINESS TYPE]. My voice traits are [YOUR TRAITS], and my customer is [WHO THEY ARE]. Give me a list of specific things to do and avoid in my writing, with a short example of each, so the guide is usable rather than abstract. Note that traits alone are hard to act on in the moment, while a dos and don'ts list turns them into concrete choices, so we say it this way not that way is far more useful than a trait like authentic, and the examples are what make the difference between a guide people use and one they forget. Give me the dos and don'ts with examples.",
+    "description": "Turn voice traits into concrete dos and don'ts with examples.",
+    "useCase": "Use this when your traits feel too abstract to act on. Traits alone are hard to apply in the moment, while a dos and don'ts list turns them into concrete choices, so we say it this way not that way is more useful than a trait like authentic, and the examples make it a guide people actually use.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR TRAITS",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "tone-traits-definer",
+      "tone-word-choices",
+      "tone-apply-to-writing"
+    ]
+  },
+  {
+    "id": "tone-spectrum-placer",
+    "title": "Place Your Voice on the Key Spectrums",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tone-of-voice-guides",
+    "aiTool": "Claude",
+    "promptText": "Help me place my brand voice on a few useful spectrums for my [BUSINESS TYPE]. What I do is [WHAT YOU OFFER], and my customer is [WHO THEY ARE]. Walk me through spectrums like formal to casual, serious to playful, plain to expressive, and reserved to bold, and help me mark where my voice should sit on each and why. Note that voice is easier to pin down as a position between extremes than as a single label, since knowing I am casual but not silly and warm but not gushing guides real choices, so placing myself on spectrums often gives a clearer voice than picking adjectives. Give me my placement on each spectrum.",
+    "description": "Locate your brand voice as a position on formal, playful, and bold spectrums.",
+    "useCase": "Use this when adjectives are not pinning your voice down. Voice is easier to define as a position between extremes than a single label, since casual but not silly and warm but not gushing guide real choices, so placing yourself on spectrums often gives a clearer voice than picking words.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU OFFER",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "tone-traits-definer",
+      "tone-guide-builder",
+      "tone-word-choices"
+    ]
+  },
+  {
+    "id": "tone-word-choices",
+    "title": "Define the Words Your Brand Uses",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tone-of-voice-guides",
+    "aiTool": "Gemini",
+    "promptText": "Help me define the specific words and phrases my brand uses and avoids for my [BUSINESS TYPE]. My voice is [YOUR TRAITS OR VIBE], my customer is [WHO THEY ARE], and my field is [YOUR INDUSTRY]. Give me a starter list: words that fit my voice, words to avoid, and how I refer to key things like my customers, my product, and myself. Note that consistent word choices are a big part of a recognizable voice, since whether I say clients or customers, buy or invest, and problem or challenge quietly shapes how I come across, so a short vocabulary list keeps my writing consistent in ways broad traits cannot. Give me the word list.",
+    "description": "Define the specific words and phrases your brand uses and avoids.",
+    "useCase": "Use this to make your voice concrete at the word level. Consistent word choices are a big part of a recognizable voice, since clients versus customers or problem versus challenge quietly shapes how you come across, so a short vocabulary list keeps writing consistent in ways broad traits cannot.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR TRAITS OR VIBE",
+      "WHO THEY ARE",
+      "YOUR INDUSTRY"
+    ],
+    "relatedPromptIds": [
+      "tone-dos-and-donts",
+      "tone-spectrum-placer",
+      "tone-apply-to-writing"
+    ]
+  },
+  {
+    "id": "tone-apply-to-writing",
+    "title": "Apply Your Voice Guide to a Draft",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tone-of-voice-guides",
+    "aiTool": "Claude",
+    "promptText": "Help me rewrite a piece of writing to match my voice guide for my [BUSINESS TYPE]. My voice guide is [PASTE YOUR TRAITS AND RULES], and here is the draft: [PASTE THE DRAFT]. Rewrite it so it fits my defined voice, and point out what you changed and why so I learn to do it myself. Note that a voice guide is only worth having if it changes what I actually publish, so applying it to real writing is where it earns its keep, and seeing why each change was made helps me internalize the voice so I need the guide less over time. Give me the rewrite and the reasoning.",
+    "description": "Rewrite a real draft to match your voice guide and learn from the changes.",
+    "useCase": "Use this when you have a guide but your drafts still drift off voice. A voice guide is only worth having if it changes what you publish, so applying it to real writing is where it earns its keep, and seeing why each change was made helps you internalize the voice and lean on the guide less over time.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE YOUR TRAITS AND RULES",
+      "PASTE THE DRAFT"
+    ],
+    "relatedPromptIds": [
+      "tone-guide-builder",
+      "tone-dos-and-donts",
+      "tone-consistency-check"
+    ]
+  },
+  {
+    "id": "tone-consistency-check",
+    "title": "Check Your Writing for Voice Consistency",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tone-of-voice-guides",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether my recent writing is consistent with my brand voice for my [BUSINESS TYPE]. My voice guide is [PASTE YOUR TRAITS AND RULES], and here are a few recent pieces: [PASTE THEM]. Tell me where they match my voice, where they drift off it, and what is causing the drift. Note that voice tends to slip gradually without anyone noticing, especially across different platforms and moods, so an occasional consistency check catches the drift before my brand starts sounding like several different people, and small consistent corrections keep the voice recognizable over time. Give me the consistency read.",
+    "description": "Check recent writing against your voice guide and catch the drift.",
+    "useCase": "Use this every so often to keep your voice steady. Voice slips gradually without anyone noticing, especially across platforms and moods, so a consistency check catches drift before your brand sounds like several different people, and small corrections keep the voice recognizable over time.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE YOUR TRAITS AND RULES",
+      "PASTE THEM"
+    ],
+    "relatedPromptIds": [
+      "tone-apply-to-writing",
+      "tone-dos-and-donts",
+      "tone-multiple-writers"
+    ]
+  },
+  {
+    "id": "tone-adjust-by-channel",
+    "title": "Adjust Voice Across Different Channels",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tone-of-voice-guides",
+    "aiTool": "Gemini",
+    "promptText": "Help me figure out how my voice should flex across different channels while staying recognizably me for my [BUSINESS TYPE]. My core voice is [YOUR TRAITS], and my channels are [WHERE YOU SHOW UP, E.G. WEBSITE, SOCIAL, EMAIL, INVOICES]. Show me how to keep the same underlying voice while adjusting formality and energy to fit each place. Note that one voice does not mean identical everywhere, since the same person sounds a little different in a serious email than in a social post while still being clearly themselves, so the guide should define what stays constant and what can flex, and getting this right avoids either a robotic sameness or a scattered inconsistency. Give me the per channel adjustments.",
+    "description": "Flex your voice across channels while keeping it recognizably the same.",
+    "useCase": "Use this when one voice feels wrong for every channel. One voice does not mean identical everywhere, since the same person sounds different in a serious email than a social post while still being themselves, so defining what stays constant and what flexes avoids both robotic sameness and scattered inconsistency.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR TRAITS",
+      "WHERE YOU SHOW UP, E.G. WEBSITE, SOCIAL, EMAIL, INVOICES"
+    ],
+    "relatedPromptIds": [
+      "tone-guide-builder",
+      "tone-serious-moments",
+      "tone-consistency-check"
+    ]
+  },
+  {
+    "id": "tone-serious-moments",
+    "title": "Handle Voice in Serious Moments",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tone-of-voice-guides",
+    "aiTool": "Claude",
+    "promptText": "Help me define how my brand voice should shift in serious moments for my [BUSINESS TYPE]. My usual voice is [YOUR TRAITS, MAYBE PLAYFUL OR CASUAL], and the serious situations I face are [WHAT THEY ARE, E.G. AN APOLOGY, AN OUTAGE, A COMPLAINT, BAD NEWS]. Give me guidance on how to dial the voice for these moments without abandoning it entirely. Note that a normally light or playful voice can land badly during a problem or a sensitive moment, so the guide needs a serious register that stays recognizably my brand while dropping the jokes, and knowing when to switch matters as much as the voice itself, since the wrong tone at a hard moment does real damage. Give me the serious register guidance.",
+    "description": "Define how your voice shifts for apologies, problems, and sensitive moments.",
+    "useCase": "Use this so a playful voice does not misfire at a bad moment. A normally light voice can land badly during a problem, so your guide needs a serious register that stays recognizably you while dropping the jokes, and knowing when to switch matters as much as the voice, since the wrong tone at a hard moment does real damage.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR TRAITS, MAYBE PLAYFUL OR CASUAL",
+      "WHAT THEY ARE, E.G. AN APOLOGY, AN OUTAGE, A COMPLAINT, BAD NEWS"
+    ],
+    "relatedPromptIds": [
+      "tone-adjust-by-channel",
+      "tone-dos-and-donts",
+      "tone-guide-builder"
+    ]
+  },
+  {
+    "id": "tone-personality-not-gimmick",
+    "title": "Add Personality Without It Being a Gimmick",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tone-of-voice-guides",
+    "aiTool": "Claude",
+    "promptText": "Help me add real personality to my brand voice without it tipping into a forced gimmick for my [BUSINESS TYPE]. My voice now is [YOUR CURRENT VOICE, MAYBE BLAND], my customer is [WHO THEY ARE], and the personality I am drawn to is [THE DIRECTION YOU WANT]. Help me find genuine character that fits rather than a costume. Note that there is a real line between a voice with personality and a brand trying too hard to be quirky, and audiences can feel the difference, so the goal is character that flows from who I actually am rather than a bit I have to perform, since a forced funny voice is exhausting to keep up and often grates on the customer. Give me the personality direction that fits.",
+    "description": "Find genuine voice personality that fits rather than a forced gimmick.",
+    "useCase": "Use this when your voice is bland but you fear overcorrecting. There is a real line between personality and a brand trying too hard to be quirky, and audiences feel it, so character that flows from who you are beats a bit you perform, since a forced funny voice is exhausting to keep up and often grates.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR CURRENT VOICE, MAYBE BLAND",
+      "WHO THEY ARE",
+      "THE DIRECTION YOU WANT"
+    ],
+    "relatedPromptIds": [
+      "tone-traits-definer",
+      "tone-fix-generic-voice",
+      "tone-serious-moments"
+    ]
+  },
+  {
+    "id": "tone-fix-generic-voice",
+    "title": "Fix a Voice That Sounds Generic",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tone-of-voice-guides",
+    "aiTool": "Claude",
+    "promptText": "Help me fix my brand voice, which sounds like a generic business, for my [BUSINESS TYPE]. Here is a sample of my current writing: [PASTE IT], my customer is [WHO THEY ARE], and what feels true about how I actually talk is [YOUR REAL WAY OF SPEAKING]. Point out what makes it sound like everyone else and help me shift it toward something that sounds like a real person. Note that most generic brand voices come from defaulting to safe corporate phrasing that hides any personality, so the fix is usually writing more like I actually speak, and a voice that sounds like a real human saying real things stands out simply because so many brands sound like nobody at all. Give me the diagnosis and the shift.",
+    "description": "Diagnose a generic corporate voice and shift it toward a real human one.",
+    "useCase": "Use this when your writing sounds like any other business. Most generic voices come from defaulting to safe corporate phrasing that hides personality, so writing more like you actually speak is the fix, and a voice that sounds like a real human stands out simply because so many brands sound like nobody.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHO THEY ARE",
+      "YOUR REAL WAY OF SPEAKING"
+    ],
+    "relatedPromptIds": [
+      "tone-personality-not-gimmick",
+      "tone-from-samples",
+      "tone-word-choices"
+    ]
+  },
+  {
+    "id": "tone-match-audience",
+    "title": "Match Your Voice to Your Audience",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tone-of-voice-guides",
+    "aiTool": "Gemini",
+    "promptText": "Help me make sure my brand voice actually fits my audience for my [BUSINESS TYPE]. The voice I am drawn to is [YOUR PREFERRED VOICE], my customer is [WHO THEY ARE], and how they tend to talk and what they expect is [THEIR STYLE]. Tell me honestly whether my preferred voice fits them or whether it would land wrong. Note that a voice has to work for the people hearing it, not just please me, so a super casual voice can undercut trust with an audience expecting expertise while an overly formal one can alienate a laid back crowd, and matching the voice to what my audience responds to matters more than the voice I personally find fun. Give me the honest fit check.",
+    "description": "Check whether your preferred voice actually fits how your audience talks.",
+    "useCase": "Use this when choosing a voice you like. A voice has to work for the people hearing it, not just please you, so a super casual voice can undercut trust with an audience expecting expertise while an overly formal one alienates a laid back crowd, and fit matters more than the voice you personally find fun.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR PREFERRED VOICE",
+      "WHO THEY ARE",
+      "THEIR STYLE"
+    ],
+    "relatedPromptIds": [
+      "tone-traits-definer",
+      "tone-spectrum-placer",
+      "tone-personality-not-gimmick"
+    ]
+  },
+  {
+    "id": "tone-multiple-writers",
+    "title": "Keep One Voice Across Multiple Writers",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tone-of-voice-guides",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me set up my voice guide so more than one person can write in my brand voice for my [BUSINESS TYPE]. My voice is [YOUR TRAITS AND RULES], who else writes is [WHO, E.G. A VA, CONTRACTOR, TEAM MEMBER], and what they write is [WHAT THEY PRODUCE]. Turn my guide into something clear enough that someone else could follow it and sound like my brand. Note that a voice guide in my head does not transfer, so if anyone else writes for my brand the guide has to be explicit, with examples and clear rules, and the test is whether a new writer could produce something on voice from the guide alone without me correcting every line. Give me the shareable version.",
+    "description": "Turn your voice guide into something another writer can follow and match.",
+    "useCase": "Use this when someone else writes for your brand. A voice guide in your head does not transfer, so if a VA, contractor, or team member writes for you it has to be explicit with examples, and the test is whether a new writer could sound on brand from the guide alone without you fixing every line.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR TRAITS AND RULES",
+      "WHO, E.G. A VA, CONTRACTOR, TEAM MEMBER",
+      "WHAT THEY PRODUCE"
+    ],
+    "relatedPromptIds": [
+      "tone-dos-and-donts",
+      "tone-consistency-check",
+      "tone-ai-prompt-voice"
+    ]
+  },
+  {
+    "id": "tone-ai-prompt-voice",
+    "title": "Get AI to Write in Your Brand Voice",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tone-of-voice-guides",
+    "aiTool": "Claude",
+    "promptText": "Help me turn my voice guide into instructions that get an AI tool to write in my brand voice for my [BUSINESS TYPE]. My voice is [YOUR TRAITS AND RULES], and a sample of writing that sounds like me is [PASTE A SAMPLE]. Give me a reusable set of voice instructions I can paste in so the AI matches my brand instead of sounding generic. Note that AI defaults to a bland average voice unless told otherwise, so giving it clear traits, word rules, and a real sample of my writing is what makes it sound like my brand, and a good sample often teaches the voice better than a list of adjectives, so including one matters. Give me the reusable voice instructions.",
+    "description": "Turn your voice guide into reusable instructions so AI writes on brand.",
+    "useCase": "Use this when AI drafts come out sounding generic. AI defaults to a bland average voice unless told otherwise, so clear traits, word rules, and a real sample of your writing are what make it match your brand, and a good sample teaches the voice better than a list of adjectives.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR TRAITS AND RULES",
+      "PASTE A SAMPLE"
+    ],
+    "relatedPromptIds": [
+      "tone-multiple-writers",
+      "tone-from-samples",
+      "tone-apply-to-writing"
+    ]
+  },
+  {
+    "id": "tone-evolve-voice",
+    "title": "Evolve a Voice That No Longer Fits",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tone-of-voice-guides",
+    "aiTool": "Claude",
+    "promptText": "Help me evolve my brand voice, which no longer fits where my [BUSINESS TYPE] is now, without confusing people who know me. My current voice is [YOUR CURRENT VOICE], what has changed is [WHAT IS DIFFERENT NOW], and my audience is [WHO THEY ARE]. Help me shift the voice deliberately while keeping enough continuity that regulars still recognize me. Note that a voice can outgrow a business as it matures or its audience changes, but a sudden total voice change feels jarring to people who know the brand, so the smart move is evolving gradually and keeping some threads constant, and deliberate evolution beats both clinging to an outdated voice and abruptly becoming a stranger. Give me the evolution plan.",
+    "description": "Deliberately evolve your voice while keeping enough continuity to stay recognizable.",
+    "useCase": "Use this when your voice no longer fits the business you have become. A voice can outgrow a business as it matures, but a sudden total change feels jarring to people who know you, so evolving gradually while keeping some threads constant beats both clinging to an outdated voice and abruptly becoming a stranger.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR CURRENT VOICE",
+      "WHAT IS DIFFERENT NOW",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "tone-fix-generic-voice",
+      "tone-guide-builder",
+      "tone-consistency-check"
+    ]
+  },
+  {
+    "id": "tone-one-page-summary",
+    "title": "Boil Your Voice Guide to One Page",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tone-of-voice-guides",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me boil my voice guide down to a single page I will actually use for my [BUSINESS TYPE]. My full voice notes are [PASTE OR DESCRIBE THEM]. Condense them into a one page reference: the core traits, a handful of dos and don'ts, key words to use and avoid, and one before and after example. Note that a long voice document rarely gets opened, while a one page reference I can glance at before writing actually gets used, so the useful version is short enough to keep in view, and a guide I refer to beats a thorough one that sits in a folder forgotten. Give me the one page voice guide.",
+    "description": "Condense your voice guide into a one page reference you will actually use.",
+    "useCase": "Use this when your voice notes are too long to ever open. A long voice document rarely gets used, while a one page reference you glance at before writing does, so condensing to traits, key dos and don'ts, words, and one example makes it a guide you refer to rather than one that sits forgotten.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE THEM"
+    ],
+    "relatedPromptIds": [
+      "tone-guide-builder",
+      "tone-dos-and-donts",
+      "tone-word-choices"
+    ]
+  },
+  {
+    "id": "tone-audit-current",
+    "title": "Audit the Voice You Already Have",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "tone-of-voice-guides",
+    "aiTool": "Claude",
+    "promptText": "Help me audit the brand voice I already have across my materials for my [BUSINESS TYPE]. Here is a spread of my current writing from different places: [PASTE SAMPLES], and my customer is [WHO THEY ARE]. Tell me what voice comes through, whether it is consistent, whether it fits my audience, and the one or two shifts that would improve it most. Note that most businesses have a voice already, they just have not defined it, so an honest audit of what I actually sound like is a better starting point than a blank page, and often the fix is sharpening and unifying the voice I have rather than inventing a new one from nothing. Give me the audit and priority shifts.",
+    "description": "Audit your existing voice across materials and find the highest value shifts.",
+    "useCase": "Use this before building a voice guide from scratch. Most businesses have a voice already, they just have not defined it, so an honest audit of what you actually sound like beats a blank page, and often the fix is sharpening and unifying the voice you have rather than inventing a new one.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE SAMPLES",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "tone-from-samples",
+      "tone-consistency-check",
+      "tone-fix-generic-voice"
+    ]
   }
 ]
