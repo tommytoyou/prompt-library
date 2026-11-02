@@ -32825,5 +32825,380 @@
       "diff-experience-based",
       "diff-finder"
     ]
+  },
+  {
+    "id": "rebrand-announcement-writer",
+    "title": "Write Your Rebrand Announcement",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "rebrand-messaging",
+    "aiTool": "Claude",
+    "promptText": "Help me write the announcement for my rebrand for my [BUSINESS TYPE]. What is changing is [NAME, LOOK, FOCUS, OR ALL OF THESE], why we are changing is [THE REAL REASON], and my audience is [WHO THEY ARE]. Write an announcement that leads with what it means for them, explains the change plainly, and tells them what stays the same. Note that customers care less about my new logo than about whether anything they rely on is changing, so the announcement should answer that first, and a rebrand framed as an exciting new chapter with no real reason given tends to read as cosmetic or as hiding something. Give me the announcement.",
+    "description": "Write a rebrand announcement that leads with what it means for customers.",
+    "useCase": "Use this when you are ready to tell people about a rebrand. Customers care less about the new logo than whether anything they rely on is changing, so answering that first and giving a real reason keeps the change from reading as cosmetic or evasive.",
+    "variables": [
+      "BUSINESS TYPE",
+      "NAME, LOOK, FOCUS, OR ALL OF THESE",
+      "THE REAL REASON",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "rebrand-why-explainer",
+      "rebrand-what-stays-same",
+      "rebrand-email-to-customers"
+    ]
+  },
+  {
+    "id": "rebrand-why-explainer",
+    "title": "Explain Why You Are Rebranding",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "rebrand-messaging",
+    "aiTool": "Claude",
+    "promptText": "Help me explain honestly why my [BUSINESS TYPE] is rebranding. The real reason is [WHAT ACTUALLY DROVE IT, E.G. OUTGREW THE NAME, NEW FOCUS, CONFUSION, A CONFLICT], and my audience is [WHO THEY ARE]. Turn that into a short clear explanation I can use in announcements and conversations. Note that people accept change much more easily when they understand the reason, and a vague answer like evolving our brand invites guessing, so a plain true reason, even an unglamorous one like the old name confused people, builds more trust than polished corporate language. Give me the explanation.",
+    "description": "Turn the real reason for your rebrand into a short, honest explanation.",
+    "useCase": "Use this when people ask why you are changing. A plain true reason builds more trust than vague talk of evolving the brand, which invites guessing, and even an unglamorous reason like the old name confused people lands better than polished corporate language.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT ACTUALLY DROVE IT, E.G. OUTGREW THE NAME, NEW FOCUS, CONFUSION, A CONFLICT",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "rebrand-announcement-writer",
+      "rebrand-should-you",
+      "rebrand-faq-builder"
+    ]
+  },
+  {
+    "id": "rebrand-quick-announcement",
+    "title": "Get a Quick Rebrand Announcement",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "rebrand-messaging",
+    "aiTool": "Grok",
+    "promptText": "I need a quick rebrand announcement I can post. My old name or look was [WHAT IT WAS], the new one is [WHAT IT IS NOW], and the short reason is [WHY]. Give me a short announcement that says what changed, why, and that customers do not need to do anything different, no long explanation, just the post. Give me the announcement.",
+    "description": "Get a short, ready to post rebrand announcement.",
+    "useCase": "Use this when you need to announce a rebrand fast. A short post covering what changed, why, and that customers need do nothing different handles most of what people want to know, and getting a clear message out beats a polished one that sits in drafts.",
+    "variables": [
+      "WHAT IT WAS",
+      "WHAT IT IS NOW",
+      "WHY"
+    ],
+    "relatedPromptIds": [
+      "rebrand-announcement-writer",
+      "rebrand-social-posts",
+      "rebrand-what-stays-same"
+    ]
+  },
+  {
+    "id": "rebrand-what-stays-same",
+    "title": "Reassure Customers About What Stays the Same",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "rebrand-messaging",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me reassure existing customers about what is not changing in my [BUSINESS TYPE] rebrand. What is changing is [THE CHANGES], what stays the same is [PEOPLE, PRICES, SERVICE, ACCOUNTS, CONTACT DETAILS], and my customers are [WHO THEY ARE]. Write clear reassurance that answers their likely worries directly. Note that the first reaction to any rebrand is often worry about what customers might lose, like their account, their pricing, or the person they deal with, so spelling out exactly what stays the same does more to keep loyal customers calm than describing everything that is new. Give me the reassurance message.",
+    "description": "Reassure existing customers clearly about what the rebrand does not change.",
+    "useCase": "Use this to keep loyal customers calm through a rebrand. The first reaction is often worry about losing an account, pricing, or a familiar contact, so spelling out exactly what stays the same does more than describing everything new.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE CHANGES",
+      "PEOPLE, PRICES, SERVICE, ACCOUNTS, CONTACT DETAILS",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "rebrand-announcement-writer",
+      "rebrand-email-to-customers",
+      "rebrand-faq-builder"
+    ]
+  },
+  {
+    "id": "rebrand-email-to-customers",
+    "title": "Email Existing Customers About the Rebrand",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "rebrand-messaging",
+    "aiTool": "Claude",
+    "promptText": "Help me write an email to my existing customers about my [BUSINESS TYPE] rebrand. What is changing is [THE CHANGES], the reason is [WHY], what they need to do, if anything, is [ACTIONS, OR NOTHING], and when it takes effect is [THE DATE]. Write a short personal email that tells them before they see it elsewhere and makes any practical steps obvious. Note that existing customers should hear about a rebrand directly from me rather than stumble on a new logo or a changed sender name, which can look like a scam or a takeover, so a heads up email with the practical details, like a new email address to whitelist, protects trust and prevents confusion. Give me the email.",
+    "description": "Write a heads up email that tells existing customers about the rebrand first.",
+    "useCase": "Use this before the rebrand goes public. Customers who stumble on a new logo or a changed sender name can mistake it for a scam or a takeover, so telling them directly first, with any practical steps like a new address to whitelist, protects trust.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE CHANGES",
+      "WHY",
+      "ACTIONS, OR NOTHING",
+      "THE DATE"
+    ],
+    "relatedPromptIds": [
+      "rebrand-what-stays-same",
+      "rebrand-announcement-writer",
+      "rebrand-rollout-plan"
+    ]
+  },
+  {
+    "id": "rebrand-social-posts",
+    "title": "Plan Rebrand Posts for Social Media",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "rebrand-messaging",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan a short series of social posts to roll out my [BUSINESS TYPE] rebrand. What is changing is [THE CHANGES], my platform is [WHERE YOU POST], and my audience is [WHO THEY ARE]. Give me a few posts across the rollout: a teaser if it fits, the reveal, a post explaining the why, and a follow up that settles into normal posting under the new brand. Note that a single announcement post is easy to miss, so a short sequence helps followers notice and connect the old brand to the new one, but dragging out a reveal for weeks mostly tests patience, so a tight sequence works better than a long campaign for a small business. Give me the post series.",
+    "description": "Plan a tight series of social posts to roll out a rebrand.",
+    "useCase": "Use this to make sure followers actually notice the change. A single post is easy to miss, so a short sequence helps people connect the old brand to the new one, while a weeks long reveal mostly tests patience for a small business.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE CHANGES",
+      "WHERE YOU POST",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "rebrand-quick-announcement",
+      "rebrand-rollout-plan",
+      "rebrand-name-change-bridge"
+    ]
+  },
+  {
+    "id": "rebrand-name-change-bridge",
+    "title": "Bridge an Old Name to a New One",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "rebrand-messaging",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me connect my old business name to my new one so people do not lose track of me for my [BUSINESS TYPE]. The old name is [OLD NAME], the new name is [NEW NAME], and the places people find me are [WHERE, E.G. GOOGLE, SOCIAL, SIGNAGE, REFERRALS]. Give me bridging language like formerly or now called, and tell me where and for how long to use it. Note that people search for and recommend the name they remember, so dropping the old name overnight can make me hard to find, and a period of saying new name, formerly old name, keeps word of mouth and search traffic flowing to the right place until the new name sticks. Give me the bridging plan.",
+    "description": "Use formerly and now called messaging so people can still find you after a name change.",
+    "useCase": "Use this when your business name is changing. People search for and recommend the name they remember, so dropping the old one overnight can make you hard to find, and a period of new name, formerly old name keeps word of mouth and search traffic flowing.",
+    "variables": [
+      "BUSINESS TYPE",
+      "OLD NAME",
+      "NEW NAME",
+      "WHERE, E.G. GOOGLE, SOCIAL, SIGNAGE, REFERRALS"
+    ],
+    "relatedPromptIds": [
+      "rebrand-checklist-touchpoints",
+      "rebrand-announcement-writer",
+      "rebrand-social-posts"
+    ]
+  },
+  {
+    "id": "rebrand-should-you",
+    "title": "Decide Whether You Actually Need a Rebrand",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "rebrand-messaging",
+    "aiTool": "Claude",
+    "promptText": "Help me decide honestly whether my [BUSINESS TYPE] needs a rebrand or something smaller. What feels wrong with my current brand is [THE PROBLEM], how long I have used it is [HOW LONG], and the recognition I have built is [ROUGHLY HOW KNOWN YOU ARE]. Tell me whether a full rebrand, a refresh, or simply clearer messaging would solve the actual problem. Note that a rebrand costs time, money, and some of the recognition I have built, and many brand problems are really messaging or offer problems that a new logo will not fix, so it is worth being sure the brand is the real issue before throwing away what people already know. Give me the honest recommendation.",
+    "description": "Check whether a rebrand, a refresh, or clearer messaging fits the real problem.",
+    "useCase": "Use this before committing to a rebrand. A rebrand costs time, money, and recognition you have built, and many brand problems are really messaging or offer problems a new logo will not fix, so confirming the brand is the real issue first can save a costly reset.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PROBLEM",
+      "HOW LONG",
+      "ROUGHLY HOW KNOWN YOU ARE"
+    ],
+    "relatedPromptIds": [
+      "rebrand-refresh-vs-full",
+      "rebrand-why-explainer",
+      "rebrand-keep-equity"
+    ]
+  },
+  {
+    "id": "rebrand-refresh-vs-full",
+    "title": "Choose Between a Refresh and a Full Rebrand",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "rebrand-messaging",
+    "aiTool": "Gemini",
+    "promptText": "Help me choose between refreshing my brand and fully rebranding my [BUSINESS TYPE]. My current brand is [NAME, LOOK, AND MESSAGE], what I want to fix is [THE GOAL], and my budget and time are [WHAT YOU HAVE]. Lay out what each option would change, what it would cost me in effort and recognition, and which fits my goal. Note that a refresh keeps the name and core identity while updating the look and message, which keeps recognition, while a full rebrand starts over and is only worth it when the old identity is actively holding me back, so the smaller change is often the smarter one. Give me the comparison and recommendation.",
+    "description": "Compare a brand refresh with a full rebrand and pick the right scope.",
+    "useCase": "Use this when you know something needs to change but not how much. A refresh updates the look and message while keeping recognition, while a full rebrand starts over and only pays off when the old identity actively holds you back, so the smaller change is often smarter.",
+    "variables": [
+      "BUSINESS TYPE",
+      "NAME, LOOK, AND MESSAGE",
+      "THE GOAL",
+      "WHAT YOU HAVE"
+    ],
+    "relatedPromptIds": [
+      "rebrand-should-you",
+      "rebrand-keep-equity",
+      "rebrand-rollout-plan"
+    ]
+  },
+  {
+    "id": "rebrand-keep-equity",
+    "title": "Keep What People Already Love About Your Brand",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "rebrand-messaging",
+    "aiTool": "Claude",
+    "promptText": "Help me identify what to keep from my current brand as I rebrand my [BUSINESS TYPE]. What customers know me for is [WHAT PEOPLE RECOGNIZE OR SAY ABOUT YOU], elements I am attached to are [COLORS, PHRASES, SYMBOLS, YOUR STORY], and what is driving the change is [THE REASON]. Help me sort what carries real recognition and should survive from what can safely go. Note that years of recognition sit in small things like a color, a phrase, or the way I talk, and a rebrand that throws all of it away makes loyal customers feel they are dealing with a stranger, so carrying a few recognizable threads into the new brand protects the trust I have already earned. Give me what to keep and what to let go.",
+    "description": "Sort which parts of your current brand carry recognition worth keeping.",
+    "useCase": "Use this so a rebrand does not erase earned trust. Recognition sits in small things like a color, a phrase, or the way you talk, and throwing all of it away makes loyal customers feel they are dealing with a stranger, so carrying a few threads forward protects that trust.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT PEOPLE RECOGNIZE OR SAY ABOUT YOU",
+      "COLORS, PHRASES, SYMBOLS, YOUR STORY",
+      "THE REASON"
+    ],
+    "relatedPromptIds": [
+      "rebrand-refresh-vs-full",
+      "rebrand-should-you",
+      "rebrand-new-positioning"
+    ]
+  },
+  {
+    "id": "rebrand-new-positioning",
+    "title": "Message a Change in Focus or Audience",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "rebrand-messaging",
+    "aiTool": "Claude",
+    "promptText": "Help me message a rebrand that changes who my [BUSINESS TYPE] serves or what it focuses on. I used to focus on [OLD FOCUS OR AUDIENCE], I now focus on [NEW FOCUS OR AUDIENCE], and the customers who may no longer fit are [WHO]. Help me explain the shift clearly to the new audience while treating the old one with respect. Note that a repositioning rebrand will leave some existing customers outside the new focus, and pretending nothing changed confuses everyone, so it is better to say plainly who I now serve and, where it is true, how past customers will still be looked after or where they can go. Give me the repositioning message.",
+    "description": "Explain a shift in focus or audience clearly while respecting past customers.",
+    "useCase": "Use this when a rebrand changes who you serve. A repositioning leaves some customers outside the new focus, and pretending nothing changed confuses everyone, so saying plainly who you now serve and how past customers will be looked after keeps the shift honest.",
+    "variables": [
+      "BUSINESS TYPE",
+      "OLD FOCUS OR AUDIENCE",
+      "NEW FOCUS OR AUDIENCE",
+      "WHO"
+    ],
+    "relatedPromptIds": [
+      "rebrand-keep-equity",
+      "rebrand-why-explainer",
+      "rebrand-handle-pushback"
+    ]
+  },
+  {
+    "id": "rebrand-handle-pushback",
+    "title": "Respond to Customers Who Dislike the Rebrand",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "rebrand-messaging",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me respond to customers who are unhappy about my [BUSINESS TYPE] rebrand. The complaints I am getting are [PASTE OR DESCRIBE THEM], the reason for the change is [WHY], and my tone is [YOUR TONE]. Give me replies that acknowledge their feelings, explain without getting defensive, and stay firm where the decision is final. Note that some pushback is normal with any change, since people get attached to what they know, and most of it fades once the new brand becomes familiar, so calm, appreciative replies work better than arguing or instantly reversing course, though repeated specific complaints about something practical are worth taking seriously. Give me the replies.",
+    "description": "Answer rebrand complaints calmly without getting defensive or caving.",
+    "useCase": "Use this when the rebrand gets negative reactions. Pushback is normal since people get attached to what they know, and most of it fades as the new brand becomes familiar, so calm appreciative replies beat arguing or reversing course, while repeated practical complaints deserve a real look.",
+    "variables": [
+      "PASTE OR DESCRIBE THEM",
+      "BUSINESS TYPE",
+      "WHY",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "rebrand-faq-builder",
+      "rebrand-new-positioning",
+      "rebrand-what-stays-same"
+    ]
+  },
+  {
+    "id": "rebrand-faq-builder",
+    "title": "Build a Rebrand FAQ",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "rebrand-messaging",
+    "aiTool": "Gemini",
+    "promptText": "Help me build a short FAQ for my [BUSINESS TYPE] rebrand. What is changing is [THE CHANGES], what stays the same is [WHAT DOES NOT CHANGE], and practical details customers might need are [NEW WEBSITE, EMAIL, PAYMENT NAME, ACCOUNTS]. Anticipate the questions customers will actually ask and give clear short answers. Note that the same handful of questions tends to come in again and again after a rebrand, like is this still the same company, do my accounts still work, and why does my bank statement look different, so answering them once in a FAQ saves a lot of repeated replies and quietly prevents confusion. Give me the FAQ.",
+    "description": "Answer the questions customers will ask about a rebrand in one FAQ.",
+    "useCase": "Use this to stop answering the same rebrand questions over and over. The same few come up repeatedly, like is this still the same company or why does my statement look different, so answering them once in a FAQ saves replies and prevents confusion.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE CHANGES",
+      "WHAT DOES NOT CHANGE",
+      "NEW WEBSITE, EMAIL, PAYMENT NAME, ACCOUNTS"
+    ],
+    "relatedPromptIds": [
+      "rebrand-what-stays-same",
+      "rebrand-handle-pushback",
+      "rebrand-checklist-touchpoints"
+    ]
+  },
+  {
+    "id": "rebrand-checklist-touchpoints",
+    "title": "List Every Place Your Brand Needs Updating",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "rebrand-messaging",
+    "aiTool": "Claude",
+    "promptText": "Help me list every place my brand appears so nothing is missed in my [BUSINESS TYPE] rebrand. What is changing is [NAME, LOGO, COLORS, MESSAGE], and the main places I show up are [WHAT YOU KNOW OF, E.G. WEBSITE, SOCIAL, INVOICES, SIGNAGE]. Give me a thorough checklist of touchpoints, including the easy to forget ones, grouped by priority. Note that the obvious places get updated and the forgotten ones linger for months, like an email signature, a payment processor name, an old directory listing, or a templates folder, and a mix of old and new names in the wild looks careless and confuses customers, so a full checklist up front is what makes a rebrand feel clean. Give me the checklist.",
+    "description": "Build a full checklist of every touchpoint a rebrand needs to reach.",
+    "useCase": "Use this so the old brand does not linger in forgotten places. Email signatures, payment processor names, old directory listings, and templates are easy to miss, and a mix of old and new names looks careless, so a full checklist up front makes the rebrand feel clean.",
+    "variables": [
+      "BUSINESS TYPE",
+      "NAME, LOGO, COLORS, MESSAGE",
+      "WHAT YOU KNOW OF, E.G. WEBSITE, SOCIAL, INVOICES, SIGNAGE"
+    ],
+    "relatedPromptIds": [
+      "rebrand-rollout-plan",
+      "rebrand-name-change-bridge",
+      "rebrand-faq-builder"
+    ]
+  },
+  {
+    "id": "rebrand-rollout-plan",
+    "title": "Plan the Rebrand Rollout Order",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "rebrand-messaging",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me plan the order of my [BUSINESS TYPE] rebrand rollout. The changes are [WHAT IS CHANGING], my audiences are [CUSTOMERS, PARTNERS, SUPPLIERS, THE PUBLIC], and my target date is [WHEN]. Give me a simple sequence of who hears first, what goes live when, and how long to keep both brands visible. Note that the order matters, since customers and partners who hear about it from me first feel respected while those who discover it by surprise can feel blindsided, and switching everything in one day is rarely realistic for a small business, so a planned sequence with a short overlap keeps the transition calm. Give me the rollout plan.",
+    "description": "Sequence who hears about the rebrand first and what goes live when.",
+    "useCase": "Use this to keep the transition calm. People who hear about the change from you first feel respected while those who discover it by surprise can feel blindsided, and switching everything in one day is rarely realistic, so a planned sequence with a short overlap works better.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT IS CHANGING",
+      "CUSTOMERS, PARTNERS, SUPPLIERS, THE PUBLIC",
+      "WHEN"
+    ],
+    "relatedPromptIds": [
+      "rebrand-checklist-touchpoints",
+      "rebrand-email-to-customers",
+      "rebrand-partner-notice"
+    ]
+  },
+  {
+    "id": "rebrand-partner-notice",
+    "title": "Notify Partners and Suppliers of a Rebrand",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "rebrand-messaging",
+    "aiTool": "Claude",
+    "promptText": "Help me write a notice to partners, suppliers, and other businesses I work with about my [BUSINESS TYPE] rebrand. What is changing is [THE CHANGES], the practical updates they need are [NEW LEGAL NAME, INVOICE DETAILS, EMAIL, LOGO FILES], and the effective date is [THE DATE]. Write a short professional notice that makes the practical changes impossible to miss. Note that partners and suppliers mostly care about the practical side, like which name goes on invoices, where payments go, and which logo to use, and unclear details here cause real problems like rejected payments or outdated co branding, so the notice should be specific and easy to act on rather than promotional. Give me the notice.",
+    "description": "Write a practical rebrand notice for partners and suppliers.",
+    "useCase": "Use this to tell the businesses you work with. Partners and suppliers care about which name goes on invoices, where payments go, and which logo to use, and unclear details cause rejected payments or outdated co branding, so a specific practical notice beats a promotional one.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE CHANGES",
+      "NEW LEGAL NAME, INVOICE DETAILS, EMAIL, LOGO FILES",
+      "THE DATE"
+    ],
+    "relatedPromptIds": [
+      "rebrand-rollout-plan",
+      "rebrand-email-to-customers",
+      "rebrand-checklist-touchpoints"
+    ]
+  },
+  {
+    "id": "rebrand-website-copy",
+    "title": "Update Your Website Copy for the Rebrand",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "rebrand-messaging",
+    "aiTool": "Gemini",
+    "promptText": "Help me update my website copy so it fits my new brand for my [BUSINESS TYPE]. My new brand direction is [NEW NAME, FOCUS, AND VOICE], and here is my current homepage or key page copy: [PASTE IT]. Rewrite it to match the new brand, and suggest a small note or banner explaining the change for returning visitors. Note that a new logo on top of old copy feels half finished, since the words still describe the old business, and returning visitors who land on an unfamiliar site may think they are in the wrong place, so matching the copy to the new brand and briefly acknowledging the change keeps both new and returning visitors oriented. Give me the updated copy and the note.",
+    "description": "Rewrite key website copy to match the new brand and orient returning visitors.",
+    "useCase": "Use this when the site still sounds like the old business. A new logo on old copy feels half finished, and returning visitors may think they landed in the wrong place, so matching the words to the new brand and adding a brief note keeps everyone oriented.",
+    "variables": [
+      "BUSINESS TYPE",
+      "NEW NAME, FOCUS, AND VOICE",
+      "PASTE IT"
+    ],
+    "relatedPromptIds": [
+      "rebrand-checklist-touchpoints",
+      "rebrand-name-change-bridge",
+      "rebrand-announcement-writer"
+    ]
+  },
+  {
+    "id": "rebrand-after-check",
+    "title": "Check How the Rebrand Landed",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "rebrand-messaging",
+    "aiTool": "Claude",
+    "promptText": "Help me check how my [BUSINESS TYPE] rebrand has landed a few weeks or months in. What I changed was [THE CHANGES], what I have noticed since is [FEEDBACK, ENQUIRIES, SALES, CONFUSION, SEARCH TRAFFIC], and what I hoped it would achieve is [YOUR GOAL]. Help me read the signals honestly and decide what to adjust. Note that early reactions to a rebrand are noisy, since some dip in recognition is normal while people adjust, so it is worth separating short term confusion that will fade from real problems like customers who cannot find me, and judging the rebrand against the goal I set rather than how it feels day to day. Give me the honest read and adjustments.",
+    "description": "Read the signals after a rebrand and decide what to adjust.",
+    "useCase": "Use this a few weeks or months after the change. Early reactions are noisy and some dip in recognition is normal, so separating short term confusion that will fade from real problems like customers who cannot find you, and judging against your goal, gives an honest read.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE CHANGES",
+      "FEEDBACK, ENQUIRIES, SALES, CONFUSION, SEARCH TRAFFIC",
+      "YOUR GOAL"
+    ],
+    "relatedPromptIds": [
+      "rebrand-handle-pushback",
+      "rebrand-name-change-bridge",
+      "rebrand-should-you"
+    ]
   }
 ]
