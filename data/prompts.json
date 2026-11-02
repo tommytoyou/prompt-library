@@ -32452,5 +32452,378 @@
       "tone-consistency-check",
       "tone-fix-generic-voice"
     ]
+  },
+  {
+    "id": "diff-finder",
+    "title": "Find What Actually Sets You Apart",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "competitor-differentiation",
+    "aiTool": "Claude",
+    "promptText": "Help me find what genuinely sets my [BUSINESS TYPE] apart from competitors. What I offer is [WHAT YOU DO], my main competitors are [WHO THEY ARE], and things I think might make me different are [YOUR GUESSES]. Work through my guesses honestly, tell me which are real differentiators and which are things every competitor also claims, and help me find any I have overlooked. Note that many things a business thinks make it special, like quality and great service, are claimed by everyone and so differentiate nothing, so the useful exercise is separating the real differences from the table stakes, and if I struggle to name a true difference that is important to know rather than paper over. Give me my real differentiators.",
+    "description": "Separate your real differentiators from the things every competitor also claims.",
+    "useCase": "Use this when you are not sure what actually makes you different. Many things a business thinks make it special, like quality and great service, are claimed by everyone and differentiate nothing, so separating real differences from table stakes is the work, and struggling to name one is important to know rather than paper over.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU DO",
+      "WHO THEY ARE",
+      "YOUR GUESSES"
+    ],
+    "relatedPromptIds": [
+      "diff-vs-table-stakes",
+      "diff-express-clearly",
+      "diff-when-you-have-none"
+    ]
+  },
+  {
+    "id": "diff-vs-table-stakes",
+    "title": "Tell Differentiators From Table Stakes",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "competitor-differentiation",
+    "aiTool": "Claude",
+    "promptText": "Help me sort what I offer into real differentiators versus table stakes for my [BUSINESS TYPE]. The things I offer or emphasize are [LIST THEM], and my competitors are [WHO THEY ARE]. Tell me which of these are genuine points of difference and which are baseline expectations that customers assume anyone in my field provides. Note that table stakes are things I have to have just to be considered, like being reliable or responsive, so leading with them wins nothing since customers expect them by default, while differentiators are what I have that others do not, and knowing which is which stops me wasting my pitch on things that do not move anyone. Give me the sorted list.",
+    "description": "Sort your offerings into genuine differentiators versus baseline table stakes.",
+    "useCase": "Use this when your pitch might be leading with the obvious. Table stakes are things you need just to be considered, so leading with them wins nothing since customers expect them, while differentiators are what others lack, and knowing which is which stops you wasting your pitch on things that move no one.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST THEM",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "diff-finder",
+      "diff-express-clearly",
+      "diff-avoid-false"
+    ]
+  },
+  {
+    "id": "diff-quick-angle",
+    "title": "Get a Quick Differentiation Angle",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "competitor-differentiation",
+    "aiTool": "Grok",
+    "promptText": "I need a quick angle on what makes me different. My business is [WHAT YOU DO], my competitors are [WHO THEY ARE], and what feels different about me is [YOUR HUNCH]. Give me a short take on my strongest point of difference and one line I could use to express it, no long analysis, just the angle. Give me the quick take.",
+    "description": "Get a fast read on your strongest point of difference and a line for it.",
+    "useCase": "Use this when you want a quick differentiation angle to react to. A short read on your strongest difference plus a line to express it gives you something concrete fast, and a rough angle you can sharpen beats staring at the question of why anyone should pick you over the alternatives.",
+    "variables": [
+      "WHAT YOU DO",
+      "WHO THEY ARE",
+      "YOUR HUNCH"
+    ],
+    "relatedPromptIds": [
+      "diff-finder",
+      "diff-express-clearly",
+      "diff-one-thing"
+    ]
+  },
+  {
+    "id": "diff-express-clearly",
+    "title": "Express Your Difference Clearly",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "competitor-differentiation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me put my point of difference into words a customer would instantly understand for my [BUSINESS TYPE]. My real difference is [WHAT SETS YOU APART], my customer is [WHO THEY ARE], and where I need to say it is [WHERE, E.G. HOMEPAGE, PITCH, BIO]. Give me a clear way to express it that shows why the difference matters to them, not just that it exists. Note that a difference only helps if the customer understands why it is good for them, so stating a feature I have that others do not is only half the job, and connecting that difference to a benefit they care about is what turns it from a fact into a reason to choose me. Give me the clear expression.",
+    "description": "Put your real difference into words that show why it matters to the customer.",
+    "useCase": "Use this when you know your difference but struggle to convey it. A difference only helps if the customer understands why it is good for them, so stating a feature others lack is half the job, and connecting it to a benefit they care about turns a fact into a reason to choose you.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT SETS YOU APART",
+      "WHO THEY ARE",
+      "WHERE, E.G. HOMEPAGE, PITCH, BIO"
+    ],
+    "relatedPromptIds": [
+      "diff-finder",
+      "diff-one-thing",
+      "diff-vs-table-stakes"
+    ]
+  },
+  {
+    "id": "diff-one-thing",
+    "title": "Choose the One Thing to Be Known For",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "competitor-differentiation",
+    "aiTool": "Claude",
+    "promptText": "Help me choose the one thing I most want to be known for versus competitors for my [BUSINESS TYPE]. The differences I have are [LIST THEM], my customer is [WHO THEY ARE], and what matters most to them is [THEIR PRIORITY]. Help me pick the single strongest point of difference to lead with rather than spreading across all of them. Note that trying to be known for five things usually means being known for none, since customers can only hold one clear idea about a small business, so picking the one difference that matters most to them and owning it beats a scattered list, and the hard part is committing to one while the others fade to supporting roles. Give me the one to lead with and why.",
+    "description": "Pick the single strongest difference to be known for and lead with it.",
+    "useCase": "Use this when you have several differences and lead with all of them. Trying to be known for five things means being known for none, since customers hold one clear idea about a small business, so picking the one difference that matters most and owning it beats a scattered list, even though committing to one is hard.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST THEM",
+      "WHO THEY ARE",
+      "THEIR PRIORITY"
+    ],
+    "relatedPromptIds": [
+      "diff-finder",
+      "diff-express-clearly",
+      "diff-position-against"
+    ]
+  },
+  {
+    "id": "diff-position-against",
+    "title": "Position Yourself Against an Alternative",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "competitor-differentiation",
+    "aiTool": "Claude",
+    "promptText": "Help me position my [BUSINESS TYPE] clearly against the main alternative my customers consider. The alternative they weigh me against is [THE COMPETITOR OR OPTION, E.G. A BIG CHAIN, DIY, DOING NOTHING], what I offer instead is [YOUR APPROACH], and my customer is [WHO THEY ARE]. Help me frame the honest tradeoff so a customer sees when I am the better choice. Note that customers always compare against something, whether a competitor, doing it themselves, or doing nothing, so positioning against the real alternative is clearer than positioning in a vacuum, and being honest that I am not for everyone, only right for people who value what I offer, is more persuasive than claiming to beat every option for everyone. Give me the positioning.",
+    "description": "Frame the honest tradeoff between you and the main alternative customers weigh.",
+    "useCase": "Use this when customers compare you to a specific alternative. Customers always compare against something, whether a competitor, DIY, or doing nothing, so positioning against the real alternative is clearer than in a vacuum, and admitting you are not for everyone is more persuasive than claiming to beat every option.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE COMPETITOR OR OPTION, E.G. A BIG CHAIN, DIY, DOING NOTHING",
+      "YOUR APPROACH",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "diff-one-thing",
+      "diff-vs-big-competitor",
+      "diff-not-for-everyone"
+    ]
+  },
+  {
+    "id": "diff-vs-big-competitor",
+    "title": "Differentiate Against a Bigger Competitor",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "competitor-differentiation",
+    "aiTool": "Claude",
+    "promptText": "Help me differentiate my small [BUSINESS TYPE] against a much bigger competitor. The big competitor is [WHO THEY ARE], what they are strong at is [THEIR STRENGTHS], and what I can offer that they cannot is [YOUR EDGE]. Help me lean into the advantages of being small rather than trying to compete on their turf. Note that a small business rarely wins competing against a big one on price, scale, or reach, but size brings real advantages the big player cannot match, like personal attention, flexibility, specialization, and actually caring, so differentiating on what only a small business can do beats trying to look bigger, since pretending to match a giant just highlights where I fall short. Give me the small business differentiation.",
+    "description": "Lean into the real advantages of being small against a bigger competitor.",
+    "useCase": "Use this when you compete against a much bigger player. A small business rarely wins on price, scale, or reach, but size brings advantages a giant cannot match, like personal attention and flexibility, so differentiating on what only a small business can do beats trying to look bigger, which just highlights where you fall short.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO THEY ARE",
+      "THEIR STRENGTHS",
+      "YOUR EDGE"
+    ],
+    "relatedPromptIds": [
+      "diff-position-against",
+      "diff-not-for-everyone",
+      "diff-niche-down"
+    ]
+  },
+  {
+    "id": "diff-niche-down",
+    "title": "Differentiate by Narrowing Your Focus",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "competitor-differentiation",
+    "aiTool": "Gemini",
+    "promptText": "Help me stand out by narrowing my focus rather than competing broadly for my [BUSINESS TYPE]. What I do broadly is [YOUR WIDE OFFER], the customers I serve best are [WHO GETS THE MOST VALUE], and my competitors mostly serve [THEIR BROAD MARKET]. Show me how focusing on a specific niche could make me the obvious choice for that group. Note that generalist competitors compete on being everything to everyone, so specializing in a specific type of customer or problem makes me the clear best fit for that group even when a bigger generalist exists, and being the obvious choice for some beats being an also ran for all, though narrowing does mean deliberately not being for everyone. Give me the niche focus angle.",
+    "description": "Use a narrower focus to become the obvious choice for a specific group.",
+    "useCase": "Use this when you compete broadly against generalists. Generalist competitors try to be everything to everyone, so specializing in a specific customer or problem makes you the clear best fit for that group even against a bigger player, and being the obvious choice for some beats being an also ran for all.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR WIDE OFFER",
+      "WHO GETS THE MOST VALUE",
+      "THEIR BROAD MARKET"
+    ],
+    "relatedPromptIds": [
+      "diff-vs-big-competitor",
+      "diff-not-for-everyone",
+      "diff-one-thing"
+    ]
+  },
+  {
+    "id": "diff-not-for-everyone",
+    "title": "Differentiate by Being Clear Who You Are Not For",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "competitor-differentiation",
+    "aiTool": "Claude",
+    "promptText": "Help me differentiate by being clear about who my [BUSINESS TYPE] is not for. What I do is [WHAT YOU OFFER], the people I am the right fit for are [YOUR IDEAL CUSTOMER], and the people I am not right for are [WHO SHOULD GO ELSEWHERE]. Help me express this in a way that strengthens my appeal to the right people. Note that saying who I am not for is a strong differentiator because it signals confidence and clarity that vague everyone welcome businesses lack, and it makes the right customers trust that I am truly built for them, so drawing the line honestly attracts my people more than trying to be acceptable to all, even though it means turning some away. Give me how to express who I am not for.",
+    "description": "Use clarity about who you are not for to strengthen appeal to the right people.",
+    "useCase": "Use this when trying to appeal to everyone dilutes your pull. Saying who you are not for signals a confidence vague everyone welcome businesses lack, and it makes the right customers trust you are built for them, so drawing the line honestly attracts your people more than trying to be acceptable to all.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU OFFER",
+      "YOUR IDEAL CUSTOMER",
+      "WHO SHOULD GO ELSEWHERE"
+    ],
+    "relatedPromptIds": [
+      "diff-niche-down",
+      "diff-position-against",
+      "diff-one-thing"
+    ]
+  },
+  {
+    "id": "diff-avoid-false",
+    "title": "Avoid False Differentiation",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "competitor-differentiation",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether my claimed differences are real or false for my [BUSINESS TYPE]. The differences I plan to lead with are [YOUR CLAIMED DIFFERENCES], and my competitors are [WHO THEY ARE]. Tell me honestly which of these competitors also do or claim, so I do not build my positioning on a difference that is not actually a difference. Note that false differentiation is claiming as special something every competitor also does, and it backfires because customers who know the field see through it and trust me less, so it is better to find a smaller true difference than to loudly claim a fake big one, and honesty about what is actually different protects my credibility. Give me which claims hold up and which do not.",
+    "description": "Check whether your claimed differences are actually unique or false.",
+    "useCase": "Use this before building positioning on a claimed difference. False differentiation is claiming as special something every competitor also does, and it backfires because customers who know the field see through it, so a smaller true difference beats a fake big one, and honesty protects your credibility.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR CLAIMED DIFFERENCES",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "diff-vs-table-stakes",
+      "diff-finder",
+      "diff-when-you-have-none"
+    ]
+  },
+  {
+    "id": "diff-comparison-messaging",
+    "title": "Write Honest Comparison Messaging",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "competitor-differentiation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write messaging that compares my [BUSINESS TYPE] to alternatives without trashing competitors. What I do better for certain customers is [YOUR ADVANTAGE], the alternative is [THE COMPETITOR OR OPTION], and my customer is [WHO THEY ARE]. Help me draw the contrast in a way that is honest and confident but not petty or badmouthing. Note that comparison messaging works when it is fair and specific, but attacking competitors directly often makes me look insecure and can rebound, so the stronger move is confidently stating what I do differently and letting the customer draw the conclusion, since respecting the competitor while showing my edge reads as more trustworthy than tearing them down. Give me the comparison messaging.",
+    "description": "Draw an honest contrast with alternatives without badmouthing competitors.",
+    "useCase": "Use this when you want to compare yourself to competitors carefully. Comparison works when it is fair and specific, but attacking competitors makes you look insecure and can rebound, so confidently stating what you do differently and letting the customer conclude reads as more trustworthy than tearing them down.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR ADVANTAGE",
+      "THE COMPETITOR OR OPTION",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "diff-position-against",
+      "diff-express-clearly",
+      "diff-respond-to-copycat"
+    ]
+  },
+  {
+    "id": "diff-turn-weakness-into-difference",
+    "title": "Turn an Apparent Weakness Into a Difference",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "competitor-differentiation",
+    "aiTool": "Claude",
+    "promptText": "Help me see whether something I view as a weakness could actually be a point of difference for my [BUSINESS TYPE]. The thing I worry looks like a disadvantage is [YOUR PERCEIVED WEAKNESS], what I offer is [WHAT YOU DO], and my customer is [WHO THEY ARE]. Help me tell whether it is a real weakness to fix or a difference to lean into for the right audience. Note that some apparent weaknesses are genuine differentiators for a certain customer, like being slower because I am more careful or costing more because I use better materials, so it is worth checking whether the trait repels the wrong customers while attracting the right ones, though I should be honest and not spin a true flaw as a feature. Give me the honest read.",
+    "description": "Check whether a perceived weakness is actually a difference for the right customer.",
+    "useCase": "Use this when something about your business feels like a disadvantage. Some apparent weaknesses are genuine differentiators for a certain customer, like being slower because you are more careful, so it is worth checking whether the trait attracts the right people, as long as you do not spin a true flaw as a feature.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR PERCEIVED WEAKNESS",
+      "WHAT YOU DO",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "diff-finder",
+      "diff-not-for-everyone",
+      "diff-niche-down"
+    ]
+  },
+  {
+    "id": "diff-when-you-have-none",
+    "title": "Find Differentiation When You Feel You Have None",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "competitor-differentiation",
+    "aiTool": "Claude",
+    "promptText": "Help me find a way to stand out when my [BUSINESS TYPE] feels basically the same as competitors. What I do is [WHAT YOU OFFER], my competitors are [WHO THEY ARE], and honestly the product or service is similar because [WHY IT IS SIMILAR]. Help me find differentiation in areas beyond the core offer, like how I do it, who I serve, the experience, or my story. Note that when the core offer really is similar, differentiation usually comes from everything around it, the experience, the personality, the focus, or the way I treat customers, rather than the product itself, so a genuinely commoditized offer can still stand apart on how it is delivered, and if truly nothing differs that signals a bigger strategic question worth facing. Give me where to find the difference.",
+    "description": "Find differentiation beyond the core offer when the product feels the same.",
+    "useCase": "Use this when your offer feels identical to competitors. When the core offer is similar, differentiation usually comes from everything around it, the experience, personality, focus, or how you treat customers, so a commoditized offer can still stand apart on delivery, and truly nothing differing signals a bigger question.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU OFFER",
+      "WHO THEY ARE",
+      "WHY IT IS SIMILAR"
+    ],
+    "relatedPromptIds": [
+      "diff-finder",
+      "diff-experience-based",
+      "diff-turn-weakness-into-difference"
+    ]
+  },
+  {
+    "id": "diff-experience-based",
+    "title": "Differentiate on the Customer Experience",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "competitor-differentiation",
+    "aiTool": "Gemini",
+    "promptText": "Help me differentiate on the experience of working with me rather than the product for my [BUSINESS TYPE]. What I offer is [WHAT YOU DO], how the experience with me feels or could feel is [YOUR EXPERIENCE EDGE], and how competitors tend to handle it is [THEIR TYPICAL EXPERIENCE]. Show me how to make the experience itself a real point of difference. Note that when products are similar, how it feels to buy and work with a business is often what people remember and tell others about, so a smoother, warmer, or more thoughtful experience can differentiate where the product cannot, and this is an edge a small business can genuinely own because caring about each customer is easier at my scale than at a large one. Give me the experience differentiation.",
+    "description": "Make the experience of working with you a real point of difference.",
+    "useCase": "Use this when your product is similar but the experience could stand out. When products are alike, how it feels to buy and work with a business is what people remember and tell others, so a warmer, more thoughtful experience differentiates where the product cannot, and small scale makes that easier to own.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU DO",
+      "YOUR EXPERIENCE EDGE",
+      "THEIR TYPICAL EXPERIENCE"
+    ],
+    "relatedPromptIds": [
+      "diff-when-you-have-none",
+      "diff-vs-big-competitor",
+      "diff-finder"
+    ]
+  },
+  {
+    "id": "diff-respond-to-copycat",
+    "title": "Respond When a Competitor Copies You",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "competitor-differentiation",
+    "aiTool": "Claude",
+    "promptText": "Help me respond when a competitor copies what made my [BUSINESS TYPE] different. What they copied is [WHAT THEY TOOK], what I do is [WHAT YOU OFFER], and my customer is [WHO THEY ARE]. Help me think through how to keep my edge when my differentiator is no longer unique, without getting into a public fight. Note that being copied is a sign I was onto something, but reacting with public complaint usually looks worse for me than for them, so the stronger response is to keep moving forward, deepen the difference they cannot easily copy like my relationships and reputation, and let my head start and authenticity show, since a copycat can take a feature but not my whole way of doing things. Give me how to respond.",
+    "description": "Keep your edge when a competitor copies your differentiator, without a public fight.",
+    "useCase": "Use this when a competitor copies what set you apart. Being copied means you were onto something, but public complaint looks worse for you than them, so moving forward and deepening the difference they cannot easily copy, like relationships and reputation, beats a fight, since a copycat takes a feature not your whole way of doing things.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THEY TOOK",
+      "WHAT YOU OFFER",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "diff-comparison-messaging",
+      "diff-experience-based",
+      "diff-finder"
+    ]
+  },
+  {
+    "id": "diff-audit-positioning",
+    "title": "Audit How Differentiated Your Positioning Is",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "competitor-differentiation",
+    "aiTool": "Claude",
+    "promptText": "Help me audit how differentiated my current positioning actually is for my [BUSINESS TYPE]. Here is how I describe myself across my site and materials: [PASTE OR DESCRIBE IT], and my competitors are [WHO THEY ARE]. Read it and tell me honestly whether a customer could tell me apart from competitors from this, or whether I sound interchangeable. Note that a good test is to imagine my messaging next to three competitors with the names removed, and if a customer could not tell which is me, my positioning is not doing its job, so this audit shows whether my difference actually comes through in what I say, and often the difference is real but simply not expressed. Give me the audit and where it falls flat.",
+    "description": "Audit whether your positioning actually reads as different from competitors.",
+    "useCase": "Use this to check if your difference comes through in your messaging. A good test is imagining your messaging beside three competitors with names removed, and if a customer could not tell which is you, the positioning is not working, so this shows whether your real difference is actually being expressed or just assumed.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "diff-avoid-false",
+      "diff-express-clearly",
+      "diff-finder"
+    ]
+  },
+  {
+    "id": "diff-messaging-set",
+    "title": "Build a Set of Differentiation Messages",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "competitor-differentiation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me turn my point of difference into a set of ready messages I can use for my [BUSINESS TYPE]. My main difference is [WHAT SETS YOU APART], my customer is [WHO THEY ARE], and the places I need it are [WHERE, E.G. HOMEPAGE, SALES CALL, SOCIAL, EMAIL]. Give me a version of my differentiation message for each place, all pointing at the same core difference. Note that a difference only sticks through consistent repetition across everywhere a customer meets me, so having it phrased for each context keeps the message unified instead of me describing my edge differently every time, and consistent differentiation is what makes the difference actually register in a customer's mind over time. Give me the differentiation messages.",
+    "description": "Turn your difference into a consistent set of messages for each context.",
+    "useCase": "Use this to say your difference the same way everywhere. A difference only sticks through consistent repetition across every place a customer meets you, so having it phrased for each context keeps the message unified rather than described differently each time, which is what makes it actually register over time.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT SETS YOU APART",
+      "WHO THEY ARE",
+      "WHERE, E.G. HOMEPAGE, SALES CALL, SOCIAL, EMAIL"
+    ],
+    "relatedPromptIds": [
+      "diff-express-clearly",
+      "diff-one-thing",
+      "diff-audit-positioning"
+    ]
+  },
+  {
+    "id": "diff-sustainable-check",
+    "title": "Check If Your Difference Will Last",
+    "categoryId": "branding-and-positioning",
+    "subcategoryId": "competitor-differentiation",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether my point of difference is durable or easy to copy for my [BUSINESS TYPE]. My main differentiator is [WHAT SETS YOU APART], and my competitors are [WHO THEY ARE]. Tell me honestly how hard it would be for a competitor to match this, and whether I should be building toward a more defensible difference. Note that some differences are easy to copy, like a feature or a price, while others are hard to copy, like a reputation, a community, deep expertise, or a genuine relationship with customers, so a differentiator anyone could match in a week is weaker than one built over years, and knowing which kind I have tells me whether to lean on it or build something more durable underneath. Give me the durability read.",
+    "description": "Assess whether your differentiator is durable or easy for competitors to copy.",
+    "useCase": "Use this to judge how defensible your difference is. Some differences are easy to copy, like a feature or price, while others are hard, like reputation, community, or deep expertise, so a differentiator anyone could match in a week is weaker than one built over years, and knowing which you have tells you whether to build something more durable.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT SETS YOU APART",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "diff-respond-to-copycat",
+      "diff-experience-based",
+      "diff-finder"
+    ]
   }
 ]
