@@ -39,4 +39,4 @@ Prompts are added in batches (~24 per subcategory, one subcategory at a time, ac
 5. Run `npm run build` and confirm it compiles.
 6. Report the before/after prompt count.
 
-**Do not commit.** The user runs the git commands themselves.
+7. Once the build passes, commit and push to `main` (`git add`, `git commit`, `git push`). Do not hand git commands back to the user; run them yourself.
