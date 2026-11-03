@@ -41763,5 +41763,391 @@
       "dash-declutter",
       "dash-data-sources"
     ]
+  },
+  {
+    "id": "gmetric-growth-rate",
+    "title": "Calculate Your Growth Rate Correctly",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "growth-metrics",
+    "aiTool": "Claude",
+    "promptText": "Help me calculate my growth rate correctly for my [BUSINESS TYPE]. The metric is [E.G. REVENUE, CUSTOMERS, ORDERS], my values over time are [MONTHLY OR YEARLY VALUES], and what I want to know is [E.G. MONTH OVER MONTH, YEAR OVER YEAR, AVERAGE GROWTH OVER SEVERAL YEARS]. Show me the calculation step by step, what the result means in plain terms, and which growth rate is most honest to use for my situation. Note that different growth rates can tell very different stories from the same data, since month over month growth jumps around and can be distorted by seasons, while a simple average of yearly growth rates overstates growth compared with a compound average, so choosing the right method, and showing my working, keeps me from fooling myself or anyone I share it with. Give me the growth calculation.",
+    "description": "Calculate growth step by step and choose the most honest growth rate.",
+    "useCase": "Use this when you want to state how fast you are growing. The same data can tell different stories, since month over month growth jumps around with seasons and simple averages of yearly rates overstate compound growth, so the right method with your working shown keeps you from fooling yourself or others.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. REVENUE, CUSTOMERS, ORDERS",
+      "MONTHLY OR YEARLY VALUES",
+      "E.G. MONTH OVER MONTH, YEAR OVER YEAR, AVERAGE GROWTH OVER SEVERAL YEARS"
+    ],
+    "relatedPromptIds": [
+      "gmetric-growth-equation",
+      "gmetric-quick-calc",
+      "gmetric-forecast-scenarios"
+    ]
+  },
+  {
+    "id": "gmetric-quick-calc",
+    "title": "Get a Quick Growth Calculation",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "growth-metrics",
+    "aiTool": "Grok",
+    "promptText": "Do a quick growth calculation for me. The metric is [WHAT YOU ARE MEASURING], the starting value was [START], the ending value is [END], and the time between them is [PERIOD]. Give me the total growth, the average monthly or yearly rate, and one sentence on what it means, no long explanation, just the numbers. Give me the calculation.",
+    "description": "Get total growth, an average rate, and a one line meaning, fast.",
+    "useCase": "Use this when you need a growth figure right now. Total growth plus an average rate over the period gives you a usable number in seconds, and a quick correct calculation beats a rough mental estimate that can easily be off by a wide margin.",
+    "variables": [
+      "WHAT YOU ARE MEASURING",
+      "START",
+      "END",
+      "PERIOD"
+    ],
+    "relatedPromptIds": [
+      "gmetric-growth-rate",
+      "gmetric-growth-equation",
+      "gmetric-repeat-rate"
+    ]
+  },
+  {
+    "id": "gmetric-growth-equation",
+    "title": "Break Revenue Growth Into Its Parts",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "growth-metrics",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me break my revenue growth into its parts for my [BUSINESS TYPE]. My revenue for two periods is [PERIOD ONE AND PERIOD TWO], the number of customers in each is [CUSTOMER COUNTS], the number of orders in each is [ORDER COUNTS], and anything that changed in pricing is [PRICE CHANGES]. Split revenue into number of customers, orders per customer, and average order value, show how each changed, and explain which drove the growth. Note that revenue can grow for very different reasons, like more customers, existing customers buying more often, or higher prices, and each points to a different strategy, so knowing which lever actually moved shows what is working, while growth driven only by price increases may hide a shrinking customer base. Give me the growth breakdown.",
+    "description": "Split revenue growth into customers, frequency, and order value.",
+    "useCase": "Use this to see why revenue changed. Revenue can grow from more customers, more frequent buying, or higher prices, and each points to a different strategy, so knowing which lever moved shows what is working, while growth from price alone may hide a shrinking customer base.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PERIOD ONE AND PERIOD TWO",
+      "CUSTOMER COUNTS",
+      "ORDER COUNTS",
+      "PRICE CHANGES"
+    ],
+    "relatedPromptIds": [
+      "gmetric-growth-rate",
+      "gmetric-repeat-rate",
+      "gmetric-unit-economics"
+    ]
+  },
+  {
+    "id": "gmetric-cac",
+    "title": "Calculate Your Customer Acquisition Cost",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "growth-metrics",
+    "aiTool": "Claude",
+    "promptText": "Help me calculate how much it costs to win a new customer for my [BUSINESS TYPE]. What I spent on marketing and sales over a period is [AD SPEND, TOOLS, CONTENT, FREELANCERS, DISCOUNTS], the hours I spent on marketing and selling is [YOUR TIME], what I value my time at is [HOURLY VALUE], and the number of new customers in that period is [NEW CUSTOMERS]. Calculate acquisition cost with and without my time, by channel if possible, and explain what it tells me. Note that many owners calculate acquisition cost using only ad spend, which makes channels like content, social, or networking look free when they actually consume many hours, so including a value for my time gives a far more honest picture, and acquisition cost only means something when compared with how much a customer is worth. Give me the acquisition cost.",
+    "description": "Calculate the real cost of winning a customer, including your time.",
+    "useCase": "Use this to see what new customers really cost. Many owners count only ad spend, making content, social, or networking look free when they consume many hours, so including your time gives an honest picture, and acquisition cost only means something compared with what a customer is worth.",
+    "variables": [
+      "BUSINESS TYPE",
+      "AD SPEND, TOOLS, CONTENT, FREELANCERS, DISCOUNTS",
+      "YOUR TIME",
+      "HOURLY VALUE",
+      "NEW CUSTOMERS"
+    ],
+    "relatedPromptIds": [
+      "gmetric-ltv",
+      "gmetric-ltv-cac-ratio",
+      "gmetric-payback"
+    ]
+  },
+  {
+    "id": "gmetric-ltv",
+    "title": "Estimate Customer Lifetime Value",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "growth-metrics",
+    "aiTool": "Gemini",
+    "promptText": "Help me estimate how much a typical customer is worth over time to my [BUSINESS TYPE]. My average order value is [AMOUNT], how often a typical customer buys is [FREQUENCY], how long customers typically keep buying is [ESTIMATED LIFESPAN OR WHAT YOU KNOW], and my gross margin is [MARGIN PERCENT]. Calculate a simple lifetime value based on profit rather than revenue, and give a cautious and an optimistic version. Note that lifetime value is an estimate, not a fact, and newer businesses often overestimate how long customers stay because they have not been open long enough to know, so using gross profit rather than revenue and leaning toward the cautious version prevents spending too much to acquire customers based on an inflated number. Give me the lifetime value estimate.",
+    "description": "Estimate a cautious, profit based customer lifetime value.",
+    "useCase": "Use this to know how much a customer is really worth. Lifetime value is an estimate, and newer businesses often overestimate how long customers stay, so basing it on profit rather than revenue and leaning cautious prevents overspending to acquire customers based on an inflated number.",
+    "variables": [
+      "BUSINESS TYPE",
+      "AMOUNT",
+      "FREQUENCY",
+      "ESTIMATED LIFESPAN OR WHAT YOU KNOW",
+      "MARGIN PERCENT"
+    ],
+    "relatedPromptIds": [
+      "gmetric-cac",
+      "gmetric-ltv-cac-ratio",
+      "gmetric-retention"
+    ]
+  },
+  {
+    "id": "gmetric-ltv-cac-ratio",
+    "title": "Compare What a Customer Is Worth to What It Costs",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "growth-metrics",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me compare customer value with acquisition cost for my [BUSINESS TYPE]. My estimated lifetime value per customer is [LTV BASED ON PROFIT], my acquisition cost per customer is [CAC, IDEALLY INCLUDING YOUR TIME], and these figures by channel, if I have them, are [CHANNEL BREAKDOWN]. Calculate the ratio, explain what it means for whether my growth is sustainable, and which channels deserve more or less investment. Note that if winning a customer costs close to or more than the profit they bring, growing faster just loses money faster, while a comfortable gap leaves room to invest in growth, though general rules of thumb about a healthy ratio come mostly from venture funded companies and may not fit a small, self funded business, so the trend and the cash available matter as much as any target ratio. Give me the ratio analysis.",
+    "description": "Compare customer value to acquisition cost to see if growth is sustainable.",
+    "useCase": "Use this before spending more on growth. If winning a customer costs close to the profit they bring, faster growth just loses money faster, and rules of thumb on healthy ratios mostly come from venture funded companies, so for a self funded business the trend and available cash matter as much as any target.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LTV BASED ON PROFIT",
+      "CAC, IDEALLY INCLUDING YOUR TIME",
+      "CHANNEL BREAKDOWN"
+    ],
+    "relatedPromptIds": [
+      "gmetric-cac",
+      "gmetric-ltv",
+      "gmetric-payback"
+    ]
+  },
+  {
+    "id": "gmetric-payback",
+    "title": "Calculate How Long It Takes to Earn Back a Customer",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "growth-metrics",
+    "aiTool": "Claude",
+    "promptText": "Help me calculate how long it takes to earn back the cost of winning a customer for my [BUSINESS TYPE]. My acquisition cost per customer is [CAC], the gross profit a customer brings per month or per order is [PROFIT PER PERIOD OR ORDER], and how often they buy is [FREQUENCY]. Calculate the payback period and explain what it means for my cash. Note that a business can be profitable per customer on paper but still run short of cash if it takes many months to earn back acquisition costs, especially while growing fast, so a long payback period means growth needs cash reserves to fund it, while a short one means growth can largely pay for itself, which matters a lot for a self funded small business. Give me the payback calculation.",
+    "description": "Calculate how many months it takes to earn back a customer's acquisition cost.",
+    "useCase": "Use this before scaling up marketing. A business can be profitable per customer on paper yet run short of cash if earning back acquisition costs takes months, so a long payback means growth needs cash reserves, while a short one lets growth largely pay for itself.",
+    "variables": [
+      "BUSINESS TYPE",
+      "CAC",
+      "PROFIT PER PERIOD OR ORDER",
+      "FREQUENCY"
+    ],
+    "relatedPromptIds": [
+      "gmetric-ltv-cac-ratio",
+      "gmetric-cac",
+      "gmetric-profitable-growth"
+    ]
+  },
+  {
+    "id": "gmetric-retention",
+    "title": "Calculate Customer Retention",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "growth-metrics",
+    "aiTool": "Gemini",
+    "promptText": "Help me calculate customer retention for my [BUSINESS TYPE]. How customers buy is [ONE OFF, REPEAT, SUBSCRIPTION, CONTRACT], the customers I had at the start of a period are [START COUNT], how many of those were still active or bought again by the end is [RETAINED COUNT], and the period is [TIMEFRAME]. Calculate retention correctly for my model, explain what counts as active for a business like mine, and what the result means. Note that retention is easy to calculate wrongly, for example by counting new customers gained during the period as retained, and the definition of an active customer depends on the business, since a cafe regular may visit weekly while a furniture buyer returns years later, so defining active sensibly for my business matters more than matching anyone else's formula. Give me the retention calculation.",
+    "description": "Calculate retention correctly with a sensible definition of active.",
+    "useCase": "Use this to see whether customers stay. Retention is easy to miscalculate, like counting new customers as retained, and what counts as active depends on the business, since a cafe regular visits weekly while a furniture buyer returns years later, so a sensible definition matters more than copying a formula.",
+    "variables": [
+      "BUSINESS TYPE",
+      "ONE OFF, REPEAT, SUBSCRIPTION, CONTRACT",
+      "START COUNT",
+      "RETAINED COUNT",
+      "TIMEFRAME"
+    ],
+    "relatedPromptIds": [
+      "gmetric-churn",
+      "gmetric-repeat-rate",
+      "gmetric-ltv"
+    ]
+  },
+  {
+    "id": "gmetric-churn",
+    "title": "Understand Churn for a Subscription Business",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "growth-metrics",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me understand churn in my subscription or membership [BUSINESS TYPE]. Subscribers at the start of the month were [START COUNT], cancellations during the month were [CANCELLATIONS], new subscribers were [NEW COUNT], and revenue lost from cancellations and downgrades was [LOST REVENUE]. Calculate customer churn and revenue churn, explain the difference, and what my churn means for growth. Note that churn quietly caps how big a subscription business can get, since at some point new sign ups only replace those leaving, so even a churn rate that sounds small each month adds up over a year, and revenue churn can differ from customer churn when larger or smaller customers leave, while the reasons people cancel are usually more useful than the rate itself. Give me the churn analysis.",
+    "description": "Calculate customer and revenue churn and what they mean for growth.",
+    "useCase": "Use this for any subscription or membership business. Churn quietly caps growth, since eventually new sign ups only replace those leaving, and a small monthly rate adds up over a year, while revenue churn differs when larger or smaller customers leave, and cancellation reasons matter more than the rate.",
+    "variables": [
+      "BUSINESS TYPE",
+      "START COUNT",
+      "CANCELLATIONS",
+      "NEW COUNT",
+      "LOST REVENUE"
+    ],
+    "relatedPromptIds": [
+      "gmetric-retention",
+      "gmetric-recurring-revenue",
+      "gmetric-growth-ceiling"
+    ]
+  },
+  {
+    "id": "gmetric-recurring-revenue",
+    "title": "Track Monthly Recurring Revenue Properly",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "growth-metrics",
+    "aiTool": "Claude",
+    "promptText": "Help me track monthly recurring revenue for my [BUSINESS TYPE]. My recurring income comes from [SUBSCRIPTIONS, RETAINERS, MEMBERSHIPS, SERVICE PLANS], billing periods include [MONTHLY, YEARLY, OTHER], and this month's changes were [NEW, UPGRADES, DOWNGRADES, CANCELLATIONS]. Show me how to calculate recurring revenue correctly, including converting annual plans to a monthly figure, and how to break the change into new, expansion, contraction, and churn. Note that counting a full annual payment as one month's revenue makes growth look much bigger than it is, and one off fees or setup charges are not recurring, so keeping them separate gives an honest picture, while breaking the monthly change into its parts shows whether growth comes from new customers or from keeping and expanding existing ones. Give me the recurring revenue setup.",
+    "description": "Calculate recurring revenue honestly and break its change into parts.",
+    "useCase": "Use this if you have subscriptions, retainers, or memberships. Counting a full annual payment as one month's revenue makes growth look much bigger than it is, and one off fees are not recurring, so keeping them separate is honest, while breaking the change into new, expansion, and churn shows where growth comes from.",
+    "variables": [
+      "BUSINESS TYPE",
+      "SUBSCRIPTIONS, RETAINERS, MEMBERSHIPS, SERVICE PLANS",
+      "MONTHLY, YEARLY, OTHER",
+      "NEW, UPGRADES, DOWNGRADES, CANCELLATIONS"
+    ],
+    "relatedPromptIds": [
+      "gmetric-churn",
+      "gmetric-growth-rate",
+      "gmetric-forecast-scenarios"
+    ]
+  },
+  {
+    "id": "gmetric-repeat-rate",
+    "title": "Measure How Often Customers Come Back",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "growth-metrics",
+    "aiTool": "Gemini",
+    "promptText": "Help me measure how often customers come back to my [BUSINESS TYPE]. My order or visit records are [WHAT DATA YOU HAVE, E.G. ORDERS WITH CUSTOMER NAMES OR PHONE NUMBERS], the time period I can look at is [PERIOD], and how I identify returning customers is [E.G. ACCOUNT, PHONE NUMBER, LOYALTY CARD, MEMORY]. Calculate repeat purchase rate, average purchases per customer, and time between purchases, and explain what they suggest. Note that for many small businesses, especially shops, cafes, and services, repeat customers are cheaper to serve and more profitable than new ones, so a rising repeat rate is often the healthiest kind of growth, while businesses that sell mostly through cash or chat may struggle to identify returning customers, so a simple tracking habit may be needed before this can be measured well. Give me the repeat customer analysis.",
+    "description": "Measure repeat purchase rate and time between purchases.",
+    "useCase": "Use this to see how loyal your customers are. Repeat customers are often cheaper and more profitable than new ones, so a rising repeat rate is often the healthiest growth, though businesses selling by cash or chat may need a simple tracking habit before returning customers can be identified.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT DATA YOU HAVE, E.G. ORDERS WITH CUSTOMER NAMES OR PHONE NUMBERS",
+      "PERIOD",
+      "E.G. ACCOUNT, PHONE NUMBER, LOYALTY CARD, MEMORY"
+    ],
+    "relatedPromptIds": [
+      "gmetric-retention",
+      "gmetric-growth-equation",
+      "gmetric-ltv"
+    ]
+  },
+  {
+    "id": "gmetric-unit-economics",
+    "title": "Work Out the Profit on a Single Sale",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "growth-metrics",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me work out the true profit on a single sale for my [BUSINESS TYPE]. The price of a typical order is [PRICE], the direct costs are [PRODUCT COST, PACKAGING, SHIPPING, PAYMENT FEES, PLATFORM FEES, COMMISSION], any discounts are [TYPICAL DISCOUNTS], and the time each order takes is [YOUR TIME PER ORDER]. Calculate the contribution profit per order and what share of the price I actually keep. Note that many owners know their price but not their real profit per sale, since payment fees, platform commissions, shipping, refunds, and discounts quietly eat into each order, and if each sale earns little or nothing, growing sales only adds work without adding profit, so knowing the profit per unit is essential before pushing for growth. Give me the per sale profit.",
+    "description": "Calculate the real profit on one sale after every fee and cost.",
+    "useCase": "Use this before pushing for more sales. Many owners know their price but not the profit per sale, since payment fees, commissions, shipping, refunds, and discounts quietly eat each order, and if each sale earns little, growing sales just adds work without adding profit.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRICE",
+      "PRODUCT COST, PACKAGING, SHIPPING, PAYMENT FEES, PLATFORM FEES, COMMISSION",
+      "TYPICAL DISCOUNTS",
+      "YOUR TIME PER ORDER"
+    ],
+    "relatedPromptIds": [
+      "gmetric-profitable-growth",
+      "gmetric-growth-equation",
+      "gmetric-payback"
+    ]
+  },
+  {
+    "id": "gmetric-profitable-growth",
+    "title": "Check Whether Your Growth Is Profitable",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "growth-metrics",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether my growth is actually profitable for my [BUSINESS TYPE]. My revenue and profit over the last few periods are [REVENUE AND PROFIT BY MONTH OR QUARTER], what I have spent to grow is [MARKETING, HIRING, TOOLS, DISCOUNTS], and my hours over the same time are [YOUR HOURS]. Compare revenue growth with profit growth and owner hours, and tell me whether the business is getting healthier or just busier. Note that revenue can grow while profit stays flat or falls, especially when growth comes from heavy discounts, expensive ads, or lower margin products, and many owners grow revenue only by working more hours, so checking that profit and earnings per hour grow alongside revenue shows whether growth is truly improving the business. Give me the growth quality check.",
+    "description": "Check whether revenue growth is matched by profit and earnings per hour.",
+    "useCase": "Use this when revenue is up but life does not feel better. Revenue can grow while profit stays flat, especially from discounts, expensive ads, or lower margin products, and many owners grow only by working more, so checking profit and earnings per hour alongside revenue shows whether growth is truly improving things.",
+    "variables": [
+      "BUSINESS TYPE",
+      "REVENUE AND PROFIT BY MONTH OR QUARTER",
+      "MARKETING, HIRING, TOOLS, DISCOUNTS",
+      "YOUR HOURS"
+    ],
+    "relatedPromptIds": [
+      "gmetric-unit-economics",
+      "gmetric-capacity-limit",
+      "gmetric-ltv-cac-ratio"
+    ]
+  },
+  {
+    "id": "gmetric-referral-rate",
+    "title": "Measure Growth From Word of Mouth",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "growth-metrics",
+    "aiTool": "Gemini",
+    "promptText": "Help me measure how much of my growth comes from word of mouth and referrals for my [BUSINESS TYPE]. How I learn where new customers came from is [E.G. ASKING THEM, REFERRAL CODES, FORM QUESTION, NOTHING YET], the numbers I have are [NEW CUSTOMERS BY SOURCE], and how many customers referred someone is [IF KNOWN]. Calculate the share of new customers from referrals and the referral rate per customer, and suggest a simple way to track it better. Note that word of mouth is often the cheapest and most trusted source of new customers for a small business, but it is usually under counted because nobody asks, and a rising share of referral customers is a strong sign of a product people genuinely like, so simply asking every new customer how they heard about me is often enough to reveal it. Give me the referral growth analysis.",
+    "description": "Measure the share of new customers coming from word of mouth.",
+    "useCase": "Use this to see how much growth your customers drive. Word of mouth is often the cheapest and most trusted source of new customers but is usually under counted because nobody asks, and a rising referral share signals a product people genuinely like, so asking every new customer how they heard about you is often enough.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. ASKING THEM, REFERRAL CODES, FORM QUESTION, NOTHING YET",
+      "NEW CUSTOMERS BY SOURCE",
+      "IF KNOWN"
+    ],
+    "relatedPromptIds": [
+      "gmetric-cac",
+      "gmetric-repeat-rate",
+      "gmetric-audience-vs-revenue"
+    ]
+  },
+  {
+    "id": "gmetric-audience-vs-revenue",
+    "title": "Check Whether Audience Growth Turns Into Revenue",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "growth-metrics",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me check whether my audience growth is turning into revenue for my [BUSINESS TYPE]. My audience numbers over time are [FOLLOWERS, EMAIL SUBSCRIBERS, VISITORS BY MONTH], my sales or revenue over the same period are [SALES BY MONTH], and the channels where the audience lives are [PLATFORMS]. Compare the two trends, estimate how much revenue each new audience member brings, and point out whether audience growth is paying off. Note that a growing audience feels like progress but does not always lead to sales, especially if the audience was attracted by content unrelated to what I sell, and audiences on social platforms can be reduced by algorithm changes I do not control, so revenue per audience member and owning a direct channel like an email list often matter more than raw follower growth. Give me the audience to revenue analysis.",
+    "description": "Compare audience growth with revenue to see whether it pays off.",
+    "useCase": "Use this when followers grow but sales do not. A growing audience feels like progress but may not buy, especially if attracted by content unrelated to what you sell, and platform audiences can shrink with algorithm changes, so revenue per audience member and a direct channel like email often matter more than followers.",
+    "variables": [
+      "BUSINESS TYPE",
+      "FOLLOWERS, EMAIL SUBSCRIBERS, VISITORS BY MONTH",
+      "SALES BY MONTH",
+      "PLATFORMS"
+    ],
+    "relatedPromptIds": [
+      "gmetric-referral-rate",
+      "gmetric-growth-equation",
+      "gmetric-profitable-growth"
+    ]
+  },
+  {
+    "id": "gmetric-forecast-scenarios",
+    "title": "Build Simple Growth Forecast Scenarios",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "growth-metrics",
+    "aiTool": "Claude",
+    "promptText": "Help me build simple growth forecast scenarios for my [BUSINESS TYPE] for the next [TIMEFRAME]. My recent numbers are [REVENUE, CUSTOMERS, OR KEY METRIC OVER RECENT MONTHS], my plans that could change growth are [NEW PRODUCTS, MARKETING, HIRING, PRICE CHANGES], and risks I can see are [SEASONS, COMPETITION, DEPENDENCE ON ONE CLIENT]. Give me a cautious, likely, and optimistic scenario with the assumptions behind each. Note that forecasts are always wrong in detail, but writing down the assumptions behind each scenario makes it easy to see which ones are proving true as months pass, and planning spending around the cautious scenario rather than the optimistic one protects my cash if growth disappoints, while the optimistic case helps me prepare capacity if things go well. Give me the forecast scenarios.",
+    "description": "Build cautious, likely, and optimistic forecasts with stated assumptions.",
+    "useCase": "Use this when planning the months ahead. Forecasts are always wrong in detail, but stated assumptions let you see which are proving true, and planning spending around the cautious scenario protects your cash while the optimistic one helps you prepare capacity if things go well.",
+    "variables": [
+      "BUSINESS TYPE",
+      "TIMEFRAME",
+      "REVENUE, CUSTOMERS, OR KEY METRIC OVER RECENT MONTHS",
+      "NEW PRODUCTS, MARKETING, HIRING, PRICE CHANGES",
+      "SEASONS, COMPETITION, DEPENDENCE ON ONE CLIENT"
+    ],
+    "relatedPromptIds": [
+      "gmetric-growth-rate",
+      "gmetric-capacity-limit",
+      "gmetric-growth-ceiling"
+    ]
+  },
+  {
+    "id": "gmetric-growth-ceiling",
+    "title": "Estimate How Big Your Market Really Is",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "growth-metrics",
+    "aiTool": "Gemini",
+    "promptText": "Help me estimate a realistic ceiling for my [BUSINESS TYPE]. Who my customers are is [YOUR TARGET CUSTOMERS], where I can serve them is [YOUR AREA OR MARKETS], how often they buy what I sell is [PURCHASE FREQUENCY], and my share of that market now is [CURRENT CUSTOMERS OR REVENUE]. Build a rough bottom up estimate of how many customers I could realistically reach and what that means for my growth ceiling. Note that big market size numbers found online often describe an entire industry rather than the customers I can actually reach and serve, so a bottom up estimate, starting from real customers in my area or niche, gives a far more useful ceiling, and knowing when I am approaching it tells me whether to expand to new areas, products, or customer groups. Give me the market ceiling estimate.",
+    "description": "Estimate a realistic, bottom up ceiling for your growth.",
+    "useCase": "Use this when deciding how far your current business can grow. Big market numbers online often describe a whole industry rather than customers you can reach, so a bottom up estimate from real customers in your area or niche gives a more useful ceiling and shows when to expand to new areas or products.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR TARGET CUSTOMERS",
+      "YOUR AREA OR MARKETS",
+      "PURCHASE FREQUENCY",
+      "CURRENT CUSTOMERS OR REVENUE"
+    ],
+    "relatedPromptIds": [
+      "gmetric-forecast-scenarios",
+      "gmetric-churn",
+      "gmetric-capacity-limit"
+    ]
+  },
+  {
+    "id": "gmetric-capacity-limit",
+    "title": "Find Where Your Capacity Will Limit Growth",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "growth-metrics",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me find where my capacity will limit growth for my [BUSINESS TYPE]. How much work or how many orders I handle now is [CURRENT VOLUME], the most I could handle with current time, people, and equipment is [YOUR ESTIMATE], and the parts of the work that would break first are [BOTTLENECKS, E.G. MY TIME, PRODUCTION, DELIVERY, CUSTOMER SUPPORT]. Calculate how much growth I can absorb before hitting the limit, and what it would take to raise it. Note that pushing for more customers when I am already near capacity often leads to slower service, mistakes, and burnout rather than more profit, so knowing the bottleneck in advance lets me raise prices, add help, or improve processes before growth breaks the business, and sometimes the best growth move is improving profit per customer instead of adding more. Give me the capacity analysis.",
+    "description": "Find the bottleneck that will cap growth and how to raise it.",
+    "useCase": "Use this before pushing hard for more customers. Pushing for more near capacity often brings slower service, mistakes, and burnout rather than profit, so knowing the bottleneck lets you raise prices, add help, or improve processes first, and sometimes improving profit per customer beats adding more.",
+    "variables": [
+      "BUSINESS TYPE",
+      "CURRENT VOLUME",
+      "YOUR ESTIMATE",
+      "BOTTLENECKS, E.G. MY TIME, PRODUCTION, DELIVERY, CUSTOMER SUPPORT"
+    ],
+    "relatedPromptIds": [
+      "gmetric-profitable-growth",
+      "gmetric-forecast-scenarios",
+      "gmetric-unit-economics"
+    ]
   }
 ]
