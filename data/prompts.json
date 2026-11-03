@@ -37944,5 +37944,370 @@
       "event-sort-contacts",
       "event-host-meetup"
     ]
+  },
+  {
+    "id": "goalset-year-goals",
+    "title": "Set Your Goals for the Year",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "goal-setting",
+    "aiTool": "Claude",
+    "promptText": "Help me set my goals for the coming year as the owner of my [BUSINESS TYPE]. What I want for my business is [BUSINESS HOPES], what I want for my life outside work is [PERSONAL HOPES], how last year actually went is [HONEST SUMMARY], and the time and energy I realistically have is [YOUR CAPACITY]. Help me narrow this to a small number of goals that matter most, with why each matters and what success looks like. Note that long goal lists usually end with most goals abandoned by spring, while two or three goals I genuinely care about get real attention, and goals set without looking honestly at last year tend to repeat the same overreach, so starting from what actually happened makes the new goals far more realistic. Give me the year's goals.",
+    "description": "Narrow your hopes for the year to a few goals grounded in last year's reality.",
+    "useCase": "Use this at the start of a new year. Long goal lists usually end abandoned by spring, while two or three goals you genuinely care about get real attention, and starting from an honest look at last year stops you repeating the same overreach.",
+    "variables": [
+      "BUSINESS TYPE",
+      "BUSINESS HOPES",
+      "PERSONAL HOPES",
+      "HONEST SUMMARY",
+      "YOUR CAPACITY"
+    ],
+    "relatedPromptIds": [
+      "goalset-fewer-goals",
+      "goalset-quarterly-milestones",
+      "goalset-review-past-year"
+    ]
+  },
+  {
+    "id": "goalset-review-past-year",
+    "title": "Review the Past Year Before Setting New Goals",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "goal-setting",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me review the past year honestly before I set new goals. The goals I set were [LAST YEAR'S GOALS], what actually happened was [RESULTS], what surprised me was [UNEXPECTED WINS OR SETBACKS], and how I felt most of the year was [ENERGY AND MOOD IN GENERAL]. Walk me through what worked, what did not, what got in the way, and what I learned. Note that skipping the review and jumping straight to new goals is how people set the same failed goals every year, while honest patterns, like always underestimating time or losing focus mid year, are the most useful input for better goals, and the review should be fair rather than harsh, noting wins that never made the original list. Give me the year in review.",
+    "description": "Look back honestly at last year's goals to learn the patterns before planning.",
+    "useCase": "Use this before setting new goals. Jumping straight to new goals is how people repeat the same failed ones, while honest patterns like underestimating time are the most useful input, and a fair review also counts wins that were never on the original list.",
+    "variables": [
+      "LAST YEAR'S GOALS",
+      "RESULTS",
+      "UNEXPECTED WINS OR SETBACKS",
+      "ENERGY AND MOOD IN GENERAL"
+    ],
+    "relatedPromptIds": [
+      "goalset-year-goals",
+      "goalset-missed-goal",
+      "goalset-review-reset"
+    ]
+  },
+  {
+    "id": "goalset-quick-goals",
+    "title": "Get Quick Help Clarifying a Goal",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "goal-setting",
+    "aiTool": "Grok",
+    "promptText": "I have a vague goal and want it clearer fast. The goal is [YOUR VAGUE GOAL], my deadline is [WHEN], and the reason it matters to me is [WHY]. Rewrite it as one clear, measurable goal with the first three steps, no long explanation, just the goal and steps. Give me the clarified goal.",
+    "description": "Turn a vague goal into one clear, measurable goal with first steps.",
+    "useCase": "Use this when a goal feels fuzzy. One clear measurable version with the first three steps turns an intention into something you can start today, and a quick rewrite now beats waiting for a full planning session that keeps getting postponed.",
+    "variables": [
+      "YOUR VAGUE GOAL",
+      "WHEN",
+      "WHY"
+    ],
+    "relatedPromptIds": [
+      "goalset-make-measurable",
+      "goalset-quarterly-milestones",
+      "goalset-year-goals"
+    ]
+  },
+  {
+    "id": "goalset-fewer-goals",
+    "title": "Cut a Long Goal List Down to What Matters",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "goal-setting",
+    "aiTool": "Claude",
+    "promptText": "Help me cut my goal list down to what matters most. My current list is [ALL YOUR GOALS], my available time each week is [HOURS], and the commitments I already have are [EXISTING WORK AND LIFE COMMITMENTS]. Help me rank the goals by impact and how much I care, choose the few to pursue now, and park the rest without guilt. Note that every extra goal takes time and attention from the others, so a short list usually achieves more than a long one, and parking a goal for later is a decision rather than a failure, which matters because people often keep weak goals on the list simply because removing them feels like giving up. Give me the shortened list and the parked list.",
+    "description": "Rank a long goal list and park the rest without guilt.",
+    "useCase": "Use this when your goal list keeps growing. Every extra goal takes attention from the others, so a short list usually achieves more, and parking a goal is a decision rather than a failure, which helps since people often keep weak goals just because removing them feels like giving up.",
+    "variables": [
+      "ALL YOUR GOALS",
+      "HOURS",
+      "EXISTING WORK AND LIFE COMMITMENTS"
+    ],
+    "relatedPromptIds": [
+      "goalset-year-goals",
+      "goalset-competing-goals",
+      "goalset-values-check"
+    ]
+  },
+  {
+    "id": "goalset-make-measurable",
+    "title": "Make a Goal Clear and Measurable",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "goal-setting",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me turn a vague goal into something clear and measurable. The goal is [YOUR GOAL, E.G. GROW THE BUSINESS, GET HEALTHIER, BE MORE CONFIDENT], why I want it is [THE REASON], and the timeframe is [WHEN]. Rewrite it so I will know clearly whether I achieved it, and suggest a measure I can actually track without much effort. Note that vague goals cannot be reached because there is no finish line, but forcing a number onto everything can also backfire, so the right measure is one I can check simply and that still captures what I really want, rather than a convenient number that misses the point. Give me the measurable goal.",
+    "description": "Give a vague goal a clear finish line you can track easily.",
+    "useCase": "Use this when a goal has no finish line. Vague goals cannot be reached because there is no clear end, but forcing numbers onto everything can backfire, so the right measure is easy to check and still captures what you really want rather than a convenient number that misses the point.",
+    "variables": [
+      "YOUR GOAL, E.G. GROW THE BUSINESS, GET HEALTHIER, BE MORE CONFIDENT",
+      "THE REASON",
+      "WHEN"
+    ],
+    "relatedPromptIds": [
+      "goalset-quick-goals",
+      "goalset-process-goals",
+      "goalset-progress-tracker"
+    ]
+  },
+  {
+    "id": "goalset-process-goals",
+    "title": "Pair Outcome Goals With Process Goals",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "goal-setting",
+    "aiTool": "Gemini",
+    "promptText": "Help me pair my outcome goals with process goals I control. My outcome goals are [RESULTS YOU WANT, E.G. A REVENUE TARGET, NEW CLIENTS, A FINISHED PROJECT], and the things outside my control that affect them are [E.G. THE MARKET, OTHER PEOPLE, TIMING]. For each outcome, suggest a weekly or daily process goal that drives it, like contacting five prospects a week. Note that outcome goals depend partly on things I cannot control, so judging myself only on outcomes can feel like failure even when I did everything right, while process goals are fully in my hands and build the habits that make outcomes more likely, so tracking both gives a fairer and more motivating picture. Give me the paired goals.",
+    "description": "Back each outcome goal with a process goal fully in your control.",
+    "useCase": "Use this when results feel out of your hands. Outcome goals depend partly on things you cannot control, so judging yourself only on outcomes can feel like failure even when you did everything right, while process goals are in your hands and build the habits that make outcomes likely.",
+    "variables": [
+      "RESULTS YOU WANT, E.G. A REVENUE TARGET, NEW CLIENTS, A FINISHED PROJECT",
+      "E.G. THE MARKET, OTHER PEOPLE, TIMING"
+    ],
+    "relatedPromptIds": [
+      "goalset-make-measurable",
+      "goalset-progress-tracker",
+      "goalset-quarterly-milestones"
+    ]
+  },
+  {
+    "id": "goalset-quarterly-milestones",
+    "title": "Break a Big Goal Into Quarterly Milestones",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "goal-setting",
+    "aiTool": "Claude",
+    "promptText": "Help me break a big goal into quarterly milestones. The goal is [YOUR BIG GOAL], the deadline is [WHEN], where I am now is [YOUR STARTING POINT], and the known busy or low periods in my year are [SEASONS, HOLIDAYS, TRAVEL]. Give me a milestone for each quarter, what needs to be true by the end of it, and the main risk to watch. Note that a year long goal feels distant until it is suddenly too late, so quarterly milestones create earlier deadlines that show whether I am on track, and planning around my real busy seasons, rather than assuming every month is equal, keeps the plan honest and avoids a guilt filled scramble in the final quarter. Give me the quarterly milestones.",
+    "description": "Turn a big goal into quarterly milestones that fit your real year.",
+    "useCase": "Use this for goals that take most of a year. A distant deadline feels far away until it is suddenly too late, so quarterly milestones show early whether you are on track, and planning around real busy seasons rather than equal months avoids a guilty final quarter scramble.",
+    "variables": [
+      "YOUR BIG GOAL",
+      "WHEN",
+      "YOUR STARTING POINT",
+      "SEASONS, HOLIDAYS, TRAVEL"
+    ],
+    "relatedPromptIds": [
+      "goalset-year-goals",
+      "goalset-process-goals",
+      "goalset-review-reset"
+    ]
+  },
+  {
+    "id": "goalset-stretch-vs-realistic",
+    "title": "Find the Right Size for a Goal",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "goal-setting",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me decide whether my goal is too small, too big, or about right. The goal is [YOUR GOAL], what I achieved in the same area last year is [YOUR TRACK RECORD], the resources I have are [TIME, MONEY, HELP], and what is changing this year is [ANY NEW ADVANTAGES OR CONSTRAINTS]. Give me an honest read and, if needed, a resized version with a stretch level and a solid baseline. Note that goals set far beyond any past performance without a real change in resources usually lead to discouragement, while goals that are too safe do not motivate, so a common approach is a baseline I am confident of plus a stretch target, which keeps me motivated without making a good year feel like failure. Give me the honest sizing.",
+    "description": "Size a goal against your track record with a baseline and a stretch target.",
+    "useCase": "Use this when unsure if a goal is ambitious or unrealistic. Goals far beyond past performance without new resources usually lead to discouragement, while overly safe goals do not motivate, so a confident baseline plus a stretch target keeps you motivated without making a good year feel like failure.",
+    "variables": [
+      "YOUR GOAL",
+      "YOUR TRACK RECORD",
+      "TIME, MONEY, HELP",
+      "ANY NEW ADVANTAGES OR CONSTRAINTS"
+    ],
+    "relatedPromptIds": [
+      "goalset-make-measurable",
+      "goalset-year-goals",
+      "goalset-missed-goal"
+    ]
+  },
+  {
+    "id": "goalset-values-check",
+    "title": "Check Your Goals Against What You Value",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "goal-setting",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether my goals actually reflect what I value. My goals are [YOUR GOALS], what matters most to me in life is [YOUR VALUES OR PRIORITIES], and where I suspect a goal comes from outside pressure is [E.G. WHAT OTHERS EXPECT, COMPARING TO PEERS, SOCIAL MEDIA]. Go through each goal and ask whether it serves my values or someone else's idea of success. Note that goals borrowed from comparison or other people's expectations are hard to stay motivated for and can feel empty even when achieved, while goals tied to what I genuinely value are easier to stick with, though this is not about dropping ambition, it is about making sure the ambition is mine. Give me the values check.",
+    "description": "Check whether your goals serve your values or someone else's idea of success.",
+    "useCase": "Use this when a goal feels heavy or hollow. Goals borrowed from comparison or others' expectations are hard to stay motivated for and can feel empty when achieved, while goals tied to what you genuinely value are easier to stick with, which is about making ambition yours, not dropping it.",
+    "variables": [
+      "YOUR GOALS",
+      "YOUR VALUES OR PRIORITIES",
+      "E.G. WHAT OTHERS EXPECT, COMPARING TO PEERS, SOCIAL MEDIA"
+    ],
+    "relatedPromptIds": [
+      "goalset-fewer-goals",
+      "goalset-life-balance",
+      "goalset-year-goals"
+    ]
+  },
+  {
+    "id": "goalset-life-balance",
+    "title": "Set Goals Across Work and Life",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "goal-setting",
+    "aiTool": "Gemini",
+    "promptText": "Help me set goals that balance my business with the rest of my life. My business goals are [YOUR WORK GOALS], the areas of life I have been neglecting are [E.G. HEALTH, FAMILY, FRIENDSHIPS, REST, LEARNING, HOBBIES], and my real weekly time is [HOURS AVAILABLE]. Suggest one small goal for each neglected area that fits alongside my work goals, and flag where my plans compete for the same time. Note that business owners often let everything outside work slide while chasing growth, which tends to catch up later through burnout or strained relationships, and life goals do not need to be ambitious to matter, since a small consistent commitment usually does more than a big plan that work crowds out within weeks. Give me the balanced goals.",
+    "description": "Add small, realistic goals for neglected areas of life alongside work goals.",
+    "useCase": "Use this when work has taken over everything. Owners often let life outside work slide while chasing growth, which catches up later through burnout or strained relationships, and small consistent life goals usually do more than big plans that work crowds out within weeks.",
+    "variables": [
+      "YOUR WORK GOALS",
+      "E.G. HEALTH, FAMILY, FRIENDSHIPS, REST, LEARNING, HOBBIES",
+      "HOURS AVAILABLE"
+    ],
+    "relatedPromptIds": [
+      "goalset-values-check",
+      "goalset-competing-goals",
+      "goalset-year-goals"
+    ]
+  },
+  {
+    "id": "goalset-competing-goals",
+    "title": "Resolve Goals That Compete for Your Time",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "goal-setting",
+    "aiTool": "Claude",
+    "promptText": "Help me sort out goals that pull against each other. The goals in conflict are [E.G. GROW FAST AND WORK FEWER HOURS, SAVE MONEY AND INVEST IN THE BUSINESS], my priorities right now are [WHAT MATTERS MOST THIS SEASON], and my constraints are [TIME, MONEY, ENERGY]. Help me see the real tradeoff, decide which takes priority for this season, and adjust the other so both can coexist. Note that some goals genuinely conflict, and pretending I can push both at full speed usually means doing both badly, so choosing which leads for a season, and scaling the other down rather than dropping it, is often more realistic, and the priority can change in a later season. Give me the tradeoff and decision.",
+    "description": "Choose which competing goal leads this season and scale the other down.",
+    "useCase": "Use this when two goals pull in opposite directions. Pretending you can push conflicting goals at full speed usually means doing both badly, so choosing which leads for a season and scaling the other down rather than dropping it is more realistic, and the priority can change later.",
+    "variables": [
+      "E.G. GROW FAST AND WORK FEWER HOURS, SAVE MONEY AND INVEST IN THE BUSINESS",
+      "WHAT MATTERS MOST THIS SEASON",
+      "TIME, MONEY, ENERGY"
+    ],
+    "relatedPromptIds": [
+      "goalset-fewer-goals",
+      "goalset-life-balance",
+      "goalset-anti-goals"
+    ]
+  },
+  {
+    "id": "goalset-anti-goals",
+    "title": "Define Your Anti Goals",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "goal-setting",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me define anti goals, the things I want to avoid while chasing my goals. My main goals are [YOUR GOALS], the outcomes I would hate to end up with are [E.G. WORKING EVERY WEEKEND, DEPENDING ON ONE CLIENT, MISSING FAMILY TIME, GOING INTO DEBT], and past situations I never want to repeat are [WHAT YOU LEARNED THE HARD WAY]. Turn these into a short list of anti goals and the warning signs that I am drifting toward them. Note that pursuing a goal at any cost can quietly lead somewhere I never wanted to be, so naming what I refuse to trade away makes the limits clear before pressure builds, and anti goals are often easier to act on than goals, since spotting a warning sign early is simpler than recovering after the fact. Give me the anti goals.",
+    "description": "Name what you refuse to trade away and the warning signs of drifting there.",
+    "useCase": "Use this alongside your goals. Pursuing a goal at any cost can quietly lead somewhere you never wanted to be, so naming what you refuse to trade away sets limits before pressure builds, and spotting a warning sign early is simpler than recovering after the fact.",
+    "variables": [
+      "YOUR GOALS",
+      "E.G. WORKING EVERY WEEKEND, DEPENDING ON ONE CLIENT, MISSING FAMILY TIME, GOING INTO DEBT",
+      "WHAT YOU LEARNED THE HARD WAY"
+    ],
+    "relatedPromptIds": [
+      "goalset-competing-goals",
+      "goalset-values-check",
+      "goalset-life-balance"
+    ]
+  },
+  {
+    "id": "goalset-progress-tracker",
+    "title": "Set Up a Simple Goal Tracker",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "goal-setting",
+    "aiTool": "Gemini",
+    "promptText": "Help me set up a simple way to track progress on my goals. My goals and measures are [YOUR GOALS AND HOW YOU MEASURE THEM], the tool I will actually use is [E.G. A NOTEBOOK, SPREADSHEET, NOTES APP, CALENDAR], and how often I can check in is [FREQUENCY]. Give me a tracker layout and a short check in routine I can keep up. Note that most goal tracking systems are abandoned because they take too long to update, so the best tracker is the simplest one I will actually use, with just a few numbers or checkmarks, and a quick weekly look at progress is what turns a goal from something I set once into something I steer throughout the year. Give me the tracker and routine.",
+    "description": "Set up a simple tracker and check in routine you will actually keep.",
+    "useCase": "Use this once your goals are set. Most tracking systems are abandoned because they take too long to update, so the best tracker is the simplest one you will use, and a quick weekly look turns a goal from something set once into something you steer all year.",
+    "variables": [
+      "YOUR GOALS AND HOW YOU MEASURE THEM",
+      "E.G. A NOTEBOOK, SPREADSHEET, NOTES APP, CALENDAR",
+      "FREQUENCY"
+    ],
+    "relatedPromptIds": [
+      "goalset-process-goals",
+      "goalset-review-reset",
+      "goalset-accountability"
+    ]
+  },
+  {
+    "id": "goalset-accountability",
+    "title": "Set Up Accountability That Actually Helps",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "goal-setting",
+    "aiTool": "Claude",
+    "promptText": "Help me set up accountability for my goals that motivates rather than shames me. My goals are [YOUR GOALS], the people or communities I could involve are [E.G. A FRIEND, A MASTERMIND, A COACH, AN ONLINE GROUP, NOBODY YET], and what has worked or failed for me before is [PAST EXPERIENCE]. Suggest an accountability setup with how often to check in, what to share, and how to handle weeks when I fall short. Note that accountability works best with someone who is supportive but honest, and with regular check ins focused on actions rather than outcomes, while public announcements alone can sometimes reduce motivation by giving a premature sense of achievement, and accountability that relies on shame tends to make people avoid checking in exactly when they need it most. Give me the accountability setup.",
+    "description": "Set up supportive, honest accountability focused on actions, not shame.",
+    "useCase": "Use this when you struggle to follow through alone. Accountability works best with someone supportive but honest and check ins on actions rather than outcomes, while public announcements alone can sap motivation, and shame based setups make people avoid checking in exactly when they need it most.",
+    "variables": [
+      "YOUR GOALS",
+      "E.G. A FRIEND, A MASTERMIND, A COACH, AN ONLINE GROUP, NOBODY YET",
+      "PAST EXPERIENCE"
+    ],
+    "relatedPromptIds": [
+      "goalset-progress-tracker",
+      "goalset-review-reset",
+      "goalset-missed-goal"
+    ]
+  },
+  {
+    "id": "goalset-review-reset",
+    "title": "Run a Quarterly Goal Review and Reset",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "goal-setting",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me run a quarterly review of my goals. My goals and milestones were [YOUR GOALS AND QUARTER MILESTONES], what actually happened is [PROGRESS AND RESULTS], and what changed in my life or business is [NEW CIRCUMSTANCES]. Walk me through what is on track, what is behind and why, whether each goal still matters, and what to change for next quarter. Note that goals set in January often no longer fit by mid year because life and business change, so adjusting a goal based on new information is smart rather than a failure, while the review should separate goals that need more effort from goals that need rethinking, since pushing harder on the wrong goal wastes a quarter. Give me the quarterly review.",
+    "description": "Review goals each quarter and adjust them as circumstances change.",
+    "useCase": "Use this every three months. Goals set in January often no longer fit by mid year, so adjusting based on new information is smart rather than failure, and separating goals that need more effort from those that need rethinking keeps you from wasting a quarter pushing the wrong one.",
+    "variables": [
+      "YOUR GOALS AND QUARTER MILESTONES",
+      "PROGRESS AND RESULTS",
+      "NEW CIRCUMSTANCES"
+    ],
+    "relatedPromptIds": [
+      "goalset-quarterly-milestones",
+      "goalset-progress-tracker",
+      "goalset-missed-goal"
+    ]
+  },
+  {
+    "id": "goalset-missed-goal",
+    "title": "Recover After Missing a Goal",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "goal-setting",
+    "aiTool": "Claude",
+    "promptText": "Help me process missing a goal and decide what to do next. The goal was [THE GOAL], how far I got is [YOUR RESULT], what got in the way is [THE OBSTACLES, HONESTLY], and how I feel about it is [YOUR REACTION]. Help me separate what was in my control from what was not, what I can learn, and whether to retry, resize, or let it go. Note that missing a goal is common and often teaches more than hitting one, but harsh self criticism tends to make people avoid setting goals at all, so the useful response is a fair look at what happened, credit for the progress made, and a clear decision about the next step rather than quietly pretending the goal never existed. Give me the recovery reflection.",
+    "description": "Learn from a missed goal fairly and decide to retry, resize, or let it go.",
+    "useCase": "Use this when a goal did not work out. Missing goals is common and often teaches more than hitting them, but harsh self criticism makes people stop setting goals at all, so a fair look at what happened, credit for progress, and a clear next decision beats quietly pretending it never existed.",
+    "variables": [
+      "THE GOAL",
+      "YOUR RESULT",
+      "THE OBSTACLES, HONESTLY",
+      "YOUR REACTION"
+    ],
+    "relatedPromptIds": [
+      "goalset-review-reset",
+      "goalset-stretch-vs-realistic",
+      "goalset-review-past-year"
+    ]
+  },
+  {
+    "id": "goalset-low-energy-season",
+    "title": "Set Goals During a Hard or Low Energy Season",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "goal-setting",
+    "aiTool": "Gemini",
+    "promptText": "Help me set goals for a period when my energy or capacity is limited. What is going on is [E.G. A BUSY FAMILY PERIOD, A MOVE, RECOVERY, A SLOW BUSINESS SEASON, STRESS], what I still need to keep going is [THE ESSENTIALS], and what I would like to make some progress on is [SMALL HOPES]. Help me set minimum goals that protect the essentials and one or two small wins, without guilt about doing less. Note that holding myself to full speed goals during a hard season usually leads to feeling like a failure, while smaller maintenance goals keep momentum and self respect intact until things ease, and if the hard season involves ongoing exhaustion or low mood, talking to someone I trust or a professional matters more than any goal plan. Give me the low energy season goals.",
+    "description": "Set minimum goals that protect essentials during a hard season.",
+    "useCase": "Use this when life is heavy or energy is low. Full speed goals in a hard season usually lead to feeling like a failure, while smaller maintenance goals keep momentum and self respect until things ease, and ongoing exhaustion or low mood is worth talking to someone about rather than planning around.",
+    "variables": [
+      "E.G. A BUSY FAMILY PERIOD, A MOVE, RECOVERY, A SLOW BUSINESS SEASON, STRESS",
+      "THE ESSENTIALS",
+      "SMALL HOPES"
+    ],
+    "relatedPromptIds": [
+      "goalset-life-balance",
+      "goalset-missed-goal",
+      "goalset-fewer-goals"
+    ]
+  },
+  {
+    "id": "goalset-identity-goals",
+    "title": "Frame Goals Around Who You Want to Become",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "goal-setting",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me frame a goal around the kind of person I want to become, not just the result. The result I want is [YOUR GOAL], the kind of person who achieves this naturally is [E.G. SOMEONE WHO WRITES EVERY DAY, A FOUNDER WHO KNOWS THEIR NUMBERS], and the habits that person would have are [YOUR GUESSES]. Help me write an identity statement and a few small daily or weekly actions that prove it to myself. Note that results come and go, but seeing myself as the kind of person who does the work makes habits stick longer, and each small action counts as evidence for the new identity, so starting with tiny actions I can do consistently matters more than big efforts, though the identity should stay realistic rather than a fantasy version of me. Give me the identity framing.",
+    "description": "Frame a goal as who you want to become, backed by small proving actions.",
+    "useCase": "Use this when you keep starting and stopping. Seeing yourself as the kind of person who does the work makes habits stick longer than chasing results, and each small consistent action is evidence for that identity, as long as it stays realistic rather than a fantasy version of you.",
+    "variables": [
+      "YOUR GOAL",
+      "E.G. SOMEONE WHO WRITES EVERY DAY, A FOUNDER WHO KNOWS THEIR NUMBERS",
+      "YOUR GUESSES"
+    ],
+    "relatedPromptIds": [
+      "goalset-process-goals",
+      "goalset-values-check",
+      "goalset-progress-tracker"
+    ]
   }
 ]
