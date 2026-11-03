@@ -34832,5 +34832,394 @@
       "perf-defensive-reaction",
       "perf-ask-for-feedback"
     ]
+  },
+  {
+    "id": "brief-project-builder",
+    "title": "Build a Complete Project Brief for a Contractor",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "contractor-briefs",
+    "aiTool": "Claude",
+    "promptText": "Help me build a complete project brief for a contractor working with my [BUSINESS TYPE]. The project is [WHAT YOU NEED DONE], why I need it and who it is for is [THE GOAL AND AUDIENCE], my budget and deadline are [BUDGET AND DATE], and what I already have is [FILES, EXAMPLES, ACCESS]. Give me a brief with background, goal, deliverables, what is out of scope, deadline, budget, how work will be reviewed, and who to contact. Note that most contractor problems come from briefs that seemed clear to me but left key decisions unstated, so the brief should answer the questions a good contractor would otherwise have to ask, and a contractor guessing at what I want usually means paying for a second round. Give me the project brief.",
+    "description": "Build a full contractor brief that answers the questions a good contractor would ask.",
+    "useCase": "Use this before hiring anyone for a project. Most contractor problems come from briefs that seemed clear but left key decisions unstated, so answering the questions a good contractor would ask up front saves paying for a second round of guesswork.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU NEED DONE",
+      "THE GOAL AND AUDIENCE",
+      "BUDGET AND DATE",
+      "FILES, EXAMPLES, ACCESS"
+    ],
+    "relatedPromptIds": [
+      "brief-scope-limits",
+      "brief-acceptance-criteria",
+      "brief-gap-check"
+    ]
+  },
+  {
+    "id": "brief-scope-limits",
+    "title": "Define What Is In and Out of Scope",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "contractor-briefs",
+    "aiTool": "Claude",
+    "promptText": "Help me define the scope of a contractor project for my [BUSINESS TYPE] so it does not grow out of control. The project is [THE WORK], the deliverables I need are [THE DELIVERABLES], and the extras I might be tempted to add later are [LIKELY ADD ONS]. Give me a clear in scope list, an out of scope list, and a sentence on how extra requests will be handled and priced. Note that scope creep usually comes from me, not the contractor, as one more small thing gets added mid project, which causes delays, frustration, and disputes about price, so naming what is out of scope up front protects the relationship and the budget, and it makes it easy to say that is a separate job when ideas come up. Give me the scope section.",
+    "description": "Set clear in scope and out of scope lists to prevent scope creep.",
+    "useCase": "Use this before a project starts. Scope creep usually comes from the client adding one more small thing mid project, causing delays and price disputes, so naming what is out of scope up front protects the budget and the relationship and makes new ideas easy to treat as separate jobs.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE WORK",
+      "THE DELIVERABLES",
+      "LIKELY ADD ONS"
+    ],
+    "relatedPromptIds": [
+      "brief-project-builder",
+      "brief-change-request",
+      "brief-revisions-policy"
+    ]
+  },
+  {
+    "id": "brief-quick-brief",
+    "title": "Get a Quick Contractor Brief",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "contractor-briefs",
+    "aiTool": "Grok",
+    "promptText": "I need a short brief for a contractor right now. The job is [WHAT YOU NEED], the deadline is [DATE], the budget is [AMOUNT], and the one thing they must get right is [THE PRIORITY]. Give me a short clear brief I can paste into a message, no explanation, just the brief. Give me the brief.",
+    "description": "Get a short paste ready contractor brief for a quick job.",
+    "useCase": "Use this for small, quick jobs. A short brief covering the task, deadline, budget, and the one thing that must be right is enough for simple work, and sending something clear now beats either no brief or a long one that delays a small job.",
+    "variables": [
+      "WHAT YOU NEED",
+      "DATE",
+      "AMOUNT",
+      "THE PRIORITY"
+    ],
+    "relatedPromptIds": [
+      "brief-project-builder",
+      "brief-gap-check",
+      "brief-acceptance-criteria"
+    ]
+  },
+  {
+    "id": "brief-acceptance-criteria",
+    "title": "Define What Done Looks Like",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "contractor-briefs",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write clear acceptance criteria for a contractor project for my [BUSINESS TYPE]. The deliverable is [WHAT THEY WILL HAND OVER], what it needs to do or achieve is [THE REQUIREMENTS], and the format I need it in is [FILE TYPES, PLATFORMS, SIZES]. Give me a short checklist that defines when the work counts as finished and accepted. Note that disagreements about whether work is done are one of the most common contractor disputes, especially when payment depends on it, so a checklist agreed at the start turns a subjective argument into a simple check, though it should cover what genuinely matters rather than every personal preference. Give me the acceptance criteria.",
+    "description": "Define a checklist for when contractor work counts as finished.",
+    "useCase": "Use this when payment depends on the work being done. Disagreements over whether work is finished are one of the most common contractor disputes, so a checklist agreed at the start turns an argument into a simple check, as long as it covers what genuinely matters.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THEY WILL HAND OVER",
+      "THE REQUIREMENTS",
+      "FILE TYPES, PLATFORMS, SIZES"
+    ],
+    "relatedPromptIds": [
+      "brief-project-builder",
+      "brief-payment-milestones",
+      "brief-review-feedback-rounds"
+    ]
+  },
+  {
+    "id": "brief-revisions-policy",
+    "title": "Set Revision Rounds in the Brief",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "contractor-briefs",
+    "aiTool": "Gemini",
+    "promptText": "Help me set the revision terms for a contractor project for my [BUSINESS TYPE]. The type of work is [DESIGN, WRITING, VIDEO, CODE, OTHER], how many rounds of changes I expect to need is [YOUR GUESS], and how I will give feedback is [HOW]. Give me a short revisions section stating how many rounds are included, what counts as a revision versus new work, and how extra rounds are handled. Note that unlimited revisions sound good for me but often lead to slower, defensive work and strained relationships, while clear limits push me to give complete feedback each round, and the difference between a revision and a new request is worth stating plainly to avoid surprise bills. Give me the revisions section.",
+    "description": "Set clear revision rounds and separate revisions from new work.",
+    "useCase": "Use this for creative or technical work that may need changes. Unlimited revisions often lead to slower, defensive work and strained relationships, while clear limits push you to give complete feedback each round, and stating what counts as new work avoids surprise bills.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DESIGN, WRITING, VIDEO, CODE, OTHER",
+      "YOUR GUESS",
+      "HOW"
+    ],
+    "relatedPromptIds": [
+      "brief-scope-limits",
+      "brief-review-feedback-rounds",
+      "brief-acceptance-criteria"
+    ]
+  },
+  {
+    "id": "brief-payment-milestones",
+    "title": "Structure Payment Milestones",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "contractor-briefs",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me structure payment for a contractor project for my [BUSINESS TYPE]. The total budget is [AMOUNT AND CURRENCY], the project length is [DURATION], how I will pay is [BANK TRANSFER, PLATFORM, WALLET, OTHER], and the natural stages of the work are [STAGES]. Suggest a milestone payment plan tied to deliverables, with clear triggers for each payment. Note that paying everything up front puts all the risk on me while paying only at the end puts it on them, so milestones tied to finished stages share the risk fairly, and paying on time as agreed is one of the main reasons good freelancers keep choosing to work with a client, while cross border payments can carry fees and delays worth agreeing on in advance. Give me the payment plan.",
+    "description": "Split contractor payments into milestones tied to finished deliverables.",
+    "useCase": "Use this for projects larger than a quick job. Paying all up front puts the risk on you and paying only at the end puts it on them, so milestones tied to finished stages share risk fairly, and agreeing on cross border fees and timing in advance avoids friction.",
+    "variables": [
+      "BUSINESS TYPE",
+      "AMOUNT AND CURRENCY",
+      "DURATION",
+      "BANK TRANSFER, PLATFORM, WALLET, OTHER",
+      "STAGES"
+    ],
+    "relatedPromptIds": [
+      "brief-acceptance-criteria",
+      "brief-project-builder",
+      "brief-retainer-brief"
+    ]
+  },
+  {
+    "id": "brief-reference-examples",
+    "title": "Explain Your Taste With Reference Examples",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "contractor-briefs",
+    "aiTool": "Claude",
+    "promptText": "Help me explain the style or quality I want to a contractor using reference examples for my [BUSINESS TYPE]. The work is [WHAT THEY ARE MAKING], examples I like are [LINKS OR DESCRIPTIONS], what I like about each is [WHAT SPECIFICALLY], and examples I dislike are [WHAT TO AVOID AND WHY]. Turn this into a clear references section that tells the contractor what to take from each example and what not to copy. Note that words like modern, clean, or professional mean different things to different people, so concrete examples communicate taste far better, but only if I say what specifically I like in each, since a contractor shown a reference without explanation may copy the wrong thing, and examples I dislike are often just as useful. Give me the references section.",
+    "description": "Turn reference examples into clear guidance on the style you want.",
+    "useCase": "Use this for creative work where taste matters. Words like modern or clean mean different things to different people, so concrete examples communicate far better, but only if you say what you like in each, and examples you dislike are often just as useful.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THEY ARE MAKING",
+      "LINKS OR DESCRIPTIONS",
+      "WHAT SPECIFICALLY",
+      "WHAT TO AVOID AND WHY"
+    ],
+    "relatedPromptIds": [
+      "brief-project-builder",
+      "brief-design-brief",
+      "brief-writing-brief"
+    ]
+  },
+  {
+    "id": "brief-writing-brief",
+    "title": "Write a Brief for a Freelance Writer",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "contractor-briefs",
+    "aiTool": "Gemini",
+    "promptText": "Help me write a brief for a freelance writer creating content for my [BUSINESS TYPE]. The piece is [TYPE, E.G. BLOG POST, WEBSITE COPY, EMAIL SERIES], the audience is [WHO WILL READ IT], the goal is [WHAT IT SHOULD ACHIEVE], key points or sources to use are [WHAT TO INCLUDE], and the length and tone are [LENGTH AND VOICE]. Give me a writer brief including keywords if relevant, what to avoid, and how I will review it. Note that a writer can only be as accurate as the information I give, so sharing my real expertise, examples, and opinions makes the result sound like my business rather than generic filler, and being clear about facts that must be checked or claims I cannot make saves risky edits later. Give me the writer brief.",
+    "description": "Brief a freelance writer with the audience, goal, voice, and facts to use.",
+    "useCase": "Use this when hiring someone to write for you. A writer can only be as accurate as what you give them, so sharing your expertise, examples, and opinions makes the piece sound like your business rather than filler, and flagging claims you cannot make saves risky edits later.",
+    "variables": [
+      "BUSINESS TYPE",
+      "TYPE, E.G. BLOG POST, WEBSITE COPY, EMAIL SERIES",
+      "WHO WILL READ IT",
+      "WHAT IT SHOULD ACHIEVE",
+      "WHAT TO INCLUDE",
+      "LENGTH AND VOICE"
+    ],
+    "relatedPromptIds": [
+      "brief-reference-examples",
+      "brief-project-builder",
+      "brief-review-feedback-rounds"
+    ]
+  },
+  {
+    "id": "brief-design-brief",
+    "title": "Write a Brief for a Freelance Designer",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "contractor-briefs",
+    "aiTool": "Claude",
+    "promptText": "Help me write a brief for a freelance designer working on [WHAT THEY ARE DESIGNING, E.G. SOCIAL GRAPHICS, PACKAGING, A FLYER, A WEBSITE PAGE] for my [BUSINESS TYPE]. Who it is for is [THE AUDIENCE], my existing brand assets are [LOGO, COLORS, FONTS, OR NONE], where it will be used and in what sizes is [FORMATS], and the text or content that must appear is [THE CONTENT]. Give me a design brief covering purpose, audience, assets, formats, required content, and the files I need back. Note that designers lose a lot of time waiting for final text and missing assets, and getting a beautiful design in the wrong size or without editable source files is a common frustration, so the brief should supply the content up front and state exactly which files and formats I need delivered. Give me the design brief.",
+    "description": "Brief a designer with content, assets, formats, and the files you need back.",
+    "useCase": "Use this when hiring a designer for non logo work. Designers lose time waiting on final text and missing assets, and getting a great design in the wrong size or without editable files is a common frustration, so supplying content up front and naming the files you need back avoids both.",
+    "variables": [
+      "WHAT THEY ARE DESIGNING, E.G. SOCIAL GRAPHICS, PACKAGING, A FLYER, A WEBSITE PAGE",
+      "BUSINESS TYPE",
+      "THE AUDIENCE",
+      "LOGO, COLORS, FONTS, OR NONE",
+      "FORMATS",
+      "THE CONTENT"
+    ],
+    "relatedPromptIds": [
+      "brief-reference-examples",
+      "brief-ownership-and-files",
+      "brief-revisions-policy"
+    ]
+  },
+  {
+    "id": "brief-video-editor",
+    "title": "Write a Brief for a Video Editor",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "contractor-briefs",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write a brief for a video editor for my [BUSINESS TYPE]. The footage I have is [WHAT AND HOW MUCH], the finished video should be [LENGTH, PLATFORM, ASPECT RATIO], the goal is [WHAT THE VIDEO SHOULD DO], and the style I want is [PACE, MUSIC, CAPTIONS, BRANDING]. Give me an editing brief with the story or structure, must include moments, style notes, captions and branding, and delivery formats. Note that editors cannot read my mind about which moments matter, so marking timestamps for the key parts and stating the target length and platform saves rounds of back and forth, and I should confirm I have the rights to any music or footage I hand over, since licensing problems fall on my business. Give me the video editing brief.",
+    "description": "Brief a video editor with structure, key moments, style, and delivery formats.",
+    "useCase": "Use this when handing footage to an editor. Editors cannot guess which moments matter, so marking timestamps and stating the target length and platform saves rounds of revisions, and confirming you have rights to any music or footage avoids licensing problems that fall on you.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT AND HOW MUCH",
+      "LENGTH, PLATFORM, ASPECT RATIO",
+      "WHAT THE VIDEO SHOULD DO",
+      "PACE, MUSIC, CAPTIONS, BRANDING"
+    ],
+    "relatedPromptIds": [
+      "brief-reference-examples",
+      "brief-revisions-policy",
+      "brief-ownership-and-files"
+    ]
+  },
+  {
+    "id": "brief-va-tasks",
+    "title": "Brief a Virtual Assistant on Recurring Tasks",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "contractor-briefs",
+    "aiTool": "Gemini",
+    "promptText": "Help me brief a virtual assistant on recurring tasks for my [BUSINESS TYPE]. The tasks are [WHAT THEY WILL DO REGULARLY], how often each happens is [DAILY, WEEKLY, MONTHLY], the tools involved are [APPS AND ACCOUNTS], and the decisions they can make alone versus check with me are [YOUR LIMITS]. Give me a task brief with a short step by step for each task, how to report back, and what to do when something unusual comes up. Note that a virtual assistant works from instructions rather than context, so steps that seem obvious to me need writing down, and a clear rule for when to stop and ask prevents both endless questions and costly guesses, while giving access only to what each task needs protects my accounts. Give me the VA task brief.",
+    "description": "Brief a virtual assistant with step by step tasks and clear decision limits.",
+    "useCase": "Use this when handing routine work to a VA. A VA works from instructions rather than context, so obvious seeming steps need writing down, a clear rule for when to ask prevents both endless questions and costly guesses, and limited access protects your accounts.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THEY WILL DO REGULARLY",
+      "DAILY, WEEKLY, MONTHLY",
+      "APPS AND ACCOUNTS",
+      "YOUR LIMITS"
+    ],
+    "relatedPromptIds": [
+      "brief-retainer-brief",
+      "brief-access-handover",
+      "brief-project-builder"
+    ]
+  },
+  {
+    "id": "brief-retainer-brief",
+    "title": "Write a Brief for Ongoing Retainer Work",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "contractor-briefs",
+    "aiTool": "Claude",
+    "promptText": "Help me write a brief for an ongoing retainer with a contractor for my [BUSINESS TYPE]. The ongoing work is [WHAT THEY WILL DO EACH MONTH], the monthly amount or hours is [THE RETAINER], how requests will come in is [HOW YOU WILL ASSIGN WORK], and how often we will review it is [FREQUENCY]. Give me a retainer brief covering what is included each month, turnaround times, how unused or extra hours are handled, reporting, and how either side can end it. Note that retainers work well for steady needs but go wrong when the monthly scope is vague, leaving one side feeling short changed, so stating what a month covers and how overflow is handled keeps it fair, and a regular review lets us adjust before frustration builds. Give me the retainer brief.",
+    "description": "Brief an ongoing retainer with monthly scope, turnaround, and overflow rules.",
+    "useCase": "Use this for steady, ongoing contractor work. Retainers go wrong when monthly scope is vague and one side feels short changed, so stating what a month covers, how unused or extra hours work, and reviewing regularly keeps the arrangement fair before frustration builds.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THEY WILL DO EACH MONTH",
+      "THE RETAINER",
+      "HOW YOU WILL ASSIGN WORK",
+      "FREQUENCY"
+    ],
+    "relatedPromptIds": [
+      "brief-va-tasks",
+      "brief-payment-milestones",
+      "brief-scope-limits"
+    ]
+  },
+  {
+    "id": "brief-access-handover",
+    "title": "Plan What Access a Contractor Gets",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "contractor-briefs",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me plan what access a contractor needs for a project with my [BUSINESS TYPE] and how to give it safely. The work is [THE PROJECT], the systems involved are [WEBSITE, HOSTING, SOCIAL ACCOUNTS, DRIVE, PAYMENT TOOLS, CUSTOMER DATA], and the project length is [DURATION]. Give me a list of what access they need, the safest way to grant each, like a separate user or limited role instead of my own login, and a checklist for removing access when the work ends. Note that handing a contractor my main password is convenient but means they can do anything and I cannot easily take it back, so limited, individual access is much safer, and forgotten access after a project ends is a common security gap for small businesses. Give me the access plan.",
+    "description": "Give a contractor only the access they need and plan to remove it afterward.",
+    "useCase": "Use this before sharing any logins with a contractor. Handing over your main password means they can do anything and you cannot easily take it back, so limited individual access is safer, and forgotten access after a project ends is a common small business security gap.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PROJECT",
+      "WEBSITE, HOSTING, SOCIAL ACCOUNTS, DRIVE, PAYMENT TOOLS, CUSTOMER DATA",
+      "DURATION"
+    ],
+    "relatedPromptIds": [
+      "brief-va-tasks",
+      "brief-ownership-and-files",
+      "brief-project-builder"
+    ]
+  },
+  {
+    "id": "brief-ownership-and-files",
+    "title": "State File Delivery and Ownership in the Brief",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "contractor-briefs",
+    "aiTool": "Claude",
+    "promptText": "Help me write the delivery and ownership section of a contractor brief for my [BUSINESS TYPE]. The work produced will be [WHAT THEY CREATE], the files I need at the end are [FINAL FILES, SOURCE FILES, EDITABLE VERSIONS, CODE REPOSITORY], and how I plan to use it is [WHERE AND HOW LONG]. Give me a clear section stating what files get delivered, where, and who owns the work once paid, plus questions to confirm with the contractor. Note that many small businesses discover too late that they only received a flattened image or that the contractor still owns the code or source files, which makes future edits costly, so ownership and source files should be agreed in writing up front, and ownership rules vary by country, so a proper contract matters for anything important. Give me the delivery and ownership section.",
+    "description": "Agree up front on which files you receive and who owns the work.",
+    "useCase": "Use this for any work you will want to edit or reuse later. Many businesses discover too late they only got a flattened image or the contractor still owns the source files or code, so agreeing files and ownership in writing up front matters, along with a proper contract for important work.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THEY CREATE",
+      "FINAL FILES, SOURCE FILES, EDITABLE VERSIONS, CODE REPOSITORY",
+      "WHERE AND HOW LONG"
+    ],
+    "relatedPromptIds": [
+      "brief-design-brief",
+      "brief-access-handover",
+      "brief-acceptance-criteria"
+    ]
+  },
+  {
+    "id": "brief-gap-check",
+    "title": "Check a Brief for Missing Information",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "contractor-briefs",
+    "aiTool": "Gemini",
+    "promptText": "Help me check my contractor brief for gaps before I send it for my [BUSINESS TYPE]. Here is the brief: [PASTE THE BRIEF], and the type of contractor is [WHO THEY ARE]. Read it as that contractor would and list the questions they would need to ask before starting, plus anything vague, contradictory, or missing like budget, deadline, formats, or how work is approved. Note that a contractor who must email ten questions before starting loses momentum and may quote higher to cover the uncertainty, while some will simply guess, so catching gaps before sending is faster for both sides, and if I cannot answer a question myself, that is a decision I need to make first. Give me the gaps and questions.",
+    "description": "Read your brief as the contractor would and find the missing answers.",
+    "useCase": "Use this before sending any brief. A contractor facing many unanswered questions loses momentum, may quote higher to cover uncertainty, or simply guesses, so catching gaps first is faster for both sides, and a question you cannot answer is a decision you need to make first.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THE BRIEF",
+      "WHO THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "brief-project-builder",
+      "brief-quick-brief",
+      "brief-scope-limits"
+    ]
+  },
+  {
+    "id": "brief-review-feedback-rounds",
+    "title": "Give Feedback on a Contractor's First Draft",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "contractor-briefs",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me give clear, consolidated feedback on a contractor's first draft for my [BUSINESS TYPE]. The brief asked for [WHAT WAS AGREED], the draft I received is [DESCRIBE IT], what works is [THE GOOD PARTS], and what needs changing is [THE CHANGES]. Turn this into one organized feedback message with specific changes, priorities, and anything that is a change from the original brief. Note that scattered feedback sent in several messages, or vague notes like make it pop, cost revision rounds and frustrate good contractors, so one complete, specific message tied to the brief gets better results, and being honest when I changed my mind rather than presenting it as their mistake keeps the relationship fair. Give me the feedback message.",
+    "description": "Turn reactions to a draft into one clear, consolidated feedback message.",
+    "useCase": "Use this when a contractor sends a draft. Scattered feedback across several messages or vague notes like make it pop waste revision rounds, so one complete, specific message tied to the brief gets better results, and owning changes of mind keeps the relationship fair.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT WAS AGREED",
+      "DESCRIBE IT",
+      "THE GOOD PARTS",
+      "THE CHANGES"
+    ],
+    "relatedPromptIds": [
+      "brief-revisions-policy",
+      "brief-acceptance-criteria",
+      "brief-change-request"
+    ]
+  },
+  {
+    "id": "brief-change-request",
+    "title": "Request a Change to Agreed Scope",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "contractor-briefs",
+    "aiTool": "Claude",
+    "promptText": "Help me ask a contractor for a change to the agreed work for my [BUSINESS TYPE]. The original scope was [WHAT WAS AGREED], what I now want to add or change is [THE CHANGE], why it changed is [THE REASON], and my budget and timing flexibility is [WHAT YOU CAN OFFER]. Write a clear message acknowledging this is new work and asking for their cost and time impact. Note that framing a scope change as a quick tweak when it is really new work damages trust and leads to rushed or resentful work, while openly asking what it will cost and how it affects the deadline treats the contractor fairly and keeps quality up, and getting the change confirmed in writing avoids disputes at payment time. Give me the change request message.",
+    "description": "Ask openly for a scope change and its cost and timing impact.",
+    "useCase": "Use this when you need more than was agreed. Framing new work as a quick tweak damages trust and leads to rushed or resentful work, while openly asking about cost and deadline impact treats the contractor fairly, and confirming the change in writing avoids disputes at payment time.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT WAS AGREED",
+      "THE CHANGE",
+      "THE REASON",
+      "WHAT YOU CAN OFFER"
+    ],
+    "relatedPromptIds": [
+      "brief-scope-limits",
+      "brief-review-feedback-rounds",
+      "brief-payment-milestones"
+    ]
+  },
+  {
+    "id": "brief-end-of-project",
+    "title": "Wrap Up a Contractor Project Cleanly",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "contractor-briefs",
+    "aiTool": "Gemini",
+    "promptText": "Help me wrap up a finished contractor project for my [BUSINESS TYPE]. The project was [WHAT THEY DID], what still needs handing over is [FILES, PASSWORDS, DOCUMENTATION, INSTRUCTIONS], and whether I want to work with them again is [YES, MAYBE, NO]. Give me an end of project checklist and a short closing message covering final payment, file handover, access removal, and, if deserved, thanks and a review or referral. Note that projects often fizzle out with loose ends, like missing source files, unpaid final invoices, or contractors still holding access, so a clean wrap up protects my business, and a genuine thank you or a public review costs nothing and makes a good contractor much more likely to prioritize me next time. Give me the checklist and closing message.",
+    "description": "Close a contractor project with handover, payment, access removal, and thanks.",
+    "useCase": "Use this when a contractor finishes. Projects often fizzle with missing source files, unpaid invoices, or contractors still holding access, so a clean wrap up protects your business, and a genuine thank you or review makes a good contractor more likely to prioritize you next time.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THEY DID",
+      "FILES, PASSWORDS, DOCUMENTATION, INSTRUCTIONS",
+      "YES, MAYBE, NO"
+    ],
+    "relatedPromptIds": [
+      "brief-access-handover",
+      "brief-ownership-and-files",
+      "brief-payment-milestones"
+    ]
   }
 ]
