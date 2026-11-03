@@ -33639,5 +33639,402 @@
       "jd-responsibilities-from-tasks",
       "jd-outcomes-based"
     ]
+  },
+  {
+    "id": "iq-structured-set",
+    "title": "Build a Structured Interview Question Set",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "interview-questions",
+    "aiTool": "Claude",
+    "promptText": "Help me build a structured set of interview questions for a [ROLE TITLE] at my [BUSINESS TYPE]. What success in the role looks like is [THE OUTCOMES OR SCORECARD], the skills that matter most are [KEY SKILLS], and the interview length is [HOW LONG]. Give me a fixed set of questions I will ask every candidate in the same order, each tied to a skill or outcome, with a note on what a strong answer includes. Note that asking every candidate the same questions makes answers comparable, while a free flowing chat mostly measures who I clicked with, so a structured set is one of the most reliable ways a small business can hire well without an HR team. Give me the structured question set.",
+    "description": "Build a fixed interview question set tied to the role so candidates are comparable.",
+    "useCase": "Use this before your first interview for a role. Asking every candidate the same questions makes their answers comparable, while a free flowing chat mostly measures who you clicked with, so a structured set is one of the most reliable ways to hire well without an HR team.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "THE OUTCOMES OR SCORECARD",
+      "KEY SKILLS",
+      "HOW LONG"
+    ],
+    "relatedPromptIds": [
+      "iq-scoring-rubric",
+      "iq-behavioral-questions",
+      "iq-skill-questions"
+    ]
+  },
+  {
+    "id": "iq-behavioral-questions",
+    "title": "Write Behavioral Interview Questions",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "interview-questions",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write behavioral interview questions for a [ROLE TITLE] at my [BUSINESS TYPE]. The situations this person will face are [REAL SITUATIONS IN THE ROLE, E.G. AN ANGRY CUSTOMER, A MISSED DEADLINE, UNCLEAR INSTRUCTIONS], and the qualities I need are [THE TRAITS]. Write questions that ask about real past experiences, like tell me about a time when, each with a couple of follow ups that dig for specifics. Note that what someone actually did before is a better predictor than what they say they would do, since hypothetical answers are easy to polish, and the follow ups matter most because rehearsed answers fall apart when asked what exactly they did and what happened next. Give me the behavioral questions.",
+    "description": "Write past experience questions with follow ups that get past rehearsed answers.",
+    "useCase": "Use this to learn how a candidate actually behaves at work. What someone did before predicts better than what they say they would do, and the follow ups matter most, since rehearsed answers fall apart when asked exactly what they did and what happened next.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "REAL SITUATIONS IN THE ROLE, E.G. AN ANGRY CUSTOMER, A MISSED DEADLINE, UNCLEAR INSTRUCTIONS",
+      "THE TRAITS"
+    ],
+    "relatedPromptIds": [
+      "iq-follow-up-probes",
+      "iq-structured-set",
+      "iq-situational-questions"
+    ]
+  },
+  {
+    "id": "iq-quick-questions",
+    "title": "Get Quick Interview Questions for a Role",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "interview-questions",
+    "aiTool": "Grok",
+    "promptText": "I have an interview soon and need questions fast. The role is [ROLE TITLE], the main work is [WHAT THEY WILL DO], and the one thing I most need to find out is [YOUR BIGGEST CONCERN]. Give me eight solid interview questions with one line on what a good answer sounds like, no long explanation, just the list. Give me the questions.",
+    "description": "Get eight solid interview questions with good answer cues, fast.",
+    "useCase": "Use this when an interview is coming up and you have not prepared. Eight questions focused on the role and your biggest concern, each with a cue for a good answer, beat improvising, and a quick prepared list keeps the interview on the things that matter.",
+    "variables": [
+      "ROLE TITLE",
+      "WHAT THEY WILL DO",
+      "YOUR BIGGEST CONCERN"
+    ],
+    "relatedPromptIds": [
+      "iq-structured-set",
+      "iq-phone-screen",
+      "iq-behavioral-questions"
+    ]
+  },
+  {
+    "id": "iq-skill-questions",
+    "title": "Write Questions That Test Real Skill",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "interview-questions",
+    "aiTool": "Claude",
+    "promptText": "Help me write interview questions that test whether a candidate can actually do the work of a [ROLE TITLE] at my [BUSINESS TYPE]. The core skills are [THE SKILLS], and a typical piece of work in the role is [AN EXAMPLE TASK]. Give me questions that make them explain how they would approach real work, walk through something they built or did, or reason through a small problem live. Note that people can describe skills they do not really have, so questions that require showing the thinking, like walk me through how you would handle this exact task, reveal real ability far better than asking whether they know a tool, and for some roles a small paid test says more than any question. Give me the skill questions.",
+    "description": "Write interview questions that make candidates show real skill, not claim it.",
+    "useCase": "Use this to check ability, not just claims. People can describe skills they do not have, so questions that require showing the thinking, like walking through how they would handle a real task, reveal ability far better than asking whether they know a tool.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "THE SKILLS",
+      "AN EXAMPLE TASK"
+    ],
+    "relatedPromptIds": [
+      "iq-work-walkthrough",
+      "iq-structured-set",
+      "iq-situational-questions"
+    ]
+  },
+  {
+    "id": "iq-situational-questions",
+    "title": "Write Situational Questions From Real Scenarios",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "interview-questions",
+    "aiTool": "Gemini",
+    "promptText": "Help me turn real situations from my [BUSINESS TYPE] into interview questions for a [ROLE TITLE]. Here are a few things that actually happen here: [REAL SCENARIOS, E.G. TWO URGENT REQUESTS AT ONCE, A SUPPLIER LETS US DOWN, A CLIENT CHANGES SCOPE]. Write each as a short scenario question and describe what a strong, average, and weak answer would look like. Note that scenarios drawn from my real business test judgment in the exact conditions the person will face, which generic questions cannot, and writing down what strong looks like beforehand stops me from rating a confident answer higher than a sound one. Give me the scenario questions and answer guides.",
+    "description": "Turn real situations from your business into scenario questions with answer guides.",
+    "useCase": "Use this to test judgment in your actual conditions. Scenarios drawn from your real business show how someone would handle what they will actually face, and writing strong, average, and weak answers beforehand stops you rating a confident answer above a sound one.",
+    "variables": [
+      "BUSINESS TYPE",
+      "ROLE TITLE",
+      "REAL SCENARIOS, E.G. TWO URGENT REQUESTS AT ONCE, A SUPPLIER LETS US DOWN, A CLIENT CHANGES SCOPE"
+    ],
+    "relatedPromptIds": [
+      "iq-behavioral-questions",
+      "iq-scoring-rubric",
+      "iq-skill-questions"
+    ]
+  },
+  {
+    "id": "iq-follow-up-probes",
+    "title": "Prepare Follow Up Probes for Vague Answers",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "interview-questions",
+    "aiTool": "Claude",
+    "promptText": "Help me prepare follow up probes for when a candidate gives vague or rehearsed answers in an interview for a [ROLE TITLE]. My main questions are [PASTE YOUR QUESTIONS], and the kinds of vague answers I tend to get are [E.G. WE DID THIS AS A TEAM, I ALWAYS GIVE 110 PERCENT]. Give me a set of follow ups that politely push for specifics, like what was your part exactly, what would you do differently, and how did you measure that. Note that the first answer is often the prepared one, and the real information comes from the second and third question, so having follow ups ready lets me get past polish without being aggressive, and a candidate who cannot give any specifics at all is telling me something too. Give me the follow up probes.",
+    "description": "Prepare polite follow ups that push vague answers toward specifics.",
+    "useCase": "Use this when interviews feel full of polished but empty answers. The first answer is often the prepared one and the real information comes from the second and third question, so ready follow ups get past polish politely, and an inability to give any specifics is itself useful information.",
+    "variables": [
+      "ROLE TITLE",
+      "PASTE YOUR QUESTIONS",
+      "E.G. WE DID THIS AS A TEAM, I ALWAYS GIVE 110 PERCENT"
+    ],
+    "relatedPromptIds": [
+      "iq-behavioral-questions",
+      "iq-red-flag-probes",
+      "iq-structured-set"
+    ]
+  },
+  {
+    "id": "iq-scoring-rubric",
+    "title": "Create a Scoring Rubric for Answers",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "interview-questions",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me create a simple scoring rubric for my interview questions for a [ROLE TITLE] at my [BUSINESS TYPE]. My questions are [PASTE YOUR QUESTIONS], and what matters most in the role is [THE PRIORITIES]. For each question, give me a one to four scale with a short description of what each score looks like, and tell me how to weight the questions. Note that scoring right after each interview, before comparing candidates, keeps my memory from blurring and stops the most recent or most charming candidate from winning by default, and a written rubric also makes it easier to explain a decision to myself later. Give me the rubric.",
+    "description": "Create a one to four scoring rubric for each interview question.",
+    "useCase": "Use this to compare candidates fairly. Scoring against a written rubric right after each interview keeps memory from blurring and stops the most recent or most charming candidate from winning by default, and it makes the final decision easier to justify.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "PASTE YOUR QUESTIONS",
+      "THE PRIORITIES"
+    ],
+    "relatedPromptIds": [
+      "iq-structured-set",
+      "iq-situational-questions",
+      "iq-debrief-notes"
+    ]
+  },
+  {
+    "id": "iq-phone-screen",
+    "title": "Plan a Short Screening Call",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "interview-questions",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan a short screening call of about [HOW MANY MINUTES] for a [ROLE TITLE] at my [BUSINESS TYPE]. The dealbreakers I need to check are [PAY EXPECTATIONS, AVAILABILITY, TIME ZONE, LANGUAGE, CORE SKILL], and what I want to sense about the person is [WHAT ELSE]. Give me a tight script with a few questions in order and a clear way to end the call either way. Note that a short screen exists to catch dealbreakers early, so checking pay, availability, and basic fit first saves both sides from a long interview that was never going to work, and keeping it short and consistent respects candidates' time. Give me the screening call plan.",
+    "description": "Plan a short screening call that catches dealbreakers before full interviews.",
+    "useCase": "Use this before booking longer interviews. A short screen catches dealbreakers like pay, availability, and time zone early, which saves both sides from a long interview that was never going to work, and keeping it consistent respects everyone's time.",
+    "variables": [
+      "HOW MANY MINUTES",
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "PAY EXPECTATIONS, AVAILABILITY, TIME ZONE, LANGUAGE, CORE SKILL",
+      "WHAT ELSE"
+    ],
+    "relatedPromptIds": [
+      "iq-quick-questions",
+      "iq-remote-role-questions",
+      "iq-structured-set"
+    ]
+  },
+  {
+    "id": "iq-work-walkthrough",
+    "title": "Ask Candidates to Walk Through Past Work",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "interview-questions",
+    "aiTool": "Claude",
+    "promptText": "Help me plan a walkthrough of a candidate's past work for a [ROLE TITLE] at my [BUSINESS TYPE]. What they are bringing is [PORTFOLIO, SAMPLE, PAST PROJECT, CODE, CASE STUDY], and what I need to judge is [QUALITY, PROCESS, OWNERSHIP, DECISIONS]. Give me questions that uncover what they personally did, why they made the choices they made, and what they would change. Note that portfolios show finished results, often from team efforts, so the walkthrough is where I find out their actual contribution and thinking, and a candidate who can clearly explain their decisions and mistakes is usually more reliable than one with prettier samples and vague explanations. Give me the walkthrough questions.",
+    "description": "Plan questions that reveal what a candidate personally did in their past work.",
+    "useCase": "Use this when a candidate brings a portfolio or past project. Portfolios show finished results, often from teams, so a walkthrough reveals their actual contribution and thinking, and someone who explains their decisions and mistakes clearly is usually more reliable than one with prettier samples.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "PORTFOLIO, SAMPLE, PAST PROJECT, CODE, CASE STUDY",
+      "QUALITY, PROCESS, OWNERSHIP, DECISIONS"
+    ],
+    "relatedPromptIds": [
+      "iq-skill-questions",
+      "iq-follow-up-probes",
+      "iq-scoring-rubric"
+    ]
+  },
+  {
+    "id": "iq-values-fit",
+    "title": "Ask About Values Without Hiring Clones",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "interview-questions",
+    "aiTool": "Claude",
+    "promptText": "Help me write interview questions about how a candidate works and what they value for my [BUSINESS TYPE]. The working values that really matter here are [YOUR VALUES, E.G. OWNERSHIP, DIRECT FEEDBACK, RELIABILITY], and how we actually work day to day is [YOUR WORKING STYLE]. Write questions that test for those values through past behavior, and warn me where culture fit could slide into hiring people just like me. Note that culture fit questions easily turn into checking whether someone shares my background, hobbies, or personality, which narrows the team and can be unfair, so the useful version tests shared working values like reliability and honesty while welcoming different backgrounds and styles. Give me the values questions.",
+    "description": "Test for working values through behavior without screening for sameness.",
+    "useCase": "Use this when fit matters but you want a fair process. Culture fit questions easily slide into checking whether someone shares your background or personality, which narrows the team and can be unfair, so testing shared working values while welcoming different styles is the useful version.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR VALUES, E.G. OWNERSHIP, DIRECT FEEDBACK, RELIABILITY",
+      "YOUR WORKING STYLE"
+    ],
+    "relatedPromptIds": [
+      "iq-behavioral-questions",
+      "iq-questions-to-avoid",
+      "iq-structured-set"
+    ]
+  },
+  {
+    "id": "iq-questions-to-avoid",
+    "title": "Check for Questions You Should Not Ask",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "interview-questions",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me check my interview questions for anything inappropriate or legally risky for my [BUSINESS TYPE]. My questions are [PASTE YOUR QUESTIONS], and I am hiring in [COUNTRY OR REGION]. Flag questions that touch on age, marital status, pregnancy or family plans, religion, health, nationality, or similar personal areas, and suggest job related alternatives where there is a real need behind them. Note that many casual questions, like do you have kids or where are you originally from, can be unlawful or discriminatory in many places and are rarely relevant to the work anyway, and rules differ by country, so I should confirm the specifics for my location, while the safe rule is to ask only about the job and the ability to do it. Give me the flags and alternatives.",
+    "description": "Flag interview questions that touch personal or legally risky areas.",
+    "useCase": "Use this before any interview. Casual questions like do you have kids or where are you from can be unlawful or discriminatory in many places and are rarely relevant to the work, so flagging them and asking only about the job is safer, while confirming the rules for your country.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE YOUR QUESTIONS",
+      "COUNTRY OR REGION"
+    ],
+    "relatedPromptIds": [
+      "iq-values-fit",
+      "iq-structured-set",
+      "iq-red-flag-probes"
+    ]
+  },
+  {
+    "id": "iq-red-flag-probes",
+    "title": "Probe Gently on Possible Red Flags",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "interview-questions",
+    "aiTool": "Gemini",
+    "promptText": "Help me ask about possible concerns in a candidate's background fairly, for a [ROLE TITLE] at my [BUSINESS TYPE]. What I noticed is [E.G. SHORT JOB STINTS, A GAP, A VAGUE ROLE, A SKILL CLAIM THAT SEEMS STRETCHED], and why it matters for this role is [YOUR CONCERN]. Give me neutral, non accusing questions that let the candidate explain. Note that many apparent red flags have ordinary explanations like caring for family, a company closing, or contract work, so asking openly gives them a fair chance and often resolves the worry, while assuming the worst quietly rules out good people, and the real signal is usually how honestly and clearly they explain it. Give me the questions.",
+    "description": "Ask neutral questions about background concerns so candidates can explain.",
+    "useCase": "Use this when something in a candidate's history gives you pause. Gaps and short stints often have ordinary explanations like family care or a company closing, so asking openly gives them a fair chance and often resolves the worry, and how honestly they explain it is usually the real signal.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "E.G. SHORT JOB STINTS, A GAP, A VAGUE ROLE, A SKILL CLAIM THAT SEEMS STRETCHED",
+      "YOUR CONCERN"
+    ],
+    "relatedPromptIds": [
+      "iq-follow-up-probes",
+      "iq-questions-to-avoid",
+      "iq-debrief-notes"
+    ]
+  },
+  {
+    "id": "iq-remote-role-questions",
+    "title": "Write Questions for a Remote Role",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "interview-questions",
+    "aiTool": "Claude",
+    "promptText": "Help me write interview questions for a remote [ROLE TITLE] at my [BUSINESS TYPE]. How we work remotely is [YOUR SETUP, E.G. ASYNC MESSAGING, DAILY CALLS, TIME ZONE OVERLAP], and the hardest parts of remote work here are [WHAT TRIPS PEOPLE UP]. Write questions that reveal how they manage their own time, communicate in writing, handle unclear instructions without someone nearby, and stay reachable. Note that remote work exposes self management and written communication far more than office work does, and a strong performer in an office can struggle without structure, so questions about how they actually worked remotely before, plus how clearly they write to me during the process, tell me more than any claim that they are self motivated. Give me the remote role questions.",
+    "description": "Write questions that test self management and written communication for remote work.",
+    "useCase": "Use this when hiring someone you will rarely see. Remote work exposes self management and written communication far more than office work, so asking how they actually worked remotely before, and noticing how clearly they write to you during hiring, beats a claim of being self motivated.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "YOUR SETUP, E.G. ASYNC MESSAGING, DAILY CALLS, TIME ZONE OVERLAP",
+      "WHAT TRIPS PEOPLE UP"
+    ],
+    "relatedPromptIds": [
+      "iq-phone-screen",
+      "iq-behavioral-questions",
+      "iq-second-language"
+    ]
+  },
+  {
+    "id": "iq-second-language",
+    "title": "Interview Fairly Across a Language Gap",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "interview-questions",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me interview candidates fairly when we are working in a language that is not the first language for one or both of us, for a [ROLE TITLE] at my [BUSINESS TYPE]. The interview language is [LANGUAGE], the level of that language the job truly needs is [WHAT THE ROLE REQUIRES, E.G. CUSTOMER FACING, INTERNAL ONLY, WRITTEN ONLY], and the candidates are mostly [WHO]. Help me phrase questions plainly, test the language level the role actually needs, and avoid confusing fluency with competence. Note that a candidate can be excellent at the work but slower or less polished in an interview language, and a smooth talker can be weak at the job, so I should test the language level the role really requires separately and judge the skills on their own, using simple wording and allowing written follow ups where it helps. Give me the approach and adjusted questions.",
+    "description": "Run interviews across a language gap without mistaking fluency for skill.",
+    "useCase": "Use this when hiring across languages. A strong worker can be less polished in an interview language while a smooth talker can be weak at the job, so testing the language level the role truly needs separately and judging skills on their own gives a fairer and more accurate result.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "LANGUAGE",
+      "WHAT THE ROLE REQUIRES, E.G. CUSTOMER FACING, INTERNAL ONLY, WRITTEN ONLY",
+      "WHO"
+    ],
+    "relatedPromptIds": [
+      "iq-remote-role-questions",
+      "iq-skill-questions",
+      "iq-questions-to-avoid"
+    ]
+  },
+  {
+    "id": "iq-first-hire-questions",
+    "title": "Write Questions for Your First Hire",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "interview-questions",
+    "aiTool": "Gemini",
+    "promptText": "Help me write interview questions for the first person I am hiring at my [BUSINESS TYPE]. The role is [WHAT THEY WILL DO], how things run right now is [HOW CHAOTIC OR STRUCTURED IT IS], and what I worry about most is [YOUR BIGGEST WORRY]. Write questions that test whether they can work with little structure, figure things out alone, and handle a role that will change. Note that a first hire in a tiny business needs different strengths from someone joining an established team, like comfort with ambiguity and building their own systems, and someone who thrived with clear processes and a manager nearby may struggle, so the questions should test for that reality rather than general competence. Give me the first hire questions.",
+    "description": "Test whether a first hire can thrive with little structure and a changing role.",
+    "useCase": "Use this when hiring your first person. A first hire needs comfort with ambiguity and building their own systems, and someone who thrived with clear processes and a manager nearby may struggle, so questions should test for that reality rather than general competence.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THEY WILL DO",
+      "HOW CHAOTIC OR STRUCTURED IT IS",
+      "YOUR BIGGEST WORRY"
+    ],
+    "relatedPromptIds": [
+      "iq-behavioral-questions",
+      "iq-values-fit",
+      "iq-structured-set"
+    ]
+  },
+  {
+    "id": "iq-candidate-questions-prep",
+    "title": "Prepare for the Questions Candidates Ask You",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "interview-questions",
+    "aiTool": "Claude",
+    "promptText": "Help me prepare honest answers to the questions good candidates will ask me about my [BUSINESS TYPE]. The role is [ROLE TITLE], the things I am a little nervous about being asked are [E.G. HOW STABLE THE BUSINESS IS, GROWTH, PAY REVIEWS, WHY THE LAST PERSON LEFT], and the honest answers are [THE TRUTH]. Give me a list of likely questions and clear, honest ways to answer them. Note that strong candidates are interviewing me too and will often ask about stability, growth, and why the role is open, and evasive answers make good people walk away while honest answers, even imperfect ones, build trust and set the right expectations from day one. Give me the questions and answers.",
+    "description": "Prepare honest answers to the hard questions strong candidates ask you.",
+    "useCase": "Use this before interviewing strong candidates. They interview you too and often ask about stability, growth, and why the role is open, and evasive answers make good people walk away while honest ones, even imperfect, build trust and set the right expectations.",
+    "variables": [
+      "BUSINESS TYPE",
+      "ROLE TITLE",
+      "E.G. HOW STABLE THE BUSINESS IS, GROWTH, PAY REVIEWS, WHY THE LAST PERSON LEFT",
+      "THE TRUTH"
+    ],
+    "relatedPromptIds": [
+      "iq-first-hire-questions",
+      "iq-closing-the-interview",
+      "iq-values-fit"
+    ]
+  },
+  {
+    "id": "iq-closing-the-interview",
+    "title": "Close an Interview Well",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "interview-questions",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me plan how to close interviews for a [ROLE TITLE] at my [BUSINESS TYPE]. My next steps after the interview are [WHAT HAPPENS NEXT, E.G. A PAID TEST, A SECOND CALL, A DECISION], and my timeline is [WHEN YOU WILL DECIDE]. Give me a short closing script that invites their questions, checks anything I still need, like notice period or start date, and tells them exactly what happens next and when. Note that candidates judge my business partly by how the interview ends, and leaving them with no idea of next steps or timing is one of the most common complaints about hiring, so a clear close, followed through, keeps good candidates interested even if they have other offers. Give me the closing script.",
+    "description": "End interviews with clear next steps, timing, and room for their questions.",
+    "useCase": "Use this so good candidates stay interested. Candidates judge your business by how the interview ends, and leaving them unsure of next steps is one of the most common hiring complaints, so a clear close that you then follow through on keeps strong people engaged.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "WHAT HAPPENS NEXT, E.G. A PAID TEST, A SECOND CALL, A DECISION",
+      "WHEN YOU WILL DECIDE"
+    ],
+    "relatedPromptIds": [
+      "iq-candidate-questions-prep",
+      "iq-debrief-notes",
+      "iq-phone-screen"
+    ]
+  },
+  {
+    "id": "iq-debrief-notes",
+    "title": "Capture Interview Notes While They Are Fresh",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "interview-questions",
+    "aiTool": "Claude",
+    "promptText": "Help me turn my rough notes from an interview into a clear record for a [ROLE TITLE] at my [BUSINESS TYPE]. My notes are [PASTE YOUR NOTES], and my scoring rubric or priorities are [YOUR RUBRIC OR PRIORITIES]. Organize them by question or skill, separate what the candidate actually said from my impressions, and suggest a score for each area with the evidence behind it. Note that memory of an interview fades and blends within a day, especially across several candidates, so writing up evidence right away, and keeping facts apart from gut feelings, makes the final comparison fairer and stops one memorable moment from outweighing everything else. Give me the organized record.",
+    "description": "Turn rough interview notes into an evidence based record with scores.",
+    "useCase": "Use this right after each interview. Memory of interviews fades and blends within a day, especially across several candidates, so writing up evidence immediately and keeping facts apart from gut feelings makes the final comparison fairer and stops one memorable moment dominating.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "PASTE YOUR NOTES",
+      "YOUR RUBRIC OR PRIORITIES"
+    ],
+    "relatedPromptIds": [
+      "iq-scoring-rubric",
+      "iq-closing-the-interview",
+      "iq-red-flag-probes"
+    ]
+  },
+  {
+    "id": "iq-improve-question-set",
+    "title": "Improve Questions That Are Not Working",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "interview-questions",
+    "aiTool": "Gemini",
+    "promptText": "Help me improve interview questions that are not telling me enough for a [ROLE TITLE] at my [BUSINESS TYPE]. My current questions are [PASTE THEM], and the problem is [E.G. EVERYONE GIVES SIMILAR ANSWERS, A HIRE STRUGGLED WITH SOMETHING I NEVER ASKED ABOUT, THEY ARE TOO EASY TO REHEARSE]. Tell me which questions are weak, why, and give me sharper replacements. Note that questions everyone answers well do not separate candidates, and if a past hire struggled with something, that gap is a clue about what the interview missed, so the best improvements come from asking what went wrong after previous hires and adding a question that would have caught it. Give me the improved questions.",
+    "description": "Sharpen interview questions that fail to separate candidates.",
+    "useCase": "Use this when your interviews are not predicting how hires turn out. Questions everyone answers well do not separate candidates, and a past hire's struggle points to what the interview missed, so adding a question that would have caught it is usually the best improvement.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "PASTE THEM",
+      "E.G. EVERYONE GIVES SIMILAR ANSWERS, A HIRE STRUGGLED WITH SOMETHING I NEVER ASKED ABOUT, THEY ARE TOO EASY TO REHEARSE"
+    ],
+    "relatedPromptIds": [
+      "iq-structured-set",
+      "iq-follow-up-probes",
+      "iq-scoring-rubric"
+    ]
   }
 ]
