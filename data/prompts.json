@@ -38309,5 +38309,371 @@
       "goalset-values-check",
       "goalset-progress-tracker"
     ]
+  },
+  {
+    "id": "procrast-why-avoiding",
+    "title": "Figure Out Why You Are Avoiding a Task",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "overcoming-procrastination",
+    "aiTool": "Claude",
+    "promptText": "Help me figure out why I keep avoiding a task in my [BUSINESS TYPE]. The task is [WHAT YOU ARE PUTTING OFF], how long I have avoided it is [HOW LONG], what I do instead is [WHAT YOU DO WHEN AVOIDING IT], and how I feel when I think about it is [YOUR FEELINGS, E.G. BORED, ANXIOUS, CONFUSED, OVERWHELMED]. Help me work out the real reason, like the task being unclear, too big, boring, emotionally uncomfortable, or not actually important, and suggest a fix matched to that reason. Note that procrastination is usually about avoiding an uncomfortable feeling rather than laziness, so the fix depends on the cause, since an unclear task needs a first step defined, a scary task needs a lower stakes start, and a task that keeps getting skipped may simply not matter and could be dropped. Give me the diagnosis and fix.",
+    "description": "Diagnose the real reason you are avoiding a task and match the fix to it.",
+    "useCase": "Use this when a task keeps sliding to tomorrow. Procrastination is usually about avoiding an uncomfortable feeling rather than laziness, so an unclear task needs a defined first step, a scary one needs a lower stakes start, and one you keep skipping may not matter and could be dropped.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU ARE PUTTING OFF",
+      "HOW LONG",
+      "WHAT YOU DO WHEN AVOIDING IT",
+      "YOUR FEELINGS, E.G. BORED, ANXIOUS, CONFUSED, OVERWHELMED"
+    ],
+    "relatedPromptIds": [
+      "procrast-tiny-first-step",
+      "procrast-perfectionism",
+      "procrast-drop-or-do"
+    ]
+  },
+  {
+    "id": "procrast-tiny-first-step",
+    "title": "Find a Tiny First Step to Get Started",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "overcoming-procrastination",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me find a first step so small I cannot avoid it. The task I am stuck on is [THE TASK], the part that feels hardest is [WHAT MAKES IT HARD], and the time I have right now is [MINUTES AVAILABLE]. Give me a first step I can start within two minutes, plus the next two small steps after it. Note that starting is usually the hardest part, and once I begin, momentum often carries me further, so a first step like open the document and write one messy sentence works better than a vague intention like work on the proposal, and lowering the bar for the first few minutes is not cheating, it is how stuck work gets moving. Give me the tiny first step.",
+    "description": "Shrink a stuck task to a first step you can start in two minutes.",
+    "useCase": "Use this when you cannot make yourself begin. Starting is usually the hardest part and momentum often carries you further, so a tiny concrete first step works better than a vague intention, and lowering the bar for the first few minutes is how stuck work gets moving.",
+    "variables": [
+      "THE TASK",
+      "WHAT MAKES IT HARD",
+      "MINUTES AVAILABLE"
+    ],
+    "relatedPromptIds": [
+      "procrast-why-avoiding",
+      "procrast-break-down-big",
+      "procrast-quick-unstick"
+    ]
+  },
+  {
+    "id": "procrast-quick-unstick",
+    "title": "Get Unstuck Right Now",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "overcoming-procrastination",
+    "aiTool": "Grok",
+    "promptText": "I am procrastinating right now and need a push. The thing I should be doing is [THE TASK], and I have [MINUTES] before my next commitment. Give me one tiny action to start this minute and a simple short focus plan for the time I have, no lecture, just the plan. Give me the plan.",
+    "description": "Get one tiny action and a short focus plan to start right now.",
+    "useCase": "Use this in the moment you catch yourself stalling. One tiny action plus a short focus plan for the time you actually have gets you moving immediately, and acting on a simple plan now beats reading about procrastination while the task still waits.",
+    "variables": [
+      "THE TASK",
+      "MINUTES"
+    ],
+    "relatedPromptIds": [
+      "procrast-tiny-first-step",
+      "procrast-time-box",
+      "procrast-why-avoiding"
+    ]
+  },
+  {
+    "id": "procrast-break-down-big",
+    "title": "Break an Overwhelming Project Into Pieces",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "overcoming-procrastination",
+    "aiTool": "Gemini",
+    "promptText": "Help me break an overwhelming project into pieces I can actually face. The project is [THE PROJECT], the deadline is [WHEN, OR NONE], what I already know how to do is [THE PARTS YOU KNOW], and the parts that feel unclear are [THE FOGGY PARTS]. Give me a list of small, concrete tasks, each doable in under an hour, in a sensible order, with the unclear parts turned into research or decision tasks. Note that big projects feel paralyzing because my brain sees one huge undefined thing, and breaking it into small named tasks turns it into a series of finishable steps, while an unclear part often hides a decision I have been avoiding, so naming that decision as its own task is often what unblocks everything else. Give me the task breakdown.",
+    "description": "Turn an overwhelming project into small, named tasks under an hour each.",
+    "useCase": "Use this when a project feels too big to start. Big projects paralyze because they look like one huge undefined thing, so breaking them into small named tasks makes them finishable, and an unclear part often hides an avoided decision that, named as its own task, unblocks everything.",
+    "variables": [
+      "THE PROJECT",
+      "WHEN, OR NONE",
+      "THE PARTS YOU KNOW",
+      "THE FOGGY PARTS"
+    ],
+    "relatedPromptIds": [
+      "procrast-tiny-first-step",
+      "procrast-hidden-decision",
+      "procrast-time-box"
+    ]
+  },
+  {
+    "id": "procrast-perfectionism",
+    "title": "Get Past Perfectionism on a Task",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "overcoming-procrastination",
+    "aiTool": "Claude",
+    "promptText": "Help me get past perfectionism that is stopping me from finishing or starting something in my [BUSINESS TYPE]. The task is [WHAT YOU ARE WORKING ON], what good enough would actually need to be is [THE REAL STANDARD], and what I am afraid will happen if it is not perfect is [THE FEAR]. Help me define a clear good enough standard, a version one I can ship, and what can be improved later. Note that perfectionism often looks like high standards but works like fear of judgment, and most work in a small business can be improved after it is out, while unfinished perfect work earns nothing, so defining good enough in advance and shipping a solid first version is usually better than polishing something nobody has seen yet, though truly high stakes work does deserve extra care. Give me the good enough plan.",
+    "description": "Define good enough and ship a solid first version instead of polishing forever.",
+    "useCase": "Use this when you keep polishing instead of finishing. Perfectionism often works like fear of judgment, and most small business work can be improved once it is out while unfinished perfect work earns nothing, so defining good enough in advance and shipping version one usually beats endless polishing.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU ARE WORKING ON",
+      "THE REAL STANDARD",
+      "THE FEAR"
+    ],
+    "relatedPromptIds": [
+      "procrast-why-avoiding",
+      "procrast-fear-of-judgment",
+      "procrast-finish-the-last-10"
+    ]
+  },
+  {
+    "id": "procrast-fear-of-judgment",
+    "title": "Work Through Fear Behind Avoidance",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "overcoming-procrastination",
+    "aiTool": "Claude",
+    "promptText": "Help me work through a fear that is making me avoid something important for my [BUSINESS TYPE]. What I am avoiding is [E.G. RAISING PRICES, LAUNCHING, POSTING PUBLICLY, CALLING A CLIENT, SENDING A PROPOSAL], what I am afraid will happen is [THE FEAR], and how likely and how bad that would really be is [YOUR HONEST GUESS]. Help me look at the realistic worst case, what I would do if it happened, and a smaller first step that lets me test the fear. Note that fears behind avoidance often feel much bigger than the realistic outcome, and avoiding them usually has its own quiet cost, like lost income or growing stress, so naming the realistic worst case and a plan for it often shrinks the fear enough to act, while a small test is gentler than forcing a giant leap. Give me the fear check and first step.",
+    "description": "Size up the fear behind avoidance and test it with a smaller step.",
+    "useCase": "Use this when fear is keeping you from an important task. Fears behind avoidance often feel bigger than the realistic outcome, and avoiding them has its own quiet cost like lost income, so naming the realistic worst case with a plan often shrinks the fear enough to act, starting with a small test.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. RAISING PRICES, LAUNCHING, POSTING PUBLICLY, CALLING A CLIENT, SENDING A PROPOSAL",
+      "THE FEAR",
+      "YOUR HONEST GUESS"
+    ],
+    "relatedPromptIds": [
+      "procrast-perfectionism",
+      "procrast-why-avoiding",
+      "procrast-tiny-first-step"
+    ]
+  },
+  {
+    "id": "procrast-time-box",
+    "title": "Plan a Time Boxed Work Session",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "overcoming-procrastination",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me plan a short, time boxed work session to make progress on something I have been avoiding. The task is [THE TASK], the time I can give is [MINUTES OR HOURS], when my energy is usually best is [YOUR BEST TIME OF DAY], and what usually distracts me is [YOUR DISTRACTIONS]. Give me a session plan with a clear goal for the time box, how to remove distractions, and how to stop and note where to pick up next time. Note that committing to work on something for a fixed short time, rather than until it is done, makes starting far less daunting, and stopping with a note about the next step makes the following session much easier to begin, while scheduling hard tasks for my best energy hours beats fighting them when I am drained. Give me the session plan.",
+    "description": "Plan a short time boxed session with a clear goal and a note for next time.",
+    "useCase": "Use this to make progress on dreaded work. Committing to a fixed short time rather than until done makes starting far less daunting, stopping with a note on the next step makes the next session easier, and putting hard tasks in your best energy hours beats fighting them when drained.",
+    "variables": [
+      "THE TASK",
+      "MINUTES OR HOURS",
+      "YOUR BEST TIME OF DAY",
+      "YOUR DISTRACTIONS"
+    ],
+    "relatedPromptIds": [
+      "procrast-quick-unstick",
+      "procrast-distraction-plan",
+      "procrast-break-down-big"
+    ]
+  },
+  {
+    "id": "procrast-distraction-plan",
+    "title": "Reduce the Distractions You Escape Into",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "overcoming-procrastination",
+    "aiTool": "Gemini",
+    "promptText": "Help me reduce the distractions I escape into when I should be working. My usual escapes are [E.G. SOCIAL MEDIA, NEWS, EMAIL, MESSAGES, CLEANING, BUSYWORK], when it happens most is [TIMES OR SITUATIONS], and the tools and devices I use are [YOUR SETUP]. Suggest practical changes to make distractions harder and focus easier, without relying on willpower alone. Note that distractions are often the visible symptom of avoiding a harder task, and blocking them helps but does not fix the reason I am escaping, so combining friction like moving apps off my phone with a clearer first step for the real task works better than either alone, and busywork like tidying the inbox is a sneaky form of procrastination that feels productive. Give me the distraction plan.",
+    "description": "Add friction to your usual escapes while fixing the task you are avoiding.",
+    "useCase": "Use this when you keep drifting into distractions. Distractions are often a symptom of avoiding a harder task, so blocking them helps but does not fix the cause, and combining friction with a clearer first step works best, while busywork like inbox tidying is a sneaky procrastination that feels productive.",
+    "variables": [
+      "E.G. SOCIAL MEDIA, NEWS, EMAIL, MESSAGES, CLEANING, BUSYWORK",
+      "TIMES OR SITUATIONS",
+      "YOUR SETUP"
+    ],
+    "relatedPromptIds": [
+      "procrast-time-box",
+      "procrast-why-avoiding",
+      "procrast-busywork-check"
+    ]
+  },
+  {
+    "id": "procrast-busywork-check",
+    "title": "Spot Busywork Disguised as Progress",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "overcoming-procrastination",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether I am filling my days with busywork instead of the work that matters in my [BUSINESS TYPE]. What I did this week is [YOUR TASKS AND ROUGH TIME SPENT], and the work that would actually move my business forward is [THE HIGH VALUE WORK]. Sort my week into important work and busywork, and point out what I am likely avoiding behind the busy tasks. Note that a full, tiring week can still be procrastination when the time goes to easy, comfortable tasks like tweaking a logo, reorganizing files, or answering every message instantly, while the one uncomfortable task that matters stays untouched, so seeing where the time actually went is often the wake up call that makes it easier to protect time for the real work. Give me the busywork check.",
+    "description": "Sort your week into real progress and comfortable busywork.",
+    "useCase": "Use this when you feel busy but nothing important moves. A full tiring week can still be procrastination when time goes to comfortable tasks like tweaking a logo while the one uncomfortable task that matters stays untouched, so seeing where time actually went makes it easier to protect the real work.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR TASKS AND ROUGH TIME SPENT",
+      "THE HIGH VALUE WORK"
+    ],
+    "relatedPromptIds": [
+      "procrast-distraction-plan",
+      "procrast-why-avoiding",
+      "procrast-drop-or-do"
+    ]
+  },
+  {
+    "id": "procrast-hidden-decision",
+    "title": "Find the Decision Hiding Behind a Stuck Task",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "overcoming-procrastination",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me find whether a stuck task is really an unmade decision. The task is [THE STUCK TASK], what I keep circling around is [WHAT YOU KEEP THINKING ABOUT], and the options I can see are [THE CHOICES]. Help me name the decision underneath, the information I actually need to make it, and a deadline for deciding. Note that many tasks stall not because the work is hard but because a decision has not been made, like which price to charge or which client to focus on, and no amount of willpower moves a task forward until that decision is made, so naming it, gathering only the information that matters, and setting a date to decide usually unblocks the work. Give me the decision and plan.",
+    "description": "Name the unmade decision behind a stuck task and set a date to decide.",
+    "useCase": "Use this when a task stalls for no obvious reason. Many tasks stall because a decision has not been made, like which price to charge, and no willpower moves the task until it is, so naming the decision, gathering only the information that matters, and setting a date to decide usually unblocks it.",
+    "variables": [
+      "THE STUCK TASK",
+      "WHAT YOU KEEP THINKING ABOUT",
+      "THE CHOICES"
+    ],
+    "relatedPromptIds": [
+      "procrast-break-down-big",
+      "procrast-why-avoiding",
+      "procrast-drop-or-do"
+    ]
+  },
+  {
+    "id": "procrast-drop-or-do",
+    "title": "Decide Whether to Do, Delegate, or Drop It",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "overcoming-procrastination",
+    "aiTool": "Gemini",
+    "promptText": "Help me decide what to do with tasks that have sat on my list for weeks. The tasks are [YOUR LONG STANDING TASKS], what each would actually achieve is [YOUR BEST GUESS], and who else could do them is [ANYONE OR NOBODY]. Sort them into do now, schedule, delegate, or drop, with a short reason for each. Note that a list full of tasks I keep postponing drains energy every time I look at it, and some of those tasks quietly stopped mattering, so deliberately dropping them is healthier than carrying them forever, while tasks I avoid because they are not my strength may be worth paying someone else to do. Give me the sorted list.",
+    "description": "Sort long postponed tasks into do, schedule, delegate, or drop.",
+    "useCase": "Use this when your to do list is full of old tasks. A list of things you keep postponing drains energy every time you look at it, and some tasks quietly stopped mattering, so dropping them deliberately is healthier, while tasks you avoid because they are not your strength may be worth paying someone to do.",
+    "variables": [
+      "YOUR LONG STANDING TASKS",
+      "YOUR BEST GUESS",
+      "ANYONE OR NOBODY"
+    ],
+    "relatedPromptIds": [
+      "procrast-why-avoiding",
+      "procrast-busywork-check",
+      "procrast-hidden-decision"
+    ]
+  },
+  {
+    "id": "procrast-finish-the-last-10",
+    "title": "Finish Projects That Stall Near the End",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "overcoming-procrastination",
+    "aiTool": "Claude",
+    "promptText": "Help me finish a project that is almost done but has stalled. The project is [THE PROJECT], what is left is [THE REMAINING WORK], and why I think I keep not finishing it is [YOUR GUESS, E.G. FEAR OF LAUNCHING, BORING DETAILS, LOST INTEREST]. Give me a finishing list of every remaining task, the minimum needed to call it done, and a finish date. Note that the last part of a project is often the least exciting and the most exposing, since finishing means it can be judged, so many owners have several almost done projects sitting idle, and listing the remaining tasks usually shows there is less left than it feels, while one finished project is worth more than several nearly finished ones. Give me the finishing plan.",
+    "description": "List what is left on an almost done project and set a finish date.",
+    "useCase": "Use this for projects stuck at nearly done. The last part is often the least exciting and most exposing since finishing means it can be judged, and listing remaining tasks usually shows less is left than it feels, while one finished project is worth more than several nearly finished ones.",
+    "variables": [
+      "THE PROJECT",
+      "THE REMAINING WORK",
+      "YOUR GUESS, E.G. FEAR OF LAUNCHING, BORING DETAILS, LOST INTEREST"
+    ],
+    "relatedPromptIds": [
+      "procrast-perfectionism",
+      "procrast-fear-of-judgment",
+      "procrast-time-box"
+    ]
+  },
+  {
+    "id": "procrast-admin-dread",
+    "title": "Tackle Dreaded Admin Tasks",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "overcoming-procrastination",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me tackle the admin tasks I keep putting off for my [BUSINESS TYPE]. The tasks are [E.G. BOOKKEEPING, INVOICES, TAX PAPERS, CONTRACTS, EMAIL BACKLOG], how far behind I am is [HOW BACKLOGGED], and why they feel so heavy is [YOUR REASON]. Give me a catch up plan in small sessions, a simple routine to stay current afterwards, and which tasks might be worth outsourcing. Note that admin left to pile up becomes much harder than doing it regularly, and some of it carries real consequences like late payment, penalties, or missed deadlines, so a short regular routine is far easier than a dreaded catch up marathon, and getting help with the parts I hate is often cheaper than the cost of neglecting them. Give me the admin plan.",
+    "description": "Catch up on dreaded admin in small sessions and set a routine to stay current.",
+    "useCase": "Use this when bookkeeping, invoices, or paperwork pile up. Admin left to pile up gets much harder and can carry real consequences like late payment or penalties, so a short regular routine beats a dreaded catch up marathon, and outsourcing the parts you hate is often cheaper than neglecting them.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. BOOKKEEPING, INVOICES, TAX PAPERS, CONTRACTS, EMAIL BACKLOG",
+      "HOW BACKLOGGED",
+      "YOUR REASON"
+    ],
+    "relatedPromptIds": [
+      "procrast-drop-or-do",
+      "procrast-time-box",
+      "procrast-reward-system"
+    ]
+  },
+  {
+    "id": "procrast-reward-system",
+    "title": "Pair Dreaded Tasks With Something You Enjoy",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "overcoming-procrastination",
+    "aiTool": "Gemini",
+    "promptText": "Help me make dreaded tasks more bearable by pairing them with things I enjoy. The tasks I dread are [THE TASKS], things I enjoy are [E.G. A GOOD COFFEE, MUSIC, A CAFE, A WALK, A FAVORITE SNACK, A SHOW], and when I usually do these tasks is [WHEN]. Suggest pairings and small rewards that make starting easier without becoming a reason to avoid work. Note that pairing a dull task with something pleasant, like only listening to a favorite podcast while doing admin, can make it easier to start, and small rewards after finishing help build the habit, but rewards should be small and immediate rather than big promises to myself, since those tend to be ignored. Give me the pairing ideas.",
+    "description": "Pair dreaded tasks with small pleasures to make them easier to start.",
+    "useCase": "Use this for dull work you keep avoiding. Pairing a dull task with something pleasant, like a favorite podcast only during admin, makes starting easier, and small immediate rewards after finishing build the habit, while big promises to yourself tend to be ignored.",
+    "variables": [
+      "THE TASKS",
+      "E.G. A GOOD COFFEE, MUSIC, A CAFE, A WALK, A FAVORITE SNACK, A SHOW",
+      "WHEN"
+    ],
+    "relatedPromptIds": [
+      "procrast-admin-dread",
+      "procrast-accountability-buddy",
+      "procrast-time-box"
+    ]
+  },
+  {
+    "id": "procrast-accountability-buddy",
+    "title": "Use Body Doubling or a Work Buddy",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "overcoming-procrastination",
+    "aiTool": "Claude",
+    "promptText": "Help me use a work buddy or body doubling to get through tasks I avoid. The tasks are [WHAT YOU AVOID], people who might join me are [E.G. A FRIEND, ANOTHER FOUNDER, AN ONLINE COWORKING GROUP, NOBODY YET], and whether I prefer [IN PERSON OR ONLINE]. Suggest a simple setup, like working alongside someone on a video call or meeting at a cafe, and how to structure the session. Note that simply working in the presence of someone else, even silently, helps many people start and stay on task, and sharing a short goal at the start and checking in at the end adds gentle accountability, while for solo owners working alone all day it also reduces isolation, which can itself be a cause of stalled work. Give me the work buddy setup.",
+    "description": "Work alongside someone, in person or online, to start avoided tasks.",
+    "useCase": "Use this if you work alone and struggle to start. Working in someone's presence, even silently, helps many people start and stay on task, sharing a goal at the start and checking in at the end adds gentle accountability, and for solo owners it also reduces the isolation that can stall work.",
+    "variables": [
+      "WHAT YOU AVOID",
+      "E.G. A FRIEND, ANOTHER FOUNDER, AN ONLINE COWORKING GROUP, NOBODY YET",
+      "IN PERSON OR ONLINE"
+    ],
+    "relatedPromptIds": [
+      "procrast-reward-system",
+      "procrast-time-box",
+      "procrast-pattern-review"
+    ]
+  },
+  {
+    "id": "procrast-self-compassion",
+    "title": "Stop the Guilt Spiral About Procrastinating",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "overcoming-procrastination",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me break the guilt spiral that comes after I procrastinate. What I put off is [THE TASK], how I talk to myself about it is [YOUR SELF TALK], and what happens next is [E.G. MORE AVOIDANCE, STAYING UP LATE, FEELING STUCK]. Help me reframe the self talk into something kind but honest, and plan one small step to get back on track. Note that beating myself up after procrastinating usually leads to more avoidance, because the task now carries guilt as well as the original discomfort, while treating a slip with the understanding I would give a friend makes it easier to start again, and this is not about excusing everything, it is about getting back to work faster. Give me the reframe and next step.",
+    "description": "Replace harsh self talk after procrastinating with a kind, honest restart.",
+    "useCase": "Use this when guilt about procrastinating keeps you stuck. Beating yourself up usually leads to more avoidance since the task now carries guilt too, while treating a slip as you would a friend's makes it easier to restart, which is about getting back to work faster, not excusing everything.",
+    "variables": [
+      "THE TASK",
+      "YOUR SELF TALK",
+      "E.G. MORE AVOIDANCE, STAYING UP LATE, FEELING STUCK"
+    ],
+    "relatedPromptIds": [
+      "procrast-why-avoiding",
+      "procrast-tiny-first-step",
+      "procrast-bigger-than-procrastination"
+    ]
+  },
+  {
+    "id": "procrast-pattern-review",
+    "title": "Spot Your Procrastination Patterns",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "overcoming-procrastination",
+    "aiTool": "Gemini",
+    "promptText": "Help me spot patterns in when and what I procrastinate on. The tasks I usually avoid are [EXAMPLES], the times or situations it happens most are [E.G. AFTERNOONS, AFTER BAD NEWS, WHEN TIRED, WHEN A TASK INVOLVES PEOPLE], and what has worked before is [ANYTHING THAT HELPED]. Find the common threads and suggest two or three systems that address my specific patterns. Note that procrastination tends to follow personal patterns, like always avoiding tasks that involve selling, or always stalling in the afternoon, and once I see the pattern I can design around it, like scheduling those tasks in my best hours or pairing them with support, which works much better than generic productivity tips. Give me the pattern review and systems.",
+    "description": "Find your personal procrastination patterns and design systems around them.",
+    "useCase": "Use this when generic productivity tips do not stick. Procrastination follows personal patterns, like always avoiding sales tasks or stalling in the afternoon, and once you see yours you can design around it, like scheduling those tasks in your best hours, which beats generic advice.",
+    "variables": [
+      "EXAMPLES",
+      "E.G. AFTERNOONS, AFTER BAD NEWS, WHEN TIRED, WHEN A TASK INVOLVES PEOPLE",
+      "ANYTHING THAT HELPED"
+    ],
+    "relatedPromptIds": [
+      "procrast-why-avoiding",
+      "procrast-time-box",
+      "procrast-bigger-than-procrastination"
+    ]
+  },
+  {
+    "id": "procrast-bigger-than-procrastination",
+    "title": "Check Whether It Is More Than Procrastination",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "overcoming-procrastination",
+    "aiTool": "Claude",
+    "promptText": "Help me think about whether my ongoing avoidance might be about something bigger than procrastination. What I have noticed is [E.G. AVOIDING ALMOST EVERYTHING, LOW ENERGY FOR WEEKS, DREADING THE BUSINESS ITSELF, TROUBLE FOCUSING FOR YEARS], how long it has been going on is [DURATION], and what else is happening in my life is [CONTEXT]. Help me reflect on whether this looks like a temporary slump, burnout, a business that no longer fits me, or something worth talking to a professional about. Note that persistent avoidance across most of my work, especially with low mood, exhaustion, or long running focus difficulties, can be a sign of burnout, depression, or attention differences rather than a lack of discipline, and productivity tricks will not fix those, so talking to a doctor, counselor, or someone I trust is a sensible step, while sometimes it simply means the work itself needs to change. Give me the reflection.",
+    "description": "Reflect on whether ongoing avoidance points to burnout or something bigger.",
+    "useCase": "Use this when avoidance has lasted a long time or spread to everything. Persistent avoidance with low mood, exhaustion, or long running focus problems can signal burnout, depression, or attention differences rather than lack of discipline, which tricks will not fix, so talking to a professional or someone you trust is sensible.",
+    "variables": [
+      "E.G. AVOIDING ALMOST EVERYTHING, LOW ENERGY FOR WEEKS, DREADING THE BUSINESS ITSELF, TROUBLE FOCUSING FOR YEARS",
+      "DURATION",
+      "CONTEXT"
+    ],
+    "relatedPromptIds": [
+      "procrast-self-compassion",
+      "procrast-pattern-review",
+      "procrast-why-avoiding"
+    ]
   }
 ]
