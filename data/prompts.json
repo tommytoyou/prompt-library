@@ -41385,5 +41385,383 @@
       "interpret-cause-or-coincidence",
       "interpret-quick-read"
     ]
+  },
+  {
+    "id": "dash-owner-plan",
+    "title": "Plan a One Screen Owner Dashboard",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "dashboard-planning",
+    "aiTool": "Claude",
+    "promptText": "Help me plan a one screen dashboard for running my [BUSINESS TYPE]. My key KPIs are [YOUR KPIS], the decisions I make most often are [E.G. WHAT TO RESTOCK, WHERE TO MARKET, WHETHER TO CHASE PAYMENTS], where my data lives is [SOURCES], and how often I would look at it is [DAILY, WEEKLY]. Give me a plan for what goes on the dashboard, in what order, with the right comparison for each number. Note that a dashboard is only useful if it helps me make decisions at a glance, so it should show a handful of numbers with clear context, like this week versus last week, rather than every metric available, and the most important number should be the first thing my eye lands on. Give me the dashboard plan.",
+    "description": "Plan a one screen dashboard built around the decisions you make most.",
+    "useCase": "Use this before building any dashboard. A dashboard is only useful if it helps you decide at a glance, so a handful of numbers with clear context like this week versus last beats every metric available, and the most important number should be the first thing your eye lands on.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR KPIS",
+      "E.G. WHAT TO RESTOCK, WHERE TO MARKET, WHETHER TO CHASE PAYMENTS",
+      "SOURCES",
+      "DAILY, WEEKLY"
+    ],
+    "relatedPromptIds": [
+      "dash-choose-tool",
+      "dash-layout",
+      "dash-quick-wireframe"
+    ]
+  },
+  {
+    "id": "dash-quick-wireframe",
+    "title": "Get a Quick Dashboard Sketch",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "dashboard-planning",
+    "aiTool": "Grok",
+    "promptText": "Sketch a simple dashboard for me. My business is [WHAT YOU DO], and the numbers I care about are [YOUR TOP NUMBERS]. Give me a text layout showing what goes at the top, middle, and bottom, with the chart or number type for each, no explanation, just the layout. Give me the dashboard sketch.",
+    "description": "Get a quick text layout of a simple dashboard.",
+    "useCase": "Use this to picture a dashboard before building it. A quick top, middle, and bottom layout with the chart type for each number gives you a concrete starting point, and sketching first saves hours of rearranging charts in a tool.",
+    "variables": [
+      "WHAT YOU DO",
+      "YOUR TOP NUMBERS"
+    ],
+    "relatedPromptIds": [
+      "dash-owner-plan",
+      "dash-layout",
+      "dash-chart-types"
+    ]
+  },
+  {
+    "id": "dash-choose-tool",
+    "title": "Choose the Right Tool for Your Dashboard",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "dashboard-planning",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me choose a tool to build a dashboard for my [BUSINESS TYPE]. Where my data lives is [E.G. SPREADSHEETS, PAYMENT APPS, SHOP PLATFORM, ANALYTICS, BANK], my technical comfort is [BEGINNER, SOME SPREADSHEET SKILL, TECHNICAL], my budget is [AMOUNT OR FREE ONLY], and who needs to see it is [JUST ME, TEAM, PARTNER]. Compare a few options, such as a spreadsheet, a free reporting tool, or the dashboards built into my existing platforms, with pros, cons, and setup effort. Note that many small businesses do not need a new tool at all, since a well organized spreadsheet or the reports already built into their shop or payment platform cover most needs, and a complex tool that takes weeks to set up and breaks when a data source changes often gets abandoned, so I should check current features and pricing before committing. Give me the tool comparison.",
+    "description": "Compare spreadsheets, free tools, and built in reports for your dashboard.",
+    "useCase": "Use this before signing up for a dashboard tool. Many small businesses need no new tool, since a good spreadsheet or the reports built into their platforms cover most needs, while complex tools that break when sources change often get abandoned, so check current features and pricing first.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. SPREADSHEETS, PAYMENT APPS, SHOP PLATFORM, ANALYTICS, BANK",
+      "BEGINNER, SOME SPREADSHEET SKILL, TECHNICAL",
+      "AMOUNT OR FREE ONLY",
+      "JUST ME, TEAM, PARTNER"
+    ],
+    "relatedPromptIds": [
+      "dash-owner-plan",
+      "dash-spreadsheet-build",
+      "dash-data-sources"
+    ]
+  },
+  {
+    "id": "dash-spreadsheet-build",
+    "title": "Plan a Dashboard in a Spreadsheet",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "dashboard-planning",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan a simple dashboard built in a spreadsheet for my [BUSINESS TYPE]. The spreadsheet tool I use is [E.G. GOOGLE SHEETS, EXCEL, NUMBERS], the data I enter or import is [WHAT AND HOW OFTEN], and the numbers I want on the dashboard are [YOUR KPIS]. Give me a sheet structure, with a raw data tab, a calculations tab, and a dashboard tab, plus the key formulas or summaries needed and the charts to add. Note that keeping raw data, calculations, and the dashboard on separate tabs makes the sheet much easier to update and harder to break, and entering data in one consistent format, like one row per sale with a date, makes almost every summary simple, while mixing data entry and charts on one tab is a common cause of errors. Give me the spreadsheet dashboard plan.",
+    "description": "Structure a spreadsheet dashboard with separate data, calculation, and view tabs.",
+    "useCase": "Use this to build a dashboard without new software. Separating raw data, calculations, and the dashboard on different tabs makes the sheet easier to update and harder to break, and one consistent row per sale makes almost every summary simple, while mixing entry and charts invites errors.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. GOOGLE SHEETS, EXCEL, NUMBERS",
+      "WHAT AND HOW OFTEN",
+      "YOUR KPIS"
+    ],
+    "relatedPromptIds": [
+      "dash-choose-tool",
+      "dash-data-sources",
+      "dash-chart-types"
+    ]
+  },
+  {
+    "id": "dash-layout",
+    "title": "Lay Out a Dashboard So It Reads at a Glance",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "dashboard-planning",
+    "aiTool": "Claude",
+    "promptText": "Help me lay out my dashboard so it can be read in a few seconds for my [BUSINESS TYPE]. The numbers and charts I want to include are [YOUR LIST], which matter most is [YOUR PRIORITIES], and where I will view it is [LAPTOP, PHONE, TABLET, WALL SCREEN]. Suggest an arrangement with headline numbers at the top, trends in the middle, and detail at the bottom, plus guidance on spacing, labels, and grouping. Note that people scan a screen starting at the top, so the few numbers that matter most belong there in large type, while related items should sit together, and clear titles that say what each chart shows, like weekly sales in dollars, prevent the guessing that makes a cluttered dashboard useless. Give me the layout.",
+    "description": "Arrange a dashboard with headline numbers first and clear, grouped detail.",
+    "useCase": "Use this once you know what goes on your dashboard. People scan from the top, so the most important numbers belong there in large type, related items should sit together, and clear titles that say exactly what each chart shows prevent the guessing that makes cluttered dashboards useless.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR LIST",
+      "YOUR PRIORITIES",
+      "LAPTOP, PHONE, TABLET, WALL SCREEN"
+    ],
+    "relatedPromptIds": [
+      "dash-chart-types",
+      "dash-declutter",
+      "dash-mobile-view"
+    ]
+  },
+  {
+    "id": "dash-chart-types",
+    "title": "Pick the Right Chart for Each Number",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "dashboard-planning",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me choose the right chart or display for each number on my [BUSINESS TYPE] dashboard. The numbers are [EACH METRIC AND WHAT IT REPRESENTS], and what I want to see for each is [E.G. CURRENT VALUE, TREND OVER TIME, COMPARISON BETWEEN ITEMS, PROGRESS TOWARD A TARGET]. Recommend a display for each, like a big number with change, a line chart, a bar chart, or a progress bar, and explain why. Note that the wrong chart can hide the point, such as a pie chart with many slices that are impossible to compare, while a line chart shows trends, bars compare categories, and a single number with its change is often the clearest of all, so matching the chart to the question keeps the dashboard readable at a glance. Give me the chart recommendations.",
+    "description": "Match each number to a chart type that answers its question clearly.",
+    "useCase": "Use this when deciding how to show each number. The wrong chart hides the point, like a crowded pie chart, while lines show trends, bars compare categories, and a single number with its change is often clearest, so matching the chart to the question keeps the dashboard readable at a glance.",
+    "variables": [
+      "BUSINESS TYPE",
+      "EACH METRIC AND WHAT IT REPRESENTS",
+      "E.G. CURRENT VALUE, TREND OVER TIME, COMPARISON BETWEEN ITEMS, PROGRESS TOWARD A TARGET"
+    ],
+    "relatedPromptIds": [
+      "dash-layout",
+      "dash-alerts-thresholds",
+      "dash-quick-wireframe"
+    ]
+  },
+  {
+    "id": "dash-data-sources",
+    "title": "Map Where Your Dashboard Data Comes From",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "dashboard-planning",
+    "aiTool": "Gemini",
+    "promptText": "Help me map the data sources behind my [BUSINESS TYPE] dashboard. The numbers I want are [YOUR KPIS], the places data currently lives are [E.G. BANK, PAYMENT APPS, MARKETPLACE, SHOP PLATFORM, CHAT ORDERS, PAPER BOOK, ANALYTICS], and which can export or connect automatically is [WHAT YOU KNOW]. For each number, show the source, how it gets into the dashboard, how often, and any gaps. Note that dashboards most often fail because the data behind them is scattered, manual, or inconsistent, rather than because of the dashboard design, so mapping sources first reveals which numbers can update automatically, which need a simple weekly manual entry, and which I cannot track yet, and some data, like orders taken in chat apps, may need a small habit change to record at all. Give me the data source map.",
+    "description": "Map where each dashboard number comes from, how it arrives, and the gaps.",
+    "useCase": "Use this before building the dashboard itself. Dashboards most often fail because the data is scattered or manual rather than poorly designed, so mapping sources first shows what can update automatically, what needs a weekly manual entry, and what like chat orders needs a habit change to record at all.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR KPIS",
+      "E.G. BANK, PAYMENT APPS, MARKETPLACE, SHOP PLATFORM, CHAT ORDERS, PAPER BOOK, ANALYTICS",
+      "WHAT YOU KNOW"
+    ],
+    "relatedPromptIds": [
+      "dash-choose-tool",
+      "dash-update-routine",
+      "dash-spreadsheet-build"
+    ]
+  },
+  {
+    "id": "dash-update-routine",
+    "title": "Set Up a Dashboard Update Routine",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "dashboard-planning",
+    "aiTool": "Claude",
+    "promptText": "Help me set up a routine to keep my dashboard current for my [BUSINESS TYPE]. Which numbers update automatically is [AUTOMATIC ONES], which need manual entry is [MANUAL ONES], how long manual updates take is [TIME], and when I could fit it in is [WHEN]. Give me a short update routine with the order to update things and a quick check to spot errors. Note that a dashboard that is out of date is worse than none, since it gives false confidence, so a small, fixed update routine, like ten minutes every Monday morning, keeps it trustworthy, and showing a last updated date on the dashboard itself makes it obvious when the numbers are stale. Give me the update routine.",
+    "description": "Keep your dashboard current with a short, fixed update routine.",
+    "useCase": "Use this once your dashboard is built. An out of date dashboard is worse than none since it gives false confidence, so a short fixed routine like ten minutes every Monday keeps it trustworthy, and a visible last updated date makes stale numbers obvious.",
+    "variables": [
+      "BUSINESS TYPE",
+      "AUTOMATIC ONES",
+      "MANUAL ONES",
+      "TIME",
+      "WHEN"
+    ],
+    "relatedPromptIds": [
+      "dash-data-sources",
+      "dash-maintenance-review",
+      "dash-owner-plan"
+    ]
+  },
+  {
+    "id": "dash-alerts-thresholds",
+    "title": "Set Warning Levels and Color Rules",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "dashboard-planning",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me set warning levels for the numbers on my [BUSINESS TYPE] dashboard. The numbers are [YOUR KPIS WITH TYPICAL VALUES], levels that would worry me are [YOUR CONCERNS, E.G. CASH BELOW ONE MONTH OF COSTS, NO ORDERS IN TWO DAYS], and what I would do if each crossed the line is [YOUR RESPONSE]. Suggest good, watch, and act ranges for each, and simple color rules to highlight them. Note that a dashboard full of numbers with no thresholds still requires me to interpret everything every time, while clear warning levels let me see problems instantly, though using too many colors or alerts creates noise, and color should not be the only signal, since some people cannot easily tell certain colors apart, so pairing it with a label or arrow helps. Give me the thresholds and color rules.",
+    "description": "Set good, watch, and act ranges so problems stand out instantly.",
+    "useCase": "Use this to make problems jump out. Without thresholds you must interpret every number each time, while clear warning levels show problems instantly, though too many alerts create noise, and color should be paired with a label or arrow since some people cannot easily tell certain colors apart.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR KPIS WITH TYPICAL VALUES",
+      "YOUR CONCERNS, E.G. CASH BELOW ONE MONTH OF COSTS, NO ORDERS IN TWO DAYS",
+      "YOUR RESPONSE"
+    ],
+    "relatedPromptIds": [
+      "dash-chart-types",
+      "dash-cash-dashboard",
+      "dash-layout"
+    ]
+  },
+  {
+    "id": "dash-daily-glance",
+    "title": "Plan a Daily Glance Dashboard",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "dashboard-planning",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan a tiny daily dashboard I can check in under a minute for my [BUSINESS TYPE]. The things that can change quickly and need fast action are [E.G. NEW ORDERS, UNANSWERED MESSAGES, STOCK LEVELS, CASH IN, BOOKINGS], and where I would check it is [PHONE, COMPUTER, PAPER]. Suggest three to five daily numbers, the comparison for each, and what action each might trigger. Note that most metrics do not need daily attention, and checking slow moving numbers like profit every day mostly creates anxiety, so a daily view should only include things where same day action matters, like unanswered customer messages or low stock, while deeper numbers belong on a weekly or monthly view. Give me the daily dashboard.",
+    "description": "Plan a tiny daily view of only the numbers that need same day action.",
+    "useCase": "Use this for the numbers you check every day. Most metrics do not need daily attention, and checking slow numbers like profit daily mostly creates anxiety, so a daily view should only hold things where same day action matters, like unanswered messages or low stock.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. NEW ORDERS, UNANSWERED MESSAGES, STOCK LEVELS, CASH IN, BOOKINGS",
+      "PHONE, COMPUTER, PAPER"
+    ],
+    "relatedPromptIds": [
+      "dash-weekly-view",
+      "dash-mobile-view",
+      "dash-owner-plan"
+    ]
+  },
+  {
+    "id": "dash-weekly-view",
+    "title": "Plan a Weekly Review Dashboard",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "dashboard-planning",
+    "aiTool": "Claude",
+    "promptText": "Help me plan a weekly dashboard I review once a week for my [BUSINESS TYPE]. The numbers I want to review are [YOUR WEEKLY KPIS], the comparisons that make sense are [E.G. LAST WEEK, SAME WEEK LAST MONTH, FOUR WEEK AVERAGE, TARGET], and the decisions I make weekly are [E.G. MARKETING FOCUS, STAFFING, ORDERING, FOLLOW UPS]. Lay out the weekly view and suggest a short set of questions to answer while reviewing it. Note that a week is long enough to smooth out daily noise but short enough to act on, making it a good rhythm for most small business decisions, and comparing with a four week average rather than only last week avoids overreacting to one unusual week, while pairing the dashboard with a few fixed questions turns looking into deciding. Give me the weekly dashboard.",
+    "description": "Plan a weekly dashboard with fair comparisons and review questions.",
+    "useCase": "Use this for your weekly business review. A week smooths daily noise but is short enough to act on, comparing with a four week average avoids overreacting to one odd week, and pairing the dashboard with a few fixed questions turns looking at numbers into deciding.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR WEEKLY KPIS",
+      "E.G. LAST WEEK, SAME WEEK LAST MONTH, FOUR WEEK AVERAGE, TARGET",
+      "E.G. MARKETING FOCUS, STAFFING, ORDERING, FOLLOW UPS"
+    ],
+    "relatedPromptIds": [
+      "dash-daily-glance",
+      "dash-owner-plan",
+      "dash-sales-dashboard"
+    ]
+  },
+  {
+    "id": "dash-sales-dashboard",
+    "title": "Plan a Sales Dashboard",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "dashboard-planning",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me plan a sales dashboard for my [BUSINESS TYPE]. How I sell is [E.G. ONLINE SHOP, MARKETPLACE, IN PERSON, BY MESSAGE, PROPOSALS], the sales data I have is [ORDERS, REVENUE, PRODUCTS, CUSTOMERS, PIPELINE], and what I want to understand is [YOUR QUESTIONS]. Suggest the key sales views, like revenue trend, orders and average order value, top products, sales by channel, and pipeline if I sell services. Note that a sales dashboard is most useful when it shows why revenue changed, not just that it did, so pairing revenue with order count and average order value, and showing which products or channels drive it, makes it clear where to focus, while service businesses usually need a pipeline view since today's revenue reflects work won weeks ago. Give me the sales dashboard plan.",
+    "description": "Plan a sales dashboard that shows why revenue changed, not just that it did.",
+    "useCase": "Use this to understand your sales at a glance. A sales dashboard is most useful when it shows why revenue changed, so pairing revenue with order count, average value, and product or channel breakdown shows where to focus, and service businesses need a pipeline view since revenue reflects work won weeks ago.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. ONLINE SHOP, MARKETPLACE, IN PERSON, BY MESSAGE, PROPOSALS",
+      "ORDERS, REVENUE, PRODUCTS, CUSTOMERS, PIPELINE",
+      "YOUR QUESTIONS"
+    ],
+    "relatedPromptIds": [
+      "dash-marketing-dashboard",
+      "dash-cash-dashboard",
+      "dash-weekly-view"
+    ]
+  },
+  {
+    "id": "dash-marketing-dashboard",
+    "title": "Plan a Marketing Dashboard",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "dashboard-planning",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan a marketing dashboard for my [BUSINESS TYPE]. The channels I use are [E.G. SOCIAL MEDIA, EMAIL, SEO, ADS, MARKETPLACE, REFERRALS], what I spend on each in time and money is [YOUR INVESTMENT], and the results I can track are [VISITS, LEADS, SALES, SIGN UPS]. Suggest a dashboard showing each channel from attention to results, with cost per lead or sale where possible. Note that marketing dashboards easily fill up with reach and engagement numbers that look impressive but say little about sales, so the most useful view follows each channel through to leads and revenue, and including rough time costs alongside money shows which channels are truly efficient for a small business where the owner's time is often the biggest expense. Give me the marketing dashboard plan.",
+    "description": "Plan a marketing dashboard that follows each channel through to sales.",
+    "useCase": "Use this to see which marketing actually works. Marketing dashboards fill up with reach numbers that say little about sales, so following each channel through to leads and revenue is most useful, and including rough time costs shows which channels are efficient when your time is the biggest expense.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. SOCIAL MEDIA, EMAIL, SEO, ADS, MARKETPLACE, REFERRALS",
+      "YOUR INVESTMENT",
+      "VISITS, LEADS, SALES, SIGN UPS"
+    ],
+    "relatedPromptIds": [
+      "dash-sales-dashboard",
+      "dash-alerts-thresholds",
+      "dash-declutter"
+    ]
+  },
+  {
+    "id": "dash-cash-dashboard",
+    "title": "Plan a Cash and Money Dashboard",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "dashboard-planning",
+    "aiTool": "Claude",
+    "promptText": "Help me plan a simple cash and money dashboard for my [BUSINESS TYPE]. Where my money is held is [ACCOUNTS AND PAYMENT APPS], my regular costs are [MONTHLY FIXED AND VARIABLE COSTS], money owed to me is [UNPAID INVOICES OR PENDING PAYOUTS], and upcoming big payments are [E.G. RENT, STOCK, TAXES, SALARIES]. Suggest a view showing cash on hand, months of runway, money coming in and going out, overdue invoices, and upcoming large payments. Note that running out of cash is one of the most common reasons small businesses fail, even profitable ones, and cash spread across several accounts and apps makes it easy to lose track, so one simple view of total cash and what is due soon gives early warning, while tax planning and accounting questions still deserve a qualified professional. Give me the cash dashboard plan.",
+    "description": "Plan one view of total cash, runway, money owed, and payments due.",
+    "useCase": "Use this to avoid cash surprises. Running out of cash is a common reason businesses fail, even profitable ones, and money spread across accounts and apps is easy to lose track of, so one view of total cash and what is due soon gives early warning, while tax questions deserve a professional.",
+    "variables": [
+      "BUSINESS TYPE",
+      "ACCOUNTS AND PAYMENT APPS",
+      "MONTHLY FIXED AND VARIABLE COSTS",
+      "UNPAID INVOICES OR PENDING PAYOUTS",
+      "E.G. RENT, STOCK, TAXES, SALARIES"
+    ],
+    "relatedPromptIds": [
+      "dash-alerts-thresholds",
+      "dash-sales-dashboard",
+      "dash-owner-plan"
+    ]
+  },
+  {
+    "id": "dash-mobile-view",
+    "title": "Design a Dashboard for Your Phone",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "dashboard-planning",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me design a dashboard that works well on a phone for my [BUSINESS TYPE]. The numbers I check most on my phone are [YOUR KEY NUMBERS], the tool or app I use is [YOUR TOOL], and when I usually check is [E.G. MORNINGS, BETWEEN CUSTOMERS, ON THE ROAD]. Suggest a phone friendly layout that stacks in one column with big numbers and minimal charts. Note that many owners check their business mostly on a phone, but dashboards designed on a laptop often become unreadable on a small screen, with tiny charts and side by side tables, so a phone view should stack a few large numbers vertically, use simple sparklines or arrows for trends, and leave detailed tables for the computer. Give me the mobile dashboard design.",
+    "description": "Design a one column phone dashboard with big numbers and simple trends.",
+    "useCase": "Use this if you check your business mostly on your phone. Dashboards designed on a laptop often become unreadable on small screens, so a phone view should stack a few large numbers vertically, use simple arrows or small trend lines, and leave detailed tables for the computer.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR KEY NUMBERS",
+      "YOUR TOOL",
+      "E.G. MORNINGS, BETWEEN CUSTOMERS, ON THE ROAD"
+    ],
+    "relatedPromptIds": [
+      "dash-daily-glance",
+      "dash-layout",
+      "dash-declutter"
+    ]
+  },
+  {
+    "id": "dash-sharing-access",
+    "title": "Share a Dashboard Safely",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "dashboard-planning",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan how to share my [BUSINESS TYPE] dashboard safely with others. Who needs to see it is [E.G. A PARTNER, TEAM MEMBERS, AN ACCOUNTANT, AN INVESTOR, A CONTRACTOR], what each person needs to see is [THEIR NEEDS], and sensitive information on it is [E.G. PROFIT, SALARIES, CUSTOMER NAMES, BANK DETAILS]. Suggest who gets which view, view versus edit access, and what to hide or summarize. Note that sharing a full dashboard by default can expose sensitive financial or customer information to people who do not need it, and edit access invites accidental changes that break formulas, so giving each person view only access to just what they need protects the business, while customer personal data may also be covered by privacy rules that depend on where I and my customers are. Give me the sharing plan.",
+    "description": "Give each viewer view only access to just the numbers they need.",
+    "useCase": "Use this before sharing a dashboard with anyone. Sharing everything by default can expose sensitive financial or customer information, and edit access invites accidental changes that break formulas, so view only access to just what each person needs protects the business, and customer data may fall under privacy rules.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. A PARTNER, TEAM MEMBERS, AN ACCOUNTANT, AN INVESTOR, A CONTRACTOR",
+      "THEIR NEEDS",
+      "E.G. PROFIT, SALARIES, CUSTOMER NAMES, BANK DETAILS"
+    ],
+    "relatedPromptIds": [
+      "dash-owner-plan",
+      "dash-choose-tool",
+      "dash-maintenance-review"
+    ]
+  },
+  {
+    "id": "dash-declutter",
+    "title": "Declutter a Dashboard That Has Grown Too Big",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "dashboard-planning",
+    "aiTool": "Claude",
+    "promptText": "Help me declutter a dashboard that has become too crowded for my [BUSINESS TYPE]. What it currently shows is [LIST EVERYTHING ON IT], which parts I actually look at is [WHAT YOU USE], and decisions it is meant to support are [THE DECISIONS]. Sort each item into keep, move to a detail page, or remove, and suggest a cleaner version. Note that dashboards tend to grow as every new question gets its own chart, until nothing stands out and I stop using it, so removing anything that has not informed a decision recently, and moving rarely needed detail off the main view, usually makes the dashboard far more useful even though it shows less. Give me the decluttered dashboard.",
+    "description": "Cut a crowded dashboard back to the items that inform decisions.",
+    "useCase": "Use this when your dashboard has too much on it. Dashboards grow as every question gets its own chart until nothing stands out and you stop using it, so removing anything that has not informed a recent decision and moving rare detail off the main view makes it far more useful despite showing less.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST EVERYTHING ON IT",
+      "WHAT YOU USE",
+      "THE DECISIONS"
+    ],
+    "relatedPromptIds": [
+      "dash-layout",
+      "dash-maintenance-review",
+      "dash-owner-plan"
+    ]
+  },
+  {
+    "id": "dash-maintenance-review",
+    "title": "Review and Maintain Your Dashboard",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "dashboard-planning",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me review and maintain my dashboard every few months for my [BUSINESS TYPE]. What has changed in my business is [NEW PRODUCTS, CHANNELS, GOALS, TOOLS], problems I have noticed with the dashboard are [E.G. BROKEN LINKS, WRONG NUMBERS, OUTDATED METRICS, SLOW UPDATES], and how much I actually use it is [HONESTLY]. Give me a short maintenance checklist covering accuracy, relevance, data connections, and usefulness, plus specific changes to make. Note that dashboards quietly break when data sources change, like a platform renaming a report or a new payment app not being connected, and they drift out of date as the business changes, so a short review every quarter, including a spot check of a few numbers against the original source, keeps the dashboard trustworthy. Give me the maintenance review.",
+    "description": "Review a dashboard quarterly for accuracy, relevance, and broken connections.",
+    "useCase": "Use this every quarter. Dashboards quietly break when data sources change, like a platform renaming a report or a new payment app not being connected, and drift as the business changes, so a short quarterly review with spot checks against original sources keeps the dashboard trustworthy.",
+    "variables": [
+      "BUSINESS TYPE",
+      "NEW PRODUCTS, CHANNELS, GOALS, TOOLS",
+      "E.G. BROKEN LINKS, WRONG NUMBERS, OUTDATED METRICS, SLOW UPDATES",
+      "HONESTLY"
+    ],
+    "relatedPromptIds": [
+      "dash-update-routine",
+      "dash-declutter",
+      "dash-data-sources"
+    ]
   }
 ]
