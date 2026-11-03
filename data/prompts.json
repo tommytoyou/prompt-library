@@ -38675,5 +38675,394 @@
       "procrast-pattern-review",
       "procrast-why-avoiding"
     ]
+  },
+  {
+    "id": "decide-reversible-check",
+    "title": "Check Whether a Decision Is Reversible",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "decision-frameworks",
+    "aiTool": "Claude",
+    "promptText": "Help me figure out how carefully I need to make a decision for my [BUSINESS TYPE]. The decision is [THE DECISION], the options are [YOUR OPTIONS], and what it would take to undo each one is [COST, TIME, OR DAMAGE OF REVERSING]. Tell me whether this is an easily reversible decision I should make quickly or a hard to reverse one that deserves more time, and how to approach it either way. Note that many decisions feel heavy but are easy to reverse, like trying a new price or tool, and these are best made quickly and adjusted, while truly hard to undo decisions, like signing a long lease or a major hire, deserve slower thinking, so sorting the decision first stops me agonizing over small choices and rushing big ones. Give me the reversibility check.",
+    "description": "Sort a decision by how reversible it is to know how carefully to decide.",
+    "useCase": "Use this first on any decision you are stuck on. Many decisions feel heavy but are easy to reverse and are best made quickly and adjusted, while hard to undo ones deserve slower thinking, so sorting them stops you agonizing over small choices and rushing big ones.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE DECISION",
+      "YOUR OPTIONS",
+      "COST, TIME, OR DAMAGE OF REVERSING"
+    ],
+    "relatedPromptIds": [
+      "decide-weighted-matrix",
+      "decide-small-experiment",
+      "decide-deadline"
+    ]
+  },
+  {
+    "id": "decide-weighted-matrix",
+    "title": "Compare Options With a Weighted Decision Matrix",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "decision-frameworks",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me compare my options using a weighted decision matrix. The decision is [THE DECISION], the options are [YOUR OPTIONS], and the factors that matter to me are [E.G. COST, TIME, RISK, INCOME, ENJOYMENT, FIT WITH GOALS]. Help me weight each factor by importance, score each option, and show the totals, then tell me whether the result matches my gut and what that might mean. Note that a matrix makes tradeoffs visible and stops one vivid factor from dominating, but the numbers are only as good as my weights, so if the winner feels wrong, that usually means I have left out a factor that matters to me, which is useful information rather than a reason to ignore the result. Give me the decision matrix.",
+    "description": "Weight your factors and score options to see the tradeoffs clearly.",
+    "useCase": "Use this when comparing several options on many factors. A matrix makes tradeoffs visible and stops one vivid factor dominating, but it is only as good as your weights, so if the winner feels wrong you have likely left out a factor that matters, which is useful information.",
+    "variables": [
+      "THE DECISION",
+      "YOUR OPTIONS",
+      "E.G. COST, TIME, RISK, INCOME, ENJOYMENT, FIT WITH GOALS"
+    ],
+    "relatedPromptIds": [
+      "decide-reversible-check",
+      "decide-gut-vs-data",
+      "decide-opportunity-cost"
+    ]
+  },
+  {
+    "id": "decide-quick-call",
+    "title": "Get a Quick Decision Gut Check",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "decision-frameworks",
+    "aiTool": "Grok",
+    "promptText": "I need to make a decision quickly. The choice is between [OPTION A] and [OPTION B], what matters most to me is [YOUR TOP PRIORITY], and I need to decide by [WHEN]. Give me a short comparison and the option you would lean toward with one reason, no long analysis, just the call. Give me the quick take.",
+    "description": "Get a short comparison and a lean between two options, fast.",
+    "useCase": "Use this for decisions that do not deserve hours. A short comparison and a lean based on your top priority helps you move on a small or reversible choice, and a quick decent decision usually beats a slow perfect one when the stakes are low.",
+    "variables": [
+      "OPTION A",
+      "OPTION B",
+      "YOUR TOP PRIORITY",
+      "WHEN"
+    ],
+    "relatedPromptIds": [
+      "decide-reversible-check",
+      "decide-deadline",
+      "decide-weighted-matrix"
+    ]
+  },
+  {
+    "id": "decide-premortem",
+    "title": "Run a Pre Mortem Before Deciding",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "decision-frameworks",
+    "aiTool": "Claude",
+    "promptText": "Help me run a pre mortem on a decision for my [BUSINESS TYPE]. The decision I am leaning toward is [THE DECISION], and my plan is [HOW YOU WILL CARRY IT OUT]. Imagine it is a year from now and this decision went badly, list the most likely reasons it failed, and for each, a way to prevent it or an early warning sign to watch. Note that people tend to see only the reasons a favored plan will work, and imagining it has already failed makes it much easier to spot risks I am ignoring, while the goal is not to talk myself out of the decision but to make it stronger, since most risks can be reduced once named. Give me the pre mortem.",
+    "description": "Imagine a decision failed to find and fix its risks in advance.",
+    "useCase": "Use this before committing to a big decision. People see mainly the reasons a favored plan will work, and imagining it already failed makes overlooked risks easier to spot, which is about strengthening the decision rather than talking yourself out of it, since most risks shrink once named.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE DECISION",
+      "HOW YOU WILL CARRY IT OUT"
+    ],
+    "relatedPromptIds": [
+      "decide-second-order",
+      "decide-bias-check",
+      "decide-worst-case"
+    ]
+  },
+  {
+    "id": "decide-second-order",
+    "title": "Think Through Second Order Effects",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "decision-frameworks",
+    "aiTool": "Gemini",
+    "promptText": "Help me think beyond the immediate result of a decision for my [BUSINESS TYPE]. The decision is [THE DECISION], the immediate effect I expect is [THE FIRST RESULT], and the people affected are [CUSTOMERS, TEAM, FAMILY, PARTNERS]. Walk me through what happens next, and then after that, for each option, including effects on my time, cash, relationships, and reputation. Note that many decisions look good at first and cause problems later, like a discount that brings sales but trains customers to wait for deals, or a big client that brings revenue but takes over my calendar, so asking and then what a couple of times often reveals the real cost or benefit. Give me the second order effects.",
+    "description": "Ask and then what to see the later effects of a decision.",
+    "useCase": "Use this when an option looks great at first glance. Many decisions look good initially and cause problems later, like a discount that trains customers to wait, so asking and then what a couple of times often reveals the real cost or benefit before you commit.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE DECISION",
+      "THE FIRST RESULT",
+      "CUSTOMERS, TEAM, FAMILY, PARTNERS"
+    ],
+    "relatedPromptIds": [
+      "decide-premortem",
+      "decide-opportunity-cost",
+      "decide-10-10-10"
+    ]
+  },
+  {
+    "id": "decide-10-10-10",
+    "title": "Use the 10 10 10 Test",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "decision-frameworks",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me apply the 10 10 10 test to a decision I am stuck on. The decision is [THE DECISION], the options are [YOUR OPTIONS], and what I feel strongly about right now is [YOUR CURRENT FEELINGS]. For each option, help me think through how I will likely feel about it in ten minutes, ten months, and ten years. Note that strong feelings in the moment, like fear of an awkward conversation or excitement about a shiny opportunity, can dominate a decision even when they will barely matter in a few months, so stepping through different time frames helps me separate short term discomfort from long term consequences. Give me the 10 10 10 view.",
+    "description": "Weigh how a decision will feel in ten minutes, ten months, and ten years.",
+    "useCase": "Use this when emotions in the moment are driving a choice. Fear of an awkward conversation or excitement about a shiny opportunity can dominate even when it barely matters later, so stepping through different time frames separates short term discomfort from long term consequences.",
+    "variables": [
+      "THE DECISION",
+      "YOUR OPTIONS",
+      "YOUR CURRENT FEELINGS"
+    ],
+    "relatedPromptIds": [
+      "decide-regret-minimization",
+      "decide-second-order",
+      "decide-emotions-check"
+    ]
+  },
+  {
+    "id": "decide-regret-minimization",
+    "title": "Use Regret Minimization for a Big Choice",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "decision-frameworks",
+    "aiTool": "Claude",
+    "promptText": "Help me think through a big life or business choice using regret minimization. The choice is [THE BIG DECISION, E.G. STARTING A BUSINESS, MOVING, CHANGING DIRECTION], what scares me about each option is [YOUR FEARS], and what I would hope my life looks like later is [YOUR LONG TERM HOPES]. Help me imagine looking back from much later and ask which choice I would most regret not making. Note that people often regret the chances they did not take more than the ones that did not work out, but this frame works best for big, values driven choices rather than everyday ones, and it should be paired with a realistic plan for the downside, like savings or a fallback, so that following my heart does not mean ignoring real risks. Give me the regret reflection.",
+    "description": "Ask which choice you would most regret not making, with a downside plan.",
+    "useCase": "Use this for big, values driven choices like starting or changing direction. People often regret chances not taken more than ones that failed, but this works best for big decisions and should come with a realistic downside plan, so following your heart does not mean ignoring real risks.",
+    "variables": [
+      "THE BIG DECISION, E.G. STARTING A BUSINESS, MOVING, CHANGING DIRECTION",
+      "YOUR FEARS",
+      "YOUR LONG TERM HOPES"
+    ],
+    "relatedPromptIds": [
+      "decide-10-10-10",
+      "decide-worst-case",
+      "decide-values-filter"
+    ]
+  },
+  {
+    "id": "decide-opportunity-cost",
+    "title": "Count the Opportunity Cost",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "decision-frameworks",
+    "aiTool": "Gemini",
+    "promptText": "Help me count the opportunity cost of a decision for my [BUSINESS TYPE]. The thing I am considering saying yes to is [THE OPPORTUNITY OR PROJECT], the time, money, and energy it would take is [WHAT IT COSTS], and the other things I could do with those same resources are [ALTERNATIVES]. Help me see what I am really giving up by saying yes, and whether it is still worth it. Note that every yes is a no to something else, and small business owners often say yes to good opportunities that quietly crowd out better ones, since the cost of a new project is not just its price but the work I can no longer do, so comparing against my best alternative use of the time is what shows whether it is truly a good deal. Give me the opportunity cost view.",
+    "description": "See what you give up by saying yes, compared to your best alternative.",
+    "useCase": "Use this before saying yes to a new project or opportunity. Every yes is a no to something else, and owners often accept good opportunities that crowd out better ones, so comparing against your best alternative use of the time shows whether it is truly a good deal.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE OPPORTUNITY OR PROJECT",
+      "WHAT IT COSTS",
+      "ALTERNATIVES"
+    ],
+    "relatedPromptIds": [
+      "decide-weighted-matrix",
+      "decide-second-order",
+      "decide-sunk-cost"
+    ]
+  },
+  {
+    "id": "decide-sunk-cost",
+    "title": "Check for the Sunk Cost Trap",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "decision-frameworks",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether I am continuing something only because of what I have already put in. The thing is [THE PROJECT, PRODUCT, TOOL, OR COMMITMENT], what I have already invested is [TIME, MONEY, EFFORT], how it is actually going is [HONEST RESULTS], and what it would take to continue is [FUTURE COST]. Help me judge it as if I were starting fresh today, ignoring what is already spent. Note that money and time already spent are gone whatever I decide, so the only real question is whether the future investment is worth the future return, and the pull to keep going to avoid wasting what I put in is strong and normal, but stopping a losing path early is often the best use of the lesson, though quitting too fast on something just slow to start is also a mistake. Give me the fresh start assessment.",
+    "description": "Judge whether to continue something as if starting fresh today.",
+    "useCase": "Use this when you keep going because you have already invested so much. Past time and money are gone either way, so the real question is whether future investment is worth future return, and stopping a losing path early is often wise, though quitting too fast on something merely slow to start is also a mistake.",
+    "variables": [
+      "THE PROJECT, PRODUCT, TOOL, OR COMMITMENT",
+      "TIME, MONEY, EFFORT",
+      "HONEST RESULTS",
+      "FUTURE COST"
+    ],
+    "relatedPromptIds": [
+      "decide-opportunity-cost",
+      "decide-bias-check",
+      "decide-small-experiment"
+    ]
+  },
+  {
+    "id": "decide-gut-vs-data",
+    "title": "Weigh Your Gut Against the Data",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "decision-frameworks",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me sort out a decision where my gut and the data disagree. The decision is [THE DECISION], what the numbers or evidence say is [THE DATA], what my gut says is [YOUR INSTINCT], and my experience in this area is [HOW MUCH YOU KNOW THIS FIELD]. Help me explore what my gut might be picking up that the data misses, and what the data shows that my gut might be ignoring. Note that intuition is often reliable in areas where I have lots of experience and quick feedback, and much less reliable in unfamiliar areas, while data can be incomplete or measure the wrong thing, so the useful step is to put my gut feeling into words and test it, rather than blindly following either one. Give me the gut versus data analysis.",
+    "description": "Put your gut feeling into words and test it against the evidence.",
+    "useCase": "Use this when instinct and evidence point different ways. Intuition is often reliable where you have lots of experience and fast feedback and much less so in unfamiliar areas, while data can be incomplete, so putting your gut into words and testing it beats blindly following either.",
+    "variables": [
+      "THE DECISION",
+      "THE DATA",
+      "YOUR INSTINCT",
+      "HOW MUCH YOU KNOW THIS FIELD"
+    ],
+    "relatedPromptIds": [
+      "decide-weighted-matrix",
+      "decide-bias-check",
+      "decide-advice-gathering"
+    ]
+  },
+  {
+    "id": "decide-bias-check",
+    "title": "Check a Decision for Common Biases",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "decision-frameworks",
+    "aiTool": "Claude",
+    "promptText": "Help me check a decision I am about to make for common thinking traps. The decision is [THE DECISION], why I am leaning that way is [YOUR REASONS], and the information I have looked at is [YOUR SOURCES]. Look for signs of confirmation bias, overconfidence, recency bias, following the crowd, anchoring on a first number, and fear of loss, and point out which seem to apply. Note that everyone falls into these traps, and they are hardest to see in my own thinking, especially when I already want a particular answer, so actively looking for evidence against my preferred option, and asking what would change my mind, is one of the simplest ways to make a better decision. Give me the bias check.",
+    "description": "Look for thinking traps in a decision you are about to make.",
+    "useCase": "Use this before committing to a decision you are keen on. Everyone falls into thinking traps and they are hardest to see when you already want a particular answer, so actively seeking evidence against your preferred option and asking what would change your mind is a simple way to decide better.",
+    "variables": [
+      "THE DECISION",
+      "YOUR REASONS",
+      "YOUR SOURCES"
+    ],
+    "relatedPromptIds": [
+      "decide-premortem",
+      "decide-gut-vs-data",
+      "decide-advice-gathering"
+    ]
+  },
+  {
+    "id": "decide-worst-case",
+    "title": "Plan for the Realistic Worst Case",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "decision-frameworks",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan for the realistic worst case of a decision I am weighing for my [BUSINESS TYPE]. The decision is [THE DECISION], the worst outcome I fear is [YOUR FEAR], and the resources I would have if it happened are [SAVINGS, SKILLS, SUPPORT, OTHER INCOME]. Help me describe the realistic worst case, how likely it is, how I would recover, and what I can set up now to soften it. Note that a vague fear of the worst often feels bigger than the realistic version, and naming exactly what would happen and how I would cope usually makes a decision less frightening, while setting up a cushion in advance, like a cash buffer or a fallback plan, turns a scary risk into a manageable one. Give me the worst case plan.",
+    "description": "Name the realistic worst case and set up a cushion in advance.",
+    "useCase": "Use this when fear of failure is blocking a decision. A vague fear of the worst often feels bigger than the realistic version, so naming what would happen and how you would cope usually makes it less frightening, and a cushion set up in advance turns a scary risk into a manageable one.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE DECISION",
+      "YOUR FEAR",
+      "SAVINGS, SKILLS, SUPPORT, OTHER INCOME"
+    ],
+    "relatedPromptIds": [
+      "decide-premortem",
+      "decide-regret-minimization",
+      "decide-small-experiment"
+    ]
+  },
+  {
+    "id": "decide-small-experiment",
+    "title": "Turn a Decision Into a Small Experiment",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "decision-frameworks",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me turn a decision I am unsure about into a small, low risk experiment for my [BUSINESS TYPE]. The decision is [THE DECISION], what I am uncertain about is [THE KEY UNKNOWN], and the budget and time I can risk on a test are [WHAT YOU CAN SPEND]. Design a small test that answers the key question, with a clear success measure and a date to decide. Note that many decisions do not need to be made in one big leap, since a short test, like selling to five customers before building the full product, gives real evidence instead of guesses, and deciding in advance what result means go, adjust, or stop keeps me from moving the goalposts once I see the results. Give me the experiment.",
+    "description": "Test an uncertain decision cheaply with a clear success measure.",
+    "useCase": "Use this when you cannot decide without more information. Many decisions do not need one big leap, since a short test gives real evidence instead of guesses, and deciding in advance what result means go, adjust, or stop keeps you from moving the goalposts once results arrive.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE DECISION",
+      "THE KEY UNKNOWN",
+      "WHAT YOU CAN SPEND"
+    ],
+    "relatedPromptIds": [
+      "decide-reversible-check",
+      "decide-worst-case",
+      "decide-sunk-cost"
+    ]
+  },
+  {
+    "id": "decide-deadline",
+    "title": "Set a Deadline to Stop Overthinking",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "decision-frameworks",
+    "aiTool": "Claude",
+    "promptText": "Help me stop overthinking a decision by setting a deadline and a process. The decision is [THE DECISION], how long I have been going back and forth is [HOW LONG], what more information I think I need is [WHAT YOU ARE WAITING FOR], and what delaying is costing me is [THE COST OF WAITING]. Help me decide what information is actually worth getting, set a decision date, and choose a simple rule for what I will do if I am still unsure by then. Note that waiting for certainty usually means waiting forever, since most business decisions are made with incomplete information, and the cost of delay, like lost time or missed chances, is often bigger than the risk of choosing imperfectly, so a firm decision date with a default choice breaks the loop. Give me the decision deadline plan.",
+    "description": "Set a decision date and a default choice to break an overthinking loop.",
+    "useCase": "Use this when you have been going back and forth too long. Waiting for certainty usually means waiting forever since most decisions use incomplete information, and the cost of delay is often bigger than choosing imperfectly, so a firm date with a default choice breaks the loop.",
+    "variables": [
+      "THE DECISION",
+      "HOW LONG",
+      "WHAT YOU ARE WAITING FOR",
+      "THE COST OF WAITING"
+    ],
+    "relatedPromptIds": [
+      "decide-reversible-check",
+      "decide-too-many-options",
+      "decide-quick-call"
+    ]
+  },
+  {
+    "id": "decide-too-many-options",
+    "title": "Narrow Down Too Many Options",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "decision-frameworks",
+    "aiTool": "Gemini",
+    "promptText": "Help me narrow down a choice where I have too many options. What I am choosing is [E.G. A TOOL, A SUPPLIER, A NICHE, A PRODUCT IDEA], the options I am considering are [YOUR LIST], and my must haves are [NON NEGOTIABLES]. Help me cut the list using my must haves first, then compare the remaining few on what matters most. Note that having too many options often leads to stalling or regret, and most of the options can usually be removed quickly by checking them against a few must haves, so narrowing to two or three serious choices and then comparing those properly is far easier than trying to weigh everything at once. Give me the narrowed choice.",
+    "description": "Cut a long list of options down to two or three with your must haves.",
+    "useCase": "Use this when too many options leave you stalled. Too many choices often lead to stalling or regret, and most can be removed quickly against a few must haves, so narrowing to two or three serious choices and comparing those properly is far easier than weighing everything at once.",
+    "variables": [
+      "E.G. A TOOL, A SUPPLIER, A NICHE, A PRODUCT IDEA",
+      "YOUR LIST",
+      "NON NEGOTIABLES"
+    ],
+    "relatedPromptIds": [
+      "decide-weighted-matrix",
+      "decide-deadline",
+      "decide-values-filter"
+    ]
+  },
+  {
+    "id": "decide-values-filter",
+    "title": "Filter a Decision Through Your Values",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "decision-frameworks",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me check a decision against what matters most to me. The decision is [THE DECISION], the options are [YOUR OPTIONS], and my core values or priorities are [E.G. FREEDOM, FAMILY, HONESTY, SECURITY, CRAFT, GROWTH]. Show me how each option fits or conflicts with my values, and point out any option that looks good on paper but goes against them. Note that a decision can make financial sense and still feel wrong if it conflicts with what I value, like a lucrative client whose practices I disagree with, and those decisions often lead to regret or stress later, so naming my values explicitly makes it easier to choose an option I can live with comfortably. Give me the values filter.",
+    "description": "Check options against your values to find the one you can live with.",
+    "useCase": "Use this when an option looks good on paper but feels wrong. A decision can make financial sense and still conflict with your values, like a lucrative client whose practices you disagree with, which often leads to regret, so naming your values makes it easier to choose an option you can live with.",
+    "variables": [
+      "THE DECISION",
+      "YOUR OPTIONS",
+      "E.G. FREEDOM, FAMILY, HONESTY, SECURITY, CRAFT, GROWTH"
+    ],
+    "relatedPromptIds": [
+      "decide-regret-minimization",
+      "decide-too-many-options",
+      "decide-emotions-check"
+    ]
+  },
+  {
+    "id": "decide-advice-gathering",
+    "title": "Get Useful Advice Without Getting Confused",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "decision-frameworks",
+    "aiTool": "Claude",
+    "promptText": "Help me get useful advice on a decision without being pulled in ten directions. The decision is [THE DECISION], people I could ask are [WHO, AND WHAT THEY KNOW], and what I have already heard is [ADVICE SO FAR]. Help me choose who to ask based on relevant experience, what specific questions to ask them, and how to weigh conflicting advice. Note that advice from people who have faced a similar situation is far more useful than general opinions, and people often recommend what worked for them in a very different context, so asking specific questions like what would you watch out for gets better answers than what should I do, while the final decision is still mine since I know my own situation best. Give me the advice gathering plan.",
+    "description": "Choose who to ask, ask specific questions, and weigh conflicting advice.",
+    "useCase": "Use this when everyone has an opinion on your decision. Advice from people who faced a similar situation is far more useful than general opinions, and people recommend what worked in different contexts, so specific questions like what would you watch out for beat what should I do.",
+    "variables": [
+      "THE DECISION",
+      "WHO, AND WHAT THEY KNOW",
+      "ADVICE SO FAR"
+    ],
+    "relatedPromptIds": [
+      "decide-gut-vs-data",
+      "decide-bias-check",
+      "decide-journal"
+    ]
+  },
+  {
+    "id": "decide-emotions-check",
+    "title": "Check How Emotions Are Shaping a Decision",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "decision-frameworks",
+    "aiTool": "Gemini",
+    "promptText": "Help me notice how my current emotions are shaping a decision. The decision is [THE DECISION], how I am feeling right now is [E.G. STRESSED, EXCITED, ANGRY, EXHAUSTED, PANICKED], and what triggered it is [WHAT HAPPENED]. Help me separate the facts of the situation from the emotional pressure, and decide whether this is a decision to make now or after I have calmed down. Note that strong emotions like anger, panic, or excitement push toward quick, extreme choices, like firing a client in frustration or buying an expensive course in a moment of hope, and simply waiting a day before acting on big decisions made in a heightened state often prevents regret, while emotions still carry useful information worth listening to. Give me the emotions check.",
+    "description": "Separate facts from emotional pressure before a heated decision.",
+    "useCase": "Use this when you want to act on a strong feeling. Anger, panic, or excitement push toward quick extreme choices, like firing a client in frustration, and waiting a day before acting on big decisions made in a heightened state often prevents regret, while emotions still carry useful information.",
+    "variables": [
+      "THE DECISION",
+      "E.G. STRESSED, EXCITED, ANGRY, EXHAUSTED, PANICKED",
+      "WHAT HAPPENED"
+    ],
+    "relatedPromptIds": [
+      "decide-10-10-10",
+      "decide-values-filter",
+      "decide-deadline"
+    ]
+  },
+  {
+    "id": "decide-journal",
+    "title": "Keep a Decision Journal",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "decision-frameworks",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me set up a simple decision journal for my [BUSINESS TYPE]. The kinds of decisions I make often are [E.G. PRICING, HIRING, MARKETING SPEND, CLIENT CHOICES], and the tool I will use is [NOTEBOOK, DOC, NOTES APP]. Give me a short template for recording a decision, my reasoning, what I expected, and my confidence, plus a routine for reviewing past entries. Note that memory rewrites decisions after the fact, so I tend to remember being more right than I was, and a written record of what I expected and why lets me learn whether my judgment is improving, while separating bad luck from bad decisions, since a good decision can still have a bad outcome. Give me the decision journal setup.",
+    "description": "Record decisions and expectations so you can learn from them later.",
+    "useCase": "Use this to improve your judgment over time. Memory rewrites decisions so you remember being more right than you were, and a written record of what you expected and why shows whether your judgment improves, while separating bad luck from bad decisions, since good decisions can still turn out badly.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. PRICING, HIRING, MARKETING SPEND, CLIENT CHOICES",
+      "NOTEBOOK, DOC, NOTES APP"
+    ],
+    "relatedPromptIds": [
+      "decide-advice-gathering",
+      "decide-bias-check",
+      "decide-small-experiment"
+    ]
   }
 ]
