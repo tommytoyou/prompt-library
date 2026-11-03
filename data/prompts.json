@@ -34036,5 +34036,414 @@
       "iq-follow-up-probes",
       "iq-scoring-rubric"
     ]
+  },
+  {
+    "id": "onplan-30-60-90",
+    "title": "Build a 30 60 90 Day Onboarding Plan",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "onboarding-plans",
+    "aiTool": "Claude",
+    "promptText": "Help me build a 30, 60, and 90 day onboarding plan for a new [ROLE TITLE] at my [BUSINESS TYPE]. What they need to learn is [SYSTEMS, PRODUCTS, CUSTOMERS, PROCESSES], what I want them handling independently by day 90 is [THE GOAL], and how much time I can give them each week is [YOUR REAL AVAILABILITY]. Give me a plan with learning goals, small wins, and checkpoints for each stage. Note that most new hires in small businesses are thrown in and left to figure it out, which slows them down and drives early quitting, but a plan that is too ambitious for the support I can actually give fails just as badly, so the plan has to match my real time, and a few clear milestones beat a long list nobody follows. Give me the 30 60 90 plan.",
+    "description": "Build a realistic 30, 60, and 90 day plan matched to the time you can give.",
+    "useCase": "Use this before a new hire starts. Being thrown in to figure it out slows people down and drives early quitting, but an over ambitious plan fails just as badly if you cannot support it, so a few clear milestones matched to your real time are what make onboarding work.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "SYSTEMS, PRODUCTS, CUSTOMERS, PROCESSES",
+      "THE GOAL",
+      "YOUR REAL AVAILABILITY"
+    ],
+    "relatedPromptIds": [
+      "onplan-first-week",
+      "onplan-milestone-checkins",
+      "onplan-before-day-one"
+    ]
+  },
+  {
+    "id": "onplan-before-day-one",
+    "title": "Prepare Everything Before Day One",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "onboarding-plans",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me make a checklist of everything to set up before a new [ROLE TITLE] starts at my [BUSINESS TYPE]. The tools and accounts they will need are [E.G. EMAIL, MESSAGING, SOFTWARE, PAYMENT SYSTEM, KEYS, EQUIPMENT], the paperwork involved is [CONTRACT, TAX OR ID FORMS, BANK DETAILS], and whether they are [REMOTE OR ON SITE]. Give me a pre start checklist with when each item needs doing. Note that a new hire spending their first day waiting for logins or equipment sends a message that nobody planned for them, and access delays can stall a whole first week, so getting accounts, paperwork, and equipment sorted before day one is the cheapest way to make a strong first impression. Give me the pre start checklist.",
+    "description": "List every account, tool, and form to sort out before a new hire starts.",
+    "useCase": "Use this in the days before someone starts. A first day spent waiting for logins or equipment signals nobody planned for them, and access delays can stall a whole week, so sorting accounts, paperwork, and equipment beforehand is the cheapest way to make a strong first impression.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "E.G. EMAIL, MESSAGING, SOFTWARE, PAYMENT SYSTEM, KEYS, EQUIPMENT",
+      "CONTRACT, TAX OR ID FORMS, BANK DETAILS",
+      "REMOTE OR ON SITE"
+    ],
+    "relatedPromptIds": [
+      "onplan-first-day",
+      "onplan-30-60-90",
+      "onplan-welcome-message"
+    ]
+  },
+  {
+    "id": "onplan-quick-plan",
+    "title": "Get a Quick Onboarding Plan",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "onboarding-plans",
+    "aiTool": "Grok",
+    "promptText": "I have someone starting soon and need a simple onboarding plan fast. The role is [ROLE TITLE], the main work is [WHAT THEY WILL DO], and they start on [START DATE]. Give me a short plan for week one and a few goals for the first month, no long explanation, just the plan. Give me the onboarding plan.",
+    "description": "Get a short week one and first month onboarding plan fast.",
+    "useCase": "Use this when someone starts soon and you have no plan yet. A short week one schedule plus a few first month goals gives the new hire direction from the start, and a simple plan ready on day one beats a thorough one you never finish writing.",
+    "variables": [
+      "ROLE TITLE",
+      "WHAT THEY WILL DO",
+      "START DATE"
+    ],
+    "relatedPromptIds": [
+      "onplan-first-week",
+      "onplan-30-60-90",
+      "onplan-before-day-one"
+    ]
+  },
+  {
+    "id": "onplan-first-day",
+    "title": "Plan a Strong First Day",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "onboarding-plans",
+    "aiTool": "Claude",
+    "promptText": "Help me plan the first day for a new [ROLE TITLE] at my [BUSINESS TYPE]. The setting is [ON SITE, REMOTE, OR MIXED], the people they should meet are [WHO], and one small useful thing they could complete on day one is [A REAL BUT SIMPLE TASK]. Give me an hour by hour or block by block plan that balances welcome, setup, and a first small contribution. Note that a first day packed with nothing but paperwork and reading feels empty, while a day with no structure feels unplanned, so a good first day mixes a real welcome, working access, and one small task they can finish, which helps them feel useful before they go home. Give me the first day plan.",
+    "description": "Plan a first day that balances welcome, setup, and one small real task.",
+    "useCase": "Use this for a new hire's first day. A day of only paperwork feels empty and a day with no structure feels unplanned, so mixing a real welcome, working access, and one small task they can finish helps them feel useful before they go home.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "ON SITE, REMOTE, OR MIXED",
+      "WHO",
+      "A REAL BUT SIMPLE TASK"
+    ],
+    "relatedPromptIds": [
+      "onplan-first-week",
+      "onplan-before-day-one",
+      "onplan-welcome-message"
+    ]
+  },
+  {
+    "id": "onplan-first-week",
+    "title": "Plan the First Week Day by Day",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "onboarding-plans",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan the first week for a new [ROLE TITLE] at my [BUSINESS TYPE]. What they must understand by the end of the week is [THE ESSENTIALS], the tasks they can start on are [STARTER TASKS], and my availability that week is [WHEN YOU CAN SIT WITH THEM]. Give me a day by day plan that builds from learning to doing, with a short check in at the end of each day. Note that the first week sets habits and expectations that are hard to change later, so it should move gradually from watching and learning to doing real work with feedback, and short daily check ins catch confusion early when it is cheap to fix rather than after weeks of quiet guessing. Give me the first week plan.",
+    "description": "Plan a first week that moves from learning to doing with daily check ins.",
+    "useCase": "Use this to set good habits from the start. The first week sets expectations that are hard to change later, so moving gradually from learning to real work with feedback, plus short daily check ins, catches confusion early while it is still cheap to fix.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "THE ESSENTIALS",
+      "STARTER TASKS",
+      "WHEN YOU CAN SIT WITH THEM"
+    ],
+    "relatedPromptIds": [
+      "onplan-first-day",
+      "onplan-30-60-90",
+      "onplan-starter-tasks"
+    ]
+  },
+  {
+    "id": "onplan-starter-tasks",
+    "title": "Pick Good Starter Tasks for a New Hire",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "onboarding-plans",
+    "aiTool": "Claude",
+    "promptText": "Help me choose the right first tasks for a new [ROLE TITLE] at my [BUSINESS TYPE]. The work they will eventually own is [THE FULL ROLE], and tasks I could hand over early are [POSSIBLE STARTER TASKS]. Rank the tasks by how well they teach the job, how low the risk is if they make a mistake, and how quickly they produce something useful. Note that the best starter tasks are real work with limited downside, since busywork teaches little and feels pointless while a high stakes task too early sets people up to fail, and an early visible win builds confidence on both sides. Give me the ranked starter tasks.",
+    "description": "Rank first tasks by learning value, low risk, and early usefulness.",
+    "useCase": "Use this when deciding what a new hire does first. The best starter tasks are real work with limited downside, since busywork teaches little and high stakes work too early sets people up to fail, and an early visible win builds confidence on both sides.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "THE FULL ROLE",
+      "POSSIBLE STARTER TASKS"
+    ],
+    "relatedPromptIds": [
+      "onplan-first-week",
+      "onplan-handover-plan",
+      "onplan-30-60-90"
+    ]
+  },
+  {
+    "id": "onplan-welcome-message",
+    "title": "Write a Welcome Message Before They Start",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "onboarding-plans",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write a welcome message to send a new [ROLE TITLE] a few days before they start at my [BUSINESS TYPE]. Their start date and time is [WHEN], where or how they should show up is [LOCATION, LINK, OR APP], what they should bring or set up is [WHAT TO PREPARE], and the tone I want is [YOUR TONE]. Write a warm, practical message that answers what they are likely wondering. Note that the gap between accepting an offer and starting is when new hires feel most uncertain and sometimes accept another offer, so a friendly message with the practical details, like where to go, what time, and what the first day looks like, reassures them and reduces no shows. Give me the welcome message.",
+    "description": "Send a warm, practical welcome message before a new hire's first day.",
+    "useCase": "Use this a few days before someone starts. The gap between accepting and starting is when new hires feel most uncertain and sometimes take another offer, so a friendly message covering where to go, what time, and what day one looks like reassures them and reduces no shows.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "WHEN",
+      "LOCATION, LINK, OR APP",
+      "WHAT TO PREPARE",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "onplan-before-day-one",
+      "onplan-first-day",
+      "onplan-quick-plan"
+    ]
+  },
+  {
+    "id": "onplan-handover-plan",
+    "title": "Hand Over Work You Have Been Doing Yourself",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "onboarding-plans",
+    "aiTool": "Claude",
+    "promptText": "Help me plan how to hand over work I have been doing myself to a new [ROLE TITLE] at my [BUSINESS TYPE]. The work I am handing over is [THE TASKS], the knowledge that only lives in my head is [WHAT IS UNDOCUMENTED], and how I plan to let go is [GRADUAL OR ALL AT ONCE]. Give me a staged handover: show, do together, do alone with review, then fully owned. Note that founders often hand over work too slowly by hovering, or too fast by dumping it all at once, and both fail, so a staged handover with clear points where responsibility shifts works better, and accepting that they will do some things differently from me is part of letting go. Give me the handover plan.",
+    "description": "Stage the handover of work you have been doing yourself to a new hire.",
+    "useCase": "Use this when passing your own work to someone new. Founders often hand over too slowly by hovering or too fast by dumping everything, so a staged show, do together, do alone, own sequence works better, and accepting that they will do some things differently is part of letting go.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "THE TASKS",
+      "WHAT IS UNDOCUMENTED",
+      "GRADUAL OR ALL AT ONCE"
+    ],
+    "relatedPromptIds": [
+      "onplan-knowledge-capture",
+      "onplan-starter-tasks",
+      "onplan-30-60-90"
+    ]
+  },
+  {
+    "id": "onplan-knowledge-capture",
+    "title": "Capture What a New Hire Needs to Know",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "onboarding-plans",
+    "aiTool": "Gemini",
+    "promptText": "Help me get the knowledge a new [ROLE TITLE] needs out of my head and into a simple onboarding doc for my [BUSINESS TYPE]. The things people keep asking me or that only I know are [E.G. LOGINS, SUPPLIER CONTACTS, PRICING RULES, CUSTOMER QUIRKS, HOW WE DO X], and the format I will actually keep updated is [A DOC, A SHARED FOLDER, A NOTES APP]. Give me an outline for a short starter guide, with the most important topics first. Note that in small businesses critical knowledge often lives only in the founder's head, which makes every new hire slow and every absence risky, so a short guide covering the things most often asked is far more useful than a perfect manual, and it improves fastest if the new hire adds what they had to ask about. Give me the onboarding guide outline.",
+    "description": "Turn knowledge that lives in your head into a short starter guide.",
+    "useCase": "Use this when every new person has to ask you everything. Critical knowledge living only in the founder's head makes each hire slow and each absence risky, so a short guide covering the most asked questions beats a perfect manual, and it improves fastest if the new hire adds to it.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "E.G. LOGINS, SUPPLIER CONTACTS, PRICING RULES, CUSTOMER QUIRKS, HOW WE DO X",
+      "A DOC, A SHARED FOLDER, A NOTES APP"
+    ],
+    "relatedPromptIds": [
+      "onplan-handover-plan",
+      "onplan-before-day-one",
+      "onplan-improve-process"
+    ]
+  },
+  {
+    "id": "onplan-milestone-checkins",
+    "title": "Plan Onboarding Check Ins",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "onboarding-plans",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me plan check in conversations during a new [ROLE TITLE]'s first three months at my [BUSINESS TYPE]. The milestones I set are [YOUR ONBOARDING MILESTONES], and how often I can realistically meet is [FREQUENCY]. Give me a check in schedule and a short set of questions for each one that cover progress, blockers, and how they are feeling about the role. Note that new hires rarely raise problems on their own because they do not want to look like they are struggling, so scheduled check ins with direct questions like what is confusing you surface issues early, and they should be two way, since their fresh eyes often spot problems in how I run things. Give me the check in plan.",
+    "description": "Schedule onboarding check ins with questions that surface problems early.",
+    "useCase": "Use this to catch problems in the first months. New hires rarely raise issues because they do not want to look like they are struggling, so scheduled check ins with direct questions surface problems early, and making them two way lets their fresh eyes improve how you run things.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "YOUR ONBOARDING MILESTONES",
+      "FREQUENCY"
+    ],
+    "relatedPromptIds": [
+      "onplan-30-60-90",
+      "onplan-probation-review",
+      "onplan-struggling-new-hire"
+    ]
+  },
+  {
+    "id": "onplan-remote-onboarding",
+    "title": "Onboard Someone Fully Remote",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "onboarding-plans",
+    "aiTool": "Claude",
+    "promptText": "Help me onboard a remote [ROLE TITLE] for my [BUSINESS TYPE]. Our time zones are [YOURS AND THEIRS], the tools we use are [MESSAGING, VIDEO, PROJECT TOOLS], and the overlap hours we share are [HOURS]. Give me a remote onboarding plan covering setup, scheduled calls, written expectations, and how to build a working relationship without meeting in person. Note that remote new hires cannot learn by overhearing or asking across the room, so everything that would happen informally in an office has to be made deliberate, like written guides, a clear channel for questions, and regular face to face video time, otherwise they can feel isolated and quietly disengage. Give me the remote onboarding plan.",
+    "description": "Onboard a remote hire by making informal office learning deliberate.",
+    "useCase": "Use this when your new hire works remotely. Remote hires cannot learn by overhearing or asking across the room, so what happens informally in an office has to be deliberate, with written guides, a clear question channel, and regular video time, or they can feel isolated and disengage.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "YOURS AND THEIRS",
+      "MESSAGING, VIDEO, PROJECT TOOLS",
+      "HOURS"
+    ],
+    "relatedPromptIds": [
+      "onplan-communication-norms",
+      "onplan-milestone-checkins",
+      "onplan-before-day-one"
+    ]
+  },
+  {
+    "id": "onplan-communication-norms",
+    "title": "Set Communication Expectations Early",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "onboarding-plans",
+    "aiTool": "Gemini",
+    "promptText": "Help me set clear communication expectations for a new [ROLE TITLE] joining my [BUSINESS TYPE]. How I prefer to communicate is [E.G. MESSAGING APP, EMAIL, CALLS, VOICE NOTES], my expected response times are [HOW FAST FOR WHAT], and when to interrupt me versus wait is [YOUR RULES]. Turn this into a short, friendly expectations note for their first week. Note that new hires waste a lot of energy guessing how and when to contact the boss, and mismatched expectations, like me expecting instant replies while they think email by end of day is fine, cause friction that feels personal but is really just unclear rules, so writing them down early prevents it. Give me the communication expectations note.",
+    "description": "Write down how and when to communicate so a new hire does not have to guess.",
+    "useCase": "Use this in a new hire's first week. People waste energy guessing how and when to contact the boss, and mismatched expectations about reply times cause friction that feels personal but is just unclear rules, so writing them down early prevents it.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "E.G. MESSAGING APP, EMAIL, CALLS, VOICE NOTES",
+      "HOW FAST FOR WHAT",
+      "YOUR RULES"
+    ],
+    "relatedPromptIds": [
+      "onplan-remote-onboarding",
+      "onplan-first-week",
+      "onplan-decision-rights"
+    ]
+  },
+  {
+    "id": "onplan-decision-rights",
+    "title": "Clarify What a New Hire Can Decide Alone",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "onboarding-plans",
+    "aiTool": "Claude",
+    "promptText": "Help me spell out what a new [ROLE TITLE] at my [BUSINESS TYPE] can decide on their own and what needs my approval. Decisions they will face include [E.G. REFUNDS, DISCOUNTS, SUPPLIER ORDERS, REPLYING TO COMPLAINTS, SPENDING], and my comfort level with each is [YOUR LIMITS]. Give me a simple decide alone, decide and tell me, and ask first guide, with spending limits where they apply, and a plan to expand it over time. Note that new hires either freeze and ask about everything or overstep without knowing the limits, both of which frustrate everyone, so clear decision rights with real numbers let them act confidently, and widening those rights as trust builds is how they grow into owning the role. Give me the decision guide.",
+    "description": "Set clear rules for what a new hire decides alone versus asks about first.",
+    "useCase": "Use this so new hires neither freeze nor overstep. Without clear limits people either ask about everything or overstep, so a decide alone, decide and tell me, ask first guide with real numbers lets them act confidently, and widening it as trust builds helps them own the role.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "E.G. REFUNDS, DISCOUNTS, SUPPLIER ORDERS, REPLYING TO COMPLAINTS, SPENDING",
+      "YOUR LIMITS"
+    ],
+    "relatedPromptIds": [
+      "onplan-communication-norms",
+      "onplan-handover-plan",
+      "onplan-30-60-90"
+    ]
+  },
+  {
+    "id": "onplan-probation-review",
+    "title": "Plan the End of Probation Review",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "onboarding-plans",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me plan the end of probation or trial period review for a [ROLE TITLE] at my [BUSINESS TYPE]. The probation length is [LENGTH], the goals I set at the start were [THE ONBOARDING GOALS], and how it has gone so far is [YOUR HONEST VIEW]. Give me a structure for the review conversation, the evidence to bring, and how to handle the outcome whether it is confirm, extend, or end. Note that a probation review is only fair if the goals were clear from the start, and dodging a difficult conversation by quietly confirming someone who is not working out usually leads to a harder exit later, while employment rules on probation differ by country, so I should check what applies where we are. Give me the review plan.",
+    "description": "Plan a fair end of probation review for confirm, extend, or end outcomes.",
+    "useCase": "Use this as a trial period ends. A probation review is only fair if goals were clear from the start, and quietly confirming someone who is not working out usually leads to a harder exit later, while probation rules differ by country and are worth checking where you are.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "LENGTH",
+      "THE ONBOARDING GOALS",
+      "YOUR HONEST VIEW"
+    ],
+    "relatedPromptIds": [
+      "onplan-milestone-checkins",
+      "onplan-struggling-new-hire",
+      "onplan-30-60-90"
+    ]
+  },
+  {
+    "id": "onplan-struggling-new-hire",
+    "title": "Help a New Hire Who Is Struggling",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "onboarding-plans",
+    "aiTool": "Claude",
+    "promptText": "Help me figure out what to do about a new [ROLE TITLE] who is struggling a few weeks in at my [BUSINESS TYPE]. What I am seeing is [THE PROBLEMS], what support and training they have had is [WHAT YOU PROVIDED], and how long they have been here is [TIME]. Help me work out whether the issue is unclear expectations, missing training, the wrong fit, or something personal, and plan a fair next step. Note that early struggles are often caused by gaps in onboarding rather than the person, like unclear instructions or missing context, so it is worth checking my side first, while a short clear improvement plan with specific goals and a timeline is fairer than vague disappointment and lets both of us know where we stand. Give me the diagnosis and next steps.",
+    "description": "Work out why a new hire is struggling and plan a fair next step.",
+    "useCase": "Use this when a new hire is not finding their feet. Early struggles are often caused by onboarding gaps like unclear instructions rather than the person, so checking your side first matters, and a short plan with specific goals and a timeline is fairer than vague disappointment.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "THE PROBLEMS",
+      "WHAT YOU PROVIDED",
+      "TIME"
+    ],
+    "relatedPromptIds": [
+      "onplan-probation-review",
+      "onplan-milestone-checkins",
+      "onplan-improve-process"
+    ]
+  },
+  {
+    "id": "onplan-contractor-onboarding",
+    "title": "Onboard a Contractor or Freelancer",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "onboarding-plans",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan a lightweight onboarding for a contractor or freelancer joining my [BUSINESS TYPE]. The work they will do is [THE PROJECT OR ONGOING WORK], the access they need is [TOOLS, FILES, ACCOUNTS], and the length of the engagement is [DURATION]. Give me a short onboarding covering the brief, access, how to communicate, how work is reviewed, and how and when they get paid. Note that contractors need far less onboarding than employees but not none, since unclear briefs, missing files, and slow payment are the main reasons good freelancers stop working with a client, and giving only the access the work needs, then removing it when the engagement ends, protects my business. Give me the contractor onboarding plan.",
+    "description": "Run a lightweight onboarding for contractors covering brief, access, and payment.",
+    "useCase": "Use this when bringing in a freelancer. Contractors need less onboarding than employees but not none, since unclear briefs, missing files, and slow payment are why good freelancers drop clients, and giving only needed access, removed at the end, protects your business.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PROJECT OR ONGOING WORK",
+      "TOOLS, FILES, ACCOUNTS",
+      "DURATION"
+    ],
+    "relatedPromptIds": [
+      "onplan-access-and-security",
+      "onplan-quick-plan",
+      "onplan-communication-norms"
+    ]
+  },
+  {
+    "id": "onplan-access-and-security",
+    "title": "Plan Access and Security for a New Hire",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "onboarding-plans",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me plan what systems and data a new [ROLE TITLE] gets access to at my [BUSINESS TYPE], and how to do it safely. The systems I use are [EMAIL, BANKING, PAYMENT TOOLS, CUSTOMER DATA, SOCIAL ACCOUNTS, PASSWORDS], and what they actually need for the role is [WHAT THE WORK REQUIRES]. Give me an access plan based on giving only what is needed, how to share logins safely rather than handing over my own passwords, and a note on what to remove if they leave. Note that small businesses often share one master password or give new hires access to everything for convenience, which creates real risk if someone leaves on bad terms or makes a mistake, so individual accounts, a password manager, and limited access from the start are much easier than cleaning up later. Give me the access plan.",
+    "description": "Give a new hire only the access they need, set up safely from the start.",
+    "useCase": "Use this before handing over any logins. Sharing one master password or giving access to everything for convenience creates real risk if someone leaves badly or makes a mistake, so individual accounts, a password manager, and limited access from the start beat cleaning up later.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "EMAIL, BANKING, PAYMENT TOOLS, CUSTOMER DATA, SOCIAL ACCOUNTS, PASSWORDS",
+      "WHAT THE WORK REQUIRES"
+    ],
+    "relatedPromptIds": [
+      "onplan-before-day-one",
+      "onplan-contractor-onboarding",
+      "onplan-decision-rights"
+    ]
+  },
+  {
+    "id": "onplan-team-introductions",
+    "title": "Plan Introductions to People They Will Work With",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "onboarding-plans",
+    "aiTool": "Claude",
+    "promptText": "Help me plan introductions for a new [ROLE TITLE] at my [BUSINESS TYPE] to the people they will work with. Those people include [TEAM MEMBERS, CONTRACTORS, KEY CUSTOMERS, SUPPLIERS, PARTNERS], and the relationships that matter most for the role are [WHICH ONES]. Give me an introduction plan with who to meet when, a short message I can send introducing them, and what each conversation should cover. Note that a new hire who is never properly introduced has to build credibility from scratch with every customer and supplier, while a personal introduction from me transfers some of my trust to them, which makes their early work far easier and signals to everyone that they now handle this. Give me the introductions plan.",
+    "description": "Plan personal introductions that transfer your trust to a new hire.",
+    "useCase": "Use this so a new hire is not starting cold with everyone. Without proper introductions they must build credibility from scratch with every customer and supplier, while a personal introduction from you transfers some of your trust and signals they now handle this.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "TEAM MEMBERS, CONTRACTORS, KEY CUSTOMERS, SUPPLIERS, PARTNERS",
+      "WHICH ONES"
+    ],
+    "relatedPromptIds": [
+      "onplan-first-week",
+      "onplan-handover-plan",
+      "onplan-communication-norms"
+    ]
+  },
+  {
+    "id": "onplan-improve-process",
+    "title": "Improve Onboarding Using New Hire Feedback",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "onboarding-plans",
+    "aiTool": "Gemini",
+    "promptText": "Help me improve my onboarding for the next hire at my [BUSINESS TYPE] using what happened with the last one. How the last onboarding went is [WHAT WORKED AND WHAT DID NOT], what the new hire told me they found confusing or missing is [THEIR FEEDBACK], and how long it took them to get fully up to speed was [TIME]. Help me turn this into specific changes to my onboarding plan and starter guide. Note that the person who just went through onboarding is the best source of what was missing, since by the time I write the plan I have forgotten what it is like not to know things, so asking them directly at the end of their first month or two and acting on it makes each hire faster than the last. Give me the specific improvements.",
+    "description": "Use the last hire's experience to make onboarding faster for the next one.",
+    "useCase": "Use this after a hire finishes onboarding. The person who just went through it is the best source of what was missing, since you have forgotten what it is like not to know things, so asking them at the end of their first month or two and acting on it makes each hire faster than the last.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT WORKED AND WHAT DID NOT",
+      "THEIR FEEDBACK",
+      "TIME"
+    ],
+    "relatedPromptIds": [
+      "onplan-knowledge-capture",
+      "onplan-struggling-new-hire",
+      "onplan-30-60-90"
+    ]
   }
 ]
