@@ -42535,5 +42535,394 @@
       "clientrep-executive-summary",
       "clientrep-fair-attribution"
     ]
+  },
+  {
+    "id": "proddesc-full-writer",
+    "title": "Write a Complete Product Description",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "product-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me write a complete product description for [PRODUCT NAME] sold by my [BUSINESS TYPE]. What it is and what it does is [THE PRODUCT], who it is for is [TARGET BUYER], the key features and specs are [FEATURES, MATERIALS, SIZES], and what makes it different from similar products is [YOUR DIFFERENCE]. Write a description with a short opening that says what it is and why it matters, scannable benefit bullets, key details, and a closing line that reduces doubt. Note that shoppers decide quickly and cannot touch or try the product online, so the description has to answer what it is, who it is for, and why it is worth buying within a few seconds, while every claim should be accurate, since overstated descriptions lead to returns and bad reviews that cost far more than the extra sale. Give me the product description.",
+    "description": "Write a full product description that answers what, who, and why fast.",
+    "useCase": "Use this for any product page or listing. Shoppers decide quickly and cannot touch the product online, so the description must answer what it is, who it is for, and why it is worth buying in seconds, while overstated claims lead to returns and bad reviews that cost more than the extra sale.",
+    "variables": [
+      "PRODUCT NAME",
+      "BUSINESS TYPE",
+      "THE PRODUCT",
+      "TARGET BUYER",
+      "FEATURES, MATERIALS, SIZES",
+      "YOUR DIFFERENCE"
+    ],
+    "relatedPromptIds": [
+      "proddesc-benefit-bullets",
+      "proddesc-quick-write",
+      "proddesc-objection-handling"
+    ]
+  },
+  {
+    "id": "proddesc-quick-write",
+    "title": "Get a Quick Product Description",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "product-descriptions",
+    "aiTool": "Grok",
+    "promptText": "Write a quick product description for me. The product is [PRODUCT NAME AND WHAT IT IS], the main features are [KEY FEATURES], and the buyer is [WHO BUYS IT]. Give me a short paragraph and three benefit bullets, no explanation, just the description. Give me the product description.",
+    "description": "Get a short paragraph and three bullets for a product, fast.",
+    "useCase": "Use this when you need a listing up today. A short paragraph plus three benefit bullets covers what most shoppers need to decide, and a clear simple description live now beats a perfect one still sitting in drafts while the product goes unsold.",
+    "variables": [
+      "PRODUCT NAME AND WHAT IT IS",
+      "KEY FEATURES",
+      "WHO BUYS IT"
+    ],
+    "relatedPromptIds": [
+      "proddesc-full-writer",
+      "proddesc-benefit-bullets",
+      "proddesc-short-and-long"
+    ]
+  },
+  {
+    "id": "proddesc-benefit-bullets",
+    "title": "Turn Product Features Into Benefit Bullets",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "product-descriptions",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me turn the features of [PRODUCT NAME] into benefit bullets for my [BUSINESS TYPE]. The features are [LIST OF FEATURES AND SPECS], and the buyer is [WHO THEY ARE AND WHAT THEY CARE ABOUT]. For each important feature, write a bullet that leads with the benefit and backs it up with the feature, keeping each to one line where possible. Note that shoppers scan bullets rather than read paragraphs, and a feature like 304 stainless steel means little until it is linked to a benefit like does not rust after daily washing, so leading with what the feature does for the buyer, while still including the specific feature for those who check details, works for both quick scanners and careful comparers. Give me the benefit bullets.",
+    "description": "Turn product features into one line bullets that lead with the benefit.",
+    "useCase": "Use this when your listing is a list of specs. Shoppers scan bullets rather than paragraphs, and a feature means little until linked to what it does for them, so leading with the benefit while keeping the specific feature serves both quick scanners and careful comparers.",
+    "variables": [
+      "PRODUCT NAME",
+      "BUSINESS TYPE",
+      "LIST OF FEATURES AND SPECS",
+      "WHO THEY ARE AND WHAT THEY CARE ABOUT"
+    ],
+    "relatedPromptIds": [
+      "proddesc-full-writer",
+      "proddesc-specs-readable",
+      "proddesc-quick-write"
+    ]
+  },
+  {
+    "id": "proddesc-specs-readable",
+    "title": "Make Technical Specs Easy to Understand",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "product-descriptions",
+    "aiTool": "Gemini",
+    "promptText": "Help me present the technical specs of [PRODUCT NAME] so ordinary buyers understand them, for my [BUSINESS TYPE]. The specs are [PASTE SPECS], and the buyers are [WHO, AND HOW TECHNICAL THEY ARE]. Give me a clean specs table plus a short plain language explanation of the specs that actually matter for choosing, like what a capacity means in everyday use. Note that technical buyers want precise specs while most buyers just want to know if it will fit their needs, so a clear table for those who compare and a plain explanation like holds enough for a family of four helps both groups, while hiding or rounding specs to sound better leads to returns when the product does not match. Give me the specs section.",
+    "description": "Present specs in a clean table plus a plain explanation of what matters.",
+    "useCase": "Use this for products with technical details. Technical buyers want precise specs while most just want to know it fits their needs, so a clear table plus plain explanations like holds enough for a family of four helps both, while rounding specs to sound better leads to returns.",
+    "variables": [
+      "PRODUCT NAME",
+      "BUSINESS TYPE",
+      "PASTE SPECS",
+      "WHO, AND HOW TECHNICAL THEY ARE"
+    ],
+    "relatedPromptIds": [
+      "proddesc-benefit-bullets",
+      "proddesc-sizing-fit",
+      "proddesc-full-writer"
+    ]
+  },
+  {
+    "id": "proddesc-sizing-fit",
+    "title": "Write Clear Sizing and Fit Information",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "product-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me write clear sizing and fit information for [PRODUCT NAME] at my [BUSINESS TYPE]. The sizes and measurements are [SIZE CHART OR MEASUREMENTS], how it tends to fit is [E.G. RUNS SMALL, TRUE TO SIZE, LOOSE FIT], common sizing questions or returns are [WHAT CUSTOMERS ASK OR RETURN FOR], and where my buyers are is [COUNTRIES OR REGIONS]. Write a sizing section with measurements, how to measure, fit notes, and guidance for choosing between sizes. Note that sizing confusion is one of the biggest causes of returns for clothing, shoes, and furniture, and size labels differ a lot between countries and brands, so giving actual measurements in the units my buyers use, plus honest fit notes like runs small, size up, prevents disappointed customers and costly returns. Give me the sizing section.",
+    "description": "Give real measurements, fit notes, and size choice guidance to cut returns.",
+    "useCase": "Use this for clothing, shoes, furniture, or anything that must fit. Sizing confusion is a top cause of returns, and size labels differ between countries and brands, so actual measurements in your buyers' units plus honest notes like runs small prevent disappointed customers and costly returns.",
+    "variables": [
+      "PRODUCT NAME",
+      "BUSINESS TYPE",
+      "SIZE CHART OR MEASUREMENTS",
+      "E.G. RUNS SMALL, TRUE TO SIZE, LOOSE FIT",
+      "WHAT CUSTOMERS ASK OR RETURN FOR",
+      "COUNTRIES OR REGIONS"
+    ],
+    "relatedPromptIds": [
+      "proddesc-specs-readable",
+      "proddesc-objection-handling",
+      "proddesc-from-reviews"
+    ]
+  },
+  {
+    "id": "proddesc-sensory",
+    "title": "Describe How a Product Looks, Feels, or Tastes",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "product-descriptions",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me describe the sensory qualities of [PRODUCT NAME] for my [BUSINESS TYPE] so online shoppers can imagine it. The product is [WHAT IT IS], how it looks, feels, smells, tastes, or sounds is [YOUR DESCRIPTION], and words customers have used about it are [CUSTOMER WORDS, IF ANY]. Write a short, vivid but accurate passage that helps the buyer picture the real experience. Note that online shoppers cannot touch, taste, or smell, so concrete sensory details like soft brushed cotton or a bright citrus taste help close that gap far more than vague words like premium or amazing, but the description must match the real product, since a mismatch between the words and what arrives is a fast route to returns and negative reviews. Give me the sensory description.",
+    "description": "Use concrete, accurate sensory details so shoppers can imagine the product.",
+    "useCase": "Use this for food, clothing, home goods, beauty, or crafts. Online shoppers cannot touch, taste, or smell, so concrete details like soft brushed cotton close that gap far better than vague words like premium, but the words must match what arrives, or returns and negative reviews follow.",
+    "variables": [
+      "PRODUCT NAME",
+      "BUSINESS TYPE",
+      "WHAT IT IS",
+      "YOUR DESCRIPTION",
+      "CUSTOMER WORDS, IF ANY"
+    ],
+    "relatedPromptIds": [
+      "proddesc-handmade-story",
+      "proddesc-full-writer",
+      "proddesc-from-reviews"
+    ]
+  },
+  {
+    "id": "proddesc-handmade-story",
+    "title": "Tell the Story Behind a Handmade Product",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "product-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me tell the story behind a handmade or artisan product for my [BUSINESS TYPE]. The product is [PRODUCT NAME AND WHAT IT IS], how it is made is [PROCESS, MATERIALS, TIME TAKEN], who makes it and where is [MAKER AND ORIGIN], and what makes each piece unique is [VARIATIONS, TRADITIONAL TECHNIQUES]. Write a short description that weaves in the making story, sets expectations about natural variation, and still covers practical details. Note that for handmade goods the story of who made it and how is often a large part of what buyers pay for, but the story should be specific and true rather than generic artisan language, and explaining that colors or shapes vary between pieces turns what could be a complaint into part of the appeal, while practical details like care and size still need to be clear. Give me the handmade product description.",
+    "description": "Weave a specific, true making story into a handmade product description.",
+    "useCase": "Use this for handmade, artisan, or locally made goods. The maker's story is often part of what buyers pay for, but it should be specific and true rather than generic, and explaining natural variation turns a potential complaint into appeal, while care and size details still need to be clear.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRODUCT NAME AND WHAT IT IS",
+      "PROCESS, MATERIALS, TIME TAKEN",
+      "MAKER AND ORIGIN",
+      "VARIATIONS, TRADITIONAL TECHNIQUES"
+    ],
+    "relatedPromptIds": [
+      "proddesc-sensory",
+      "proddesc-brand-voice",
+      "proddesc-full-writer"
+    ]
+  },
+  {
+    "id": "proddesc-digital-product",
+    "title": "Write a Description for a Digital Product",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "product-descriptions",
+    "aiTool": "Gemini",
+    "promptText": "Help me write a description for a digital product sold by my [BUSINESS TYPE]. The product is [E.G. A TEMPLATE, EBOOK, COURSE, PRINTABLE, PRESET, SOFTWARE, PROMPT PACK], what exactly the buyer receives is [FILES, FORMATS, PAGES, LESSONS, ACCESS LENGTH], what it helps them do is [THE OUTCOME], and what they need to use it is [SOFTWARE, DEVICE, SKILL LEVEL]. Write a description covering the outcome, exactly what is included, requirements, how delivery works, and the refund or support policy. Note that digital buyers cannot see the product before paying and often worry it will not work for them, so listing exactly what is included, the file formats, and the software needed, plus a preview or sample where possible, reduces refund requests and builds trust, while vague promises about life changing results invite disappointment. Give me the digital product description.",
+    "description": "Describe a digital product's outcome, contents, formats, and requirements.",
+    "useCase": "Use this for templates, ebooks, courses, printables, or software. Digital buyers cannot see the product first and worry it will not work for them, so listing exactly what is included, file formats, and software needed, plus a preview, reduces refunds and builds trust, while vague life changing promises invite disappointment.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. A TEMPLATE, EBOOK, COURSE, PRINTABLE, PRESET, SOFTWARE, PROMPT PACK",
+      "FILES, FORMATS, PAGES, LESSONS, ACCESS LENGTH",
+      "THE OUTCOME",
+      "SOFTWARE, DEVICE, SKILL LEVEL"
+    ],
+    "relatedPromptIds": [
+      "proddesc-objection-handling",
+      "proddesc-full-writer",
+      "proddesc-honest-claims"
+    ]
+  },
+  {
+    "id": "proddesc-objection-handling",
+    "title": "Answer Buyer Doubts Inside the Description",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "product-descriptions",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me answer common buyer doubts inside the description of [PRODUCT NAME] for my [BUSINESS TYPE]. The questions customers ask before buying are [COMMON QUESTIONS], reasons people hesitate or return it are [OBJECTIONS AND RETURN REASONS], and my policies on shipping, returns, and warranty are [YOUR POLICIES]. Weave short answers to the top doubts into the description or a small FAQ section. Note that every unanswered question is a reason to leave the page or message me and wait, and customer questions and return reasons are the best guide to what the description is missing, so answering them directly, including honest limitations like not suitable for outdoor use, both increases sales and reduces disappointed buyers. Give me the doubt answering section.",
+    "description": "Answer the top buyer questions and doubts directly in the description.",
+    "useCase": "Use this when customers keep asking the same questions. Every unanswered question is a reason to leave or wait for a reply, and customer questions and return reasons show what the description is missing, so answering them directly, including honest limitations, increases sales and reduces disappointed buyers.",
+    "variables": [
+      "PRODUCT NAME",
+      "BUSINESS TYPE",
+      "COMMON QUESTIONS",
+      "OBJECTIONS AND RETURN REASONS",
+      "YOUR POLICIES"
+    ],
+    "relatedPromptIds": [
+      "proddesc-from-reviews",
+      "proddesc-full-writer",
+      "proddesc-sizing-fit"
+    ]
+  },
+  {
+    "id": "proddesc-from-reviews",
+    "title": "Improve a Description Using Customer Reviews",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "product-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me improve the description of [PRODUCT NAME] using what customers say in reviews for my [BUSINESS TYPE]. Here are reviews and comments: [PASTE REVIEWS], and the current description is [PASTE CURRENT DESCRIPTION]. Find the words customers use, the benefits they mention that I am not highlighting, and the complaints that point to missing information, then suggest specific edits. Note that customers often describe a product's real value in different words than the seller, and those words are often exactly what future buyers search for and respond to, while recurring complaints frequently reveal expectations the description set wrongly, so updating the description to match reality reduces bad reviews, though I should not copy reviews as if they were my own claims. Give me the review based improvements.",
+    "description": "Use customer review language and complaints to sharpen a description.",
+    "useCase": "Use this once a product has reviews. Customers describe real value in different words than sellers, often the words future buyers respond to, and recurring complaints reveal expectations the description set wrongly, so updating to match reality reduces bad reviews, without copying reviews as your own claims.",
+    "variables": [
+      "PRODUCT NAME",
+      "BUSINESS TYPE",
+      "PASTE REVIEWS",
+      "PASTE CURRENT DESCRIPTION"
+    ],
+    "relatedPromptIds": [
+      "proddesc-objection-handling",
+      "proddesc-audit-underperformer",
+      "proddesc-sensory"
+    ]
+  },
+  {
+    "id": "proddesc-honest-claims",
+    "title": "Check Product Claims for Accuracy and Risk",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "product-descriptions",
+    "aiTool": "Gemini",
+    "promptText": "Help me check the claims in my product description for accuracy and risk for my [BUSINESS TYPE]. The description is [PASTE THE DESCRIPTION], what the product actually is and does is [THE FACTS], and where I sell is [COUNTRIES AND PLATFORMS]. Flag claims that are exaggerated, unprovable, or risky, especially health, safety, environmental, or results claims, and suggest accurate wording. Note that phrases like cures, clinically proven, eco friendly, or guaranteed results can break advertising or consumer rules and platform policies in many countries unless backed by evidence, and marketplaces may remove listings that make them, so softer, accurate language that I can support protects the listing, and I should check the specific rules where I sell, especially for supplements, cosmetics, food, or children's products. Give me the claims check.",
+    "description": "Flag exaggerated or risky claims and suggest accurate wording.",
+    "useCase": "Use this before publishing any description. Phrases like cures, clinically proven, or eco friendly can break advertising rules and platform policies in many countries without evidence, and marketplaces may remove listings that use them, so accurate supportable language protects the listing, especially for supplements, cosmetics, food, or children's products.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THE DESCRIPTION",
+      "THE FACTS",
+      "COUNTRIES AND PLATFORMS"
+    ],
+    "relatedPromptIds": [
+      "proddesc-full-writer",
+      "proddesc-digital-product",
+      "proddesc-rewrite-supplier-copy"
+    ]
+  },
+  {
+    "id": "proddesc-rewrite-supplier-copy",
+    "title": "Rewrite Generic Supplier Descriptions",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "product-descriptions",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me rewrite the generic description my supplier or manufacturer provided for [PRODUCT NAME] at my [BUSINESS TYPE]. The supplier text is [PASTE SUPPLIER DESCRIPTION], my target buyer is [WHO], and what I know about the product from using or selling it is [YOUR OWN KNOWLEDGE]. Rewrite it in my own words for my buyers, keeping accurate specs, fixing awkward or translated phrasing, and adding the details my customers care about. Note that many sellers use the same supplier text, so copied descriptions blend in with every competitor and can be poorly translated or inaccurate, while my own description written for my buyers stands out and can include real knowledge from handling the product, though I should double check specs rather than trust supplier claims blindly. Give me the rewritten description.",
+    "description": "Rewrite copied supplier text in your own words for your buyers.",
+    "useCase": "Use this if you resell products using supplier text. Many sellers use the same supplier copy, so it blends in and may be poorly translated or inaccurate, while your own description stands out and includes real knowledge from handling the product, though specs are worth double checking rather than trusting blindly.",
+    "variables": [
+      "PRODUCT NAME",
+      "BUSINESS TYPE",
+      "PASTE SUPPLIER DESCRIPTION",
+      "WHO",
+      "YOUR OWN KNOWLEDGE"
+    ],
+    "relatedPromptIds": [
+      "proddesc-honest-claims",
+      "proddesc-brand-voice",
+      "proddesc-variants-bulk"
+    ]
+  },
+  {
+    "id": "proddesc-variants-bulk",
+    "title": "Write Descriptions for Many Similar Products",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "product-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me write descriptions for many similar products or variants at my [BUSINESS TYPE]. The products are [LIST OF PRODUCTS OR VARIANTS WITH THEIR DIFFERENCES], what they have in common is [SHARED FEATURES], and where they will be listed is [YOUR SHOP OR PLATFORMS]. Create a reusable structure with a shared base and a unique section for each product that highlights what makes it different, then write them out. Note that copying the same description across many products saves time but makes them hard to tell apart and can hurt how they appear in search, while writing each completely from scratch is slow, so a shared structure with genuinely distinct details, like the color story or best use for each, gives each product its own reason to exist. Give me the product descriptions.",
+    "description": "Write many similar descriptions with a shared base and unique details.",
+    "useCase": "Use this for product ranges or variants. Copying one description across products makes them hard to tell apart and can hurt search, while writing each from scratch is slow, so a shared structure with genuinely distinct details for each, like its color story or best use, gives every product its own reason to exist.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST OF PRODUCTS OR VARIANTS WITH THEIR DIFFERENCES",
+      "SHARED FEATURES",
+      "YOUR SHOP OR PLATFORMS"
+    ],
+    "relatedPromptIds": [
+      "proddesc-rewrite-supplier-copy",
+      "proddesc-short-and-long",
+      "proddesc-brand-voice"
+    ]
+  },
+  {
+    "id": "proddesc-short-and-long",
+    "title": "Write Short and Long Versions of a Description",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "product-descriptions",
+    "aiTool": "Gemini",
+    "promptText": "Help me write short and long versions of the description for [PRODUCT NAME] at my [BUSINESS TYPE]. The full details are [ALL THE PRODUCT INFORMATION], and where each version will be used is [E.G. COLLECTION PAGE, SOCIAL POST, MARKETPLACE SUMMARY, FULL PRODUCT PAGE, CHAT REPLY]. Write a one line version, a short paragraph version, and a full version, each saying the same core thing at different lengths. Note that the same product appears in many places with very different space, from a grid card or chat reply to a full product page, and improvising a different description each time leads to inconsistent or inaccurate details, so having ready made versions keeps the message consistent and saves time every time a customer asks. Give me the description versions.",
+    "description": "Write one line, short, and full versions of the same description.",
+    "useCase": "Use this when a product appears in many places. The same product shows up in grid cards, chat replies, and full pages with very different space, and improvising each time leads to inconsistent details, so ready made versions keep the message consistent and save time whenever a customer asks.",
+    "variables": [
+      "PRODUCT NAME",
+      "BUSINESS TYPE",
+      "ALL THE PRODUCT INFORMATION",
+      "E.G. COLLECTION PAGE, SOCIAL POST, MARKETPLACE SUMMARY, FULL PRODUCT PAGE, CHAT REPLY"
+    ],
+    "relatedPromptIds": [
+      "proddesc-quick-write",
+      "proddesc-variants-bulk",
+      "proddesc-localize"
+    ]
+  },
+  {
+    "id": "proddesc-brand-voice",
+    "title": "Match Product Descriptions to Your Brand Voice",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "product-descriptions",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me rewrite my product descriptions so they sound like my brand at my [BUSINESS TYPE]. My brand voice is [YOUR TONE, E.G. PLAYFUL, CALM AND PREMIUM, WARM AND HOMEMADE, NO NONSENSE], a description I like is [EXAMPLE IN YOUR VOICE], and a description that feels off is [EXAMPLE TO FIX]. Rewrite the off description in my voice while keeping every fact accurate, and give me a few rules for writing future ones. Note that consistent voice across product pages makes a small shop feel like a real brand rather than a random collection of listings, but voice should never get in the way of clarity, so the facts, sizes, and practical details must stay easy to find, with personality in the opening and transitions rather than in the specs. Give me the rewrite and voice rules.",
+    "description": "Rewrite descriptions in your brand voice while keeping facts clear.",
+    "useCase": "Use this when your listings sound inconsistent. A consistent voice makes a small shop feel like a real brand rather than random listings, but voice must never block clarity, so keep facts, sizes, and practical details easy to find, with personality in the opening and transitions rather than in the specs.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR TONE, E.G. PLAYFUL, CALM AND PREMIUM, WARM AND HOMEMADE, NO NONSENSE",
+      "EXAMPLE IN YOUR VOICE",
+      "EXAMPLE TO FIX"
+    ],
+    "relatedPromptIds": [
+      "proddesc-handmade-story",
+      "proddesc-variants-bulk",
+      "proddesc-rewrite-supplier-copy"
+    ]
+  },
+  {
+    "id": "proddesc-localize",
+    "title": "Adapt a Product Description for Another Market",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "product-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me adapt the description of [PRODUCT NAME] for buyers in another market for my [BUSINESS TYPE]. The original description is [PASTE IT], the new market is [COUNTRY OR REGION AND LANGUAGE], and what is different there is [E.G. UNITS, SIZES, PLUGS OR VOLTAGE, CLIMATE, HOLIDAYS, CULTURAL PREFERENCES]. Adapt the description for that market, converting units and sizes, adjusting references that will not make sense, and flagging anything I should check locally. Note that a straight translation often misses what matters, like metric versus imperial units, different clothing size systems, voltage and plug types, or examples and idioms that do not travel, and product and labeling rules also vary by country, so adapting the content and having a native speaker review it is safer than relying on translation alone. Give me the adapted description.",
+    "description": "Adapt a description for another country's units, sizes, and norms.",
+    "useCase": "Use this when selling to buyers in another country. Straight translation misses units, clothing size systems, voltage and plugs, and idioms that do not travel, and product and labeling rules vary by country, so adapting the content and having a native speaker review it is safer than translation alone.",
+    "variables": [
+      "PRODUCT NAME",
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "COUNTRY OR REGION AND LANGUAGE",
+      "E.G. UNITS, SIZES, PLUGS OR VOLTAGE, CLIMATE, HOLIDAYS, CULTURAL PREFERENCES"
+    ],
+    "relatedPromptIds": [
+      "proddesc-short-and-long",
+      "proddesc-sizing-fit",
+      "proddesc-honest-claims"
+    ]
+  },
+  {
+    "id": "proddesc-gift-angle",
+    "title": "Write a Gift Focused Product Description",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "product-descriptions",
+    "aiTool": "Gemini",
+    "promptText": "Help me write a gift focused version of the description for [PRODUCT NAME] at my [BUSINESS TYPE]. Who it would make a good gift for is [RECIPIENTS], the occasions it suits are [E.G. BIRTHDAYS, HOLIDAYS, WEDDINGS, THANK YOU, LOCAL FESTIVALS], and gift options I offer are [WRAPPING, NOTES, DIRECT SHIPPING, GIFT RECEIPTS, NONE]. Write a description aimed at the gift buyer that helps them picture the recipient's reaction and answers gift specific worries like timing and returns. Note that gift buyers are not the end user, so they care about whether the recipient will like it, whether it will arrive on time, and whether it can be exchanged, and addressing those worries directly, plus clear delivery cut off dates in busy seasons, converts gift shoppers much better than a standard description written for the person who will use it. Give me the gift description.",
+    "description": "Write a description aimed at gift buyers and their specific worries.",
+    "useCase": "Use this during gifting seasons or for giftable products. Gift buyers are not the end user, so they care whether the recipient will like it, whether it arrives on time, and whether it can be exchanged, and addressing those worries plus clear delivery cut offs converts gift shoppers far better than a standard description.",
+    "variables": [
+      "PRODUCT NAME",
+      "BUSINESS TYPE",
+      "RECIPIENTS",
+      "E.G. BIRTHDAYS, HOLIDAYS, WEDDINGS, THANK YOU, LOCAL FESTIVALS",
+      "WRAPPING, NOTES, DIRECT SHIPPING, GIFT RECEIPTS, NONE"
+    ],
+    "relatedPromptIds": [
+      "proddesc-full-writer",
+      "proddesc-short-and-long",
+      "proddesc-objection-handling"
+    ]
+  },
+  {
+    "id": "proddesc-audit-underperformer",
+    "title": "Audit a Product Description That Is Not Selling",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "product-descriptions",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me audit the description of a product that is not selling well at my [BUSINESS TYPE]. The product is [PRODUCT NAME AND PRICE], the current description is [PASTE IT], what I know about its performance is [VIEWS, ADD TO CART, SALES, RETURNS, QUESTIONS], and similar products that sell better are [COMPARISONS]. Review the description for clarity, missing information, weak opening, unclear benefits, and mismatched expectations, and suggest the top fixes. Note that a product that gets views but few sales often has a description or trust problem, while one with few views has a visibility problem the description alone cannot fix, so separating the two matters, and price, photos, and reviews also affect sales, so I should not expect copy changes to solve everything. Give me the description audit.",
+    "description": "Audit why a product is not selling and fix the description where it matters.",
+    "useCase": "Use this when a product gets little traction. A product with views but few sales often has a description or trust problem, while one with few views has a visibility problem copy cannot fix, so separating the two matters, and price, photos, and reviews also affect sales beyond the description.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRODUCT NAME AND PRICE",
+      "PASTE IT",
+      "VIEWS, ADD TO CART, SALES, RETURNS, QUESTIONS",
+      "COMPARISONS"
+    ],
+    "relatedPromptIds": [
+      "proddesc-from-reviews",
+      "proddesc-objection-handling",
+      "proddesc-full-writer"
+    ]
   }
 ]
