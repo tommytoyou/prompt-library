@@ -39064,5 +39064,402 @@
       "decide-bias-check",
       "decide-small-experiment"
     ]
+  },
+  {
+    "id": "burnout-warning-signs",
+    "title": "Check Yourself for Early Burnout Signs",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "burnout-prevention",
+    "aiTool": "Claude",
+    "promptText": "Help me do an honest check in on whether I am heading toward burnout running my [BUSINESS TYPE]. How I have been feeling lately is [ENERGY, MOOD, SLEEP, MOTIVATION], how my work has changed is [HOURS, WORKLOAD, STRESS], and what I used to enjoy that now feels like a chore is [WHAT HAS CHANGED]. Walk me through common early warning signs, like constant tiredness, cynicism about work, dreading tasks I used to like, and feeling less effective, and help me reflect on which apply. Note that burnout builds slowly and is easy to dismiss as just a busy period, so noticing the early signs gives me the best chance to change course, but this is a reflection, not a diagnosis, and if I am experiencing persistent exhaustion, low mood, or feel unable to cope, talking to a doctor or mental health professional is the right next step. Give me the check in.",
+    "description": "Reflect honestly on early burnout warning signs before they build.",
+    "useCase": "Use this when work has felt heavy for a while. Burnout builds slowly and is easy to dismiss as a busy period, so noticing early signs gives the best chance to change course, though this is reflection rather than diagnosis, and persistent exhaustion or low mood is worth raising with a professional.",
+    "variables": [
+      "BUSINESS TYPE",
+      "ENERGY, MOOD, SLEEP, MOTIVATION",
+      "HOURS, WORKLOAD, STRESS",
+      "WHAT HAS CHANGED"
+    ],
+    "relatedPromptIds": [
+      "burnout-workload-audit",
+      "burnout-energy-audit",
+      "burnout-get-support"
+    ]
+  },
+  {
+    "id": "burnout-workload-audit",
+    "title": "Audit Your Workload Honestly",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "burnout-prevention",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me audit my real workload as the owner of my [BUSINESS TYPE]. What I do in a typical week is [YOUR TASKS AND ROUGH HOURS], the hours I would like to work is [YOUR TARGET], and what I feel I cannot stop doing is [TASKS YOU THINK ONLY YOU CAN DO]. Sort my tasks into must keep, could delegate or automate, could do less often, and could stop, and show me how many hours I could realistically free up. Note that owners often underestimate how much they actually do, and the work that feels impossible to drop is often habit rather than necessity, so writing it all down usually reveals tasks that could be simplified, shared, or dropped, while the goal is a sustainable week rather than squeezing in even more. Give me the workload audit.",
+    "description": "List your real workload and find hours to delegate, reduce, or drop.",
+    "useCase": "Use this when your week feels endless. Owners often underestimate how much they do, and work that feels impossible to drop is often habit rather than necessity, so writing everything down reveals tasks to simplify, share, or drop, aiming for a sustainable week rather than squeezing in more.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR TASKS AND ROUGH HOURS",
+      "YOUR TARGET",
+      "TASKS YOU THINK ONLY YOU CAN DO"
+    ],
+    "relatedPromptIds": [
+      "burnout-warning-signs",
+      "burnout-delegate-minimum",
+      "burnout-minimum-viable-week"
+    ]
+  },
+  {
+    "id": "burnout-quick-reset",
+    "title": "Get a Quick Reset for a Draining Day",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "burnout-prevention",
+    "aiTool": "Grok",
+    "promptText": "I am having a draining day and need to reset. What has worn me out is [WHAT HAPPENED], what still has to get done today is [THE MUST DO], and I have [TIME AVAILABLE]. Give me a short plan to get the essentials done and a couple of simple ways to recover energy today, no lecture, just the plan. Give me the reset plan.",
+    "description": "Get a short plan to finish essentials and recover on a draining day.",
+    "useCase": "Use this on a day that is wearing you out. A short plan that narrows the day to the true essentials plus a couple of simple recovery steps helps you finish what matters without pushing through on empty, and a small reset today beats waiting for a holiday to feel better.",
+    "variables": [
+      "WHAT HAPPENED",
+      "THE MUST DO",
+      "TIME AVAILABLE"
+    ],
+    "relatedPromptIds": [
+      "burnout-shutdown-ritual",
+      "burnout-energy-audit",
+      "burnout-minimum-viable-week"
+    ]
+  },
+  {
+    "id": "burnout-energy-audit",
+    "title": "Find What Drains and Restores Your Energy",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "burnout-prevention",
+    "aiTool": "Gemini",
+    "promptText": "Help me map what drains and restores my energy in my work at my [BUSINESS TYPE]. Tasks and people that leave me drained are [EXAMPLES], tasks and moments that energize me are [EXAMPLES], and how my week is currently arranged is [YOUR TYPICAL SCHEDULE]. Help me see the patterns and suggest ways to reduce or batch the draining parts and protect more time for the energizing ones. Note that burnout is often less about total hours and more about how much of the work drains me, so two weeks with the same hours can feel completely different, and small changes like batching draining tasks, limiting calls, or starting the day with work I enjoy can make a real difference without needing to work less overall. Give me the energy map and changes.",
+    "description": "Map what drains and restores you and rearrange your week around it.",
+    "useCase": "Use this when work feels heavier than the hours suggest. Burnout is often less about total hours than how much of the work drains you, so batching draining tasks, limiting calls, or starting with work you enjoy can make a real difference without needing to work less overall.",
+    "variables": [
+      "BUSINESS TYPE",
+      "EXAMPLES",
+      "YOUR TYPICAL SCHEDULE"
+    ],
+    "relatedPromptIds": [
+      "burnout-warning-signs",
+      "burnout-draining-clients",
+      "burnout-workload-audit"
+    ]
+  },
+  {
+    "id": "burnout-shutdown-ritual",
+    "title": "Create an End of Workday Shutdown Ritual",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "burnout-prevention",
+    "aiTool": "Claude",
+    "promptText": "Help me create a simple end of workday ritual so I can actually stop thinking about work, running my [BUSINESS TYPE]. Where I work is [HOME, OFFICE, CAFE, ON THE ROAD], what keeps pulling me back is [E.G. MESSAGES, LOOSE ENDS, WORRY ABOUT TOMORROW], and when I want to stop is [YOUR TARGET END TIME]. Give me a short shutdown routine, like reviewing tomorrow, writing down open loops, and a clear signal that the workday is done. Note that working from home or on a phone makes the line between work and rest blur, so a deliberate shutdown routine tells my brain the day is finished, and writing down unfinished tasks means I do not have to keep them in my head all evening, which is often what keeps owners from truly resting. Give me the shutdown ritual.",
+    "description": "Create a short routine that clearly ends the workday.",
+    "useCase": "Use this if work follows you into every evening. Working from home or on a phone blurs work and rest, so a deliberate shutdown tells your brain the day is done, and writing down unfinished tasks means you stop carrying them in your head, which is often what keeps owners from resting.",
+    "variables": [
+      "BUSINESS TYPE",
+      "HOME, OFFICE, CAFE, ON THE ROAD",
+      "E.G. MESSAGES, LOOSE ENDS, WORRY ABOUT TOMORROW",
+      "YOUR TARGET END TIME"
+    ],
+    "relatedPromptIds": [
+      "burnout-phone-boundaries",
+      "burnout-protect-days-off",
+      "burnout-quick-reset"
+    ]
+  },
+  {
+    "id": "burnout-phone-boundaries",
+    "title": "Set Boundaries With Your Phone and Messages",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "burnout-prevention",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me set boundaries with my phone and business messages for my [BUSINESS TYPE]. The apps where clients and customers reach me are [E.G. WHATSAPP, TELEGRAM, EMAIL, SOCIAL DMS], how quickly customers expect replies is [THEIR EXPECTATIONS], and how often I check is [HONESTLY]. Help me set reply windows, notification settings, and a short message to set expectations with customers. Note that in many markets customers message businesses directly on personal chat apps at all hours, which makes it feel impossible to switch off, but most messages do not need an instant reply, and clear business hours, an auto reply, or a separate business number usually keep customers happy while giving me real time off, as long as I tell them what to expect. Give me the phone boundary plan.",
+    "description": "Set reply windows and notifications so messages stop owning your time.",
+    "useCase": "Use this when customers message you at all hours. In many markets customers message businesses on personal chat apps around the clock, making it feel impossible to switch off, but most messages do not need instant replies, and clear hours, an auto reply, or a business number keep customers happy while you rest.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. WHATSAPP, TELEGRAM, EMAIL, SOCIAL DMS",
+      "THEIR EXPECTATIONS",
+      "HONESTLY"
+    ],
+    "relatedPromptIds": [
+      "burnout-shutdown-ritual",
+      "burnout-protect-days-off",
+      "burnout-say-no"
+    ]
+  },
+  {
+    "id": "burnout-protect-days-off",
+    "title": "Protect Real Days Off",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "burnout-prevention",
+    "aiTool": "Gemini",
+    "promptText": "Help me protect at least one real day off each week while running my [BUSINESS TYPE]. What usually ruins my days off is [E.G. CLIENT MESSAGES, CATCH UP WORK, GUILT, NO ONE TO COVER], the day that would work best is [WHICH DAY], and the things that genuinely must happen even on that day are [THE TRUE EMERGENCIES]. Help me plan how to prepare the day before, what to tell customers, how to handle real emergencies, and how to stop working on that day out of habit. Note that a day off that is half spent checking messages rarely restores energy, so defining in advance what counts as a real emergency, and preparing the day before, makes a full day of rest possible even for a solo owner, and regular rest usually makes the remaining work days more productive rather than less. Give me the day off plan.",
+    "description": "Plan a genuinely work free day each week, with emergencies defined.",
+    "useCase": "Use this if your days off keep turning into work days. A day off half spent on messages rarely restores energy, so defining real emergencies in advance and preparing the day before makes a full rest day possible even solo, and regular rest usually makes the other days more productive.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. CLIENT MESSAGES, CATCH UP WORK, GUILT, NO ONE TO COVER",
+      "WHICH DAY",
+      "THE TRUE EMERGENCIES"
+    ],
+    "relatedPromptIds": [
+      "burnout-phone-boundaries",
+      "burnout-plan-time-off",
+      "burnout-shutdown-ritual"
+    ]
+  },
+  {
+    "id": "burnout-plan-time-off",
+    "title": "Plan a Real Break as a Solo Owner",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "burnout-prevention",
+    "aiTool": "Claude",
+    "promptText": "Help me plan a real break of [HOW LONG] away from my [BUSINESS TYPE] when I am the only person running it. What normally needs me every day is [DAILY TASKS], who could help or cover, if anyone, is [PEOPLE OR NOBODY], and what customers would need to know is [WHAT AFFECTS THEM]. Help me plan what to finish, pause, automate, or hand off before I go, how to tell customers, and how to handle emergencies with minimal checking in. Note that many solo owners never take real time off because the business seems to stop without them, but customers are usually understanding when told in advance, and planning a break well is often the moment that reveals which tasks could be simplified or handed off permanently, while a break with constant checking in rarely provides real rest. Give me the time off plan.",
+    "description": "Plan a real break when the business seems to depend entirely on you.",
+    "useCase": "Use this when you have not had a proper break in a long time. Many solo owners never take time off because the business seems to stop without them, but customers are usually understanding when told in advance, and planning a break often reveals tasks that could be simplified or handed off permanently.",
+    "variables": [
+      "HOW LONG",
+      "BUSINESS TYPE",
+      "DAILY TASKS",
+      "PEOPLE OR NOBODY",
+      "WHAT AFFECTS THEM"
+    ],
+    "relatedPromptIds": [
+      "burnout-protect-days-off",
+      "burnout-delegate-minimum",
+      "burnout-workload-audit"
+    ]
+  },
+  {
+    "id": "burnout-say-no",
+    "title": "Say No to Work You Should Not Take On",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "burnout-prevention",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me say no to work that would push me past my limits at my [BUSINESS TYPE]. The request is [WHAT YOU ARE BEING ASKED TO DO], who is asking is [CLIENT, PARTNER, FRIEND], my current capacity is [HOW FULL YOU ARE], and why I am tempted to say yes is [E.G. MONEY, GUILT, FEAR OF LOSING THEM]. Help me decide whether to decline, delay, or say yes with changed terms, and write a polite response. Note that saying yes to everything is one of the fastest routes to burnout, and many owners accept work out of fear that saying no will cost them future business, but a clear, respectful no or a later start date is usually received better than an overstretched yes that leads to late, rushed work. Give me the decision and response.",
+    "description": "Decline, delay, or reshape requests that would push you past your limits.",
+    "useCase": "Use this when a request would overload you. Saying yes to everything is a fast route to burnout, and owners often accept work out of fear of losing future business, but a clear respectful no or a later start date is usually received better than an overstretched yes that leads to rushed work.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU ARE BEING ASKED TO DO",
+      "CLIENT, PARTNER, FRIEND",
+      "HOW FULL YOU ARE",
+      "E.G. MONEY, GUILT, FEAR OF LOSING THEM"
+    ],
+    "relatedPromptIds": [
+      "burnout-phone-boundaries",
+      "burnout-draining-clients",
+      "burnout-pricing-pressure"
+    ]
+  },
+  {
+    "id": "burnout-draining-clients",
+    "title": "Deal With Clients Who Drain You",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "burnout-prevention",
+    "aiTool": "Claude",
+    "promptText": "Help me deal with clients or customers who drain far more energy than they are worth at my [BUSINESS TYPE]. The clients are [WHO, OR WHAT TYPE], what makes them draining is [E.G. CONSTANT CHANGES, LATE PAYMENT, RUDENESS, ENDLESS MESSAGES], and what they bring in is [THEIR SHARE OF INCOME]. Help me decide whether to set firmer boundaries, raise their price, change the terms, or end the relationship, and plan how to do it respectfully. Note that a small number of difficult clients often cause most of the stress in a small business, and keeping them out of fear of lost income can cost more in energy and time than they pay, though dropping clients is a real financial decision, so firmer terms or a price that reflects the extra effort are often worth trying first. Give me the draining client plan.",
+    "description": "Decide whether to set boundaries, reprice, or end a draining client relationship.",
+    "useCase": "Use this when certain clients leave you exhausted. A few difficult clients often cause most of a small business's stress, and keeping them out of fear can cost more energy than they pay, though dropping clients is a real financial call, so firmer terms or fairer pricing are often worth trying first.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO, OR WHAT TYPE",
+      "E.G. CONSTANT CHANGES, LATE PAYMENT, RUDENESS, ENDLESS MESSAGES",
+      "THEIR SHARE OF INCOME"
+    ],
+    "relatedPromptIds": [
+      "burnout-say-no",
+      "burnout-energy-audit",
+      "burnout-pricing-pressure"
+    ]
+  },
+  {
+    "id": "burnout-pricing-pressure",
+    "title": "Check Whether Low Prices Are Overworking You",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "burnout-prevention",
+    "aiTool": "Gemini",
+    "promptText": "Help me check whether my pricing is forcing me to overwork at my [BUSINESS TYPE]. What I charge is [YOUR PRICES], how many hours or orders I need to cover my costs and income goal is [YOUR ESTIMATE], and how many hours I actually work is [YOUR HOURS]. Help me see whether low prices are the root of my workload, and what a sustainable price or offer change could look like. Note that many burned out owners are not lacking discipline or time management, they are simply charging too little to earn enough in reasonable hours, so the workload problem is really a pricing problem, though raising prices has risks worth weighing, and checking what customers in my market can genuinely pay matters more than copying prices from elsewhere. Give me the pricing check.",
+    "description": "Check whether undercharging is the real cause of your overwork.",
+    "useCase": "Use this if you are always busy but never earning enough. Many burned out owners are charging too little to earn enough in reasonable hours, making the workload really a pricing problem, though raising prices has risks, and what customers in your market can genuinely pay matters more than copying prices elsewhere.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR PRICES",
+      "YOUR ESTIMATE",
+      "YOUR HOURS"
+    ],
+    "relatedPromptIds": [
+      "burnout-draining-clients",
+      "burnout-workload-audit",
+      "burnout-say-no"
+    ]
+  },
+  {
+    "id": "burnout-delegate-minimum",
+    "title": "Find the First Things to Hand Off",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "burnout-prevention",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me find the first tasks to hand off or automate so I am not doing everything myself at my [BUSINESS TYPE]. Tasks that take my time but do not need my expertise are [EXAMPLES], my budget for help is [AMOUNT, OR VERY LITTLE], and tools I already have are [YOUR CURRENT TOOLS]. Suggest a few low cost options, like a part time assistant, a freelancer for a specific task, a simple automation, or a tool, ranked by hours saved for the money. Note that solo owners often wait until they can afford a full time hire, while a few hours of help a week or one simple automation can relieve the most draining tasks now, and the cheapest help is sometimes just stopping a task that was never essential. Give me the handoff list.",
+    "description": "Find the cheapest help or automation that frees up the most time.",
+    "useCase": "Use this when you are doing every task yourself. Solo owners often wait until they can afford a full time hire, while a few hours of help a week or one automation can relieve the most draining tasks now, and sometimes the cheapest fix is stopping a task that was never essential.",
+    "variables": [
+      "BUSINESS TYPE",
+      "EXAMPLES",
+      "AMOUNT, OR VERY LITTLE",
+      "YOUR CURRENT TOOLS"
+    ],
+    "relatedPromptIds": [
+      "burnout-workload-audit",
+      "burnout-plan-time-off",
+      "burnout-decision-fatigue"
+    ]
+  },
+  {
+    "id": "burnout-decision-fatigue",
+    "title": "Reduce Daily Decision Fatigue",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "burnout-prevention",
+    "aiTool": "Claude",
+    "promptText": "Help me reduce the number of small decisions that wear me out running my [BUSINESS TYPE]. Decisions I make over and over are [E.G. WHAT TO POST, WHICH TASK FIRST, HOW TO PRICE SMALL JOBS, WHAT TO EAT, REPLYING TO SIMILAR QUESTIONS], and parts of my day that already run on routine are [EXISTING ROUTINES]. Suggest defaults, templates, and simple rules that remove repeat decisions. Note that owners make dozens of small decisions every day, and the mental load adds up even when each one seems trivial, so turning repeat decisions into defaults, like a fixed weekly content theme, a pricing table, or saved replies to common questions, frees up energy for the decisions that genuinely need thought. Give me the decision reducers.",
+    "description": "Turn repeat decisions into defaults, templates, and simple rules.",
+    "useCase": "Use this when you feel mentally drained by small choices. Owners make dozens of small decisions daily and the load adds up, so turning repeat decisions into defaults like a fixed content theme, a pricing table, or saved replies frees energy for decisions that genuinely need thought.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. WHAT TO POST, WHICH TASK FIRST, HOW TO PRICE SMALL JOBS, WHAT TO EAT, REPLYING TO SIMILAR QUESTIONS",
+      "EXISTING ROUTINES"
+    ],
+    "relatedPromptIds": [
+      "burnout-delegate-minimum",
+      "burnout-minimum-viable-week",
+      "burnout-energy-audit"
+    ]
+  },
+  {
+    "id": "burnout-minimum-viable-week",
+    "title": "Design a Minimum Viable Week",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "burnout-prevention",
+    "aiTool": "Gemini",
+    "promptText": "Help me design a minimum viable week for my [BUSINESS TYPE], the least work needed to keep the business healthy when my energy is low. The tasks that truly keep the business running are [ESSENTIALS, E.G. SERVING EXISTING CUSTOMERS, CASH COLLECTION, KEY MESSAGES], tasks that can pause for a few weeks are [NON URGENT WORK], and the hours I can manage right now are [REALISTIC HOURS]. Give me a stripped back weekly plan that protects the essentials and pauses the rest guilt free. Note that when energy runs low, trying to keep up a full schedule usually leads to doing everything badly, while deliberately shrinking to the essentials for a period protects both the business and my recovery, and many growth tasks can pause for weeks with far less damage than an owner who burns out completely. Give me the minimum viable week.",
+    "description": "Shrink to the essential tasks during low energy periods without guilt.",
+    "useCase": "Use this when you are running on empty. Trying to keep a full schedule on low energy usually means doing everything badly, while shrinking to essentials for a while protects both the business and your recovery, and growth tasks can pause for weeks with far less damage than a full burnout.",
+    "variables": [
+      "BUSINESS TYPE",
+      "ESSENTIALS, E.G. SERVING EXISTING CUSTOMERS, CASH COLLECTION, KEY MESSAGES",
+      "NON URGENT WORK",
+      "REALISTIC HOURS"
+    ],
+    "relatedPromptIds": [
+      "burnout-workload-audit",
+      "burnout-recovery-plan",
+      "burnout-quick-reset"
+    ]
+  },
+  {
+    "id": "burnout-isolation",
+    "title": "Reduce the Isolation of Working Alone",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "burnout-prevention",
+    "aiTool": "Claude",
+    "promptText": "Help me reduce the isolation of running my [BUSINESS TYPE] mostly alone. How much I talk to other people about work is [HONESTLY], where I live and work is [YOUR SITUATION, E.G. A SMALL TOWN, ABROAD, WORKING FROM HOME], and options that might exist near me or online are [ANY GROUPS, COWORKING, PEERS YOU KNOW]. Suggest realistic ways to build regular contact with peers who understand running a business, both online and in person. Note that working alone takes a quiet toll, since there is nobody to share wins, vent frustrations, or sanity check decisions with, and this isolation often feeds burnout, so even a small regular connection, like a weekly call with another founder or a coworking day, can make the work feel lighter, especially for owners living far from their old networks. Give me the connection plan.",
+    "description": "Build regular contact with peers so working alone feels lighter.",
+    "useCase": "Use this if you mostly work alone. Working alone takes a quiet toll since there is nobody to share wins, vent, or sanity check decisions with, which often feeds burnout, so even a small regular connection like a weekly founder call or coworking day helps, especially far from old networks.",
+    "variables": [
+      "BUSINESS TYPE",
+      "HONESTLY",
+      "YOUR SITUATION, E.G. A SMALL TOWN, ABROAD, WORKING FROM HOME",
+      "ANY GROUPS, COWORKING, PEERS YOU KNOW"
+    ],
+    "relatedPromptIds": [
+      "burnout-get-support",
+      "burnout-energy-audit",
+      "burnout-warning-signs"
+    ]
+  },
+  {
+    "id": "burnout-basics-check",
+    "title": "Check the Basics That Protect Your Energy",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "burnout-prevention",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me check whether the basics that protect my energy are slipping while I run my [BUSINESS TYPE]. How I have been with sleep, movement, eating regularly, time outdoors, and time with people is [HONEST DESCRIPTION], and what usually pushes these aside is [E.G. DEADLINES, LATE MESSAGES, TRAVEL]. Help me spot the one or two basics that have slipped most and suggest small, realistic ways to protect them within my schedule. Note that when a business gets busy, sleep, meals, and movement are usually the first things sacrificed, which makes stress harder to handle and work slower, so protecting a few basics is not a luxury but part of running the business well, and small consistent changes usually stick better than a dramatic overhaul. Give me the basics check.",
+    "description": "Spot which energy basics have slipped and protect them in small ways.",
+    "useCase": "Use this when busy periods push your basics aside. Sleep, meals, and movement are usually the first things sacrificed when work gets busy, making stress harder to handle, so protecting a few basics is part of running the business well, and small consistent changes stick better than a dramatic overhaul.",
+    "variables": [
+      "BUSINESS TYPE",
+      "HONEST DESCRIPTION",
+      "E.G. DEADLINES, LATE MESSAGES, TRAVEL"
+    ],
+    "relatedPromptIds": [
+      "burnout-warning-signs",
+      "burnout-shutdown-ritual",
+      "burnout-recovery-plan"
+    ]
+  },
+  {
+    "id": "burnout-recovery-plan",
+    "title": "Plan a Gradual Recovery From Burnout",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "burnout-prevention",
+    "aiTool": "Claude",
+    "promptText": "Help me plan a gradual recovery after a period of burnout running my [BUSINESS TYPE]. How I am doing now is [YOUR CURRENT STATE], what the business needs from me at minimum is [THE ESSENTIALS], and what led to the burnout is [THE MAIN CAUSES]. Help me plan a slow return to a sustainable workload, with what changes permanently so I do not end up back here. Note that recovery from real burnout usually takes longer than a single holiday, and rushing back to the old pace often leads straight back to exhaustion, so the plan should change the causes, like workload, pricing, or boundaries, not just add rest, and if symptoms are severe or not improving, professional support from a doctor or counselor is an important part of recovery rather than a last resort. Give me the recovery plan.",
+    "description": "Plan a slow return to work that changes the causes of burnout.",
+    "useCase": "Use this after a period of burnout. Real burnout usually takes longer than one holiday to recover from and rushing back often leads straight back to exhaustion, so the plan should change causes like workload, pricing, or boundaries, and professional support is an important part of recovery if symptoms persist.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR CURRENT STATE",
+      "THE ESSENTIALS",
+      "THE MAIN CAUSES"
+    ],
+    "relatedPromptIds": [
+      "burnout-minimum-viable-week",
+      "burnout-get-support",
+      "burnout-early-warning-plan"
+    ]
+  },
+  {
+    "id": "burnout-early-warning-plan",
+    "title": "Create a Personal Early Warning Plan",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "burnout-prevention",
+    "aiTool": "Gemini",
+    "promptText": "Help me create a personal early warning plan so I catch burnout before it gets bad, while running my [BUSINESS TYPE]. The signs I noticed last time things got bad are [YOUR PERSONAL WARNING SIGNS], the situations that usually trigger overload are [E.G. BIG LAUNCHES, PEAK SEASON, ONE BIG CLIENT], and the people who notice when I am struggling are [WHO]. Turn this into a short plan listing my warning signs, the actions I will take at each level, and who I will tell. Note that people usually see the same personal warning signs before each burnout, like skipping meals, snapping at people, or losing interest in things they enjoy, so writing them down with a planned response makes it much more likely I act early instead of pushing through, and asking someone close to point out the signs helps when I am too deep to notice. Give me the early warning plan.",
+    "description": "Write down your personal warning signs and the actions you will take.",
+    "useCase": "Use this once things are stable. People usually see the same personal warning signs before each burnout, like skipping meals or losing interest in things they enjoy, so writing them down with planned responses makes acting early far more likely, and asking someone close to flag the signs helps when you cannot see them.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR PERSONAL WARNING SIGNS",
+      "E.G. BIG LAUNCHES, PEAK SEASON, ONE BIG CLIENT",
+      "WHO"
+    ],
+    "relatedPromptIds": [
+      "burnout-warning-signs",
+      "burnout-recovery-plan",
+      "burnout-get-support"
+    ]
+  },
+  {
+    "id": "burnout-get-support",
+    "title": "Reach Out for Support When You Are Struggling",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "burnout-prevention",
+    "aiTool": "Claude",
+    "promptText": "Help me reach out for support because I am struggling with the pressure of running my [BUSINESS TYPE]. What I am going through is [WHAT YOU ARE FEELING OR FACING], the people I could talk to are [FRIENDS, FAMILY, PEERS, A DOCTOR, A COUNSELOR], and what makes it hard to reach out is [E.G. NOT WANTING TO BURDEN ANYONE, PRIDE, NOT KNOWING WHO TO ASK, LANGUAGE OR LOCATION]. Help me choose who to talk to first and write a simple message to start that conversation. Note that business owners often feel they must carry everything alone and keep up appearances, but talking to someone is a sign of good judgment rather than weakness, and if I am feeling hopeless, unable to cope, or having thoughts of harming myself, contacting a local crisis line, emergency services, or a doctor right away matters far more than anything to do with the business. Give me the support plan and message.",
+    "description": "Choose someone to talk to and write a message to start the conversation.",
+    "useCase": "Use this when the pressure feels like too much. Owners often feel they must carry everything alone, but talking to someone shows good judgment rather than weakness, and if you feel hopeless or unable to cope, contacting a local crisis line, emergency services, or a doctor right away matters far more than the business.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU ARE FEELING OR FACING",
+      "FRIENDS, FAMILY, PEERS, A DOCTOR, A COUNSELOR",
+      "E.G. NOT WANTING TO BURDEN ANYONE, PRIDE, NOT KNOWING WHO TO ASK, LANGUAGE OR LOCATION"
+    ],
+    "relatedPromptIds": [
+      "burnout-warning-signs",
+      "burnout-isolation",
+      "burnout-recovery-plan"
+    ]
   }
 ]
