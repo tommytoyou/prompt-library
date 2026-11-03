@@ -39461,5 +39461,369 @@
       "burnout-isolation",
       "burnout-recovery-plan"
     ]
+  },
+  {
+    "id": "habit-design-one",
+    "title": "Design One New Habit That Sticks",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "habit-building",
+    "aiTool": "Claude",
+    "promptText": "Help me design one new habit that will actually stick. The habit I want is [THE HABIT], why it matters to me is [THE REASON], my daily schedule looks like [YOUR TYPICAL DAY], and what has stopped me before is [PAST OBSTACLES]. Give me a specific version of the habit with when and where I will do it, the smallest starting size, what will remind me, and how I will make it satisfying. Note that most new habits fail because they start too big and too vague, like exercise more, while a small, specific habit tied to a clear time and place, like a ten minute walk after lunch, is far more likely to survive busy weeks, and the size can grow once the routine is automatic. Give me the habit design.",
+    "description": "Design one small, specific habit with a clear time, place, and reminder.",
+    "useCase": "Use this when starting any new habit. Most habits fail because they start too big and vague, like exercise more, while a small specific habit tied to a clear time and place is far more likely to survive busy weeks, and the size can grow once the routine is automatic.",
+    "variables": [
+      "THE HABIT",
+      "THE REASON",
+      "YOUR TYPICAL DAY",
+      "PAST OBSTACLES"
+    ],
+    "relatedPromptIds": [
+      "habit-start-tiny",
+      "habit-stacking",
+      "habit-environment-design"
+    ]
+  },
+  {
+    "id": "habit-start-tiny",
+    "title": "Shrink a Habit to a Tiny Starting Version",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "habit-building",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me shrink a habit to a starting version so small I cannot fail. The full habit I want is [THE FULL HABIT, E.G. WRITE DAILY, EXERCISE, REVIEW FINANCES], and my worst days look like [HOW BUSY OR TIRED YOU GET]. Give me a tiny version that takes under two minutes, a plan for when to grow it, and what counts as a success on a hard day. Note that a tiny habit, like writing one sentence or putting on my running shoes, sounds too small to matter, but it builds the routine of showing up, which is the hardest part, and on good days I often do more anyway, while a habit sized for my best days collapses the first time a bad week arrives. Give me the tiny habit plan.",
+    "description": "Shrink a habit to a two minute version you can do on your worst day.",
+    "useCase": "Use this when habits keep collapsing in busy weeks. A tiny version like writing one sentence builds the routine of showing up, which is the hardest part, and on good days you often do more anyway, while a habit sized for your best days collapses the first bad week.",
+    "variables": [
+      "THE FULL HABIT, E.G. WRITE DAILY, EXERCISE, REVIEW FINANCES",
+      "HOW BUSY OR TIRED YOU GET"
+    ],
+    "relatedPromptIds": [
+      "habit-design-one",
+      "habit-missed-days",
+      "habit-stacking"
+    ]
+  },
+  {
+    "id": "habit-quick-plan",
+    "title": "Get a Quick Habit Plan",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "habit-building",
+    "aiTool": "Grok",
+    "promptText": "I want to start a habit today. The habit is [THE HABIT], and the best time in my day for it is [WHEN]. Give me a tiny starting version, a trigger to attach it to, and a simple way to track it, no explanation, just the plan. Give me the habit plan.",
+    "description": "Get a tiny starting version, trigger, and tracker for a habit today.",
+    "useCase": "Use this when you want to start a habit right now. A tiny starting version, a trigger tied to something you already do, and a simple tracker are all a new habit needs, and starting small today beats waiting for the perfect week to begin.",
+    "variables": [
+      "THE HABIT",
+      "WHEN"
+    ],
+    "relatedPromptIds": [
+      "habit-design-one",
+      "habit-start-tiny",
+      "habit-tracker"
+    ]
+  },
+  {
+    "id": "habit-stacking",
+    "title": "Attach a New Habit to an Existing Routine",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "habit-building",
+    "aiTool": "Gemini",
+    "promptText": "Help me attach a new habit to something I already do every day. The new habit is [THE HABIT], and things I reliably do each day are [E.G. MAKING COFFEE, OPENING THE LAPTOP, AFTER LUNCH, LOCKING UP, BRUSHING TEETH]. Suggest a few after I do this, I will do that pairings, and pick the strongest fit. Note that existing routines are the most reliable reminders I have, since they already happen without effort, so linking a new habit right after one works much better than relying on memory or motivation, and the pairing should make sense in time and place, like reviewing tomorrow's tasks right after closing the shop rather than at a random hour. Give me the habit pairings.",
+    "description": "Link a new habit to something you already do every day.",
+    "useCase": "Use this when you keep forgetting a new habit. Existing routines are the most reliable reminders since they happen without effort, so linking a new habit right after one beats relying on memory or motivation, as long as the pairing makes sense in time and place.",
+    "variables": [
+      "THE HABIT",
+      "E.G. MAKING COFFEE, OPENING THE LAPTOP, AFTER LUNCH, LOCKING UP, BRUSHING TEETH"
+    ],
+    "relatedPromptIds": [
+      "habit-design-one",
+      "habit-environment-design",
+      "habit-quick-plan"
+    ]
+  },
+  {
+    "id": "habit-environment-design",
+    "title": "Set Up Your Environment for a Habit",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "habit-building",
+    "aiTool": "Claude",
+    "promptText": "Help me set up my surroundings so a good habit is easy and a bad one is hard. The habit I want to build is [GOOD HABIT], the habit I want to reduce is [BAD HABIT], and where I live and work is [YOUR SPACE, E.G. SMALL APARTMENT, SHARED HOUSE, CAFE, CAR]. Suggest changes to my physical space, devices, and default options. Note that environment often beats willpower, since a habit that requires finding equipment or opening several apps rarely survives, while one that is visible and ready to go happens almost automatically, and the same works in reverse, so putting the phone in another room or removing an app does more than trying to resist it. Give me the environment changes.",
+    "description": "Make good habits easy and bad ones hard through your surroundings.",
+    "useCase": "Use this when willpower keeps failing. Environment often beats willpower, since a habit needing equipment or several apps rarely survives while a visible ready one happens almost automatically, and in reverse, putting the phone in another room does more than trying to resist it.",
+    "variables": [
+      "GOOD HABIT",
+      "BAD HABIT",
+      "YOUR SPACE, E.G. SMALL APARTMENT, SHARED HOUSE, CAFE, CAR"
+    ],
+    "relatedPromptIds": [
+      "habit-break-bad",
+      "habit-stacking",
+      "habit-design-one"
+    ]
+  },
+  {
+    "id": "habit-break-bad",
+    "title": "Break a Habit You Want to Stop",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "habit-building",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me break a habit I want to stop. The habit is [E.G. CHECKING MY PHONE FIRST THING, LATE NIGHT WORK, SNACKING WHILE WORKING, CHECKING SALES CONSTANTLY], when and where it usually happens is [THE TRIGGER], and what I get out of it is [THE PAYOFF, E.G. RELIEF, DISTRACTION, COMFORT]. Help me identify the trigger and payoff, find a healthier replacement that gives a similar payoff, and add friction to the old habit. Note that bad habits usually meet a real need, like relief from stress or a quick break, so simply stopping often fails, while replacing the habit with something that meets the same need, and making the old one harder to do, works far better, and slips along the way are normal rather than proof I cannot change. Give me the habit breaking plan.",
+    "description": "Find the trigger and payoff behind a bad habit and replace it.",
+    "useCase": "Use this for a habit you want to stop. Bad habits usually meet a real need, like relief from stress, so simply stopping often fails, while replacing it with something meeting the same need and adding friction to the old habit works better, and slips along the way are normal.",
+    "variables": [
+      "E.G. CHECKING MY PHONE FIRST THING, LATE NIGHT WORK, SNACKING WHILE WORKING, CHECKING SALES CONSTANTLY",
+      "THE TRIGGER",
+      "THE PAYOFF, E.G. RELIEF, DISTRACTION, COMFORT"
+    ],
+    "relatedPromptIds": [
+      "habit-environment-design",
+      "habit-missed-days",
+      "habit-phone-habit"
+    ]
+  },
+  {
+    "id": "habit-tracker",
+    "title": "Set Up a Simple Habit Tracker",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "habit-building",
+    "aiTool": "Gemini",
+    "promptText": "Help me set up a simple way to track my habits. The habits I am building are [YOUR HABITS], the tool I prefer is [E.G. PAPER CALENDAR, NOTEBOOK, NOTES APP, HABIT APP, SPREADSHEET], and how much time I will spend tracking is [VERY LITTLE OR A FEW MINUTES]. Give me a tracker layout and a quick daily or weekly routine for marking progress. Note that a visible record of progress is motivating and shows patterns, like which days habits slip, but tracking too many things or in too much detail becomes a chore that gets dropped, so a simple checkmark per habit per day is usually enough, and the tracker should make it obvious at a glance how I am doing. Give me the tracker setup.",
+    "description": "Track habits with simple checkmarks you can see at a glance.",
+    "useCase": "Use this once you start a few habits. A visible record is motivating and shows patterns like which days habits slip, but tracking too much in too much detail becomes a chore that gets dropped, so a simple checkmark per habit per day is usually enough.",
+    "variables": [
+      "YOUR HABITS",
+      "E.G. PAPER CALENDAR, NOTEBOOK, NOTES APP, HABIT APP, SPREADSHEET",
+      "VERY LITTLE OR A FEW MINUTES"
+    ],
+    "relatedPromptIds": [
+      "habit-quick-plan",
+      "habit-missed-days",
+      "habit-monthly-review"
+    ]
+  },
+  {
+    "id": "habit-missed-days",
+    "title": "Get Back on Track After Missing Days",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "habit-building",
+    "aiTool": "Claude",
+    "promptText": "Help me get back on track after missing my habit for a while. The habit is [THE HABIT], how long I have been off it is [HOW LONG], what caused the break is [E.G. TRAVEL, ILLNESS, A BUSY PERIOD, LOST MOTIVATION], and how I feel about it is [YOUR REACTION]. Give me a gentle restart plan with a smaller version to begin with and a rule for future missed days. Note that missing a day rarely ruins a habit, but the all or nothing feeling that follows often does, so a rule like never miss twice in a row keeps one slip from turning into weeks, and restarting with a smaller version than before is easier than trying to jump straight back to where I left off. Give me the restart plan.",
+    "description": "Restart a habit gently after a break with a smaller version and a clear rule.",
+    "useCase": "Use this when a habit has fallen away. Missing a day rarely ruins a habit but the all or nothing feeling that follows often does, so a rule like never miss twice keeps one slip from becoming weeks, and restarting smaller is easier than jumping back to where you left off.",
+    "variables": [
+      "THE HABIT",
+      "HOW LONG",
+      "E.G. TRAVEL, ILLNESS, A BUSY PERIOD, LOST MOTIVATION",
+      "YOUR REACTION"
+    ],
+    "relatedPromptIds": [
+      "habit-start-tiny",
+      "habit-tracker",
+      "habit-irregular-schedule"
+    ]
+  },
+  {
+    "id": "habit-irregular-schedule",
+    "title": "Keep Habits With an Irregular Schedule",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "habit-building",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me keep habits going when my schedule is unpredictable running my [BUSINESS TYPE]. How my days vary is [E.G. TRAVEL, CLIENT VISITS, SHIFTS, MARKET DAYS, TIME ZONE CHANGES], the habits I want to keep are [YOUR HABITS], and what usually happens to them on irregular days is [WHAT GOES WRONG]. Suggest habits tied to events rather than clock times, minimum versions for travel or busy days, and a portable setup. Note that most habit advice assumes a regular nine to five day, while many owners have no two days alike, so tying habits to events that happen whatever the day looks like, such as after my first coffee or when I get back to where I am staying, works better than fixed times, and a minimum travel version keeps the streak alive. Give me the flexible habit plan.",
+    "description": "Tie habits to events rather than clock times when no two days match.",
+    "useCase": "Use this when your days are never the same. Most habit advice assumes a regular day, while many owners have none, so tying habits to events that happen anyway, like after your first coffee, works better than fixed times, and a minimum travel version keeps habits alive on chaotic days.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. TRAVEL, CLIENT VISITS, SHIFTS, MARKET DAYS, TIME ZONE CHANGES",
+      "YOUR HABITS",
+      "WHAT GOES WRONG"
+    ],
+    "relatedPromptIds": [
+      "habit-missed-days",
+      "habit-stacking",
+      "habit-start-tiny"
+    ]
+  },
+  {
+    "id": "habit-keystone",
+    "title": "Find a Keystone Habit",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "habit-building",
+    "aiTool": "Gemini",
+    "promptText": "Help me find one keystone habit that would improve several areas at once. The areas I want to improve are [E.G. ENERGY, FOCUS, FINANCES, HEALTH, BUSINESS GROWTH], habits I am considering are [YOUR IDEAS], and my current routine is [YOUR DAY]. Suggest which single habit would likely have the biggest ripple effect, and why. Note that some habits naturally pull others along with them, like a regular sleep time making mornings, energy, and focus easier, or a weekly money review leading to better pricing and spending, so starting with one keystone habit is often more effective than trying to change everything at once, though which habit acts as a keystone differs from person to person. Give me the keystone habit.",
+    "description": "Pick the one habit most likely to improve several areas at once.",
+    "useCase": "Use this when you want to change many things at once. Some habits pull others along, like a regular sleep time easing mornings and focus, or a weekly money review improving pricing, so one keystone habit is often more effective than changing everything, though the right keystone differs by person.",
+    "variables": [
+      "E.G. ENERGY, FOCUS, FINANCES, HEALTH, BUSINESS GROWTH",
+      "YOUR IDEAS",
+      "YOUR DAY"
+    ],
+    "relatedPromptIds": [
+      "habit-too-many",
+      "habit-design-one",
+      "habit-business-habits"
+    ]
+  },
+  {
+    "id": "habit-too-many",
+    "title": "Choose Which Habits to Build First",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "habit-building",
+    "aiTool": "Claude",
+    "promptText": "Help me choose which habits to build first when I want to change too many things at once. The habits I want are [YOUR LIST], what matters most to me right now is [YOUR PRIORITY], and how much change I can realistically handle is [YOUR CAPACITY]. Rank them and suggest an order, starting with one or two, and when to add the next. Note that trying to build many new habits at once usually ends with all of them dropped within weeks, since each one takes attention until it becomes automatic, so adding them one at a time, and only once the previous one feels easy, is slower to start but far more likely to last. Give me the habit order.",
+    "description": "Rank your desired habits and add them one at a time.",
+    "useCase": "Use this when you want to change everything at once. Building many habits together usually ends with all of them dropped within weeks, since each needs attention until it becomes automatic, so adding them one at a time once the previous feels easy is slower to start but far more likely to last.",
+    "variables": [
+      "YOUR LIST",
+      "YOUR PRIORITY",
+      "YOUR CAPACITY"
+    ],
+    "relatedPromptIds": [
+      "habit-keystone",
+      "habit-design-one",
+      "habit-monthly-review"
+    ]
+  },
+  {
+    "id": "habit-business-habits",
+    "title": "Build the Daily Habits a Business Needs",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "habit-building",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me build a few small daily or weekly habits that keep my [BUSINESS TYPE] healthy. The areas I tend to neglect are [E.G. FOLLOWING UP WITH LEADS, POSTING CONTENT, CHECKING FINANCES, ASKING FOR REVIEWS], how much time I can give each day is [MINUTES], and my biggest business goal right now is [YOUR GOAL]. Suggest a short set of business habits with a time slot and a minimum version for each. Note that many small businesses grow or stall based on a few unglamorous habits done consistently, like contacting a few prospects every day or reviewing the numbers every week, and small regular effort usually beats occasional bursts of intense work followed by long gaps. Give me the business habits.",
+    "description": "Build a few small, consistent habits that keep the business growing.",
+    "useCase": "Use this when important business tasks only happen in bursts. Many businesses grow or stall on a few unglamorous habits done consistently, like contacting a few prospects daily or reviewing numbers weekly, and small regular effort usually beats intense bursts followed by long gaps.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. FOLLOWING UP WITH LEADS, POSTING CONTENT, CHECKING FINANCES, ASKING FOR REVIEWS",
+      "MINUTES",
+      "YOUR GOAL"
+    ],
+    "relatedPromptIds": [
+      "habit-keystone",
+      "habit-money-habit",
+      "habit-learning-habit"
+    ]
+  },
+  {
+    "id": "habit-money-habit",
+    "title": "Build a Weekly Money Check Habit",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "habit-building",
+    "aiTool": "Gemini",
+    "promptText": "Help me build a habit of checking my business finances every week for my [BUSINESS TYPE]. Where my money information lives is [BANK APP, SPREADSHEET, ACCOUNTING TOOL, PAYMENT APPS], what I avoid looking at is [E.G. EXPENSES, UNPAID INVOICES, PROFIT], and how I feel about money tasks is [YOUR FEELINGS]. Give me a short weekly money check routine, about fifteen minutes, with the few numbers to look at and when to do it. Note that many owners avoid looking at their numbers because it causes anxiety, but problems like unpaid invoices or creeping costs only get worse unseen, so a short, regular, low drama check makes money feel more manageable over time, and pairing it with something pleasant can make it easier to keep. Give me the money habit.",
+    "description": "Build a short weekly check on the few numbers that matter.",
+    "useCase": "Use this if you avoid looking at your business finances. Many owners avoid their numbers because it causes anxiety, but unpaid invoices or creeping costs only get worse unseen, so a short regular low drama check makes money feel more manageable, and pairing it with something pleasant helps.",
+    "variables": [
+      "BUSINESS TYPE",
+      "BANK APP, SPREADSHEET, ACCOUNTING TOOL, PAYMENT APPS",
+      "E.G. EXPENSES, UNPAID INVOICES, PROFIT",
+      "YOUR FEELINGS"
+    ],
+    "relatedPromptIds": [
+      "habit-business-habits",
+      "habit-stacking",
+      "habit-tracker"
+    ]
+  },
+  {
+    "id": "habit-learning-habit",
+    "title": "Build a Daily Learning or Reading Habit",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "habit-building",
+    "aiTool": "Claude",
+    "promptText": "Help me build a steady learning habit alongside running my [BUSINESS TYPE]. What I want to learn is [THE SKILL OR TOPIC], how I like to learn is [E.G. READING, PODCASTS, VIDEOS, COURSES, PRACTICE], and the gaps in my day I could use are [E.G. COMMUTE, MORNINGS, LUNCH, BEFORE BED]. Suggest a small daily learning habit, how to keep notes so it sticks, and how to apply what I learn. Note that learning a little most days adds up far more than an occasional long course I never finish, but consuming endless content without applying it is a common trap that feels productive, so pairing learning with one small action, like trying an idea in the business that week, is what turns it into real progress. Give me the learning habit.",
+    "description": "Learn a little most days and apply it so it turns into progress.",
+    "useCase": "Use this to keep learning while busy. A little learning most days adds up more than an occasional long course you never finish, but endless content without application is a trap that feels productive, so pairing learning with one small action that week turns it into real progress.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE SKILL OR TOPIC",
+      "E.G. READING, PODCASTS, VIDEOS, COURSES, PRACTICE",
+      "E.G. COMMUTE, MORNINGS, LUNCH, BEFORE BED"
+    ],
+    "relatedPromptIds": [
+      "habit-business-habits",
+      "habit-stacking",
+      "habit-start-tiny"
+    ]
+  },
+  {
+    "id": "habit-phone-habit",
+    "title": "Change How You Use Your Phone",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "habit-building",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me change my phone habits without cutting off the business tools I need. How I use my phone now is [YOUR HABITS, E.G. SCROLLING, CHECKING MESSAGES CONSTANTLY], what I genuinely need it for is [BUSINESS USES, E.G. ORDERS, CUSTOMER CHATS, PAYMENTS], and when phone use bothers me most is [E.G. MORNINGS, MEALS, BEFORE SLEEP, DURING FOCUS WORK]. Suggest practical changes like phone free times, app layout, notification settings, and replacement activities. Note that for many owners the phone is both the main business tool and the main distraction, so going phone free is unrealistic, but separating work apps from time wasting ones, turning off non essential notifications, and setting a few phone free times usually reduces the pull without missing important customer messages. Give me the phone habit plan.",
+    "description": "Reduce phone distraction while keeping the business tools you rely on.",
+    "useCase": "Use this when your phone is both your business and your biggest distraction. Going phone free is unrealistic for many owners, but separating work apps from time wasters, turning off non essential notifications, and setting a few phone free times reduces the pull without missing important customer messages.",
+    "variables": [
+      "YOUR HABITS, E.G. SCROLLING, CHECKING MESSAGES CONSTANTLY",
+      "BUSINESS USES, E.G. ORDERS, CUSTOMER CHATS, PAYMENTS",
+      "E.G. MORNINGS, MEALS, BEFORE SLEEP, DURING FOCUS WORK"
+    ],
+    "relatedPromptIds": [
+      "habit-break-bad",
+      "habit-environment-design",
+      "habit-business-habits"
+    ]
+  },
+  {
+    "id": "habit-make-satisfying",
+    "title": "Make a Habit More Satisfying",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "habit-building",
+    "aiTool": "Gemini",
+    "promptText": "Help me make a habit more satisfying so I want to keep doing it. The habit is [THE HABIT], what makes it feel dull or unrewarding is [THE PROBLEM], and things I enjoy are [SMALL PLEASURES]. Suggest ways to add immediate satisfaction, like a small reward, visible progress, a pleasant setting, or doing it with others. Note that many good habits pay off only in the long run, like saving money or exercising, while the effort is felt right now, so adding something enjoyable in the moment, such as marking a visible streak or pairing it with a favorite drink, helps bridge the gap until the long term benefits become noticeable. Give me the satisfaction boosters.",
+    "description": "Add immediate satisfaction to habits whose payoff comes much later.",
+    "useCase": "Use this for habits that feel like a chore. Many good habits pay off only in the long run while the effort is felt now, so adding something enjoyable in the moment, like a visible streak or a favorite drink, helps bridge the gap until the long term benefits become noticeable.",
+    "variables": [
+      "THE HABIT",
+      "THE PROBLEM",
+      "SMALL PLEASURES"
+    ],
+    "relatedPromptIds": [
+      "habit-design-one",
+      "habit-tracker",
+      "habit-social-support"
+    ]
+  },
+  {
+    "id": "habit-social-support",
+    "title": "Use Other People to Support a Habit",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "habit-building",
+    "aiTool": "Claude",
+    "promptText": "Help me use other people to make a habit easier to keep. The habit is [THE HABIT], people who might join or support me are [E.G. A PARTNER, A FRIEND, ANOTHER FOUNDER, AN ONLINE GROUP, A LOCAL CLASS], and whether I prefer [DOING IT TOGETHER OR JUST CHECKING IN]. Suggest a simple way to involve others, like a shared habit, a weekly check in, or joining a group that already does it. Note that habits are much easier to keep when they are normal in the group around me, and having someone expecting me, like a walking partner or a weekly accountability message, adds a gentle reason to show up on low motivation days, while the support should feel encouraging rather than like being judged. Give me the social support plan.",
+    "description": "Involve others to make a habit easier to keep on low motivation days.",
+    "useCase": "Use this when you struggle to keep habits alone. Habits are easier when they are normal in the group around you, and someone expecting you, like a walking partner or weekly check in message, adds a gentle reason to show up on low days, as long as it feels encouraging rather than judging.",
+    "variables": [
+      "THE HABIT",
+      "E.G. A PARTNER, A FRIEND, ANOTHER FOUNDER, AN ONLINE GROUP, A LOCAL CLASS",
+      "DOING IT TOGETHER OR JUST CHECKING IN"
+    ],
+    "relatedPromptIds": [
+      "habit-make-satisfying",
+      "habit-missed-days",
+      "habit-tracker"
+    ]
+  },
+  {
+    "id": "habit-monthly-review",
+    "title": "Review Your Habits Each Month",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "habit-building",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me run a short monthly review of my habits. The habits I have been working on are [YOUR HABITS], how consistent I was is [ROUGH RESULTS FROM YOUR TRACKER], what got in the way is [OBSTACLES], and what changed in my life or business is [ANY CHANGES]. Walk me through which habits are now automatic, which need adjusting, which to drop, and what to add next. Note that habits need occasional tuning as life changes, and a habit that keeps failing usually needs to be redesigned, made smaller, or moved to a different time rather than pushed harder, while habits that have become automatic free up room to add the next one. Give me the monthly habit review.",
+    "description": "Review habits monthly to keep, adjust, drop, or add one.",
+    "useCase": "Use this once a month. Habits need tuning as life changes, and one that keeps failing usually needs redesigning, shrinking, or moving to a different time rather than pushing harder, while habits that have become automatic free up room to add the next one.",
+    "variables": [
+      "YOUR HABITS",
+      "ROUGH RESULTS FROM YOUR TRACKER",
+      "OBSTACLES",
+      "ANY CHANGES"
+    ],
+    "relatedPromptIds": [
+      "habit-tracker",
+      "habit-too-many",
+      "habit-missed-days"
+    ]
   }
 ]
