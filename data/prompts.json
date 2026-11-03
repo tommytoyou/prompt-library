@@ -42149,5 +42149,391 @@
       "gmetric-forecast-scenarios",
       "gmetric-unit-economics"
     ]
+  },
+  {
+    "id": "clientrep-monthly-template",
+    "title": "Build a Monthly Client Report Template",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "client-reporting",
+    "aiTool": "Claude",
+    "promptText": "Help me build a monthly report template for my clients at my [BUSINESS TYPE]. The service I provide is [E.G. MARKETING, SEO, SOCIAL MEDIA, BOOKKEEPING, DESIGN, CONSULTING], the results clients care about are [THEIR GOALS], the data I have access to is [YOUR SOURCES], and how long I can spend per report is [TIME]. Give me a template with a short summary, results against goals, what I did, what worked and what did not, and recommendations for next month. Note that clients usually read the first few lines and skim the rest, so the summary should answer did it work in plain language, and linking my work to their goals, rather than listing activities or dumping every metric, is what shows the value of what they are paying for. Give me the client report template.",
+    "description": "Build a client report that leads with results against their goals.",
+    "useCase": "Use this to standardize your client reporting. Clients usually read the first few lines and skim the rest, so the summary should answer did it work in plain language, and linking your work to their goals rather than listing activities or every metric is what shows the value they are paying for.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. MARKETING, SEO, SOCIAL MEDIA, BOOKKEEPING, DESIGN, CONSULTING",
+      "THEIR GOALS",
+      "YOUR SOURCES",
+      "TIME"
+    ],
+    "relatedPromptIds": [
+      "clientrep-executive-summary",
+      "clientrep-set-expectations",
+      "clientrep-recommendations"
+    ]
+  },
+  {
+    "id": "clientrep-quick-summary",
+    "title": "Get a Quick Client Update Summary",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "client-reporting",
+    "aiTool": "Grok",
+    "promptText": "Write a quick update for a client. The work I do for them is [YOUR SERVICE], this period's results are [KEY NUMBERS OR OUTCOMES], and what I am doing next is [NEXT STEPS]. Give me a short, friendly update of a few sentences they can read in under a minute, no long explanation, just the update. Give me the client update.",
+    "description": "Get a short client update they can read in under a minute.",
+    "useCase": "Use this between full reports. A short friendly update with results and next steps keeps clients informed without much effort, and regular brief updates often build more trust than a long report delivered only occasionally.",
+    "variables": [
+      "YOUR SERVICE",
+      "KEY NUMBERS OR OUTCOMES",
+      "NEXT STEPS"
+    ],
+    "relatedPromptIds": [
+      "clientrep-weekly-update",
+      "clientrep-executive-summary",
+      "clientrep-monthly-template"
+    ]
+  },
+  {
+    "id": "clientrep-set-expectations",
+    "title": "Agree on Reporting Expectations With a New Client",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "client-reporting",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me agree on reporting expectations with a new client of my [BUSINESS TYPE]. The service is [YOUR SERVICE], the client's goals are [THEIR GOALS], how results usually build up over time in my field is [E.G. SLOW AND STEADY, QUICK WINS THEN PLATEAU], and the access I will need is [ACCOUNTS, DATA, ANALYTICS]. Draft a short note covering what I will report, how often, which metrics, when they can realistically expect results, and what I need from them. Note that most client disappointment comes from mismatched expectations rather than poor work, especially when results take months, like with SEO, so agreeing at the start on what success looks like, which numbers count, and a realistic timeline prevents later conversations about why results are not happening yet. Give me the expectations note.",
+    "description": "Agree up front on what you report, how often, and realistic timelines.",
+    "useCase": "Use this at the start of any client engagement. Most client disappointment comes from mismatched expectations rather than poor work, especially when results take months, so agreeing on success, which numbers count, and a realistic timeline prevents later conversations about why results are not happening yet.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR SERVICE",
+      "THEIR GOALS",
+      "E.G. SLOW AND STEADY, QUICK WINS THEN PLATEAU",
+      "ACCOUNTS, DATA, ANALYTICS"
+    ],
+    "relatedPromptIds": [
+      "clientrep-monthly-template",
+      "clientrep-baseline",
+      "clientrep-missing-data"
+    ]
+  },
+  {
+    "id": "clientrep-baseline",
+    "title": "Capture a Baseline Before Work Starts",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "client-reporting",
+    "aiTool": "Gemini",
+    "promptText": "Help me capture a baseline before I start working for a client of my [BUSINESS TYPE]. The service is [YOUR SERVICE], the metrics that will show my impact are [THE METRICS], and where I can find the current numbers is [SOURCES]. Give me a checklist of what to record, how to save it with dates, and how to note anything unusual about the starting point, like a seasonal low or a recent change. Note that without a clear before snapshot it becomes very hard to show what my work changed, and memories of how things were tend to fade or shift, so recording the starting numbers, with screenshots where possible, protects both me and the client, and noting seasonal or unusual conditions avoids crediting or blaming my work for changes that would have happened anyway. Give me the baseline checklist.",
+    "description": "Record a dated before snapshot so your impact can be shown fairly.",
+    "useCase": "Use this before starting any client project. Without a clear before snapshot it is hard to show what your work changed, and memories of how things were fade, so recording starting numbers with screenshots protects both sides, and noting seasonal conditions avoids crediting or blaming your work for changes that would have happened anyway.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR SERVICE",
+      "THE METRICS",
+      "SOURCES"
+    ],
+    "relatedPromptIds": [
+      "clientrep-set-expectations",
+      "clientrep-fair-attribution",
+      "clientrep-show-value"
+    ]
+  },
+  {
+    "id": "clientrep-executive-summary",
+    "title": "Write the Executive Summary of a Client Report",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "client-reporting",
+    "aiTool": "Claude",
+    "promptText": "Help me write the opening summary of a report for my client. My business is [BUSINESS TYPE], the client's main goal is [THEIR GOAL], this period's key results are [RESULTS AND NUMBERS], and the most important thing I want them to take away is [THE KEY MESSAGE]. Write a short summary of three to five sentences covering how things went against their goal, the main reason, and what happens next, in plain language. Note that a busy client may read nothing but this summary, so it should stand on its own and lead with the answer they care about, and being upfront about a weak result here builds more trust than burying it on page three where they will find it later anyway. Give me the executive summary.",
+    "description": "Write a short, standalone summary that leads with what the client cares about.",
+    "useCase": "Use this to open every client report. A busy client may read only this summary, so it must stand alone and lead with the answer they care about, and being upfront about a weak result here builds more trust than burying it on page three where they will find it anyway.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THEIR GOAL",
+      "RESULTS AND NUMBERS",
+      "THE KEY MESSAGE"
+    ],
+    "relatedPromptIds": [
+      "clientrep-monthly-template",
+      "clientrep-bad-results",
+      "clientrep-plain-language"
+    ]
+  },
+  {
+    "id": "clientrep-bad-results",
+    "title": "Report Disappointing Results Honestly",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "client-reporting",
+    "aiTool": "Claude",
+    "promptText": "Help me report disappointing results to a client of my [BUSINESS TYPE]. What fell short is [THE RESULT AGAINST THE GOAL], the likely reasons are [CAUSES, INCLUDING ANY MISTAKES OF YOURS], what was outside my control is [EXTERNAL FACTORS], and what I plan to change is [YOUR PLAN]. Write a clear, honest section that states the result, explains why without excuses, owns my part, and sets out the plan. Note that clients lose trust far faster over results that were hidden or spun than over results that were simply disappointing, so naming the problem plainly, separating my mistakes from outside factors without blaming the client, and showing a specific plan usually keeps the relationship, while vague reassurance tends to end it. Give me the honest results section.",
+    "description": "Report weak results plainly, own your part, and set out a plan.",
+    "useCase": "Use this when results miss the goal. Clients lose trust far faster over hidden or spun results than over disappointing ones, so stating the problem plainly, separating your mistakes from outside factors without blaming the client, and showing a specific plan usually keeps the relationship, while vague reassurance ends it.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE RESULT AGAINST THE GOAL",
+      "CAUSES, INCLUDING ANY MISTAKES OF YOURS",
+      "EXTERNAL FACTORS",
+      "YOUR PLAN"
+    ],
+    "relatedPromptIds": [
+      "clientrep-executive-summary",
+      "clientrep-fair-attribution",
+      "clientrep-recommendations"
+    ]
+  },
+  {
+    "id": "clientrep-fair-attribution",
+    "title": "Credit Results to Your Work Fairly",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "client-reporting",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me describe fairly how much of a client's results came from my work at my [BUSINESS TYPE]. The results they saw are [THE OUTCOMES], what I did is [YOUR WORK], and other things that happened in their business at the same time are [E.G. A PRICE CHANGE, A NEW PRODUCT, A SEASON, THEIR OWN MARKETING, PRESS COVERAGE]. Help me write a balanced explanation of what my work likely contributed and how confident I can be. Note that claiming credit for every good result is tempting but backfires when the client knows other factors were involved, and also sets me up to be blamed for every dip, so a fair account that names other influences, and points to evidence like specific tracked links or timing, builds far more credibility over a long relationship. Give me the attribution explanation.",
+    "description": "Explain fairly how much of a result your work contributed.",
+    "useCase": "Use this when results improved for several reasons. Claiming credit for every good result backfires when clients know other factors were involved and sets you up to be blamed for every dip, so a fair account naming other influences and pointing to evidence like tracked links builds more credibility long term.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE OUTCOMES",
+      "YOUR WORK",
+      "E.G. A PRICE CHANGE, A NEW PRODUCT, A SEASON, THEIR OWN MARKETING, PRESS COVERAGE"
+    ],
+    "relatedPromptIds": [
+      "clientrep-baseline",
+      "clientrep-bad-results",
+      "clientrep-show-value"
+    ]
+  },
+  {
+    "id": "clientrep-show-value",
+    "title": "Show the Value of an Ongoing Retainer",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "client-reporting",
+    "aiTool": "Gemini",
+    "promptText": "Help me show the value of an ongoing retainer to a client of my [BUSINESS TYPE]. What they pay is [THE FEE], what I deliver each month is [YOUR ONGOING WORK], the measurable results are [REVENUE, LEADS, TIME SAVED, PROBLEMS AVOIDED], and less visible value I provide is [E.G. MONITORING, ADVICE, QUICK FIXES, PREVENTED ISSUES]. Help me present the value in a way that connects their spending to their outcomes, including the work they never see. Note that clients on long retainers often forget what they are paying for when things run smoothly, because good preventive work is invisible, so a periodic reminder of what was done, what was avoided, and what it achieved, kept honest and not exaggerated, makes renewal far less of a surprise question. Give me the value presentation.",
+    "description": "Connect a retainer fee to outcomes, including the work clients never see.",
+    "useCase": "Use this for ongoing retainer clients. Clients forget what they pay for when things run smoothly because good preventive work is invisible, so a periodic honest reminder of what was done, what was avoided, and what it achieved makes renewal far less of a surprise question.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE FEE",
+      "YOUR ONGOING WORK",
+      "REVENUE, LEADS, TIME SAVED, PROBLEMS AVOIDED",
+      "E.G. MONITORING, ADVICE, QUICK FIXES, PREVENTED ISSUES"
+    ],
+    "relatedPromptIds": [
+      "clientrep-renewal-report",
+      "clientrep-fair-attribution",
+      "clientrep-quarterly-review"
+    ]
+  },
+  {
+    "id": "clientrep-weekly-update",
+    "title": "Write a Weekly Project Status Update",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "client-reporting",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write a weekly status update for a client project at my [BUSINESS TYPE]. The project is [WHAT YOU ARE DELIVERING], what got done this week is [COMPLETED WORK], what is next is [PLANNED WORK], any blockers or decisions needed from the client are [WHAT YOU NEED FROM THEM], and whether we are on track is [ON TRACK, AT RISK, BEHIND]. Write a short status update with a clear overall status at the top, then done, next, and needed from you. Note that clients get anxious when they do not hear anything, and most project delays come from waiting on client feedback or materials, so a short regular update that clearly flags what I need from them, and when, keeps projects moving and protects me if deadlines slip because of their side. Give me the status update.",
+    "description": "Send a short weekly status with done, next, and what you need from them.",
+    "useCase": "Use this for ongoing client projects. Clients get anxious without updates, and most delays come from waiting on client feedback or materials, so a short regular update that clearly flags what you need and when keeps projects moving and protects you if deadlines slip on their side.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU ARE DELIVERING",
+      "COMPLETED WORK",
+      "PLANNED WORK",
+      "WHAT YOU NEED FROM THEM",
+      "ON TRACK, AT RISK, BEHIND"
+    ],
+    "relatedPromptIds": [
+      "clientrep-quick-summary",
+      "clientrep-monthly-template",
+      "clientrep-missing-data"
+    ]
+  },
+  {
+    "id": "clientrep-plain-language",
+    "title": "Translate a Technical Report Into Plain Language",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "client-reporting",
+    "aiTool": "Claude",
+    "promptText": "Help me rewrite a technical client report so a non technical client understands it, for my [BUSINESS TYPE]. Here is the report or section: [PASTE IT], and the client is [WHO THEY ARE AND HOW FAMILIAR THEY ARE WITH THE TOPIC]. Rewrite it in plain language, replacing jargon with everyday terms, explaining what each number means for their business, and keeping the accuracy. Note that terms like impressions, bounce rate, domain authority, or reconciliation are second nature to me but often confuse clients, which makes them feel lost and question the value, so explaining what each number means for their goals, and cutting metrics they do not need, makes the report useful rather than impressive looking, and in some markets a version in the client's first language may help even more. Give me the plain language version.",
+    "description": "Rewrite a technical report so a non technical client understands it.",
+    "useCase": "Use this when clients seem lost in your reports. Jargon that is second nature to you can make clients feel lost and question the value, so explaining what each number means for their goals and cutting metrics they do not need makes the report useful, and a version in their first language may help even more.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHO THEY ARE AND HOW FAMILIAR THEY ARE WITH THE TOPIC"
+    ],
+    "relatedPromptIds": [
+      "clientrep-executive-summary",
+      "clientrep-visuals",
+      "clientrep-unread-reports"
+    ]
+  },
+  {
+    "id": "clientrep-visuals",
+    "title": "Choose Simple Visuals for Client Reports",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "client-reporting",
+    "aiTool": "Gemini",
+    "promptText": "Help me choose simple visuals for my client reports at my [BUSINESS TYPE]. The results I report are [YOUR KEY METRICS], what each client cares about most is [THEIR PRIORITIES], and the format I deliver in is [PDF, SLIDES, SHARED DASHBOARD, EMAIL]. Recommend a small set of charts and visual elements, like a goal progress bar, before and after comparison, or simple trend line, with how to label each. Note that clients often skim, so a few clear visuals showing progress toward their goal communicate far more than pages of tables, but screenshots pasted from tools are often cluttered and confusing, so recreating the key numbers in clean, clearly labeled charts usually looks more professional and is easier to understand. Give me the visual plan.",
+    "description": "Pick a few clean, labeled visuals that show progress toward client goals.",
+    "useCase": "Use this to make client reports easier to read. Clients skim, so a few clear visuals showing progress toward their goal communicate more than tables, while cluttered tool screenshots confuse, so recreating key numbers in clean labeled charts looks more professional and is easier to understand.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR KEY METRICS",
+      "THEIR PRIORITIES",
+      "PDF, SLIDES, SHARED DASHBOARD, EMAIL"
+    ],
+    "relatedPromptIds": [
+      "clientrep-plain-language",
+      "clientrep-monthly-template",
+      "clientrep-automate"
+    ]
+  },
+  {
+    "id": "clientrep-recommendations",
+    "title": "Write Recommendations a Client Will Act On",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "client-reporting",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write the recommendations section of a client report for my [BUSINESS TYPE]. What the results show is [KEY FINDINGS], what the client's goals and budget are is [THEIR GOALS AND CONSTRAINTS], and the opportunities I see are [YOUR IDEAS]. Write three or fewer prioritized recommendations, each with the reason, expected impact, effort or cost, and who needs to do it. Note that a report that only describes the past leaves clients wondering what to do with it, while clear recommendations show expertise and keep the work moving, but long lists rarely get acted on, so a few prioritized suggestions that fit the client's budget, and that are honest about uncertain results, are more likely to be approved. Give me the recommendations.",
+    "description": "Write a few prioritized, costed recommendations that fit the client.",
+    "useCase": "Use this to end every client report. A report that only describes the past leaves clients unsure what to do, while clear recommendations show expertise and keep work moving, but long lists rarely get acted on, so a few prioritized suggestions that fit their budget and are honest about uncertainty get approved.",
+    "variables": [
+      "BUSINESS TYPE",
+      "KEY FINDINGS",
+      "THEIR GOALS AND CONSTRAINTS",
+      "YOUR IDEAS"
+    ],
+    "relatedPromptIds": [
+      "clientrep-monthly-template",
+      "clientrep-bad-results",
+      "clientrep-quarterly-review"
+    ]
+  },
+  {
+    "id": "clientrep-quarterly-review",
+    "title": "Prepare a Quarterly Business Review for a Client",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "client-reporting",
+    "aiTool": "Claude",
+    "promptText": "Help me prepare a quarterly review meeting with a client of my [BUSINESS TYPE]. The goals set at the start of the quarter were [THE GOALS], the results achieved are [RESULTS], key work done is [MAIN DELIVERABLES], what changed in their business is [CHANGES ON THEIR SIDE], and what I propose for next quarter is [YOUR PROPOSAL]. Give me an agenda and short presentation outline covering results versus goals, lessons, their changing priorities, and the plan ahead, with questions to ask them. Note that a quarterly review is the best chance to step back from monthly details, check that I am still working on what matters most to them, and surface new needs, so asking questions about their business and listening is as important as presenting my results. Give me the quarterly review plan.",
+    "description": "Plan a quarterly client review that steps back and checks priorities.",
+    "useCase": "Use this every quarter with ongoing clients. A quarterly review is the best chance to step back from monthly details, check you are still working on what matters most to them, and surface new needs, so asking about their business and listening matters as much as presenting results.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE GOALS",
+      "RESULTS",
+      "MAIN DELIVERABLES",
+      "CHANGES ON THEIR SIDE",
+      "YOUR PROPOSAL"
+    ],
+    "relatedPromptIds": [
+      "clientrep-show-value",
+      "clientrep-recommendations",
+      "clientrep-renewal-report"
+    ]
+  },
+  {
+    "id": "clientrep-renewal-report",
+    "title": "Prepare a Report Ahead of Contract Renewal",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "client-reporting",
+    "aiTool": "Gemini",
+    "promptText": "Help me prepare a summary report ahead of a client's contract renewal for my [BUSINESS TYPE]. The contract period was [DURATION], the goals and results over that time are [GOALS VERSUS RESULTS], highlights and setbacks were [KEY MOMENTS], and what I propose for the next term is [YOUR PROPOSAL, INCLUDING ANY PRICE CHANGE]. Build a concise summary of the whole period, the value delivered, lessons, and the proposal for the next term. Note that clients decide on renewal based on the overall story of the relationship, not one good or bad month, so a clear summary of the full period, including honest setbacks, sets up the renewal conversation far better than a last minute sales pitch, and any price increase is easier to accept when the value is laid out first. Give me the renewal report.",
+    "description": "Summarize the whole contract period and value before a renewal talk.",
+    "useCase": "Use this a few weeks before a contract ends. Clients decide on renewal from the overall story of the relationship, not one month, so a clear summary of the full period with honest setbacks sets up the conversation better than a last minute pitch, and price increases land better after value is shown.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DURATION",
+      "GOALS VERSUS RESULTS",
+      "KEY MOMENTS",
+      "YOUR PROPOSAL, INCLUDING ANY PRICE CHANGE"
+    ],
+    "relatedPromptIds": [
+      "clientrep-show-value",
+      "clientrep-quarterly-review",
+      "clientrep-executive-summary"
+    ]
+  },
+  {
+    "id": "clientrep-missing-data",
+    "title": "Handle Missing or Unavailable Client Data",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "client-reporting",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me handle a situation where I cannot report on something a client wants for my [BUSINESS TYPE]. What the client wants to see is [THE METRIC OR RESULT], why I cannot provide it is [E.G. NO ACCESS, NOT TRACKED, TRACKING BROKE, DATA IS ON THEIR SIDE], and what I can provide instead is [ALTERNATIVES]. Write a clear message explaining the gap, what I can show in the meantime, and what is needed to fix it going forward. Note that guessing or estimating a number and presenting it as fact damages trust badly if discovered, while being upfront about a data gap and proposing a fix, like asking for access or setting up tracking, shows professionalism, and many gaps come from the client's own systems, so stating clearly what I need from them avoids it looking like my failure. Give me the data gap message.",
+    "description": "Explain a reporting data gap honestly and propose how to fix it.",
+    "useCase": "Use this when you cannot report what a client wants. Guessing a number and presenting it as fact damages trust badly if discovered, while being upfront about the gap and proposing a fix shows professionalism, and stating clearly what you need from the client avoids gaps on their side looking like your failure.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE METRIC OR RESULT",
+      "E.G. NO ACCESS, NOT TRACKED, TRACKING BROKE, DATA IS ON THEIR SIDE",
+      "ALTERNATIVES"
+    ],
+    "relatedPromptIds": [
+      "clientrep-set-expectations",
+      "clientrep-baseline",
+      "clientrep-weekly-update"
+    ]
+  },
+  {
+    "id": "clientrep-unread-reports",
+    "title": "Deal With Clients Who Never Read Reports",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "client-reporting",
+    "aiTool": "Claude",
+    "promptText": "Help me deal with a client of my [BUSINESS TYPE] who never seems to read my reports. What I send them is [YOUR CURRENT REPORT FORMAT AND LENGTH], how they usually communicate is [E.G. CALLS, MESSAGING APPS, BRIEF EMAILS, IN PERSON], and the problems it causes are [E.G. SURPRISES AT RENEWAL, REPEATED QUESTIONS, MISSED DECISIONS]. Suggest ways to adapt the format and delivery so the key points actually reach them. Note that clients who ignore reports are often busy rather than uninterested, and a long PDF may not fit how they work, so a three line message in the chat app they already use, or a short monthly call with one page, often lands far better, while important decisions should always be confirmed directly rather than assumed read in a report. Give me the adapted reporting approach.",
+    "description": "Adapt report format and channel so busy clients actually take it in.",
+    "useCase": "Use this when a client never seems to read your reports. Clients who ignore reports are usually busy rather than uninterested, so a three line message in the chat app they use or a short monthly call often lands better than a long PDF, while important decisions should always be confirmed directly.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR CURRENT REPORT FORMAT AND LENGTH",
+      "E.G. CALLS, MESSAGING APPS, BRIEF EMAILS, IN PERSON",
+      "E.G. SURPRISES AT RENEWAL, REPEATED QUESTIONS, MISSED DECISIONS"
+    ],
+    "relatedPromptIds": [
+      "clientrep-plain-language",
+      "clientrep-quick-summary",
+      "clientrep-executive-summary"
+    ]
+  },
+  {
+    "id": "clientrep-automate",
+    "title": "Speed Up Client Report Production",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "client-reporting",
+    "aiTool": "Gemini",
+    "promptText": "Help me produce client reports faster at my [BUSINESS TYPE]. How many clients I report to is [NUMBER], how long each report takes now is [TIME], where the data comes from is [TOOLS AND PLATFORMS], and the parts that take longest are [E.G. COLLECTING DATA, MAKING CHARTS, WRITING COMMENTARY]. Suggest a standard template, which parts can be automated or pulled from connected tools, and which parts should stay personal. Note that client reporting can quietly eat many unpaid hours each month, so a reusable template and automated data collection save real time, but a fully automated report with no human commentary often reads as generic and lowers perceived value, so the time saved on data is best spent on the short written insight and recommendations clients actually value. Give me the report production plan.",
+    "description": "Template and automate the data so time goes into insight, not assembly.",
+    "useCase": "Use this when reports eat too many unpaid hours. A reusable template and automated data collection save real time, but fully automated reports without commentary read as generic and lower perceived value, so spend the saved time on the short written insight and recommendations clients actually value.",
+    "variables": [
+      "BUSINESS TYPE",
+      "NUMBER",
+      "TIME",
+      "TOOLS AND PLATFORMS",
+      "E.G. COLLECTING DATA, MAKING CHARTS, WRITING COMMENTARY"
+    ],
+    "relatedPromptIds": [
+      "clientrep-monthly-template",
+      "clientrep-visuals",
+      "clientrep-report-check"
+    ]
+  },
+  {
+    "id": "clientrep-report-check",
+    "title": "Check a Client Report Before Sending",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "client-reporting",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me check a client report before I send it for my [BUSINESS TYPE]. Here is the report: [PASTE THE REPORT OR KEY PARTS], the client is [WHO AND WHAT THEY CARE ABOUT], and the agreed goals are [THEIR GOALS]. Check that numbers are consistent and correct, the client name and dates are right, the summary matches the data, claims are supported, jargon is explained, and nothing confidential from another client slipped in. Note that small errors like a wrong client name, last month's numbers, or a copied section from another client's report damage credibility far more than their size suggests, especially when using templates, and a quick final check before sending protects both my reputation and other clients' confidentiality. Give me the pre send check.",
+    "description": "Check a client report for errors and leaked details before sending.",
+    "useCase": "Use this before sending any client report. Small errors like a wrong client name, old numbers, or a section copied from another client's report damage credibility far more than their size suggests, especially with templates, and a quick final check protects your reputation and other clients' confidentiality.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THE REPORT OR KEY PARTS",
+      "WHO AND WHAT THEY CARE ABOUT",
+      "THEIR GOALS"
+    ],
+    "relatedPromptIds": [
+      "clientrep-automate",
+      "clientrep-executive-summary",
+      "clientrep-fair-attribution"
+    ]
   }
 ]
