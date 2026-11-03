@@ -33200,5 +33200,444 @@
       "rebrand-name-change-bridge",
       "rebrand-should-you"
     ]
+  },
+  {
+    "id": "jd-full-builder",
+    "title": "Build a Complete Job Description",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me write a complete job description for a [ROLE TITLE] at my [BUSINESS TYPE]. The main work this person will do is [WHAT THEY WILL ACTUALLY DO], the skills that truly matter are [KEY SKILLS], and the arrangement is [FULL TIME, PART TIME, CONTRACT, REMOTE, LOCATION]. Give me a clear description with a short summary, responsibilities, must have requirements, nice to haves, and how we work. Note that a job description is the document both of us will measure the role against later, so it should describe the real day to day work rather than an idealized version, and a description that oversells the role attracts people who leave once they see what the job actually is. Give me the job description.",
+    "description": "Write a full job description built around the real day to day work.",
+    "useCase": "Use this when you need the core document for a new role. A job description is what you and the hire will measure the role against later, so describing the real work rather than an idealized version attracts people who stay once they see what the job actually is.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "WHAT THEY WILL ACTUALLY DO",
+      "KEY SKILLS",
+      "FULL TIME, PART TIME, CONTRACT, REMOTE, LOCATION"
+    ],
+    "relatedPromptIds": [
+      "jd-must-vs-nice",
+      "jd-outcomes-based",
+      "jd-responsibilities-from-tasks"
+    ]
+  },
+  {
+    "id": "jd-responsibilities-from-tasks",
+    "title": "Turn Your Task List Into Responsibilities",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me turn a messy list of tasks into clear responsibilities for a [ROLE TITLE] at my [BUSINESS TYPE]. Here are the tasks I want to hand off: [LIST THE TASKS], and roughly how my week splits across them is [TIME ESTIMATES IF YOU HAVE THEM]. Group them into a handful of clear responsibility areas, ordered by how much of the job each takes. Note that a raw task list makes a role look either trivial or chaotic, while grouped responsibilities show a candidate what the job really is, and ordering them by time spent stops a minor task listed first from giving a misleading picture of the role. Give me the responsibilities.",
+    "description": "Group a raw task list into clear responsibility areas ordered by time spent.",
+    "useCase": "Use this when you know what you want off your plate but not how to describe the role. A raw task list looks trivial or chaotic, while grouped responsibilities ordered by time spent show candidates what the job really is and stop a minor task from defining it.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "LIST THE TASKS",
+      "TIME ESTIMATES IF YOU HAVE THEM"
+    ],
+    "relatedPromptIds": [
+      "jd-full-builder",
+      "jd-outcomes-based",
+      "jd-first-hire"
+    ]
+  },
+  {
+    "id": "jd-must-vs-nice",
+    "title": "Separate Must Haves From Nice to Haves",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me separate the true requirements from the nice to haves for a [ROLE TITLE] at my [BUSINESS TYPE]. Here is everything I think I want in a candidate: [YOUR FULL WISH LIST], and the work they will do is [THE CORE WORK]. Go through it and tell me which items someone genuinely cannot do the job without and which are preferences. Note that long requirement lists scare off capable people, especially those who only apply when they meet every line, while barely affecting people who apply to everything, so cutting the must haves to what the work truly demands widens the good pool without lowering the bar. Give me the sorted requirements.",
+    "description": "Cut a wish list down to genuine requirements and separate the preferences.",
+    "useCase": "Use this when your requirements list keeps growing. Long lists scare off capable people who only apply when they meet every line while barely affecting those who apply to everything, so trimming must haves to what the work demands widens the good pool without lowering the bar.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "YOUR FULL WISH LIST",
+      "THE CORE WORK"
+    ],
+    "relatedPromptIds": [
+      "jd-unicorn-check",
+      "jd-full-builder",
+      "jd-skills-over-credentials"
+    ]
+  },
+  {
+    "id": "jd-quick-draft",
+    "title": "Get a Quick Job Description Draft",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "Grok",
+    "promptText": "I need a quick job description draft to edit. The role is [ROLE TITLE], the main work is [WHAT THEY WILL DO], and the arrangement is [FULL TIME, PART TIME, CONTRACT, REMOTE]. Give me a short draft with a summary, five responsibilities, and a short requirements list, no explanation, just the draft. Give me the job description.",
+    "description": "Get a short job description draft you can edit right away.",
+    "useCase": "Use this when you need something on the page fast. A short draft with a summary, a handful of responsibilities, and core requirements gives you a structure to correct, and fixing a rough draft is much quicker than starting a job description from a blank page.",
+    "variables": [
+      "ROLE TITLE",
+      "WHAT THEY WILL DO",
+      "FULL TIME, PART TIME, CONTRACT, REMOTE"
+    ],
+    "relatedPromptIds": [
+      "jd-full-builder",
+      "jd-must-vs-nice",
+      "jd-clarity-review"
+    ]
+  },
+  {
+    "id": "jd-outcomes-based",
+    "title": "Write an Outcomes Based Job Description",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me describe a [ROLE TITLE] at my [BUSINESS TYPE] by the results I need rather than just the tasks. What I need this person to achieve in their first six to twelve months is [THE OUTCOMES], and the work involved is [THE MAIN TASKS]. Rewrite the role around a few clear outcomes, each with the work that drives it. Note that tasks tell a candidate what they will do while outcomes tell them what success looks like, and a role defined by outcomes makes it far easier to judge candidates, set expectations, and later know whether the hire is working out, though the outcomes need to be realistic for someone new to my business. Give me the outcomes based description.",
+    "description": "Define a role by the results you need, not just the tasks.",
+    "useCase": "Use this when you want the role tied to results. Tasks say what someone will do while outcomes say what success looks like, which makes judging candidates, setting expectations, and later knowing if the hire is working out far easier, as long as the outcomes are realistic for a newcomer.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "THE OUTCOMES",
+      "THE MAIN TASKS"
+    ],
+    "relatedPromptIds": [
+      "jd-success-scorecard",
+      "jd-full-builder",
+      "jd-responsibilities-from-tasks"
+    ]
+  },
+  {
+    "id": "jd-success-scorecard",
+    "title": "Create a Scorecard for the Role",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "Gemini",
+    "promptText": "Help me create a simple scorecard for a [ROLE TITLE] at my [BUSINESS TYPE] that I can use when hiring and after. The role's main outcomes are [WHAT SUCCESS LOOKS LIKE], and the skills and traits that matter are [KEY SKILLS AND TRAITS]. Give me a short scorecard with a few measurable outcomes and the competencies behind them, written so I can rate candidates against it. Note that without a scorecard hiring decisions drift toward whoever was most likeable in the interview, so writing down what good looks like before meeting anyone keeps the decision tied to the job, and the same scorecard becomes the starting point for reviewing the hire later. Give me the scorecard.",
+    "description": "Build a role scorecard to rate candidates against and review the hire later.",
+    "useCase": "Use this before you start interviewing. Without a scorecard decisions drift toward whoever was most likeable, so writing down what good looks like first keeps the choice tied to the job, and the same scorecard becomes the basis for reviewing the hire later.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "WHAT SUCCESS LOOKS LIKE",
+      "KEY SKILLS AND TRAITS"
+    ],
+    "relatedPromptIds": [
+      "jd-outcomes-based",
+      "jd-must-vs-nice",
+      "jd-clarity-review"
+    ]
+  },
+  {
+    "id": "jd-unicorn-check",
+    "title": "Check If You Are Describing an Impossible Hire",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether my job description asks for a person who does not exist. Here is my draft: [PASTE THE JOB DESCRIPTION], and my budget for the role is [PAY RANGE]. Tell me honestly whether the skills I am asking for normally live in one person, whether the experience matches the pay, and whether this is really two roles combined. Note that small businesses often bundle several jobs into one description, like a designer who also does ads, writes copy, and manages the books, and the result is either no good applicants or a hire who is mediocre at most of it, so it is worth splitting the role or picking the priority before posting. Give me the honest check and how to fix it.",
+    "description": "Check whether your job description bundles several jobs into one impossible hire.",
+    "useCase": "Use this when a role keeps growing as you write it. Small businesses often bundle several jobs into one description, which brings either no good applicants or a hire mediocre at most of it, so splitting the role or picking the priority before posting saves a failed hire.",
+    "variables": [
+      "PASTE THE JOB DESCRIPTION",
+      "PAY RANGE"
+    ],
+    "relatedPromptIds": [
+      "jd-must-vs-nice",
+      "jd-pay-range",
+      "jd-part-time-scope"
+    ]
+  },
+  {
+    "id": "jd-pay-range",
+    "title": "Set and Present the Pay Range",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me think through the pay range for a [ROLE TITLE] at my [BUSINESS TYPE] and how to present it in the job description. Where the person will be based is [COUNTRY OR CITY, OR REMOTE FROM ANYWHERE], what I can afford is [YOUR BUDGET], and the experience level I need is [LEVEL]. Help me sanity check my number against the level I am asking for and word it clearly, including whether pay is hourly, monthly, or per project. Note that local pay norms differ hugely by country and market, so I should check current rates for where the person actually is rather than assume, and pay transparency rules apply in some places, while a clear range saves both sides time by filtering out mismatches before anyone invests in interviews. Give me the pay guidance and wording.",
+    "description": "Sanity check your pay against the level you want and word it clearly.",
+    "useCase": "Use this before posting a role with pay. Pay norms differ hugely by country and market, so checking current local rates beats assuming, some places require pay transparency, and a clear range filters out mismatches before anyone spends time interviewing.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "COUNTRY OR CITY, OR REMOTE FROM ANYWHERE",
+      "YOUR BUDGET",
+      "LEVEL"
+    ],
+    "relatedPromptIds": [
+      "jd-unicorn-check",
+      "jd-seniority-level",
+      "jd-remote-and-location"
+    ]
+  },
+  {
+    "id": "jd-seniority-level",
+    "title": "Pin Down the Right Seniority Level",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me decide what seniority level I actually need for a [ROLE TITLE] at my [BUSINESS TYPE]. The work involves [THE WORK], how much direction I can give is [HOW MUCH TIME YOU HAVE TO MANAGE OR TRAIN], and my budget is [PAY RANGE]. Tell me whether I need someone junior I can train, a mid level person who can run with it, or a senior person who can set direction, and adjust the description to match. Note that hiring junior saves money only if I have time to teach, while hiring senior to do routine work wastes money and bores them, so the right level depends as much on how much support I can give as on the work itself. Give me the recommended level and adjusted wording.",
+    "description": "Match the seniority level to the work and the support you can actually give.",
+    "useCase": "Use this when you are unsure how experienced the hire should be. Hiring junior saves money only if you have time to teach, while hiring senior for routine work wastes money and bores them, so the right level depends on the support you can give as much as on the work.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "THE WORK",
+      "HOW MUCH TIME YOU HAVE TO MANAGE OR TRAIN",
+      "PAY RANGE"
+    ],
+    "relatedPromptIds": [
+      "jd-pay-range",
+      "jd-first-hire",
+      "jd-must-vs-nice"
+    ]
+  },
+  {
+    "id": "jd-first-hire",
+    "title": "Write the Description for Your First Hire",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me write the job description for the first person I am ever hiring for my [BUSINESS TYPE]. What I need help with most is [WHAT IS OVERWHELMING YOU], what I can realistically pay is [BUDGET], and how I work day to day is [HOW YOU OPERATE, E.G. MESSAGING, NO FIXED HOURS, ON SITE]. Write a description that is honest about what working for a very small business is like, both the upsides and the rough edges. Note that a first hire works without the systems, colleagues, and structure a bigger company has, so candidates need to know they will help build processes as they go, and being upfront about that attracts people who enjoy it while saving everyone from a mismatch. Give me the first hire job description.",
+    "description": "Write an honest job description for your very first hire.",
+    "useCase": "Use this when hiring your first person ever. A first hire works without systems, colleagues, or structure, so being upfront that they will help build processes as they go attracts people who enjoy that and avoids a mismatch with people expecting a settled company.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT IS OVERWHELMING YOU",
+      "BUDGET",
+      "HOW YOU OPERATE, E.G. MESSAGING, NO FIXED HOURS, ON SITE"
+    ],
+    "relatedPromptIds": [
+      "jd-responsibilities-from-tasks",
+      "jd-seniority-level",
+      "jd-honest-about-role"
+    ]
+  },
+  {
+    "id": "jd-part-time-scope",
+    "title": "Scope a Part Time or Fractional Role",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "Gemini",
+    "promptText": "Help me write a job description for a part time or fractional [ROLE TITLE] at my [BUSINESS TYPE]. The hours or days available are [HOURS PER WEEK OR MONTH], the work I need is [THE WORK], and the priorities are [WHAT MATTERS MOST]. Scope the role so the responsibilities genuinely fit the hours and say clearly what is out of scope. Note that part time roles often get loaded with full time expectations, which burns out the hire or leaves important work half done, so the description should prioritize ruthlessly and state the limits, since a clear small scope done well beats a vague large one done badly. Give me the scoped description.",
+    "description": "Scope a part time or fractional role so the work truly fits the hours.",
+    "useCase": "Use this when you can only afford limited hours. Part time roles often get loaded with full time expectations, burning out the hire or leaving work half done, so prioritizing ruthlessly and stating what is out of scope keeps the role doable.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "HOURS PER WEEK OR MONTH",
+      "THE WORK",
+      "WHAT MATTERS MOST"
+    ],
+    "relatedPromptIds": [
+      "jd-unicorn-check",
+      "jd-contractor-role",
+      "jd-full-builder"
+    ]
+  },
+  {
+    "id": "jd-contractor-role",
+    "title": "Describe a Contract or Freelance Role",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write a role description for a contractor or freelancer for my [BUSINESS TYPE]. The work is [WHAT YOU NEED DONE], the expected volume or duration is [HOW MUCH AND FOR HOW LONG], and how I want to pay is [HOURLY, PER PROJECT, RETAINER]. Frame it around deliverables and results rather than how they spend their time. Note that a contractor role written like an employee job, with set hours and close supervision, can blur the line between contractor and employee in ways that create legal and tax issues in some countries, so focusing on what gets delivered rather than how and when they work keeps the arrangement clear, and I should check the rules where I and they are based. Give me the contractor role description.",
+    "description": "Describe a contract role around deliverables, not hours and supervision.",
+    "useCase": "Use this when hiring a freelancer or contractor. A contract role written like an employee job can blur the line in ways that create legal and tax issues in some countries, so framing it around deliverables keeps the arrangement clear, while checking the rules where you both are based.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU NEED DONE",
+      "HOW MUCH AND FOR HOW LONG",
+      "HOURLY, PER PROJECT, RETAINER"
+    ],
+    "relatedPromptIds": [
+      "jd-part-time-scope",
+      "jd-remote-and-location",
+      "jd-outcomes-based"
+    ]
+  },
+  {
+    "id": "jd-remote-and-location",
+    "title": "Spell Out Remote, Location, and Time Zone Needs",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me write the location and working hours section of a job description for my [BUSINESS TYPE]. Where I am based is [YOUR LOCATION AND TIME ZONE], whether the role is [ON SITE, HYBRID, REMOTE], how much real time overlap I need is [HOURS OF OVERLAP], and any country limits are [WHERE THEY CAN OR CANNOT BE BASED]. Write it so candidates know exactly what is expected before applying. Note that remote roles cause the most mismatches on time zones and availability, like a candidate twelve hours away who cannot join any live calls, so stating the overlap and any location limits plainly filters people correctly and avoids wasted interviews. Give me the location and hours section.",
+    "description": "State location, remote setup, and time zone overlap clearly up front.",
+    "useCase": "Use this for any remote or distributed role. Most remote mismatches come from time zones and availability, like a candidate twelve hours away who cannot join live calls, so stating overlap and location limits plainly filters candidates correctly before interviews.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR LOCATION AND TIME ZONE",
+      "ON SITE, HYBRID, REMOTE",
+      "HOURS OF OVERLAP",
+      "WHERE THEY CAN OR CANNOT BE BASED"
+    ],
+    "relatedPromptIds": [
+      "jd-pay-range",
+      "jd-contractor-role",
+      "jd-local-market-adapt"
+    ]
+  },
+  {
+    "id": "jd-local-market-adapt",
+    "title": "Adapt a Job Description to a Local Market",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "Gemini",
+    "promptText": "Help me adapt a job description for hiring in a specific country or local market for my [BUSINESS TYPE]. The market I am hiring in is [COUNTRY OR CITY], here is my current draft: [PASTE THE JOB DESCRIPTION], and the language candidates will read it in is [LANGUAGE]. Point out anything that assumes a different market, like titles, benefits, qualifications, or working norms that do not fit there, and suggest adjustments I should verify locally. Note that job descriptions copied from another country often use titles, benefits, and requirements that mean little or something different locally, and candidates notice, so adapting to how roles are actually described and valued in that market gets better applicants, though I should confirm specifics like legal requirements with a local source. Give me the adjustments.",
+    "description": "Adapt a job description to how roles work in a specific country or market.",
+    "useCase": "Use this when hiring outside the market your template came from. Titles, benefits, and requirements copied from another country often mean little or something different locally, so adapting to local norms gets better applicants, while confirming legal specifics with a local source.",
+    "variables": [
+      "BUSINESS TYPE",
+      "COUNTRY OR CITY",
+      "PASTE THE JOB DESCRIPTION",
+      "LANGUAGE"
+    ],
+    "relatedPromptIds": [
+      "jd-remote-and-location",
+      "jd-pay-range",
+      "jd-inclusive-language"
+    ]
+  },
+  {
+    "id": "jd-inclusive-language",
+    "title": "Check Your Job Description for Off Putting Language",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me check my job description for language that might turn good candidates away for my [BUSINESS TYPE]. Here is the draft: [PASTE THE JOB DESCRIPTION], and the kind of candidates I hope to reach are [WHO]. Flag wording that is needlessly exclusionary, like rockstar or ninja, young and energetic, native speaker when fluency is what matters, or requirements unrelated to the work, and suggest plainer alternatives. Note that small wording choices quietly signal who is welcome, and phrases meant as fun or casual can put off strong candidates or even raise discrimination concerns in some places, so plain descriptions of the work and real requirements reach the widest good pool. Give me the flags and rewrites.",
+    "description": "Flag wording in a job description that quietly turns good candidates away.",
+    "useCase": "Use this before posting. Small wording choices signal who is welcome, and phrases like rockstar, young and energetic, or native speaker when fluency is what matters can put off strong candidates or raise discrimination concerns, so plain language reaches the widest good pool.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THE JOB DESCRIPTION",
+      "WHO"
+    ],
+    "relatedPromptIds": [
+      "jd-clarity-review",
+      "jd-skills-over-credentials",
+      "jd-local-market-adapt"
+    ]
+  },
+  {
+    "id": "jd-skills-over-credentials",
+    "title": "Focus Requirements on Skills Over Credentials",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me rewrite the requirements in my job description to focus on what a candidate can do rather than their credentials for my [BUSINESS TYPE]. My current requirements are [PASTE THEM], and the work is [THE CORE WORK]. For each degree, certificate, or years of experience requirement, tell me whether it is truly needed or can be replaced by a demonstrable skill, and show me how to ask for evidence of that skill instead. Note that degrees and year counts are rough stand ins for ability, and some of the best candidates are self taught or changed careers, so asking for the skill itself, ideally shown through a portfolio or small paid test, finds capable people credentials would screen out, though some roles do legally require a qualification. Give me the skills based requirements.",
+    "description": "Replace credential requirements with demonstrable skills where the role allows.",
+    "useCase": "Use this when requirements lean on degrees and years of experience. Those are rough stand ins for ability and screen out capable self taught or career changing candidates, so asking for the skill itself, shown through a portfolio or paid test, finds them, unless a qualification is legally required.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THEM",
+      "THE CORE WORK"
+    ],
+    "relatedPromptIds": [
+      "jd-must-vs-nice",
+      "jd-inclusive-language",
+      "jd-application-instructions"
+    ]
+  },
+  {
+    "id": "jd-honest-about-role",
+    "title": "Be Honest About the Hard Parts of the Role",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me write an honest section about the challenging parts of a [ROLE TITLE] at my [BUSINESS TYPE]. The hard or less glamorous parts are [WHAT IS TOUGH, E.G. EARLY MORNINGS, REPETITIVE TASKS, DIFFICULT CUSTOMERS, SEASONAL CRUNCH], and what makes it worth it is [THE GENUINE UPSIDES]. Write it in a straightforward way that does not scare off good people but does not hide the reality. Note that every job has parts people will not love, and hiding them only means the hire discovers them in week two and starts looking elsewhere, while naming them upfront lets candidates self select and makes the people who still apply far more likely to stay. Give me the honest role section.",
+    "description": "Name the hard parts of a role upfront so the right people self select.",
+    "useCase": "Use this to reduce early turnover. Every job has parts people will not love, and hiding them means the hire finds out in week two and starts looking elsewhere, while naming them upfront lets candidates self select and makes those who still apply far more likely to stay.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "WHAT IS TOUGH, E.G. EARLY MORNINGS, REPETITIVE TASKS, DIFFICULT CUSTOMERS, SEASONAL CRUNCH",
+      "THE GENUINE UPSIDES"
+    ],
+    "relatedPromptIds": [
+      "jd-first-hire",
+      "jd-why-work-here",
+      "jd-full-builder"
+    ]
+  },
+  {
+    "id": "jd-why-work-here",
+    "title": "Write a Genuine Why Work Here Section",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "Gemini",
+    "promptText": "Help me write the section of my job description that explains why someone would want to work at my small [BUSINESS TYPE]. What I can genuinely offer is [FLEXIBILITY, LEARNING, IMPACT, PAY, TEAM, MISSION], what I cannot offer compared to bigger employers is [WHAT YOU LACK], and the kind of person who thrives here is [WHO]. Write it honestly around the real advantages of a small business. Note that a small business usually cannot win on salary or benefits against large companies, but can offer real ownership, direct access to the founder, flexibility, and visible impact, and claiming perks I do not really have backfires fast, so leaning on the true advantages attracts people who value exactly what I can give. Give me the why work here section.",
+    "description": "Explain honestly why someone would want to work at your small business.",
+    "useCase": "Use this when you cannot compete on salary or benefits. A small business can offer real ownership, direct founder access, flexibility, and visible impact, and claiming perks you do not have backfires fast, so leaning on the true advantages attracts people who value what you can give.",
+    "variables": [
+      "BUSINESS TYPE",
+      "FLEXIBILITY, LEARNING, IMPACT, PAY, TEAM, MISSION",
+      "WHAT YOU LACK",
+      "WHO"
+    ],
+    "relatedPromptIds": [
+      "jd-honest-about-role",
+      "jd-first-hire",
+      "jd-full-builder"
+    ]
+  },
+  {
+    "id": "jd-application-instructions",
+    "title": "Write Application Instructions That Filter Well",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write the how to apply section of a job description for a [ROLE TITLE] at my [BUSINESS TYPE]. What I need to see from applicants is [CV, PORTFOLIO, SHORT ANSWER, SAMPLE WORK], how I want them to apply is [EMAIL, FORM, PLATFORM], and my timeline is [WHEN YOU WILL DECIDE]. Write clear instructions, including one small specific request that shows who actually read the description. Note that a simple instruction like answer one short question about the role filters out mass applicants who did not read it, but asking for heavy unpaid work at this stage drives good people away, so the request should be quick and relevant, and stating my timeline sets expectations and cuts follow up messages. Give me the application instructions.",
+    "description": "Write how to apply instructions that filter out applicants who did not read the role.",
+    "useCase": "Use this to cut down on careless applications. One small specific request filters out mass applicants who did not read the description, while heavy unpaid work drives good people away, so a quick relevant request plus a stated timeline keeps the pool strong and the follow ups down.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "CV, PORTFOLIO, SHORT ANSWER, SAMPLE WORK",
+      "EMAIL, FORM, PLATFORM",
+      "WHEN YOU WILL DECIDE"
+    ],
+    "relatedPromptIds": [
+      "jd-skills-over-credentials",
+      "jd-clarity-review",
+      "jd-full-builder"
+    ]
+  },
+  {
+    "id": "jd-clarity-review",
+    "title": "Review a Job Description for Clarity",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "Claude",
+    "promptText": "Help me review my job description as a candidate would read it for my [BUSINESS TYPE]. Here is the draft: [PASTE THE JOB DESCRIPTION]. Read it cold and tell me honestly whether you could explain what this person does all day, how success is judged, what it pays, and whether you would be a fit, and point out anything vague, contradictory, or full of jargon. Note that I know the role so well that gaps are invisible to me, and vague phrases like various duties as needed or fast paced environment tell a candidate nothing, so a cold read catches what a real applicant would be confused by before it costs me good applications. Give me the review and fixes.",
+    "description": "Read your job description cold as a candidate and fix what is vague.",
+    "useCase": "Use this before posting any role. You know the role too well to see the gaps, and phrases like various duties as needed or fast paced environment tell a candidate nothing, so a cold read catches the confusion a real applicant would hit before it costs you good applications.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THE JOB DESCRIPTION"
+    ],
+    "relatedPromptIds": [
+      "jd-inclusive-language",
+      "jd-unicorn-check",
+      "jd-refresh-existing"
+    ]
+  },
+  {
+    "id": "jd-refresh-existing",
+    "title": "Refresh an Outdated Job Description",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "job-descriptions",
+    "aiTool": "Gemini",
+    "promptText": "Help me update an old job description for my [BUSINESS TYPE] so it matches the role as it really is now. Here is the old description: [PASTE IT], and what the role actually involves today is [WHAT HAS CHANGED, OR WHAT THE CURRENT PERSON REALLY DOES]. Rewrite it to reflect the current reality, and flag anything from the old version that no longer belongs. Note that roles drift over time as a business changes, so rehiring from an old description often brings in someone suited to a job that no longer exists, and if someone currently does the role, asking them what the job really involves is the fastest way to get it right. Give me the refreshed description.",
+    "description": "Update an old job description to match the role as it really is today.",
+    "useCase": "Use this before rehiring for an existing role. Roles drift as a business changes, so hiring from an old description brings someone suited to a job that no longer exists, and asking the current person what the job really involves is the fastest way to get it right.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHAT HAS CHANGED, OR WHAT THE CURRENT PERSON REALLY DOES"
+    ],
+    "relatedPromptIds": [
+      "jd-clarity-review",
+      "jd-responsibilities-from-tasks",
+      "jd-outcomes-based"
+    ]
   }
 ]
