@@ -43315,5 +43315,387 @@
       "listing-test-elements",
       "listing-title-formula"
     ]
+  },
+  {
+    "id": "cart-three-email-sequence",
+    "title": "Write a Three Email Abandoned Cart Sequence",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "abandoned-cart-emails",
+    "aiTool": "Claude",
+    "promptText": "Help me write a three email abandoned cart sequence for my [BUSINESS TYPE]. What I sell is [PRODUCTS AND PRICE RANGE], my brand voice is [YOUR TONE], my shipping and returns terms are [KEY POLICIES], and whether I am willing to offer a discount is [YES, NO, OR ONLY IN THE LAST EMAIL]. Write three emails: a friendly reminder, a second that answers common doubts, and a final one with a clear last nudge, each with a subject line and timing. Note that many people abandon carts simply because they got distracted, so the first email should just be a helpful reminder rather than a hard sell, while later emails can address real hesitations like cost or trust, and keeping the sequence short and respectful avoids annoying people who simply changed their mind. Give me the email sequence.",
+    "description": "Write a short reminder, doubt answering, and final nudge cart sequence.",
+    "useCase": "Use this to set up cart recovery emails. Many people abandon carts just because they got distracted, so the first email should be a helpful reminder rather than a hard sell, later emails can address cost or trust, and a short respectful sequence avoids annoying people who simply changed their mind.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRODUCTS AND PRICE RANGE",
+      "YOUR TONE",
+      "KEY POLICIES",
+      "YES, NO, OR ONLY IN THE LAST EMAIL"
+    ],
+    "relatedPromptIds": [
+      "cart-first-reminder",
+      "cart-objection-email",
+      "cart-timing-plan"
+    ]
+  },
+  {
+    "id": "cart-quick-email",
+    "title": "Get a Quick Abandoned Cart Email",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "abandoned-cart-emails",
+    "aiTool": "Grok",
+    "promptText": "Write a quick abandoned cart email for me. My shop sells [WHAT YOU SELL], the tone is [FRIENDLY, PREMIUM, PLAYFUL], and the main reassurance I can offer is [E.G. FREE RETURNS, FAST DELIVERY, SUPPORT CONTACT]. Give me a subject line and a short email body with a clear return to cart button text, no explanation, just the email. Give me the email.",
+    "description": "Get one subject line and short cart reminder email, fast.",
+    "useCase": "Use this when you have no cart email set up yet. One clear reminder email with a reassurance and an obvious button recovers some sales immediately, and getting a simple version live today beats waiting to perfect a full sequence while carts keep being abandoned.",
+    "variables": [
+      "WHAT YOU SELL",
+      "FRIENDLY, PREMIUM, PLAYFUL",
+      "E.G. FREE RETURNS, FAST DELIVERY, SUPPORT CONTACT"
+    ],
+    "relatedPromptIds": [
+      "cart-three-email-sequence",
+      "cart-subject-lines",
+      "cart-first-reminder"
+    ]
+  },
+  {
+    "id": "cart-first-reminder",
+    "title": "Write a Helpful First Cart Reminder",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "abandoned-cart-emails",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write the first abandoned cart reminder for my [BUSINESS TYPE]. The products customers usually leave in carts are [TYPICAL PRODUCTS], my tone is [YOUR TONE], and how to contact me with questions is [CONTACT METHOD]. Write a short first email that shows what they left, makes it easy to return, and offers help if they had a problem at checkout, without pushing a discount. Note that the first reminder works best when it feels like good service rather than sales pressure, since a large share of abandoned carts are simply interrupted shoppers, and inviting them to reply if something went wrong often surfaces checkout problems I did not know about, like a payment method failing or shipping options missing for their country. Give me the first reminder email.",
+    "description": "Write a service style first reminder that offers help, not pressure.",
+    "useCase": "Use this as the first email after a cart is abandoned. It works best as good service rather than sales pressure since many carts are just interrupted shoppers, and inviting replies often reveals checkout problems you did not know about, like a failing payment method or missing shipping options.",
+    "variables": [
+      "BUSINESS TYPE",
+      "TYPICAL PRODUCTS",
+      "YOUR TONE",
+      "CONTACT METHOD"
+    ],
+    "relatedPromptIds": [
+      "cart-three-email-sequence",
+      "cart-objection-email",
+      "cart-checkout-leaks"
+    ]
+  },
+  {
+    "id": "cart-objection-email",
+    "title": "Write a Cart Email That Answers Common Doubts",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "abandoned-cart-emails",
+    "aiTool": "Claude",
+    "promptText": "Help me write a second abandoned cart email that answers the doubts that stop people buying from my [BUSINESS TYPE]. Common reasons people hesitate are [E.G. SHIPPING COST, DELIVERY TIME, SIZE UNCERTAINTY, TRUST IN A SMALL SHOP, PRICE], the reassurances I can genuinely offer are [RETURNS, GUARANTEES, REVIEWS, SUPPORT, PAYMENT OPTIONS], and my tone is [YOUR TONE]. Write an email that addresses the top two or three doubts briefly, includes real social proof if I have it, and links back to the cart. Note that people who abandon after browsing carefully often have a specific worry rather than lack of interest, so answering the most common doubts directly usually works better than repeating the same reminder, but only real reviews and policies should be used, since exaggerated guarantees create bigger problems later. Give me the doubt answering email.",
+    "description": "Answer the top reasons shoppers hesitate in a second cart email.",
+    "useCase": "Use this as the second email in a cart sequence. Shoppers who abandon after careful browsing often have a specific worry rather than lack of interest, so answering common doubts directly works better than repeating the reminder, using only real reviews and policies since exaggerated guarantees backfire.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. SHIPPING COST, DELIVERY TIME, SIZE UNCERTAINTY, TRUST IN A SMALL SHOP, PRICE",
+      "RETURNS, GUARANTEES, REVIEWS, SUPPORT, PAYMENT OPTIONS",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "cart-first-reminder",
+      "cart-final-email",
+      "cart-checkout-leaks"
+    ]
+  },
+  {
+    "id": "cart-final-email",
+    "title": "Write a Final Cart Email Without Being Pushy",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "abandoned-cart-emails",
+    "aiTool": "Gemini",
+    "promptText": "Help me write the final email in my abandoned cart sequence for my [BUSINESS TYPE]. My offer, if any, is [E.G. SMALL DISCOUNT, FREE SHIPPING, GIFT, OR NONE], how long items stay reserved or the offer lasts is [THE DEADLINE, IF REAL], and my tone is [YOUR TONE]. Write a short, polite last email that makes a final clear case, mentions any genuine offer or deadline, and lets them go gracefully. Note that a final email can recover sales that the first two missed, but fake urgency like an expiring cart that never actually expires damages trust and may break consumer rules in some places, so any deadline should be real, and ending with a friendly no problem if now is not the right time leaves a better impression than pressure. Give me the final email.",
+    "description": "Write a polite last cart email with only genuine offers and deadlines.",
+    "useCase": "Use this as the last email in your cart sequence. A final email recovers sales the first two missed, but fake urgency like an expiring cart that never expires damages trust and may break consumer rules, so deadlines should be real, and a friendly no problem if now is not right leaves a better impression.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. SMALL DISCOUNT, FREE SHIPPING, GIFT, OR NONE",
+      "THE DEADLINE, IF REAL",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "cart-discount-decision",
+      "cart-objection-email",
+      "cart-three-email-sequence"
+    ]
+  },
+  {
+    "id": "cart-discount-decision",
+    "title": "Decide Whether to Offer a Discount",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "abandoned-cart-emails",
+    "aiTool": "Claude",
+    "promptText": "Help me decide whether to offer a discount in my abandoned cart emails for my [BUSINESS TYPE]. My typical margin per order is [MARGIN], my average order value is [AOV], my repeat customer share is [IF KNOWN], and what I have tried so far is [CURRENT APPROACH AND RESULTS]. Weigh the options, like no discount, free shipping, a small percentage, or a discount only in the final email, and their effect on profit and customer behavior. Note that discounts can recover more carts, but if every abandoned cart gets a coupon, regular customers learn to leave carts on purpose and wait for one, which quietly lowers profit on sales that would have happened anyway, so offering it late in the sequence, limiting it to first time buyers, or using free shipping instead often protects margins better. Give me the discount recommendation.",
+    "description": "Weigh cart discounts against margin and the risk of training coupon waiting.",
+    "useCase": "Use this before adding coupons to cart emails. Discounts recover more carts, but if every abandoned cart gets one, customers learn to wait for it, lowering profit on sales that would have happened anyway, so offering it late, only to first time buyers, or using free shipping instead often protects margins.",
+    "variables": [
+      "BUSINESS TYPE",
+      "MARGIN",
+      "AOV",
+      "IF KNOWN",
+      "CURRENT APPROACH AND RESULTS"
+    ],
+    "relatedPromptIds": [
+      "cart-final-email",
+      "cart-measure-recovery",
+      "cart-high-value"
+    ]
+  },
+  {
+    "id": "cart-subject-lines",
+    "title": "Write Abandoned Cart Subject Lines",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "abandoned-cart-emails",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write subject lines for my abandoned cart emails at my [BUSINESS TYPE]. The products are [WHAT YOU SELL], my brand voice is [YOUR TONE], and the purpose of each email is [REMINDER, DOUBT ANSWERING, FINAL NUDGE]. Give me several subject line options for each email, plus preview text that complements them. Note that subject lines that sound like spam, with heavy capitals, many symbols, or false claims like your order is confirmed when it is not, get filtered or ignored and can damage trust, while a short, clear, friendly line, sometimes mentioning the product by name, usually performs better, and testing two options over time is more reliable than guessing. Give me the subject lines.",
+    "description": "Write clear, friendly subject lines and preview text for each cart email.",
+    "useCase": "Use this to improve cart email open rates. Spammy subject lines with heavy capitals, symbols, or false claims like your order is confirmed get filtered or ignored and damage trust, while short clear friendly lines mentioning the product usually do better, and testing two options beats guessing.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU SELL",
+      "YOUR TONE",
+      "REMINDER, DOUBT ANSWERING, FINAL NUDGE"
+    ],
+    "relatedPromptIds": [
+      "cart-quick-email",
+      "cart-three-email-sequence",
+      "cart-measure-recovery"
+    ]
+  },
+  {
+    "id": "cart-timing-plan",
+    "title": "Plan the Timing of Cart Reminders",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "abandoned-cart-emails",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan when to send abandoned cart reminders for my [BUSINESS TYPE]. What I sell and how considered the purchase is [E.G. IMPULSE BUYS, CONSIDERED PURCHASES, HIGH PRICE ITEMS], where my customers are and their time zones are [LOCATIONS], and how many messages I plan to send is [NUMBER]. Suggest timing for each message, adjusted for my type of product and customers' local time. Note that reminders sent too soon can feel intrusive and too late lose the buyer's interest, and the right gap differs between a cheap impulse item and an expensive considered one, while sending based on the shop's time zone rather than the customer's can mean messages arriving in the middle of the night, so scheduling by the customer's local time where possible improves results. Give me the timing plan.",
+    "description": "Time cart reminders to the product type and the customer's local time.",
+    "useCase": "Use this when setting up cart reminders. Reminders sent too soon feel intrusive and too late lose interest, the right gap differs between impulse and considered purchases, and sending by your time zone rather than the customer's can land messages in the middle of the night, so schedule by local time where possible.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. IMPULSE BUYS, CONSIDERED PURCHASES, HIGH PRICE ITEMS",
+      "LOCATIONS",
+      "NUMBER"
+    ],
+    "relatedPromptIds": [
+      "cart-three-email-sequence",
+      "cart-message-app-reminder",
+      "cart-high-value"
+    ]
+  },
+  {
+    "id": "cart-message-app-reminder",
+    "title": "Send Cart Reminders by Chat App or SMS",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "abandoned-cart-emails",
+    "aiTool": "Claude",
+    "promptText": "Help me write short cart reminder messages for chat apps or SMS for my [BUSINESS TYPE]. The channel my customers prefer is [E.G. WHATSAPP, TELEGRAM, LINE, SMS, FACEBOOK MESSENGER], whether they have opted in to receive messages is [HOW CONSENT IS COLLECTED], and my tone is [YOUR TONE]. Write one or two short, friendly messages with a link back to the cart and an easy way to stop messages. Note that in many markets customers respond far better to chat messages than to email, but sending marketing messages without clear consent can break privacy and messaging rules and the platform's own policies, and chat feels more personal, so messages should be short, sent rarely, and always easy to opt out of, or they quickly feel like spam. Give me the chat reminder messages.",
+    "description": "Write short, consent based cart reminders for chat apps or SMS.",
+    "useCase": "Use this if your customers live on chat apps rather than email. In many markets chat messages get far better responses than email, but sending marketing messages without clear consent can break privacy rules and platform policies, and chat feels personal, so keep messages short, rare, and easy to opt out of.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. WHATSAPP, TELEGRAM, LINE, SMS, FACEBOOK MESSENGER",
+      "HOW CONSENT IS COLLECTED",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "cart-chat-order-followup",
+      "cart-timing-plan",
+      "cart-consent-check"
+    ]
+  },
+  {
+    "id": "cart-chat-order-followup",
+    "title": "Follow Up When a Chat Order Goes Quiet",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "abandoned-cart-emails",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me follow up with customers who asked about a product by chat but stopped replying before ordering from my [BUSINESS TYPE]. What they asked about is [THE PRODUCT AND THEIR QUESTION], what I told them is [YOUR LAST REPLY, E.G. PRICE, STOCK, DELIVERY], and the channel is [CHAT APP OR SOCIAL DM]. Write one or two friendly follow ups that make ordering easy, like confirming the total, delivery, and payment options in one message. Note that for businesses selling through social media and chat apps, a conversation that goes quiet after the price is the equivalent of an abandoned cart, and one polite follow up that answers the next likely question, like delivery time to their area or payment methods, often closes the sale, while repeated messages after silence feel pushy and can get my account reported. Give me the chat follow ups.",
+    "description": "Revive a chat sale that went quiet with one helpful follow up.",
+    "useCase": "Use this if you sell through social media or chat apps. A conversation that goes quiet after the price is your abandoned cart, and one polite follow up answering the next likely question, like delivery time or payment options, often closes it, while repeated messages feel pushy and can get your account reported.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PRODUCT AND THEIR QUESTION",
+      "YOUR LAST REPLY, E.G. PRICE, STOCK, DELIVERY",
+      "CHAT APP OR SOCIAL DM"
+    ],
+    "relatedPromptIds": [
+      "cart-message-app-reminder",
+      "cart-objection-email",
+      "cart-checkout-leaks"
+    ]
+  },
+  {
+    "id": "cart-browse-abandonment",
+    "title": "Write Browse Abandonment Emails",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "abandoned-cart-emails",
+    "aiTool": "Gemini",
+    "promptText": "Help me write a gentle email for subscribers who viewed products on my [BUSINESS TYPE] site but did not add anything to cart. The products they looked at are [PRODUCT OR CATEGORY], how they are subscribed is [HOW THEY JOINED YOUR LIST], and my tone is [YOUR TONE]. Write a short, helpful email that features the viewed items or related ones, offers help choosing, and does not sound like I am watching them too closely. Note that browse emails can feel creepy if they say we saw you looking at this, so a softer approach like still thinking it over or framing it as helpful picks works better, and they should only go to people who have agreed to receive marketing emails, with tracking that follows the privacy rules where my customers live. Give me the browse abandonment email.",
+    "description": "Write a soft, helpful email for subscribers who browsed but did not add to cart.",
+    "useCase": "Use this to reach browsers who never added to cart. Browse emails feel creepy if they say we saw you looking, so softer framing like still thinking it over works better, and they should only go to people who agreed to marketing emails, with tracking that follows privacy rules where your customers live.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRODUCT OR CATEGORY",
+      "HOW THEY JOINED YOUR LIST",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "cart-first-reminder",
+      "cart-consent-check",
+      "cart-personalize-contents"
+    ]
+  },
+  {
+    "id": "cart-personalize-contents",
+    "title": "Personalize Cart Emails With Cart Contents",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "abandoned-cart-emails",
+    "aiTool": "Claude",
+    "promptText": "Help me personalize my abandoned cart emails using what is in the cart for my [BUSINESS TYPE]. My email tool can include [E.G. PRODUCT NAMES, IMAGES, PRICES, VARIANTS, CUSTOMER FIRST NAME], my product categories are [CATEGORIES], and the details buyers often need for each category are [E.G. SIZING FOR CLOTHING, DELIVERY TIME FOR FURNITURE, FORMAT FOR DIGITAL]. Suggest how to show the cart contents and add category specific reassurance, like a sizing note for clothing or delivery info for large items. Note that showing the exact product with its image reminds people what they wanted far better than a generic message, and adding the one detail most relevant to that product type answers the likely reason they hesitated, while personalization should stay useful rather than overly familiar. Give me the personalization plan.",
+    "description": "Show the exact cart items plus the reassurance each product type needs.",
+    "useCase": "Use this to make cart emails more relevant. Showing the exact product with its image reminds people what they wanted better than a generic message, and adding the one detail that matters for that product type, like sizing for clothing, answers the likely hesitation, while staying useful rather than overly familiar.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. PRODUCT NAMES, IMAGES, PRICES, VARIANTS, CUSTOMER FIRST NAME",
+      "CATEGORIES",
+      "E.G. SIZING FOR CLOTHING, DELIVERY TIME FOR FURNITURE, FORMAT FOR DIGITAL"
+    ],
+    "relatedPromptIds": [
+      "cart-objection-email",
+      "cart-browse-abandonment",
+      "cart-mobile-design"
+    ]
+  },
+  {
+    "id": "cart-high-value",
+    "title": "Handle Abandoned Carts for Expensive Items",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "abandoned-cart-emails",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me approach abandoned carts for high priced products at my [BUSINESS TYPE]. The products are [EXPENSIVE ITEMS AND PRICES], what buyers usually need before committing is [E.G. ADVICE, A CALL, MEASUREMENTS, FINANCING, SAMPLES], and the payment options I offer are [OPTIONS]. Write a more personal follow up that offers a conversation or specific help rather than a discount, plus a short second follow up. Note that expensive purchases are rarely abandoned by accident, buyers usually need more information, reassurance, or time, so a personal offer of help, like a quick call or answering specific questions, often works better than a coupon, and offering payment options like installments, where they exist and are legal in my market, can remove a real barrier. Give me the high value follow ups.",
+    "description": "Follow up on expensive abandoned carts with personal help, not coupons.",
+    "useCase": "Use this for high priced products. Expensive purchases are rarely abandoned by accident since buyers need information, reassurance, or time, so a personal offer of help like a quick call often beats a coupon, and payment options like installments, where available and legal, can remove a real barrier.",
+    "variables": [
+      "BUSINESS TYPE",
+      "EXPENSIVE ITEMS AND PRICES",
+      "E.G. ADVICE, A CALL, MEASUREMENTS, FINANCING, SAMPLES",
+      "OPTIONS"
+    ],
+    "relatedPromptIds": [
+      "cart-discount-decision",
+      "cart-objection-email",
+      "cart-timing-plan"
+    ]
+  },
+  {
+    "id": "cart-digital-product",
+    "title": "Write Cart Emails for Digital Products",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "abandoned-cart-emails",
+    "aiTool": "Gemini",
+    "promptText": "Help me write abandoned cart emails for digital products sold by my [BUSINESS TYPE]. The products are [E.G. COURSES, TEMPLATES, EBOOKS, PRESETS, SOFTWARE], what buyers worry about is [E.G. WHETHER IT WILL WORK FOR THEM, COMPATIBILITY, REFUNDS, TIME TO USE IT], and what I can offer to reassure them is [PREVIEWS, SAMPLES, REFUND POLICY, SUPPORT]. Write a short two email sequence focused on what they will get, instant access, and reducing doubt. Note that digital products have no shipping cost to blame, so abandonment usually comes from doubt about value or fit, which means a preview, a sample page, a clear list of what is included, or a fair refund policy usually recovers more sales than urgency, and price anchoring or countdown timers that are not real undermine trust. Give me the digital cart emails.",
+    "description": "Write cart emails for digital products that reduce doubt about value and fit.",
+    "useCase": "Use this for templates, courses, ebooks, or software. Digital products have no shipping to blame, so abandonment usually comes from doubt about value or fit, which means a preview, sample, clear contents list, or fair refund policy recovers more than urgency, while fake countdown timers undermine trust.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. COURSES, TEMPLATES, EBOOKS, PRESETS, SOFTWARE",
+      "E.G. WHETHER IT WILL WORK FOR THEM, COMPATIBILITY, REFUNDS, TIME TO USE IT",
+      "PREVIEWS, SAMPLES, REFUND POLICY, SUPPORT"
+    ],
+    "relatedPromptIds": [
+      "cart-objection-email",
+      "cart-three-email-sequence",
+      "cart-final-email"
+    ]
+  },
+  {
+    "id": "cart-checkout-leaks",
+    "title": "Find and Fix Why People Abandon Checkout",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "abandoned-cart-emails",
+    "aiTool": "Claude",
+    "promptText": "Help me find why people abandon checkout on my [BUSINESS TYPE] site, so fewer carts need recovery emails. My checkout steps are [DESCRIBE YOUR CHECKOUT], the payment methods I accept are [PAYMENT OPTIONS], my shipping costs and when they appear are [SHIPPING DETAILS], my abandonment rate and data are [WHAT YOU KNOW], and where my buyers are is [COUNTRIES]. Identify the likely leaks, like surprise costs, forced account creation, missing local payment methods, or a slow mobile checkout, and suggest fixes in order of impact. Note that recovery emails only win back a portion of abandoned carts, so fixing the checkout itself usually brings more sales, and in many markets buyers expect local payment options like bank transfer apps, mobile wallets, or cash on delivery, so missing the method they trust can cause abandonment no email will fix. Give me the checkout leak analysis.",
+    "description": "Find checkout problems like surprise costs or missing local payment methods.",
+    "useCase": "Use this when many carts are abandoned. Recovery emails only win back a portion, so fixing checkout usually brings more sales, and in many markets buyers expect local payment options like mobile wallets, bank apps, or cash on delivery, so missing the method they trust causes abandonment no email will fix.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DESCRIBE YOUR CHECKOUT",
+      "PAYMENT OPTIONS",
+      "SHIPPING DETAILS",
+      "WHAT YOU KNOW",
+      "COUNTRIES"
+    ],
+    "relatedPromptIds": [
+      "cart-first-reminder",
+      "cart-measure-recovery",
+      "cart-chat-order-followup"
+    ]
+  },
+  {
+    "id": "cart-mobile-design",
+    "title": "Make Cart Emails Work on Mobile",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "abandoned-cart-emails",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me make my abandoned cart emails work well on phones for my [BUSINESS TYPE]. My current email is [PASTE OR DESCRIBE IT], the email tool I use is [YOUR TOOL], and how most of my customers shop is [MOBILE OR DESKTOP SHARE IF KNOWN]. Suggest layout changes for a phone screen, like one column, a large return to cart button near the top, a short message, and a clear product image. Note that many shoppers abandon carts on their phones and open reminder emails there too, so a long email with small buttons and wide tables becomes hard to act on, while a short email with one obvious button that leads back to a cart that still has their items, and a checkout that works smoothly on mobile, makes recovery far easier. Give me the mobile email recommendations.",
+    "description": "Make cart emails short, one column, and easy to act on by phone.",
+    "useCase": "Use this to check your cart emails on a phone. Many shoppers abandon and open reminders on their phones, so long emails with small buttons are hard to act on, while a short email with one obvious button that returns them to a saved cart and a smooth mobile checkout makes recovery far easier.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE IT",
+      "YOUR TOOL",
+      "MOBILE OR DESKTOP SHARE IF KNOWN"
+    ],
+    "relatedPromptIds": [
+      "cart-personalize-contents",
+      "cart-checkout-leaks",
+      "cart-quick-email"
+    ]
+  },
+  {
+    "id": "cart-consent-check",
+    "title": "Check Your Cart Emails Follow the Rules",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "abandoned-cart-emails",
+    "aiTool": "Gemini",
+    "promptText": "Help me check whether my abandoned cart emails and messages follow privacy and marketing rules for my [BUSINESS TYPE]. Where I am based is [YOUR COUNTRY], where my customers are is [CUSTOMER COUNTRIES], how I collect email addresses and consent is [E.G. CHECKOUT FORM, ACCOUNT SIGN UP, CHECKBOX], and the channels I use are [EMAIL, SMS, CHAT APPS]. List what to check, like consent, unsubscribe links, sender identity, data storage, and how long I keep cart data, and flag likely gaps. Note that rules on marketing messages and tracking differ a lot between countries, and some treat abandoned cart emails as marketing that needs prior consent, while others are more relaxed, so I should confirm the specific rules for my customers' locations, and clear unsubscribe options and honest sender details are a sensible baseline everywhere. Give me the compliance checklist.",
+    "description": "Check cart emails and messages against consent and privacy rules.",
+    "useCase": "Use this before turning on cart recovery. Rules on marketing messages and tracking differ a lot by country, and some treat cart emails as marketing needing prior consent, so confirm the rules for your customers' locations, while clear unsubscribe options and honest sender details are a sensible baseline everywhere.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR COUNTRY",
+      "CUSTOMER COUNTRIES",
+      "E.G. CHECKOUT FORM, ACCOUNT SIGN UP, CHECKBOX",
+      "EMAIL, SMS, CHAT APPS"
+    ],
+    "relatedPromptIds": [
+      "cart-message-app-reminder",
+      "cart-browse-abandonment",
+      "cart-three-email-sequence"
+    ]
+  },
+  {
+    "id": "cart-measure-recovery",
+    "title": "Measure How Well Cart Recovery Works",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "abandoned-cart-emails",
+    "aiTool": "Claude",
+    "promptText": "Help me measure whether my abandoned cart emails are working for my [BUSINESS TYPE]. The data I have is [CARTS ABANDONED, EMAILS SENT, OPENS, CLICKS, ORDERS RECOVERED, REVENUE RECOVERED, DISCOUNTS USED], the period covered is [TIMEFRAME], and what changed recently is [ANY CHANGES TO EMAILS OR OFFERS]. Calculate recovery rate, revenue recovered, and discount cost, and show which email in the sequence does the most work. Note that open rates are increasingly unreliable because some email apps open messages automatically, so recovered orders and revenue are better measures, and if most recoveries come from the discount email, it is worth checking whether people are waiting for the coupon, since recovered revenue minus discounts given is the number that actually matters. Give me the recovery analysis.",
+    "description": "Measure recovered orders and revenue net of discounts, email by email.",
+    "useCase": "Use this to judge your cart emails. Open rates are increasingly unreliable since some apps open emails automatically, so recovered orders and revenue are better measures, and if most recoveries come from the discount email, check whether people are waiting for the coupon, since revenue minus discounts is what matters.",
+    "variables": [
+      "BUSINESS TYPE",
+      "CARTS ABANDONED, EMAILS SENT, OPENS, CLICKS, ORDERS RECOVERED, REVENUE RECOVERED, DISCOUNTS USED",
+      "TIMEFRAME",
+      "ANY CHANGES TO EMAILS OR OFFERS"
+    ],
+    "relatedPromptIds": [
+      "cart-discount-decision",
+      "cart-checkout-leaks",
+      "cart-subject-lines"
+    ]
   }
 ]
