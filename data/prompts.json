@@ -42924,5 +42924,396 @@
       "proddesc-objection-handling",
       "proddesc-full-writer"
     ]
+  },
+  {
+    "id": "listing-title-formula",
+    "title": "Write a Product Title That Gets Found and Clicked",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "listing-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me write a product title for [PRODUCT] sold by my [BUSINESS TYPE] on [WHERE YOU SELL, E.G. OWN SHOP, MARKETPLACE, SOCIAL SHOP]. The words buyers use to search for it are [SEARCH TERMS], the key attributes are [E.G. MATERIAL, SIZE, COLOR, QUANTITY, USE], and the title length limit is [CHARACTER LIMIT IF KNOWN]. Give me a few title options that put the most searched term first, include the attributes buyers filter by, and still read naturally. Note that a product title has two jobs, matching what shoppers search for and convincing them to click, so stuffing it with every keyword can hurt clicks and break platform rules, while a vague creative name nobody searches for will not be found, and the first few words matter most because titles are often cut off on mobile. Give me the title options.",
+    "description": "Write product titles that match searches and still read naturally.",
+    "useCase": "Use this for any product listing. A title must match what shoppers search and convince them to click, so keyword stuffing can hurt clicks and break platform rules while creative names nobody searches will not be found, and the first few words matter most since titles get cut off on mobile.",
+    "variables": [
+      "PRODUCT",
+      "BUSINESS TYPE",
+      "WHERE YOU SELL, E.G. OWN SHOP, MARKETPLACE, SOCIAL SHOP",
+      "SEARCH TERMS",
+      "E.G. MATERIAL, SIZE, COLOR, QUANTITY, USE",
+      "CHARACTER LIMIT IF KNOWN"
+    ],
+    "relatedPromptIds": [
+      "listing-quick-title",
+      "listing-search-tags",
+      "listing-full-audit"
+    ]
+  },
+  {
+    "id": "listing-quick-title",
+    "title": "Get Quick Product Title Options",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "listing-optimization",
+    "aiTool": "Grok",
+    "promptText": "Give me quick product title options. The product is [WHAT IT IS], the main search term is [WHAT BUYERS TYPE], and key details are [SIZE, COLOR, MATERIAL, QUANTITY]. Give me five title options under [CHARACTER LIMIT] characters, no explanation, just the titles. Give me the title options.",
+    "description": "Get five product title options within a character limit, fast.",
+    "useCase": "Use this when you need a title right now. Five options built around the main search term and key details give you something to pick from in seconds, and a clear searchable title today beats leaving a vague placeholder name on a live listing.",
+    "variables": [
+      "WHAT IT IS",
+      "WHAT BUYERS TYPE",
+      "SIZE, COLOR, MATERIAL, QUANTITY",
+      "CHARACTER LIMIT"
+    ],
+    "relatedPromptIds": [
+      "listing-title-formula",
+      "listing-search-tags",
+      "listing-category-choice"
+    ]
+  },
+  {
+    "id": "listing-photo-shot-list",
+    "title": "Plan a Product Photo Shot List",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "listing-optimization",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me plan the photos for a product listing at my [BUSINESS TYPE]. The product is [PRODUCT], what buyers most need to see is [E.G. SIZE, TEXTURE, HOW IT IS USED, WHAT IS INCLUDED, DETAILS], the number of images allowed is [IMAGE LIMIT], and what I have to shoot with is [PHONE, CAMERA, LIGHTING, BACKGROUNDS]. Give me a shot list in order: main image, detail shots, scale or size shot, in use or lifestyle shot, what is included, and any infographic. Note that photos often matter more than the description because shoppers look before they read, and each image should answer a specific question a buyer would ask in a shop, like how big is it or what does it look like in use, while showing the product accurately avoids returns from buyers who expected something different. Give me the shot list.",
+    "description": "Plan an ordered shot list where each photo answers a buyer question.",
+    "useCase": "Use this before photographing products. Photos often matter more than the description because shoppers look before they read, so each image should answer a question a buyer would ask in a shop, like how big it is, while accurate photos avoid returns from buyers who expected something different.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRODUCT",
+      "E.G. SIZE, TEXTURE, HOW IT IS USED, WHAT IS INCLUDED, DETAILS",
+      "IMAGE LIMIT",
+      "PHONE, CAMERA, LIGHTING, BACKGROUNDS"
+    ],
+    "relatedPromptIds": [
+      "listing-phone-photos",
+      "listing-main-image",
+      "listing-product-video"
+    ]
+  },
+  {
+    "id": "listing-phone-photos",
+    "title": "Take Good Product Photos With a Phone",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "listing-optimization",
+    "aiTool": "Gemini",
+    "promptText": "Help me take good product photos with just a phone for my [BUSINESS TYPE]. The products are [WHAT YOU SELL, INCLUDING SIZE AND MATERIAL], the space I have is [YOUR SETUP, E.G. A TABLE BY A WINDOW], my budget for props or lighting is [AMOUNT], and the problems I have now are [E.G. DARK PHOTOS, SHADOWS, REFLECTIONS, BLURRY, COLORS LOOK WRONG]. Give me a simple low cost setup and a step by step routine for consistent photos. Note that most of the improvement in product photos comes from light, a clean background, and a steady phone rather than expensive equipment, so soft daylight near a window, a plain backdrop, and a simple stand often beat a costly camera used badly, and keeping the same setup for every product makes a shop look far more professional. Give me the phone photo guide.",
+    "description": "Set up a low cost phone photo routine with good light and a clean background.",
+    "useCase": "Use this if you photograph products yourself. Most improvement comes from light, a clean background, and a steady phone rather than expensive gear, so soft window light, a plain backdrop, and a simple stand often beat a costly camera used badly, and a consistent setup makes a shop look far more professional.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU SELL, INCLUDING SIZE AND MATERIAL",
+      "YOUR SETUP, E.G. A TABLE BY A WINDOW",
+      "AMOUNT",
+      "E.G. DARK PHOTOS, SHADOWS, REFLECTIONS, BLURRY, COLORS LOOK WRONG"
+    ],
+    "relatedPromptIds": [
+      "listing-photo-shot-list",
+      "listing-main-image",
+      "listing-full-audit"
+    ]
+  },
+  {
+    "id": "listing-main-image",
+    "title": "Choose the Best Main Product Image",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "listing-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me choose and improve the main image for a product at my [BUSINESS TYPE]. The product is [PRODUCT], the images I have are [DESCRIBE YOUR CURRENT PHOTOS], where the image appears is [SEARCH RESULTS, CATEGORY GRID, SOCIAL FEED, MARKETPLACE], and any platform image rules I know of are [E.G. WHITE BACKGROUND REQUIRED, NO TEXT]. Help me pick the strongest main image and suggest how to improve it so it stands out at small size. Note that the main image is usually seen as a small thumbnail next to many competitors, so it needs to show clearly what the product is at a glance, with good contrast and the product filling the frame, while many marketplaces have strict rules about backgrounds, text, and props on the main image that can get a listing suppressed if ignored, so I should check the current rules for my platform. Give me the main image recommendation.",
+    "description": "Pick and improve a main image that reads clearly as a small thumbnail.",
+    "useCase": "Use this for the first image buyers see. The main image is usually a small thumbnail beside many competitors, so it must show clearly what the product is with good contrast and the product filling the frame, while many marketplaces have strict main image rules that can get a listing suppressed if ignored.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRODUCT",
+      "DESCRIBE YOUR CURRENT PHOTOS",
+      "SEARCH RESULTS, CATEGORY GRID, SOCIAL FEED, MARKETPLACE",
+      "E.G. WHITE BACKGROUND REQUIRED, NO TEXT"
+    ],
+    "relatedPromptIds": [
+      "listing-photo-shot-list",
+      "listing-phone-photos",
+      "listing-test-elements"
+    ]
+  },
+  {
+    "id": "listing-product-video",
+    "title": "Plan a Short Product Video",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "listing-optimization",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me plan a short product video for a listing at my [BUSINESS TYPE]. The product is [PRODUCT], what is hard to show in photos is [E.G. HOW IT MOVES, SIZE IN HAND, TEXTURE, HOW IT WORKS, ASSEMBLY], the length allowed is [VIDEO LENGTH LIMIT], and what I can film with is [YOUR EQUIPMENT]. Give me a simple shot by shot plan for a short video, with the most important shot first and on screen text suggestions, designed to work without sound. Note that a short video can answer questions photos cannot, like how a fabric drapes or how big something is in a hand, and many shoppers watch with the sound off, so clear visuals and short captions matter more than narration, while a simple honest video filmed on a phone often builds more trust than a polished one that feels like an ad. Give me the video plan.",
+    "description": "Plan a short, sound off product video that shows what photos cannot.",
+    "useCase": "Use this when photos cannot fully show a product. A short video answers questions photos cannot, like how fabric drapes or size in a hand, and many shoppers watch muted, so clear visuals and short captions matter more than narration, while a simple honest phone video often builds more trust than a polished ad.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRODUCT",
+      "E.G. HOW IT MOVES, SIZE IN HAND, TEXTURE, HOW IT WORKS, ASSEMBLY",
+      "VIDEO LENGTH LIMIT",
+      "YOUR EQUIPMENT"
+    ],
+    "relatedPromptIds": [
+      "listing-photo-shot-list",
+      "listing-main-image",
+      "listing-trust-signals"
+    ]
+  },
+  {
+    "id": "listing-alt-text",
+    "title": "Write Alt Text for Product Images",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "listing-optimization",
+    "aiTool": "Gemini",
+    "promptText": "Help me write alt text for the images on a product listing at my [BUSINESS TYPE]. The product is [PRODUCT], and the images show [DESCRIBE EACH IMAGE]. Write short, accurate alt text for each image that describes what is shown, including key details like color or angle, and naturally includes the product name where it fits. Note that alt text exists first so that shoppers using screen readers can understand the images, and it can also help images appear in search, but stuffing it with keywords makes it useless for people who rely on it and can look spammy to search engines, so a clear, honest description of each image serves both purposes best. Give me the alt text.",
+    "description": "Write clear, honest alt text for each product image.",
+    "useCase": "Use this when uploading product images. Alt text exists first so shoppers using screen readers can understand images and can help images appear in search, but keyword stuffing makes it useless for people who rely on it and looks spammy, so a clear honest description of each image serves both purposes.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRODUCT",
+      "DESCRIBE EACH IMAGE"
+    ],
+    "relatedPromptIds": [
+      "listing-photo-shot-list",
+      "listing-search-tags",
+      "listing-full-audit"
+    ]
+  },
+  {
+    "id": "listing-price-presentation",
+    "title": "Present Your Price Clearly on a Listing",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "listing-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me present the price clearly on a product listing at my [BUSINESS TYPE]. The price is [PRICE AND CURRENCY], what is included is [E.G. QUANTITY, ACCESSORIES, SHIPPING, TAX], any discount or bundle is [OFFERS], and my buyers are mainly in [COUNTRIES]. Suggest how to show the price, what to include beside it, like per unit cost or what is included, and how to show any discount honestly. Note that surprise costs at checkout, like shipping, taxes, or fees, are one of the most common reasons buyers abandon a purchase, so stating clearly what the price includes avoids that, while fake original prices or permanent sales that are never really sales can break consumer rules in many countries and damage trust, so discounts should be genuine. Give me the price presentation.",
+    "description": "Show the price, what it includes, and any discount clearly and honestly.",
+    "useCase": "Use this when setting up a listing's price display. Surprise costs at checkout like shipping or tax are a top reason buyers abandon purchases, so stating what the price includes avoids that, while fake original prices or permanent sales can break consumer rules in many countries and damage trust.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRICE AND CURRENCY",
+      "E.G. QUANTITY, ACCESSORIES, SHIPPING, TAX",
+      "OFFERS",
+      "COUNTRIES"
+    ],
+    "relatedPromptIds": [
+      "listing-shipping-returns-info",
+      "listing-variants-setup",
+      "listing-trust-signals"
+    ]
+  },
+  {
+    "id": "listing-variants-setup",
+    "title": "Set Up Product Variants Clearly",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "listing-optimization",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me set up the variants for a product at my [BUSINESS TYPE]. The product is [PRODUCT], the options are [E.G. SIZES, COLORS, MATERIALS, BUNDLE SIZES], how price or stock differ between options is [DIFFERENCES], and where I sell is [PLATFORM]. Suggest whether to use one listing with variants or separate listings, how to name each option clearly, and which image to show for each. Note that unclear variant names like Style A or Option 2 confuse buyers and lead to wrong orders, and selecting a color should ideally show that color's photo, while combining genuinely different products into one listing just to share reviews can confuse shoppers and may break marketplace rules, so variants should be true variations of the same item. Give me the variant setup.",
+    "description": "Decide on variants versus separate listings and name options clearly.",
+    "useCase": "Use this for products with sizes, colors, or options. Unclear names like Style A lead to wrong orders, selecting a color should show that color's photo, and combining genuinely different products just to share reviews confuses shoppers and may break marketplace rules, so variants should be true variations of one item.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRODUCT",
+      "E.G. SIZES, COLORS, MATERIALS, BUNDLE SIZES",
+      "DIFFERENCES",
+      "PLATFORM"
+    ],
+    "relatedPromptIds": [
+      "listing-price-presentation",
+      "listing-stock-status",
+      "listing-title-formula"
+    ]
+  },
+  {
+    "id": "listing-shipping-returns-info",
+    "title": "Show Shipping and Returns Information Clearly",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "listing-optimization",
+    "aiTool": "Gemini",
+    "promptText": "Help me present shipping and returns information clearly on my product listings for my [BUSINESS TYPE]. Where I ship to is [COUNTRIES OR AREAS], my shipping costs and times are [COSTS AND DELIVERY TIMES BY AREA], my returns policy is [YOUR POLICY], and the questions customers ask most about delivery are [COMMON QUESTIONS]. Write a short, scannable shipping and returns section for the listing, with a link to the full policy. Note that delivery time and cost are often deciding factors, especially for international or cross border orders where buyers worry about customs fees and long delays, so stating realistic delivery estimates rather than optimistic ones, and being clear about who pays duties or return shipping, prevents disputes and bad reviews later. Give me the shipping and returns section.",
+    "description": "Show realistic delivery times, costs, and returns terms on the listing.",
+    "useCase": "Use this on every product listing. Delivery time and cost often decide the sale, especially cross border where buyers worry about customs fees and delays, so realistic estimates rather than optimistic ones, and clarity on who pays duties or return shipping, prevent disputes and bad reviews.",
+    "variables": [
+      "BUSINESS TYPE",
+      "COUNTRIES OR AREAS",
+      "COSTS AND DELIVERY TIMES BY AREA",
+      "YOUR POLICY",
+      "COMMON QUESTIONS"
+    ],
+    "relatedPromptIds": [
+      "listing-price-presentation",
+      "listing-trust-signals",
+      "listing-full-audit"
+    ]
+  },
+  {
+    "id": "listing-trust-signals",
+    "title": "Add Trust Signals to a Product Listing",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "listing-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me add trust signals to my product listings at my [BUSINESS TYPE]. What I can genuinely offer is [E.G. REVIEWS, RATINGS, GUARANTEE, SECURE PAYMENT OPTIONS, CONTACT DETAILS, PHYSICAL LOCATION, CERTIFICATIONS], how established my shop is is [HOW LONG AND HOW MANY ORDERS], and what new buyers worry about is [THEIR CONCERNS]. Suggest which trust signals to show, where to place them, and how to word them honestly. Note that buyers are wary of small or unknown shops, so real reviews, clear contact details, familiar payment methods, and a clear guarantee near the buy button reduce hesitation, but invented reviews, fake badges, or claimed certifications I do not have can break consumer and platform rules and destroy trust once discovered, so only genuine signals should be used. Give me the trust signal plan.",
+    "description": "Show genuine trust signals near the buy button to reduce hesitation.",
+    "useCase": "Use this if new buyers hesitate to order from you. Buyers are wary of unknown shops, so real reviews, clear contact details, familiar payment methods, and a clear guarantee near the buy button help, while fake reviews, badges, or certifications break rules and destroy trust once discovered.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. REVIEWS, RATINGS, GUARANTEE, SECURE PAYMENT OPTIONS, CONTACT DETAILS, PHYSICAL LOCATION, CERTIFICATIONS",
+      "HOW LONG AND HOW MANY ORDERS",
+      "THEIR CONCERNS"
+    ],
+    "relatedPromptIds": [
+      "listing-shipping-returns-info",
+      "listing-price-presentation",
+      "listing-conversion-checklist"
+    ]
+  },
+  {
+    "id": "listing-search-tags",
+    "title": "Choose Keywords and Tags for Shop Search",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "listing-optimization",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me choose keywords and tags so buyers can find my product through search for my [BUSINESS TYPE]. The product is [PRODUCT], words I think buyers use are [YOUR GUESSES], where I sell is [PLATFORM OR OWN SITE], and the number of tags allowed is [TAG LIMIT IF ANY]. Suggest search terms grouped by type, like what it is, materials, style, occasion, and recipient, and where each should go, in the title, tags, description, or attributes. Note that buyers often search with different words than sellers use, including local terms and phrases in their own language, so thinking like the buyer, and checking the search suggestions on the platform itself, finds terms I might miss, while repeating the same word across every field rarely helps as much as covering different ways people search. Give me the keyword and tag plan.",
+    "description": "Pick search terms buyers really use and place them across listing fields.",
+    "useCase": "Use this so buyers can find your product. Buyers often search with different words than sellers, including local terms, so thinking like a buyer and checking the platform's own search suggestions finds missed terms, while repeating one word in every field rarely helps as much as covering different ways people search.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRODUCT",
+      "YOUR GUESSES",
+      "PLATFORM OR OWN SITE",
+      "TAG LIMIT IF ANY"
+    ],
+    "relatedPromptIds": [
+      "listing-title-formula",
+      "listing-category-choice",
+      "listing-alt-text"
+    ]
+  },
+  {
+    "id": "listing-category-choice",
+    "title": "Choose the Right Category and Attributes",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "listing-optimization",
+    "aiTool": "Gemini",
+    "promptText": "Help me choose the right category and fill in the attributes for a product listing at my [BUSINESS TYPE]. The product is [PRODUCT], the categories I am considering are [OPTIONS], the attribute fields available are [E.G. COLOR, MATERIAL, SIZE, STYLE, AGE GROUP], and where I sell is [PLATFORM]. Recommend the best category and how to complete the attributes accurately. Note that shoppers often narrow results using category filters and attributes, so a product in the wrong category, or with blank attribute fields, can disappear from filtered searches even with a perfect title, and placing a product in an unrelated but busier category to get more views usually backfires and can break platform rules. Give me the category and attribute recommendations.",
+    "description": "Pick the right category and complete attributes so filters find you.",
+    "useCase": "Use this when listing any product. Shoppers narrow results with category filters and attributes, so a product in the wrong category or with blank attributes can vanish from filtered searches despite a perfect title, while placing it in a busier unrelated category usually backfires and can break platform rules.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRODUCT",
+      "OPTIONS",
+      "E.G. COLOR, MATERIAL, SIZE, STYLE, AGE GROUP",
+      "PLATFORM"
+    ],
+    "relatedPromptIds": [
+      "listing-search-tags",
+      "listing-title-formula",
+      "listing-variants-setup"
+    ]
+  },
+  {
+    "id": "listing-stock-status",
+    "title": "Handle Low Stock and Sold Out Listings",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "listing-optimization",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me handle low stock and sold out products on my listings at my [BUSINESS TYPE]. The products affected are [PRODUCTS], when they will be back is [RESTOCK DATE OR UNKNOWN], whether I can take preorders is [YES OR NO], and the alternatives I could suggest are [SIMILAR PRODUCTS]. Suggest how to show stock status honestly, whether to keep the listing live, and how to capture interest, like a back in stock notification or a suggested alternative. Note that removing a sold out listing can lose the search position and reviews it has built up, while leaving it live without explanation frustrates buyers, so showing a clear restock date or a notify me option keeps interest, though invented low stock warnings to create urgency can break consumer rules in many places and erode trust. Give me the stock status plan.",
+    "description": "Show stock status honestly and keep sold out listings working for you.",
+    "useCase": "Use this when products run low or sell out. Removing a sold out listing can lose its search position and reviews, while leaving it unexplained frustrates buyers, so a restock date or notify me option keeps interest, though invented low stock warnings can break consumer rules and erode trust.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRODUCTS",
+      "RESTOCK DATE OR UNKNOWN",
+      "YES OR NO",
+      "SIMILAR PRODUCTS"
+    ],
+    "relatedPromptIds": [
+      "listing-variants-setup",
+      "listing-seasonal-refresh",
+      "listing-full-audit"
+    ]
+  },
+  {
+    "id": "listing-seasonal-refresh",
+    "title": "Refresh Listings for a Season or Event",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "listing-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me refresh my product listings for an upcoming season or event at my [BUSINESS TYPE]. The season or event is [E.G. HOLIDAY SEASON, NEW YEAR, BACK TO SCHOOL, RAINY SEASON, A LOCAL FESTIVAL], the products that fit are [RELEVANT PRODUCTS], and how far away it is is [TIME UNTIL IT STARTS]. Suggest what to update, like titles, tags, main images, descriptions, and shipping cut off dates, and when to make the changes. Note that shoppers start searching for seasonal products well before the event, so updating listings early, rather than on the day, gives them time to be found, and updates should be reversed afterwards so listings do not still talk about a holiday that has passed, while seasonal events differ a lot by country, so the calendar should match where my buyers are. Give me the seasonal refresh plan.",
+    "description": "Update listings early for a season or event, then reverse the changes after.",
+    "useCase": "Use this ahead of busy seasons or local events. Shoppers search for seasonal products well before the event, so updating listings early gives them time to be found, reversing updates afterwards avoids stale holiday references, and the event calendar should match where your buyers actually are.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. HOLIDAY SEASON, NEW YEAR, BACK TO SCHOOL, RAINY SEASON, A LOCAL FESTIVAL",
+      "RELEVANT PRODUCTS",
+      "TIME UNTIL IT STARTS"
+    ],
+    "relatedPromptIds": [
+      "listing-search-tags",
+      "listing-main-image",
+      "listing-stock-status"
+    ]
+  },
+  {
+    "id": "listing-test-elements",
+    "title": "Test Changes to Your Listings",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "listing-optimization",
+    "aiTool": "Gemini",
+    "promptText": "Help me test changes to my product listings at my [BUSINESS TYPE]. The listing I want to improve is [PRODUCT], its current numbers are [VIEWS, CLICKS, ADD TO CART, SALES, FOR A PERIOD], the element I want to test is [E.G. MAIN IMAGE, TITLE, PRICE, FIRST LINE OF DESCRIPTION], and the traffic it gets is [ROUGH VOLUME]. Help me plan a simple test, changing one element at a time, how long to run it, and how to judge the result. Note that changing several things at once makes it impossible to know which change worked, and low traffic listings need a longer test before a difference means anything, while seasonal swings and promotions can distort results, so comparing similar periods and keeping notes of what changed and when gives a much clearer answer. Give me the listing test plan.",
+    "description": "Test one listing element at a time and judge results fairly.",
+    "useCase": "Use this to improve a listing with evidence. Changing several things at once hides which change worked, low traffic listings need longer tests before a difference means anything, and seasonal swings distort results, so comparing similar periods and noting what changed and when gives a clearer answer.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRODUCT",
+      "VIEWS, CLICKS, ADD TO CART, SALES, FOR A PERIOD",
+      "E.G. MAIN IMAGE, TITLE, PRICE, FIRST LINE OF DESCRIPTION",
+      "ROUGH VOLUME"
+    ],
+    "relatedPromptIds": [
+      "listing-main-image",
+      "listing-full-audit",
+      "listing-conversion-checklist"
+    ]
+  },
+  {
+    "id": "listing-conversion-checklist",
+    "title": "Run a Listing Conversion Checklist",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "listing-optimization",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me check whether a product listing at my [BUSINESS TYPE] has everything a buyer needs to say yes. The listing is [PASTE OR DESCRIBE THE LISTING], the product is [PRODUCT AND PRICE], and the buyer is [WHO]. Run through a checklist covering title clarity, main image, supporting images, price and what is included, key benefits, sizes and specs, shipping and returns, reviews and trust, stock status, and a clear buy button, and flag what is missing or weak. Note that a buyer who cannot find one key piece of information, like delivery time or exact size, often leaves rather than asks, so a checklist catches gaps that are easy to miss when I know the product well, and fixing the biggest gap first usually helps more than polishing what is already fine. Give me the conversion checklist results.",
+    "description": "Check a listing for every piece of information a buyer needs to buy.",
+    "useCase": "Use this on listings that get views but few sales. A buyer missing one key piece of information like delivery time or exact size often leaves rather than asks, so a checklist catches gaps easy to miss when you know the product well, and fixing the biggest gap first beats polishing what is already fine.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE OR DESCRIBE THE LISTING",
+      "PRODUCT AND PRICE",
+      "WHO"
+    ],
+    "relatedPromptIds": [
+      "listing-full-audit",
+      "listing-trust-signals",
+      "listing-test-elements"
+    ]
+  },
+  {
+    "id": "listing-full-audit",
+    "title": "Audit All Your Listings and Prioritize Fixes",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "listing-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me audit all my product listings and decide which to fix first at my [BUSINESS TYPE]. How many listings I have is [NUMBER], the data I have for each is [VIEWS, SALES, REVENUE, RETURNS, REVIEWS], the common problems I suspect are [E.G. POOR PHOTOS, WEAK TITLES, MISSING INFO, OLD PRICES], and how much time I can spend is [HOURS PER WEEK]. Help me sort listings into groups, like best sellers to protect, high view low sale to fix, and low view to improve or retire, and plan the order of work. Note that a few products usually bring most of the sales, so improving high traffic listings that underperform often brings more return than polishing rarely viewed ones, while dead listings that never sell can clutter the shop, so retiring or merging them is sometimes the most useful fix. Give me the listing audit plan.",
+    "description": "Sort all listings by performance and fix the ones that matter most first.",
+    "useCase": "Use this when you have many listings and limited time. A few products usually bring most sales, so fixing high traffic listings that underperform often returns more than polishing rarely viewed ones, and retiring or merging dead listings that never sell is sometimes the most useful fix.",
+    "variables": [
+      "BUSINESS TYPE",
+      "NUMBER",
+      "VIEWS, SALES, REVENUE, RETURNS, REVIEWS",
+      "E.G. POOR PHOTOS, WEAK TITLES, MISSING INFO, OLD PRICES",
+      "HOURS PER WEEK"
+    ],
+    "relatedPromptIds": [
+      "listing-conversion-checklist",
+      "listing-test-elements",
+      "listing-title-formula"
+    ]
   }
 ]
