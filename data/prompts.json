@@ -39825,5 +39825,384 @@
       "habit-too-many",
       "habit-missed-days"
     ]
+  },
+  {
+    "id": "reflect-end-of-day",
+    "title": "Reflect at the End of the Day",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "reflection-prompts",
+    "aiTool": "Claude",
+    "promptText": "Help me reflect briefly at the end of my workday running my [BUSINESS TYPE]. What happened today is [THE MAIN EVENTS], what went well is [WINS, EVEN SMALL], what was hard is [CHALLENGES], and how I am feeling is [YOUR MOOD]. Ask me three or four short questions that help me notice what I learned and what I want to carry into tomorrow, then summarize my answers in a few lines. Note that a short daily reflection helps me notice progress that is easy to miss in a busy business, and it works best when brief and honest rather than a long journaling session I will soon abandon, while ending on one thing that went well helps me finish the day without carrying only the problems home. Give me the end of day reflection.",
+    "description": "Run a short end of day reflection on wins, lessons, and tomorrow.",
+    "useCase": "Use this at the close of each workday. A short daily reflection helps you notice progress that is easy to miss in a busy business, works best brief and honest rather than as a long session you will abandon, and ending on one good thing helps you finish without carrying only the problems home.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE MAIN EVENTS",
+      "WINS, EVEN SMALL",
+      "CHALLENGES",
+      "YOUR MOOD"
+    ],
+    "relatedPromptIds": [
+      "reflect-quick-question",
+      "reflect-month-business",
+      "reflect-journal-starter"
+    ]
+  },
+  {
+    "id": "reflect-quick-question",
+    "title": "Get One Reflection Question for Today",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "reflection-prompts",
+    "aiTool": "Grok",
+    "promptText": "Give me one thoughtful reflection question for today. What is on my mind is [WHAT YOU ARE THINKING ABOUT], and my business is [WHAT YOU DO]. Give me a single question worth sitting with for a few minutes and one follow up question, no explanation, just the questions. Give me the questions.",
+    "description": "Get one thoughtful question to reflect on today.",
+    "useCase": "Use this when you have only a few minutes. A single good question with one follow up is enough for a meaningful reflection, and a short daily habit of thinking about one question often does more than an occasional long journaling session.",
+    "variables": [
+      "WHAT YOU ARE THINKING ABOUT",
+      "WHAT YOU DO"
+    ],
+    "relatedPromptIds": [
+      "reflect-end-of-day",
+      "reflect-journal-starter",
+      "reflect-why-started"
+    ]
+  },
+  {
+    "id": "reflect-journal-starter",
+    "title": "Build a Personal Set of Journal Prompts",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "reflection-prompts",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me build a set of journal prompts that fit my life as an owner of a [BUSINESS TYPE]. What I want to understand better is [E.G. MY ENERGY, MY DECISIONS, MY RELATIONSHIPS, MY GOALS, MY STRESS], how often I will journal is [DAILY, WEEKLY, OCCASIONALLY], and how long I will spend is [MINUTES]. Give me a short rotating set of prompts grouped by theme. Note that generic journal prompts often feel irrelevant, so prompts tied to my actual work and life are more useful, and the habit lasts longer when the questions vary and the time is short, while journaling is for honest thinking rather than perfect writing, so messy notes count. Give me the journal prompt set.",
+    "description": "Build a rotating set of journal prompts tied to your real life and work.",
+    "useCase": "Use this to start or refresh a journaling habit. Generic prompts often feel irrelevant, so prompts tied to your actual work and life are more useful, the habit lasts longer when questions vary and time is short, and messy honest notes count more than polished writing.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. MY ENERGY, MY DECISIONS, MY RELATIONSHIPS, MY GOALS, MY STRESS",
+      "DAILY, WEEKLY, OCCASIONALLY",
+      "MINUTES"
+    ],
+    "relatedPromptIds": [
+      "reflect-end-of-day",
+      "reflect-quick-question",
+      "reflect-month-business"
+    ]
+  },
+  {
+    "id": "reflect-month-business",
+    "title": "Reflect on the Past Month in Your Business",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "reflection-prompts",
+    "aiTool": "Claude",
+    "promptText": "Help me reflect on the past month in my [BUSINESS TYPE]. The main things that happened were [EVENTS, RESULTS, PROJECTS], the numbers I know are [ROUGH REVENUE, CUSTOMERS, OR OTHER MEASURES], what I enjoyed most was [HIGHLIGHTS], and what frustrated me was [LOW POINTS]. Walk me through what worked, what did not, what surprised me, what I learned, and one change to make next month. Note that a month is long enough to see patterns that a single week hides, like which kinds of work bring money or energy and which drain both, and a short honest reflection with one clear change is more useful than a long list of resolutions I will not follow. Give me the monthly reflection.",
+    "description": "Look back on the month for patterns and one change to make next.",
+    "useCase": "Use this at the end of each month. A month is long enough to reveal patterns a week hides, like which work brings money or energy and which drains both, and a short honest reflection with one clear change beats a long list of resolutions you will not follow.",
+    "variables": [
+      "BUSINESS TYPE",
+      "EVENTS, RESULTS, PROJECTS",
+      "ROUGH REVENUE, CUSTOMERS, OR OTHER MEASURES",
+      "HIGHLIGHTS",
+      "LOW POINTS"
+    ],
+    "relatedPromptIds": [
+      "reflect-end-of-day",
+      "reflect-year-end",
+      "reflect-energy-patterns"
+    ]
+  },
+  {
+    "id": "reflect-year-end",
+    "title": "Write a Year End Reflection",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "reflection-prompts",
+    "aiTool": "Gemini",
+    "promptText": "Help me write a year end reflection on my life and my [BUSINESS TYPE]. The biggest moments this year were [KEY EVENTS], what I am proud of is [ACHIEVEMENTS, BIG OR SMALL], what was hardest is [CHALLENGES], and the people who mattered most were [WHO]. Guide me through questions on growth, lessons, gratitude, and what I want to carry forward or leave behind, then help me shape a short written reflection. Note that a year often feels like it passed without much progress until I write down what actually happened, and looking back fairly, counting the hard things I got through as well as the wins, gives a truer and kinder picture than judging the year only by whether I hit my goals. Give me the year end reflection.",
+    "description": "Write a fair, kind reflection on the whole year before planning the next.",
+    "useCase": "Use this in the last weeks of the year. A year often feels like it passed without progress until you write down what happened, and counting the hard things you got through alongside the wins gives a truer and kinder picture than judging only by whether you hit your goals.",
+    "variables": [
+      "BUSINESS TYPE",
+      "KEY EVENTS",
+      "ACHIEVEMENTS, BIG OR SMALL",
+      "CHALLENGES",
+      "WHO"
+    ],
+    "relatedPromptIds": [
+      "reflect-month-business",
+      "reflect-letter-to-future",
+      "reflect-gratitude"
+    ]
+  },
+  {
+    "id": "reflect-after-win",
+    "title": "Reflect on a Win to Repeat It",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "reflection-prompts",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me reflect on a recent win in my [BUSINESS TYPE] so I understand why it happened. The win was [WHAT WENT WELL], what I did leading up to it was [YOUR ACTIONS], and outside factors that helped were [LUCK, TIMING, OTHER PEOPLE]. Help me separate what I did that I can repeat from what was luck or timing, and turn the repeatable parts into something I can do again. Note that owners usually study failures closely but move straight past wins, missing the chance to learn what actually works, and being honest about the role of luck stops me from overestimating a strategy that only worked once, while the repeatable parts are often small habits rather than the big moment itself. Give me the win reflection.",
+    "description": "Separate what you did from luck in a win, and keep the repeatable parts.",
+    "useCase": "Use this after something goes well. Owners study failures closely but move past wins, missing what actually works, and being honest about luck stops you overestimating a one time strategy, while the repeatable parts are often small habits rather than the big moment itself.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT WENT WELL",
+      "YOUR ACTIONS",
+      "LUCK, TIMING, OTHER PEOPLE"
+    ],
+    "relatedPromptIds": [
+      "reflect-after-setback",
+      "reflect-month-business",
+      "reflect-celebrate-progress"
+    ]
+  },
+  {
+    "id": "reflect-after-setback",
+    "title": "Reflect on a Setback Without Beating Yourself Up",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "reflection-prompts",
+    "aiTool": "Claude",
+    "promptText": "Help me reflect on a setback in my [BUSINESS TYPE] in a way that teaches me something. What happened is [THE SETBACK], what I did that contributed is [YOUR PART, HONESTLY], what was outside my control is [EXTERNAL FACTORS], and how I am feeling about it is [YOUR FEELINGS]. Guide me through what happened, what I would do differently, what I can do now, and what this does not say about me. Note that setbacks are part of running any business, and harsh self blame tends to make me avoid thinking about them, which means repeating the same mistakes, while a fair review that owns my part without treating one bad result as proof I am not good enough is what actually helps me improve. Give me the setback reflection.",
+    "description": "Learn from a setback by owning your part without harsh self blame.",
+    "useCase": "Use this after something goes wrong. Setbacks are part of any business, and harsh self blame makes you avoid thinking about them, so you repeat mistakes, while a fair review owning your part without treating one bad result as proof you are not good enough is what helps you improve.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE SETBACK",
+      "YOUR PART, HONESTLY",
+      "EXTERNAL FACTORS",
+      "YOUR FEELINGS"
+    ],
+    "relatedPromptIds": [
+      "reflect-after-win",
+      "reflect-fear-journal",
+      "reflect-difficult-client"
+    ]
+  },
+  {
+    "id": "reflect-why-started",
+    "title": "Reconnect With Why You Started",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "reflection-prompts",
+    "aiTool": "Gemini",
+    "promptText": "Help me reconnect with why I started my [BUSINESS TYPE]. Why I originally started is [YOUR ORIGINAL REASONS], how the business has changed since is [WHAT IS DIFFERENT NOW], and how I feel about it these days is [HONESTLY]. Ask me questions that explore whether my original reasons still hold, what I have gained, what I miss, and what I want the business to give me now. Note that the reasons I started often fade under daily pressure, and reconnecting with them can restore motivation, but sometimes reflection shows the reasons have changed, which is not failure, it is useful information that may point to reshaping the business so it fits who I am now. Give me the reflection.",
+    "description": "Revisit why you started and whether those reasons still fit now.",
+    "useCase": "Use this when motivation has faded. Original reasons often fade under daily pressure and reconnecting with them can restore motivation, but sometimes reflection shows the reasons have changed, which is useful information that may point to reshaping the business to fit who you are now.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR ORIGINAL REASONS",
+      "WHAT IS DIFFERENT NOW",
+      "HONESTLY"
+    ],
+    "relatedPromptIds": [
+      "reflect-values-check",
+      "reflect-quick-question",
+      "reflect-letter-to-future"
+    ]
+  },
+  {
+    "id": "reflect-values-check",
+    "title": "Reflect on Whether You Are Living Your Values",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "reflection-prompts",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me reflect on whether my days match what I value most. My core values are [E.G. FAMILY, FREEDOM, HONESTY, HEALTH, CREATIVITY, SECURITY], how I spent my time recently is [A ROUGH WEEK OR MONTH], and where I feel a gap is [WHAT FEELS OFF]. Help me compare my values to how I actually spend my time and energy, and find one small adjustment that brings them closer. Note that it is common to say one thing matters most while spending almost no time on it, and this gap often shows up as a vague sense of dissatisfaction, so seeing it clearly is the first step, while the fix is usually a small, specific change rather than a dramatic overhaul of my life. Give me the values reflection.",
+    "description": "Compare your values with how you actually spend your time.",
+    "useCase": "Use this when something feels off but you cannot name it. People often say one thing matters most while spending little time on it, which shows up as vague dissatisfaction, so seeing the gap clearly is the first step, and the fix is usually a small specific change rather than a dramatic overhaul.",
+    "variables": [
+      "E.G. FAMILY, FREEDOM, HONESTY, HEALTH, CREATIVITY, SECURITY",
+      "A ROUGH WEEK OR MONTH",
+      "WHAT FEELS OFF"
+    ],
+    "relatedPromptIds": [
+      "reflect-why-started",
+      "reflect-energy-patterns",
+      "reflect-relationships"
+    ]
+  },
+  {
+    "id": "reflect-energy-patterns",
+    "title": "Reflect on What Gives and Takes Your Energy",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "reflection-prompts",
+    "aiTool": "Claude",
+    "promptText": "Help me reflect on what gave and took my energy over the past few weeks. Moments I felt most alive or focused were [EXAMPLES], moments I felt drained or flat were [EXAMPLES], and what my days have generally looked like is [YOUR ROUTINE]. Ask me questions that help me spot the patterns, then summarize what seems to energize and drain me and one experiment to try. Note that energy patterns are often more revealing than to do lists, since they show what kind of work and environment suit me, and noticing them over a few weeks rather than one day gives a more reliable picture, which can guide choices about what to delegate, what to do more of, and how to structure my week. Give me the energy reflection.",
+    "description": "Spot what energizes and drains you over several weeks.",
+    "useCase": "Use this to understand what work suits you. Energy patterns are often more revealing than to do lists since they show what kind of work and environment suit you, and noticing them over a few weeks gives a reliable picture that can guide what to delegate and how to structure your week.",
+    "variables": [
+      "EXAMPLES",
+      "YOUR ROUTINE"
+    ],
+    "relatedPromptIds": [
+      "reflect-month-business",
+      "reflect-values-check",
+      "reflect-end-of-day"
+    ]
+  },
+  {
+    "id": "reflect-fear-journal",
+    "title": "Write Through a Fear or Worry",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "reflection-prompts",
+    "aiTool": "Gemini",
+    "promptText": "Help me write through a fear or worry about my [BUSINESS TYPE] or life. What I am worried about is [THE WORRY], how often it comes up is [HOW OFTEN], and what I have been doing about it is [ACTIONS OR AVOIDANCE]. Guide me through naming the fear clearly, what evidence supports or questions it, what is in my control, and one small step I can take. Note that worries often loop endlessly when kept in my head, and writing them down usually makes them more concrete and manageable, but if worry feels constant, overwhelming, or is affecting my sleep or daily life for a long time, talking to a doctor or counselor can help in ways journaling cannot. Give me the guided fear reflection.",
+    "description": "Write a looping worry down, test it, and find one small step.",
+    "useCase": "Use this when a worry keeps circling. Worries loop endlessly in your head and writing them down usually makes them concrete and manageable, but if worry feels constant or overwhelming or affects sleep and daily life for a long time, a doctor or counselor can help in ways journaling cannot.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE WORRY",
+      "HOW OFTEN",
+      "ACTIONS OR AVOIDANCE"
+    ],
+    "relatedPromptIds": [
+      "reflect-after-setback",
+      "reflect-comparison",
+      "reflect-quick-question"
+    ]
+  },
+  {
+    "id": "reflect-comparison",
+    "title": "Reflect on Comparing Yourself to Others",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "reflection-prompts",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me reflect on the habit of comparing my [BUSINESS TYPE] to other people's. Who I compare myself to is [E.G. COMPETITORS, PEERS, PEOPLE ON SOCIAL MEDIA], what triggers it is [WHAT YOU SEE OR HEAR], and how it makes me feel is [YOUR REACTION]. Help me separate what is useful in the comparison, like an idea worth learning from, from what is harmful, and reframe it around my own progress. Note that I usually compare my behind the scenes struggles with other people's highlights, so comparisons are rarely fair, but envy can still point to something I genuinely want, which is worth noticing, and measuring myself against where I was a year ago is usually more motivating and more honest than measuring against someone else. Give me the comparison reflection.",
+    "description": "Turn comparison into learning and measure against your own past.",
+    "useCase": "Use this when others' success leaves you feeling behind. You usually compare your struggles to others' highlights, so comparisons are rarely fair, though envy can point to something you genuinely want, and measuring against where you were a year ago is more motivating and honest.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. COMPETITORS, PEERS, PEOPLE ON SOCIAL MEDIA",
+      "WHAT YOU SEE OR HEAR",
+      "YOUR REACTION"
+    ],
+    "relatedPromptIds": [
+      "reflect-celebrate-progress",
+      "reflect-fear-journal",
+      "reflect-values-check"
+    ]
+  },
+  {
+    "id": "reflect-celebrate-progress",
+    "title": "Notice Progress You Have Overlooked",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "reflection-prompts",
+    "aiTool": "Claude",
+    "promptText": "Help me notice the progress I have made in my [BUSINESS TYPE] that I tend to overlook. Where I was a year or two ago is [YOUR STARTING POINT], where I am now is [YOUR CURRENT SITUATION], and skills or confidence I have gained are [WHAT YOU CAN DO NOW]. Ask me questions that draw out progress in results, skills, relationships, and resilience, then help me list it. Note that owners constantly move the goalpost, so each achievement feels ordinary as soon as it happens, which makes it easy to feel stuck even while growing, and taking stock of how far I have come is not complacency, it gives me evidence and energy to keep going. Give me the progress reflection.",
+    "description": "Take stock of how far you have come across results, skills, and resilience.",
+    "useCase": "Use this when you feel stuck. Owners constantly move the goalpost, so each achievement feels ordinary as soon as it happens, making it easy to feel stuck while growing, and taking stock of how far you have come gives evidence and energy to keep going rather than complacency.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR STARTING POINT",
+      "YOUR CURRENT SITUATION",
+      "WHAT YOU CAN DO NOW"
+    ],
+    "relatedPromptIds": [
+      "reflect-after-win",
+      "reflect-comparison",
+      "reflect-year-end"
+    ]
+  },
+  {
+    "id": "reflect-gratitude",
+    "title": "Reflect on Gratitude in Your Work",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "reflection-prompts",
+    "aiTool": "Gemini",
+    "promptText": "Help me reflect on what I am grateful for in my work and life running my [BUSINESS TYPE]. People who have helped me are [CUSTOMERS, FAMILY, FRIENDS, MENTORS, TEAM], things about my work I appreciate are [WHAT YOU VALUE], and what has been hard lately is [CHALLENGES]. Guide me through specific gratitude rather than general statements, and suggest one person I could thank this week. Note that specific gratitude, like a customer who referred three friends, tends to feel more meaningful than a general list, and acknowledging gratitude does not mean ignoring real difficulties, while actually telling someone I appreciate them often strengthens the relationship and lifts both of us. Give me the gratitude reflection.",
+    "description": "Reflect on specific gratitude and thank one person this week.",
+    "useCase": "Use this when work feels heavy or thankless. Specific gratitude feels more meaningful than a general list, acknowledging it does not mean ignoring real difficulties, and actually telling someone you appreciate them often strengthens the relationship and lifts both of you.",
+    "variables": [
+      "BUSINESS TYPE",
+      "CUSTOMERS, FAMILY, FRIENDS, MENTORS, TEAM",
+      "WHAT YOU VALUE",
+      "CHALLENGES"
+    ],
+    "relatedPromptIds": [
+      "reflect-year-end",
+      "reflect-relationships",
+      "reflect-celebrate-progress"
+    ]
+  },
+  {
+    "id": "reflect-relationships",
+    "title": "Reflect on the Relationships Around Your Work",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "reflection-prompts",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me reflect on the relationships that shape my work and life as an owner of a [BUSINESS TYPE]. The people I spend the most time with are [WHO], people who energize and support me are [WHO], relationships that feel strained or neglected are [WHO OR WHAT], and how the business has affected my personal life is [HONESTLY]. Guide me through questions about who I want to invest in, what needs attention, and where I may need boundaries. Note that running a business often absorbs the time and attention that relationships need, and the effect is usually gradual and easy to miss until someone points it out, so an honest look at who I am neglecting, and who drains me, helps me make deliberate choices rather than letting work decide by default. Give me the relationship reflection.",
+    "description": "Reflect on who to invest in, who you neglect, and where you need boundaries.",
+    "useCase": "Use this when work is crowding out the people in your life. A business often absorbs the time relationships need, gradually and easily missed, so an honest look at who you neglect and who drains you helps you choose deliberately rather than letting work decide by default.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO",
+      "WHO OR WHAT",
+      "HONESTLY"
+    ],
+    "relatedPromptIds": [
+      "reflect-values-check",
+      "reflect-gratitude",
+      "reflect-energy-patterns"
+    ]
+  },
+  {
+    "id": "reflect-difficult-client",
+    "title": "Reflect on a Difficult Client or Interaction",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "reflection-prompts",
+    "aiTool": "Claude",
+    "promptText": "Help me reflect on a difficult interaction with a client or customer at my [BUSINESS TYPE]. What happened is [THE SITUATION], how I responded is [YOUR RESPONSE], how I feel about it now is [YOUR FEELINGS], and what is still bothering me is [WHAT LINGERS]. Guide me through what I could control, what the other person might have been dealing with, what I would do differently, and how to let it go. Note that a single difficult interaction can stay on my mind for days, often far out of proportion to its real impact, and reflecting helps separate useful lessons, like clearer terms or earlier warning signs, from simply replaying the hurt, which keeps me stuck without making anything better. Give me the reflection.",
+    "description": "Pull lessons from a difficult interaction and let the rest go.",
+    "useCase": "Use this when a hard interaction keeps replaying in your head. One difficult client can stay on your mind for days out of proportion to its impact, and reflecting separates useful lessons like clearer terms from simply replaying the hurt, which keeps you stuck without improving anything.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE SITUATION",
+      "YOUR RESPONSE",
+      "YOUR FEELINGS",
+      "WHAT LINGERS"
+    ],
+    "relatedPromptIds": [
+      "reflect-after-setback",
+      "reflect-fear-journal",
+      "reflect-end-of-day"
+    ]
+  },
+  {
+    "id": "reflect-letter-to-future",
+    "title": "Write a Letter to Your Future Self",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "reflection-prompts",
+    "aiTool": "Gemini",
+    "promptText": "Help me write a letter to myself to open in [ONE YEAR, FIVE YEARS, OR ANOTHER TIMEFRAME]. Where I am in life and business right now is [YOUR CURRENT SITUATION], what I hope will be true by then is [YOUR HOPES], what I am worried about is [YOUR FEARS], and advice I want to remember is [LESSONS]. Help me shape an honest, warm letter covering where I am, what I hope for, and what I want my future self to remember. Note that a letter to my future self captures a moment I will otherwise forget, and reading it later is often surprising, showing how much changed and which worries never came true, while writing it honestly, including the fears, makes it far more meaningful than an upbeat list of goals. Give me the letter.",
+    "description": "Write an honest letter to open in the future, fears included.",
+    "useCase": "Use this at a turning point or year end. A letter to your future self captures a moment you will otherwise forget, and reading it later often shows how much changed and which worries never came true, while including the fears makes it far more meaningful than an upbeat goal list.",
+    "variables": [
+      "ONE YEAR, FIVE YEARS, OR ANOTHER TIMEFRAME",
+      "YOUR CURRENT SITUATION",
+      "YOUR HOPES",
+      "YOUR FEARS",
+      "LESSONS"
+    ],
+    "relatedPromptIds": [
+      "reflect-year-end",
+      "reflect-why-started",
+      "reflect-celebrate-progress"
+    ]
+  },
+  {
+    "id": "reflect-skills-growth",
+    "title": "Reflect on the Skills You Are Building",
+    "categoryId": "personal-growth-and-mindset",
+    "subcategoryId": "reflection-prompts",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me reflect on the skills I am building as the owner of my [BUSINESS TYPE]. Skills I have improved recently are [WHAT YOU HAVE GOTTEN BETTER AT], skills I keep avoiding are [WEAK SPOTS], and skills I will need for where I want the business to go are [FUTURE NEEDS]. Guide me through what I have learned, which gaps matter most, and whether to learn, delegate, or work around each one. Note that running a business forces me to learn many skills quickly, and progress is easy to miss because I learn on the job rather than in a classroom, while not every gap needs to be closed, since some are better delegated, and knowing which skills to build and which to hand off is itself a valuable judgment. Give me the skills reflection.",
+    "description": "Reflect on skills gained, gaps that matter, and which to delegate.",
+    "useCase": "Use this to guide your own development. Running a business forces fast learning on the job, so progress is easy to miss, and not every gap needs closing, since some are better delegated, so knowing which skills to build and which to hand off is itself a valuable judgment.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU HAVE GOTTEN BETTER AT",
+      "WEAK SPOTS",
+      "FUTURE NEEDS"
+    ],
+    "relatedPromptIds": [
+      "reflect-celebrate-progress",
+      "reflect-month-business",
+      "reflect-energy-patterns"
+    ]
   }
 ]
