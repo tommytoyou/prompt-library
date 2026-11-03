@@ -34445,5 +34445,392 @@
       "onplan-struggling-new-hire",
       "onplan-30-60-90"
     ]
+  },
+  {
+    "id": "perf-constructive-feedback",
+    "title": "Give Constructive Feedback on a Specific Issue",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "performance-feedback",
+    "aiTool": "Claude",
+    "promptText": "Help me give constructive feedback to a [ROLE TITLE] on my team at my [BUSINESS TYPE]. The specific issue is [WHAT HAPPENED, WITH AN EXAMPLE], the impact it had is [EFFECT ON CUSTOMERS, WORK, OR TEAM], and what I want to see instead is [THE CHANGE]. Help me structure what to say: the specific behavior, its impact, and the change I am asking for, then an open question to hear their side. Note that vague feedback like you need to be more proactive gives a person nothing to act on and often feels like a personal attack, while naming a specific example and its impact makes it about the work, and asking for their view first often reveals a cause I did not know about. Give me the feedback conversation.",
+    "description": "Structure feedback around a specific behavior, its impact, and the change needed.",
+    "useCase": "Use this when something needs to change. Vague feedback gives a person nothing to act on and often feels personal, while naming a specific example and its impact keeps it about the work, and asking for their side first often reveals a cause you did not know about.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "WHAT HAPPENED, WITH AN EXAMPLE",
+      "EFFECT ON CUSTOMERS, WORK, OR TEAM",
+      "THE CHANGE"
+    ],
+    "relatedPromptIds": [
+      "perf-difficult-conversation",
+      "perf-positive-feedback",
+      "perf-written-feedback"
+    ]
+  },
+  {
+    "id": "perf-positive-feedback",
+    "title": "Give Specific Positive Feedback",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "performance-feedback",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me give meaningful positive feedback to a team member at my [BUSINESS TYPE]. What they did well is [THE SPECIFIC ACTION], why it mattered is [THE RESULT OR IMPACT], and how I usually praise people is [E.G. QUICK THANKS, RARELY, IN PUBLIC]. Turn this into a short message or comment that names exactly what they did and why it counted. Note that generic praise like great job feels nice but teaches nothing and fades fast, while specific recognition tells the person exactly what to keep doing, and many small business owners only speak up when something goes wrong, so a habit of specific praise also makes the occasional criticism easier to hear. Give me the positive feedback.",
+    "description": "Turn praise into specific recognition that shows what to keep doing.",
+    "useCase": "Use this when someone does something well. Generic praise teaches nothing and fades fast, while specific recognition shows exactly what to keep doing, and many owners only speak up when things go wrong, so regular specific praise also makes occasional criticism easier to hear.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE SPECIFIC ACTION",
+      "THE RESULT OR IMPACT",
+      "E.G. QUICK THANKS, RARELY, IN PUBLIC"
+    ],
+    "relatedPromptIds": [
+      "perf-constructive-feedback",
+      "perf-regular-one-on-ones",
+      "perf-quick-feedback"
+    ]
+  },
+  {
+    "id": "perf-quick-feedback",
+    "title": "Get Quick Wording for a Feedback Message",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "performance-feedback",
+    "aiTool": "Grok",
+    "promptText": "I need to give a team member feedback quickly and want the wording right. What happened is [THE SITUATION], whether it is praise or a correction is [WHICH], and how I want it to land is [YOUR TONE]. Give me a short, clear message I can send or say, no explanation, just the wording. Give me the message.",
+    "description": "Get short, clear wording for a feedback message you need to give now.",
+    "useCase": "Use this when feedback needs to happen now. A short clear message with the right tone means you actually give the feedback while it is fresh, and timely feedback, even brief, is far more useful than a perfect version saved for a review months later.",
+    "variables": [
+      "THE SITUATION",
+      "WHICH",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "perf-constructive-feedback",
+      "perf-positive-feedback",
+      "perf-written-feedback"
+    ]
+  },
+  {
+    "id": "perf-difficult-conversation",
+    "title": "Prepare for a Difficult Performance Conversation",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "performance-feedback",
+    "aiTool": "Claude",
+    "promptText": "Help me prepare for a difficult performance conversation with a [ROLE TITLE] at my [BUSINESS TYPE]. The problem is [THE ONGOING ISSUE WITH EXAMPLES], what I have already said or tried is [PREVIOUS CONVERSATIONS], and what I need from this conversation is [THE OUTCOME]. Help me plan the opening, the key points, likely reactions and how to respond, and how to end with clear next steps. Note that putting off a hard conversation usually makes it harder, since the problem grows and the person is surprised later, and opening directly with the issue rather than a long warm up is kinder than it feels, while staying calm and sticking to examples keeps it from turning into an argument about character. Give me the conversation plan.",
+    "description": "Plan a hard performance conversation from opening to clear next steps.",
+    "useCase": "Use this before a conversation you have been putting off. Delay usually makes it harder because the problem grows and the person is surprised later, so opening directly with the issue is kinder than it feels, and sticking to examples keeps it from becoming an argument about character.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "THE ONGOING ISSUE WITH EXAMPLES",
+      "PREVIOUS CONVERSATIONS",
+      "THE OUTCOME"
+    ],
+    "relatedPromptIds": [
+      "perf-constructive-feedback",
+      "perf-improvement-plan",
+      "perf-defensive-reaction"
+    ]
+  },
+  {
+    "id": "perf-defensive-reaction",
+    "title": "Handle a Defensive Reaction to Feedback",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "performance-feedback",
+    "aiTool": "Gemini",
+    "promptText": "Help me handle a team member who reacts defensively to feedback at my [BUSINESS TYPE]. The feedback I gave was [WHAT YOU SAID], how they reacted was [E.G. ARGUED, BLAMED OTHERS, WENT QUIET, GOT UPSET], and what I still need to happen is [THE CHANGE]. Give me ways to respond in the moment and how to follow up afterwards. Note that defensiveness is a normal first reaction to criticism and does not mean the feedback failed, so pausing, acknowledging their feelings, and returning to the specific example usually works better than pushing harder, and sometimes the best move is to end the conversation and pick it up a day later once emotions have settled. Give me the responses and follow up.",
+    "description": "Respond calmly when a team member gets defensive about feedback.",
+    "useCase": "Use this when feedback is met with arguing, blame, or silence. Defensiveness is a normal first reaction and does not mean the feedback failed, so acknowledging feelings and returning to the example works better than pushing harder, and picking it up a day later is sometimes best.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU SAID",
+      "E.G. ARGUED, BLAMED OTHERS, WENT QUIET, GOT UPSET",
+      "THE CHANGE"
+    ],
+    "relatedPromptIds": [
+      "perf-difficult-conversation",
+      "perf-constructive-feedback",
+      "perf-follow-up-after-feedback"
+    ]
+  },
+  {
+    "id": "perf-written-feedback",
+    "title": "Put Feedback in Writing Clearly",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "performance-feedback",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write up feedback I gave a team member at my [BUSINESS TYPE] so there is a clear record. What we discussed is [THE CONVERSATION], what was agreed is [ACTIONS AND DEADLINES], and the tone I want is [SUPPORTIVE, NEUTRAL, FORMAL]. Write a short follow up message that summarizes the points and the agreed next steps without adding anything new. Note that people often remember a conversation differently afterwards, so a written summary makes expectations clear for both of us, and if a performance issue later becomes serious, a record of what was said and when matters, but the summary should match what was actually said rather than introduce new criticism by message. Give me the written summary.",
+    "description": "Summarize a feedback conversation in writing with the agreed next steps.",
+    "useCase": "Use this after any important feedback conversation. People often remember conversations differently, so a short written summary of what was agreed makes expectations clear and creates a record if an issue becomes serious, as long as it matches what was said rather than adding new criticism.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE CONVERSATION",
+      "ACTIONS AND DEADLINES",
+      "SUPPORTIVE, NEUTRAL, FORMAL"
+    ],
+    "relatedPromptIds": [
+      "perf-constructive-feedback",
+      "perf-improvement-plan",
+      "perf-follow-up-after-feedback"
+    ]
+  },
+  {
+    "id": "perf-regular-one-on-ones",
+    "title": "Set Up Regular One on One Check Ins",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "performance-feedback",
+    "aiTool": "Claude",
+    "promptText": "Help me set up a simple regular one on one routine with the people on my small team at my [BUSINESS TYPE]. My team is [WHO AND HOW MANY], how much time I can realistically give is [TIME PER WEEK OR MONTH], and how we meet is [IN PERSON, CALL, MESSAGING]. Give me a frequency, a short repeatable agenda, and a few rotating questions. Note that feedback saved for an annual review comes too late to change anything, while a short regular check in catches small issues before they grow and makes feedback normal rather than alarming, and the routine only works if it is small enough that I actually keep it when the business gets busy. Give me the one on one routine.",
+    "description": "Set up a small, repeatable one on one routine you will actually keep.",
+    "useCase": "Use this to make feedback a habit. Feedback saved for an annual review comes too late, while a short regular check in catches small issues early and makes feedback normal rather than alarming, and the routine only works if it is small enough to survive busy weeks.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO AND HOW MANY",
+      "TIME PER WEEK OR MONTH",
+      "IN PERSON, CALL, MESSAGING"
+    ],
+    "relatedPromptIds": [
+      "perf-positive-feedback",
+      "perf-review-prep",
+      "perf-ask-for-feedback"
+    ]
+  },
+  {
+    "id": "perf-review-prep",
+    "title": "Prepare a Performance Review",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "performance-feedback",
+    "aiTool": "Claude",
+    "promptText": "Help me prepare a performance review for a [ROLE TITLE] at my [BUSINESS TYPE]. The period covered is [TIMEFRAME], the goals or expectations they had were [THE GOALS], what went well is [STRENGTHS WITH EXAMPLES], and what needs work is [GAPS WITH EXAMPLES]. Give me a review structure, a balanced written summary, and goals for the next period. Note that nothing in a review should be a surprise, since issues should already have come up in regular feedback, and reviews tend to over weight the last few weeks, so pulling examples from across the whole period gives a fairer picture, and the most useful part is usually the agreed goals going forward rather than the score. Give me the review.",
+    "description": "Prepare a balanced performance review with examples from the whole period.",
+    "useCase": "Use this before a formal review. Nothing in a review should be a surprise, and reviews tend to over weight recent weeks, so pulling examples from across the whole period gives a fairer picture, and the agreed goals going forward are usually more useful than any score.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "TIMEFRAME",
+      "THE GOALS",
+      "STRENGTHS WITH EXAMPLES",
+      "GAPS WITH EXAMPLES"
+    ],
+    "relatedPromptIds": [
+      "perf-self-review-questions",
+      "perf-set-goals",
+      "perf-regular-one-on-ones"
+    ]
+  },
+  {
+    "id": "perf-self-review-questions",
+    "title": "Write Self Review Questions for Your Team",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "performance-feedback",
+    "aiTool": "Gemini",
+    "promptText": "Help me write a short self review for team members to fill in before a review at my [BUSINESS TYPE]. The role or roles are [ROLES], the review period is [TIMEFRAME], and what I want to learn from them is [E.G. WINS, STRUGGLES, WHAT THEY NEED FROM ME, WHERE THEY WANT TO GROW]. Give me a handful of clear questions that are quick to answer but draw out real reflection. Note that asking people to assess their own work first turns a review into a conversation instead of a verdict, and gaps between how they see their work and how I see it are often the most useful thing to discuss, while asking what they need from me shows the review goes both ways. Give me the self review questions.",
+    "description": "Write a short self review that turns a performance review into a conversation.",
+    "useCase": "Use this before reviews. Having people assess their own work first turns the review into a conversation instead of a verdict, the gaps between their view and yours are often the most useful thing to discuss, and asking what they need from you shows it goes both ways.",
+    "variables": [
+      "BUSINESS TYPE",
+      "ROLES",
+      "TIMEFRAME",
+      "E.G. WINS, STRUGGLES, WHAT THEY NEED FROM ME, WHERE THEY WANT TO GROW"
+    ],
+    "relatedPromptIds": [
+      "perf-review-prep",
+      "perf-ask-for-feedback",
+      "perf-set-goals"
+    ]
+  },
+  {
+    "id": "perf-set-goals",
+    "title": "Set Clear Goals for a Team Member",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "performance-feedback",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me set clear goals for a [ROLE TITLE] at my [BUSINESS TYPE] for the next [TIMEFRAME]. What the business needs from this role is [YOUR PRIORITIES], where they are now is [CURRENT PERFORMANCE], and what they want to develop is [THEIR GROWTH INTERESTS]. Give me three to five goals that are specific, measurable where it makes sense, and realistic, with how we will know each is met. Note that vague goals like improve customer service cannot be judged fairly at the end, so specific measures help, but not everything valuable can be counted, and a mix of business goals and goals they care about personally gets more commitment than targets handed down. Give me the goals.",
+    "description": "Set a few specific, realistic goals that mix business needs with personal growth.",
+    "useCase": "Use this at the start of a review period. Vague goals cannot be judged fairly later, so specific measures help, though not everything valuable can be counted, and mixing business goals with ones they care about gets more commitment than targets handed down.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "TIMEFRAME",
+      "YOUR PRIORITIES",
+      "CURRENT PERFORMANCE",
+      "THEIR GROWTH INTERESTS"
+    ],
+    "relatedPromptIds": [
+      "perf-review-prep",
+      "perf-improvement-plan",
+      "perf-growth-conversation"
+    ]
+  },
+  {
+    "id": "perf-improvement-plan",
+    "title": "Write a Fair Performance Improvement Plan",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "performance-feedback",
+    "aiTool": "Claude",
+    "promptText": "Help me write a performance improvement plan for a [ROLE TITLE] at my [BUSINESS TYPE]. The ongoing problem is [THE ISSUE WITH EXAMPLES], what has been tried already is [PREVIOUS FEEDBACK AND SUPPORT], the standard I need them to reach is [THE EXPECTATION], and the timeframe is [LENGTH]. Give me a plan with specific targets, the support I will provide, check in dates, and clear consequences if the targets are not met. Note that an improvement plan is only fair if the targets are achievable and the support is real, since a plan written to justify a decision already made is obvious to the person and can create legal risk, and employment rules differ by country, so I should check what applies before relying on it. Give me the improvement plan.",
+    "description": "Write a fair improvement plan with achievable targets and real support.",
+    "useCase": "Use this when an issue persists after regular feedback. An improvement plan is only fair if targets are achievable and support is real, since one written to justify a decision already made is obvious and can create legal risk, and employment rules differ by country.",
+    "variables": [
+      "ROLE TITLE",
+      "BUSINESS TYPE",
+      "THE ISSUE WITH EXAMPLES",
+      "PREVIOUS FEEDBACK AND SUPPORT",
+      "THE EXPECTATION",
+      "LENGTH"
+    ],
+    "relatedPromptIds": [
+      "perf-difficult-conversation",
+      "perf-written-feedback",
+      "perf-letting-go-decision"
+    ]
+  },
+  {
+    "id": "perf-letting-go-decision",
+    "title": "Decide Whether It Is Time to Let Someone Go",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "performance-feedback",
+    "aiTool": "Claude",
+    "promptText": "Help me think clearly about whether to let a team member go at my [BUSINESS TYPE]. The performance problem is [THE ISSUE], how long it has gone on and what has been tried is [HISTORY AND SUPPORT], the impact on the business is [EFFECT], and what is making me hesitate is [YOUR HESITATION]. Walk me through the decision honestly, including whether I have given clear feedback and a fair chance, and the risks of acting and of not acting. Note that small business owners often keep someone too long out of loyalty or guilt, which strains the rest of the team and the business, but letting someone go without clear warnings first is unfair and can be legally risky, and rules on notice and severance vary a lot by country, so I should check them before deciding. Give me the honest decision framework.",
+    "description": "Think through letting someone go fairly, including the risks of waiting.",
+    "useCase": "Use this when you are unsure whether to keep someone. Owners often keep people too long out of loyalty or guilt, straining the team, but letting someone go without clear warnings is unfair and can be legally risky, and notice and severance rules vary a lot by country.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE ISSUE",
+      "HISTORY AND SUPPORT",
+      "EFFECT",
+      "YOUR HESITATION"
+    ],
+    "relatedPromptIds": [
+      "perf-improvement-plan",
+      "perf-difficult-conversation",
+      "perf-written-feedback"
+    ]
+  },
+  {
+    "id": "perf-feedback-to-contractor",
+    "title": "Give Feedback to a Contractor or Freelancer",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "performance-feedback",
+    "aiTool": "Gemini",
+    "promptText": "Help me give feedback to a contractor or freelancer working with my [BUSINESS TYPE]. The work in question is [THE DELIVERABLE], what fell short is [THE ISSUE AGAINST THE BRIEF], and whether I want to keep working with them is [YES, MAYBE, NO]. Help me write clear feedback tied to the brief, ask for the specific revisions I need, and keep the relationship professional. Note that feedback to a contractor works best when tied to what was agreed in the brief rather than general preferences, since they are delivering against a scope not taking direction like an employee, and if the brief itself was unclear, owning that part keeps a good freelancer willing to work with me again. Give me the contractor feedback.",
+    "description": "Give a contractor clear feedback tied to the agreed brief.",
+    "useCase": "Use this when freelance work misses the mark. Contractor feedback works best tied to what the brief agreed rather than general preferences, since they deliver against a scope, and owning any unclear parts of the brief keeps good freelancers willing to work with you again.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE DELIVERABLE",
+      "THE ISSUE AGAINST THE BRIEF",
+      "YES, MAYBE, NO"
+    ],
+    "relatedPromptIds": [
+      "perf-constructive-feedback",
+      "perf-quick-feedback",
+      "perf-written-feedback"
+    ]
+  },
+  {
+    "id": "perf-ask-for-feedback",
+    "title": "Ask Your Team for Feedback on You",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "performance-feedback",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me ask the people who work for me at my [BUSINESS TYPE] for honest feedback on how I manage them. My team is [WHO], things I suspect I could do better are [YOUR GUESSES], and how I plan to ask is [IN PERSON, ANONYMOUS FORM, ONE ON ONE]. Give me a few specific questions and a way of asking that makes honest answers feel safe. Note that people rarely give the boss honest criticism, especially in a very small team where anonymity is hard, so specific questions like what is one thing I should stop doing work better than are you happy, and how I react to the first piece of criticism decides whether I ever get honest feedback again. Give me the questions and approach.",
+    "description": "Ask your team for honest feedback on how you manage them.",
+    "useCase": "Use this to find your own blind spots as a manager. People rarely criticize the boss honestly, especially in tiny teams where anonymity is hard, so specific questions work better than asking if they are happy, and how you react to the first criticism decides whether you hear more.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO",
+      "YOUR GUESSES",
+      "IN PERSON, ANONYMOUS FORM, ONE ON ONE"
+    ],
+    "relatedPromptIds": [
+      "perf-self-review-questions",
+      "perf-regular-one-on-ones",
+      "perf-growth-conversation"
+    ]
+  },
+  {
+    "id": "perf-growth-conversation",
+    "title": "Have a Career Growth Conversation",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "performance-feedback",
+    "aiTool": "Claude",
+    "promptText": "Help me have a career growth conversation with a good team member at my [BUSINESS TYPE]. Their role is [ROLE TITLE], what they seem interested in is [THEIR INTERESTS OR AMBITIONS], and what growth I can realistically offer is [MORE RESPONSIBILITY, NEW SKILLS, PAY, TITLE, OR LIMITED]. Help me plan the conversation, including being honest if the growth they want is not possible here. Note that small businesses often cannot offer the promotion ladder a large company can, but can offer new responsibility, skills, and closer involvement, and being honest about the limits builds more trust than vague promises that never happen, since a good person who feels stuck will leave either way. Give me the growth conversation plan.",
+    "description": "Talk about growth honestly, including what your small business can and cannot offer.",
+    "useCase": "Use this to keep good people engaged. Small businesses rarely have a promotion ladder but can offer new responsibility, skills, and involvement, and honesty about the limits builds more trust than vague promises, since a good person who feels stuck will leave either way.",
+    "variables": [
+      "BUSINESS TYPE",
+      "ROLE TITLE",
+      "THEIR INTERESTS OR AMBITIONS",
+      "MORE RESPONSIBILITY, NEW SKILLS, PAY, TITLE, OR LIMITED"
+    ],
+    "relatedPromptIds": [
+      "perf-set-goals",
+      "perf-pay-conversation",
+      "perf-positive-feedback"
+    ]
+  },
+  {
+    "id": "perf-pay-conversation",
+    "title": "Handle a Pay Raise Conversation",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "performance-feedback",
+    "aiTool": "Gemini",
+    "promptText": "Help me handle a conversation about pay with a team member at my [BUSINESS TYPE]. They have asked for or I am considering [THE RAISE OR CHANGE], their performance is [YOUR HONEST VIEW], what the business can afford is [YOUR REAL LIMITS], and local pay for similar roles is [WHAT YOU KNOW, OR UNSURE]. Help me prepare whether the answer is yes, not yet, or no, with honest reasoning and, if not now, what would change it. Note that a vague maybe later without criteria feels like a no and damages trust, so tying pay to clear expectations and a timeline is fairer, and I should check current local market rates rather than guess, since underpaying a strong person usually costs more in turnover than the raise would. Give me the conversation plan.",
+    "description": "Prepare an honest yes, not yet, or no answer to a pay discussion.",
+    "useCase": "Use this when pay comes up. A vague maybe later feels like a no and damages trust, so tying pay to clear expectations and a timeline is fairer, and checking local market rates rather than guessing matters, since underpaying a strong person often costs more in turnover than the raise.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE RAISE OR CHANGE",
+      "YOUR HONEST VIEW",
+      "YOUR REAL LIMITS",
+      "WHAT YOU KNOW, OR UNSURE"
+    ],
+    "relatedPromptIds": [
+      "perf-growth-conversation",
+      "perf-review-prep",
+      "perf-set-goals"
+    ]
+  },
+  {
+    "id": "perf-follow-up-after-feedback",
+    "title": "Follow Up After Giving Feedback",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "performance-feedback",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me follow up after giving a team member feedback at my [BUSINESS TYPE]. The feedback was about [THE ISSUE], what we agreed was [THE ACTIONS], and what I have seen since is [IMPROVEMENT, NO CHANGE, OR MIXED]. Help me plan what to say at the follow up, including recognizing progress and addressing anything that has not changed. Note that feedback without follow up quietly signals it did not matter, so a short check in a week or two later shows I meant it, and noticing real improvement out loud is as important as raising what is still missing, since people who change and get no acknowledgment tend to stop trying. Give me the follow up plan.",
+    "description": "Follow up on feedback to recognize progress or address what has not changed.",
+    "useCase": "Use this a week or two after giving feedback. Feedback without follow up signals it did not matter, so a short check in shows you meant it, and noticing real improvement out loud matters as much as raising what is missing, since people who change unnoticed tend to stop trying.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE ISSUE",
+      "THE ACTIONS",
+      "IMPROVEMENT, NO CHANGE, OR MIXED"
+    ],
+    "relatedPromptIds": [
+      "perf-constructive-feedback",
+      "perf-written-feedback",
+      "perf-improvement-plan"
+    ]
+  },
+  {
+    "id": "perf-feedback-across-cultures",
+    "title": "Adapt Feedback Across Cultures",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "performance-feedback",
+    "aiTool": "Claude",
+    "promptText": "Help me adapt how I give feedback to a team member from a different cultural background at my [BUSINESS TYPE]. My usual feedback style is [YOUR STYLE, E.G. VERY DIRECT, INFORMAL], their background or where they are based is [COUNTRY OR CONTEXT], and what I have noticed so far is [E.G. THEY NEVER DISAGREE, THEY SEEM HURT BY CRITICISM, THEY MISS HINTS]. Help me adjust my approach so the message lands without being lost or causing offense. Note that norms around direct criticism, saving face, disagreeing with a boss, and public versus private feedback vary widely between cultures, so feedback that feels normal to me can feel harsh or be missed entirely, but I should treat cultural patterns as a starting point and ask the person directly how they prefer to receive feedback rather than stereotype them. Give me the adjusted approach.",
+    "description": "Adjust how you give feedback so it lands across cultural differences.",
+    "useCase": "Use this when feedback is not landing with someone from a different background. Norms around direct criticism, saving face, and disagreeing with a boss vary widely, so your normal style can feel harsh or be missed, but asking the person how they prefer feedback beats relying on stereotypes.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR STYLE, E.G. VERY DIRECT, INFORMAL",
+      "COUNTRY OR CONTEXT",
+      "E.G. THEY NEVER DISAGREE, THEY SEEM HURT BY CRITICISM, THEY MISS HINTS"
+    ],
+    "relatedPromptIds": [
+      "perf-constructive-feedback",
+      "perf-defensive-reaction",
+      "perf-ask-for-feedback"
+    ]
   }
 ]
