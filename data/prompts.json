@@ -40582,5 +40582,385 @@
       "kpi-set-targets",
       "kpi-choose-core"
     ]
+  },
+  {
+    "id": "mreport-owner-template",
+    "title": "Build a Monthly Report Template for Your Business",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "monthly-report-templates",
+    "aiTool": "Claude",
+    "promptText": "Help me build a simple monthly report template for my [BUSINESS TYPE]. My KPIs are [YOUR KPIS], where my data comes from is [SOURCES, E.G. PAYMENT APPS, SPREADSHEET, BANK, ANALYTICS], who will read it is [JUST ME, A PARTNER, TEAM], and the time I can spend on it each month is [TIME]. Give me a template with sections for headline numbers, what changed and why, wins, problems, and next month's actions, kept to one or two pages. Note that a monthly report is only useful if I actually complete it and act on it, so a short template I can fill in quickly beats an impressive one that takes a full day, and the written explanation of why numbers moved is usually more valuable than the numbers alone. Give me the monthly report template.",
+    "description": "Build a short monthly report template with numbers, reasons, and actions.",
+    "useCase": "Use this to start a monthly reporting habit. A report is only useful if you complete and act on it, so a short template you fill in quickly beats an impressive one that takes a day, and explaining why numbers moved is usually more valuable than the numbers alone.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR KPIS",
+      "SOURCES, E.G. PAYMENT APPS, SPREADSHEET, BANK, ANALYTICS",
+      "JUST ME, A PARTNER, TEAM",
+      "TIME"
+    ],
+    "relatedPromptIds": [
+      "mreport-one-page",
+      "mreport-commentary",
+      "mreport-action-items"
+    ]
+  },
+  {
+    "id": "mreport-one-page",
+    "title": "Create a One Page Monthly Summary",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "monthly-report-templates",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me turn my monthly numbers into a one page summary for my [BUSINESS TYPE]. This month's numbers are [YOUR NUMBERS], last month's numbers are [LAST MONTH], and the main things that happened are [KEY EVENTS]. Give me a one page layout with a headline sentence, a small table of key numbers with change from last month, three bullet points on what drove the results, and the top action for next month. Note that most people, including me on a busy day, read only the top of a report, so the most important takeaway belongs in the first line, and a single page forces me to separate the few things that matter from the many that do not. Give me the one page summary.",
+    "description": "Fit the month onto one page with the key takeaway in the first line.",
+    "useCase": "Use this when a full report is too much. Most readers, including you on a busy day, read only the top of a report, so the key takeaway belongs in the first line, and a single page forces you to separate the few things that matter from the many that do not.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR NUMBERS",
+      "LAST MONTH",
+      "KEY EVENTS"
+    ],
+    "relatedPromptIds": [
+      "mreport-owner-template",
+      "mreport-quick-summary",
+      "mreport-phone-version"
+    ]
+  },
+  {
+    "id": "mreport-quick-summary",
+    "title": "Get a Quick Monthly Summary From Your Numbers",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "monthly-report-templates",
+    "aiTool": "Grok",
+    "promptText": "Turn my numbers into a quick monthly summary. My business is [WHAT YOU DO], this month's numbers are [THIS MONTH], and last month's are [LAST MONTH]. Give me a three sentence summary of how the month went, the biggest change, and one thing to focus on next month, no long explanation, just the summary. Give me the summary.",
+    "description": "Turn this month's and last month's numbers into a three sentence summary.",
+    "useCase": "Use this when you want a fast read on the month. A three sentence summary of how it went, the biggest change, and one focus for next month gives you a usable takeaway in a minute, and a quick summary every month beats a detailed report you only manage twice a year.",
+    "variables": [
+      "WHAT YOU DO",
+      "THIS MONTH",
+      "LAST MONTH"
+    ],
+    "relatedPromptIds": [
+      "mreport-one-page",
+      "mreport-commentary",
+      "mreport-owner-template"
+    ]
+  },
+  {
+    "id": "mreport-commentary",
+    "title": "Write the Commentary That Explains the Numbers",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "monthly-report-templates",
+    "aiTool": "Claude",
+    "promptText": "Help me write the commentary section of my monthly report for my [BUSINESS TYPE]. The numbers that changed most are [KEY CHANGES], what I think caused them is [YOUR EXPLANATIONS], and anything unusual this month was [E.G. HOLIDAYS, A PROMOTION, A STOCK PROBLEM, WEATHER, A BIG ORDER]. Write a short, plain commentary that explains what happened, separates known causes from guesses, and notes what to watch next month. Note that numbers without explanation are easy to misread later, especially when looking back months from now, and being honest about which explanations are confirmed and which are hunches stops me building strategy on a guess, while noting one off events keeps a strong or weak month from being treated as the new normal. Give me the commentary.",
+    "description": "Explain why the numbers moved, separating confirmed causes from guesses.",
+    "useCase": "Use this every month alongside your numbers. Numbers without explanation are easy to misread later, so separating confirmed causes from hunches stops you building strategy on a guess, and noting one off events keeps an unusual month from being treated as the new normal.",
+    "variables": [
+      "BUSINESS TYPE",
+      "KEY CHANGES",
+      "YOUR EXPLANATIONS",
+      "E.G. HOLIDAYS, A PROMOTION, A STOCK PROBLEM, WEATHER, A BIG ORDER"
+    ],
+    "relatedPromptIds": [
+      "mreport-owner-template",
+      "mreport-comparisons",
+      "mreport-action-items"
+    ]
+  },
+  {
+    "id": "mreport-comparisons",
+    "title": "Compare This Month Fairly With the Past",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "monthly-report-templates",
+    "aiTool": "Gemini",
+    "promptText": "Help me set up fair comparisons in my monthly report for my [BUSINESS TYPE]. The numbers I have are [THIS MONTH, LAST MONTH, SAME MONTH LAST YEAR IF AVAILABLE], how seasonal my business is [E.G. VERY SEASONAL, STEADY, TIED TO HOLIDAYS OR TOURIST SEASONS], and differences between months are [E.G. NUMBER OF DAYS, HOLIDAYS, OPEN DAYS]. Show me which comparisons to include, like month over month, same month last year, and a three month average, and how to read them. Note that comparing only with last month can be misleading for seasonal businesses, since a drop after a holiday peak may be completely normal, so comparing with the same month last year and a rolling average gives a truer picture, and adjusting for things like fewer open days avoids false alarms. Give me the comparison setup.",
+    "description": "Compare months fairly using last year and rolling averages for seasonality.",
+    "useCase": "Use this if your business has seasons. Comparing only with last month can mislead, since a drop after a peak may be normal, so comparing with the same month last year and a rolling average gives a truer picture, and adjusting for fewer open days avoids false alarms.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THIS MONTH, LAST MONTH, SAME MONTH LAST YEAR IF AVAILABLE",
+      "E.G. VERY SEASONAL, STEADY, TIED TO HOLIDAYS OR TOURIST SEASONS",
+      "E.G. NUMBER OF DAYS, HOLIDAYS, OPEN DAYS"
+    ],
+    "relatedPromptIds": [
+      "mreport-commentary",
+      "mreport-sales-section",
+      "mreport-trend-view"
+    ]
+  },
+  {
+    "id": "mreport-sales-section",
+    "title": "Write the Sales Section of a Monthly Report",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "monthly-report-templates",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write the sales section of my monthly report for my [BUSINESS TYPE]. My sales data for the month is [REVENUE, NUMBER OF ORDERS OR CLIENTS, AVERAGE ORDER VALUE], what sold best and worst is [TOP AND BOTTOM PRODUCTS OR SERVICES], and where sales came from is [CHANNELS, IF KNOWN]. Structure a short sales section with totals, the main drivers, product or service mix, and channel breakdown. Note that total revenue alone hides important shifts, like a few large orders masking fewer customers, or a best seller carrying weaker products, so breaking sales into number of orders, average value, and mix shows what actually changed, while channel data is worth including even if it is rough. Give me the sales section.",
+    "description": "Break monthly sales into orders, average value, product mix, and channels.",
+    "useCase": "Use this for the sales part of your report. Total revenue alone hides shifts, like a few large orders masking fewer customers, so breaking sales into orders, average value, and mix shows what really changed, and rough channel data is still worth including.",
+    "variables": [
+      "BUSINESS TYPE",
+      "REVENUE, NUMBER OF ORDERS OR CLIENTS, AVERAGE ORDER VALUE",
+      "TOP AND BOTTOM PRODUCTS OR SERVICES",
+      "CHANNELS, IF KNOWN"
+    ],
+    "relatedPromptIds": [
+      "mreport-finance-section",
+      "mreport-marketing-section",
+      "mreport-comparisons"
+    ]
+  },
+  {
+    "id": "mreport-finance-section",
+    "title": "Write the Money Section of a Monthly Report",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "monthly-report-templates",
+    "aiTool": "Claude",
+    "promptText": "Help me write the money section of my monthly report for my [BUSINESS TYPE]. My income this month was [REVENUE], my main expenses were [COSTS BY CATEGORY], my cash on hand is [CASH POSITION], and money owed to me or by me is [UNPAID INVOICES AND BILLS]. Give me a simple money summary showing revenue, costs, profit, cash, and anything overdue, with plain notes on what stands out. Note that revenue and profit can look fine while cash is running low because payments arrive late or costs are paid upfront, so the money section should always show cash and overdue amounts, not just sales, and this summary is for understanding the business, while tax and accounting decisions still deserve a qualified accountant. Give me the money section.",
+    "description": "Summarize revenue, costs, profit, cash, and overdue amounts in plain terms.",
+    "useCase": "Use this for the money part of your report. Revenue and profit can look fine while cash runs low because payments arrive late, so always show cash and overdue amounts, not just sales, and keep in mind this summary is for understanding while tax decisions deserve an accountant.",
+    "variables": [
+      "BUSINESS TYPE",
+      "REVENUE",
+      "COSTS BY CATEGORY",
+      "CASH POSITION",
+      "UNPAID INVOICES AND BILLS"
+    ],
+    "relatedPromptIds": [
+      "mreport-sales-section",
+      "mreport-owner-template",
+      "mreport-flag-risks"
+    ]
+  },
+  {
+    "id": "mreport-marketing-section",
+    "title": "Write the Marketing Section of a Monthly Report",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "monthly-report-templates",
+    "aiTool": "Gemini",
+    "promptText": "Help me write the marketing section of my monthly report for my [BUSINESS TYPE]. The marketing I did this month was [CAMPAIGNS, POSTS, ADS, EMAILS, EVENTS], what I spent in time and money is [YOUR INVESTMENT], and the results I can see are [REACH, LEADS, SALES, SIGN UPS]. Structure a short marketing section showing what I did, what it cost, what it produced, and what to keep, change, or stop. Note that marketing reports often list activity without linking it to results, which makes it impossible to know what is working, so connecting each main activity to leads or sales, even roughly, and including my own time as a cost, turns the section into a basis for decisions rather than a record of being busy. Give me the marketing section.",
+    "description": "Link each marketing activity to its cost and results, then decide.",
+    "useCase": "Use this for the marketing part of your report. Marketing reports often list activity without linking it to results, so connecting each activity to leads or sales, even roughly, and counting your time as a cost turns the section into a basis for decisions rather than a record of being busy.",
+    "variables": [
+      "BUSINESS TYPE",
+      "CAMPAIGNS, POSTS, ADS, EMAILS, EVENTS",
+      "YOUR INVESTMENT",
+      "REACH, LEADS, SALES, SIGN UPS"
+    ],
+    "relatedPromptIds": [
+      "mreport-sales-section",
+      "mreport-customer-section",
+      "mreport-action-items"
+    ]
+  },
+  {
+    "id": "mreport-customer-section",
+    "title": "Write the Customer Section of a Monthly Report",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "monthly-report-templates",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write a customer section for my monthly report for my [BUSINESS TYPE]. What I know about customers this month is [NEW VERSUS RETURNING, REVIEWS, COMPLAINTS, REFUNDS, FEEDBACK], any patterns I noticed are [WHAT YOU HEARD OR SAW], and how I collect feedback is [YOUR METHODS]. Structure a short section covering new and returning customers, satisfaction signals, complaints and their causes, and one thing customers are telling me. Note that numbers show what customers did but not why, so including a few real comments or common complaints, alongside counts, often explains a trend better than any chart, and recurring complaints are usually the cheapest improvement opportunity in the business. Give me the customer section.",
+    "description": "Report on new and returning customers, feedback, and recurring complaints.",
+    "useCase": "Use this to keep customers visible in your report. Numbers show what customers did but not why, so a few real comments or common complaints alongside counts often explain a trend better than any chart, and recurring complaints are usually the cheapest improvement opportunity.",
+    "variables": [
+      "BUSINESS TYPE",
+      "NEW VERSUS RETURNING, REVIEWS, COMPLAINTS, REFUNDS, FEEDBACK",
+      "WHAT YOU HEARD OR SAW",
+      "YOUR METHODS"
+    ],
+    "relatedPromptIds": [
+      "mreport-marketing-section",
+      "mreport-operations-section",
+      "mreport-commentary"
+    ]
+  },
+  {
+    "id": "mreport-operations-section",
+    "title": "Write the Operations Section of a Monthly Report",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "monthly-report-templates",
+    "aiTool": "Claude",
+    "promptText": "Help me write an operations section for my monthly report for my [BUSINESS TYPE]. How things ran this month is [E.G. DELIVERY TIMES, STOCK LEVELS, MISTAKES, SUPPLIER ISSUES, CAPACITY], problems that came up are [ISSUES], and changes I made to how things work are [IMPROVEMENTS OR NEW TOOLS]. Structure a short section covering what ran smoothly, what broke, root causes, and fixes in progress. Note that operational problems like late deliveries, stock outs, or repeated mistakes often show up in sales and reviews weeks later, so tracking them monthly catches issues early, and recording the root cause rather than just the incident helps stop the same problem returning every month. Give me the operations section.",
+    "description": "Record what ran smoothly, what broke, and the root causes behind it.",
+    "useCase": "Use this to catch operational problems early. Late deliveries, stock outs, or repeated mistakes often surface in sales and reviews weeks later, so tracking them monthly catches issues early, and recording the root cause rather than just the incident stops the same problem returning.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. DELIVERY TIMES, STOCK LEVELS, MISTAKES, SUPPLIER ISSUES, CAPACITY",
+      "ISSUES",
+      "IMPROVEMENTS OR NEW TOOLS"
+    ],
+    "relatedPromptIds": [
+      "mreport-customer-section",
+      "mreport-flag-risks",
+      "mreport-action-items"
+    ]
+  },
+  {
+    "id": "mreport-action-items",
+    "title": "Turn a Monthly Report Into Actions",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "monthly-report-templates",
+    "aiTool": "Gemini",
+    "promptText": "Help me turn my monthly report into clear actions for next month at my [BUSINESS TYPE]. The key findings from this month are [MAIN TAKEAWAYS], last month's planned actions and whether they happened are [PREVIOUS ACTIONS AND STATUS], and my capacity next month is [YOUR TIME]. Give me three or fewer specific actions with an owner and a date, plus a check on whether last month's actions worked. Note that a report that does not lead to decisions is just paperwork, and long action lists rarely get done, so limiting to a few actions linked directly to the findings, and checking last month's actions before adding new ones, closes the loop and shows whether the changes I make actually move the numbers. Give me the action list.",
+    "description": "Turn report findings into three or fewer actions and check last month's.",
+    "useCase": "Use this at the end of every monthly report. A report that does not lead to decisions is just paperwork and long action lists rarely get done, so a few actions linked to the findings, with last month's actions checked first, closes the loop and shows whether your changes move the numbers.",
+    "variables": [
+      "BUSINESS TYPE",
+      "MAIN TAKEAWAYS",
+      "PREVIOUS ACTIONS AND STATUS",
+      "YOUR TIME"
+    ],
+    "relatedPromptIds": [
+      "mreport-owner-template",
+      "mreport-commentary",
+      "mreport-flag-risks"
+    ]
+  },
+  {
+    "id": "mreport-flag-risks",
+    "title": "Add a Risks and Watch List Section",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "monthly-report-templates",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me add a short risks and watch list section to my monthly report for my [BUSINESS TYPE]. Things that worry me are [E.G. ONE CLIENT IS MOST OF REVENUE, CASH IS TIGHT, A SUPPLIER IS UNRELIABLE, SEASON IS ENDING], early signs I have noticed are [WARNING SIGNS], and what I could do about each is [POSSIBLE RESPONSES]. Structure a short list with each risk, how likely and serious it is, the sign to watch, and what I will do if it gets worse. Note that monthly reports usually focus on what happened rather than what could go wrong, and small businesses are often hit by risks that were visible months earlier, like dependence on one big customer, so a short watch list reviewed every month keeps those risks in sight before they become a crisis. Give me the risks section.",
+    "description": "Keep a short monthly watch list of risks, warning signs, and responses.",
+    "useCase": "Use this to spot trouble before it arrives. Reports usually cover what happened rather than what could go wrong, and small businesses are often hit by risks visible months earlier, like dependence on one big customer, so a short monthly watch list keeps them in sight before they become a crisis.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. ONE CLIENT IS MOST OF REVENUE, CASH IS TIGHT, A SUPPLIER IS UNRELIABLE, SEASON IS ENDING",
+      "WARNING SIGNS",
+      "POSSIBLE RESPONSES"
+    ],
+    "relatedPromptIds": [
+      "mreport-finance-section",
+      "mreport-operations-section",
+      "mreport-action-items"
+    ]
+  },
+  {
+    "id": "mreport-partner-version",
+    "title": "Write a Monthly Report for a Partner or Investor",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "monthly-report-templates",
+    "aiTool": "Claude",
+    "promptText": "Help me write a monthly update for a business partner, co owner, or investor in my [BUSINESS TYPE]. Who will read it is [WHO AND WHAT THEY CARE ABOUT], this month's key numbers are [YOUR NUMBERS], the main wins and problems are [HIGHLIGHTS AND CHALLENGES], and what I need from them is [E.G. ADVICE, INTRODUCTIONS, A DECISION, NOTHING]. Write a concise update covering headline results, progress against goals, problems with what I am doing about them, and specific asks. Note that people with a stake in the business lose trust fastest when bad news is hidden or arrives late, so reporting problems early and plainly, alongside a plan, usually strengthens the relationship, and a clear ask at the end makes it easy for them to actually help. Give me the partner update.",
+    "description": "Write a concise update that reports problems plainly and asks for help.",
+    "useCase": "Use this for anyone with a stake in your business. Partners and investors lose trust fastest when bad news is hidden or late, so reporting problems early and plainly with a plan usually strengthens the relationship, and a clear ask at the end makes it easy for them to help.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO AND WHAT THEY CARE ABOUT",
+      "YOUR NUMBERS",
+      "HIGHLIGHTS AND CHALLENGES",
+      "E.G. ADVICE, INTRODUCTIONS, A DECISION, NOTHING"
+    ],
+    "relatedPromptIds": [
+      "mreport-one-page",
+      "mreport-team-version",
+      "mreport-flag-risks"
+    ]
+  },
+  {
+    "id": "mreport-team-version",
+    "title": "Share a Monthly Update With Your Team",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "monthly-report-templates",
+    "aiTool": "Gemini",
+    "promptText": "Help me write a monthly update to share with my team or regular contractors at my [BUSINESS TYPE]. What I am comfortable sharing is [WHICH NUMBERS AND DETAILS], the wins worth recognizing are [WHAT WENT WELL AND WHO HELPED], the challenges are [PROBLEMS], and priorities for next month are [FOCUS AREAS]. Write a short, encouraging update that explains how the business is doing, recognizes contributions, and connects next month's priorities to everyone's work. Note that team members often have little idea how the business is actually doing, which makes priorities feel arbitrary, so sharing a few honest numbers and the reasons behind decisions builds trust and better judgment, though I can decide which financial details stay private. Give me the team update.",
+    "description": "Share a short monthly update that explains priorities and recognizes people.",
+    "useCase": "Use this if anyone works with you regularly. Team members often have little idea how the business is doing, which makes priorities feel arbitrary, so sharing a few honest numbers and reasons behind decisions builds trust and better judgment, while you choose which financial details stay private.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHICH NUMBERS AND DETAILS",
+      "WHAT WENT WELL AND WHO HELPED",
+      "PROBLEMS",
+      "FOCUS AREAS"
+    ],
+    "relatedPromptIds": [
+      "mreport-partner-version",
+      "mreport-action-items",
+      "mreport-one-page"
+    ]
+  },
+  {
+    "id": "mreport-data-gathering",
+    "title": "Speed Up Gathering Data for the Monthly Report",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "monthly-report-templates",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me speed up gathering the data for my monthly report for my [BUSINESS TYPE]. Where my numbers live is [E.G. BANK APP, PAYMENT PROVIDERS, MARKETPLACE DASHBOARD, CHAT ORDERS, SPREADSHEET, POS], how long gathering takes now is [TIME], and the parts that are slowest are [THE PAIN POINTS]. Suggest a simple checklist in the order to collect each number, small changes to record data as I go, and anything that could be automated cheaply. Note that the hardest part of a monthly report is usually collecting scattered numbers rather than writing it, and recording a few figures weekly, or keeping one simple running sheet, often cuts report time dramatically, while fancy automation is only worth it if the manual process is already clear. Give me the data gathering plan.",
+    "description": "Cut report time with a collection checklist and recording data as you go.",
+    "useCase": "Use this if the monthly report takes too long. The hardest part is usually collecting scattered numbers, so recording a few figures weekly or keeping one running sheet often cuts report time dramatically, while automation only pays off once the manual process is already clear.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. BANK APP, PAYMENT PROVIDERS, MARKETPLACE DASHBOARD, CHAT ORDERS, SPREADSHEET, POS",
+      "TIME",
+      "THE PAIN POINTS"
+    ],
+    "relatedPromptIds": [
+      "mreport-owner-template",
+      "mreport-trend-view",
+      "mreport-review-checklist"
+    ]
+  },
+  {
+    "id": "mreport-trend-view",
+    "title": "Add a Twelve Month Trend View",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "monthly-report-templates",
+    "aiTool": "Claude",
+    "promptText": "Help me add a simple trend view to my monthly report for my [BUSINESS TYPE]. The KPIs I track are [YOUR KPIS], how many months of history I have is [MONTHS OF DATA], and where I keep the data is [SPREADSHEET OR TOOL]. Give me a simple table or chart layout showing the last twelve months for each KPI, and how to read the trend rather than just the latest month. Note that one month's number can be misleading on its own, while seeing twelve months side by side shows whether things are steadily improving, flat, or slowly declining, which is often more important than any single month, and a slow decline is easy to miss when I only compare with the previous month. Give me the trend view.",
+    "description": "Show twelve months of each KPI side by side to see the real direction.",
+    "useCase": "Use this once you have a few months of data. One month's number can mislead, while twelve months side by side show whether things are steadily improving, flat, or slowly declining, and a slow decline is easy to miss when you only compare with the previous month.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR KPIS",
+      "MONTHS OF DATA",
+      "SPREADSHEET OR TOOL"
+    ],
+    "relatedPromptIds": [
+      "mreport-comparisons",
+      "mreport-data-gathering",
+      "mreport-commentary"
+    ]
+  },
+  {
+    "id": "mreport-phone-version",
+    "title": "Create a Mobile Friendly Monthly Snapshot",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "monthly-report-templates",
+    "aiTool": "Gemini",
+    "promptText": "Help me create a short monthly snapshot I can read and share easily on a phone for my [BUSINESS TYPE]. The few numbers that matter most are [YOUR TOP KPIS], who I might send it to is [E.G. MYSELF, A PARTNER, FAMILY MEMBER INVOLVED IN THE BUSINESS], and the messaging app I use is [WHATSAPP, TELEGRAM, LINE, EMAIL]. Give me a short text format with the key numbers, change from last month, one highlight, one concern, and one next step. Note that many owners run their business from a phone and rarely open a full report, so a short message style snapshot is more likely to actually be read and discussed, while the full report can still exist for when deeper detail is needed. Give me the mobile snapshot format.",
+    "description": "Create a short message style monthly snapshot to read and share by phone.",
+    "useCase": "Use this if you run your business from your phone. Many owners rarely open a full report, so a short message style snapshot with key numbers, a highlight, a concern, and a next step is more likely to be read and discussed, while the full report stays available for deeper detail.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR TOP KPIS",
+      "E.G. MYSELF, A PARTNER, FAMILY MEMBER INVOLVED IN THE BUSINESS",
+      "WHATSAPP, TELEGRAM, LINE, EMAIL"
+    ],
+    "relatedPromptIds": [
+      "mreport-one-page",
+      "mreport-quick-summary",
+      "mreport-team-version"
+    ]
+  },
+  {
+    "id": "mreport-review-checklist",
+    "title": "Check a Monthly Report Before Sharing It",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "monthly-report-templates",
+    "aiTool": "Claude",
+    "promptText": "Help me check my monthly report before I rely on it or share it for my [BUSINESS TYPE]. Here is the report: [PASTE THE REPORT OR KEY PARTS], and who will read it is [WHO]. Check whether the numbers are consistent, whether totals add up, whether anything looks suspiciously high or low, whether comparisons are fair, whether explanations are clearly marked as confirmed or guessed, and whether the main takeaway is obvious. Note that small errors like a missed refund, a duplicated order, or a changed definition can make a report tell the wrong story, and a quick sanity check before acting on it or sending it to others protects my decisions and my credibility, especially when a number has changed dramatically. Give me the review.",
+    "description": "Sanity check a report for errors and unclear takeaways before using it.",
+    "useCase": "Use this before acting on or sharing a report. Small errors like a missed refund, duplicated order, or changed definition can make a report tell the wrong story, so a quick sanity check protects your decisions and credibility, especially when a number has changed dramatically.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THE REPORT OR KEY PARTS",
+      "WHO"
+    ],
+    "relatedPromptIds": [
+      "mreport-data-gathering",
+      "mreport-commentary",
+      "mreport-partner-version"
+    ]
   }
 ]
