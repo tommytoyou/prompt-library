@@ -36760,5 +36760,391 @@
       "podguest-thank-host",
       "podguest-pitch-email"
     ]
+  },
+  {
+    "id": "affiliate-program-fit",
+    "title": "Decide Whether an Affiliate Program Makes Sense",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "affiliate-recruitment",
+    "aiTool": "Claude",
+    "promptText": "Help me decide honestly whether an affiliate program makes sense for my [BUSINESS TYPE]. What I sell is [YOUR PRODUCT OR SERVICE], my price and margin are [PRICE AND MARGIN], how customers currently find me is [YOUR MAIN CHANNELS], and how much time I can put into managing affiliates is [YOUR TIME]. Tell me whether the numbers and my situation support a program, and what kind would fit. Note that affiliate programs work best with healthy margins, an offer people are happy to recommend, and a way to track sales, while low margin products leave too little to pay a meaningful commission, and a program needs ongoing management, since most signed up affiliates do little unless supported, so it is worth checking the fit before building anything. Give me the honest assessment.",
+    "description": "Check whether your margins, offer, and time support an affiliate program.",
+    "useCase": "Use this before setting up a program. Affiliate programs need healthy margins, an offer people are happy to recommend, and sales tracking, while low margin products leave too little for a meaningful commission, and most affiliates do little without support, so check the fit first.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR PRODUCT OR SERVICE",
+      "PRICE AND MARGIN",
+      "YOUR MAIN CHANNELS",
+      "YOUR TIME"
+    ],
+    "relatedPromptIds": [
+      "affiliate-commission-design",
+      "affiliate-ideal-profile",
+      "affiliate-program-terms"
+    ]
+  },
+  {
+    "id": "affiliate-commission-design",
+    "title": "Design a Commission Structure",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "affiliate-recruitment",
+    "aiTool": "Claude",
+    "promptText": "Help me design a commission structure for affiliates promoting my [BUSINESS TYPE]. My product price is [PRICE], my margin after costs is [MARGIN], whether customers buy once or repeatedly is [ONE TIME OR RECURRING], and what similar programs in my space pay is [WHAT YOU KNOW, OR UNSURE]. Suggest a few options, like a flat fee, a percentage, recurring commission, or tiers, with what each costs me per sale and how attractive it is to affiliates. Note that the commission has to be big enough to be worth an affiliate's effort but sustainable for me, since a generous rate I later have to cut damages trust badly, so it is safer to start at a rate I can keep and add bonuses for top performers, and I should check current rates in my niche rather than guess. Give me the commission options.",
+    "description": "Design a commission that motivates affiliates and stays sustainable for you.",
+    "useCase": "Use this when setting affiliate rates. The commission must be worth the affiliate's effort but sustainable for you, since cutting a generous rate later damages trust badly, so start at a rate you can keep, add bonuses for top performers, and check current rates in your niche.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRICE",
+      "MARGIN",
+      "ONE TIME OR RECURRING",
+      "WHAT YOU KNOW, OR UNSURE"
+    ],
+    "relatedPromptIds": [
+      "affiliate-program-fit",
+      "affiliate-program-terms",
+      "affiliate-tracking-payouts"
+    ]
+  },
+  {
+    "id": "affiliate-quick-invite",
+    "title": "Get a Quick Affiliate Invitation Message",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "affiliate-recruitment",
+    "aiTool": "Grok",
+    "promptText": "I want to invite someone to become an affiliate quickly. My business is [WHAT YOU SELL], the person is [WHO AND WHY THEY FIT], and the commission is [YOUR OFFER]. Give me a short, friendly invitation message that explains the offer and the next step, no explanation, just the message. Give me the invitation.",
+    "description": "Get a short, friendly affiliate invitation message fast.",
+    "useCase": "Use this when you spot a good affiliate candidate. A short message explaining who you are, why they fit, the commission, and the next step is usually enough for a first contact, and inviting a good fit today beats waiting for a perfect recruitment campaign.",
+    "variables": [
+      "WHAT YOU SELL",
+      "WHO AND WHY THEY FIT",
+      "YOUR OFFER"
+    ],
+    "relatedPromptIds": [
+      "affiliate-recruit-message",
+      "affiliate-ideal-profile",
+      "affiliate-customers-as-affiliates"
+    ]
+  },
+  {
+    "id": "affiliate-ideal-profile",
+    "title": "Define Your Ideal Affiliate",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "affiliate-recruitment",
+    "aiTool": "Gemini",
+    "promptText": "Help me define the ideal affiliate for my [BUSINESS TYPE]. My customers are [WHO THEY ARE], where they get advice and recommendations is [E.G. BLOGGERS, CREATORS, COMMUNITIES, CONSULTANTS, COMPLEMENTARY BUSINESSES], and the kind of affiliate I want to avoid is [WHO]. Describe the affiliate profiles most likely to drive real sales and how to recognize them. Note that the best affiliates are trusted by exactly my customers, not simply big audiences, since a small trusted voice often outsells a large account whose followers do not care about my product, and affiliates who rely on spammy tactics or misleading claims can damage my brand, so fit and trust matter more than reach. Give me the ideal affiliate profiles.",
+    "description": "Define the affiliates trusted by your customers, not just big audiences.",
+    "useCase": "Use this before recruiting anyone. The best affiliates are trusted by exactly your customers, and a small trusted voice often outsells a large account whose followers do not care, while spammy or misleading affiliates can damage your brand, so fit and trust matter more than reach.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO THEY ARE",
+      "E.G. BLOGGERS, CREATORS, COMMUNITIES, CONSULTANTS, COMPLEMENTARY BUSINESSES",
+      "WHO"
+    ],
+    "relatedPromptIds": [
+      "affiliate-find-candidates",
+      "affiliate-program-fit",
+      "affiliate-recruit-message"
+    ]
+  },
+  {
+    "id": "affiliate-find-candidates",
+    "title": "Find Potential Affiliates",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "affiliate-recruitment",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me find potential affiliates for my [BUSINESS TYPE]. My ideal affiliate is [THE PROFILE], my niche keywords are [WHAT PEOPLE SEARCH FOR], and the platforms where my customers spend time are [WHERE]. Give me practical ways to find candidates, from search and social to communities, existing customers, and affiliate networks, plus what to check before reaching out. Note that people who already recommend products in my niche, or who already use and like my product, are far easier to recruit than strangers, so starting with customers, reviewers, and complementary businesses usually beats cold outreach to large accounts, and checking their recent content and engagement filters out inactive or fake audiences. Give me the sourcing plan.",
+    "description": "Find affiliate candidates starting with people already close to your niche.",
+    "useCase": "Use this when building your affiliate list. People already recommending products in your niche, or already using yours, are far easier to recruit than strangers, so starting with customers, reviewers, and complementary businesses beats cold outreach, and checking recent engagement filters out fake audiences.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PROFILE",
+      "WHAT PEOPLE SEARCH FOR",
+      "WHERE"
+    ],
+    "relatedPromptIds": [
+      "affiliate-ideal-profile",
+      "affiliate-customers-as-affiliates",
+      "affiliate-recruit-message"
+    ]
+  },
+  {
+    "id": "affiliate-customers-as-affiliates",
+    "title": "Turn Happy Customers Into Affiliates",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "affiliate-recruitment",
+    "aiTool": "Claude",
+    "promptText": "Help me invite my happiest customers to become affiliates for my [BUSINESS TYPE]. How I know they are happy is [REVIEWS, REPEAT PURCHASES, MESSAGES, REFERRALS], my commission offer is [THE OFFER], and how I usually talk to customers is [YOUR TONE AND CHANNEL]. Write an invitation that thanks them, explains the program simply, and makes it clear there is no pressure. Note that existing customers who already love the product make some of the most convincing affiliates because their recommendations come from real experience, but turning a friendly relationship into a sales arrangement can feel awkward, so a light, no pressure invitation that respects their choice protects the relationship whether they say yes or no. Give me the customer invitation.",
+    "description": "Invite happy customers to become affiliates without pressure.",
+    "useCase": "Use this when customers already recommend you. Customers who love the product make some of the most convincing affiliates because their praise is genuine, but turning a friendly relationship into a sales deal can feel awkward, so a light, no pressure invitation protects the relationship.",
+    "variables": [
+      "BUSINESS TYPE",
+      "REVIEWS, REPEAT PURCHASES, MESSAGES, REFERRALS",
+      "THE OFFER",
+      "YOUR TONE AND CHANNEL"
+    ],
+    "relatedPromptIds": [
+      "affiliate-find-candidates",
+      "affiliate-quick-invite",
+      "affiliate-onboarding-kit"
+    ]
+  },
+  {
+    "id": "affiliate-recruit-message",
+    "title": "Write an Affiliate Recruitment Message",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "affiliate-recruitment",
+    "aiTool": "Gemini",
+    "promptText": "Help me write a recruitment message to invite [THE PERSON OR BUSINESS] to promote my [BUSINESS TYPE] as an affiliate. Why they are a good fit is [WHAT YOU NOTICED ABOUT THEIR AUDIENCE OR CONTENT], my commission and terms are [THE OFFER], what support I give affiliates is [E.G. FREE PRODUCT, CONTENT, CODES, FAST PAYOUTS], and the channel is [EMAIL, DM, MESSAGING APP]. Write a short message that opens with them, explains why their audience would benefit, states the commission clearly, and invites a simple next step. Note that good affiliates get many program invitations, so a message that shows I know their audience and explains the commission and support plainly stands out, while a generic join our program blast is easy to ignore, and offering them a chance to try the product first lets them recommend it honestly. Give me the recruitment message.",
+    "description": "Write a personal affiliate invite with clear commission and support.",
+    "useCase": "Use this when inviting a specific affiliate. Good affiliates get many invitations, so showing you know their audience and stating the commission and support plainly stands out from generic blasts, and letting them try the product first means they can recommend it honestly.",
+    "variables": [
+      "THE PERSON OR BUSINESS",
+      "BUSINESS TYPE",
+      "WHAT YOU NOTICED ABOUT THEIR AUDIENCE OR CONTENT",
+      "THE OFFER",
+      "E.G. FREE PRODUCT, CONTENT, CODES, FAST PAYOUTS",
+      "EMAIL, DM, MESSAGING APP"
+    ],
+    "relatedPromptIds": [
+      "affiliate-quick-invite",
+      "affiliate-find-candidates",
+      "affiliate-follow-up"
+    ]
+  },
+  {
+    "id": "affiliate-landing-page",
+    "title": "Write an Affiliate Program Signup Page",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "affiliate-recruitment",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write a signup page for the affiliate program at my [BUSINESS TYPE]. What I sell is [THE PRODUCT], the commission is [THE RATE AND HOW IT WORKS], the cookie window or tracking period is [HOW LONG A REFERRAL COUNTS], how and when payouts happen is [PAYOUT METHOD AND SCHEDULE], and who the program is for is [IDEAL AFFILIATES]. Write a clear page covering why promote us, how it works, commission and payouts, who should apply, a short FAQ, and the signup step. Note that affiliates compare programs on clarity and trust as much as rate, so plainly stating how tracking works, when and how they get paid, any minimum payout, and what is not allowed avoids confusion later, and promising payouts I cannot reliably make is worse than a modest rate paid on time. Give me the signup page copy.",
+    "description": "Write an affiliate signup page that is clear about tracking and payouts.",
+    "useCase": "Use this when opening your program to applicants. Affiliates compare programs on clarity and trust as much as rate, so stating how tracking works, when and how they are paid, minimums, and what is not allowed avoids confusion, and a modest rate paid on time beats big promises.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PRODUCT",
+      "THE RATE AND HOW IT WORKS",
+      "HOW LONG A REFERRAL COUNTS",
+      "PAYOUT METHOD AND SCHEDULE",
+      "IDEAL AFFILIATES"
+    ],
+    "relatedPromptIds": [
+      "affiliate-program-terms",
+      "affiliate-commission-design",
+      "affiliate-tracking-payouts"
+    ]
+  },
+  {
+    "id": "affiliate-program-terms",
+    "title": "Write Clear Affiliate Program Rules",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "affiliate-recruitment",
+    "aiTool": "Claude",
+    "promptText": "Help me draft clear rules for affiliates promoting my [BUSINESS TYPE]. Where I am based and where affiliates may be is [COUNTRIES], what I want to forbid is [E.G. BIDDING ON MY BRAND NAME, SPAM, COUPON SITES, FALSE CLAIMS, SELF REFERRALS], how refunds affect commission is [YOUR APPROACH], and when I can end an affiliate's participation is [CONDITIONS]. Give me a plain language draft of program rules covering promotion methods, disclosure, refunds, payouts, and termination. Note that clear rules protect me from affiliates who earn commission through tactics that hurt my brand or steal sales I would have made anyway, like bidding on my own name, and rules on disclosure and advertising differ by country, so this draft should be reviewed by someone who knows the law where I operate before I rely on it. Give me the program rules draft.",
+    "description": "Draft plain affiliate rules on promotion, disclosure, refunds, and termination.",
+    "useCase": "Use this before accepting affiliates. Clear rules protect you from affiliates who earn commission through tactics that hurt your brand or take sales you would have made anyway, like bidding on your name, and since disclosure rules differ by country, have the draft reviewed locally.",
+    "variables": [
+      "BUSINESS TYPE",
+      "COUNTRIES",
+      "E.G. BIDDING ON MY BRAND NAME, SPAM, COUPON SITES, FALSE CLAIMS, SELF REFERRALS",
+      "YOUR APPROACH",
+      "CONDITIONS"
+    ],
+    "relatedPromptIds": [
+      "affiliate-disclosure-guide",
+      "affiliate-commission-design",
+      "affiliate-landing-page"
+    ]
+  },
+  {
+    "id": "affiliate-disclosure-guide",
+    "title": "Write a Disclosure Guide for Affiliates",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "affiliate-recruitment",
+    "aiTool": "Gemini",
+    "promptText": "Help me write a short guide that helps my affiliates disclose their relationship with my [BUSINESS TYPE] properly. The platforms they use are [E.G. BLOGS, VIDEO, SOCIAL, EMAIL, PODCASTS], and the countries their audiences are in are [WHERE]. Give me plain examples of clear disclosure for each format and what counts as hiding it. Note that in many countries paid recommendations must be clearly disclosed, and vague tags hidden at the end or behind a click often do not meet the standard, which can create problems for both the affiliate and my business, while honest disclosure rarely hurts sales because audiences trust creators who are upfront, so I should check the current rules for the main markets involved. Give me the disclosure guide.",
+    "description": "Show affiliates how to disclose clearly on each platform they use.",
+    "useCase": "Use this when onboarding affiliates. Many countries require paid recommendations to be clearly disclosed, and hidden or vague tags often fall short, creating problems for affiliate and business alike, while honest disclosure rarely hurts sales, so check current rules in your main markets.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. BLOGS, VIDEO, SOCIAL, EMAIL, PODCASTS",
+      "WHERE"
+    ],
+    "relatedPromptIds": [
+      "affiliate-program-terms",
+      "affiliate-onboarding-kit",
+      "affiliate-promo-assets"
+    ]
+  },
+  {
+    "id": "affiliate-onboarding-kit",
+    "title": "Create an Affiliate Onboarding Kit",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "affiliate-recruitment",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me create an onboarding kit for new affiliates promoting my [BUSINESS TYPE]. What I sell and its main benefits are [PRODUCT AND BENEFITS], who it is for is [THE CUSTOMER], the assets I have are [IMAGES, LINKS, CODES, SAMPLE POSTS], and the rules they must follow are [KEY RULES]. Give me a welcome message and a short kit covering what to promote, who it suits, key messages, assets, their link or code, disclosure, and who to contact. Note that most affiliates who sign up never make a single sale, often because they do not know what to say or where to start, so a simple kit with ready angles and assets turns more signups into active promoters, and a welcome sent the day they join catches them while they are still motivated. Give me the onboarding kit.",
+    "description": "Give new affiliates a welcome and a simple kit so they start promoting.",
+    "useCase": "Use this as soon as someone joins. Most affiliates never make a sale, often because they do not know what to say or where to start, so a simple kit with ready angles and assets turns more signups into active promoters, and a same day welcome catches them while motivated.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRODUCT AND BENEFITS",
+      "THE CUSTOMER",
+      "IMAGES, LINKS, CODES, SAMPLE POSTS",
+      "KEY RULES"
+    ],
+    "relatedPromptIds": [
+      "affiliate-promo-assets",
+      "affiliate-disclosure-guide",
+      "affiliate-activate-dormant"
+    ]
+  },
+  {
+    "id": "affiliate-promo-assets",
+    "title": "Create Promo Content for Affiliates",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "affiliate-recruitment",
+    "aiTool": "Claude",
+    "promptText": "Help me create promotional content my affiliates can use for my [BUSINESS TYPE]. What I sell is [THE PRODUCT], the main customer problems it solves are [THE PROBLEMS], the claims I can honestly support are [YOUR PROVABLE BENEFITS], and the formats my affiliates use are [E.G. SOCIAL POSTS, EMAILS, REVIEWS, VIDEO]. Give me a few angles with sample copy they can adapt in their own voice, plus a list of claims to avoid. Note that copy pasted word for word by many affiliates looks spammy and performs poorly, so angles and examples they personalize work better than rigid scripts, and affiliates repeating exaggerated claims about results can create real legal and reputational trouble, so every sample should only say what I can back up. Give me the promo content.",
+    "description": "Give affiliates adaptable angles and honest sample copy.",
+    "useCase": "Use this to help affiliates promote well. Copy pasted word for word by many affiliates looks spammy and performs poorly, so angles they personalize work better than scripts, and since exaggerated claims can cause legal and reputational trouble, every sample should only say what you can back up.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PRODUCT",
+      "THE PROBLEMS",
+      "YOUR PROVABLE BENEFITS",
+      "E.G. SOCIAL POSTS, EMAILS, REVIEWS, VIDEO"
+    ],
+    "relatedPromptIds": [
+      "affiliate-onboarding-kit",
+      "affiliate-disclosure-guide",
+      "affiliate-newsletter"
+    ]
+  },
+  {
+    "id": "affiliate-tracking-payouts",
+    "title": "Set Up Tracking and Payouts",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "affiliate-recruitment",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan how to track affiliate sales and pay affiliates for my [BUSINESS TYPE]. Where I sell is [WEBSITE PLATFORM, MARKETPLACE, IN PERSON, MESSAGING], how many affiliates I expect is [NUMBER], where my affiliates are located is [COUNTRIES], and how I can send money is [BANK TRANSFER, PAYMENT APPS, PLATFORM PAYOUTS]. Help me choose a tracking approach, like links, codes, or affiliate software, and set a payout schedule, minimum, and refund holding period. Note that disputes over unrecorded sales are the fastest way to lose affiliates' trust, so reliable tracking matters more than a fancy dashboard, and international payouts can carry fees, currency conversion, and tax paperwork, so I should check what is practical and required where I and my affiliates are before promising terms. Give me the tracking and payout plan.",
+    "description": "Choose reliable sales tracking and a payout schedule that works across borders.",
+    "useCase": "Use this before launching your program. Disputes over unrecorded sales are the fastest way to lose affiliate trust, so reliable tracking matters more than a fancy dashboard, and international payouts can carry fees, conversion, and tax paperwork worth checking before promising terms.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WEBSITE PLATFORM, MARKETPLACE, IN PERSON, MESSAGING",
+      "NUMBER",
+      "COUNTRIES",
+      "BANK TRANSFER, PAYMENT APPS, PLATFORM PAYOUTS"
+    ],
+    "relatedPromptIds": [
+      "affiliate-commission-design",
+      "affiliate-landing-page",
+      "affiliate-performance-review"
+    ]
+  },
+  {
+    "id": "affiliate-follow-up",
+    "title": "Follow Up With Affiliates Who Have Not Replied",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "affiliate-recruitment",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me follow up with potential affiliates who have not replied to my invitation for my [BUSINESS TYPE]. What I sent and when was [THE ORIGINAL MESSAGE], the person is [WHO], and something new I could add is [E.G. A FREE TRIAL, A HIGHER LAUNCH RATE, A SUCCESS STORY, NOTHING]. Write one short follow up and a final close the loop note. Note that creators and businesses often get many partnership requests and simply miss messages, so one follow up adding something genuinely useful often gets a reply, but repeated chasing looks desperate and can sour a future relationship, so two touches and then moving on is a sensible limit. Give me the follow up messages.",
+    "description": "Follow up once on an affiliate invite with something useful, then move on.",
+    "useCase": "Use this when a potential affiliate goes quiet. Creators and businesses get many requests and often miss messages, so one follow up with something useful often gets a reply, but repeated chasing looks desperate, so two touches and then moving on is a sensible limit.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE ORIGINAL MESSAGE",
+      "WHO",
+      "E.G. A FREE TRIAL, A HIGHER LAUNCH RATE, A SUCCESS STORY, NOTHING"
+    ],
+    "relatedPromptIds": [
+      "affiliate-recruit-message",
+      "affiliate-quick-invite",
+      "affiliate-find-candidates"
+    ]
+  },
+  {
+    "id": "affiliate-activate-dormant",
+    "title": "Re Activate Affiliates Who Never Promote",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "affiliate-recruitment",
+    "aiTool": "Claude",
+    "promptText": "Help me re activate affiliates who signed up for my [BUSINESS TYPE] program but have not promoted. How many are inactive is [NUMBER], what support they got is [WHAT YOU SENT], and what new reason I could give them to promote is [E.G. A NEW PRODUCT, SEASONAL OFFER, BONUS, NEW ASSETS]. Write a short message that makes it easy to start, plus a quick question asking what is holding them back. Note that inactive affiliates are normal, often most of a program, and many just need a clear, timely reason and ready made content, while asking what is stopping them often reveals fixable problems like unclear commission or missing assets, and it is fine to let truly uninterested affiliates go rather than keep chasing them. Give me the re activation message.",
+    "description": "Nudge inactive affiliates with a timely reason and find out what is stopping them.",
+    "useCase": "Use this when most affiliates are not promoting. Inactive affiliates are normal, often the majority, and many just need a timely reason and ready content, while asking what holds them back reveals fixable problems like unclear commission, and it is fine to let the uninterested go.",
+    "variables": [
+      "BUSINESS TYPE",
+      "NUMBER",
+      "WHAT YOU SENT",
+      "E.G. A NEW PRODUCT, SEASONAL OFFER, BONUS, NEW ASSETS"
+    ],
+    "relatedPromptIds": [
+      "affiliate-onboarding-kit",
+      "affiliate-newsletter",
+      "affiliate-performance-review"
+    ]
+  },
+  {
+    "id": "affiliate-newsletter",
+    "title": "Keep Affiliates Engaged With Regular Updates",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "affiliate-recruitment",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan a short regular update for the affiliates promoting my [BUSINESS TYPE]. What is coming up is [NEW PRODUCTS, PROMOTIONS, SEASONAL MOMENTS], what is working for top affiliates is [ANGLES OR CONTENT THAT CONVERTS], and how often I can send it is [FREQUENCY]. Give me a simple update template with upcoming promotions, top performing angles, new assets, and recognition for active affiliates. Note that affiliates promote whatever is top of mind, so a short regular update with dates and ready angles keeps my product in their plans, and sharing what works for top performers helps everyone improve, while giving advance notice of promotions lets them schedule content rather than scramble. Give me the affiliate update template.",
+    "description": "Send short regular affiliate updates with promotions, angles, and recognition.",
+    "useCase": "Use this to keep affiliates promoting over time. Affiliates promote whatever is top of mind, so a regular update with dates and ready angles keeps you in their plans, sharing what works helps everyone improve, and advance notice of promotions lets them schedule content.",
+    "variables": [
+      "BUSINESS TYPE",
+      "NEW PRODUCTS, PROMOTIONS, SEASONAL MOMENTS",
+      "ANGLES OR CONTENT THAT CONVERTS",
+      "FREQUENCY"
+    ],
+    "relatedPromptIds": [
+      "affiliate-activate-dormant",
+      "affiliate-promo-assets",
+      "affiliate-performance-review"
+    ]
+  },
+  {
+    "id": "affiliate-performance-review",
+    "title": "Review Affiliate Program Performance",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "affiliate-recruitment",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me review how my affiliate program is performing for my [BUSINESS TYPE]. The numbers I have are [SIGNUPS, ACTIVE AFFILIATES, SALES, COMMISSION PAID, REFUNDS], the time I spend on it is [HOURS PER MONTH], and what I hoped it would achieve is [YOUR GOAL]. Help me judge whether the program is profitable, which affiliates and channels drive real sales, and what to change. Note that affiliate results usually follow a steep curve where a few affiliates drive most sales, so the useful move is often to support the top performers more rather than recruit many more inactive ones, and I should check whether affiliate sales are genuinely new customers or people who would have bought anyway, since paying commission on those costs money without growth. Give me the performance review.",
+    "description": "Judge whether your affiliate program is profitable and where to focus.",
+    "useCase": "Use this every few months. A few affiliates usually drive most sales, so supporting top performers often beats recruiting more inactive ones, and checking whether affiliate sales are genuinely new customers matters, since paying commission on people who would have bought anyway costs money without growth.",
+    "variables": [
+      "BUSINESS TYPE",
+      "SIGNUPS, ACTIVE AFFILIATES, SALES, COMMISSION PAID, REFUNDS",
+      "HOURS PER MONTH",
+      "YOUR GOAL"
+    ],
+    "relatedPromptIds": [
+      "affiliate-tracking-payouts",
+      "affiliate-newsletter",
+      "affiliate-handle-bad-affiliate"
+    ]
+  },
+  {
+    "id": "affiliate-handle-bad-affiliate",
+    "title": "Deal With an Affiliate Breaking the Rules",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "affiliate-recruitment",
+    "aiTool": "Claude",
+    "promptText": "Help me deal with an affiliate who is breaking my program rules for my [BUSINESS TYPE]. What they are doing is [E.G. MISLEADING CLAIMS, SPAM, BIDDING ON MY BRAND, NO DISCLOSURE, FAKE ORDERS], the evidence I have is [WHAT YOU SAW], and what my rules say is [THE RELEVANT TERMS]. Help me decide whether to warn, pause commissions, or remove them, and write a firm, professional message. Note that an affiliate making false claims or spamming puts my reputation and possibly legal standing at risk, since customers see my brand rather than theirs, so acting quickly matters, but a first time honest mistake like a missing disclosure usually deserves a clear warning before removal, while fraud or repeated violations justify ending the relationship as my terms allow. Give me the decision and message.",
+    "description": "Decide whether to warn, pause, or remove a rule breaking affiliate.",
+    "useCase": "Use this when an affiliate's tactics worry you. Misleading claims or spam put your reputation and possibly legal standing at risk, since customers see your brand, so act quickly, but an honest first mistake usually deserves a warning while fraud or repeat violations justify removal under your terms.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. MISLEADING CLAIMS, SPAM, BIDDING ON MY BRAND, NO DISCLOSURE, FAKE ORDERS",
+      "WHAT YOU SAW",
+      "THE RELEVANT TERMS"
+    ],
+    "relatedPromptIds": [
+      "affiliate-program-terms",
+      "affiliate-disclosure-guide",
+      "affiliate-performance-review"
+    ]
   }
 ]
