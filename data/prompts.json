@@ -35601,5 +35601,388 @@
       "culture-how-we-work",
       "culture-recognition-habits"
     ]
+  },
+  {
+    "id": "partner-find-fits",
+    "title": "Find Businesses Worth Partnering With",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "partnership-pitches",
+    "aiTool": "Claude",
+    "promptText": "Help me find good partnership candidates for my [BUSINESS TYPE]. My customers are [WHO THEY ARE], what they also buy or need before and after working with me is [RELATED NEEDS], and my location or market is [WHERE YOU OPERATE]. Suggest the types of businesses that serve the same customers without competing with me, and how to judge which are worth approaching first. Note that the best partners share my customers but not my product, like a wedding photographer and a florist, and a partner with a similar size and audience is far more likely to say yes than a big name that has no reason to care about me, so starting with realistic fits beats chasing impressive ones. Give me the partner types and how to prioritize them.",
+    "description": "Identify businesses that share your customers without competing with you.",
+    "useCase": "Use this before reaching out to anyone. The best partners share your customers but not your product, and a partner of similar size and audience is far more likely to say yes than a big name with no reason to care, so starting with realistic fits beats chasing impressive ones.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO THEY ARE",
+      "RELATED NEEDS",
+      "WHERE YOU OPERATE"
+    ],
+    "relatedPromptIds": [
+      "partner-value-exchange",
+      "partner-research-target",
+      "partner-first-message"
+    ]
+  },
+  {
+    "id": "partner-value-exchange",
+    "title": "Work Out What Each Side Gains",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "partnership-pitches",
+    "aiTool": "Claude",
+    "promptText": "Help me work out the value exchange for a partnership between my [BUSINESS TYPE] and [THE POTENTIAL PARTNER]. What I want from the partnership is [YOUR GOAL], what I can genuinely offer them is [YOUR AUDIENCE, SKILLS, PRODUCT, REFERRALS, LOCATION], and what they likely care about is [THEIR PRIORITIES IF YOU KNOW]. Lay out what each side gives and gets, and flag if the deal looks one sided. Note that most partnership pitches fail because they are really asks dressed up as offers, where I gain and they do the work, so figuring out what is genuinely in it for them before reaching out is the core of the pitch, and if I cannot name a real benefit to them, the partnership probably is not ready to propose yet. Give me the value exchange.",
+    "description": "Map what each side gives and gets, and spot one sided deals before pitching.",
+    "useCase": "Use this before writing any pitch. Most partnership pitches fail because they are asks dressed up as offers, so working out what is genuinely in it for them is the core of the pitch, and if you cannot name a real benefit to them the partnership is not ready to propose.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE POTENTIAL PARTNER",
+      "YOUR GOAL",
+      "YOUR AUDIENCE, SKILLS, PRODUCT, REFERRALS, LOCATION",
+      "THEIR PRIORITIES IF YOU KNOW"
+    ],
+    "relatedPromptIds": [
+      "partner-find-fits",
+      "partner-first-message",
+      "partner-bigger-partner"
+    ]
+  },
+  {
+    "id": "partner-quick-pitch",
+    "title": "Get a Quick Partnership Pitch Message",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "partnership-pitches",
+    "aiTool": "Grok",
+    "promptText": "I want to pitch a partnership quickly. My business is [WHAT YOU DO], the business I want to partner with is [WHO], and the idea is [THE PARTNERSHIP IDEA]. Give me a short, friendly outreach message that explains the idea and what is in it for them, no long explanation, just the message. Give me the pitch message.",
+    "description": "Get a short, friendly partnership pitch message fast.",
+    "useCase": "Use this when you have a partnership idea and want to reach out today. A short message that explains the idea and what is in it for them is usually all a first contact needs, and sending a clear short pitch beats polishing a long one that never goes out.",
+    "variables": [
+      "WHAT YOU DO",
+      "WHO",
+      "THE PARTNERSHIP IDEA"
+    ],
+    "relatedPromptIds": [
+      "partner-first-message",
+      "partner-value-exchange",
+      "partner-follow-up"
+    ]
+  },
+  {
+    "id": "partner-research-target",
+    "title": "Research a Partner Before Pitching",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "partnership-pitches",
+    "aiTool": "Gemini",
+    "promptText": "Help me prepare to pitch a specific business for a partnership with my [BUSINESS TYPE]. The business is [THEIR NAME AND WHAT THEY DO], what I can see about them is [THEIR WEBSITE, SOCIAL, RECENT NEWS, CUSTOMERS], and the partnership I have in mind is [THE IDEA]. Help me list what to check about them before reaching out, what their likely goals and pressures are, and the specific detail that would make my pitch feel personal. Note that a pitch that shows I know their business, like a recent launch or a gap in what they offer, gets read while a generic message gets ignored, but I should only reference things I have genuinely seen rather than guess, since a wrong assumption about their business undermines the whole pitch. Give me the research checklist and angle.",
+    "description": "Research a target partner so your pitch is specific and accurate.",
+    "useCase": "Use this before pitching a specific business. A pitch that shows you know their business gets read while a generic one gets ignored, but only reference what you have genuinely seen, since a wrong assumption about their business undermines the whole pitch.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THEIR NAME AND WHAT THEY DO",
+      "THEIR WEBSITE, SOCIAL, RECENT NEWS, CUSTOMERS",
+      "THE IDEA"
+    ],
+    "relatedPromptIds": [
+      "partner-find-fits",
+      "partner-first-message",
+      "partner-bigger-partner"
+    ]
+  },
+  {
+    "id": "partner-first-message",
+    "title": "Write the First Partnership Outreach Message",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "partnership-pitches",
+    "aiTool": "Claude",
+    "promptText": "Help me write a first outreach message pitching a partnership from my [BUSINESS TYPE] to [THE PARTNER BUSINESS]. Why I chose them specifically is [WHAT YOU NOTICED ABOUT THEM], the partnership idea is [THE IDEA], what they would get is [THEIR BENEFIT], and the channel is [EMAIL, DM, LINKEDIN, MESSAGING APP]. Write a short message that opens with them, explains the idea in a sentence or two, and asks for a small next step like a quick call. Note that a first message should make it easy to say yes to a conversation, not to the whole deal, so a short note with a clear benefit and a small ask works far better than a long proposal sent cold, which few busy owners will read. Give me the outreach message.",
+    "description": "Write a short first message that asks for a conversation, not the whole deal.",
+    "useCase": "Use this for your first contact with a potential partner. A first message should make it easy to say yes to a conversation rather than the whole deal, so a short note opening with them, a clear benefit, and a small ask beats a long proposal sent cold that few busy owners read.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PARTNER BUSINESS",
+      "WHAT YOU NOTICED ABOUT THEM",
+      "THE IDEA",
+      "THEIR BENEFIT",
+      "EMAIL, DM, LINKEDIN, MESSAGING APP"
+    ],
+    "relatedPromptIds": [
+      "partner-research-target",
+      "partner-follow-up",
+      "partner-warm-intro"
+    ]
+  },
+  {
+    "id": "partner-warm-intro",
+    "title": "Ask for a Warm Introduction to a Partner",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "partnership-pitches",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me ask a mutual contact to introduce me to a potential partner for my [BUSINESS TYPE]. The contact is [WHO AND HOW YOU KNOW THEM], the person I want to meet is [WHO AND THEIR BUSINESS], and why the introduction makes sense is [THE IDEA]. Write a short request to my contact plus a ready to forward blurb they can pass on with no extra effort. Note that a warm introduction from someone both sides trust gets a much better response than a cold message, but asking someone to introduce me puts their reputation on the line, so making it easy with a forwardable blurb and giving them an easy way to decline keeps the relationship comfortable. Give me the request and the forwardable blurb.",
+    "description": "Ask a mutual contact for an introduction, with a blurb they can forward.",
+    "useCase": "Use this when you share a contact with a potential partner. A warm introduction gets a far better response than a cold message, but it puts your contact's reputation on the line, so a ready to forward blurb and an easy way to decline keeps the relationship comfortable.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO AND HOW YOU KNOW THEM",
+      "WHO AND THEIR BUSINESS",
+      "THE IDEA"
+    ],
+    "relatedPromptIds": [
+      "partner-first-message",
+      "partner-local-business",
+      "partner-follow-up"
+    ]
+  },
+  {
+    "id": "partner-bigger-partner",
+    "title": "Pitch a Partner Bigger Than You",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "partnership-pitches",
+    "aiTool": "Claude",
+    "promptText": "Help me pitch a partnership to a business much bigger than my [BUSINESS TYPE]. The bigger business is [WHO], what I have that they might value is [E.G. A NICHE AUDIENCE, SPECIALIST SKILL, LOCAL ACCESS, A PRODUCT GAP I FILL], and what I want from them is [YOUR GOAL]. Help me frame a pitch that makes the case from their side and asks for something small enough to say yes to. Note that a bigger business gets many requests and has little reason to take a risk on a small partner, so the pitch has to show a specific gap I fill or an audience they cannot easily reach, and starting with a small pilot or one off collaboration is much more realistic than proposing a major ongoing deal from day one. Give me the pitch approach.",
+    "description": "Pitch a bigger business with a specific gap you fill and a small first ask.",
+    "useCase": "Use this when aiming above your size. A bigger business gets many requests and has little reason to take a risk on a small partner, so show a specific gap you fill or an audience they cannot easily reach, and start with a small pilot rather than a major ongoing deal.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO",
+      "E.G. A NICHE AUDIENCE, SPECIALIST SKILL, LOCAL ACCESS, A PRODUCT GAP I FILL",
+      "YOUR GOAL"
+    ],
+    "relatedPromptIds": [
+      "partner-value-exchange",
+      "partner-pilot-offer",
+      "partner-research-target"
+    ]
+  },
+  {
+    "id": "partner-local-business",
+    "title": "Pitch a Partnership to a Local Business",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "partnership-pitches",
+    "aiTool": "Gemini",
+    "promptText": "Help me pitch a partnership to another local business near my [BUSINESS TYPE]. The business is [WHO AND WHERE], how I plan to approach them is [IN PERSON, PHONE, MESSAGE, THROUGH SOMEONE WE BOTH KNOW], and the idea is [E.G. CROSS REFERRALS, SHARED PROMOTION, BUNDLE, JOINT EVENT]. Give me what to say and a simple first step that is easy to agree to. Note that local partnerships often work best through a personal visit or a mutual contact rather than a formal email, and in many communities trust and relationship come before any business discussion, so taking time to get to know the owner first, and matching how business is normally done locally, matters more than a polished pitch. Give me the local pitch approach.",
+    "description": "Pitch a nearby business in the way local business is actually done.",
+    "useCase": "Use this for partnerships with businesses near you. Local partnerships often work best through a personal visit or a mutual contact rather than a formal email, and in many communities trust comes before business talk, so matching local norms matters more than a polished pitch.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO AND WHERE",
+      "IN PERSON, PHONE, MESSAGE, THROUGH SOMEONE WE BOTH KNOW",
+      "E.G. CROSS REFERRALS, SHARED PROMOTION, BUNDLE, JOINT EVENT"
+    ],
+    "relatedPromptIds": [
+      "partner-warm-intro",
+      "partner-cross-promotion",
+      "partner-first-message"
+    ]
+  },
+  {
+    "id": "partner-cross-promotion",
+    "title": "Pitch a Simple Cross Promotion",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "partnership-pitches",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me pitch a simple cross promotion between my [BUSINESS TYPE] and [THE PARTNER]. My audience is [SIZE AND WHERE, E.G. EMAIL LIST, SOCIAL FOLLOWERS, WALK IN CUSTOMERS], their audience is [WHAT YOU KNOW], and the promotion idea is [E.G. SHARED POST, NEWSLETTER SWAP, DISCOUNT FOR EACH OTHER'S CUSTOMERS]. Write a pitch that proposes a clear, even exchange with a simple way to measure results. Note that cross promotions work best when the audiences are a similar size and the effort is balanced, since lopsided swaps leave one side feeling used, and agreeing up front how we will track results, like a shared discount code, makes it easy to see if it is worth repeating. Give me the cross promotion pitch.",
+    "description": "Pitch a balanced cross promotion with a simple way to track results.",
+    "useCase": "Use this for low effort partnership wins. Cross promotions work best when audiences and effort are balanced, since lopsided swaps leave one side feeling used, and agreeing on tracking up front, like a shared code, shows whether it is worth repeating.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PARTNER",
+      "SIZE AND WHERE, E.G. EMAIL LIST, SOCIAL FOLLOWERS, WALK IN CUSTOMERS",
+      "WHAT YOU KNOW",
+      "E.G. SHARED POST, NEWSLETTER SWAP, DISCOUNT FOR EACH OTHER'S CUSTOMERS"
+    ],
+    "relatedPromptIds": [
+      "partner-local-business",
+      "partner-pilot-offer",
+      "partner-value-exchange"
+    ]
+  },
+  {
+    "id": "partner-pilot-offer",
+    "title": "Propose a Small Pilot First",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "partnership-pitches",
+    "aiTool": "Claude",
+    "promptText": "Help me turn a bigger partnership idea into a small pilot I can pitch for my [BUSINESS TYPE]. The full idea is [THE BIG PARTNERSHIP], the partner is [WHO], and the risks or doubts they might have are [THEIR LIKELY CONCERNS]. Design a small, time limited test with a clear measure of success and an easy way for either side to walk away. Note that partners hesitate to commit to something open ended with someone they do not know yet, while a short pilot with a clear end date lowers the risk for both sides and lets real results make the case for anything bigger, so pitching the pilot rather than the full vision usually gets a faster yes. Give me the pilot proposal.",
+    "description": "Shrink a big partnership idea into a short, low risk pilot.",
+    "useCase": "Use this when a partner might hesitate to commit. People hesitate to commit to something open ended with someone new, while a short pilot with a clear end date lowers the risk for both sides and lets results make the case, so pitching the pilot usually gets a faster yes.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE BIG PARTNERSHIP",
+      "WHO",
+      "THEIR LIKELY CONCERNS"
+    ],
+    "relatedPromptIds": [
+      "partner-bigger-partner",
+      "partner-cross-promotion",
+      "partner-objections"
+    ]
+  },
+  {
+    "id": "partner-intro-call",
+    "title": "Plan the First Partnership Call",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "partnership-pitches",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan a first call with a potential partner for my [BUSINESS TYPE]. The partner is [WHO], the idea I pitched is [THE IDEA], the call length is [HOW LONG], and what I need to learn is [WHAT YOU NEED TO KNOW]. Give me a short call plan: how to open, questions to ask about their goals and constraints, how to present the idea, and how to end with a clear next step. Note that the first call should be more listening than pitching, since their goals and constraints shape whether a partnership can work at all, and ending with a concrete next step, like I will send a one page outline by Friday, keeps a promising conversation from fading into nothing. Give me the call plan.",
+    "description": "Plan a first partnership call that listens first and ends with a next step.",
+    "useCase": "Use this before a first call with a potential partner. The first call should be more listening than pitching, since their goals and constraints decide whether a partnership can work, and ending with a concrete next step keeps a promising conversation from fading into nothing.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO",
+      "THE IDEA",
+      "HOW LONG",
+      "WHAT YOU NEED TO KNOW"
+    ],
+    "relatedPromptIds": [
+      "partner-objections",
+      "partner-one-page",
+      "partner-follow-up"
+    ]
+  },
+  {
+    "id": "partner-one-page",
+    "title": "Write a One Page Partnership Pitch",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "partnership-pitches",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write a one page partnership pitch for my [BUSINESS TYPE] to send after an initial conversation with [THE PARTNER]. The idea is [THE PARTNERSHIP], what each side contributes is [WHO DOES WHAT], the benefits for them are [THEIR GAINS], and the proposed next step is [E.G. A PILOT, A MEETING, A TRIAL MONTH]. Give me a single page with the idea, why it fits both sides, how it would work, and the next step. Note that a one page summary is easy to read and easy to share with anyone else who must approve, which matters in businesses where the person I spoke to is not the only decision maker, and keeping it to one page forces clarity, while the full detailed terms belong in a proposal once there is real interest. Give me the one page pitch.",
+    "description": "Summarize a partnership idea on one page that is easy to share and approve.",
+    "useCase": "Use this after a first conversation goes well. A one page summary is easy to read and to share with others who must approve, which matters when the person you spoke to is not the only decision maker, and keeping to one page forces clarity before detailed terms come later.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PARTNER",
+      "THE PARTNERSHIP",
+      "WHO DOES WHAT",
+      "THEIR GAINS",
+      "E.G. A PILOT, A MEETING, A TRIAL MONTH"
+    ],
+    "relatedPromptIds": [
+      "partner-intro-call",
+      "partner-pilot-offer",
+      "partner-follow-up"
+    ]
+  },
+  {
+    "id": "partner-objections",
+    "title": "Handle Partnership Objections",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "partnership-pitches",
+    "aiTool": "Claude",
+    "promptText": "Help me respond to objections a potential partner might raise about working with my [BUSINESS TYPE]. The partnership idea is [THE IDEA], and the objections I expect or have heard are [E.G. NO TIME, TOO SMALL, WORRIED ABOUT OUR REPUTATION, HOW DO WE SPLIT MONEY, TRIED THIS BEFORE]. For each, give me an honest response and a way to reduce the concern. Note that most partnership objections are really about risk and effort rather than the idea itself, so answers that lower their risk, like a smaller pilot, clear responsibilities, or doing more of the work myself, work better than arguing, and some objections are valid signals that this is not the right partner, which is worth accepting gracefully. Give me the objection responses.",
+    "description": "Answer partnership objections by lowering the other side's risk and effort.",
+    "useCase": "Use this before or after a partnership conversation. Most objections are really about risk and effort, so answers that lower their risk, like a smaller pilot or taking on more of the work, beat arguing, and some objections are valid signals that this is not the right partner.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE IDEA",
+      "E.G. NO TIME, TOO SMALL, WORRIED ABOUT OUR REPUTATION, HOW DO WE SPLIT MONEY, TRIED THIS BEFORE"
+    ],
+    "relatedPromptIds": [
+      "partner-pilot-offer",
+      "partner-intro-call",
+      "partner-handle-no"
+    ]
+  },
+  {
+    "id": "partner-follow-up",
+    "title": "Follow Up on a Partnership Pitch",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "partnership-pitches",
+    "aiTool": "Gemini",
+    "promptText": "Help me follow up on a partnership pitch from my [BUSINESS TYPE] that has not had a reply. The original pitch was [WHAT YOU SENT AND WHEN], the partner is [WHO], and something new I could add is [E.G. A RESULT, A RELEVANT IDEA, A SEASONAL TIMING, NOTHING NEW]. Write a short follow up and a final polite close the loop message. Note that silence usually means busy rather than no, so one or two polite follow ups that add something useful often get the reply the first message did not, but repeated nudging with nothing new damages the relationship, so two follow ups and a gracious close is a sensible limit. Give me the follow up messages.",
+    "description": "Follow up on an unanswered pitch with something new, then close the loop.",
+    "useCase": "Use this when a pitch gets no reply. Silence usually means busy rather than no, so one or two polite follow ups that add something useful often get a reply, but repeated nudging with nothing new damages the relationship, so two follow ups and a gracious close is a sensible limit.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU SENT AND WHEN",
+      "WHO",
+      "E.G. A RESULT, A RELEVANT IDEA, A SEASONAL TIMING, NOTHING NEW"
+    ],
+    "relatedPromptIds": [
+      "partner-first-message",
+      "partner-handle-no",
+      "partner-quick-pitch"
+    ]
+  },
+  {
+    "id": "partner-handle-no",
+    "title": "Respond Gracefully to a Partnership No",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "partnership-pitches",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me respond to a potential partner who said no to my [BUSINESS TYPE]. What they said was [THEIR RESPONSE], whether they gave a reason is [THE REASON, OR NONE], and whether I would like to stay in touch is [YES OR NO]. Write a short, gracious reply that thanks them, leaves the door open where it makes sense, and optionally asks one light question about what might work in the future. Note that a no now is often a no for now, since priorities and timing change, and a gracious response keeps me in mind for later while a pushy or hurt reply closes the door permanently, and their reason, if they share one, is useful feedback for the next pitch. Give me the reply.",
+    "description": "Reply to a partnership no in a way that keeps the door open.",
+    "useCase": "Use this when a partner turns you down. A no now is often a no for now, since priorities change, so a gracious reply keeps you in mind for later while a pushy or hurt one closes the door, and their reason, if given, is useful feedback for your next pitch.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THEIR RESPONSE",
+      "THE REASON, OR NONE",
+      "YES OR NO"
+    ],
+    "relatedPromptIds": [
+      "partner-follow-up",
+      "partner-objections",
+      "partner-pitch-review"
+    ]
+  },
+  {
+    "id": "partner-nonprofit-community",
+    "title": "Pitch a Partnership With a Community Group",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "partnership-pitches",
+    "aiTool": "Claude",
+    "promptText": "Help me pitch a partnership between my [BUSINESS TYPE] and a community group, charity, or nonprofit. The organization is [WHO], their mission is [WHAT THEY DO], what I can offer is [MONEY, PRODUCTS, SKILLS, SPACE, VOLUNTEERING], and what I hope to gain is [HONESTLY, E.G. GOODWILL, VISIBILITY, PURPOSE]. Help me shape a pitch that puts their mission first and is honest about any benefit to my business. Note that community partnerships work when the business genuinely supports the cause, and partnerships that look like using a charity for publicity can backfire badly with both the organization and customers, so leading with what they need, being transparent about what I gain, and respecting how they want to be credited keeps it genuine. Give me the community partnership pitch.",
+    "description": "Pitch a community or nonprofit partnership that puts their mission first.",
+    "useCase": "Use this when partnering with a charity or community group. These partnerships work when the business genuinely supports the cause, while anything that looks like using a charity for publicity backfires, so lead with their needs, be open about what you gain, and respect how they want credit.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO",
+      "WHAT THEY DO",
+      "MONEY, PRODUCTS, SKILLS, SPACE, VOLUNTEERING",
+      "HONESTLY, E.G. GOODWILL, VISIBILITY, PURPOSE"
+    ],
+    "relatedPromptIds": [
+      "partner-local-business",
+      "partner-value-exchange",
+      "partner-first-message"
+    ]
+  },
+  {
+    "id": "partner-supplier-distributor",
+    "title": "Pitch a Supplier or Distribution Partnership",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "partnership-pitches",
+    "aiTool": "Gemini",
+    "promptText": "Help me pitch a supply or distribution partnership for my [BUSINESS TYPE]. The partner is [E.G. A SUPPLIER, A SHOP THAT COULD STOCK MY PRODUCT, A DISTRIBUTOR, A PLATFORM], what I am proposing is [THE ARRANGEMENT], and my current volume and track record are [HONEST NUMBERS]. Help me pitch in a way that addresses what they care about, like reliability, margins, minimum orders, and demand. Note that stockists, suppliers, and distributors think in terms of margin, reliability, and how much space or effort a new partner takes, so a pitch built around their numbers and with honest volumes is taken more seriously than enthusiasm about my product, and overstating my sales to look bigger usually comes out quickly and ends the relationship. Give me the supply or distribution pitch.",
+    "description": "Pitch stockists, suppliers, or distributors around their margins and reliability.",
+    "useCase": "Use this when pitching someone to stock, supply, or distribute your product. These partners think in margins, reliability, and effort, so a pitch built around their numbers with honest volumes is taken more seriously than enthusiasm, and overstated sales usually come out quickly and end things.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. A SUPPLIER, A SHOP THAT COULD STOCK MY PRODUCT, A DISTRIBUTOR, A PLATFORM",
+      "THE ARRANGEMENT",
+      "HONEST NUMBERS"
+    ],
+    "relatedPromptIds": [
+      "partner-bigger-partner",
+      "partner-objections",
+      "partner-one-page"
+    ]
+  },
+  {
+    "id": "partner-pitch-review",
+    "title": "Review a Partnership Pitch Before Sending",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "partnership-pitches",
+    "aiTool": "Claude",
+    "promptText": "Help me review my partnership pitch before I send it, for my [BUSINESS TYPE]. Here is the pitch: [PASTE IT], and the partner is [WHO]. Read it as the busy owner receiving it and tell me honestly whether it is clear within a few seconds, whether the benefit to them is obvious, whether it is too long, and whether the ask is easy to say yes to. Note that most partnership pitches talk too much about the sender and too little about the receiver, run long, and end without a clear ask, so a quick read from their point of view catches the problems that cause pitches to be ignored, and cutting the pitch in half often improves it. Give me the review and a tightened version.",
+    "description": "Read your pitch as the busy recipient and tighten it before sending.",
+    "useCase": "Use this before sending any partnership pitch. Most pitches talk too much about the sender, run long, and end without a clear ask, so reading it from the recipient's side catches what gets pitches ignored, and cutting it in half often improves it.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHO"
+    ],
+    "relatedPromptIds": [
+      "partner-first-message",
+      "partner-value-exchange",
+      "partner-handle-no"
+    ]
   }
 ]
