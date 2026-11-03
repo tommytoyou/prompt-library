@@ -40204,5 +40204,383 @@
       "reflect-month-business",
       "reflect-energy-patterns"
     ]
+  },
+  {
+    "id": "kpi-choose-core",
+    "title": "Choose the Few KPIs That Matter Most",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "kpi-selection",
+    "aiTool": "Claude",
+    "promptText": "Help me choose the few KPIs that matter most for my [BUSINESS TYPE]. How I make money is [YOUR REVENUE MODEL], my main goal for the next year is [YOUR GOAL], the data I can easily access is [WHAT YOU CAN MEASURE NOW], and the numbers I currently watch are [YOUR CURRENT NUMBERS, OR NONE]. Suggest three to five KPIs, why each matters, and how often to check it. Note that small businesses often track either nothing or far too many numbers, and both lead to the same result of not knowing what to act on, so a short list tied directly to my goal and how I make money is far more useful, and a KPI is only worth tracking if a change in it would change what I do. Give me the core KPIs.",
+    "description": "Pick three to five KPIs tied to your goal and how you make money.",
+    "useCase": "Use this when you track nothing or far too much. Both lead to not knowing what to act on, so a short list tied to your goal and how you make money is far more useful, and a KPI is only worth tracking if a change in it would change what you do.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR REVENUE MODEL",
+      "YOUR GOAL",
+      "WHAT YOU CAN MEASURE NOW",
+      "YOUR CURRENT NUMBERS, OR NONE"
+    ],
+    "relatedPromptIds": [
+      "kpi-north-star",
+      "kpi-leading-lagging",
+      "kpi-define-precisely"
+    ]
+  },
+  {
+    "id": "kpi-north-star",
+    "title": "Find Your One North Star Metric",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "kpi-selection",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me find one north star metric for my [BUSINESS TYPE]. The value I deliver to customers is [WHAT CUSTOMERS GET], how I make money is [YOUR REVENUE MODEL], and candidates I am considering are [METRICS YOU ARE THINKING ABOUT]. Help me pick a single metric that best reflects customers getting real value and the business growing, and explain what it would miss. Note that a north star metric keeps attention on what matters most when there are many numbers competing for it, but no single number tells the whole story, so it works best alongside a couple of supporting KPIs, and a metric that can rise while customers become less happy, like raw sign ups, is a poor choice. Give me the north star metric.",
+    "description": "Pick one metric that reflects real customer value and business growth.",
+    "useCase": "Use this when too many numbers compete for attention. A north star metric keeps focus on what matters most, but no single number tells the whole story, so pair it with a couple of supporting KPIs, and avoid metrics like raw sign ups that can rise while customers get less value.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT CUSTOMERS GET",
+      "YOUR REVENUE MODEL",
+      "METRICS YOU ARE THINKING ABOUT"
+    ],
+    "relatedPromptIds": [
+      "kpi-choose-core",
+      "kpi-vanity-check",
+      "kpi-leading-lagging"
+    ]
+  },
+  {
+    "id": "kpi-quick-list",
+    "title": "Get a Quick KPI Shortlist",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "kpi-selection",
+    "aiTool": "Grok",
+    "promptText": "I need a quick list of KPIs to track. My business is [WHAT YOU DO], I make money by [HOW YOU EARN], and my main goal right now is [YOUR GOAL]. Give me five KPIs with a one line reason for each and how often to check, no long explanation, just the list. Give me the KPI shortlist.",
+    "description": "Get five KPIs with a reason and check frequency for each.",
+    "useCase": "Use this when you just want a starting list. Five KPIs matched to how you earn and your current goal give you something concrete to track this week, and starting with a reasonable short list beats waiting for a perfect measurement system before tracking anything.",
+    "variables": [
+      "WHAT YOU DO",
+      "HOW YOU EARN",
+      "YOUR GOAL"
+    ],
+    "relatedPromptIds": [
+      "kpi-choose-core",
+      "kpi-by-business-model",
+      "kpi-define-precisely"
+    ]
+  },
+  {
+    "id": "kpi-leading-lagging",
+    "title": "Balance Leading and Lagging Indicators",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "kpi-selection",
+    "aiTool": "Gemini",
+    "promptText": "Help me balance leading and lagging indicators for my [BUSINESS TYPE]. The results I care about are [E.G. REVENUE, PROFIT, CUSTOMERS], the activities that drive those results are [E.G. OUTREACH, CONTENT, QUOTES SENT, SITE VISITS], and how long it takes from activity to result is [YOUR SALES CYCLE]. For each result, suggest a leading indicator I can influence this week. Note that lagging indicators like monthly revenue show what already happened and arrive too late to change, while leading indicators like conversations started or quotes sent predict future results and are within my control, so tracking both lets me act early instead of finding out a month too late that something went wrong. Give me the indicator pairs.",
+    "description": "Pair each result you care about with an early indicator you can influence.",
+    "useCase": "Use this when your numbers always arrive too late to act on. Lagging indicators like monthly revenue show what already happened, while leading ones like quotes sent predict future results and are in your control, so tracking both lets you act early instead of learning a month too late.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. REVENUE, PROFIT, CUSTOMERS",
+      "E.G. OUTREACH, CONTENT, QUOTES SENT, SITE VISITS",
+      "YOUR SALES CYCLE"
+    ],
+    "relatedPromptIds": [
+      "kpi-choose-core",
+      "kpi-north-star",
+      "kpi-set-targets"
+    ]
+  },
+  {
+    "id": "kpi-by-business-model",
+    "title": "Pick KPIs That Fit Your Business Model",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "kpi-selection",
+    "aiTool": "Claude",
+    "promptText": "Help me pick KPIs that fit how my business actually works. My business model is [E.G. SERVICE OR CONSULTING, ONLINE SHOP, DIGITAL PRODUCTS, AD SUPPORTED SITE, SUBSCRIPTION, LOCAL SHOP OR CAFE], what I sell is [YOUR PRODUCTS OR SERVICES], and my typical customer buys [ONCE, OCCASIONALLY, OR REPEATEDLY]. Suggest the KPIs that matter most for this model and the common ones that do not apply. Note that the right KPIs depend heavily on the business model, since a consultant cares about utilization and pipeline, a shop about average order value and repeat purchase, and an ad supported site about traffic and revenue per visitor, so copying KPIs from a different kind of business often means watching numbers that do not drive my results. Give me the model specific KPIs.",
+    "description": "Choose KPIs that match your business model, not someone else's.",
+    "useCase": "Use this when generic KPI lists feel off. The right KPIs depend heavily on the model, since a consultant cares about pipeline, a shop about average order and repeat purchase, and an ad site about revenue per visitor, so copying KPIs from a different business often means watching numbers that do not drive your results.",
+    "variables": [
+      "E.G. SERVICE OR CONSULTING, ONLINE SHOP, DIGITAL PRODUCTS, AD SUPPORTED SITE, SUBSCRIPTION, LOCAL SHOP OR CAFE",
+      "YOUR PRODUCTS OR SERVICES",
+      "ONCE, OCCASIONALLY, OR REPEATEDLY"
+    ],
+    "relatedPromptIds": [
+      "kpi-choose-core",
+      "kpi-quick-list",
+      "kpi-customer-kpis"
+    ]
+  },
+  {
+    "id": "kpi-vanity-check",
+    "title": "Check Your Metrics for Vanity Numbers",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "kpi-selection",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me check whether the numbers I watch for my [BUSINESS TYPE] are useful or just vanity metrics. The numbers I watch are [E.G. FOLLOWERS, LIKES, PAGE VIEWS, EMAIL LIST SIZE, DOWNLOADS], how often I check them is [FREQUENCY], and what I actually need to improve is [YOUR REAL GOAL]. For each, tell me whether it connects to revenue or customer value, and suggest a more useful replacement where it does not. Note that vanity metrics feel good and are easy to grow, but they can rise while sales stay flat, like a big follower count that rarely buys, so the useful question is whether the number leads to money, retention, or customer outcomes, though some top of funnel numbers are still worth watching if I can see how they convert. Give me the vanity check.",
+    "description": "Sort useful metrics from feel good numbers that do not drive results.",
+    "useCase": "Use this when your numbers look good but sales do not. Vanity metrics feel good and grow easily but can rise while sales stay flat, like followers who rarely buy, so ask whether each number leads to money, retention, or customer outcomes, though top of funnel numbers are fine if you can see how they convert.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. FOLLOWERS, LIKES, PAGE VIEWS, EMAIL LIST SIZE, DOWNLOADS",
+      "FREQUENCY",
+      "YOUR REAL GOAL"
+    ],
+    "relatedPromptIds": [
+      "kpi-north-star",
+      "kpi-marketing-channel",
+      "kpi-retire-metrics"
+    ]
+  },
+  {
+    "id": "kpi-define-precisely",
+    "title": "Define Each KPI Precisely",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "kpi-selection",
+    "aiTool": "Gemini",
+    "promptText": "Help me write a precise definition for each KPI I track for my [BUSINESS TYPE]. The KPIs are [YOUR KPI LIST], where the data comes from is [SOURCES, E.G. PAYMENT APP, SPREADSHEET, WEBSITE ANALYTICS, POS], and who else might read them is [JUST ME, TEAM, PARTNER, INVESTOR]. For each, give me a one line definition, exactly how it is calculated, the data source, the time period, and how often it is updated. Note that a KPI like revenue or active customers can be calculated several different ways, such as with or without refunds or fees, and if the definition changes from month to month the trend becomes meaningless, so writing it down once keeps comparisons honest and makes it easy for anyone else to read the numbers the same way. Give me the KPI definitions.",
+    "description": "Define each KPI's calculation, source, and period so trends stay honest.",
+    "useCase": "Use this once you have chosen your KPIs. Metrics like revenue or active customers can be calculated several ways, such as with or without refunds, and changing definitions make trends meaningless, so writing them down once keeps comparisons honest and helps others read numbers the same way.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR KPI LIST",
+      "SOURCES, E.G. PAYMENT APP, SPREADSHEET, WEBSITE ANALYTICS, POS",
+      "JUST ME, TEAM, PARTNER, INVESTOR"
+    ],
+    "relatedPromptIds": [
+      "kpi-choose-core",
+      "kpi-data-availability",
+      "kpi-set-targets"
+    ]
+  },
+  {
+    "id": "kpi-data-availability",
+    "title": "Check Whether You Can Actually Measure a KPI",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "kpi-selection",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether I can realistically measure the KPIs I want for my [BUSINESS TYPE]. The KPIs I want are [YOUR LIST], the tools and records I have are [E.G. BANK STATEMENTS, PAYMENT APPS, SPREADSHEET, WEBSITE ANALYTICS, MESSAGING APP, PAPER RECORDS], and how much time I can spend collecting data is [TIME PER WEEK]. For each KPI, tell me whether I can measure it now, what small change would let me measure it, or a simpler proxy I could use instead. Note that a perfect KPI I cannot measure reliably is less useful than a simpler one I can, and many small businesses track sales through chat apps, cash, and payment apps rather than one system, so a practical proxy, like counting orders weekly from messages, often beats waiting to set up a perfect system that never happens. Give me the measurability check.",
+    "description": "Check which KPIs you can measure now and find simple proxies for the rest.",
+    "useCase": "Use this before committing to KPIs. A perfect KPI you cannot measure reliably is less useful than a simpler one you can, and many small businesses track sales across chat apps, cash, and payment apps, so a practical proxy often beats waiting for a perfect system that never arrives.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR LIST",
+      "E.G. BANK STATEMENTS, PAYMENT APPS, SPREADSHEET, WEBSITE ANALYTICS, MESSAGING APP, PAPER RECORDS",
+      "TIME PER WEEK"
+    ],
+    "relatedPromptIds": [
+      "kpi-define-precisely",
+      "kpi-small-numbers",
+      "kpi-choose-core"
+    ]
+  },
+  {
+    "id": "kpi-set-targets",
+    "title": "Set Realistic Targets for Your KPIs",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "kpi-selection",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me set realistic targets for my KPIs at my [BUSINESS TYPE]. My KPIs and their recent values are [KPIS WITH CURRENT NUMBERS], how they have trended over the past months is [TREND, IF KNOWN], and what I am changing in the business is [NEW EFFORTS OR INVESTMENTS]. Suggest a baseline, a realistic target, and a stretch target for each, with the reasoning. Note that targets pulled from industry averages or other people's success stories often do not fit my market, price point, or stage, so starting from my own recent numbers and adding a realistic improvement based on what I am actually changing gives targets I can learn from, while a target with no plan behind it is just a wish. Give me the KPI targets.",
+    "description": "Set baseline, realistic, and stretch targets from your own numbers.",
+    "useCase": "Use this once you have a few months of data. Targets taken from industry averages or others' success often do not fit your market or stage, so starting from your own recent numbers plus a realistic improvement tied to what you are changing gives targets you can learn from rather than wishes.",
+    "variables": [
+      "BUSINESS TYPE",
+      "KPIS WITH CURRENT NUMBERS",
+      "TREND, IF KNOWN",
+      "NEW EFFORTS OR INVESTMENTS"
+    ],
+    "relatedPromptIds": [
+      "kpi-leading-lagging",
+      "kpi-define-precisely",
+      "kpi-benchmarks"
+    ]
+  },
+  {
+    "id": "kpi-benchmarks",
+    "title": "Use Benchmarks Without Being Misled",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "kpi-selection",
+    "aiTool": "Gemini",
+    "promptText": "Help me use industry benchmarks sensibly for my [BUSINESS TYPE]. The KPIs I want to compare are [YOUR KPIS AND NUMBERS], the benchmarks I have seen are [FIGURES AND WHERE THEY CAME FROM], and my market and stage are [COUNTRY, PRICE LEVEL, HOW LONG IN BUSINESS]. Help me judge how relevant each benchmark is to me and what it can and cannot tell me. Note that published benchmarks often come from larger companies, different countries, or a specific platform's own customers, and are sometimes from marketing material with a reason to look good, so they are useful as rough context but misleading as targets, and comparing myself against my own past performance is usually more reliable, while I should check current benchmarks rather than rely on older figures. Give me the benchmark assessment.",
+    "description": "Judge how relevant a benchmark really is to your market and stage.",
+    "useCase": "Use this when comparing your numbers to industry figures. Benchmarks often come from larger companies, other countries, or marketing material with reasons to look good, so they are rough context rather than targets, and your own past performance is usually a more reliable comparison.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR KPIS AND NUMBERS",
+      "FIGURES AND WHERE THEY CAME FROM",
+      "COUNTRY, PRICE LEVEL, HOW LONG IN BUSINESS"
+    ],
+    "relatedPromptIds": [
+      "kpi-set-targets",
+      "kpi-small-numbers",
+      "kpi-vanity-check"
+    ]
+  },
+  {
+    "id": "kpi-small-numbers",
+    "title": "Choose KPIs When Your Numbers Are Small",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "kpi-selection",
+    "aiTool": "Claude",
+    "promptText": "Help me choose and read KPIs when my [BUSINESS TYPE] still has small numbers. My monthly volume is roughly [E.G. NUMBER OF SALES, CUSTOMERS, VISITORS], what I want to learn is [YOUR QUESTIONS], and the metrics I have been watching are [YOUR CURRENT METRICS]. Suggest KPIs that are meaningful at my size and how to read them without overreacting. Note that with small numbers, percentages swing wildly, so a conversion rate jumping from two percent to four percent may just be one extra sale, and drawing conclusions from a week or two of data often leads to chasing noise, so at this stage counting real actions, like conversations, sales, and repeat customers, and looking at longer periods is usually more reliable than percentages. Give me the small numbers KPI approach.",
+    "description": "Track meaningful KPIs at small volume without chasing noisy percentages.",
+    "useCase": "Use this when your business is early or small. With small numbers, percentages swing wildly, so a doubled conversion rate may be one extra sale, and short periods lead to chasing noise, so counting real actions like conversations and repeat customers over longer periods is more reliable than percentages.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. NUMBER OF SALES, CUSTOMERS, VISITORS",
+      "YOUR QUESTIONS",
+      "YOUR CURRENT METRICS"
+    ],
+    "relatedPromptIds": [
+      "kpi-data-availability",
+      "kpi-benchmarks",
+      "kpi-choose-core"
+    ]
+  },
+  {
+    "id": "kpi-cash-kpis",
+    "title": "Choose the Cash KPIs That Keep You Safe",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "kpi-selection",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me choose the cash and profit KPIs that protect my [BUSINESS TYPE] from running out of money. How money comes in is [PAYMENT METHODS AND TIMING], my main costs are [FIXED AND VARIABLE COSTS], and money problems I have had before are [E.G. LATE PAYMENTS, THIN MARGINS, SEASONAL DIPS, NONE YET]. Suggest a few cash KPIs, like cash on hand, months of runway, profit margin, and overdue invoices, with what level should worry me. Note that many profitable small businesses still get into trouble because cash arrives later than bills are due, so revenue alone can be dangerously misleading, and a couple of simple cash KPIs checked weekly often give earlier warning than any sales number, though I should get advice from an accountant for decisions with real financial consequences. Give me the cash KPIs.",
+    "description": "Choose a few cash and profit KPIs with warning levels.",
+    "useCase": "Use this to avoid running out of money. Profitable businesses still get into trouble when cash arrives later than bills are due, so revenue alone can mislead, and a couple of simple cash KPIs checked weekly give earlier warning, though decisions with real financial consequences deserve an accountant's advice.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PAYMENT METHODS AND TIMING",
+      "FIXED AND VARIABLE COSTS",
+      "E.G. LATE PAYMENTS, THIN MARGINS, SEASONAL DIPS, NONE YET"
+    ],
+    "relatedPromptIds": [
+      "kpi-choose-core",
+      "kpi-customer-kpis",
+      "kpi-leading-lagging"
+    ]
+  },
+  {
+    "id": "kpi-customer-kpis",
+    "title": "Choose KPIs for Customer Health",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "kpi-selection",
+    "aiTool": "Gemini",
+    "promptText": "Help me choose KPIs that show how healthy my customer base is for my [BUSINESS TYPE]. How customers buy from me is [ONE TIME, REPEAT, SUBSCRIPTION, CONTRACT], what I know about repeat buying and complaints is [WHAT YOU KNOW], and how I collect customer feedback is [REVIEWS, MESSAGES, SURVEYS, NOTHING]. Suggest customer KPIs like repeat purchase rate, retention, average customer value, referral rate, and satisfaction, and which fit my business. Note that new sales can hide a leaking business, since if customers do not come back or recommend me, I have to keep replacing them at a high cost, so a couple of customer health KPIs often explain why growth feels so hard, and simple measures like the share of customers who buy again are usually enough for a small business. Give me the customer KPIs.",
+    "description": "Choose KPIs that show whether customers come back and recommend you.",
+    "useCase": "Use this when growth feels harder than it should. New sales can hide a leaking business, since customers who do not return or recommend you must be replaced at high cost, so a couple of customer health KPIs often explain the struggle, and simple measures like repeat purchase share are usually enough.",
+    "variables": [
+      "BUSINESS TYPE",
+      "ONE TIME, REPEAT, SUBSCRIPTION, CONTRACT",
+      "WHAT YOU KNOW",
+      "REVIEWS, MESSAGES, SURVEYS, NOTHING"
+    ],
+    "relatedPromptIds": [
+      "kpi-by-business-model",
+      "kpi-cash-kpis",
+      "kpi-north-star"
+    ]
+  },
+  {
+    "id": "kpi-marketing-channel",
+    "title": "Choose KPIs for a Marketing Channel",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "kpi-selection",
+    "aiTool": "Claude",
+    "promptText": "Help me choose KPIs to judge a specific marketing channel for my [BUSINESS TYPE]. The channel is [E.G. INSTAGRAM, SEO, EMAIL, PAID ADS, MARKETPLACE, WORD OF MOUTH, EVENTS], what I spend on it in time and money is [YOUR INVESTMENT], and what I want it to do is [E.G. BRING LEADS, SALES, AWARENESS]. Suggest a short chain of KPIs from reach to result, like visits, leads, and sales, plus cost per result. Note that judging a channel only by reach or engagement can keep me investing in something that never sells, while judging only by immediate sales can unfairly kill channels that build trust slowly, so tracking a short chain from attention to purchase, and including my own time as a cost, shows whether the channel is truly worth it. Give me the channel KPIs.",
+    "description": "Track a short chain from reach to sales, including your time as a cost.",
+    "useCase": "Use this to judge whether a channel is worth it. Judging only by reach can keep you investing in something that never sells, while judging only by immediate sales can kill slow trust builders, so a short chain from attention to purchase, with your time counted as a cost, gives a fair picture.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. INSTAGRAM, SEO, EMAIL, PAID ADS, MARKETPLACE, WORD OF MOUTH, EVENTS",
+      "YOUR INVESTMENT",
+      "E.G. BRING LEADS, SALES, AWARENESS"
+    ],
+    "relatedPromptIds": [
+      "kpi-vanity-check",
+      "kpi-leading-lagging",
+      "kpi-owner-time"
+    ]
+  },
+  {
+    "id": "kpi-owner-time",
+    "title": "Track Your Own Time as a KPI",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "kpi-selection",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me treat my own time as a KPI for my [BUSINESS TYPE]. How many hours I roughly work is [HOURS PER WEEK], how my time splits across activities is [ROUGH BREAKDOWN], and what I earn is [ROUGH MONTHLY PROFIT OR INCOME]. Suggest a few time KPIs, like effective hourly earnings, share of time on revenue generating work, and hours on admin, and how to track them simply. Note that solo owners often look healthy on revenue while quietly earning less per hour than a regular job, or spending most of their time on low value tasks, and owner time is the scarcest resource in a small business, so tracking it, even roughly, often reveals where to raise prices, delegate, or cut work. Give me the owner time KPIs.",
+    "description": "Track effective hourly earnings and where your hours actually go.",
+    "useCase": "Use this if you work long hours and wonder if it pays. Solo owners can look healthy on revenue while earning less per hour than a regular job or spending most time on low value tasks, so tracking your time even roughly often shows where to raise prices, delegate, or cut work.",
+    "variables": [
+      "BUSINESS TYPE",
+      "HOURS PER WEEK",
+      "ROUGH BREAKDOWN",
+      "ROUGH MONTHLY PROFIT OR INCOME"
+    ],
+    "relatedPromptIds": [
+      "kpi-marketing-channel",
+      "kpi-cash-kpis",
+      "kpi-choose-core"
+    ]
+  },
+  {
+    "id": "kpi-launch-kpis",
+    "title": "Choose KPIs for a Launch or Project",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "kpi-selection",
+    "aiTool": "Gemini",
+    "promptText": "Help me choose KPIs to judge a specific launch or project for my [BUSINESS TYPE]. The launch is [NEW PRODUCT, SERVICE, CAMPAIGN, OR LOCATION], what success would look like is [YOUR HOPES], how long I will give it is [TIMEFRAME], and what it costs me is [MONEY AND TIME]. Suggest a few KPIs, a target for each, and a clear point at which I will decide to continue, change, or stop. Note that without KPIs set before launch, it is easy to call any result a success or keep funding something that is clearly not working, so agreeing in advance what numbers mean go, adjust, or stop protects me from both wishful thinking and quitting too early on something that just needs more time. Give me the launch KPIs.",
+    "description": "Set launch KPIs and a decision point before you start.",
+    "useCase": "Use this before launching anything new. Without KPIs set beforehand it is easy to call any result a success or keep funding something clearly not working, so deciding in advance what numbers mean go, adjust, or stop protects you from both wishful thinking and quitting too early.",
+    "variables": [
+      "BUSINESS TYPE",
+      "NEW PRODUCT, SERVICE, CAMPAIGN, OR LOCATION",
+      "YOUR HOPES",
+      "TIMEFRAME",
+      "MONEY AND TIME"
+    ],
+    "relatedPromptIds": [
+      "kpi-set-targets",
+      "kpi-leading-lagging",
+      "kpi-marketing-channel"
+    ]
+  },
+  {
+    "id": "kpi-retire-metrics",
+    "title": "Retire KPIs That No Longer Help",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "kpi-selection",
+    "aiTool": "Claude",
+    "promptText": "Help me review my KPIs and retire the ones that no longer help my [BUSINESS TYPE]. The KPIs I track are [YOUR LIST], how my business and goals have changed is [WHAT IS DIFFERENT], and the KPIs I never act on are [ONES YOU IGNORE]. For each, tell me whether to keep, change, or retire it, and what to replace it with if needed. Note that KPIs chosen at one stage of a business often stop fitting as it grows or shifts, and tracking numbers I never act on wastes time and hides the ones that matter, so a review every few months, asking what decision each KPI informs, keeps the list short and useful. Give me the KPI review.",
+    "description": "Keep, change, or retire KPIs based on whether you still act on them.",
+    "useCase": "Use this every few months. KPIs chosen at one stage often stop fitting as a business grows or shifts, and tracking numbers you never act on wastes time and hides what matters, so asking what decision each KPI informs keeps the list short and useful.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR LIST",
+      "WHAT IS DIFFERENT",
+      "ONES YOU IGNORE"
+    ],
+    "relatedPromptIds": [
+      "kpi-vanity-check",
+      "kpi-choose-core",
+      "kpi-define-precisely"
+    ]
+  },
+  {
+    "id": "kpi-team-kpis",
+    "title": "Set KPIs for a Team Member or Contractor",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "kpi-selection",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me set fair KPIs for a team member or contractor at my [BUSINESS TYPE]. Their role is [ROLE], what they control directly is [THEIR RESPONSIBILITIES], and the business results their work affects are [OUTCOMES]. Suggest two or three KPIs that measure what they can actually influence, how to track them, and what to avoid. Note that KPIs tied to results a person cannot control, like total sales when they only handle customer support, feel unfair and demotivating, while single number KPIs can encourage gaming, such as rushing tickets to hit a response time target, so a small set balancing speed and quality, agreed with the person, works better than a target handed down. Give me the team KPIs.",
+    "description": "Set KPIs a team member can influence, balancing speed and quality.",
+    "useCase": "Use this when giving someone measurable goals. KPIs tied to results a person cannot control feel unfair, and single numbers invite gaming like rushing tickets to hit response times, so a small set balancing speed and quality, agreed with the person, works better than targets handed down.",
+    "variables": [
+      "BUSINESS TYPE",
+      "ROLE",
+      "THEIR RESPONSIBILITIES",
+      "OUTCOMES"
+    ],
+    "relatedPromptIds": [
+      "kpi-define-precisely",
+      "kpi-set-targets",
+      "kpi-choose-core"
+    ]
   }
 ]
