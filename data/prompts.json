@@ -40962,5 +40962,428 @@
       "mreport-commentary",
       "mreport-partner-version"
     ]
+  },
+  {
+    "id": "interpret-sudden-drop",
+    "title": "Investigate a Sudden Drop in a Number",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "data-interpretation",
+    "aiTool": "Claude",
+    "promptText": "Help me investigate a sudden drop in a key number for my [BUSINESS TYPE]. The number that dropped is [THE METRIC], it went from [BEFORE] to [AFTER] over [TIME PERIOD], and things that changed around then are [E.G. A PRICE CHANGE, A WEBSITE UPDATE, A HOLIDAY, A NEW COMPETITOR, A TRACKING CHANGE]. Walk me through possible causes in order of likelihood, starting with checking whether the data itself is wrong, and the specific checks to confirm or rule out each one. Note that many sudden drops turn out to be measurement problems, like a broken tracking code or a changed report setting, rather than a real change in the business, so ruling those out first saves panic, and checking one cause at a time against the timing usually finds the answer faster than guessing. Give me the investigation plan.",
+    "description": "Work through likely causes of a sudden drop, starting with data errors.",
+    "useCase": "Use this when a key number falls unexpectedly. Many sudden drops are measurement problems like a broken tracking code rather than real business changes, so ruling those out first saves panic, and checking one cause at a time against the timing usually finds the answer faster than guessing.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE METRIC",
+      "BEFORE",
+      "AFTER",
+      "TIME PERIOD",
+      "E.G. A PRICE CHANGE, A WEBSITE UPDATE, A HOLIDAY, A NEW COMPETITOR, A TRACKING CHANGE"
+    ],
+    "relatedPromptIds": [
+      "interpret-sudden-spike",
+      "interpret-data-errors",
+      "interpret-signal-vs-noise"
+    ]
+  },
+  {
+    "id": "interpret-sudden-spike",
+    "title": "Understand a Sudden Spike",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "data-interpretation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me understand a sudden spike in a number for my [BUSINESS TYPE]. The number is [THE METRIC], it jumped from [BEFORE] to [AFTER] around [WHEN], and what was happening at the time is [E.G. A POST WENT VIRAL, A MENTION, A PROMOTION, A BIG ORDER, BOTS]. Help me figure out whether it is real, whether it is likely to last, and what I can learn or repeat from it. Note that spikes are exciting but often temporary, like a viral post or a one time large order, and some are not real at all, such as bot traffic or duplicate orders, so checking quality, like whether the extra visitors bought or stayed, matters more than the size of the spike, and planning as if a spike is the new normal can lead to overspending. Give me the spike analysis.",
+    "description": "Check whether a spike is real, lasting, and worth repeating.",
+    "useCase": "Use this when a number suddenly jumps. Spikes are often temporary or not real at all, like bot traffic or duplicate orders, so checking quality, such as whether extra visitors bought, matters more than size, and treating a spike as the new normal can lead to overspending.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE METRIC",
+      "BEFORE",
+      "AFTER",
+      "WHEN",
+      "E.G. A POST WENT VIRAL, A MENTION, A PROMOTION, A BIG ORDER, BOTS"
+    ],
+    "relatedPromptIds": [
+      "interpret-sudden-drop",
+      "interpret-data-errors",
+      "interpret-cause-or-coincidence"
+    ]
+  },
+  {
+    "id": "interpret-quick-read",
+    "title": "Get a Quick Read on a Set of Numbers",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "data-interpretation",
+    "aiTool": "Grok",
+    "promptText": "Give me a quick read on these numbers. My business is [WHAT YOU DO], and the numbers are [PASTE THE NUMBERS]. Tell me the two or three most important things they show and one question I should look into, no long explanation, just the key points. Give me the quick read.",
+    "description": "Get the two or three most important takeaways from a set of numbers.",
+    "useCase": "Use this when you have numbers in front of you and little time. Two or three key takeaways plus one question to investigate turn raw figures into something you can act on, and a quick read now beats leaving data unexamined until a full analysis you may never do.",
+    "variables": [
+      "WHAT YOU DO",
+      "PASTE THE NUMBERS"
+    ],
+    "relatedPromptIds": [
+      "interpret-find-the-story",
+      "interpret-plain-language",
+      "interpret-questions-to-ask"
+    ]
+  },
+  {
+    "id": "interpret-signal-vs-noise",
+    "title": "Tell Real Changes From Random Noise",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "data-interpretation",
+    "aiTool": "Gemini",
+    "promptText": "Help me tell whether a change in my numbers is real or just normal variation for my [BUSINESS TYPE]. The metric is [THE METRIC], recent values over time are [LIST OF RECENT WEEKS OR MONTHS], and the change that caught my attention is [THE CHANGE]. Help me judge how much this number normally moves, whether the latest change is outside that range, and how long to wait before reacting. Note that numbers naturally bounce around, especially with small volumes, so a single good or bad week often means nothing, and reacting to every wiggle leads to constant strategy changes that make it impossible to learn what works, while a change that stays outside the usual range for several periods is far more likely to be real. Give me the signal check.",
+    "description": "Judge whether a change is outside normal variation before reacting.",
+    "useCase": "Use this before reacting to a good or bad week. Numbers naturally bounce around, especially at small volume, so one week often means nothing, and reacting to every wiggle makes it impossible to learn what works, while a change that stays outside the usual range for several periods is far more likely to be real.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE METRIC",
+      "LIST OF RECENT WEEKS OR MONTHS",
+      "THE CHANGE"
+    ],
+    "relatedPromptIds": [
+      "interpret-sudden-drop",
+      "interpret-seasonality",
+      "interpret-misleading-averages"
+    ]
+  },
+  {
+    "id": "interpret-cause-or-coincidence",
+    "title": "Check Whether One Thing Really Caused Another",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "data-interpretation",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether one thing really caused another in my [BUSINESS TYPE]. What I think happened is [E.G. SALES ROSE BECAUSE OF THE NEW POSTS], the timing of both is [WHEN EACH HAPPENED], and other things that changed in the same period are [OTHER FACTORS]. Help me consider alternative explanations, what evidence would support a real cause, and a simple test to find out. Note that two things moving together, like more posts and more sales, do not prove one caused the other, since a season, a holiday, or a third factor may drive both, and assuming cause too quickly leads me to double down on things that do not work, while a simple test, like pausing the activity or trying it in one channel only, gives much stronger evidence. Give me the cause check.",
+    "description": "Test whether one change really caused another or just happened at the same time.",
+    "useCase": "Use this before crediting a result to something you did. Two things moving together do not prove cause, since a season or third factor may drive both, and assuming cause too quickly makes you double down on things that do not work, while a simple test gives much stronger evidence.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. SALES ROSE BECAUSE OF THE NEW POSTS",
+      "WHEN EACH HAPPENED",
+      "OTHER FACTORS"
+    ],
+    "relatedPromptIds": [
+      "interpret-ab-test",
+      "interpret-sudden-spike",
+      "interpret-questions-to-ask"
+    ]
+  },
+  {
+    "id": "interpret-misleading-averages",
+    "title": "Spot When an Average Is Misleading",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "data-interpretation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me check whether an average is hiding the real picture in my [BUSINESS TYPE] data. The average I am looking at is [E.G. AVERAGE ORDER VALUE, AVERAGE RATING, AVERAGE DELIVERY TIME], the underlying values are [PASTE SOME OR ALL VALUES, OR DESCRIBE THEM], and the decision I want to make from it is [THE DECISION]. Show me how the median, the spread, and any outliers compare to the average, and what they reveal. Note that a few very large or very small values can pull an average far away from what most customers actually experience, like one huge order lifting average order value, so looking at the median and the range alongside the average often tells a more accurate story, and splitting the data into groups can reveal very different patterns hidden inside one number. Give me the average check.",
+    "description": "Compare an average with the median, spread, and outliers before deciding.",
+    "useCase": "Use this when a decision rests on an average. A few extreme values can pull an average far from what most customers experience, like one huge order lifting average order value, so checking the median and range, and splitting into groups, often tells a more accurate story.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. AVERAGE ORDER VALUE, AVERAGE RATING, AVERAGE DELIVERY TIME",
+      "PASTE SOME OR ALL VALUES, OR DESCRIBE THEM",
+      "THE DECISION"
+    ],
+    "relatedPromptIds": [
+      "interpret-segment-breakdown",
+      "interpret-signal-vs-noise",
+      "interpret-percentages"
+    ]
+  },
+  {
+    "id": "interpret-segment-breakdown",
+    "title": "Break a Number Down by Segment",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "data-interpretation",
+    "aiTool": "Gemini",
+    "promptText": "Help me break a top line number into segments to understand it better for my [BUSINESS TYPE]. The number is [THE METRIC AND ITS VALUE], the ways I could split it are [E.G. BY PRODUCT, CHANNEL, CUSTOMER TYPE, LOCATION, NEW VERSUS RETURNING], and the data I have for each segment is [WHAT YOU CAN BREAK DOWN]. Suggest the most useful splits, what each might reveal, and how to read the results. Note that a total can stay flat while one segment grows and another shrinks, or rise while a key segment quietly declines, so breaking it down usually shows where to act, though very small segments produce unreliable numbers, so it is best to focus on splits large enough to mean something. Give me the segment breakdown plan.",
+    "description": "Split a top line number into segments to see where to act.",
+    "useCase": "Use this when a total number does not tell you what to do. A total can stay flat while one segment grows and another shrinks, so breaking it down by product, channel, or customer type shows where to act, though tiny segments give unreliable numbers worth treating with caution.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE METRIC AND ITS VALUE",
+      "E.G. BY PRODUCT, CHANNEL, CUSTOMER TYPE, LOCATION, NEW VERSUS RETURNING",
+      "WHAT YOU CAN BREAK DOWN"
+    ],
+    "relatedPromptIds": [
+      "interpret-misleading-averages",
+      "interpret-funnel-dropoff",
+      "interpret-cohorts"
+    ]
+  },
+  {
+    "id": "interpret-funnel-dropoff",
+    "title": "Find Where Customers Drop Off",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "data-interpretation",
+    "aiTool": "Claude",
+    "promptText": "Help me find where potential customers drop off before buying from my [BUSINESS TYPE]. The steps in my sales process are [E.G. SEE A POST, VISIT THE SITE, VIEW A PRODUCT, ADD TO CART, MESSAGE ME, PAY], the numbers at each step are [COUNTS FOR EACH STEP], and what I suspect is the problem is [YOUR GUESS]. Calculate the drop at each step, identify the biggest leak, and suggest likely reasons and simple tests to fix it. Note that improving the step where most people drop off usually beats getting more people into the top of the funnel, and a big drop at a specific step often points to something concrete, like a confusing checkout, shipping cost surprises, or slow replies to messages, though some drop off is normal at every stage. Give me the funnel analysis.",
+    "description": "Calculate drop off at each sales step and target the biggest leak.",
+    "useCase": "Use this when people show interest but do not buy. Improving the step where most people drop off usually beats getting more people into the funnel, and a big drop at one step often points to something concrete like a confusing checkout or slow replies, though some drop off is normal everywhere.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. SEE A POST, VISIT THE SITE, VIEW A PRODUCT, ADD TO CART, MESSAGE ME, PAY",
+      "COUNTS FOR EACH STEP",
+      "YOUR GUESS"
+    ],
+    "relatedPromptIds": [
+      "interpret-segment-breakdown",
+      "interpret-website-analytics",
+      "interpret-ab-test"
+    ]
+  },
+  {
+    "id": "interpret-website-analytics",
+    "title": "Read a Website Analytics Report",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "data-interpretation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me make sense of my website analytics for my [BUSINESS TYPE]. The numbers I see are [E.G. VISITORS, SESSIONS, BOUNCE OR ENGAGEMENT RATE, TOP PAGES, TRAFFIC SOURCES, CONVERSIONS], the tool is [YOUR ANALYTICS TOOL], and what I want my website to do is [ITS PURPOSE, E.G. SALES, ENQUIRIES, AD REVENUE]. Explain what the key numbers mean in plain language, which ones matter for my goal, and what they suggest I should look into. Note that analytics tools show many numbers that sound important but rarely drive decisions, and terms like sessions and users or bounce rate are defined differently between tools and versions, so it helps to confirm how my tool defines them, while focusing on where visitors come from and whether they take the action I want is usually most useful. Give me the analytics explanation.",
+    "description": "Explain website analytics in plain terms and focus on what matters.",
+    "useCase": "Use this when your analytics dashboard feels overwhelming. Tools show many numbers that rarely drive decisions, and terms like sessions or bounce rate are defined differently between tools and versions, so confirm your tool's definitions and focus on where visitors come from and whether they act.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. VISITORS, SESSIONS, BOUNCE OR ENGAGEMENT RATE, TOP PAGES, TRAFFIC SOURCES, CONVERSIONS",
+      "YOUR ANALYTICS TOOL",
+      "ITS PURPOSE, E.G. SALES, ENQUIRIES, AD REVENUE"
+    ],
+    "relatedPromptIds": [
+      "interpret-funnel-dropoff",
+      "interpret-social-insights",
+      "interpret-plain-language"
+    ]
+  },
+  {
+    "id": "interpret-social-insights",
+    "title": "Read Social Media Insights",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "data-interpretation",
+    "aiTool": "Gemini",
+    "promptText": "Help me interpret the insights from my social media accounts for my [BUSINESS TYPE]. The platform is [E.G. INSTAGRAM, FACEBOOK, TIKTOK, LINKEDIN, YOUTUBE], the numbers I see are [REACH, IMPRESSIONS, ENGAGEMENT, FOLLOWERS, PROFILE VISITS, LINK CLICKS], and my top and bottom posts recently were [EXAMPLES WITH NUMBERS]. Help me understand what the numbers mean, which posts actually led to interest in my business, and what patterns to test next. Note that platform metrics reward attention rather than sales, so a post with huge reach may bring no customers while a modest post brings real enquiries, and algorithm changes can shift reach for reasons unrelated to my content, so comparing posts by actions that matter, like profile visits, clicks, and messages, gives a more useful picture than likes alone. Give me the social insights analysis.",
+    "description": "Read social insights by actions that matter, not just likes and reach.",
+    "useCase": "Use this when deciding what to post. Platform metrics reward attention rather than sales, so a huge reach post may bring no customers while a modest one brings enquiries, and algorithm changes shift reach regardless of content, so comparing posts by clicks, profile visits, and messages is more useful than likes.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. INSTAGRAM, FACEBOOK, TIKTOK, LINKEDIN, YOUTUBE",
+      "REACH, IMPRESSIONS, ENGAGEMENT, FOLLOWERS, PROFILE VISITS, LINK CLICKS",
+      "EXAMPLES WITH NUMBERS"
+    ],
+    "relatedPromptIds": [
+      "interpret-website-analytics",
+      "interpret-cause-or-coincidence",
+      "interpret-signal-vs-noise"
+    ]
+  },
+  {
+    "id": "interpret-ab-test",
+    "title": "Interpret the Results of a Test",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "data-interpretation",
+    "aiTool": "Claude",
+    "promptText": "Help me interpret the results of a test I ran for my [BUSINESS TYPE]. What I tested is [E.G. TWO PRICES, TWO HEADLINES, TWO OFFERS, TWO EMAIL SUBJECT LINES], the results for each version are [NUMBERS SHOWN AND NUMBERS THAT CONVERTED], and how long the test ran is [DURATION]. Tell me whether the difference is likely meaningful or could be chance given the numbers, and what to do next. Note that small tests often produce differences that look large but are within normal chance, like nine sales versus six, so declaring a winner too early is a common mistake, and a result is more trustworthy when the test ran long enough to cover normal weekly patterns, though for a small business a test can still guide a sensible decision even without perfect certainty. Give me the test interpretation.",
+    "description": "Judge whether a test result is meaningful or could just be chance.",
+    "useCase": "Use this after comparing two versions of anything. Small tests often show differences that look large but are within chance, like nine sales versus six, so declaring winners too early is common, and results are more trustworthy after covering normal weekly patterns, though they can still guide sensible decisions.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. TWO PRICES, TWO HEADLINES, TWO OFFERS, TWO EMAIL SUBJECT LINES",
+      "NUMBERS SHOWN AND NUMBERS THAT CONVERTED",
+      "DURATION"
+    ],
+    "relatedPromptIds": [
+      "interpret-cause-or-coincidence",
+      "interpret-signal-vs-noise",
+      "interpret-percentages"
+    ]
+  },
+  {
+    "id": "interpret-percentages",
+    "title": "Read Percentages and Growth Rates Correctly",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "data-interpretation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me read some percentages and growth rates correctly for my [BUSINESS TYPE]. The figures I am looking at are [E.G. GROWTH OF 200 PERCENT, CONVERSION UP 3 POINTS, MARGIN DOWN 10 PERCENT], the underlying counts or amounts are [THE ACTUAL NUMBERS], and where the figures came from is [SOURCE]. Explain what each actually means in real terms, and flag anything that sounds bigger or smaller than it is. Note that percentages can be very misleading without the underlying numbers, since growing from two sales to six is 200 percent growth but still tiny, and a change from 2 percent to 3 percent is a one point rise but a 50 percent relative increase, so always checking the actual counts and knowing whether a figure is in points or percent prevents both false alarm and false celebration. Give me the explanation.",
+    "description": "Translate percentages and growth rates back into real numbers.",
+    "useCase": "Use this when a percentage seems dramatic. Percentages mislead without the underlying numbers, since two to six sales is 200 percent growth but still tiny, and two to three percent is one point but 50 percent relative, so checking actual counts and points versus percent prevents false alarm and false celebration.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. GROWTH OF 200 PERCENT, CONVERSION UP 3 POINTS, MARGIN DOWN 10 PERCENT",
+      "THE ACTUAL NUMBERS",
+      "SOURCE"
+    ],
+    "relatedPromptIds": [
+      "interpret-misleading-averages",
+      "interpret-ab-test",
+      "interpret-plain-language"
+    ]
+  },
+  {
+    "id": "interpret-seasonality",
+    "title": "Separate Seasonal Patterns From Real Trends",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "data-interpretation",
+    "aiTool": "Gemini",
+    "promptText": "Help me separate seasonal patterns from real trends in my [BUSINESS TYPE] data. The metric is [THE METRIC], my monthly values for as far back as I have are [YOUR DATA], and seasonal events that affect my business are [E.G. HOLIDAYS, TOURIST SEASONS, RAINY SEASON, SCHOOL TERMS, FESTIVALS, PAYDAYS]. Help me identify the repeating seasonal pattern and whether this year is above or below it. Note that seasonal swings can be large enough to hide real growth or decline, so a quiet month may still be a good result for that time of year, and with less than a year of data it is hard to separate season from trend, so I should be cautious and note local events, which vary a lot by country and region, rather than assuming patterns from elsewhere. Give me the seasonality analysis.",
+    "description": "Separate repeating seasonal swings from real growth or decline.",
+    "useCase": "Use this if your business has busy and quiet seasons. Seasonal swings can hide real growth or decline, so a quiet month may still be good for that time of year, and with under a year of data separating season from trend is hard, so note local events rather than assuming patterns from elsewhere.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE METRIC",
+      "YOUR DATA",
+      "E.G. HOLIDAYS, TOURIST SEASONS, RAINY SEASON, SCHOOL TERMS, FESTIVALS, PAYDAYS"
+    ],
+    "relatedPromptIds": [
+      "interpret-signal-vs-noise",
+      "interpret-sudden-drop",
+      "interpret-cohorts"
+    ]
+  },
+  {
+    "id": "interpret-cohorts",
+    "title": "Compare Groups of Customers Over Time",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "data-interpretation",
+    "aiTool": "Claude",
+    "promptText": "Help me compare groups of customers over time to see whether retention is improving for my [BUSINESS TYPE]. How I can group customers is [E.G. BY THE MONTH THEY FIRST BOUGHT, BY HOW THEY FOUND ME, BY FIRST PRODUCT], the data I have is [PURCHASE DATES OR REPEAT ORDERS PER CUSTOMER], and what I want to know is [YOUR QUESTION]. Show me a simple way to set up the comparison and how to read it. Note that looking at all customers together can hide important changes, such as recent customers coming back less often than older ones, so grouping customers by when or how they started shows whether changes I made actually improved loyalty, and a simple spreadsheet version is usually enough for a small business. Give me the customer group comparison.",
+    "description": "Group customers by start month or source to see if loyalty is improving.",
+    "useCase": "Use this to see whether customers are staying longer. Looking at all customers together hides changes like recent customers returning less than older ones, so grouping by when or how they started shows whether your changes improved loyalty, and a simple spreadsheet version is usually enough.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. BY THE MONTH THEY FIRST BOUGHT, BY HOW THEY FOUND ME, BY FIRST PRODUCT",
+      "PURCHASE DATES OR REPEAT ORDERS PER CUSTOMER",
+      "YOUR QUESTION"
+    ],
+    "relatedPromptIds": [
+      "interpret-segment-breakdown",
+      "interpret-seasonality",
+      "interpret-find-the-story"
+    ]
+  },
+  {
+    "id": "interpret-survey-results",
+    "title": "Interpret Survey Results Carefully",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "data-interpretation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me interpret the results of a customer survey for my [BUSINESS TYPE]. The questions were [YOUR QUESTIONS], the responses are [PASTE OR SUMMARIZE RESULTS], how many people responded out of how many asked is [RESPONSE NUMBERS], and how the survey was shared is [CHANNEL]. Summarize the key findings, how confident I can be in them, and what they suggest I do. Note that survey results reflect who chose to answer, which is often the happiest or the angriest customers rather than everyone, and the wording of a question can strongly shape the answers, while what people say they would buy often differs from what they actually buy, so survey findings are best treated as useful signals to test rather than final proof. Give me the survey interpretation.",
+    "description": "Summarize survey findings with honest confidence about what they show.",
+    "useCase": "Use this after running a customer survey. Results reflect who chose to answer, often the happiest or angriest, question wording shapes answers, and what people say they would buy often differs from what they do, so treat findings as signals to test rather than final proof.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR QUESTIONS",
+      "PASTE OR SUMMARIZE RESULTS",
+      "RESPONSE NUMBERS",
+      "CHANNEL"
+    ],
+    "relatedPromptIds": [
+      "interpret-feedback-themes",
+      "interpret-percentages",
+      "interpret-questions-to-ask"
+    ]
+  },
+  {
+    "id": "interpret-feedback-themes",
+    "title": "Find Themes in Written Customer Feedback",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "data-interpretation",
+    "aiTool": "Gemini",
+    "promptText": "Help me find the main themes in written feedback about my [BUSINESS TYPE]. The feedback is [PASTE REVIEWS, MESSAGES, SURVEY COMMENTS, OR NOTES], where it came from is [SOURCES], and the time period is [WHEN]. Group the comments into themes, count roughly how often each appears, separate praise from complaints, and highlight anything surprising or urgent. Note that a few vivid comments can feel bigger than they are, while a quiet issue mentioned by many people can be easy to miss, so grouping and counting gives a fairer picture, and feedback in different languages or from different platforms may reflect different customer groups, which is worth keeping in mind when comparing themes. Give me the feedback themes.",
+    "description": "Group and count written feedback into themes, praise, and complaints.",
+    "useCase": "Use this when you have a pile of reviews or comments. A few vivid comments can feel bigger than they are while a quiet issue mentioned by many is easy to miss, so grouping and counting gives a fairer picture, and feedback from different languages or platforms may reflect different customer groups.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE REVIEWS, MESSAGES, SURVEY COMMENTS, OR NOTES",
+      "SOURCES",
+      "WHEN"
+    ],
+    "relatedPromptIds": [
+      "interpret-survey-results",
+      "interpret-find-the-story",
+      "interpret-segment-breakdown"
+    ]
+  },
+  {
+    "id": "interpret-data-errors",
+    "title": "Check Data for Errors Before Trusting It",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "data-interpretation",
+    "aiTool": "Claude",
+    "promptText": "Help me check my data for errors before I rely on it for my [BUSINESS TYPE]. The data is [PASTE A SAMPLE OR DESCRIBE IT], where it came from is [SOURCES AND HOW IT WAS COLLECTED], and what I plan to use it for is [THE DECISION]. Look for duplicates, missing values, impossible numbers, inconsistent formats like dates or currencies, test orders, and sudden breaks that might be tracking changes. Note that small businesses often combine data from several apps, manual entry, and exports, which easily introduces duplicates, mixed currencies, or missing records, and a decision based on flawed data can be worse than no data at all, so a quick check before analysis catches most problems and avoids confidently wrong conclusions. Give me the error check.",
+    "description": "Check data for duplicates, gaps, and inconsistencies before analyzing it.",
+    "useCase": "Use this before analyzing any combined data. Data merged from several apps, manual entry, and exports easily gains duplicates, mixed currencies, or missing records, and decisions on flawed data can be worse than none, so a quick check first avoids confidently wrong conclusions.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE A SAMPLE OR DESCRIBE IT",
+      "SOURCES AND HOW IT WAS COLLECTED",
+      "THE DECISION"
+    ],
+    "relatedPromptIds": [
+      "interpret-sudden-drop",
+      "interpret-sudden-spike",
+      "interpret-find-the-story"
+    ]
+  },
+  {
+    "id": "interpret-find-the-story",
+    "title": "Find the Story in a Spreadsheet",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "data-interpretation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me find the most important story in a spreadsheet of my [BUSINESS TYPE] data. The data covers [WHAT THE COLUMNS AND ROWS ARE], here is the data or a summary: [PASTE DATA OR SUMMARY], and the question I most want answered is [YOUR QUESTION, OR WRITE NONE YET]. Identify the most notable patterns, the biggest changes, and any surprises, then suggest the one or two insights most worth acting on. Note that data rarely speaks for itself, and it is easy to get lost in rows of numbers, so starting with a clear question makes analysis far more useful, while the insights worth acting on are usually ones that point to a specific decision, rather than interesting facts with no clear next step. Give me the story in the data.",
+    "description": "Find the patterns and insights in a spreadsheet that point to a decision.",
+    "useCase": "Use this when you have data but no clear takeaway. Data rarely speaks for itself and rows of numbers are easy to get lost in, so starting with a clear question makes analysis far more useful, and the insights worth acting on are those pointing to a specific decision rather than interesting facts.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT THE COLUMNS AND ROWS ARE",
+      "PASTE DATA OR SUMMARY",
+      "YOUR QUESTION, OR WRITE NONE YET"
+    ],
+    "relatedPromptIds": [
+      "interpret-quick-read",
+      "interpret-questions-to-ask",
+      "interpret-data-errors"
+    ]
+  },
+  {
+    "id": "interpret-plain-language",
+    "title": "Explain a Chart or Report in Plain Language",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "data-interpretation",
+    "aiTool": "Gemini",
+    "promptText": "Help me explain a chart or report about my [BUSINESS TYPE] in plain language for [WHO IT IS FOR, E.G. MYSELF, A PARTNER, A NON TECHNICAL FAMILY MEMBER, A TEAM]. The chart or report shows [DESCRIBE OR PASTE THE DATA], and the decision or discussion it supports is [THE PURPOSE]. Write a short explanation of what it shows, why it matters, and what, if anything, should be done, avoiding jargon. Note that charts that seem obvious to the person who made them are often confusing to everyone else, and the most useful explanation states the main point in one sentence before any detail, while being clear about what the data does not show prevents people from drawing conclusions it cannot support. Give me the plain language explanation.",
+    "description": "Explain what a chart shows, why it matters, and what to do, without jargon.",
+    "useCase": "Use this before sharing data with anyone. Charts that seem obvious to their maker are often confusing to others, so stating the main point in one sentence before detail helps, and being clear about what the data does not show prevents people drawing conclusions it cannot support.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO IT IS FOR, E.G. MYSELF, A PARTNER, A NON TECHNICAL FAMILY MEMBER, A TEAM",
+      "DESCRIBE OR PASTE THE DATA",
+      "THE PURPOSE"
+    ],
+    "relatedPromptIds": [
+      "interpret-quick-read",
+      "interpret-percentages",
+      "interpret-website-analytics"
+    ]
+  },
+  {
+    "id": "interpret-questions-to-ask",
+    "title": "Ask the Right Questions of Your Data",
+    "categoryId": "analytics-and-reporting",
+    "subcategoryId": "data-interpretation",
+    "aiTool": "Claude",
+    "promptText": "Help me figure out the right questions to ask of my data for my [BUSINESS TYPE]. The data I have available is [WHAT YOU TRACK OR COLLECT], the decisions coming up are [E.G. PRICING, WHICH PRODUCTS TO STOCK, WHERE TO MARKET, WHETHER TO HIRE], and what I feel unsure about is [YOUR UNCERTAINTIES]. Suggest a short list of specific, answerable questions tied to those decisions, and which data would answer each. Note that staring at dashboards without a question rarely produces useful insight, while a specific question, like which products bring repeat customers, turns data into a decision, and sometimes the honest answer is that I do not yet have the data to answer it, which tells me what to start tracking. Give me the questions.",
+    "description": "Turn upcoming decisions into specific questions your data can answer.",
+    "useCase": "Use this when dashboards are not telling you anything useful. Staring at data without a question rarely produces insight, while a specific question like which products bring repeat customers turns data into a decision, and sometimes the honest answer is that you need to start tracking something new.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU TRACK OR COLLECT",
+      "E.G. PRICING, WHICH PRODUCTS TO STOCK, WHERE TO MARKET, WHETHER TO HIRE",
+      "YOUR UNCERTAINTIES"
+    ],
+    "relatedPromptIds": [
+      "interpret-find-the-story",
+      "interpret-cause-or-coincidence",
+      "interpret-quick-read"
+    ]
   }
 ]
