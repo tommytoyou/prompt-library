@@ -35221,5 +35221,385 @@
       "brief-ownership-and-files",
       "brief-payment-milestones"
     ]
+  },
+  {
+    "id": "culture-working-values",
+    "title": "Define Your Team's Working Values",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "team-culture-docs",
+    "aiTool": "Claude",
+    "promptText": "Help me define the working values for my small team at my [BUSINESS TYPE]. How we actually work at our best is [EXAMPLES OF GOOD WORK HABITS], what frustrates me or the team is [BEHAVIORS YOU DO NOT WANT], and the size of the team is [HOW MANY PEOPLE]. Turn this into three to five values, each with a plain explanation and one example of what it looks like in practice. Note that values like integrity and excellence sound right but guide nobody because everyone already claims them, while values written as real behaviors, like we reply to customers within a day or we flag problems early instead of hiding them, actually shape how people act, and values only mean something if I follow them too. Give me the working values.",
+    "description": "Turn how your team actually works into a few values written as real behaviors.",
+    "useCase": "Use this when you want shared standards for your team. Values like integrity sound right but guide nobody, while values written as behaviors, like flagging problems early, actually shape how people act, and they only mean something if you follow them too.",
+    "variables": [
+      "BUSINESS TYPE",
+      "EXAMPLES OF GOOD WORK HABITS",
+      "BEHAVIORS YOU DO NOT WANT",
+      "HOW MANY PEOPLE"
+    ],
+    "relatedPromptIds": [
+      "culture-how-we-work",
+      "culture-starter-handbook",
+      "culture-values-in-practice"
+    ]
+  },
+  {
+    "id": "culture-how-we-work",
+    "title": "Write a How We Work Document",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "team-culture-docs",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write a short how we work document for my team at my [BUSINESS TYPE]. Our tools are [WHAT WE USE], our working hours and availability are [HOURS AND TIME ZONES], how work is assigned and tracked is [YOUR SYSTEM], and the unwritten rules people usually learn the hard way are [THINGS NEW PEOPLE GET WRONG]. Turn this into a practical document covering tools, hours, communication, how tasks move, and the unwritten rules. Note that most friction in small teams comes from unwritten expectations that everyone assumes others know, so writing down how things actually work, rather than how I wish they worked, saves new people weeks of guessing and settles small disagreements before they start. Give me the how we work document.",
+    "description": "Write down how your team actually works, including the unwritten rules.",
+    "useCase": "Use this when people keep learning the rules the hard way. Most small team friction comes from unwritten expectations everyone assumes others know, so writing down how things actually work saves new people weeks of guessing and settles small disagreements early.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT WE USE",
+      "HOURS AND TIME ZONES",
+      "YOUR SYSTEM",
+      "THINGS NEW PEOPLE GET WRONG"
+    ],
+    "relatedPromptIds": [
+      "culture-working-values",
+      "culture-communication-guide",
+      "culture-starter-handbook"
+    ]
+  },
+  {
+    "id": "culture-quick-doc",
+    "title": "Get a Quick Team Culture Doc Draft",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "team-culture-docs",
+    "aiTool": "Grok",
+    "promptText": "I need a quick team culture doc draft to edit. My business is [WHAT YOU DO], the team is [SIZE AND SETUP], and the three things that matter most in how we work are [YOUR TOP THREE]. Give me a short one page draft covering values, how we communicate, and what we expect from each other, no explanation, just the draft. Give me the culture doc.",
+    "description": "Get a short one page team culture draft to edit.",
+    "useCase": "Use this when you want a starting point fast. A one page draft covering values, communication, and expectations gives you something concrete to correct, and a short document your team actually reads beats a thorough one that never gets finished.",
+    "variables": [
+      "WHAT YOU DO",
+      "SIZE AND SETUP",
+      "YOUR TOP THREE"
+    ],
+    "relatedPromptIds": [
+      "culture-working-values",
+      "culture-how-we-work",
+      "culture-starter-handbook"
+    ]
+  },
+  {
+    "id": "culture-starter-handbook",
+    "title": "Create a Starter Team Handbook",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "team-culture-docs",
+    "aiTool": "Claude",
+    "promptText": "Help me create a short starter handbook for my team at my [BUSINESS TYPE]. The team is [WHO, INCLUDING EMPLOYEES OR CONTRACTORS], where we are based is [COUNTRY OR COUNTRIES], and topics people keep asking about are [E.G. TIME OFF, PAY DATES, EXPENSES, SICK DAYS, EQUIPMENT]. Give me a handbook outline with a short plain section for each topic. Note that a small business handbook should answer the questions people actually ask rather than copy a corporate template, and anything touching pay, leave, termination, or legal rights must follow local employment law, which varies a lot by country, so those sections should be checked locally before sharing, while being clear that a handbook is guidance rather than a promise I cannot keep. Give me the starter handbook.",
+    "description": "Create a short handbook that answers the questions your team actually asks.",
+    "useCase": "Use this when the same practical questions keep coming up. A small business handbook should answer real questions rather than copy a corporate template, and sections on pay, leave, and termination must follow local employment law, which varies by country, so check those locally first.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO, INCLUDING EMPLOYEES OR CONTRACTORS",
+      "COUNTRY OR COUNTRIES",
+      "E.G. TIME OFF, PAY DATES, EXPENSES, SICK DAYS, EQUIPMENT"
+    ],
+    "relatedPromptIds": [
+      "culture-time-off-policy",
+      "culture-how-we-work",
+      "culture-working-values"
+    ]
+  },
+  {
+    "id": "culture-communication-guide",
+    "title": "Write a Team Communication Guide",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "team-culture-docs",
+    "aiTool": "Gemini",
+    "promptText": "Help me write a communication guide for my team at my [BUSINESS TYPE]. The channels we use are [E.G. MESSAGING APP, EMAIL, CALLS, PROJECT TOOL], what tends to go wrong is [E.G. IMPORTANT THINGS LOST IN CHAT, LATE REPLIES, TOO MANY MESSAGES AT NIGHT], and our time zones are [WHERE PEOPLE ARE]. Give me simple rules for which channel to use for what, expected reply times, urgent versus non urgent, and quiet hours. Note that small teams often run everything through one chat, so urgent issues get buried and people feel they must reply at all hours, while a few clear rules about channels, reply times, and when not to message reduce both missed problems and burnout. Give me the communication guide.",
+    "description": "Set simple rules for channels, reply times, urgency, and quiet hours.",
+    "useCase": "Use this when team chat is chaotic or always on. Small teams often run everything through one chat, burying urgent issues and making people feel they must reply at all hours, so clear rules on channels, reply times, and quiet hours reduce both missed problems and burnout.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. MESSAGING APP, EMAIL, CALLS, PROJECT TOOL",
+      "E.G. IMPORTANT THINGS LOST IN CHAT, LATE REPLIES, TOO MANY MESSAGES AT NIGHT",
+      "WHERE PEOPLE ARE"
+    ],
+    "relatedPromptIds": [
+      "culture-how-we-work",
+      "culture-remote-norms",
+      "culture-meeting-norms"
+    ]
+  },
+  {
+    "id": "culture-meeting-norms",
+    "title": "Set Simple Meeting Norms",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "team-culture-docs",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me set meeting norms for my team at my [BUSINESS TYPE]. The meetings we have now are [WHAT MEETINGS AND HOW OFTEN], the problems with them are [E.G. TOO LONG, NO AGENDA, NOTHING DECIDED, PEOPLE UNPREPARED], and the team size is [HOW MANY]. Give me a short set of meeting rules, a template agenda, and guidance on which meetings could become a written update instead. Note that in a small business every hour in a meeting is an hour not serving customers, so meetings should have a purpose, an agenda, and clear decisions or actions at the end, and many status meetings work just as well as a short written update that people read in their own time. Give me the meeting norms.",
+    "description": "Set meeting rules, an agenda template, and which meetings can become written updates.",
+    "useCase": "Use this when meetings feel long and pointless. In a small business every meeting hour is an hour not serving customers, so meetings need a purpose, agenda, and clear actions, and many status meetings work just as well as a short written update read in people's own time.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT MEETINGS AND HOW OFTEN",
+      "E.G. TOO LONG, NO AGENDA, NOTHING DECIDED, PEOPLE UNPREPARED",
+      "HOW MANY"
+    ],
+    "relatedPromptIds": [
+      "culture-communication-guide",
+      "culture-decision-making",
+      "culture-how-we-work"
+    ]
+  },
+  {
+    "id": "culture-remote-norms",
+    "title": "Write Norms for a Remote or Mixed Team",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "team-culture-docs",
+    "aiTool": "Claude",
+    "promptText": "Help me write working norms for a remote or partly remote team at my [BUSINESS TYPE]. Who is remote and where is [WHO AND WHERE], the overlap hours we share are [HOURS], and the problems we have are [E.G. PEOPLE FEEL LEFT OUT, SLOW HANDOFFS, UNCLEAR AVAILABILITY]. Give me norms covering availability, status updates, written documentation, video calls, and making sure remote people are included in decisions. Note that in mixed teams the people in the same room often make decisions informally while remote people find out later, which quietly makes them second class team members, so decisions and key discussions should happen in shared channels or be written up, and clear availability signals replace the cues an office provides. Give me the remote norms.",
+    "description": "Set norms that keep remote team members included and in sync.",
+    "useCase": "Use this for remote or mixed teams. People in the same room often decide things informally while remote people find out later, which makes them second class team members, so putting decisions in shared channels and setting clear availability signals keeps everyone included.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO AND WHERE",
+      "HOURS",
+      "E.G. PEOPLE FEEL LEFT OUT, SLOW HANDOFFS, UNCLEAR AVAILABILITY"
+    ],
+    "relatedPromptIds": [
+      "culture-communication-guide",
+      "culture-cross-cultural-team",
+      "culture-how-we-work"
+    ]
+  },
+  {
+    "id": "culture-time-off-policy",
+    "title": "Write a Simple Time Off Policy",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "team-culture-docs",
+    "aiTool": "Gemini",
+    "promptText": "Help me write a simple time off policy for my team at my [BUSINESS TYPE]. Where the team is based is [COUNTRY OR COUNTRIES], whether they are [EMPLOYEES, CONTRACTORS, OR BOTH], how much leave I want to offer is [YOUR INTENTION], and the busy periods to avoid are [PEAK TIMES]. Give me a clear policy covering how to request time off, notice periods, public holidays, sick days, and coverage while someone is away. Note that minimum leave, public holidays, and sick leave are set by law in many countries and differ widely, so the policy must at least meet the local legal minimum, which I should confirm for each location, and contractors are usually handled differently from employees, while a clear request process prevents both resentment and last minute gaps. Give me the time off policy.",
+    "description": "Write a clear time off policy that meets local legal minimums.",
+    "useCase": "Use this when time off is handled case by case. Minimum leave, public holidays, and sick leave are legally set in many countries and differ widely, so the policy must at least meet local law, contractors are usually handled differently, and a clear process prevents resentment and last minute gaps.",
+    "variables": [
+      "BUSINESS TYPE",
+      "COUNTRY OR COUNTRIES",
+      "EMPLOYEES, CONTRACTORS, OR BOTH",
+      "YOUR INTENTION",
+      "PEAK TIMES"
+    ],
+    "relatedPromptIds": [
+      "culture-starter-handbook",
+      "culture-boundaries-and-hours",
+      "culture-how-we-work"
+    ]
+  },
+  {
+    "id": "culture-boundaries-and-hours",
+    "title": "Set Healthy Working Hours and Boundaries",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "team-culture-docs",
+    "aiTool": "Claude",
+    "promptText": "Help me set healthy working hour expectations for my team at my [BUSINESS TYPE]. Our core hours are [HOURS], how often I message outside them is [HONESTLY], what the business genuinely needs outside hours is [E.G. ON CALL, WEEKEND SHIFTS, NOTHING], and the signs of overwork I have noticed are [WHAT YOU HAVE SEEN]. Give me clear guidance on core hours, after hours contact, on call arrangements if needed, and how I will model it myself. Note that owners often set the real expectation through their own behavior, so messaging at midnight tells the team they are expected to answer whatever the written policy says, and a small team that burns out loses people the business cannot easily replace, so the boundaries only work if I follow them too. Give me the working hours guidance.",
+    "description": "Set working hour boundaries your team can trust, starting with your own behavior.",
+    "useCase": "Use this when the team seems always on. Owners set the real expectation through their own behavior, so midnight messages override any written policy, and a small team that burns out loses people the business cannot easily replace, so boundaries only work if you follow them too.",
+    "variables": [
+      "BUSINESS TYPE",
+      "HOURS",
+      "HONESTLY",
+      "E.G. ON CALL, WEEKEND SHIFTS, NOTHING",
+      "WHAT YOU HAVE SEEN"
+    ],
+    "relatedPromptIds": [
+      "culture-communication-guide",
+      "culture-time-off-policy",
+      "culture-working-values"
+    ]
+  },
+  {
+    "id": "culture-decision-making",
+    "title": "Document How Decisions Get Made",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "team-culture-docs",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me document how decisions get made on my team at my [BUSINESS TYPE]. The decisions that come up are [E.G. SPENDING, CUSTOMER EXCEPTIONS, HIRING, PRIORITIES, PRICING], who currently decides is [USUALLY YOU, OR WHO], and where decisions get stuck is [WHERE THINGS WAIT]. Give me a simple decision guide showing who decides what, who should be consulted, and how decisions get recorded. Note that in small businesses everything tends to wait for the owner, which slows the team and turns me into a bottleneck, so stating clearly which decisions others can make on their own frees up time, and writing down important decisions with the reason stops the same debate from starting again a month later. Give me the decision guide.",
+    "description": "Document who decides what so the owner stops being the bottleneck.",
+    "useCase": "Use this when everything waits for you. In small businesses decisions pile up on the owner, slowing the team, so stating which decisions others can make frees your time, and writing down important decisions with the reason stops the same debate restarting a month later.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. SPENDING, CUSTOMER EXCEPTIONS, HIRING, PRIORITIES, PRICING",
+      "USUALLY YOU, OR WHO",
+      "WHERE THINGS WAIT"
+    ],
+    "relatedPromptIds": [
+      "culture-meeting-norms",
+      "culture-how-we-work",
+      "culture-conflict-guide"
+    ]
+  },
+  {
+    "id": "culture-conflict-guide",
+    "title": "Write a Guide for Handling Disagreements",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "team-culture-docs",
+    "aiTool": "Claude",
+    "promptText": "Help me write a short guide for handling disagreements and conflict on my team at my [BUSINESS TYPE]. The team size is [HOW MANY], the kinds of conflicts that come up are [E.G. WORKLOAD, MISSED HANDOFFS, PERSONALITY CLASHES, CUSTOMER DECISIONS], and how they are handled now is [HONESTLY]. Give me simple steps for raising an issue directly, when to bring it to me, how I will handle it fairly, and what is never acceptable. Note that in a tiny team unresolved conflict affects everyone and people often avoid raising it to keep the peace, so a clear, safe path to raise issues early matters, while serious matters like harassment, discrimination, or threats need a separate, confidential route and should be handled according to local law rather than treated as a normal disagreement. Give me the conflict guide.",
+    "description": "Set a clear path for raising and resolving disagreements, with a separate route for serious issues.",
+    "useCase": "Use this before tension builds up. In a tiny team unresolved conflict affects everyone and people avoid raising it to keep the peace, so a safe path to raise issues early matters, while serious matters like harassment or threats need a separate confidential route handled under local law.",
+    "variables": [
+      "BUSINESS TYPE",
+      "HOW MANY",
+      "E.G. WORKLOAD, MISSED HANDOFFS, PERSONALITY CLASHES, CUSTOMER DECISIONS",
+      "HONESTLY"
+    ],
+    "relatedPromptIds": [
+      "culture-decision-making",
+      "culture-working-values",
+      "culture-cross-cultural-team"
+    ]
+  },
+  {
+    "id": "culture-recognition-habits",
+    "title": "Build Simple Recognition Habits",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "team-culture-docs",
+    "aiTool": "Gemini",
+    "promptText": "Help me build simple recognition habits into how my team works at my [BUSINESS TYPE]. The team is [SIZE AND SETUP], my budget for rewards is [AMOUNT, OR NONE], and the kinds of work that go unnoticed are [WHAT DOES NOT GET SEEN]. Give me a few low cost recognition habits I can realistically keep up, like a weekly wins message or thanking people for specific things in front of the team. Note that recognition does not need to be expensive to matter, since specific, timely thanks often means more than an occasional bonus, but it has to be consistent and fair, because praising only the visible work while the behind the scenes work goes unnoticed quietly tells people what really counts, and how people prefer to be recognized varies, so I should ask. Give me the recognition habits.",
+    "description": "Build low cost, consistent habits for recognizing your team's work.",
+    "useCase": "Use this when good work goes unnoticed. Specific, timely thanks often means more than an occasional bonus, but it has to be consistent and fair, since praising only visible work tells people the behind the scenes work does not count, and asking how people prefer recognition helps.",
+    "variables": [
+      "BUSINESS TYPE",
+      "SIZE AND SETUP",
+      "AMOUNT, OR NONE",
+      "WHAT DOES NOT GET SEEN"
+    ],
+    "relatedPromptIds": [
+      "culture-working-values",
+      "culture-rituals",
+      "culture-values-in-practice"
+    ]
+  },
+  {
+    "id": "culture-rituals",
+    "title": "Create Small Team Rituals That Stick",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "team-culture-docs",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me create a few small team rituals for my [BUSINESS TYPE] that people will actually enjoy. The team is [SIZE, LOCATIONS, AND SCHEDULES], what we already do together is [ANY EXISTING HABITS], and the feeling I want to build is [E.G. CONNECTION, CELEBRATING WINS, LEARNING TOGETHER]. Suggest a few simple rituals, like a weekly wins share, a monthly lunch, or a short Friday wrap up, with how to run each. Note that rituals that feel forced or eat into personal time breed resentment rather than connection, so the best ones are short, optional where possible, fit people's schedules and cultural norms, and happen during work time, and it is better to keep one small ritual going than launch five that fade. Give me the rituals.",
+    "description": "Create a few short team rituals people enjoy rather than resent.",
+    "useCase": "Use this to build connection on a small team. Forced rituals or ones that eat into personal time breed resentment, so the best are short, optional where possible, fit schedules and cultural norms, and happen during work time, and keeping one going beats launching five that fade.",
+    "variables": [
+      "BUSINESS TYPE",
+      "SIZE, LOCATIONS, AND SCHEDULES",
+      "ANY EXISTING HABITS",
+      "E.G. CONNECTION, CELEBRATING WINS, LEARNING TOGETHER"
+    ],
+    "relatedPromptIds": [
+      "culture-recognition-habits",
+      "culture-remote-norms",
+      "culture-working-values"
+    ]
+  },
+  {
+    "id": "culture-cross-cultural-team",
+    "title": "Write Norms for a Multicultural Team",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "team-culture-docs",
+    "aiTool": "Claude",
+    "promptText": "Help me write team norms that work for a multicultural team at my [BUSINESS TYPE]. The backgrounds and locations on the team are [WHERE PEOPLE ARE FROM OR BASED], the working language is [LANGUAGE], and the misunderstandings that have come up are [E.G. DIRECTNESS, SAYING NO, DEADLINES, HOLIDAYS, HIERARCHY]. Give me norms that make expectations explicit, like how to disagree, how to flag that a deadline is at risk, and how holidays across countries are handled. Note that habits that feel normal in one culture, like openly disagreeing with the boss or saying yes to mean I heard you, can be read very differently in another, so writing down shared expectations helps everyone without asking anyone to give up who they are, and I should build the norms with the team rather than impose my own culture's defaults. Give me the multicultural team norms.",
+    "description": "Make expectations explicit so a multicultural team avoids hidden misunderstandings.",
+    "useCase": "Use this when your team spans cultures or countries. Habits like openly disagreeing with the boss or saying yes to mean I heard you are read very differently across cultures, so explicit shared norms help everyone, especially when built with the team rather than imposed from your own defaults.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHERE PEOPLE ARE FROM OR BASED",
+      "LANGUAGE",
+      "E.G. DIRECTNESS, SAYING NO, DEADLINES, HOLIDAYS, HIERARCHY"
+    ],
+    "relatedPromptIds": [
+      "culture-remote-norms",
+      "culture-conflict-guide",
+      "culture-communication-guide"
+    ]
+  },
+  {
+    "id": "culture-values-in-practice",
+    "title": "Check Whether Your Values Match Reality",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "team-culture-docs",
+    "aiTool": "Claude",
+    "promptText": "Help me check honestly whether the values I wrote for my [BUSINESS TYPE] match how the team actually works. Our stated values are [YOUR VALUES], recent decisions and situations were [EXAMPLES OF WHAT ACTUALLY HAPPENED], and what I reward in practice is [WHO GETS PRAISE, PAY, OR TRUST AND WHY]. Compare the two and tell me where reality and the document disagree, and whether to change the behavior or the document. Note that a culture is defined by what gets rewarded and tolerated rather than what is written down, so if I say we value work life balance but praise people who answer at midnight, the team learns the real rule, and a values document that contradicts daily reality damages trust more than having none. Give me the honest gap check.",
+    "description": "Compare your written values with what actually gets rewarded and tolerated.",
+    "useCase": "Use this a few months after writing values. Culture is defined by what gets rewarded and tolerated rather than what is written, so praising midnight replies while claiming balance teaches the real rule, and a values document that contradicts reality damages trust more than having none.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR VALUES",
+      "EXAMPLES OF WHAT ACTUALLY HAPPENED",
+      "WHO GETS PRAISE, PAY, OR TRUST AND WHY"
+    ],
+    "relatedPromptIds": [
+      "culture-working-values",
+      "culture-team-input",
+      "culture-recognition-habits"
+    ]
+  },
+  {
+    "id": "culture-team-input",
+    "title": "Get Your Team's Input on Culture Docs",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "team-culture-docs",
+    "aiTool": "Gemini",
+    "promptText": "Help me get genuine input from my team on our culture documents at my [BUSINESS TYPE]. The draft we have is [THE DOCUMENT OR TOPIC], the team is [SIZE AND SETUP], and how I plan to ask is [MEETING, SURVEY, ONE ON ONES]. Give me a few specific questions and a process for collecting feedback and showing what changed because of it. Note that culture documents written only by the owner often read as rules handed down, while ones shaped with the team get followed because people recognize themselves in them, but asking for input only helps if I actually act on some of it and explain what I did not change and why. Give me the input questions and process.",
+    "description": "Collect real team input on culture docs and show what changed because of it.",
+    "useCase": "Use this before finalizing any culture document. Documents written only by the owner read as rules handed down, while ones shaped with the team get followed because people recognize themselves in them, but asking only helps if you act on some input and explain what you did not change.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE DOCUMENT OR TOPIC",
+      "SIZE AND SETUP",
+      "MEETING, SURVEY, ONE ON ONES"
+    ],
+    "relatedPromptIds": [
+      "culture-values-in-practice",
+      "culture-working-values",
+      "culture-keep-docs-current"
+    ]
+  },
+  {
+    "id": "culture-keep-docs-current",
+    "title": "Keep Culture Docs Current as the Team Grows",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "team-culture-docs",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me keep my team culture documents current as my [BUSINESS TYPE] grows. The documents we have are [LIST THEM], what has changed since they were written is [E.G. MORE PEOPLE, NEW LOCATIONS, NEW TOOLS, NEW SERVICES], and how often they get looked at is [HONESTLY]. Give me a simple review routine, a list of what to update now, and a way to note changes so the team knows what is new. Note that culture documents go stale quietly, and a handbook describing tools or rules no longer used teaches new hires that the documents cannot be trusted, so a short review every few months or after a big change keeps them useful, and growth is exactly when unwritten habits break down and documents matter most. Give me the review routine and updates.",
+    "description": "Set a simple routine to keep culture docs accurate as the team grows.",
+    "useCase": "Use this when your documents describe how things used to work. Stale handbooks teach new hires the documents cannot be trusted, so a short review every few months or after big changes keeps them useful, and growth is exactly when unwritten habits break down and documents matter most.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST THEM",
+      "E.G. MORE PEOPLE, NEW LOCATIONS, NEW TOOLS, NEW SERVICES",
+      "HONESTLY"
+    ],
+    "relatedPromptIds": [
+      "culture-team-input",
+      "culture-starter-handbook",
+      "culture-how-we-work"
+    ]
+  },
+  {
+    "id": "culture-contractor-inclusion",
+    "title": "Decide How Contractors Fit Into Team Culture",
+    "categoryId": "hiring-and-team-management",
+    "subcategoryId": "team-culture-docs",
+    "aiTool": "Claude",
+    "promptText": "Help me decide how contractors and freelancers fit into the team culture at my [BUSINESS TYPE]. The contractors I work with are [WHO AND HOW LONG TERM], the team rituals and documents we have are [WHAT EXISTS], and where I am based and where they are based is [LOCATIONS]. Help me decide which norms apply to contractors, which do not, and how to include long term contractors without treating them like employees. Note that long term contractors often feel like outsiders if excluded from everything, but treating them exactly like employees, with set hours, mandatory meetings, and close supervision, can blur the legal line between contractor and employee in many countries, so the goal is respectful inclusion in communication and recognition while keeping the arrangement clearly a contract, and I should check the local rules. Give me the contractor guidance.",
+    "description": "Include contractors respectfully without blurring the line into employment.",
+    "useCase": "Use this when long term contractors work alongside your team. Excluding them makes them feel like outsiders, but treating them exactly like employees can blur the legal line in many countries, so include them in communication and recognition while keeping the arrangement clearly a contract.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO AND HOW LONG TERM",
+      "WHAT EXISTS",
+      "LOCATIONS"
+    ],
+    "relatedPromptIds": [
+      "culture-remote-norms",
+      "culture-how-we-work",
+      "culture-recognition-habits"
+    ]
   }
 ]
