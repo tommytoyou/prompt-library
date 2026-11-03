@@ -37526,5 +37526,423 @@
       "refreq-make-it-easy",
       "refreq-track-sources"
     ]
+  },
+  {
+    "id": "event-prep-plan",
+    "title": "Prepare a Plan Before a Networking Event",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "event-networking-scripts",
+    "aiTool": "Claude",
+    "promptText": "Help me prepare for a networking event for my [BUSINESS TYPE]. The event is [NAME, FORMAT, AND WHO ATTENDS], my goal is [E.G. MEET THREE POTENTIAL CLIENTS, FIND A PARTNER, LEARN THE LOCAL SCENE], people or types I want to meet are [WHO], and how long I will stay is [HOW LONG]. Give me a short plan with a realistic goal, who to look for, two or three conversation openers, how I will introduce myself, and how I will capture contacts. Note that people who arrive with a small specific goal, like three good conversations, usually get more from an event than those who try to meet everyone, and checking the attendee list or speakers beforehand where possible lets me spend my limited energy on the right people. Give me the event prep plan.",
+    "description": "Arrive with a small, specific goal and a plan for who to meet.",
+    "useCase": "Use this the day before any networking event. People with a small specific goal, like three good conversations, usually get more from an event than those trying to meet everyone, and checking attendees or speakers beforehand lets you spend limited energy on the right people.",
+    "variables": [
+      "BUSINESS TYPE",
+      "NAME, FORMAT, AND WHO ATTENDS",
+      "E.G. MEET THREE POTENTIAL CLIENTS, FIND A PARTNER, LEARN THE LOCAL SCENE",
+      "WHO",
+      "HOW LONG"
+    ],
+    "relatedPromptIds": [
+      "event-openers",
+      "event-self-intro",
+      "event-choose-events"
+    ]
+  },
+  {
+    "id": "event-openers",
+    "title": "Get Conversation Openers That Feel Natural",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "event-networking-scripts",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me with conversation openers for a networking event for my [BUSINESS TYPE]. The event is [TYPE OF EVENT AND SETTING], the people there are likely [WHO ATTENDS], and my personality is [E.G. QUIET, CHATTY, AWKWARD WITH STRANGERS]. Give me several natural openers based on the event itself, the setting, or a shared experience, and a follow up question for each. Note that the easiest openers come from what we already share in the moment, like the talk we just heard or how someone knows the host, which feels far more natural than leading with what I do, and people enjoy talking about themselves, so a good question followed by real listening matters more than a clever first line. Give me the openers.",
+    "description": "Open conversations naturally using what you share in the moment.",
+    "useCase": "Use this if starting conversations with strangers feels awkward. The easiest openers come from what you already share, like the talk you just heard or how someone knows the host, which feels more natural than leading with what you do, and real listening matters more than a clever first line.",
+    "variables": [
+      "BUSINESS TYPE",
+      "TYPE OF EVENT AND SETTING",
+      "WHO ATTENDS",
+      "E.G. QUIET, CHATTY, AWKWARD WITH STRANGERS"
+    ],
+    "relatedPromptIds": [
+      "event-prep-plan",
+      "event-good-questions",
+      "event-join-group"
+    ]
+  },
+  {
+    "id": "event-quick-script",
+    "title": "Get a Quick Networking Cheat Sheet",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "event-networking-scripts",
+    "aiTool": "Grok",
+    "promptText": "I am heading to a networking event soon and need a quick cheat sheet. My business is [WHAT YOU DO], the event is [WHAT KIND], and who I hope to meet is [WHO]. Give me a one line intro, three openers, three good questions, and one polite exit line, no explanation, just the list. Give me the cheat sheet.",
+    "description": "Get a one screen networking cheat sheet before you walk in.",
+    "useCase": "Use this on the way to an event. A one line intro, a few openers and questions, and a polite exit line fit on one phone screen, and having them ready takes away most of the nerves that make people hover by the snacks instead of talking.",
+    "variables": [
+      "WHAT YOU DO",
+      "WHAT KIND",
+      "WHO"
+    ],
+    "relatedPromptIds": [
+      "event-openers",
+      "event-good-questions",
+      "event-exit-gracefully"
+    ]
+  },
+  {
+    "id": "event-self-intro",
+    "title": "Answer What Do You Do at an Event",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "event-networking-scripts",
+    "aiTool": "Claude",
+    "promptText": "Help me answer what do you do in a relaxed way at a networking event for my [BUSINESS TYPE]. What I do is [YOUR WORK], who I help is [YOUR CUSTOMERS], and the event crowd is [WHO ATTENDS]. Give me a short conversational answer that invites a follow up question, plus a version for people outside my industry and a version for people inside it. Note that at a social event a polished pitch can feel like being sold to, while a short plain answer with one interesting detail that invites a question keeps the conversation flowing, and adjusting the jargon to the listener matters, since what impresses peers can confuse everyone else. Give me the event intros.",
+    "description": "Answer what do you do conversationally, adjusted to who is listening.",
+    "useCase": "Use this before events where you will be asked what you do. At social events a polished pitch can feel like being sold to, while a short plain answer with one interesting detail invites a question, and adjusting jargon to the listener matters since what impresses peers confuses others.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR WORK",
+      "YOUR CUSTOMERS",
+      "WHO ATTENDS"
+    ],
+    "relatedPromptIds": [
+      "event-prep-plan",
+      "event-good-questions",
+      "event-openers"
+    ]
+  },
+  {
+    "id": "event-good-questions",
+    "title": "Ask Questions That Build Real Connection",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "event-networking-scripts",
+    "aiTool": "Gemini",
+    "promptText": "Help me ask better questions at networking events for my [BUSINESS TYPE]. The people I usually meet are [WHO], what I want to learn from conversations is [E.G. THEIR CHALLENGES, HOW THEY FIND SUPPLIERS, OPPORTUNITIES], and questions I usually fall back on are [YOUR DEFAULTS]. Give me a set of questions that go beyond small talk and invite stories, plus how to follow up on the answers. Note that the questions everyone asks, like what do you do, get rehearsed answers, while questions like what are you working on right now or what brought you here invite real stories, and listening for problems I could help with later is far more effective networking than pitching, as long as the conversation stays genuine rather than an interrogation. Give me the questions.",
+    "description": "Ask questions that invite stories and reveal how you might help later.",
+    "useCase": "Use this to move past small talk. Standard questions get rehearsed answers, while questions like what are you working on right now invite real stories, and listening for problems you could help with later is far more effective than pitching, as long as it stays a conversation rather than an interrogation.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO",
+      "E.G. THEIR CHALLENGES, HOW THEY FIND SUPPLIERS, OPPORTUNITIES",
+      "YOUR DEFAULTS"
+    ],
+    "relatedPromptIds": [
+      "event-openers",
+      "event-self-intro",
+      "event-ask-for-contact"
+    ]
+  },
+  {
+    "id": "event-join-group",
+    "title": "Join a Group Conversation Smoothly",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "event-networking-scripts",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me join a group conversation already in progress at a networking event for my [BUSINESS TYPE]. The event is [THE SETTING], and the situations I find hardest are [E.G. TIGHT CIRCLES, PEOPLE WHO KNOW EACH OTHER, LOUD ROOMS]. Give me a simple way to read whether a group is open, what to say when joining, and how to contribute without taking over. Note that groups standing in an open shape with gaps are usually welcoming while tight closed circles often signal a private conversation, and the smoothest approach is to listen briefly, then join on the current topic rather than interrupting with my introduction, which tells the group I am interested in them, not just in being heard. Give me the group joining guide.",
+    "description": "Read whether a group is open and join without interrupting.",
+    "useCase": "Use this when everyone seems to already be talking. Open shaped groups with gaps are usually welcoming while tight circles often signal a private chat, and listening briefly then joining on the current topic, rather than interrupting with your introduction, shows interest in them rather than in being heard.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE SETTING",
+      "E.G. TIGHT CIRCLES, PEOPLE WHO KNOW EACH OTHER, LOUD ROOMS"
+    ],
+    "relatedPromptIds": [
+      "event-openers",
+      "event-exit-gracefully",
+      "event-introvert-plan"
+    ]
+  },
+  {
+    "id": "event-exit-gracefully",
+    "title": "Leave a Conversation Gracefully",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "event-networking-scripts",
+    "aiTool": "Claude",
+    "promptText": "Help me end conversations politely at networking events for my [BUSINESS TYPE]. The situations I struggle with are [E.G. SOMEONE WHO WILL NOT STOP TALKING, A HARD SELL, A GOOD CHAT THAT HAS RUN ITS COURSE], and my goal for the event is [WHAT YOU CAME FOR]. Give me a few warm exit lines for different situations, and how to leave the door open when I want to stay in touch. Note that ending a conversation is expected at networking events, since everyone came to meet several people, so a warm, honest close like it was great to hear about your project, I am going to say hello to a few more people, is polite, while staying stuck out of awkwardness wastes the event for both of us. Give me the exit lines.",
+    "description": "End conversations warmly so you and they can keep meeting people.",
+    "useCase": "Use this if you get stuck in long conversations. Ending a conversation is expected at networking events since everyone came to meet several people, so a warm honest close is polite, while staying stuck out of awkwardness wastes the event for both of you.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. SOMEONE WHO WILL NOT STOP TALKING, A HARD SELL, A GOOD CHAT THAT HAS RUN ITS COURSE",
+      "WHAT YOU CAME FOR"
+    ],
+    "relatedPromptIds": [
+      "event-ask-for-contact",
+      "event-join-group",
+      "event-handle-hard-sell"
+    ]
+  },
+  {
+    "id": "event-ask-for-contact",
+    "title": "Ask for Contact Details Without Awkwardness",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "event-networking-scripts",
+    "aiTool": "Gemini",
+    "promptText": "Help me ask for someone's contact details at a networking event for my [BUSINESS TYPE] without it feeling awkward. How people usually exchange details where I am is [E.G. BUSINESS CARDS, MESSAGING APP QR CODES, LINKEDIN, PHONE NUMBERS], the person is [WHO AND WHAT YOU TALKED ABOUT], and the reason I want to stay in touch is [THE SPECIFIC REASON]. Give me natural lines that tie the request to a specific next step. Note that asking to stay in touch for a concrete reason, like sending them an article we discussed, feels natural and gives a reason to follow up, while collecting details with no plan leads to a pile of contacts I never use, and the usual way of swapping details differs by country, so matching the local habit makes it smoother. Give me the contact request lines.",
+    "description": "Ask for contact details tied to a concrete follow up reason.",
+    "useCase": "Use this when a conversation goes well. Asking to stay in touch for a concrete reason, like sending an article you discussed, feels natural and gives a reason to follow up, while collecting details with no plan leaves unused contacts, and matching the local way of swapping details makes it smoother.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. BUSINESS CARDS, MESSAGING APP QR CODES, LINKEDIN, PHONE NUMBERS",
+      "WHO AND WHAT YOU TALKED ABOUT",
+      "THE SPECIFIC REASON"
+    ],
+    "relatedPromptIds": [
+      "event-exit-gracefully",
+      "event-capture-notes",
+      "event-sort-contacts"
+    ]
+  },
+  {
+    "id": "event-introvert-plan",
+    "title": "Network as an Introvert",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "event-networking-scripts",
+    "aiTool": "Claude",
+    "promptText": "Help me plan how to network at events as an introvert or someone who finds crowds draining, for my [BUSINESS TYPE]. The events I need to attend are [TYPES OF EVENTS], what drains me most is [E.G. SMALL TALK, LOUD ROOMS, APPROACHING STRANGERS], and what I am naturally good at is [E.G. LISTENING, ONE ON ONE TALK, FOLLOWING UP]. Give me a plan that plays to my strengths, like arriving early, aiming for a few deeper conversations, volunteering, or taking breaks. Note that introverts often network well because they listen and follow up thoughtfully, so the goal is not to become the loudest person in the room but to design the event around fewer, better conversations, and arriving early when the room is quiet is much easier than walking into a packed crowd. Give me the introvert networking plan.",
+    "description": "Design events around fewer, deeper conversations that suit an introvert.",
+    "useCase": "Use this if networking events drain you. Introverts often network well because they listen and follow up thoughtfully, so design the event around fewer better conversations rather than trying to be the loudest, and arriving early when the room is quiet is much easier than entering a crowd.",
+    "variables": [
+      "BUSINESS TYPE",
+      "TYPES OF EVENTS",
+      "E.G. SMALL TALK, LOUD ROOMS, APPROACHING STRANGERS",
+      "E.G. LISTENING, ONE ON ONE TALK, FOLLOWING UP"
+    ],
+    "relatedPromptIds": [
+      "event-prep-plan",
+      "event-join-group",
+      "event-volunteer-role"
+    ]
+  },
+  {
+    "id": "event-cultural-etiquette",
+    "title": "Check Networking Etiquette for a Country or Culture",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "event-networking-scripts",
+    "aiTool": "Gemini",
+    "promptText": "Help me prepare for networking at an event in a country or culture different from my own for my [BUSINESS TYPE]. The event is in [COUNTRY OR CITY], the attendees are likely [LOCAL BUSINESS OWNERS, EXPATS, INTERNATIONAL GUESTS], and the language will be [LANGUAGE]. Tell me what to check about greetings, titles and names, exchanging cards or contacts, how direct to be, and topics to avoid. Note that norms around greetings, hierarchy, how quickly to talk business, and exchanging business cards vary a lot between cultures, and what feels friendly in one place can feel rude in another, so I should treat these as general starting points to confirm with local contacts, and a few words in the local language and genuine curiosity usually go a long way. Give me the etiquette checklist.",
+    "description": "Check local networking etiquette before an event in another culture.",
+    "useCase": "Use this before networking abroad or in a different community. Norms around greetings, hierarchy, how fast to discuss business, and card exchange vary a lot, and friendly in one place can be rude in another, so treat general advice as a starting point to confirm locally, and a few local words help.",
+    "variables": [
+      "BUSINESS TYPE",
+      "COUNTRY OR CITY",
+      "LOCAL BUSINESS OWNERS, EXPATS, INTERNATIONAL GUESTS",
+      "LANGUAGE"
+    ],
+    "relatedPromptIds": [
+      "event-prep-plan",
+      "event-ask-for-contact",
+      "event-self-intro"
+    ]
+  },
+  {
+    "id": "event-approach-speaker",
+    "title": "Approach a Speaker After Their Talk",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "event-networking-scripts",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me approach a speaker after their talk at an event for my [BUSINESS TYPE]. The speaker is [WHO], their talk was about [THE TOPIC], what genuinely struck me was [A SPECIFIC POINT], and what I would like from the connection is [E.G. A FOLLOW UP CHAT, ADVICE, A COLLABORATION, NOTHING YET]. Give me a short, respectful approach and a follow up message for afterwards. Note that speakers are usually surrounded after a talk, so a brief comment about a specific point they made, plus a quick request to connect, stands out and respects their time, while pitching my business in the queue does not, and the real conversation often happens in a follow up message that references the talk. Give me the approach and follow up.",
+    "description": "Approach a speaker briefly with a specific comment and follow up later.",
+    "useCase": "Use this when you want to connect with a speaker. Speakers are usually surrounded after a talk, so a brief comment on a specific point and a quick request to connect stands out and respects their time, while pitching in the queue does not, and the real conversation often happens in a follow up.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO",
+      "THE TOPIC",
+      "A SPECIFIC POINT",
+      "E.G. A FOLLOW UP CHAT, ADVICE, A COLLABORATION, NOTHING YET"
+    ],
+    "relatedPromptIds": [
+      "event-good-questions",
+      "event-ask-for-contact",
+      "event-sort-contacts"
+    ]
+  },
+  {
+    "id": "event-trade-show-booth",
+    "title": "Script Conversations at a Trade Show or Market Stall",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "event-networking-scripts",
+    "aiTool": "Claude",
+    "promptText": "Help me script conversations for my booth or stall at a trade show, market, or expo for my [BUSINESS TYPE]. What I am showing or selling is [YOUR PRODUCT OR SERVICE], the visitors are mostly [WHO, E.G. BUYERS, CONSUMERS, OTHER EXHIBITORS], and my goal is [E.G. SALES ON THE DAY, LEADS, STOCKISTS, SIGN UPS]. Give me an opening line that is not do you need any help, a few qualifying questions, a short demo or explanation, and a way to capture interested visitors. Note that most visitors walk past booths that feel pushy, so a relaxed, curious opener tied to what they are looking at works better than a sales line, and quickly sensing whether someone is a real prospect lets me spend time where it counts, while the leads only matter if I capture details and follow up after the event. Give me the booth scripts.",
+    "description": "Script relaxed openers, qualifying questions, and lead capture for a booth.",
+    "useCase": "Use this before exhibiting or selling at an event. Visitors walk past pushy booths, so a relaxed curious opener tied to what they are looking at works better, quickly sensing real prospects saves time, and leads only matter if you capture details and follow up afterwards.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR PRODUCT OR SERVICE",
+      "WHO, E.G. BUYERS, CONSUMERS, OTHER EXHIBITORS",
+      "E.G. SALES ON THE DAY, LEADS, STOCKISTS, SIGN UPS"
+    ],
+    "relatedPromptIds": [
+      "event-capture-notes",
+      "event-sort-contacts",
+      "event-good-questions"
+    ]
+  },
+  {
+    "id": "event-online-networking",
+    "title": "Network at Online Events and Breakout Rooms",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "event-networking-scripts",
+    "aiTool": "Gemini",
+    "promptText": "Help me network well at online events for my [BUSINESS TYPE]. The format is [E.G. WEBINAR CHAT, BREAKOUT ROOMS, VIRTUAL CONFERENCE, ONLINE COMMUNITY CALL], the attendees are [WHO], and what I want from it is [YOUR GOAL]. Give me a short intro for breakout rooms, ways to stand out in the chat without spamming, and how to follow up with people I met. Note that online events make it easy to stay invisible, so a thoughtful question or comment in the chat and a short warm intro in breakouts gets noticed, while dropping a sales link in the chat looks spammy and is often against the host's rules, and connecting afterwards with a message mentioning the session works far better than a bare connection request. Give me the online networking plan.",
+    "description": "Stand out at online events without spamming the chat.",
+    "useCase": "Use this for webinars, breakouts, and virtual conferences. Online events make it easy to stay invisible, so a thoughtful chat comment and a warm breakout intro get noticed, while dropping a sales link looks spammy, and a follow up mentioning the session beats a bare connection request.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. WEBINAR CHAT, BREAKOUT ROOMS, VIRTUAL CONFERENCE, ONLINE COMMUNITY CALL",
+      "WHO",
+      "YOUR GOAL"
+    ],
+    "relatedPromptIds": [
+      "event-self-intro",
+      "event-good-questions",
+      "event-sort-contacts"
+    ]
+  },
+  {
+    "id": "event-connect-others",
+    "title": "Introduce People to Each Other at Events",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "event-networking-scripts",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me get better at introducing people to each other at events for my [BUSINESS TYPE]. The kinds of people I often meet are [WHO], and connections I have spotted that could help others are [EXAMPLES]. Give me simple lines for introducing two people with a reason to talk, and a habit for spotting good matches during an event. Note that people remember those who connect them with someone useful far longer than those who pitched them, so acting as a connector builds goodwill and a reputation that brings opportunities back, and giving each person a specific reason to talk, like you are both expanding into catering, makes the introduction land rather than leaving them awkwardly staring at each other. Give me the connector lines.",
+    "description": "Introduce people to each other with a specific reason to talk.",
+    "useCase": "Use this to become the person others want to know. People remember those who connected them with someone useful far longer than those who pitched them, so acting as a connector builds goodwill that comes back, and giving each person a specific reason to talk makes the introduction land.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO",
+      "EXAMPLES"
+    ],
+    "relatedPromptIds": [
+      "event-good-questions",
+      "event-join-group",
+      "event-host-meetup"
+    ]
+  },
+  {
+    "id": "event-handle-hard-sell",
+    "title": "Handle Someone Pitching You Hard",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "event-networking-scripts",
+    "aiTool": "Claude",
+    "promptText": "Help me handle people who pitch me hard at networking events for my [BUSINESS TYPE]. The situations I meet are [E.G. SOMEONE SELLING AN OPPORTUNITY, A SERVICE I DO NOT NEED, PRESSURE TO BOOK A CALL], and how I usually react is [E.G. AGREE TO BE POLITE, GO QUIET]. Give me polite, firm lines to decline, redirect, or end the conversation without being rude. Note that agreeing to a call just to escape the moment usually leads to more pressure later, while a clear, friendly no thanks, it is not something I need right now, is kinder to both sides, and I do not owe anyone a long explanation, while being cautious about offers that sound too good to be true is sensible at any event. Give me the decline lines.",
+    "description": "Decline hard pitches politely and firmly without agreeing to escape.",
+    "useCase": "Use this if you get cornered by pushy sellers. Agreeing to a call just to escape usually brings more pressure later, while a clear friendly no is kinder to both sides, you do not owe a long explanation, and caution about offers that sound too good to be true is sensible anywhere.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. SOMEONE SELLING AN OPPORTUNITY, A SERVICE I DO NOT NEED, PRESSURE TO BOOK A CALL",
+      "E.G. AGREE TO BE POLITE, GO QUIET"
+    ],
+    "relatedPromptIds": [
+      "event-exit-gracefully",
+      "event-self-intro",
+      "event-introvert-plan"
+    ]
+  },
+  {
+    "id": "event-capture-notes",
+    "title": "Capture Notes on People You Meet",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "event-networking-scripts",
+    "aiTool": "Gemini",
+    "promptText": "Help me set up a quick way to capture notes on people I meet at events for my [BUSINESS TYPE]. How I collect contacts is [CARDS, PHONE, MESSAGING APP, LINKEDIN], where I keep contacts is [YOUR TOOL], and details I usually forget are [E.G. WHAT WE TALKED ABOUT, WHAT I PROMISED, WHO INTRODUCED US]. Give me a short note template and a routine for capturing notes during or right after the event. Note that by the next day most names and details blur together, and the promise I made to send something is easily forgotten, so a quick note right after each conversation, even a few words or a voice note, is what makes later follow up personal and reliable, while a stack of cards with no context is nearly useless. Give me the note template and routine.",
+    "description": "Capture a few words about each person right after you meet them.",
+    "useCase": "Use this so contacts do not blur together. By the next day names and details merge and promises are forgotten, so a quick note or voice note right after each conversation makes follow up personal and reliable, while a stack of cards with no context is nearly useless.",
+    "variables": [
+      "BUSINESS TYPE",
+      "CARDS, PHONE, MESSAGING APP, LINKEDIN",
+      "YOUR TOOL",
+      "E.G. WHAT WE TALKED ABOUT, WHAT I PROMISED, WHO INTRODUCED US"
+    ],
+    "relatedPromptIds": [
+      "event-ask-for-contact",
+      "event-sort-contacts",
+      "event-trade-show-booth"
+    ]
+  },
+  {
+    "id": "event-sort-contacts",
+    "title": "Sort and Prioritize Contacts After an Event",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "event-networking-scripts",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me sort the contacts I made at an event for my [BUSINESS TYPE] and decide who to follow up with first. The people I met and what we discussed are [YOUR NOTES], my goals are [E.G. CLIENTS, PARTNERS, SUPPLIERS, LEARNING], and the time I have for follow up is [YOUR TIME]. Group the contacts into priority levels with a suggested next step and timing for each. Note that following up with everyone the same way spreads my effort thin, so a few high value contacts deserve a personal message within a day or two, others a lighter connection, and some no follow up at all, and anyone I promised something to should be at the top regardless, since keeping small promises is what makes people trust me. Give me the sorted follow up plan.",
+    "description": "Prioritize event contacts and set the right follow up for each.",
+    "useCase": "Use this the day after an event. Following up with everyone the same way spreads effort thin, so a few high value contacts deserve a personal message within a day or two, others a lighter touch, some none, and anyone you promised something to goes to the top.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR NOTES",
+      "E.G. CLIENTS, PARTNERS, SUPPLIERS, LEARNING",
+      "YOUR TIME"
+    ],
+    "relatedPromptIds": [
+      "event-capture-notes",
+      "event-ask-for-contact",
+      "event-choose-events"
+    ]
+  },
+  {
+    "id": "event-volunteer-role",
+    "title": "Volunteer or Help at Events to Meet People",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "event-networking-scripts",
+    "aiTool": "Claude",
+    "promptText": "Help me use volunteering or helping at events as a way to network for my [BUSINESS TYPE]. The events or groups in my area are [LOCAL EVENTS, ASSOCIATIONS, COMMUNITY GROUPS], the skills I could offer are [WHAT YOU CAN DO], and the time I can give is [YOUR AVAILABILITY]. Suggest roles that put me in contact with the right people, and a message offering to help an organizer. Note that helpers at an event, like greeters, moderators, or organizers, meet far more people with far less awkwardness than attendees, since people come to them, and organizers tend to introduce helpful volunteers to key people, though I should offer help genuinely and actually deliver it rather than treat it purely as a networking tactic. Give me the volunteering approach.",
+    "description": "Use helping roles at events to meet more people with less awkwardness.",
+    "useCase": "Use this if approaching strangers is hard. Greeters, moderators, and organizers meet far more people with less awkwardness since people come to them, and organizers often introduce helpful volunteers to key people, as long as you offer help genuinely and actually deliver it.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LOCAL EVENTS, ASSOCIATIONS, COMMUNITY GROUPS",
+      "WHAT YOU CAN DO",
+      "YOUR AVAILABILITY"
+    ],
+    "relatedPromptIds": [
+      "event-introvert-plan",
+      "event-host-meetup",
+      "event-choose-events"
+    ]
+  },
+  {
+    "id": "event-host-meetup",
+    "title": "Host Your Own Small Networking Meetup",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "event-networking-scripts",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan and host a small networking meetup for my [BUSINESS TYPE]. Who I want to bring together is [THE GROUP, E.G. LOCAL FOUNDERS, CREATIVES, EXPATS IN BUSINESS], where it could happen is [VENUE OPTIONS], my budget is [AMOUNT], and how often I want to run it is [ONE OFF OR REGULAR]. Give me a simple format, an invitation message, a welcome script, and ideas for helping guests connect. Note that the host of a gathering becomes the hub of that network, which is often more valuable than attending other people's events, and small, well run meetups with a clear theme and introductions from the host usually create better connections than large mixers, while keeping it about the guests rather than a sales pitch is what makes people come back. Give me the meetup plan.",
+    "description": "Host a small themed meetup and become the hub of a network.",
+    "useCase": "Use this when existing events do not fit your audience. The host becomes the hub of the network, often more valuable than attending others' events, and small themed meetups with host introductions create better connections than large mixers, as long as it stays about the guests, not a pitch.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE GROUP, E.G. LOCAL FOUNDERS, CREATIVES, EXPATS IN BUSINESS",
+      "VENUE OPTIONS",
+      "AMOUNT",
+      "ONE OFF OR REGULAR"
+    ],
+    "relatedPromptIds": [
+      "event-connect-others",
+      "event-volunteer-role",
+      "event-choose-events"
+    ]
+  },
+  {
+    "id": "event-choose-events",
+    "title": "Choose Which Events Are Worth Attending",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "event-networking-scripts",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me decide which networking events are worth my time and money for my [BUSINESS TYPE]. The events I am considering are [LIST WITH COST AND TIME], my ideal customers or partners are [WHO], and what past events gave me is [RESULTS OR NOTHING MUCH]. Help me judge each event by who actually attends, cost, and likely value, and suggest a sensible number to attend per month. Note that many networking events are full of other people selling rather than potential customers, so checking who actually attends matters more than the event's name, and going repeatedly to a smaller group where my customers spend time usually builds stronger relationships than attending many one off events where I never see anyone twice. Give me the event assessment.",
+    "description": "Judge events by who actually attends and favor repeat groups.",
+    "useCase": "Use this when your calendar fills with events. Many networking events are full of people selling rather than potential customers, so who actually attends matters more than the event name, and returning to a smaller group where your customers spend time builds stronger relationships than many one off events.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST WITH COST AND TIME",
+      "WHO",
+      "RESULTS OR NOTHING MUCH"
+    ],
+    "relatedPromptIds": [
+      "event-prep-plan",
+      "event-sort-contacts",
+      "event-host-meetup"
+    ]
   }
 ]
