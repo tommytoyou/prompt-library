@@ -36378,5 +36378,387 @@
       "collab-results-report",
       "collab-written-summary"
     ]
+  },
+  {
+    "id": "podguest-find-shows",
+    "title": "Find Podcasts Worth Pitching",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "podcast-guest-outreach",
+    "aiTool": "Claude",
+    "promptText": "Help me find the right podcasts to pitch myself as a guest for my [BUSINESS TYPE]. My expertise is [WHAT YOU CAN TALK ABOUT], my ideal customers are [WHO THEY ARE], and the languages and regions I can work in are [LANGUAGES AND MARKETS]. Help me define the types of shows whose listeners match my customers, how to search for them, and how to judge which are worth pitching. Note that a small show whose listeners are exactly my customers usually does more for my business than a huge general show, and big shows are flooded with pitches, so starting with niche and mid sized podcasts that are still actively publishing gets more yeses and more relevant listeners. Give me the target show types and how to find them.",
+    "description": "Find podcasts whose listeners match your customers, not just the biggest shows.",
+    "useCase": "Use this before pitching any podcast. A small show whose listeners are exactly your customers usually does more for your business than a huge general one, and big shows are flooded with pitches, so niche and mid sized active shows get more yeses and more relevant listeners.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU CAN TALK ABOUT",
+      "WHO THEY ARE",
+      "LANGUAGES AND MARKETS"
+    ],
+    "relatedPromptIds": [
+      "podguest-research-show",
+      "podguest-topic-angles",
+      "podguest-pitch-email"
+    ]
+  },
+  {
+    "id": "podguest-research-show",
+    "title": "Research a Podcast Before Pitching",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "podcast-guest-outreach",
+    "aiTool": "Gemini",
+    "promptText": "Help me prepare to pitch a specific podcast as a guest for my [BUSINESS TYPE]. The show is [SHOW NAME AND HOST], what I have seen of it is [RECENT EPISODES, FORMAT, TYPICAL GUESTS], and my expertise is [YOUR TOPIC]. Help me note what the host cares about, what topics they have already covered, and the gap my episode could fill. Note that hosts can tell immediately whether a guest has actually listened, and a pitch that references a specific episode and proposes something they have not covered stands out from the many generic pitches they get, but I should only mention episodes I have genuinely heard rather than guess from titles. Give me the research notes and angle.",
+    "description": "Research a show's past episodes so your pitch fills a real gap.",
+    "useCase": "Use this before pitching a specific show. Hosts can tell immediately whether a guest has listened, and referencing a real episode while proposing something not yet covered stands out from generic pitches, as long as you only mention episodes you have genuinely heard.",
+    "variables": [
+      "BUSINESS TYPE",
+      "SHOW NAME AND HOST",
+      "RECENT EPISODES, FORMAT, TYPICAL GUESTS",
+      "YOUR TOPIC"
+    ],
+    "relatedPromptIds": [
+      "podguest-find-shows",
+      "podguest-pitch-email",
+      "podguest-topic-angles"
+    ]
+  },
+  {
+    "id": "podguest-quick-pitch",
+    "title": "Get a Quick Podcast Guest Pitch",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "podcast-guest-outreach",
+    "aiTool": "Grok",
+    "promptText": "I want to pitch myself as a podcast guest quickly. The show is [SHOW NAME], my topic is [WHAT YOU WOULD TALK ABOUT], and why I am credible is [YOUR EXPERIENCE]. Give me a short pitch email with a subject line and two or three episode ideas, no explanation, just the pitch. Give me the pitch.",
+    "description": "Get a short podcast guest pitch with episode ideas, fast.",
+    "useCase": "Use this when you want to send a pitch today. A short email with a clear subject line, your credibility, and two or three episode ideas covers what most hosts need to decide, and sending a focused pitch now beats perfecting one you never send.",
+    "variables": [
+      "SHOW NAME",
+      "WHAT YOU WOULD TALK ABOUT",
+      "YOUR EXPERIENCE"
+    ],
+    "relatedPromptIds": [
+      "podguest-pitch-email",
+      "podguest-topic-angles",
+      "podguest-follow-up"
+    ]
+  },
+  {
+    "id": "podguest-topic-angles",
+    "title": "Find Episode Angles Hosts Will Want",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "podcast-guest-outreach",
+    "aiTool": "Claude",
+    "promptText": "Help me turn my expertise into episode ideas a podcast host would want for my [BUSINESS TYPE]. What I know and have done is [YOUR EXPERIENCE AND STORIES], the show's audience is [WHO LISTENS], and topics I am tired of hearing in my field are [OVERUSED TOPICS]. Give me several specific episode angles with a working title and the main takeaway for listeners. Note that hosts are not looking for a guest to talk about their business, they want an episode their listeners will value, so specific angles like a surprising lesson, a contrarian view, or a step by step story work far better than broad topics like marketing tips, and my own real experience is what makes an angle different from every other guest. Give me the episode angles.",
+    "description": "Turn your expertise into specific episode angles built for the listener.",
+    "useCase": "Use this before writing any pitch. Hosts want episodes their listeners will value, not a guest promoting their business, so specific angles like a surprising lesson or a step by step story beat broad topics, and your own real experience is what makes an angle stand out.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR EXPERIENCE AND STORIES",
+      "WHO LISTENS",
+      "OVERUSED TOPICS"
+    ],
+    "relatedPromptIds": [
+      "podguest-pitch-email",
+      "podguest-talking-points",
+      "podguest-find-shows"
+    ]
+  },
+  {
+    "id": "podguest-pitch-email",
+    "title": "Write a Podcast Guest Pitch Email",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "podcast-guest-outreach",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write a pitch email to be a guest on [SHOW NAME] for my [BUSINESS TYPE]. The host is [HOST NAME], an episode of theirs I genuinely listened to is [EPISODE AND WHAT YOU LIKED], my proposed topics are [YOUR EPISODE ANGLES], and why I am credible is [YOUR EXPERIENCE OR RESULTS]. Write a short email with a clear subject line that opens with their show, proposes the topics as listener benefits, gives brief credibility, and makes saying yes easy. Note that hosts receive many pitches that are clearly mass sent and all about the guest, so a short, specific email focused on what their listeners get, with links to a bio or past interviews instead of long attachments, has a far better chance of being read and answered. Give me the pitch email.",
+    "description": "Write a short, specific guest pitch focused on what the listeners get.",
+    "useCase": "Use this when pitching a show you want to appear on. Hosts get many mass sent pitches all about the guest, so a short specific email focused on what their listeners get, with links rather than long attachments, has a far better chance of being read and answered.",
+    "variables": [
+      "SHOW NAME",
+      "BUSINESS TYPE",
+      "HOST NAME",
+      "EPISODE AND WHAT YOU LIKED",
+      "YOUR EPISODE ANGLES",
+      "YOUR EXPERIENCE OR RESULTS"
+    ],
+    "relatedPromptIds": [
+      "podguest-research-show",
+      "podguest-one-sheet",
+      "podguest-follow-up"
+    ]
+  },
+  {
+    "id": "podguest-one-sheet",
+    "title": "Create a Podcast Guest One Sheet",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "podcast-guest-outreach",
+    "aiTool": "Gemini",
+    "promptText": "Help me create a one page guest sheet hosts can look at when deciding whether to book me for my [BUSINESS TYPE]. My background is [YOUR EXPERIENCE], topics I can speak on are [YOUR TOPICS], past interviews or talks are [LINKS OR NONE YET], and how to contact me is [CONTACT DETAILS]. Give me the content for a one sheet with a short bio, topic list with sample questions, credibility points, past appearances, and contact info. Note that a one sheet saves busy hosts from researching me and makes it easy for them to prepare, but it should be honest, since listing credentials or audience numbers I cannot back up is easy to check and costs credibility, and if I have no past interviews yet, it is better to say so and offer a sample than to pad it. Give me the one sheet content.",
+    "description": "Create an honest one page guest sheet that makes booking you easy.",
+    "useCase": "Use this to make your pitches easier to say yes to. A one sheet saves hosts from researching you and helps them prepare, but it must be honest, since padded credentials are easy to check, and with no past interviews it is better to say so and offer a sample.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR EXPERIENCE",
+      "YOUR TOPICS",
+      "LINKS OR NONE YET",
+      "CONTACT DETAILS"
+    ],
+    "relatedPromptIds": [
+      "podguest-pitch-email",
+      "podguest-guest-bio",
+      "podguest-first-podcast"
+    ]
+  },
+  {
+    "id": "podguest-guest-bio",
+    "title": "Write a Bio for Hosts to Read on Air",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "podcast-guest-outreach",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write a short guest bio that podcast hosts can read aloud to introduce me, for my [BUSINESS TYPE]. Who I am and what I do is [YOUR BACKGROUND], the one thing I want listeners to remember is [THE KEY POINT], and how to pronounce my name or business if needed is [PRONUNCIATION]. Give me a spoken style bio of about thirty seconds and a shorter one line version. Note that a written bio full of titles and long sentences sounds awkward read aloud, so a spoken bio with short sentences and one memorable detail works better for audio, and including pronunciation for my name or business saves the host an uncomfortable moment on air. Give me the on air bios.",
+    "description": "Write a short bio built to be read aloud, with pronunciation help.",
+    "useCase": "Use this when a host asks how to introduce you. A written bio full of titles sounds awkward read aloud, so short sentences and one memorable detail work better for audio, and adding pronunciation for your name or business saves the host an uncomfortable moment.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR BACKGROUND",
+      "THE KEY POINT",
+      "PRONUNCIATION"
+    ],
+    "relatedPromptIds": [
+      "podguest-one-sheet",
+      "podguest-interview-prep",
+      "podguest-pitch-email"
+    ]
+  },
+  {
+    "id": "podguest-follow-up",
+    "title": "Follow Up on a Podcast Pitch",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "podcast-guest-outreach",
+    "aiTool": "Claude",
+    "promptText": "Help me follow up on a podcast guest pitch that has not had a reply, for my [BUSINESS TYPE]. The show is [SHOW NAME], what I pitched and when was [THE ORIGINAL PITCH], and something new I could offer is [E.G. A FRESH ANGLE, A TIMELY HOOK, A NEW RESULT, NOTHING]. Write one short follow up and a polite final note. Note that podcast hosts are often small teams or one person running the show around other work, so silence usually means busy rather than no, but booking calendars fill months ahead, so one follow up with something new and then moving on to other shows is a better use of my time than repeated chasing. Give me the follow up messages.",
+    "description": "Follow up once with something new, then move on to other shows.",
+    "useCase": "Use this when a host has not replied. Podcasts are often one person or a small team, so silence usually means busy, but calendars fill months ahead, so one follow up with something new and then moving on is a better use of time than repeated chasing.",
+    "variables": [
+      "BUSINESS TYPE",
+      "SHOW NAME",
+      "THE ORIGINAL PITCH",
+      "E.G. A FRESH ANGLE, A TIMELY HOOK, A NEW RESULT, NOTHING"
+    ],
+    "relatedPromptIds": [
+      "podguest-pitch-email",
+      "podguest-quick-pitch",
+      "podguest-tracker"
+    ]
+  },
+  {
+    "id": "podguest-first-podcast",
+    "title": "Get Booked With No Podcast Experience Yet",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "podcast-guest-outreach",
+    "aiTool": "Gemini",
+    "promptText": "Help me land my first podcast guest appearances for my [BUSINESS TYPE] when I have never been interviewed before. My expertise is [WHAT YOU KNOW], my network includes [PEOPLE OR COMMUNITIES YOU ARE PART OF], and what I could share to show I can speak well is [E.G. A SHORT VIDEO, A TALK, A LIVE STREAM, NOTHING YET]. Give me a plan for starting with smaller shows, building samples, and working up. Note that hosts worry about booking a guest who freezes or rambles, so a short clip of me speaking clearly does more than any credential, and newer and community shows are often happy to book a first time guest with a good topic, so starting there builds both confidence and links to show bigger hosts later. Give me the first appearances plan.",
+    "description": "Land first podcast appearances by starting small and building samples.",
+    "useCase": "Use this if you have never been on a podcast. Hosts worry about guests who freeze or ramble, so a short clip of you speaking clearly does more than credentials, and newer or community shows often book first time guests with good topics, building confidence and links for bigger shows.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU KNOW",
+      "PEOPLE OR COMMUNITIES YOU ARE PART OF",
+      "E.G. A SHORT VIDEO, A TALK, A LIVE STREAM, NOTHING YET"
+    ],
+    "relatedPromptIds": [
+      "podguest-find-shows",
+      "podguest-one-sheet",
+      "podguest-interview-prep"
+    ]
+  },
+  {
+    "id": "podguest-interview-prep",
+    "title": "Prepare for a Podcast Interview",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "podcast-guest-outreach",
+    "aiTool": "Claude",
+    "promptText": "Help me prepare for an upcoming podcast interview for my [BUSINESS TYPE]. The show is [SHOW NAME AND FORMAT], the agreed topic is [THE TOPIC], the questions the host sent, if any, are [QUESTIONS OR NONE], and the length is [HOW LONG]. Help me prepare likely questions, short answers built around stories, the key points I want to land, and how to handle a question I cannot answer. Note that guests who memorize scripts sound stiff while guests who prepare nothing ramble, so the sweet spot is knowing three key points and a few short stories that illustrate them, and saying honestly that something is outside my expertise sounds far better on audio than bluffing. Give me the interview prep.",
+    "description": "Prepare key points and short stories instead of a stiff script.",
+    "useCase": "Use this in the days before a recording. Memorized scripts sound stiff and no preparation leads to rambling, so knowing three key points and a few short stories is the sweet spot, and admitting something is outside your expertise sounds far better on audio than bluffing.",
+    "variables": [
+      "BUSINESS TYPE",
+      "SHOW NAME AND FORMAT",
+      "THE TOPIC",
+      "QUESTIONS OR NONE",
+      "HOW LONG"
+    ],
+    "relatedPromptIds": [
+      "podguest-talking-points",
+      "podguest-tech-setup",
+      "podguest-guest-bio"
+    ]
+  },
+  {
+    "id": "podguest-talking-points",
+    "title": "Turn Expertise Into Stories for Audio",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "podcast-guest-outreach",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me turn my main points into short stories and examples that work well on a podcast for my [BUSINESS TYPE]. My key points are [WHAT YOU WANT LISTENERS TO LEARN], and real experiences I could draw from are [CLIENT STORIES, MISTAKES, TURNING POINTS]. For each point, give me a short story with a clear lesson, kept under about a minute to tell. Note that listeners cannot see slides or skim, so abstract advice slides past them while a concrete story with a clear lesson sticks, and stories involving clients should be anonymized or shared with permission, since a podcast is public and permanent. Give me the stories and lessons.",
+    "description": "Turn key points into short stories that stick with listeners.",
+    "useCase": "Use this to make your interview memorable. Listeners cannot see slides or skim, so abstract advice slides past them while a concrete story with a clear lesson sticks, and client stories should be anonymized or shared with permission since a podcast is public and permanent.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU WANT LISTENERS TO LEARN",
+      "CLIENT STORIES, MISTAKES, TURNING POINTS"
+    ],
+    "relatedPromptIds": [
+      "podguest-interview-prep",
+      "podguest-topic-angles",
+      "podguest-listener-offer"
+    ]
+  },
+  {
+    "id": "podguest-listener-offer",
+    "title": "Create a Listener Offer or Next Step",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "podcast-guest-outreach",
+    "aiTool": "Gemini",
+    "promptText": "Help me create a simple next step for listeners after my podcast appearance for my [BUSINESS TYPE]. What I offer is [YOUR PRODUCT OR SERVICE], the episode topic is [THE TOPIC], and what I could give listeners is [E.G. A FREE GUIDE, A CHECKLIST, A DISCOUNT, A RESOURCE PAGE]. Give me a short, easy to say call to action and an idea for a simple page or link that matches the episode. Note that listeners are usually driving, walking, or working while they listen, so a long website address or complicated offer gets forgotten, while one short, memorable link and a free resource tied to the episode topic gets far more people to follow through, and it should be agreed with the host rather than turning the episode into an ad. Give me the listener next step.",
+    "description": "Create one short, memorable next step for listeners tied to the episode.",
+    "useCase": "Use this before any podcast appearance. Listeners are usually driving or working, so long addresses and complicated offers get forgotten, while one short link and a free resource tied to the topic gets far more follow through, as long as it is agreed with the host rather than turning into an ad.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR PRODUCT OR SERVICE",
+      "THE TOPIC",
+      "E.G. A FREE GUIDE, A CHECKLIST, A DISCOUNT, A RESOURCE PAGE"
+    ],
+    "relatedPromptIds": [
+      "podguest-talking-points",
+      "podguest-promote-episode",
+      "podguest-measure-results"
+    ]
+  },
+  {
+    "id": "podguest-tech-setup",
+    "title": "Check Your Setup Before Recording",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "podcast-guest-outreach",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me get my recording setup ready for a remote podcast interview for my [BUSINESS TYPE]. My equipment is [MICROPHONE, HEADPHONES, COMPUTER, PHONE], where I will record is [THE ROOM AND NOISE LEVEL], my internet is [HOW RELIABLE], and the platform the host uses is [THE RECORDING TOOL IF KNOWN]. Give me a simple pre recording checklist and low cost fixes for common problems. Note that poor audio is one of the main reasons hosts regret a booking or never invite a guest back, and the biggest improvements are usually cheap, like wired headphones, a quiet soft furnished room, and a backup internet option, rather than expensive equipment, so testing the setup the day before beats discovering problems live. Give me the setup checklist.",
+    "description": "Check your audio, room, and internet so the recording sounds clean.",
+    "useCase": "Use this before a remote recording. Poor audio is one of the main reasons hosts regret a booking, and the biggest fixes are usually cheap, like wired headphones, a quiet soft furnished room, and backup internet, so testing the day before beats finding problems live.",
+    "variables": [
+      "BUSINESS TYPE",
+      "MICROPHONE, HEADPHONES, COMPUTER, PHONE",
+      "THE ROOM AND NOISE LEVEL",
+      "HOW RELIABLE",
+      "THE RECORDING TOOL IF KNOWN"
+    ],
+    "relatedPromptIds": [
+      "podguest-interview-prep",
+      "podguest-guest-bio",
+      "podguest-first-podcast"
+    ]
+  },
+  {
+    "id": "podguest-promote-episode",
+    "title": "Promote Your Episode After It Airs",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "podcast-guest-outreach",
+    "aiTool": "Claude",
+    "promptText": "Help me promote a podcast episode I appeared on for my [BUSINESS TYPE]. The show and episode are [DETAILS AND LINK], the best moments or quotes are [HIGHLIGHTS], and where I can share it is [YOUR SOCIAL, EMAIL LIST, WEBSITE, COMMUNITIES]. Give me a few posts, a short email mention, and ideas for reusing clips with the host's permission. Note that hosts remember and rebook guests who actively share their episode, since it brings them new listeners, so promoting the episode is part of being a good guest rather than an optional extra, and asking before cutting clips or reposting their audio respects that the content belongs to their show. Give me the promotion plan.",
+    "description": "Share your episode in ways that help the host and get you rebooked.",
+    "useCase": "Use this when your episode goes live. Hosts remember and rebook guests who share their episode, since it brings them new listeners, so promotion is part of being a good guest, and asking before cutting clips or reposting their audio respects that the content belongs to their show.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DETAILS AND LINK",
+      "HIGHLIGHTS",
+      "YOUR SOCIAL, EMAIL LIST, WEBSITE, COMMUNITIES"
+    ],
+    "relatedPromptIds": [
+      "podguest-thank-host",
+      "podguest-listener-offer",
+      "podguest-measure-results"
+    ]
+  },
+  {
+    "id": "podguest-thank-host",
+    "title": "Thank the Host and Keep the Relationship",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "podcast-guest-outreach",
+    "aiTool": "Gemini",
+    "promptText": "Help me thank a podcast host after my interview and keep the relationship going for my [BUSINESS TYPE]. The show and host are [DETAILS], what I genuinely enjoyed about the conversation is [SPECIFIC MOMENT], and ways I could help them back are [E.G. SHARING THE EPISODE, LEAVING A REVIEW, INTRODUCING ANOTHER GUEST]. Write a short, specific thank you and a light way to stay in touch. Note that most guests disappear after recording, so a specific thank you and a genuine offer to help, like suggesting a strong guest for a future episode, makes me memorable and turns a one time interview into a relationship that can lead to referrals and future invitations. Give me the thank you message.",
+    "description": "Thank a host specifically and offer something useful back.",
+    "useCase": "Use this right after recording or when the episode airs. Most guests disappear after recording, so a specific thank you and a genuine offer to help, like suggesting a strong future guest, makes you memorable and turns one interview into a relationship that brings referrals.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DETAILS",
+      "SPECIFIC MOMENT",
+      "E.G. SHARING THE EPISODE, LEAVING A REVIEW, INTRODUCING ANOTHER GUEST"
+    ],
+    "relatedPromptIds": [
+      "podguest-promote-episode",
+      "podguest-follow-up",
+      "podguest-tracker"
+    ]
+  },
+  {
+    "id": "podguest-measure-results",
+    "title": "Measure What Podcast Appearances Bring In",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "podcast-guest-outreach",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me measure whether podcast guesting is worth the time for my [BUSINESS TYPE]. The appearances I have done are [SHOWS AND DATES], what I can track is [E.G. A UNIQUE LINK, A DISCOUNT CODE, HOW DID YOU HEAR ABOUT US, SIGN UPS], and the time each appearance takes me is [HOURS INCLUDING PITCHING AND PREP]. Help me set up simple tracking and judge which shows and topics are paying off. Note that podcast results are often slow and indirect, like a listener buying months later or a host recommending me elsewhere, so exact numbers will be incomplete, but a unique link per show and simply asking new customers how they found me usually shows which appearances are worth repeating and which kinds of shows to stop pitching. Give me the tracking setup and review.",
+    "description": "Track which podcast appearances actually bring results.",
+    "useCase": "Use this after a few appearances. Podcast results are often slow and indirect, so numbers will be incomplete, but a unique link per show and asking new customers how they found you usually shows which appearances are worth repeating and which kinds of shows to stop pitching.",
+    "variables": [
+      "BUSINESS TYPE",
+      "SHOWS AND DATES",
+      "E.G. A UNIQUE LINK, A DISCOUNT CODE, HOW DID YOU HEAR ABOUT US, SIGN UPS",
+      "HOURS INCLUDING PITCHING AND PREP"
+    ],
+    "relatedPromptIds": [
+      "podguest-listener-offer",
+      "podguest-tracker",
+      "podguest-promote-episode"
+    ]
+  },
+  {
+    "id": "podguest-tracker",
+    "title": "Set Up a Simple Podcast Outreach Tracker",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "podcast-guest-outreach",
+    "aiTool": "Claude",
+    "promptText": "Help me set up a simple tracker for my podcast guest outreach for my [BUSINESS TYPE]. How many shows I plan to pitch is [NUMBER], the tool I will use is [SPREADSHEET, NOTES APP, CRM], and the stages I go through are [E.G. RESEARCHED, PITCHED, FOLLOWED UP, BOOKED, RECORDED, AIRED]. Give me the columns to track, a weekly routine for working through it, and how to decide when to stop pitching a show. Note that podcast outreach is a numbers game where only a portion of pitches get replies and bookings can be months out, so without tracking it is easy to forget follow ups, pitch the same show twice, or lose track of recording dates, and a short weekly routine keeps a steady pipeline without it taking over my week. Give me the tracker and routine.",
+    "description": "Track pitches, follow ups, and bookings with a short weekly routine.",
+    "useCase": "Use this once you start pitching several shows. Only a portion of pitches get replies and bookings can be months out, so without tracking it is easy to forget follow ups, pitch a show twice, or lose recording dates, and a short weekly routine keeps a steady pipeline.",
+    "variables": [
+      "BUSINESS TYPE",
+      "NUMBER",
+      "SPREADSHEET, NOTES APP, CRM",
+      "E.G. RESEARCHED, PITCHED, FOLLOWED UP, BOOKED, RECORDED, AIRED"
+    ],
+    "relatedPromptIds": [
+      "podguest-follow-up",
+      "podguest-measure-results",
+      "podguest-find-shows"
+    ]
+  },
+  {
+    "id": "podguest-invite-guest",
+    "title": "Invite a Guest Onto Your Own Podcast",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "podcast-guest-outreach",
+    "aiTool": "Gemini",
+    "promptText": "Help me invite a guest onto my own podcast for my [BUSINESS TYPE]. The guest is [WHO AND WHAT THEY ARE KNOWN FOR], my show is [SHOW NAME, AUDIENCE, AND SIZE], the topic I want to cover with them is [THE TOPIC], and the time commitment is [RECORDING LENGTH AND PREP]. Write a short, respectful invitation that explains why them, what the conversation would cover, what it involves, and what is in it for them. Note that busy guests weigh the time against the benefit, so being upfront about my audience size, even if small, plus a clear topic and an easy booking process gets more yeses than overselling the show, and inviting guests is also one of the most effective ways to build relationships with people I would like to know. Give me the guest invitation.",
+    "description": "Invite a guest onto your show with an honest, easy to accept offer.",
+    "useCase": "Use this when booking guests for your own podcast. Busy guests weigh time against benefit, so being honest about your audience size, offering a clear topic, and making booking easy gets more yeses than overselling, and inviting guests is also a great way to build relationships.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO AND WHAT THEY ARE KNOWN FOR",
+      "SHOW NAME, AUDIENCE, AND SIZE",
+      "THE TOPIC",
+      "RECORDING LENGTH AND PREP"
+    ],
+    "relatedPromptIds": [
+      "podguest-tracker",
+      "podguest-thank-host",
+      "podguest-pitch-email"
+    ]
   }
 ]
