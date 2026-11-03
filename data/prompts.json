@@ -37146,5 +37146,385 @@
       "affiliate-disclosure-guide",
       "affiliate-performance-review"
     ]
+  },
+  {
+    "id": "refreq-when-to-ask",
+    "title": "Find the Right Moments to Ask for Referrals",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "referral-requests",
+    "aiTool": "Claude",
+    "promptText": "Help me identify the best moments to ask customers for referrals for my [BUSINESS TYPE]. My customer journey looks like [FROM FIRST CONTACT TO AFTER DELIVERY], the moments customers seem happiest are [E.G. AFTER A RESULT, A THANK YOU MESSAGE, A REPEAT ORDER], and how I currently ask, if at all, is [YOUR CURRENT APPROACH]. Map out the natural moments to ask and how to make each feel like part of the relationship rather than a sales push. Note that a referral request lands best right after a customer has experienced a clear win or said something positive, since that is when they are most willing to share, while asking before they have seen any results feels pushy, and building a few consistent ask moments into my process beats remembering to ask only when business is slow. Give me the referral moments map.",
+    "description": "Map the moments customers are happiest and build referral asks into them.",
+    "useCase": "Use this to stop asking for referrals randomly. A request lands best right after a customer experiences a clear win or says something positive, while asking before results feels pushy, and building consistent ask moments into your process beats only asking when business is slow.",
+    "variables": [
+      "BUSINESS TYPE",
+      "FROM FIRST CONTACT TO AFTER DELIVERY",
+      "E.G. AFTER A RESULT, A THANK YOU MESSAGE, A REPEAT ORDER",
+      "YOUR CURRENT APPROACH"
+    ],
+    "relatedPromptIds": [
+      "refreq-in-person-ask",
+      "refreq-ideal-referral",
+      "refreq-make-it-easy"
+    ]
+  },
+  {
+    "id": "refreq-in-person-ask",
+    "title": "Ask for a Referral in Conversation",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "referral-requests",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me ask a happy customer for a referral in person or on a call for my [BUSINESS TYPE]. The customer is [WHO AND WHAT YOU DID FOR THEM], what they said that shows they are happy is [THEIR WORDS OR REACTION], and the kind of people I want to be referred to is [YOUR IDEAL REFERRAL]. Give me a few natural ways to ask that sound like me, not a script, and how to respond whether they say yes or not now. Note that a spoken ask feels awkward to many owners, so they hint vaguely and get nothing, while a simple, specific question like do you know anyone else dealing with this, asked right after they praise the result, works far better than a general tell your friends, and accepting a not now gracefully keeps the relationship comfortable. Give me the spoken referral asks.",
+    "description": "Ask for referrals out loud with simple, specific questions at the right moment.",
+    "useCase": "Use this when you see customers face to face or on calls. Many owners hint vaguely and get nothing, while a simple specific question asked right after praise works far better than tell your friends, and accepting a not now gracefully keeps the relationship comfortable.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO AND WHAT YOU DID FOR THEM",
+      "THEIR WORDS OR REACTION",
+      "YOUR IDEAL REFERRAL"
+    ],
+    "relatedPromptIds": [
+      "refreq-when-to-ask",
+      "refreq-ideal-referral",
+      "refreq-make-it-easy"
+    ]
+  },
+  {
+    "id": "refreq-quick-ask",
+    "title": "Get a Quick Referral Request Message",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "referral-requests",
+    "aiTool": "Grok",
+    "promptText": "I want to ask a customer for a referral right now. My business is [WHAT YOU DO], the customer is [WHO], and the kind of person I would love to help next is [YOUR IDEAL REFERRAL]. Give me a short, friendly message I can send by text or chat, no explanation, just the message. Give me the referral request.",
+    "description": "Get a short, friendly referral request for text or chat.",
+    "useCase": "Use this when a customer is happy and you want to ask now. A short friendly message naming the kind of person you would love to help next is easy to send while the moment is fresh, and asking today beats waiting until you have a perfect referral program.",
+    "variables": [
+      "WHAT YOU DO",
+      "WHO",
+      "YOUR IDEAL REFERRAL"
+    ],
+    "relatedPromptIds": [
+      "refreq-in-person-ask",
+      "refreq-make-it-easy",
+      "refreq-thank-referrer"
+    ]
+  },
+  {
+    "id": "refreq-ideal-referral",
+    "title": "Describe Exactly Who You Want Referred",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "referral-requests",
+    "aiTool": "Claude",
+    "promptText": "Help me describe the ideal referral for my [BUSINESS TYPE] so people can actually think of someone. My best customers are [WHO THEY ARE], the situations or problems that mean someone needs me are [TRIGGERS], and the people I am not a good fit for are [WHO TO AVOID]. Turn this into a short, memorable description people can recognize in real life, like anyone who just opened a cafe or anyone complaining about their bookkeeping. Note that asking for referrals to anyone who needs my services makes people draw a blank, while describing a specific person or moment triggers real names, and being clear about who I am not for prevents awkward referrals that waste everyone's time and embarrass the person who sent them. Give me the ideal referral description.",
+    "description": "Describe your ideal referral in a way that triggers real names.",
+    "useCase": "Use this before asking anyone for referrals. Asking for anyone who needs your services makes people draw a blank, while describing a specific person or moment triggers real names, and being clear who you are not for prevents awkward referrals that embarrass the person who sent them.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO THEY ARE",
+      "TRIGGERS",
+      "WHO TO AVOID"
+    ],
+    "relatedPromptIds": [
+      "refreq-when-to-ask",
+      "refreq-make-it-easy",
+      "refreq-professional-network"
+    ]
+  },
+  {
+    "id": "refreq-make-it-easy",
+    "title": "Make It Easy to Pass You On",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "referral-requests",
+    "aiTool": "Gemini",
+    "promptText": "Help me make it effortless for people to refer others to my [BUSINESS TYPE]. How people usually share recommendations here is [E.G. MESSAGING APPS, SOCIAL, WORD OF MOUTH, EMAIL], what I do in one line is [YOUR ONE LINE DESCRIPTION], and how a new person should contact me is [CONTACT METHOD]. Give me a short forwardable message, a simple contact card or link, and a line they can say out loud. Note that most people are happy to refer but will not write a description of my business themselves, so handing them a ready made message in the app they already use, with a direct way to reach me, removes the effort that usually stops a referral from happening. Give me the shareable referral kit.",
+    "description": "Give referrers a ready made message and link in the app they already use.",
+    "useCase": "Use this so willing referrers actually follow through. Most people are happy to refer but will not write a description of your business themselves, so a ready made message in the app they already use, with a direct way to reach you, removes the effort that usually stops a referral.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. MESSAGING APPS, SOCIAL, WORD OF MOUTH, EMAIL",
+      "YOUR ONE LINE DESCRIPTION",
+      "CONTACT METHOD"
+    ],
+    "relatedPromptIds": [
+      "refreq-ideal-referral",
+      "refreq-quick-ask",
+      "refreq-handle-new-referral"
+    ]
+  },
+  {
+    "id": "refreq-reward-design",
+    "title": "Decide Whether to Reward Referrals",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "referral-requests",
+    "aiTool": "Claude",
+    "promptText": "Help me decide whether and how to reward referrals for my [BUSINESS TYPE]. My customers are [WHO THEY ARE], my margin per new customer is [ROUGH VALUE], where I operate is [COUNTRY OR MARKET], and ideas I am considering are [E.G. DISCOUNT, CASH, GIFT, FREE SERVICE, CHARITY DONATION, NOTHING]. Weigh the options for my situation, including two sided rewards for both the referrer and the new customer. Note that rewards can boost referrals, but in some relationships cash makes a genuine recommendation feel transactional, and what feels appropriate varies by culture and industry, while some professions and countries restrict paying for referrals, so a reward should fit my customers and be checked against any rules, and many people refer simply because they were treated well. Give me the reward recommendation.",
+    "description": "Choose a referral reward that fits your customers, culture, and any rules.",
+    "useCase": "Use this before offering referral rewards. Rewards can boost referrals, but cash can make a genuine recommendation feel transactional, what feels appropriate varies by culture and industry, and some professions restrict paying for referrals, while many people refer simply because they were treated well.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO THEY ARE",
+      "ROUGH VALUE",
+      "COUNTRY OR MARKET",
+      "E.G. DISCOUNT, CASH, GIFT, FREE SERVICE, CHARITY DONATION, NOTHING"
+    ],
+    "relatedPromptIds": [
+      "refreq-program-page",
+      "refreq-thank-referrer",
+      "refreq-track-sources"
+    ]
+  },
+  {
+    "id": "refreq-program-page",
+    "title": "Write a Simple Referral Program Explainer",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "referral-requests",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write a short explainer for a customer referral program at my [BUSINESS TYPE]. The reward for the referrer is [THEIR REWARD], the reward for the new customer is [THEIR REWARD OR NONE], how a referral is tracked is [E.G. A CODE, THEIR NAME, A LINK], and when the reward is given is [E.G. AFTER FIRST PURCHASE, AFTER A COMPLETED JOB]. Write a clear explainer for my website, receipt, or message covering how it works in three simple steps, the rewards, and a few plain conditions. Note that customers ignore programs they cannot understand at a glance, so three steps and a clear reward beat clever wording, and stating when the reward is earned and any limits up front avoids disappointed customers who expected a reward for a referral that never bought. Give me the program explainer.",
+    "description": "Explain a referral program in three simple steps with clear conditions.",
+    "useCase": "Use this once you decide to reward referrals. Customers ignore programs they cannot understand at a glance, so three steps and a clear reward beat clever wording, and stating when the reward is earned prevents disappointment when a referral never buys.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THEIR REWARD",
+      "THEIR REWARD OR NONE",
+      "E.G. A CODE, THEIR NAME, A LINK",
+      "E.G. AFTER FIRST PURCHASE, AFTER A COMPLETED JOB"
+    ],
+    "relatedPromptIds": [
+      "refreq-reward-design",
+      "refreq-track-sources",
+      "refreq-make-it-easy"
+    ]
+  },
+  {
+    "id": "refreq-professional-network",
+    "title": "Ask Professional Contacts for Referrals",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "referral-requests",
+    "aiTool": "Gemini",
+    "promptText": "Help me ask professional contacts, like former colleagues, peers, and other freelancers, for referrals for my [BUSINESS TYPE]. Who they are is [YOUR CONTACTS AND HOW YOU KNOW THEM], what I do now is [YOUR CURRENT OFFER], and the work I am looking for is [THE TYPE OF CLIENT OR PROJECT]. Write a short personal message that updates them on what I do, describes the kind of referral I want, and offers something in return. Note that professional contacts often do not know what I currently do, especially if I changed direction, so a clear update plus a specific description of the right client gives them something to act on, and offering to refer work back or help them makes it a two way relationship rather than a one sided favor. Give me the message.",
+    "description": "Update professional contacts on what you do and ask for specific referrals.",
+    "useCase": "Use this to reactivate your professional network. Former colleagues and peers often do not know what you do now, especially after a change of direction, so a clear update plus a specific client description gives them something to act on, and offering help back keeps it two way.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR CONTACTS AND HOW YOU KNOW THEM",
+      "YOUR CURRENT OFFER",
+      "THE TYPE OF CLIENT OR PROJECT"
+    ],
+    "relatedPromptIds": [
+      "refreq-ideal-referral",
+      "refreq-reciprocal-network",
+      "refreq-thank-referrer"
+    ]
+  },
+  {
+    "id": "refreq-reciprocal-network",
+    "title": "Build a Reciprocal Referral Network",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "referral-requests",
+    "aiTool": "Claude",
+    "promptText": "Help me build a small network of businesses that refer customers to each other with my [BUSINESS TYPE]. My customers often also need [RELATED SERVICES], businesses I already trust are [NAMES OR TYPES], and my location or market is [WHERE YOU OPERATE]. Help me choose who to include, how to propose the arrangement, and simple rules for how we refer and follow up. Note that a reciprocal network works only if every member is someone I would happily send my own customers to, since a bad referral reflects on me, and it should stay balanced and informal unless money changes hands, while some professions have rules on referral arrangements and fees, so checking what applies to my field matters before formalizing anything. Give me the referral network plan.",
+    "description": "Build a trusted network of businesses that refer customers to each other.",
+    "useCase": "Use this to create a steady source of warm referrals. A reciprocal network only works if every member is someone you would send your own customers to, since a bad referral reflects on you, and some professions have rules on referral arrangements worth checking before formalizing anything.",
+    "variables": [
+      "BUSINESS TYPE",
+      "RELATED SERVICES",
+      "NAMES OR TYPES",
+      "WHERE YOU OPERATE"
+    ],
+    "relatedPromptIds": [
+      "refreq-professional-network",
+      "refreq-refer-out",
+      "refreq-track-sources"
+    ]
+  },
+  {
+    "id": "refreq-refer-out",
+    "title": "Refer Customers Out When You Are Not the Right Fit",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "referral-requests",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me refer a customer to another business when my [BUSINESS TYPE] is not the right fit for them. What the customer needs is [THEIR NEED], why I am not the right fit is [THE REASON], and who I am recommending is [THE BUSINESS OR PERSON]. Write a helpful message to the customer and a short introduction to the business I am referring them to. Note that sending a customer to someone better suited builds more trust than taking a job I cannot do well, and businesses remember who sends them good work, so referring out generously is one of the most reliable ways to get referrals back, as long as I only recommend people I genuinely trust. Give me the referral messages.",
+    "description": "Refer poor fit customers to someone better suited and build goodwill both ways.",
+    "useCase": "Use this when a customer needs something you cannot do well. Sending them to someone better suited builds more trust than taking a job you cannot deliver, and businesses remember who sends them good work, so referring out generously is a reliable way to get referrals back.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THEIR NEED",
+      "THE REASON",
+      "THE BUSINESS OR PERSON"
+    ],
+    "relatedPromptIds": [
+      "refreq-reciprocal-network",
+      "refreq-professional-network",
+      "refreq-thank-referrer"
+    ]
+  },
+  {
+    "id": "refreq-thank-referrer",
+    "title": "Thank Someone Who Referred You",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "referral-requests",
+    "aiTool": "Gemini",
+    "promptText": "Help me thank someone who referred a customer to my [BUSINESS TYPE]. The referrer is [WHO], the person they referred is [WHO AND WHETHER THEY BECAME A CUSTOMER], any reward I promised is [THE REWARD OR NONE], and what details I can share is [WHAT IS APPROPRIATE TO SHARE]. Write a warm, specific thank you, and suggest a small gesture if it fits. Note that thanking every referral, even ones that did not become customers, encourages people to keep sending them, while silence makes people wonder if their referral was welcome, but I should avoid sharing private details about the referred person's situation, a simple update that we connected respects everyone's privacy. Give me the thank you message.",
+    "description": "Thank every referrer warmly while respecting the referred person's privacy.",
+    "useCase": "Use this every time someone refers you. Thanking every referral, even those that did not convert, encourages more, while silence makes people wonder if it was welcome, and keeping the update to a simple we connected respects the referred person's privacy.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO",
+      "WHO AND WHETHER THEY BECAME A CUSTOMER",
+      "THE REWARD OR NONE",
+      "WHAT IS APPROPRIATE TO SHARE"
+    ],
+    "relatedPromptIds": [
+      "refreq-handle-new-referral",
+      "refreq-reward-design",
+      "refreq-quick-ask"
+    ]
+  },
+  {
+    "id": "refreq-handle-new-referral",
+    "title": "Respond to a New Referral Quickly",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "referral-requests",
+    "aiTool": "Claude",
+    "promptText": "Help me respond to a new person who was referred to my [BUSINESS TYPE]. Who referred them is [THE REFERRER], what I know about their need is [THEIR SITUATION], and the next step I want is [E.G. A CALL, A QUOTE, A VISIT]. Write a warm first reply that mentions the referrer, shows I understand their situation, and makes the next step easy. Note that a referred lead arrives already partly trusting me because of the person who sent them, so a fast, personal reply honors that trust while a slow or generic response wastes it and reflects badly on the referrer, which can stop them referring again. Give me the reply.",
+    "description": "Reply fast and personally to a referred lead to honor the referrer's trust.",
+    "useCase": "Use this when a referral reaches out. A referred lead arrives already partly trusting you because of who sent them, so a fast personal reply honors that trust, while a slow or generic one wastes it and reflects badly on the referrer, who may stop referring.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE REFERRER",
+      "THEIR SITUATION",
+      "E.G. A CALL, A QUOTE, A VISIT"
+    ],
+    "relatedPromptIds": [
+      "refreq-thank-referrer",
+      "refreq-make-it-easy",
+      "refreq-track-sources"
+    ]
+  },
+  {
+    "id": "refreq-track-sources",
+    "title": "Track Where Referrals Come From",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "referral-requests",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me set up a simple way to track referrals for my [BUSINESS TYPE]. How new customers currently reach me is [CHANNELS], the tool I use is [SPREADSHEET, NOTES APP, CRM, NOTHING], and what I want to know is [E.G. WHO REFERS MOST, WHICH REFERRALS BUY, REWARDS OWED]. Give me the fields to track, a simple how did you hear about us question, and a monthly check. Note that without tracking I cannot thank the right people, pay promised rewards reliably, or see which relationships are worth investing in, and simply asking every new customer how they found me catches most referrals, even ones that come through word of mouth I would never otherwise see. Give me the tracking setup.",
+    "description": "Track referral sources so you can thank, reward, and invest in the right people.",
+    "useCase": "Use this once referrals start coming in. Without tracking you cannot thank the right people, pay promised rewards reliably, or see which relationships matter, and simply asking every new customer how they found you catches most referrals, including word of mouth you would otherwise miss.",
+    "variables": [
+      "BUSINESS TYPE",
+      "CHANNELS",
+      "SPREADSHEET, NOTES APP, CRM, NOTHING",
+      "E.G. WHO REFERS MOST, WHICH REFERRALS BUY, REWARDS OWED"
+    ],
+    "relatedPromptIds": [
+      "refreq-reward-design",
+      "refreq-program-page",
+      "refreq-top-referrers"
+    ]
+  },
+  {
+    "id": "refreq-top-referrers",
+    "title": "Look After Your Top Referrers",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "referral-requests",
+    "aiTool": "Gemini",
+    "promptText": "Help me look after the few people who send my [BUSINESS TYPE] the most referrals. Who they are is [YOUR TOP REFERRERS], what they have sent me is [ROUGHLY HOW MANY AND WHAT VALUE], and what they might appreciate is [WHAT YOU KNOW ABOUT THEM]. Suggest meaningful ways to recognize them and keep the relationship strong, without making it feel like I am paying for loyalty. Note that referrals often come from a handful of people, and these relationships are worth more attention than any advertising, but heavy gifts can make a friendly recommendation feel transactional, so personal gestures, priority service, helping their business, and simply keeping in touch usually mean more than expensive rewards. Give me the top referrer plan.",
+    "description": "Recognize the few people who send most of your referrals in personal ways.",
+    "useCase": "Use this when a few people send you most of your referrals. Those relationships are worth more attention than advertising, but heavy gifts can make friendly recommendations feel transactional, so personal gestures, priority service, and helping their business usually mean more.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR TOP REFERRERS",
+      "ROUGHLY HOW MANY AND WHAT VALUE",
+      "WHAT YOU KNOW ABOUT THEM"
+    ],
+    "relatedPromptIds": [
+      "refreq-track-sources",
+      "refreq-thank-referrer",
+      "refreq-reciprocal-network"
+    ]
+  },
+  {
+    "id": "refreq-b2b-client-ask",
+    "title": "Ask a Business Client for Referrals",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "referral-requests",
+    "aiTool": "Claude",
+    "promptText": "Help me ask a business client for referrals for my [BUSINESS TYPE]. The client is [WHO AND THEIR INDUSTRY], the result I delivered is [THE OUTCOME], and the kind of businesses I want to reach is [YOUR IDEAL CLIENT]. Help me plan when and how to ask, including asking for introductions to other companies in their network or other departments, and what to give them to make it easy. Note that business clients often know peers facing the same problem, but they put their professional reputation on the line when they introduce me, so asking after a measurable result, offering a short summary they can forward, and respecting any confidentiality about their own project makes them far more comfortable recommending me. Give me the business referral approach.",
+    "description": "Ask business clients for introductions after a clear, measurable result.",
+    "useCase": "Use this with business clients after a successful project. Clients often know peers facing the same problem but risk their reputation by introducing you, so asking after a measurable result, offering a forwardable summary, and respecting confidentiality makes them far more comfortable recommending you.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO AND THEIR INDUSTRY",
+      "THE OUTCOME",
+      "YOUR IDEAL CLIENT"
+    ],
+    "relatedPromptIds": [
+      "refreq-when-to-ask",
+      "refreq-make-it-easy",
+      "refreq-ideal-referral"
+    ]
+  },
+  {
+    "id": "refreq-referral-plus-review",
+    "title": "Ask for a Review and a Referral Together",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "referral-requests",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me ask a happy customer for both a review and a referral without overwhelming them, for my [BUSINESS TYPE]. The customer is [WHO], where I want the review is [E.G. GOOGLE, FACEBOOK, A MARKETPLACE, MY WEBSITE], and the kind of referral I want is [YOUR IDEAL REFERRAL]. Write a short message or sequence that asks for one thing first and the other later, with direct links. Note that two asks at once often lead to neither, so asking for the easier action first, usually the review, and the referral a little later when they have engaged again tends to get both, and reviews should always be genuine and never pressured or rewarded in ways that break platform rules. Give me the sequenced messages.",
+    "description": "Sequence a review request and a referral ask so you get both.",
+    "useCase": "Use this when a customer is happy enough for both. Two asks at once often lead to neither, so asking for the easier review first and the referral a little later tends to get both, while reviews must stay genuine and never be pressured or rewarded against platform rules.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO",
+      "E.G. GOOGLE, FACEBOOK, A MARKETPLACE, MY WEBSITE",
+      "YOUR IDEAL REFERRAL"
+    ],
+    "relatedPromptIds": [
+      "refreq-when-to-ask",
+      "refreq-quick-ask",
+      "refreq-thank-referrer"
+    ]
+  },
+  {
+    "id": "refreq-bad-referral",
+    "title": "Handle a Referral That Is Not a Good Fit",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "referral-requests",
+    "aiTool": "Gemini",
+    "promptText": "Help me handle a referral that is not a good fit for my [BUSINESS TYPE] without upsetting the person who sent it. The referred person needs [THEIR NEED], why they are not a fit is [THE REASON, E.G. BUDGET, SCOPE, LOCATION], and who referred them is [THE REFERRER]. Write a kind reply to the referred person, ideally with an alternative, and a gentle note to the referrer that helps them send better referrals next time. Note that a poorly handled mismatch can embarrass the referrer and stop them referring, while a kind decline with a helpful alternative leaves everyone feeling looked after, and a gentle, appreciative description of who I am best for helps the referrer get it right next time without feeling corrected. Give me both messages.",
+    "description": "Decline a poor fit referral kindly and help the referrer send better ones.",
+    "useCase": "Use this when a referral is not right for you. A poorly handled mismatch can embarrass the referrer and stop future referrals, while a kind decline with an alternative leaves everyone looked after, and a gentle note about who you are best for helps them get it right next time.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THEIR NEED",
+      "THE REASON, E.G. BUDGET, SCOPE, LOCATION",
+      "THE REFERRER"
+    ],
+    "relatedPromptIds": [
+      "refreq-refer-out",
+      "refreq-ideal-referral",
+      "refreq-thank-referrer"
+    ]
+  },
+  {
+    "id": "refreq-audit-process",
+    "title": "Audit Why You Are Not Getting Referrals",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "referral-requests",
+    "aiTool": "Claude",
+    "promptText": "Help me figure out why my [BUSINESS TYPE] is not getting many referrals. How satisfied customers seem is [YOUR HONEST VIEW AND ANY EVIDENCE], how and when I ask is [YOUR CURRENT HABITS], and what happens after someone refers me is [HOW YOU RESPOND AND THANK]. Diagnose whether the problem is the experience itself, not asking, asking badly, making it hard to refer, or not following up, and suggest the top fixes. Note that the honest first question is whether customers are delighted enough to recommend me, since no referral system can fix an experience people would not tell friends about, but often the experience is fine and I simply never ask clearly, or make referring too much effort, which are much easier to fix. Give me the diagnosis and fixes.",
+    "description": "Diagnose whether weak referrals come from the experience or the asking.",
+    "useCase": "Use this when referrals are rare. The honest first question is whether customers are delighted enough to recommend you, since no system fixes an experience people would not share, but often the experience is fine and you simply never ask clearly or make referring too hard, which are easy fixes.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR HONEST VIEW AND ANY EVIDENCE",
+      "YOUR CURRENT HABITS",
+      "HOW YOU RESPOND AND THANK"
+    ],
+    "relatedPromptIds": [
+      "refreq-when-to-ask",
+      "refreq-make-it-easy",
+      "refreq-track-sources"
+    ]
   }
 ]
