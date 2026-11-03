@@ -35984,5 +35984,399 @@
       "partner-value-exchange",
       "partner-handle-no"
     ]
+  },
+  {
+    "id": "collab-full-proposal",
+    "title": "Write a Full Collaboration Proposal",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "collaboration-proposals",
+    "aiTool": "Claude",
+    "promptText": "Help me write a full collaboration proposal between my [BUSINESS TYPE] and [THE PARTNER]. The collaboration is [WHAT WE WILL DO TOGETHER], what we discussed so far is [KEY POINTS FROM CONVERSATIONS], what each side contributes is [WHO DOES WHAT], and how money or benefits are shared is [THE SPLIT]. Give me a proposal with the goal, scope, roles, timeline, costs and revenue split, how success is measured, and how either side can end it. Note that a proposal should capture what both sides already agreed in conversation rather than introduce surprises, since new terms appearing in writing feel like a bait and switch, and spelling out the uncomfortable parts like money and exit now prevents far bigger arguments later. Give me the collaboration proposal.",
+    "description": "Turn agreed points into a full proposal covering roles, money, timeline, and exit.",
+    "useCase": "Use this once a partner is interested. A proposal should capture what both sides already agreed rather than introduce surprises, which feel like a bait and switch, and spelling out money and exit terms now prevents far bigger arguments later.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PARTNER",
+      "WHAT WE WILL DO TOGETHER",
+      "KEY POINTS FROM CONVERSATIONS",
+      "WHO DOES WHAT",
+      "THE SPLIT"
+    ],
+    "relatedPromptIds": [
+      "collab-roles-responsibilities",
+      "collab-revenue-split",
+      "collab-exit-terms"
+    ]
+  },
+  {
+    "id": "collab-roles-responsibilities",
+    "title": "Define Who Does What in a Collaboration",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "collaboration-proposals",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me define roles and responsibilities for a collaboration between my [BUSINESS TYPE] and [THE PARTNER]. The tasks involved are [ALL THE WORK, E.G. CREATING, PROMOTING, SELLING, DELIVERING, SUPPORTING CUSTOMERS], what each side is good at is [STRENGTHS], and the time each can give is [AVAILABILITY]. Give me a clear table of who owns each task, who helps, and the deadlines. Note that collaborations most often fall apart over unclear ownership, where each side assumes the other is handling something, and resentment builds when one partner ends up doing most of the work, so naming a single owner for every task, including dull ones like customer support, keeps the effort fair and visible. Give me the roles and responsibilities.",
+    "description": "Assign a single owner to every collaboration task, including the dull ones.",
+    "useCase": "Use this before any joint work starts. Collaborations most often fall apart over unclear ownership, where each side assumes the other is handling something, so naming one owner for every task, including dull ones like support, keeps effort fair and visible.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PARTNER",
+      "ALL THE WORK, E.G. CREATING, PROMOTING, SELLING, DELIVERING, SUPPORTING CUSTOMERS",
+      "STRENGTHS",
+      "AVAILABILITY"
+    ],
+    "relatedPromptIds": [
+      "collab-full-proposal",
+      "collab-timeline",
+      "collab-review-checkins"
+    ]
+  },
+  {
+    "id": "collab-quick-outline",
+    "title": "Get a Quick Collaboration Proposal Outline",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "collaboration-proposals",
+    "aiTool": "Grok",
+    "promptText": "I need a quick outline for a collaboration proposal. My business is [WHAT YOU DO], the partner is [WHO], and the collaboration is [THE IDEA]. Give me a short outline with goal, who does what, timeline, money split, and next step, no explanation, just the outline. Give me the proposal outline.",
+    "description": "Get a short collaboration proposal outline to fill in.",
+    "useCase": "Use this when you need a proposal structure fast. A short outline covering goal, roles, timeline, money, and next step gives you the skeleton to fill in, and sending a clear outline soon after a good conversation keeps momentum that a long delay would lose.",
+    "variables": [
+      "WHAT YOU DO",
+      "WHO",
+      "THE IDEA"
+    ],
+    "relatedPromptIds": [
+      "collab-full-proposal",
+      "collab-roles-responsibilities",
+      "collab-revenue-split"
+    ]
+  },
+  {
+    "id": "collab-revenue-split",
+    "title": "Agree on a Fair Revenue or Cost Split",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "collaboration-proposals",
+    "aiTool": "Claude",
+    "promptText": "Help me work out a fair way to split costs and revenue in a collaboration between my [BUSINESS TYPE] and [THE PARTNER]. The expected costs are [WHAT IT COSTS AND WHO PAYS], what each side contributes is [MONEY, AUDIENCE, PRODUCT, TIME, SKILLS], and how revenue will come in is [HOW CUSTOMERS PAY AND TO WHOM]. Suggest a few split options with the reasoning, and how payments between us will be tracked and settled. Note that an even split sounds fair but often is not when contributions differ, while a split nobody can explain causes resentment later, so tying the split to what each side actually puts in, deciding who collects the money, and setting when and how we settle up, including any fees or currency differences, avoids the most common collaboration fights. Give me the split options.",
+    "description": "Work out a fair cost and revenue split tied to what each side contributes.",
+    "useCase": "Use this before money changes hands in a collaboration. An even split sounds fair but often is not when contributions differ, so tying the split to what each side puts in, deciding who collects the money, and agreeing when and how you settle up avoids the most common fights.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PARTNER",
+      "WHAT IT COSTS AND WHO PAYS",
+      "MONEY, AUDIENCE, PRODUCT, TIME, SKILLS",
+      "HOW CUSTOMERS PAY AND TO WHOM"
+    ],
+    "relatedPromptIds": [
+      "collab-full-proposal",
+      "collab-success-metrics",
+      "collab-written-summary"
+    ]
+  },
+  {
+    "id": "collab-timeline",
+    "title": "Build a Collaboration Timeline",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "collaboration-proposals",
+    "aiTool": "Gemini",
+    "promptText": "Help me build a realistic timeline for a collaboration between my [BUSINESS TYPE] and [THE PARTNER]. The final goal or launch is [WHAT AND WHEN], the main stages are [STEPS IN THE WORK], and the busy periods or constraints for each side are [HOLIDAYS, PEAK SEASONS, OTHER COMMITMENTS]. Give me a timeline with milestones, owners, and buffer time, plus the decision points where we check progress. Note that collaborations move slower than solo projects because every step waits on two schedules, so a timeline that looks fine for one business usually runs late with two, and building in buffer and naming the dates where we decide whether to continue keeps a slipping project from quietly dying. Give me the collaboration timeline.",
+    "description": "Build a collaboration timeline with buffer for two schedules.",
+    "useCase": "Use this when planning joint work with a deadline. Collaborations move slower because every step waits on two schedules, so a timeline that works for one business usually runs late with two, and buffer time plus clear decision points keep a slipping project from quietly dying.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PARTNER",
+      "WHAT AND WHEN",
+      "STEPS IN THE WORK",
+      "HOLIDAYS, PEAK SEASONS, OTHER COMMITMENTS"
+    ],
+    "relatedPromptIds": [
+      "collab-roles-responsibilities",
+      "collab-review-checkins",
+      "collab-full-proposal"
+    ]
+  },
+  {
+    "id": "collab-success-metrics",
+    "title": "Agree How You Will Measure Success",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "collaboration-proposals",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me agree on how to measure the success of a collaboration between my [BUSINESS TYPE] and [THE PARTNER]. What each side hopes to get is [YOUR GOAL AND THEIR GOAL], and the data we can realistically track is [E.G. SALES, SIGN UPS, CODES, CLICKS, ATTENDANCE]. Give me a short set of agreed measures, how each will be tracked and shared, and what result would make us repeat, adjust, or stop. Note that partners often want different things from the same collaboration, like one wanting sales and the other wanting audience growth, so agreeing measures for both prevents one side declaring success while the other feels it failed, and the tracking has to be set up before launch, since results that cannot be measured cannot be split or judged. Give me the success measures.",
+    "description": "Agree on measures for both partners and set up tracking before launch.",
+    "useCase": "Use this before a collaboration launches. Partners often want different things, like sales versus audience growth, so agreeing measures for both prevents one side calling it a success while the other feels it failed, and tracking must be set up before launch.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PARTNER",
+      "YOUR GOAL AND THEIR GOAL",
+      "E.G. SALES, SIGN UPS, CODES, CLICKS, ATTENDANCE"
+    ],
+    "relatedPromptIds": [
+      "collab-revenue-split",
+      "collab-results-report",
+      "collab-review-checkins"
+    ]
+  },
+  {
+    "id": "collab-ownership-ip",
+    "title": "Clarify Who Owns What You Create Together",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "collaboration-proposals",
+    "aiTool": "Claude",
+    "promptText": "Help me clarify ownership of what my [BUSINESS TYPE] and [THE PARTNER] create together. What we will create is [E.G. A PRODUCT, A COURSE, CONTENT, A BRAND NAME, AN EMAIL LIST, PHOTOS], what each side brings in that they already own is [EXISTING ASSETS], and how we each want to use the result later is [FUTURE USE]. Give me clear proposal language on who owns what, who can use it and how, and what happens to it if the collaboration ends. Note that ownership feels unimportant while a collaboration is going well and becomes the main fight when it ends, especially over shared customer lists, content, and names, so agreeing in writing up front matters, and for anything valuable a proper written contract is worth it since ownership rules vary by country. Give me the ownership terms.",
+    "description": "Agree who owns and can use what you create together, including after it ends.",
+    "useCase": "Use this before creating anything jointly. Ownership feels unimportant while things go well and becomes the main fight when they end, especially over shared customer lists, content, and names, so agree in writing up front and use a proper contract for anything valuable.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PARTNER",
+      "E.G. A PRODUCT, A COURSE, CONTENT, A BRAND NAME, AN EMAIL LIST, PHOTOS",
+      "EXISTING ASSETS",
+      "FUTURE USE"
+    ],
+    "relatedPromptIds": [
+      "collab-exit-terms",
+      "collab-full-proposal",
+      "collab-written-summary"
+    ]
+  },
+  {
+    "id": "collab-exit-terms",
+    "title": "Plan How a Collaboration Ends",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "collaboration-proposals",
+    "aiTool": "Gemini",
+    "promptText": "Help me write the ending terms for a collaboration between my [BUSINESS TYPE] and [THE PARTNER]. The collaboration is [WHAT IT IS], how long it is meant to run is [FIXED END DATE OR ONGOING], and the things that would need sorting out at the end are [E.G. SHARED CUSTOMERS, STOCK, MONEY OWED, CONTENT, ACCESS]. Give me terms covering the end date or notice period, what happens to shared assets and customers, final payments, and how to part on good terms. Note that discussing how a collaboration ends feels negative at the start, but agreeing it while everyone is friendly is far easier than negotiating it after something has gone wrong, and a clear notice period protects both sides from being left with commitments they cannot meet. Give me the exit terms.",
+    "description": "Agree how a collaboration ends while everyone is still friendly.",
+    "useCase": "Use this in any collaboration proposal. Discussing the ending feels negative at the start, but agreeing it while everyone is friendly is far easier than after something goes wrong, and a clear notice period protects both sides from commitments they cannot meet.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PARTNER",
+      "WHAT IT IS",
+      "FIXED END DATE OR ONGOING",
+      "E.G. SHARED CUSTOMERS, STOCK, MONEY OWED, CONTENT, ACCESS"
+    ],
+    "relatedPromptIds": [
+      "collab-ownership-ip",
+      "collab-full-proposal",
+      "collab-ending-message"
+    ]
+  },
+  {
+    "id": "collab-joint-product",
+    "title": "Propose a Joint Product or Bundle",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "collaboration-proposals",
+    "aiTool": "Claude",
+    "promptText": "Help me write a proposal for a joint product or bundle between my [BUSINESS TYPE] and [THE PARTNER]. What I offer is [YOUR PRODUCT OR SERVICE], what they offer is [THEIRS], the combined offer would be [THE BUNDLE OR JOINT PRODUCT], and the target customer is [WHO]. Give me a proposal covering the offer, pricing, who sells it and delivers each part, how customer support works, and how revenue is split. Note that a bundle sounds simple but raises practical questions, like who takes payment, who handles a refund, and who the customer contacts when something goes wrong, so answering those in the proposal prevents confused customers and finger pointing, and the bundle should be genuinely better for the customer than buying separately. Give me the joint product proposal.",
+    "description": "Propose a joint product or bundle with clear sales, support, and refund roles.",
+    "useCase": "Use this when combining offers with a partner. Bundles raise practical questions like who takes payment, who handles refunds, and who customers contact, so answering them up front prevents confused customers and finger pointing, and the bundle must be genuinely better than buying separately.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PARTNER",
+      "YOUR PRODUCT OR SERVICE",
+      "THEIRS",
+      "THE BUNDLE OR JOINT PRODUCT",
+      "WHO"
+    ],
+    "relatedPromptIds": [
+      "collab-revenue-split",
+      "collab-roles-responsibilities",
+      "collab-full-proposal"
+    ]
+  },
+  {
+    "id": "collab-joint-event",
+    "title": "Propose a Co Hosted Event or Workshop",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "collaboration-proposals",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write a proposal to co host an event or workshop with [THE PARTNER] for my [BUSINESS TYPE]. The event idea is [THE EVENT], whether it is [IN PERSON OR ONLINE], the expected audience is [WHO AND HOW MANY], and the costs involved are [VENUE, PLATFORM, FOOD, MATERIALS]. Give me a proposal covering format, who presents what, who promotes and to which audience, costs and income, attendee data, and follow up. Note that co hosted events often go wrong over who gets the attendee list and who does the promotion work, so agreeing how sign up details are shared and used, respecting attendee privacy and any local data rules, and splitting promotion fairly matters as much as the event content. Give me the event proposal.",
+    "description": "Propose a co hosted event with clear roles, costs, and attendee data terms.",
+    "useCase": "Use this when planning a joint event or workshop. Co hosted events often go wrong over who gets the attendee list and who does the promotion, so agreeing how sign up details are shared, respecting attendee privacy, and splitting promotion fairly matters as much as the content.",
+    "variables": [
+      "THE PARTNER",
+      "BUSINESS TYPE",
+      "THE EVENT",
+      "IN PERSON OR ONLINE",
+      "WHO AND HOW MANY",
+      "VENUE, PLATFORM, FOOD, MATERIALS"
+    ],
+    "relatedPromptIds": [
+      "collab-roles-responsibilities",
+      "collab-revenue-split",
+      "collab-success-metrics"
+    ]
+  },
+  {
+    "id": "collab-content-collab",
+    "title": "Propose a Content Collaboration",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "collaboration-proposals",
+    "aiTool": "Gemini",
+    "promptText": "Help me propose a content collaboration between my [BUSINESS TYPE] and [THE PARTNER OR CREATOR]. The content idea is [E.G. A JOINT VIDEO SERIES, GUEST POSTS, A SHARED GUIDE, A LIVE SESSION], our platforms and audiences are [WHERE EACH OF YOU PUBLISHES], and what each side would create is [WHO MAKES WHAT]. Give me a proposal covering the content plan, publishing schedule, approval process, credit and tagging, and who can reuse the content afterwards. Note that content collaborations break down over approval and reuse, like one side posting something the other did not sign off on, or using the content in ads later without asking, so agreeing approval steps and future use up front keeps both brands comfortable. Give me the content collaboration proposal.",
+    "description": "Propose a content collaboration with clear approval, credit, and reuse terms.",
+    "useCase": "Use this for joint videos, posts, or guides. Content collaborations break down over approval and reuse, like one side posting without sign off or reusing content in ads later without asking, so agreeing approval steps and future use up front keeps both brands comfortable.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PARTNER OR CREATOR",
+      "E.G. A JOINT VIDEO SERIES, GUEST POSTS, A SHARED GUIDE, A LIVE SESSION",
+      "WHERE EACH OF YOU PUBLISHES",
+      "WHO MAKES WHAT"
+    ],
+    "relatedPromptIds": [
+      "collab-ownership-ip",
+      "collab-timeline",
+      "collab-creator-collab"
+    ]
+  },
+  {
+    "id": "collab-creator-collab",
+    "title": "Propose a Collaboration With a Creator",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "collaboration-proposals",
+    "aiTool": "Claude",
+    "promptText": "Help me write a collaboration proposal for a content creator or influencer working with my [BUSINESS TYPE]. The creator is [WHO, PLATFORM, AND AUDIENCE SIZE], what I want is [E.G. A REVIEW, A SERIES, AN AFFILIATE DEAL, PRODUCT FEATURE], my budget or offer is [FEE, FREE PRODUCT, COMMISSION], and the creator's style is [WHAT THEIR CONTENT IS LIKE]. Give me a proposal covering deliverables, creative freedom, payment, disclosure, timeline, and usage rights. Note that creators know their audience better than I do, so heavy scripting usually produces content that flops, and paid or gifted posts generally need clear disclosure under advertising rules in many countries, so leaving room for their voice while being clear on deliverables, disclosure, and how long I can reuse the content keeps it honest and effective. Give me the creator proposal.",
+    "description": "Propose a creator collaboration with clear deliverables, disclosure, and usage rights.",
+    "useCase": "Use this when working with an influencer or creator. Heavy scripting usually produces content that flops since creators know their audience, and paid or gifted posts generally need clear disclosure in many countries, so leave room for their voice while being clear on deliverables and reuse rights.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHO, PLATFORM, AND AUDIENCE SIZE",
+      "E.G. A REVIEW, A SERIES, AN AFFILIATE DEAL, PRODUCT FEATURE",
+      "FEE, FREE PRODUCT, COMMISSION",
+      "WHAT THEIR CONTENT IS LIKE"
+    ],
+    "relatedPromptIds": [
+      "collab-content-collab",
+      "collab-ownership-ip",
+      "collab-success-metrics"
+    ]
+  },
+  {
+    "id": "collab-counter-proposal",
+    "title": "Respond to a Partner's Counter Proposal",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "collaboration-proposals",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me respond to changes a partner wants to my collaboration proposal for my [BUSINESS TYPE]. My original proposal was [WHAT YOU PROPOSED], what they want to change is [THEIR CHANGES], what matters most to me is [YOUR MUST HAVES], and where I am flexible is [WHAT YOU COULD GIVE]. Help me sort which changes are fine, which need a trade, and which are dealbreakers, and write a reply that keeps things moving. Note that a counter proposal is usually a sign of real interest rather than a problem, and treating it as a negotiation where each side gives something tends to land better than accepting everything or refusing everything, while being clear about my genuine dealbreakers early avoids wasting time on a deal that will not work. Give me the analysis and reply.",
+    "description": "Sort a partner's requested changes and reply with fair trades.",
+    "useCase": "Use this when a partner pushes back on your proposal. A counter proposal usually signals real interest, so trading where each side gives something lands better than accepting or refusing everything, and naming genuine dealbreakers early avoids wasting time on a deal that cannot work.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU PROPOSED",
+      "THEIR CHANGES",
+      "YOUR MUST HAVES",
+      "WHAT YOU COULD GIVE"
+    ],
+    "relatedPromptIds": [
+      "collab-full-proposal",
+      "collab-revenue-split",
+      "collab-written-summary"
+    ]
+  },
+  {
+    "id": "collab-written-summary",
+    "title": "Summarize the Agreed Terms in Writing",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "collaboration-proposals",
+    "aiTool": "Gemini",
+    "promptText": "Help me write a plain summary of everything agreed for a collaboration between my [BUSINESS TYPE] and [THE PARTNER]. The agreed points are [ROLES, MONEY, TIMELINE, OWNERSHIP, EXIT, AND ANYTHING ELSE], and how we agreed it was [CALLS, MESSAGES, MEETINGS]. Turn this into a clear written summary for both sides to confirm, and flag anything that seems unclear or missing. Note that many small collaborations run on verbal agreement, which works until memories differ, so a written summary both sides confirm, even by a simple reply, prevents most disputes, though for collaborations involving significant money, shared ownership, or long commitments a proper contract reviewed by someone who knows local law is worth the cost. Give me the written summary.",
+    "description": "Turn verbal agreements into a written summary both sides confirm.",
+    "useCase": "Use this once terms are agreed. Many small collaborations run on verbal agreement, which works until memories differ, so a written summary both sides confirm prevents most disputes, while significant money or shared ownership deserves a proper contract checked against local law.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PARTNER",
+      "ROLES, MONEY, TIMELINE, OWNERSHIP, EXIT, AND ANYTHING ELSE",
+      "CALLS, MESSAGES, MEETINGS"
+    ],
+    "relatedPromptIds": [
+      "collab-full-proposal",
+      "collab-ownership-ip",
+      "collab-counter-proposal"
+    ]
+  },
+  {
+    "id": "collab-proposal-review",
+    "title": "Review a Collaboration Proposal for Risks",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "collaboration-proposals",
+    "aiTool": "Claude",
+    "promptText": "Help me review a collaboration proposal for my [BUSINESS TYPE] before I send or sign it. Here is the proposal: [PASTE IT], and whether I wrote it or the partner did is [WHO WROTE IT]. Tell me honestly where it is vague, where the effort or money looks unbalanced, what happens if things go wrong, and which questions are left unanswered. Note that a proposal written in an excited early stage tends to describe the best case and skip what happens if sales are poor, someone drops out, or the partners disagree, so checking the downside cases now is the cheapest protection I have, and if the partner wrote it, terms that favor them are normal and worth questioning politely rather than assuming bad intent. Give me the risk review.",
+    "description": "Check a collaboration proposal for vague terms, imbalance, and downside gaps.",
+    "useCase": "Use this before sending or signing a proposal. Proposals written in excitement describe the best case and skip poor sales, dropouts, or disagreements, so checking downside cases now is the cheapest protection, and terms favoring the partner who wrote it are normal and worth questioning politely.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE IT",
+      "WHO WROTE IT"
+    ],
+    "relatedPromptIds": [
+      "collab-counter-proposal",
+      "collab-exit-terms",
+      "collab-full-proposal"
+    ]
+  },
+  {
+    "id": "collab-review-checkins",
+    "title": "Plan Check Ins During a Collaboration",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "collaboration-proposals",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me plan regular check ins during a collaboration between my [BUSINESS TYPE] and [THE PARTNER]. The collaboration runs for [DURATION], the key measures are [WHAT YOU TRACK], and how we communicate is [CALLS, MESSAGES, SHARED DOC]. Give me a check in schedule and a short agenda covering progress, numbers, problems, and whether to continue as planned. Note that collaborations rarely fail in one dramatic moment, they drift as each side gets busy with its own business, so short scheduled check ins catch slipping tasks and small frustrations while they are easy to fix, and they give both sides a natural moment to adjust or end things without awkwardness. Give me the check in plan.",
+    "description": "Schedule short check ins that catch drift before a collaboration fades.",
+    "useCase": "Use this once a collaboration is under way. Collaborations rarely fail dramatically, they drift as each side gets busy, so short scheduled check ins catch slipping tasks and small frustrations while they are easy to fix, and give a natural moment to adjust or end things.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PARTNER",
+      "DURATION",
+      "WHAT YOU TRACK",
+      "CALLS, MESSAGES, SHARED DOC"
+    ],
+    "relatedPromptIds": [
+      "collab-timeline",
+      "collab-success-metrics",
+      "collab-results-report"
+    ]
+  },
+  {
+    "id": "collab-results-report",
+    "title": "Report Collaboration Results to a Partner",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "collaboration-proposals",
+    "aiTool": "Gemini",
+    "promptText": "Help me write a results report for a collaboration between my [BUSINESS TYPE] and [THE PARTNER]. What we agreed to measure was [THE MEASURES], the actual results are [THE NUMBERS], what worked and what did not is [YOUR OBSERVATIONS], and what I would suggest next is [REPEAT, ADJUST, OR STOP]. Give me a short, honest report with the numbers, lessons, and a recommendation. Note that sharing results openly, including disappointing ones, builds the trust that leads to a second and better collaboration, while quietly letting a project end without reporting back damages the relationship, and comparing results against what we agreed beforehand keeps the conversation about facts rather than feelings. Give me the results report.",
+    "description": "Share honest collaboration results with lessons and a recommendation.",
+    "useCase": "Use this when a collaboration or pilot finishes. Sharing results openly, even disappointing ones, builds the trust that leads to a better second collaboration, while letting it quietly end damages the relationship, and comparing against agreed measures keeps it about facts.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PARTNER",
+      "THE MEASURES",
+      "THE NUMBERS",
+      "YOUR OBSERVATIONS",
+      "REPEAT, ADJUST, OR STOP"
+    ],
+    "relatedPromptIds": [
+      "collab-success-metrics",
+      "collab-review-checkins",
+      "collab-ending-message"
+    ]
+  },
+  {
+    "id": "collab-ending-message",
+    "title": "End a Collaboration on Good Terms",
+    "categoryId": "networking-and-partnerships",
+    "subcategoryId": "collaboration-proposals",
+    "aiTool": "Claude",
+    "promptText": "Help me end a collaboration between my [BUSINESS TYPE] and [THE PARTNER] on good terms. Why it is ending is [THE HONEST REASON], what still needs wrapping up is [MONEY, CUSTOMERS, CONTENT, STOCK, ACCESS], and what the exit terms say is [WHAT YOU AGREED, OR NOTHING]. Write a respectful message that explains the decision, proposes how to settle the remaining items, and thanks them. Note that how a collaboration ends shapes my reputation in a small network far more than how it started, since partners talk, so ending clearly, honestly, and with loose ends handled, rather than just going quiet, keeps the door open and protects my name, even when the collaboration itself did not work out. Give me the ending message.",
+    "description": "End a collaboration honestly with loose ends settled and the door left open.",
+    "useCase": "Use this when a collaboration needs to stop. How it ends shapes your reputation in a small network more than how it started, since partners talk, so ending clearly and honestly with loose ends handled, rather than going quiet, keeps the door open and protects your name.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PARTNER",
+      "THE HONEST REASON",
+      "MONEY, CUSTOMERS, CONTENT, STOCK, ACCESS",
+      "WHAT YOU AGREED, OR NOTHING"
+    ],
+    "relatedPromptIds": [
+      "collab-exit-terms",
+      "collab-results-report",
+      "collab-written-summary"
+    ]
   }
 ]
