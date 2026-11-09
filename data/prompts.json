@@ -43697,5 +43697,391 @@
       "cart-checkout-leaks",
       "cart-subject-lines"
     ]
+  },
+  {
+    "id": "revreq-post-delivery-email",
+    "title": "Write a Post Delivery Product Review Request",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "review-requests",
+    "aiTool": "Claude",
+    "promptText": "Help me write a review request email that goes out after an order arrives from my [BUSINESS TYPE]. The products are [WHAT YOU SELL], how long customers typically need to try the product before they can judge it is [E.G. ONE DAY, ONE WEEK, ONE MONTH], where I want the review posted is [E.G. MY SITE, GOOGLE, A MARKETPLACE], and my tone is [YOUR TONE]. Write a short email with a subject line, a direct link to the review form for that exact product, and an easy way to contact me if something went wrong. Note that asking before the customer has actually used the product produces fewer and thinner reviews, so timing the request to the product matters more than sending it the moment tracking says delivered, and a one click link to the exact product usually doubles how many people follow through compared with sending them to a general page. Give me the review request email.",
+    "description": "Write a review request timed to when customers can actually judge the product.",
+    "useCase": "Use this to start collecting product reviews. Asking before the customer has used the product produces fewer, thinner reviews, so time it to the product rather than the delivery scan, and link straight to that product's review form, since every extra click loses people.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU SELL",
+      "E.G. ONE DAY, ONE WEEK, ONE MONTH",
+      "E.G. MY SITE, GOOGLE, A MARKETPLACE",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "revreq-reminder-email",
+      "revreq-photo-reviews",
+      "revreq-timing-by-product"
+    ]
+  },
+  {
+    "id": "revreq-quick-message",
+    "title": "Get a Quick Review Request Message",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "review-requests",
+    "aiTool": "Grok",
+    "promptText": "Write a quick review request for my shop. I sell [WHAT YOU SELL], the channel is [EMAIL, CHAT APP, SMS], and the review link goes to [WHERE THE REVIEW IS POSTED]. Give me two short versions, one friendly and one very brief, each with a clear ask and the link placeholder, no explanation. Give me the messages.",
+    "description": "Get two short review request messages, fast.",
+    "useCase": "Use this when you have no review request in place yet. A short, clear ask with a direct link gets reviews coming in right away, and sending a simple version today beats waiting to build a full automated system while happy customers go unasked.",
+    "variables": [
+      "WHAT YOU SELL",
+      "EMAIL, CHAT APP, SMS",
+      "WHERE THE REVIEW IS POSTED"
+    ],
+    "relatedPromptIds": [
+      "revreq-post-delivery-email",
+      "revreq-chat-app-request",
+      "revreq-insert-card"
+    ]
+  },
+  {
+    "id": "revreq-timing-by-product",
+    "title": "Set Review Request Timing by Product Type",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "review-requests",
+    "aiTool": "Gemini",
+    "promptText": "Help me set when to ask for reviews across the products in my [BUSINESS TYPE]. My product types are [LIST PRODUCT TYPES], typical delivery times to my main customer areas are [DELIVERY TIMES BY REGION], and my email or messaging tool can trigger on [E.G. ORDER DATE, SHIPPED, DELIVERED, FIXED DAYS]. Give me a timing rule for each product type and a fallback if delivery confirmation is unreliable. Note that one fixed delay for everything sends requests before slow shipments arrive in some regions, which annoys customers and invites complaints instead of reviews, and where delivery tracking is unreliable, as it is with many local couriers, it is safer to base timing on the slowest common delivery time plus time to use the product. Give me the timing rules.",
+    "description": "Set review request timing per product type and delivery region.",
+    "useCase": "Use this when you sell different kinds of products or ship to several regions. One fixed delay sends requests before slow shipments arrive, which invites complaints, and where courier tracking is unreliable, timing off the slowest common delivery plus time to use the product is safer.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST PRODUCT TYPES",
+      "DELIVERY TIMES BY REGION",
+      "E.G. ORDER DATE, SHIPPED, DELIVERED, FIXED DAYS"
+    ],
+    "relatedPromptIds": [
+      "revreq-post-delivery-email",
+      "revreq-reminder-email",
+      "revreq-chat-app-request"
+    ]
+  },
+  {
+    "id": "revreq-reminder-email",
+    "title": "Write One Polite Review Reminder",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "review-requests",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write a single reminder for customers who did not leave a review after my first request from my [BUSINESS TYPE]. The first request said [SUMMARY OF FIRST REQUEST], the gap before the reminder will be [DAYS], and my tone is [YOUR TONE]. Write a short reminder that is different from the first message, maybe asking one easy question about the product, and that clearly is the last ask. Note that one reminder usually brings in a meaningful share of extra reviews, but more than one starts to feel like nagging and raises unsubscribes, and a reminder that simply repeats the first email gets ignored, so changing the angle, like asking how they are using it, works better. Give me the reminder.",
+    "description": "Write one final, differently angled reminder for customers who did not review.",
+    "useCase": "Use this as the follow up to your first review request. One reminder usually adds a meaningful share of reviews, but more than one feels like nagging and raises unsubscribes, and repeating the first email gets ignored, so change the angle, like asking how they are using the product.",
+    "variables": [
+      "BUSINESS TYPE",
+      "SUMMARY OF FIRST REQUEST",
+      "DAYS",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "revreq-post-delivery-email",
+      "revreq-timing-by-product",
+      "revreq-measure-results"
+    ]
+  },
+  {
+    "id": "revreq-photo-reviews",
+    "title": "Ask Customers for Photo and Video Reviews",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "review-requests",
+    "aiTool": "Claude",
+    "promptText": "Help me get more photo and video reviews for my [BUSINESS TYPE]. The products are [WHAT YOU SELL], where reviews appear is [MY SITE, A MARKETPLACE, SOCIAL MEDIA], and whether I can offer anything in return is [E.G. NOTHING, A SMALL THANK YOU, LOYALTY POINTS, ONLY IF ALLOWED]. Write a request that explains what kind of photo is most helpful, like the product in use or next to something for scale, plus a simple permission line if I want to reuse their photo in marketing. Note that customer photos are often more persuasive than polished product shots because they show real size, color, and quality, but reusing someone's photo in ads without clear permission can cause problems, and many marketplaces forbid offering anything in exchange for a review, so any thank you must follow the platform's rules. Give me the photo review request.",
+    "description": "Ask for helpful customer photos with clear reuse permission.",
+    "useCase": "Use this to get real customer photos. They often persuade better than product shots because they show true size and color, but reusing them in ads needs clear permission, and many marketplaces forbid rewards for reviews, so any thank you must follow platform rules.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU SELL",
+      "MY SITE, A MARKETPLACE, SOCIAL MEDIA",
+      "E.G. NOTHING, A SMALL THANK YOU, LOYALTY POINTS, ONLY IF ALLOWED"
+    ],
+    "relatedPromptIds": [
+      "revreq-post-delivery-email",
+      "revreq-incentive-rules",
+      "revreq-use-reviews-on-site"
+    ]
+  },
+  {
+    "id": "revreq-incentive-rules",
+    "title": "Check What Review Incentives Are Allowed",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "review-requests",
+    "aiTool": "Gemini",
+    "promptText": "Help me understand what I can and cannot offer in exchange for reviews for my [BUSINESS TYPE]. The platforms where I sell or collect reviews are [E.G. MY OWN SITE, GOOGLE, AMAZON, SHOPEE, LAZADA, ETSY, FACEBOOK], the incentive I am considering is [E.G. DISCOUNT, FREE PRODUCT, ENTRY INTO A DRAW, LOYALTY POINTS], and where my customers are is [COUNTRIES]. Summarize the general rules each platform publishes on incentives and review requests, flag what is clearly risky, and suggest safe alternatives. Note that most large platforms ban paying for positive reviews and many ban any reward for reviews at all, with penalties ranging from removed reviews to suspended accounts, rules change often, so I should confirm against each platform's current policy page, and asking every customer the same neutral way is the safest approach everywhere. Give me the incentive rules summary.",
+    "description": "Check platform rules before offering anything in exchange for reviews.",
+    "useCase": "Use this before offering discounts or gifts for reviews. Most large platforms ban paying for positive reviews and many ban any reward at all, with penalties up to account suspension, and rules change often, so confirm current policy pages, while asking every customer the same neutral way is safest everywhere.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. MY OWN SITE, GOOGLE, AMAZON, SHOPEE, LAZADA, ETSY, FACEBOOK",
+      "E.G. DISCOUNT, FREE PRODUCT, ENTRY INTO A DRAW, LOYALTY POINTS",
+      "COUNTRIES"
+    ],
+    "relatedPromptIds": [
+      "revreq-marketplace-request",
+      "revreq-no-gating",
+      "revreq-photo-reviews"
+    ]
+  },
+  {
+    "id": "revreq-marketplace-request",
+    "title": "Request Reviews Within Marketplace Rules",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "review-requests",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me request reviews from buyers on [MARKETPLACE] for my [BUSINESS TYPE]. The tools the marketplace gives me are [E.G. BUILT IN REQUEST BUTTON, BUYER MESSAGES, PACKAGE INSERTS ALLOWED], my products are [WHAT YOU SELL], and my current review count and rating are [CURRENT NUMBERS]. Suggest the safest ways to ask on this marketplace and write any wording I am allowed to use. Note that marketplaces often restrict how sellers contact buyers, may forbid asking only for positive reviews or linking to outside sites, and some provide an official request feature that is the safest route, so I should check the marketplace's seller rules before sending anything, since a violation can cost far more than the reviews are worth. Give me the marketplace review plan.",
+    "description": "Request reviews using only methods the marketplace allows.",
+    "useCase": "Use this if you sell on Amazon, Shopee, Lazada, Etsy, or similar. Marketplaces often restrict buyer contact, forbid asking only for positive reviews, or ban outside links, and many offer an official request feature that is safest, so check seller rules first, since a violation costs more than the reviews are worth.",
+    "variables": [
+      "MARKETPLACE",
+      "BUSINESS TYPE",
+      "E.G. BUILT IN REQUEST BUTTON, BUYER MESSAGES, PACKAGE INSERTS ALLOWED",
+      "WHAT YOU SELL",
+      "CURRENT NUMBERS"
+    ],
+    "relatedPromptIds": [
+      "revreq-incentive-rules",
+      "revreq-insert-card",
+      "revreq-no-gating"
+    ]
+  },
+  {
+    "id": "revreq-insert-card",
+    "title": "Design a Package Insert Card That Asks for Reviews",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "review-requests",
+    "aiTool": "Claude",
+    "promptText": "Help me write a package insert card for my [BUSINESS TYPE] that thanks the customer and invites a review. My brand voice is [YOUR TONE], where the review should go is [REVIEW DESTINATION], the card size is [E.G. POSTCARD, BUSINESS CARD], and where I sell is [OWN SITE OR MARKETPLACE NAME]. Write short card text with a thank you, a simple review ask, a QR code placement note, and a way to contact me if anything is wrong. Note that a QR code is far easier than typing a web address, especially for customers on phones, but on some marketplaces inserts that ask only for positive reviews or offer rewards break the rules, so the wording should stay neutral, and a contact line for problems often catches complaints before they become bad public reviews. Give me the insert card text.",
+    "description": "Write a neutral thank you card with a QR code review link.",
+    "useCase": "Use this when you ship physical products. A QR code is far easier than typing an address on a phone, but marketplaces may ban inserts that ask only for positive reviews or offer rewards, so keep wording neutral, and a contact line for problems catches complaints before they become public reviews.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR TONE",
+      "REVIEW DESTINATION",
+      "E.G. POSTCARD, BUSINESS CARD",
+      "OWN SITE OR MARKETPLACE NAME"
+    ],
+    "relatedPromptIds": [
+      "revreq-marketplace-request",
+      "revreq-quick-message",
+      "revreq-local-google-reviews"
+    ]
+  },
+  {
+    "id": "revreq-chat-app-request",
+    "title": "Ask for Reviews Through Chat Apps",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "review-requests",
+    "aiTool": "Gemini",
+    "promptText": "Help me ask customers for reviews through chat apps for my [BUSINESS TYPE]. The chat channel my customers use is [E.G. WHATSAPP, TELEGRAM, LINE, FACEBOOK MESSENGER], where I want the review is [E.G. MY FACEBOOK PAGE, GOOGLE, A MARKETPLACE], the languages my customers use are [LANGUAGES], and how the order happened is [E.G. ORDERED THROUGH CHAT, ORDERED ON SITE]. Write a short, warm message in each language, sent in the same chat thread where we talked, with the review link. Note that when customers already ordered by chat, a personal message in that same thread feels natural and often gets more responses than email, but it should be one message, in the customer's language, and only to people I have actually done business with, since unsolicited bulk messages can get my account restricted. Give me the chat review messages.",
+    "description": "Ask for reviews in the same chat thread, in the customer's language.",
+    "useCase": "Use this if customers order or talk with you through chat apps. A personal message in the same thread feels natural and often beats email, but send one message, in the customer's language, only to real customers, since bulk unsolicited messages can get your account restricted.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. WHATSAPP, TELEGRAM, LINE, FACEBOOK MESSENGER",
+      "E.G. MY FACEBOOK PAGE, GOOGLE, A MARKETPLACE",
+      "LANGUAGES",
+      "E.G. ORDERED THROUGH CHAT, ORDERED ON SITE"
+    ],
+    "relatedPromptIds": [
+      "revreq-quick-message",
+      "revreq-timing-by-product",
+      "revreq-local-google-reviews"
+    ]
+  },
+  {
+    "id": "revreq-no-gating",
+    "title": "Route Unhappy Customers to Help Without Review Gating",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "review-requests",
+    "aiTool": "Claude",
+    "promptText": "Help me design a review request process for my [BUSINESS TYPE] that catches unhappy customers early without filtering who gets asked for a review. My current process is [DESCRIBE IT], the platforms I collect reviews on are [PLATFORMS], and how customers can reach me is [SUPPORT CHANNELS]. Suggest wording that invites everyone to review while clearly offering help to anyone with a problem, and a quick way to act on complaints. Note that review gating, where only happy customers are sent to public review sites and unhappy ones are diverted to a private form, is banned by Google and many other platforms and can break consumer protection rules in some places, so the honest approach is to ask everyone the same way while making help easy to find, and fixing problems quickly often turns a would be bad review into a fair one. Give me the review process.",
+    "description": "Offer help to unhappy customers while still asking everyone for reviews.",
+    "useCase": "Use this to protect your rating honestly. Review gating, sending only happy customers to public review sites, is banned by Google and many platforms and can break consumer rules, so ask everyone the same way, make help easy to find, and fix problems fast, which often turns a bad review into a fair one.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DESCRIBE IT",
+      "PLATFORMS",
+      "SUPPORT CHANNELS"
+    ],
+    "relatedPromptIds": [
+      "revreq-incentive-rules",
+      "revreq-after-problem-order",
+      "revreq-post-delivery-email"
+    ]
+  },
+  {
+    "id": "revreq-after-problem-order",
+    "title": "Ask for a Review After Fixing a Problem Order",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "review-requests",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me decide whether and how to ask for a review after resolving a problem with an order from my [BUSINESS TYPE]. What went wrong was [THE PROBLEM, E.G. LATE DELIVERY, DAMAGED ITEM, WRONG SIZE], how I fixed it was [YOUR RESOLUTION], and how the customer responded was [THEIR REACTION]. Tell me if asking is appropriate in this case and, if so, write a short, humble request that does not pressure them. Note that customers whose problem was handled well can leave some of the most convincing reviews because they show how the shop behaves when things go wrong, but asking someone who is still annoyed feels tone deaf, so it is better to wait until they have clearly expressed satisfaction, and the request must never suggest the fix depended on a good review. Give me the recommendation and message.",
+    "description": "Ask for an honest review only after a problem was clearly resolved.",
+    "useCase": "Use this after handling a late, damaged, or wrong order. Customers whose problem was handled well leave convincing reviews that show how you behave when things go wrong, but asking someone still annoyed is tone deaf, and the request must never suggest the fix depended on a good review.",
+    "variables": [
+      "BUSINESS TYPE",
+      "THE PROBLEM, E.G. LATE DELIVERY, DAMAGED ITEM, WRONG SIZE",
+      "YOUR RESOLUTION",
+      "THEIR REACTION"
+    ],
+    "relatedPromptIds": [
+      "revreq-no-gating",
+      "revreq-reminder-email",
+      "revreq-measure-results"
+    ]
+  },
+  {
+    "id": "revreq-new-product-first-reviews",
+    "title": "Get First Reviews for a New Product",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "review-requests",
+    "aiTool": "Gemini",
+    "promptText": "Help me get the first honest reviews for a new product from my [BUSINESS TYPE]. The product is [NEW PRODUCT], my existing customers and audience are [E.G. EMAIL LIST SIZE, SOCIAL FOLLOWING, REPEAT BUYERS], where it is sold is [OWN SITE OR MARKETPLACE], and my budget for samples is [BUDGET]. Suggest legitimate ways to get early reviews, like asking loyal customers, early buyer requests, or a platform's official early review program where one exists, and write the outreach message. Note that a product with zero reviews sells slowly, which tempts sellers to use friends, family, or paid reviews, but these are banned on most platforms, are often detected, and can mislead buyers, so the honest route is slower but safer, and giving free samples in exchange for a review usually needs clear disclosure and may not be allowed on some marketplaces at all. Give me the first reviews plan.",
+    "description": "Get honest early reviews for a product that has none yet.",
+    "useCase": "Use this when launching a new product. Zero reviews tempts sellers toward friends, family, or paid reviews, but these are banned on most platforms, often detected, and mislead buyers, so the honest route is slower but safer, and free samples for reviews usually need disclosure and may be disallowed on some marketplaces.",
+    "variables": [
+      "BUSINESS TYPE",
+      "NEW PRODUCT",
+      "E.G. EMAIL LIST SIZE, SOCIAL FOLLOWING, REPEAT BUYERS",
+      "OWN SITE OR MARKETPLACE",
+      "BUDGET"
+    ],
+    "relatedPromptIds": [
+      "revreq-incentive-rules",
+      "revreq-marketplace-request",
+      "revreq-post-delivery-email"
+    ]
+  },
+  {
+    "id": "revreq-digital-product",
+    "title": "Request Reviews for Digital Products",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "review-requests",
+    "aiTool": "Claude",
+    "promptText": "Help me request reviews for digital products sold by my [BUSINESS TYPE]. The products are [E.G. TEMPLATES, COURSES, EBOOKS, PRESETS], the point where buyers usually see results is [E.G. AFTER FIRST USE, AFTER MODULE THREE, AFTER A WEEK], where reviews are posted is [REVIEW DESTINATION], and my tone is [YOUR TONE]. Write a review request tied to that milestone, with a couple of guiding questions that help buyers write useful reviews. Note that many digital buyers download and never open the product, so asking right after purchase gets few or empty reviews, while asking after a meaningful milestone produces specific reviews about results, and guiding questions like what did you use it for help, as long as they do not steer people toward praise. Give me the digital review request.",
+    "description": "Ask for digital product reviews after buyers reach a real milestone.",
+    "useCase": "Use this for templates, courses, or ebooks. Many digital buyers download and never open the product, so asking right after purchase gets few reviews, while asking after a real milestone produces specific results, and guiding questions help as long as they do not steer toward praise.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. TEMPLATES, COURSES, EBOOKS, PRESETS",
+      "E.G. AFTER FIRST USE, AFTER MODULE THREE, AFTER A WEEK",
+      "REVIEW DESTINATION",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "revreq-guiding-questions",
+      "revreq-timing-by-product",
+      "revreq-post-delivery-email"
+    ]
+  },
+  {
+    "id": "revreq-guiding-questions",
+    "title": "Write Questions That Produce Useful Reviews",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "review-requests",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write short guiding questions to include in review requests for my [BUSINESS TYPE]. The products are [WHAT YOU SELL], what new buyers most want to know before purchasing is [E.G. FIT, DURABILITY, TASTE, EASE OF USE, DELIVERY], and my review form allows [E.G. STAR RATING ONLY, TEXT, PHOTOS, CUSTOM FIELDS]. Write three to five neutral questions that help customers write reviews future buyers will find useful. Note that a blank review box often gets a single word like good, while a couple of specific questions produce reviews that actually answer buyers' doubts and help sales, but questions must stay neutral, like how is the fit, rather than leading, like what did you love most, since leading questions can mislead buyers and break some platforms' rules. Give me the guiding questions.",
+    "description": "Write neutral prompts that turn one word reviews into useful ones.",
+    "useCase": "Use this to make your reviews more useful. A blank box often gets just good, while specific questions produce reviews that answer buyers' doubts, but they must stay neutral, like how is the fit, rather than leading, since leading questions can mislead buyers and break platform rules.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU SELL",
+      "E.G. FIT, DURABILITY, TASTE, EASE OF USE, DELIVERY",
+      "E.G. STAR RATING ONLY, TEXT, PHOTOS, CUSTOM FIELDS"
+    ],
+    "relatedPromptIds": [
+      "revreq-digital-product",
+      "revreq-post-delivery-email",
+      "revreq-use-reviews-on-site"
+    ]
+  },
+  {
+    "id": "revreq-local-google-reviews",
+    "title": "Get Google Reviews for a Shop With a Physical Location",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "review-requests",
+    "aiTool": "Gemini",
+    "promptText": "Help me get more Google reviews for my [BUSINESS TYPE], which sells online and also has [E.G. A SHOP, A SHOWROOM, A PICKUP POINT, A MARKET STALL]. My location is [CITY OR AREA], the languages my customers speak are [LANGUAGES], and how customers usually interact with me is [IN PERSON, CHAT, DELIVERY]. Suggest simple ways to ask, like a QR code at the counter, a link in receipts, or a message after pickup, and write the wording in each language. Note that Google reviews strongly influence whether people find and trust a local shop on maps, but Google does not allow incentives for reviews or asking only happy customers, so a visible QR code and a polite ask to everyone is the safe approach, and in places where many customers do not use Google accounts, Facebook page reviews may matter just as much. Give me the Google review plan.",
+    "description": "Collect Google reviews from in person and pickup customers with a QR code.",
+    "useCase": "Use this if you have a shop, showroom, stall, or pickup point. Google reviews shape whether locals find and trust you on maps, but incentives and asking only happy customers are not allowed, and where many customers lack Google accounts, Facebook page reviews may matter as much.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. A SHOP, A SHOWROOM, A PICKUP POINT, A MARKET STALL",
+      "CITY OR AREA",
+      "LANGUAGES",
+      "IN PERSON, CHAT, DELIVERY"
+    ],
+    "relatedPromptIds": [
+      "revreq-insert-card",
+      "revreq-chat-app-request",
+      "revreq-no-gating"
+    ]
+  },
+  {
+    "id": "revreq-use-reviews-on-site",
+    "title": "Show Collected Reviews Where They Help Sales",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "review-requests",
+    "aiTool": "Claude",
+    "promptText": "Help me decide where and how to display the reviews I have collected for my [BUSINESS TYPE]. My review numbers are [COUNT AND AVERAGE RATING], the platforms they come from are [PLATFORMS], my site is built with [E.G. SHOPIFY, WOOCOMMERCE, A SIMPLE SITE BUILDER], and the pages that get the most traffic are [KEY PAGES]. Suggest placements, like product pages, near the add to cart button, checkout, and emails, and how to show them honestly. Note that showing a mix of ratings including some critical ones usually builds more trust than only five star reviews, which can look fake, and copying reviews from another platform onto my site may break that platform's terms, so using official widgets or my own collected reviews is safer. Give me the review display plan.",
+    "description": "Place reviews honestly where they influence buying decisions.",
+    "useCase": "Use this once reviews are coming in. Showing a mix of ratings including some critical ones builds more trust than only five stars, which can look fake, and copying reviews from another platform may break its terms, so use official widgets or your own collected reviews.",
+    "variables": [
+      "BUSINESS TYPE",
+      "COUNT AND AVERAGE RATING",
+      "PLATFORMS",
+      "E.G. SHOPIFY, WOOCOMMERCE, A SIMPLE SITE BUILDER",
+      "KEY PAGES"
+    ],
+    "relatedPromptIds": [
+      "revreq-photo-reviews",
+      "revreq-guiding-questions",
+      "revreq-measure-results"
+    ]
+  },
+  {
+    "id": "revreq-measure-results",
+    "title": "Measure How Well Review Requests Work",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "review-requests",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me measure my review request results for my [BUSINESS TYPE]. The data I have is [ORDERS, REQUESTS SENT, CLICKS, REVIEWS RECEIVED, AVERAGE RATING, PHOTO REVIEWS], the period is [TIMEFRAME], and what I changed recently is [CHANGES TO TIMING, WORDING, CHANNEL]. Calculate the review rate per order, compare channels and timing, and suggest one change to test next. Note that review rate per order is a more useful number than total reviews, which rises with sales anyway, and a sudden drop in average rating is often a product or delivery problem rather than a request problem, so it is worth reading the recent low reviews before changing the emails. Give me the review request analysis.",
+    "description": "Track review rate per order and spot what to test next.",
+    "useCase": "Use this to judge your review requests. Review rate per order is more useful than total reviews, which rise with sales anyway, and a sudden rating drop is often a product or delivery problem rather than a request problem, so read recent low reviews before changing emails.",
+    "variables": [
+      "BUSINESS TYPE",
+      "ORDERS, REQUESTS SENT, CLICKS, REVIEWS RECEIVED, AVERAGE RATING, PHOTO REVIEWS",
+      "TIMEFRAME",
+      "CHANGES TO TIMING, WORDING, CHANNEL"
+    ],
+    "relatedPromptIds": [
+      "revreq-reminder-email",
+      "revreq-timing-by-product",
+      "revreq-use-reviews-on-site"
+    ]
+  },
+  {
+    "id": "revreq-repeat-customer",
+    "title": "Ask Repeat Customers for a Store Review",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "review-requests",
+    "aiTool": "Gemini",
+    "promptText": "Help me ask repeat customers of my [BUSINESS TYPE] for a review of the shop as a whole. How many times they have ordered is [ORDER COUNT OR RANGE], what they usually buy is [THEIR TYPICAL ITEMS], where I want the store review is [E.G. GOOGLE, FACEBOOK, A MARKETPLACE STORE PAGE], and my tone is [YOUR TONE]. Write a personal message that thanks them for coming back and asks for a short review of their overall experience. Note that repeat customers are the people most likely to leave a detailed, positive, and believable review because they have proven they like the shop, yet they are often never asked after their first order, and a genuine thank you matters more here than a template, but it should still be one ask, not a recurring request every order. Give me the repeat customer message.",
+    "description": "Ask loyal repeat buyers for an overall store review.",
+    "useCase": "Use this to reach your best customers. Repeat buyers are most likely to leave detailed, believable reviews yet are rarely asked after their first order, and a genuine thank you matters more than a template, but keep it to one ask rather than a request every order.",
+    "variables": [
+      "BUSINESS TYPE",
+      "ORDER COUNT OR RANGE",
+      "THEIR TYPICAL ITEMS",
+      "E.G. GOOGLE, FACEBOOK, A MARKETPLACE STORE PAGE",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "revreq-local-google-reviews",
+      "revreq-chat-app-request",
+      "revreq-measure-results"
+    ]
   }
 ]
