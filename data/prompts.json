@@ -49526,5 +49526,390 @@
       "rescur-knowledge-library",
       "rescur-free-only"
     ]
+  },
+  {
+    "id": "expt-system-setup",
+    "title": "Set Up a Simple Expense Tracking System",
+    "categoryId": "finance-and-bookkeeping",
+    "subcategoryId": "expense-tracking",
+    "aiTool": "Claude",
+    "promptText": "Help me set up a simple system to track business expenses for my [BUSINESS TYPE]. How I pay for things is [E.G. BUSINESS CARD, PERSONAL CARD, CASH, BANK TRANSFER, PAYMENT APPS], roughly how many expenses I have per month is [NUMBER], where I am registered is [COUNTRY], and the tool I prefer is [E.G. SPREADSHEET, ACCOUNTING SOFTWARE, AN APP, A NOTEBOOK]. Design a system covering how each expense is recorded, which details to capture, where receipts go, how often to update it, and a short monthly check. Note that the best system is the one I will actually keep up with, so recording expenses weekly or as they happen beats a perfect setup I abandon, missing small expenses adds up over a year, and record keeping requirements for business expenses differ by country, so my accountant should confirm what I need to keep and for how long. Give me the expense tracking system.",
+    "description": "Set up an expense system simple enough that you will keep using it.",
+    "useCase": "Use this if expenses live in your head or a shoebox. The best system is one you keep up with, so recording weekly or as you go beats a perfect setup you abandon, small expenses add up over a year, and record keeping rules differ by country, so confirm with your accountant what to keep and for how long.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. BUSINESS CARD, PERSONAL CARD, CASH, BANK TRANSFER, PAYMENT APPS",
+      "NUMBER",
+      "COUNTRY",
+      "E.G. SPREADSHEET, ACCOUNTING SOFTWARE, AN APP, A NOTEBOOK"
+    ],
+    "relatedPromptIds": [
+      "expt-quick-categorize",
+      "expt-categories",
+      "expt-receipt-habit"
+    ]
+  },
+  {
+    "id": "expt-quick-categorize",
+    "title": "Quickly Categorize a List of Expenses",
+    "categoryId": "finance-and-bookkeeping",
+    "subcategoryId": "expense-tracking",
+    "aiTool": "Grok",
+    "promptText": "Categorize these business expenses quickly: [PASTE LIST OF EXPENSES WITH DESCRIPTIONS AND AMOUNTS]. Use these categories: [YOUR CATEGORIES OR LET YOU SUGGEST]. Return a table with each expense, its category, and a flag on any that look personal or unclear, then category totals, no explanation. Give me the categorized list.",
+    "description": "Sort a list of expenses into categories with totals, fast.",
+    "useCase": "Use this to sort a pile of transactions in seconds. Quick categorizing saves time, but review the flagged items yourself, since a tool cannot know whether a purchase was business or personal, and check category totals against your bank statement.",
+    "variables": [
+      "PASTE LIST OF EXPENSES WITH DESCRIPTIONS AND AMOUNTS",
+      "YOUR CATEGORIES OR LET YOU SUGGEST"
+    ],
+    "relatedPromptIds": [
+      "expt-categories",
+      "expt-monthly-review",
+      "expt-spreadsheet"
+    ]
+  },
+  {
+    "id": "expt-categories",
+    "title": "Create Expense Categories That Fit Your Business",
+    "categoryId": "finance-and-bookkeeping",
+    "subcategoryId": "expense-tracking",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me create a list of expense categories for my [BUSINESS TYPE]. What I typically spend money on is [TYPICAL EXPENSES], my business structure is [E.G. SOLE PROPRIETOR, PARTNERSHIP, COMPANY], where I am registered is [COUNTRY], and what I want to learn from my expenses is [E.G. COST OF EACH PRODUCT, MARKETING SPEND, TAX DEDUCTIONS, WHERE MONEY LEAKS]. Suggest ten to fifteen categories with a short description and examples of what belongs in each, plus how to handle items that could fit in more than one. Note that too many categories make recording slow and inconsistent, while too few hide where money goes, so a short list that matches how I make decisions works best, and if I file taxes, aligning my categories with what my tax return or accountant uses saves work later. Give me the expense categories.",
+    "description": "Build a short category list that matches decisions and tax reporting.",
+    "useCase": "Use this when setting up or cleaning up your expense tracking. Too many categories make recording slow and inconsistent, too few hide where money goes, so a short list matching your decisions works best, and aligning it with what your tax return or accountant uses saves work later.",
+    "variables": [
+      "BUSINESS TYPE",
+      "TYPICAL EXPENSES",
+      "E.G. SOLE PROPRIETOR, PARTNERSHIP, COMPANY",
+      "COUNTRY",
+      "E.G. COST OF EACH PRODUCT, MARKETING SPEND, TAX DEDUCTIONS, WHERE MONEY LEAKS"
+    ],
+    "relatedPromptIds": [
+      "expt-system-setup",
+      "expt-quick-categorize",
+      "expt-accountant-questions"
+    ]
+  },
+  {
+    "id": "expt-receipt-habit",
+    "title": "Build a Habit of Capturing Every Receipt",
+    "categoryId": "finance-and-bookkeeping",
+    "subcategoryId": "expense-tracking",
+    "aiTool": "Gemini",
+    "promptText": "Help me build a reliable habit for capturing receipts for my [BUSINESS TYPE]. Where receipts come from is [E.G. PAPER RECEIPTS FROM SHOPS, EMAIL RECEIPTS, CHAT APP INVOICES, BANK APP CONFIRMATIONS, NO RECEIPT AT ALL], my phone and apps are [DEVICES AND APPS], and where I want receipts stored is [STORAGE]. Suggest a capture routine for each type, a file naming convention, a weekly catch up step, and what to do when there is no receipt. Note that paper receipts fade and get lost quickly, especially thermal ones in hot weather, so photographing them the same day matters, payment app screenshots and bank confirmations may or may not count as valid records depending on local rules, and many small suppliers do not issue formal receipts, so writing a short note with date, amount, supplier, and purpose right away is better than nothing. Give me the receipt capture routine.",
+    "description": "Capture paper, email, chat, and app receipts the same day.",
+    "useCase": "Use this if receipts keep going missing. Paper receipts fade and get lost quickly, especially thermal ones in hot weather, so photograph them the same day, payment app screenshots may or may not be valid records under local rules, and when suppliers give no receipt, a quick note of date, amount, supplier, and purpose helps.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. PAPER RECEIPTS FROM SHOPS, EMAIL RECEIPTS, CHAT APP INVOICES, BANK APP CONFIRMATIONS, NO RECEIPT AT ALL",
+      "DEVICES AND APPS",
+      "STORAGE"
+    ],
+    "relatedPromptIds": [
+      "expt-cash-no-receipt",
+      "expt-system-setup",
+      "expt-records-retention"
+    ]
+  },
+  {
+    "id": "expt-cash-no-receipt",
+    "title": "Track Cash Expenses and Purchases Without Receipts",
+    "categoryId": "finance-and-bookkeeping",
+    "subcategoryId": "expense-tracking",
+    "aiTool": "Claude",
+    "promptText": "Help me track cash expenses and purchases that come without proper receipts at my [BUSINESS TYPE]. The kinds of cash spending I have are [E.G. MARKET SUPPLIES, TRANSPORT, TIPS, SMALL REPAIRS, CASUAL LABOR, FUEL], how much cash I spend per month is [AMOUNT], who handles cash is [PEOPLE], and the currencies involved are [CURRENCIES]. Design a simple cash log, a petty cash routine with a float and regular top ups, how to record expenses without receipts, and a weekly cash count. Note that cash spending is where business records most often fall apart, because nothing is recorded automatically, so writing each spend down immediately matters, a fixed petty cash float that is counted and topped up regularly shows quickly if money goes missing, and tax authorities may treat expenses without receipts differently, so my accountant should advise what supporting records are acceptable. Give me the cash tracking system.",
+    "description": "Log cash spending, run petty cash, and record purchases without receipts.",
+    "useCase": "Use this if you pay for things in cash. Cash is where records most often fall apart since nothing records automatically, so write each spend down immediately, a fixed petty cash float that is counted and topped up shows quickly if money goes missing, and ask your accountant what records are acceptable without receipts.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. MARKET SUPPLIES, TRANSPORT, TIPS, SMALL REPAIRS, CASUAL LABOR, FUEL",
+      "AMOUNT",
+      "PEOPLE",
+      "CURRENCIES"
+    ],
+    "relatedPromptIds": [
+      "expt-receipt-habit",
+      "expt-mixed-currency",
+      "expt-team-reimbursements"
+    ]
+  },
+  {
+    "id": "expt-mixed-currency",
+    "title": "Track Expenses Paid in More Than One Currency",
+    "categoryId": "finance-and-bookkeeping",
+    "subcategoryId": "expense-tracking",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me track expenses paid in more than one currency at my [BUSINESS TYPE]. The currencies I spend in are [E.G. US DOLLARS AND CAMBODIAN RIEL, THAI BAHT, EUROS], my reporting currency is [MAIN CURRENCY FOR YOUR BOOKS], how I pay is [CASH, LOCAL CARD, FOREIGN CARD, TRANSFERS], and my accounting tool is [TOOL]. Suggest how to record each expense, which exchange rate to use, how to handle card conversion fees and bank charges, and how to keep it consistent month to month. Note that mixing currencies is a common source of errors, especially when cash change is given in a different currency from the price, so recording the original amount and currency plus the converted amount keeps records clear, using a consistent rate source, like the bank's actual rate or an official rate on the transaction date, matters more than which one I pick, and my accountant should confirm which method fits local rules. Give me the multi currency tracking method.",
+    "description": "Record original and converted amounts with one consistent rate rule.",
+    "useCase": "Use this if you pay in dollars and riel or other currencies. Mixed currencies are a common source of errors, especially when change comes in a different currency, so record the original amount and currency plus the converted amount, use one consistent rate source, and confirm the method with your accountant.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. US DOLLARS AND CAMBODIAN RIEL, THAI BAHT, EUROS",
+      "MAIN CURRENCY FOR YOUR BOOKS",
+      "CASH, LOCAL CARD, FOREIGN CARD, TRANSFERS",
+      "TOOL"
+    ],
+    "relatedPromptIds": [
+      "expt-cash-no-receipt",
+      "expt-travel-expenses",
+      "expt-spreadsheet"
+    ]
+  },
+  {
+    "id": "expt-separate-personal",
+    "title": "Separate Business and Personal Spending",
+    "categoryId": "finance-and-bookkeeping",
+    "subcategoryId": "expense-tracking",
+    "aiTool": "Gemini",
+    "promptText": "Help me separate my business and personal spending. How things are mixed now is [E.G. ONE BANK ACCOUNT FOR EVERYTHING, PERSONAL CARD FOR BUSINESS, CASH FROM SALES USED AT HOME], my business structure is [STRUCTURE], where I bank is [BANKS OR PAYMENT APPS AVAILABLE], and shared costs I have are [E.G. PHONE, INTERNET, VEHICLE, HOME OFFICE]. Give me a step by step plan to separate accounts and cards, how to pay myself from the business, how to handle shared costs fairly, and how to fix past mixed records. Note that mixing personal and business money makes it almost impossible to know if the business is really profitable and creates headaches at tax time, a separate account, even a simple second account, is the single biggest improvement, and shared costs like a phone used for both need a reasonable, consistent split that my accountant agrees is acceptable. Give me the separation plan.",
+    "description": "Split business and personal money and handle shared costs consistently.",
+    "useCase": "Use this if business and personal money are mixed. Mixing makes it almost impossible to know if the business is profitable and complicates taxes, a separate account, even a simple one, is the single biggest improvement, and shared costs like a phone need a consistent split your accountant accepts.",
+    "variables": [
+      "E.G. ONE BANK ACCOUNT FOR EVERYTHING, PERSONAL CARD FOR BUSINESS, CASH FROM SALES USED AT HOME",
+      "STRUCTURE",
+      "BANKS OR PAYMENT APPS AVAILABLE",
+      "E.G. PHONE, INTERNET, VEHICLE, HOME OFFICE"
+    ],
+    "relatedPromptIds": [
+      "expt-shared-costs",
+      "expt-system-setup",
+      "expt-accountant-questions"
+    ]
+  },
+  {
+    "id": "expt-shared-costs",
+    "title": "Track Home Office, Phone, and Vehicle Costs",
+    "categoryId": "finance-and-bookkeeping",
+    "subcategoryId": "expense-tracking",
+    "aiTool": "Claude",
+    "promptText": "Help me track costs that are partly business and partly personal for my [BUSINESS TYPE]. The shared costs are [E.G. HOME OFFICE RENT AND ELECTRICITY, PHONE, INTERNET, VEHICLE OR MOTORBIKE, FUEL], how much each is used for business is [ROUGH SHARE OR UNKNOWN], and where I am registered is [COUNTRY]. Suggest a reasonable way to estimate the business share of each, what records to keep to support it, like a simple trip log or usage notes, and how to record it monthly. Note that guessing a high business share without records is risky if questioned later, so a short log kept for a few typical weeks often gives a defensible estimate, rules on what shared costs can be claimed vary a lot by country and some places allow very little, so my accountant should confirm before I rely on these deductions. Give me the shared cost tracking method.",
+    "description": "Estimate and document the business share of shared costs.",
+    "useCase": "Use this if you work from home or use a vehicle for business. Guessing a high business share without records is risky if questioned, so a short log for a few typical weeks gives a defensible estimate, and rules on claiming shared costs vary a lot by country, so confirm with your accountant first.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. HOME OFFICE RENT AND ELECTRICITY, PHONE, INTERNET, VEHICLE OR MOTORBIKE, FUEL",
+      "ROUGH SHARE OR UNKNOWN",
+      "COUNTRY"
+    ],
+    "relatedPromptIds": [
+      "expt-separate-personal",
+      "expt-accountant-questions",
+      "expt-travel-expenses"
+    ]
+  },
+  {
+    "id": "expt-spreadsheet",
+    "title": "Build an Expense Tracking Spreadsheet",
+    "categoryId": "finance-and-bookkeeping",
+    "subcategoryId": "expense-tracking",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me build an expense tracking spreadsheet in [GOOGLE SHEETS OR EXCEL] for my [BUSINESS TYPE]. My categories are [CATEGORIES], the currencies I use are [CURRENCIES], the payment methods are [METHODS], and what I want to see at a glance is [E.G. MONTHLY TOTALS, SPENDING BY CATEGORY, BUDGET VERSUS ACTUAL, TAX DEDUCTIBLE TOTALS]. Give me the column layout, data validation dropdowns for categories and payment methods, formulas for monthly and category totals, and a simple summary tab, with instructions to set it up. Note that dropdowns prevent the typos that split one category into several, keeping one row per expense with dates in a consistent format makes formulas reliable, and spreadsheets have no automatic backup of my changes unless the tool provides it, so a regular copy protects a year of records. Give me the spreadsheet design.",
+    "description": "Set up columns, dropdowns, and formulas for expense tracking.",
+    "useCase": "Use this if you track expenses in a spreadsheet. Dropdowns prevent typos that split one category into several, one row per expense with consistent date formats makes formulas reliable, and a regular copy protects a year of records in case of mistakes.",
+    "variables": [
+      "GOOGLE SHEETS OR EXCEL",
+      "BUSINESS TYPE",
+      "CATEGORIES",
+      "CURRENCIES",
+      "METHODS",
+      "E.G. MONTHLY TOTALS, SPENDING BY CATEGORY, BUDGET VERSUS ACTUAL, TAX DEDUCTIBLE TOTALS"
+    ],
+    "relatedPromptIds": [
+      "expt-categories",
+      "expt-quick-categorize",
+      "expt-choose-app"
+    ]
+  },
+  {
+    "id": "expt-choose-app",
+    "title": "Choose an Expense Tracking App or Tool",
+    "categoryId": "finance-and-bookkeeping",
+    "subcategoryId": "expense-tracking",
+    "aiTool": "Gemini",
+    "promptText": "Help me choose a tool for tracking business expenses for my [BUSINESS TYPE]. My needs are [E.G. RECEIPT SCANNING, BANK CONNECTION, MULTIPLE CURRENCIES, TEAM EXPENSES, MILEAGE, EXPORT FOR MY ACCOUNTANT], my budget is [BUDGET], where I am based is [COUNTRY], my banks are [BANKS], and my current tools are [ACCOUNTING OR OTHER TOOLS]. Compare options like a spreadsheet, accounting software expense features, and dedicated expense apps on cost, features, bank support in my country, ease of use, and data export, then recommend one. Note that many expense apps advertise automatic bank connections that do not support banks in every country, so I should check that my specific banks work, receipt scanning can misread amounts and currencies, especially on faded or non English receipts, so a quick review is still needed, and a spreadsheet is a perfectly fine choice for a small number of expenses. Give me the tool recommendation.",
+    "description": "Pick an expense tool that supports your banks, currencies, and needs.",
+    "useCase": "Use this before paying for an expense app. Many advertise bank connections that do not support banks in every country, so check yours work, receipt scanning misreads amounts and currencies on faded or non English receipts, so still review, and a spreadsheet is fine for a small number of expenses.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. RECEIPT SCANNING, BANK CONNECTION, MULTIPLE CURRENCIES, TEAM EXPENSES, MILEAGE, EXPORT FOR MY ACCOUNTANT",
+      "BUDGET",
+      "COUNTRY",
+      "BANKS",
+      "ACCOUNTING OR OTHER TOOLS"
+    ],
+    "relatedPromptIds": [
+      "expt-spreadsheet",
+      "expt-system-setup",
+      "expt-team-reimbursements"
+    ]
+  },
+  {
+    "id": "expt-monthly-review",
+    "title": "Review Monthly Expenses and Find Money Leaks",
+    "categoryId": "finance-and-bookkeeping",
+    "subcategoryId": "expense-tracking",
+    "aiTool": "Claude",
+    "promptText": "Help me review my business expenses for the month and find money leaks. Here are my expenses by category: [PASTE EXPENSES OR CATEGORY TOTALS], last month or my budget was [COMPARISON NUMBERS], my revenue this month was [REVENUE], and anything unusual this month was [CONTEXT]. Compare against the previous period or budget, highlight big changes, find recurring charges and small costs that add up, and suggest which to cut, renegotiate, or keep. Note that the biggest savings often come from small recurring charges nobody notices and from a few large categories, rather than from cutting everything slightly, some spending that looks high may be an investment that drives revenue, so expenses should be judged against what they produce, and one unusual month should not trigger drastic cuts without looking at the trend. Give me the expense review.",
+    "description": "Compare spending to last month or budget and find what to cut.",
+    "useCase": "Use this at the end of each month. Big savings often come from unnoticed recurring charges and a few large categories rather than cutting everything slightly, some high spending drives revenue, so judge it by results, and one unusual month should not trigger drastic cuts without checking the trend.",
+    "variables": [
+      "PASTE EXPENSES OR CATEGORY TOTALS",
+      "COMPARISON NUMBERS",
+      "REVENUE",
+      "CONTEXT"
+    ],
+    "relatedPromptIds": [
+      "expt-trend-analysis",
+      "expt-subscription-tracker",
+      "expt-quick-categorize"
+    ]
+  },
+  {
+    "id": "expt-subscription-tracker",
+    "title": "Track Software Subscriptions and Recurring Charges",
+    "categoryId": "finance-and-bookkeeping",
+    "subcategoryId": "expense-tracking",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me track all recurring charges and subscriptions for my [BUSINESS TYPE]. The subscriptions I know of are [LIST WITH PRICES AND BILLING CYCLES], how they are paid is [CARDS, PAYPAL, APP STORES], and the currencies they bill in are [CURRENCIES]. Create a subscription tracker with name, purpose, cost in original currency and converted, billing cycle, renewal date, payment method, owner, and whether it is still needed, plus a monthly total and a routine to catch new charges. Note that subscriptions billed in foreign currencies change in cost as exchange rates move and often add card conversion fees, annual renewals are easy to forget and can arrive as a surprise large charge, and app store subscriptions are often missed because they appear under the app store's name rather than the product's. Give me the subscription tracker.",
+    "description": "List every recurring charge with cost, renewal date, and owner.",
+    "useCase": "Use this to see what you pay every month and year. Foreign currency subscriptions change cost with exchange rates and add conversion fees, annual renewals arrive as surprise charges, and app store subscriptions are often missed because they appear under the store's name.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST WITH PRICES AND BILLING CYCLES",
+      "CARDS, PAYPAL, APP STORES",
+      "CURRENCIES"
+    ],
+    "relatedPromptIds": [
+      "expt-monthly-review",
+      "expt-mixed-currency",
+      "expt-spreadsheet"
+    ]
+  },
+  {
+    "id": "expt-billable-expenses",
+    "title": "Track Billable Expenses for Client Projects",
+    "categoryId": "finance-and-bookkeeping",
+    "subcategoryId": "expense-tracking",
+    "aiTool": "Gemini",
+    "promptText": "Help me track expenses I can bill back to clients at my [BUSINESS TYPE]. The kinds of billable costs I have are [E.G. MATERIALS, TRAVEL, STOCK PHOTOS, PRINTING, SOFTWARE FOR A PROJECT, SUBCONTRACTORS], what my contracts say about expenses is [TERMS OR NOTHING YET], and how I invoice is [INVOICING METHOD]. Suggest how to tag each expense to a client and project, what proof to keep, whether to add a markup, how to show expenses on invoices, and how to avoid forgetting to bill them. Note that billable expenses are often forgotten when invoicing, which quietly comes out of my profit, so tagging each one to a project at the time of purchase is the key habit, clients are more comfortable paying expenses that were agreed in advance and backed by receipts, and the contract should say whether expenses need approval and whether a markup applies. Give me the billable expense system.",
+    "description": "Tag project costs to clients and bill them back with proof.",
+    "useCase": "Use this if you pay costs on behalf of clients. Billable expenses are often forgotten at invoicing, quietly eating profit, so tag each to a project at purchase, clients pay more comfortably for agreed, receipted expenses, and your contract should state approval rules and any markup.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. MATERIALS, TRAVEL, STOCK PHOTOS, PRINTING, SOFTWARE FOR A PROJECT, SUBCONTRACTORS",
+      "TERMS OR NOTHING YET",
+      "INVOICING METHOD"
+    ],
+    "relatedPromptIds": [
+      "expt-travel-expenses",
+      "expt-team-reimbursements",
+      "expt-categories"
+    ]
+  },
+  {
+    "id": "expt-travel-expenses",
+    "title": "Track Business Travel Expenses",
+    "categoryId": "finance-and-bookkeeping",
+    "subcategoryId": "expense-tracking",
+    "aiTool": "Claude",
+    "promptText": "Help me track expenses for a business trip. The trip is [PURPOSE, DESTINATION, AND DATES], the expenses will include [E.G. FLIGHTS, BUSES, HOTELS, MEALS, VISAS, LOCAL TRANSPORT, SIM CARDS], the currencies involved are [CURRENCIES], whether part of the trip is personal is [YES OR NO, AND HOW], and who pays or reimburses is [ME, CLIENT, EMPLOYER, MY BUSINESS]. Create a simple trip expense log, a daily capture routine, how to separate personal days or costs, and a summary format for my records or a reimbursement claim. Note that travel expenses are easy to lose because they happen fast and in different currencies, so capturing them daily matters, mixing personal holiday days into a business trip can limit what counts as a business expense under many tax rules, and local transport like motorbike taxis or street food often has no receipt, so a brief note at the time is the best record. Give me the travel expense log.",
+    "description": "Log trip costs daily across currencies and separate personal days.",
+    "useCase": "Use this before and during business trips. Travel costs are easy to lose because they happen fast and in different currencies, so capture them daily, mixing personal days into a business trip can limit what counts under many tax rules, and receiptless costs like motorbike taxis need a quick note at the time.",
+    "variables": [
+      "PURPOSE, DESTINATION, AND DATES",
+      "E.G. FLIGHTS, BUSES, HOTELS, MEALS, VISAS, LOCAL TRANSPORT, SIM CARDS",
+      "CURRENCIES",
+      "YES OR NO, AND HOW",
+      "ME, CLIENT, EMPLOYER, MY BUSINESS"
+    ],
+    "relatedPromptIds": [
+      "expt-mixed-currency",
+      "expt-billable-expenses",
+      "expt-shared-costs"
+    ]
+  },
+  {
+    "id": "expt-team-reimbursements",
+    "title": "Set Up an Expense Reimbursement Process for a Team",
+    "categoryId": "finance-and-bookkeeping",
+    "subcategoryId": "expense-tracking",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me set up a simple expense reimbursement process for people who spend money on behalf of my [BUSINESS TYPE]. The people are [STAFF, FREELANCERS, PARTNERS], the kinds of expenses they have are [TYPICAL EXPENSES], how they would submit claims is [E.G. A FORM, CHAT MESSAGE WITH PHOTO, AN APP], and how I pay them back is [PAYMENT METHOD]. Write a short expense policy covering what is allowed, spending limits, what needs approval first, receipt requirements, deadlines for claims, and payment timing, plus a claim template. Note that without clear rules, reimbursements become a source of awkward disagreements, so a short written policy agreed in advance prevents most of them, paying claims promptly matters a lot to staff on modest incomes who are effectively lending the business money, and approval before larger spends is easier than refusing a claim after the money is gone. Give me the reimbursement process.",
+    "description": "Write a short expense policy and claim template for your team.",
+    "useCase": "Use this when others spend money for your business. Without clear rules reimbursements cause awkward disagreements, so a short written policy agreed in advance prevents most, prompt payment matters to staff on modest incomes who are lending you money, and approval before larger spends beats refusing claims afterward.",
+    "variables": [
+      "BUSINESS TYPE",
+      "STAFF, FREELANCERS, PARTNERS",
+      "TYPICAL EXPENSES",
+      "E.G. A FORM, CHAT MESSAGE WITH PHOTO, AN APP",
+      "PAYMENT METHOD"
+    ],
+    "relatedPromptIds": [
+      "expt-cash-no-receipt",
+      "expt-billable-expenses",
+      "expt-choose-app"
+    ]
+  },
+  {
+    "id": "expt-accountant-questions",
+    "title": "Prepare Expense Questions for Your Accountant",
+    "categoryId": "finance-and-bookkeeping",
+    "subcategoryId": "expense-tracking",
+    "aiTool": "Gemini",
+    "promptText": "Help me prepare questions about my expenses for my accountant or tax advisor. My business is [BUSINESS TYPE AND STRUCTURE], where I am registered is [COUNTRY], the expenses I am unsure about are [E.G. HOME OFFICE, VEHICLE, MEALS, EQUIPMENT, TRAINING, TRAVEL, FOREIGN SUBSCRIPTIONS, CASH PURCHASES WITHOUT RECEIPTS], and how I track expenses now is [CURRENT METHOD]. Write a clear, organized list of questions, grouped by topic, plus a short summary of my situation to send in advance so the meeting is efficient. Note that I should not assume an expense is deductible because it is in other countries or online articles, since tax rules on expenses differ widely between countries and change over time, asking specific questions with examples gets more useful answers than general ones, and sending my records and questions ahead of time usually saves paid meeting time. Give me the accountant questions.",
+    "description": "Organize specific expense questions and a situation summary for your accountant.",
+    "useCase": "Use this before meeting an accountant or tax advisor. Do not assume an expense is deductible because it is elsewhere or online, since rules differ widely by country and change, specific questions with examples get better answers, and sending records and questions ahead saves paid meeting time.",
+    "variables": [
+      "BUSINESS TYPE AND STRUCTURE",
+      "COUNTRY",
+      "E.G. HOME OFFICE, VEHICLE, MEALS, EQUIPMENT, TRAINING, TRAVEL, FOREIGN SUBSCRIPTIONS, CASH PURCHASES WITHOUT RECEIPTS",
+      "CURRENT METHOD"
+    ],
+    "relatedPromptIds": [
+      "expt-categories",
+      "expt-shared-costs",
+      "expt-records-retention"
+    ]
+  },
+  {
+    "id": "expt-records-retention",
+    "title": "Organize and Keep Expense Records for the Long Term",
+    "categoryId": "finance-and-bookkeeping",
+    "subcategoryId": "expense-tracking",
+    "aiTool": "Claude",
+    "promptText": "Help me organize and store my expense records so I can find them years later. Where my records are now is [E.G. PHONE PHOTOS, EMAIL, PAPER BOX, ACCOUNTING SOFTWARE, SPREADSHEET], where I am registered is [COUNTRY], and how many years of records I have is [YEARS]. Suggest a folder structure by year and month, a file naming convention, a backup method, how to handle paper originals, and a yearly archive routine, plus questions to confirm with my accountant about how long to keep records. Note that if records are ever requested, finding a specific receipt from years ago is hard without a consistent structure, phone photos alone can be lost with the phone, so a second backup matters, and the required retention period and whether digital copies are accepted depend on local rules, so the accountant's answer should set the final policy. Give me the records storage plan.",
+    "description": "Store expense records by year with backups and a retention policy.",
+    "useCase": "Use this to keep years of receipts findable. A specific old receipt is hard to find without consistent structure, phone photos can be lost with the phone, so keep a second backup, and required retention periods and acceptance of digital copies depend on local rules, so let your accountant set the final policy.",
+    "variables": [
+      "E.G. PHONE PHOTOS, EMAIL, PAPER BOX, ACCOUNTING SOFTWARE, SPREADSHEET",
+      "COUNTRY",
+      "YEARS"
+    ],
+    "relatedPromptIds": [
+      "expt-receipt-habit",
+      "expt-accountant-questions",
+      "expt-system-setup"
+    ]
+  },
+  {
+    "id": "expt-trend-analysis",
+    "title": "Analyze Expense Trends Over Months",
+    "categoryId": "finance-and-bookkeeping",
+    "subcategoryId": "expense-tracking",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me analyze how my business expenses have changed over time. Here are my monthly expenses by category for [TIMEFRAME]: [PASTE DATA], my monthly revenue for the same period was [REVENUE DATA], and major changes in the business during this time were [E.G. NEW HIRE, NEW PRODUCT, PRICE INCREASES, MOVE]. Show which categories are growing fastest, expenses as a share of revenue, seasonal patterns, and costs that grew without a matching rise in revenue, and suggest what to watch or act on. Note that expenses rising is not a problem on its own if revenue rises faster, so expenses as a percentage of revenue tell a more useful story than totals, seasonal businesses need to compare the same months across years rather than consecutive months, and gradual increases in small categories are easy to miss without looking at the trend. Give me the expense trend analysis.",
+    "description": "Track category growth and expenses as a share of revenue over time.",
+    "useCase": "Use this every quarter or year. Rising expenses are fine if revenue rises faster, so expenses as a share of revenue tell more than totals, seasonal businesses should compare the same months across years, and gradual increases in small categories are easy to miss without a trend view.",
+    "variables": [
+      "TIMEFRAME",
+      "PASTE DATA",
+      "REVENUE DATA",
+      "E.G. NEW HIRE, NEW PRODUCT, PRICE INCREASES, MOVE"
+    ],
+    "relatedPromptIds": [
+      "expt-monthly-review",
+      "expt-subscription-tracker",
+      "expt-spreadsheet"
+    ]
   }
 ]
