@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 
 const FALLBACK_ORIGIN = "https://prompt-library-gilt.vercel.app";
 
-type AiKey = "chatgpt" | "claude" | "grok" | "manus";
+export type AiKey = "chatgpt" | "claude" | "gemini" | "grok" | "manus";
 
-const AIS: Record<
+export const AI_ORDER: AiKey[] = ["chatgpt", "claude", "gemini", "grok", "manus"];
+
+export const AIS: Record<
   AiKey,
   { label: string; open: { href: string; text: string }; steps: string[]; note?: string }
 > = {
@@ -31,6 +33,17 @@ const AIS: Record<
       "Click Add. It is ready to use in any chat.",
     ],
   },
+  gemini: {
+    label: "Gemini",
+    open: { href: "https://gemini.google.com/apps", text: "Open Gemini connected apps" },
+    steps: [
+      "In Gemini, open Settings and help, then Connected Apps.",
+      "Choose the Other tab and scroll to the bottom.",
+      "Select Add a custom app and paste the address below.",
+      "Click Next, then turn the app on in your chat.",
+    ],
+    note: "Google currently offers custom apps in Gemini on the Google AI Ultra plan with a personal Google account.",
+  },
   grok: {
     label: "Grok",
     open: { href: "https://grok.com/connectors", text: "Open Grok connectors" },
@@ -53,17 +66,19 @@ const AIS: Record<
   },
 };
 
-export default function ConnectAI() {
+export default function ConnectAI({ initial = "claude" }: { initial?: AiKey }) {
   const [origin, setOrigin] = useState(FALLBACK_ORIGIN);
-  const [active, setActive] = useState<AiKey | null>(null);
+  const [active, setActive] = useState<AiKey>(initial);
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     setOrigin(window.location.origin);
+    const fromHash = window.location.hash.replace("#", "") as AiKey;
+    if (AI_ORDER.includes(fromHash)) setActive(fromHash);
   }, []);
 
   const url = `${origin}/api/mcp`;
-  const ai = active ? AIS[active] : null;
+  const ai = AIS[active];
 
   const copy = () => {
     navigator.clipboard.writeText(url).then(() => {
@@ -73,68 +88,67 @@ export default function ConnectAI() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto mb-10 rounded-2xl border border-border bg-white p-5 sm:p-6 text-left shadow-sm">
-      <div className="text-center">
-        <h2 className="text-lg sm:text-xl font-bold text-text">Connect your AI</h2>
-        <p className="text-sm text-muted mt-1">
-          Add the library to your AI once, then just ask it for a prompt in any chat.
-        </p>
-      </div>
-
-      <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2">
-        {(Object.keys(AIS) as AiKey[]).map((key) => (
+    <div className="rounded-2xl border border-border bg-white p-5 sm:p-7 shadow-sm">
+      <p className="text-sm font-medium text-muted mb-3">Choose your AI</p>
+      <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
+        {AI_ORDER.map((key) => (
           <button
             key={key}
-            onClick={() => setActive(active === key ? null : key)}
+            onClick={() => {
+              setActive(key);
+              history.replaceState(null, "", `#${key}`);
+            }}
             className={`rounded-lg px-4 py-2.5 text-sm font-semibold border transition-colors ${
               active === key
                 ? "bg-primary text-white border-primary"
                 : "bg-white text-text border-border hover:bg-surface"
             }`}
-            aria-expanded={active === key}
+            aria-pressed={active === key}
           >
             {AIS[key].label}
           </button>
         ))}
       </div>
 
-      {ai && (
-        <div className="mt-5 border-t border-border pt-5">
-          <ol className="space-y-2 text-sm text-text list-decimal pl-5">
-            {ai.steps.map((s) => (
-              <li key={s}>{s}</li>
-            ))}
-          </ol>
+      <div className="mt-6 border-t border-border pt-6">
+        <h2 className="text-lg font-bold text-text mb-3">Connect {ai.label}</h2>
+        <ol className="space-y-2 text-sm text-text list-decimal pl-5">
+          {ai.steps.map((s) => (
+            <li key={s}>{s}</li>
+          ))}
+        </ol>
 
-          <div className="mt-4 flex flex-col sm:flex-row gap-2">
-            <code className="flex-1 min-w-0 truncate rounded-lg bg-surface border border-border px-3 py-2.5 text-sm text-text">
-              {url}
-            </code>
-            <button
-              onClick={copy}
-              className="rounded-lg bg-primary hover:bg-primary-hover text-white text-sm font-semibold px-4 py-2.5 transition-colors"
-            >
-              {copied ? "Copied" : "Copy address"}
-            </button>
-          </div>
-
-          <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-            <a
-              href={ai.open.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold text-primary hover:underline"
-            >
-              {ai.open.text} →
-            </a>
-            <span className="text-muted">
-              Then try: &ldquo;Find me a prompt for writing a cold email.&rdquo;
-            </span>
-          </div>
-
-          {ai.note && <p className="mt-3 text-xs text-muted">{ai.note}</p>}
+        <div className="mt-5 flex flex-col sm:flex-row gap-2">
+          <code className="flex-1 min-w-0 truncate rounded-lg bg-surface border border-border px-3 py-2.5 text-sm text-text">
+            {url}
+          </code>
+          <button
+            onClick={copy}
+            className="rounded-lg bg-primary hover:bg-primary-hover text-white text-sm font-semibold px-4 py-2.5 transition-colors"
+          >
+            {copied ? "Copied" : "Copy address"}
+          </button>
         </div>
-      )}
+
+        <a
+          href={ai.open.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-block text-sm font-semibold text-primary hover:underline"
+        >
+          {ai.open.text} →
+        </a>
+
+        {ai.note && <p className="mt-3 text-xs text-muted">{ai.note}</p>}
+      </div>
+
+      <div className="mt-6 rounded-xl bg-surface border border-border p-4 text-sm text-text">
+        <p className="font-semibold mb-1">Then just ask your AI</p>
+        <p className="text-muted">
+          &ldquo;Find me a prompt for writing a cold email to a new client.&rdquo; Your AI searches the
+          library, fills in the blanks with your details, and links you to the prompt.
+        </p>
+      </div>
     </div>
   );
 }

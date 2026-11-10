@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import PromptCard from "@/components/PromptCard";
 import SearchBar from "@/components/SearchBar";
 import DesignedFor from "@/components/DesignedFor";
-import ConnectAI from "@/components/ConnectAI";
+import ConnectAIButton from "@/components/ConnectAIButton";
 import categoriesData from "@/data/categories.json";
 import promptsData from "@/data/prompts.json";
 import { Category, Prompt } from "@/types";
@@ -55,7 +55,7 @@ export default function HomePage() {
             leading AI models. Customize them instantly and integrate them into your workflow.
           </p>
 
-          <ConnectAI />
+          <ConnectAIButton />
 
           <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
             <Link

@@ -13,6 +13,12 @@ export default function Nav() {
           </Link>
           <div className="flex items-center gap-2 sm:gap-4">
             <Link
+              href="/connect"
+              className="hidden sm:block text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors"
+            >
+              Connect your AI
+            </Link>
+            <Link
               href="/browse"
               className="hidden sm:block text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors"
             >

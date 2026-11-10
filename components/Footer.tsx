@@ -52,9 +52,9 @@ export default function Footer() {
           © 2025 PromptLibrary. All rights reserved.
         </div>
         <p className="mt-4 text-xs text-stone-400">
-          Claude, ChatGPT, and Gemini are trademarks of their respective owners. This
-          site is not affiliated with, endorsed by, or sponsored by Anthropic, OpenAI,
-          or Google.
+          Claude, ChatGPT, Gemini, Grok, and Manus are trademarks of their respective owners.
+          This site is not affiliated with, endorsed by, or sponsored by Anthropic, OpenAI,
+          Google, xAI, or Manus.
         </p>
       </div>
     </footer>
