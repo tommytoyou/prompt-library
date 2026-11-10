@@ -46410,5 +46410,396 @@
       "wfmap-quick-outline",
       "wfmap-interview-questions"
     ]
+  },
+  {
+    "id": "integ-stack-inventory",
+    "title": "Inventory Every Tool Your Business Uses",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "tool-integration-planning",
+    "aiTool": "Claude",
+    "promptText": "Help me build an inventory of every software tool my [BUSINESS TYPE] uses. The tools I can think of are [LIST TOOLS, INCLUDING FREE ONES, APPS, AND PLUGINS], what each is used for is [PURPOSES IF KNOWN], and how I pay for them is [E.G. CARD, PAYPAL, ANNUAL, MONTHLY]. Organize them into a table with purpose, owner, monthly cost, login owner, what data it holds, what it connects to, and renewal date, and flag overlaps, unused tools, and tools holding important data with no clear owner. Note that most small businesses forget a surprising number of subscriptions and free tools that quietly hold customer data, so checking card statements and email receipts finds what memory misses, and knowing what data lives where is the starting point for any integration plan. Give me the tool inventory.",
+    "description": "List every tool with its cost, owner, data, and connections.",
+    "useCase": "Use this before connecting or changing any tools. Most small businesses forget many subscriptions and free tools quietly holding customer data, so check card statements and email receipts, and knowing what data lives where is the starting point for any integration plan.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST TOOLS, INCLUDING FREE ONES, APPS, AND PLUGINS",
+      "PURPOSES IF KNOWN",
+      "E.G. CARD, PAYPAL, ANNUAL, MONTHLY"
+    ],
+    "relatedPromptIds": [
+      "integ-data-flow-map",
+      "integ-cost-consolidation",
+      "integ-access-offboarding"
+    ]
+  },
+  {
+    "id": "integ-quick-check",
+    "title": "Quickly Check Whether Two Tools Connect",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "tool-integration-planning",
+    "aiTool": "Grok",
+    "promptText": "Tell me quickly how [TOOL ONE] and [TOOL TWO] can connect. What I want to happen between them is [GOAL]. List the options, like a native integration, Zapier or Make, an API, or export and import, in order from simplest to hardest, one line each, and say which to try first, no explanation. Give me the options.",
+    "description": "List the ways two tools can connect, simplest first.",
+    "useCase": "Use this when you wonder whether two apps can talk to each other. A quick list of options points you to the simplest route, but confirm on each tool's current integrations page, since integrations are added, changed, and retired often.",
+    "variables": [
+      "TOOL ONE",
+      "TOOL TWO",
+      "GOAL"
+    ],
+    "relatedPromptIds": [
+      "integ-native-vs-connector",
+      "integ-new-tool-fit",
+      "integ-api-basics"
+    ]
+  },
+  {
+    "id": "integ-data-flow-map",
+    "title": "Map How Data Moves Between Your Tools",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "tool-integration-planning",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me map how data moves between the tools in my [BUSINESS TYPE]. My tools are [TOOLS], the key data is [E.G. CUSTOMERS, ORDERS, PRODUCTS, INVOICES, LEADS, TASKS], and how data moves now is [E.G. NATIVE SYNC, ZAPIER, COPY AND PASTE, EXPORTS, NOT AT ALL]. Create a map showing where each type of data is created, where it is copied, how it moves, which direction, and where it is manually retyped, and flag places where the same data could disagree. Note that problems usually come from the same customer or order being edited in two places that do not fully sync, so knowing which tool is the master for each kind of data matters more than connecting everything, and every manual copy step is both a time cost and a source of errors. Give me the data flow map.",
+    "description": "Map where each type of data is created, copied, and retyped.",
+    "useCase": "Use this when data gets out of sync between tools. Problems come from the same customer or order being edited in two places that do not fully sync, so knowing which tool is the master for each kind of data matters more than connecting everything, and every manual copy is a time and error cost.",
+    "variables": [
+      "BUSINESS TYPE",
+      "TOOLS",
+      "E.G. CUSTOMERS, ORDERS, PRODUCTS, INVOICES, LEADS, TASKS",
+      "E.G. NATIVE SYNC, ZAPIER, COPY AND PASTE, EXPORTS, NOT AT ALL"
+    ],
+    "relatedPromptIds": [
+      "integ-source-of-truth",
+      "integ-stack-inventory",
+      "integ-sync-conflicts"
+    ]
+  },
+  {
+    "id": "integ-source-of-truth",
+    "title": "Choose a Source of Truth for Each Kind of Data",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "tool-integration-planning",
+    "aiTool": "Claude",
+    "promptText": "Help me decide which tool should be the single source of truth for each kind of data in my [BUSINESS TYPE]. The data types are [E.G. CUSTOMER CONTACTS, PRODUCT INFO AND PRICES, STOCK LEVELS, ORDERS, INVOICES AND PAYMENTS, PROJECT STATUS], the tools that currently hold each are [TOOLS PER DATA TYPE], and the problems we have are [E.G. CONFLICTING PRICES, OUTDATED CONTACTS, STOCK MISMATCHES]. Recommend one master tool per data type, which tools should only read from it, and rules for where changes must be made. Note that when data can be edited in several tools, they drift apart and nobody knows which version is right, so a rule like prices are only changed in the store and flow out from there prevents most conflicts, but the rule only works if everyone follows it, so it should be written down and the other tools set to read only where possible. Give me the source of truth plan.",
+    "description": "Pick one master tool per data type and set where edits happen.",
+    "useCase": "Use this when tools disagree about prices, contacts, or stock. Data editable in several tools drifts apart, so a rule like prices are only changed in the store prevents most conflicts, but only if everyone follows it, so write it down and set other tools to read only where possible.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. CUSTOMER CONTACTS, PRODUCT INFO AND PRICES, STOCK LEVELS, ORDERS, INVOICES AND PAYMENTS, PROJECT STATUS",
+      "TOOLS PER DATA TYPE",
+      "E.G. CONFLICTING PRICES, OUTDATED CONTACTS, STOCK MISMATCHES"
+    ],
+    "relatedPromptIds": [
+      "integ-data-flow-map",
+      "integ-sync-conflicts",
+      "integ-roadmap"
+    ]
+  },
+  {
+    "id": "integ-new-tool-fit",
+    "title": "Check a New Tool Fits Your Existing Stack",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "tool-integration-planning",
+    "aiTool": "Gemini",
+    "promptText": "Help me check whether a new tool will fit with the tools my [BUSINESS TYPE] already uses. The new tool is [TOOL NAME AND WHAT I WANT IT FOR], my current stack is [EXISTING TOOLS], the data it must exchange is [DATA AND DIRECTION], and my budget is [BUDGET]. Give me a checklist of integration questions to answer before buying, covering native integrations, Zapier or Make support, API access, data export, plan limits, pricing for the features I need, and availability in my country, plus questions to ask the vendor. Note that tools often advertise integrations that turn out to be one way, limited to higher plans, or missing the specific fields I need, so testing the exact data I care about during a free trial matters more than reading the feature list, and being able to export all my data easily is my protection if the tool does not work out. Give me the fit checklist.",
+    "description": "Check integrations, exports, and plan limits before buying a new tool.",
+    "useCase": "Use this before buying any new software. Advertised integrations often turn out one way, limited to higher plans, or missing needed fields, so test your exact data during a free trial, and make sure you can export all your data in case the tool does not work out.",
+    "variables": [
+      "BUSINESS TYPE",
+      "TOOL NAME AND WHAT I WANT IT FOR",
+      "EXISTING TOOLS",
+      "DATA AND DIRECTION",
+      "BUDGET"
+    ],
+    "relatedPromptIds": [
+      "integ-native-vs-connector",
+      "integ-lock-in-exit",
+      "integ-quick-check"
+    ]
+  },
+  {
+    "id": "integ-native-vs-connector",
+    "title": "Choose Native Integration or a Connector Tool",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "tool-integration-planning",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me choose how to connect [TOOL ONE] and [TOOL TWO] for my [BUSINESS TYPE]. What needs to flow between them is [DATA, DIRECTION, AND HOW OFTEN], the native integration offers [WHAT YOU KNOW ABOUT IT, OR UNKNOWN], and my other options are [E.G. ZAPIER, MAKE, A PLUGIN, CUSTOM CODE, MANUAL EXPORT]. Compare native integration, a connector tool, a plugin, and custom code on cost, reliability, flexibility, setup effort, and who maintains it, and recommend one. Note that native integrations are usually the most reliable and cheapest to run but may sync fewer fields or only in one direction, connector tools are flexible but add monthly costs and another thing that can break, and custom code needs someone able to maintain it, so the simplest option that meets the actual need is usually best. Give me the integration recommendation.",
+    "description": "Compare native, connector, plugin, and custom options for one link.",
+    "useCase": "Use this when connecting two specific tools. Native integrations are usually most reliable and cheapest but may sync fewer fields or one way, connectors are flexible but add cost and another failure point, and custom code needs a maintainer, so pick the simplest option that meets the actual need.",
+    "variables": [
+      "TOOL ONE",
+      "TOOL TWO",
+      "BUSINESS TYPE",
+      "DATA, DIRECTION, AND HOW OFTEN",
+      "WHAT YOU KNOW ABOUT IT, OR UNKNOWN",
+      "E.G. ZAPIER, MAKE, A PLUGIN, CUSTOM CODE, MANUAL EXPORT"
+    ],
+    "relatedPromptIds": [
+      "integ-quick-check",
+      "integ-api-basics",
+      "integ-new-tool-fit"
+    ]
+  },
+  {
+    "id": "integ-api-basics",
+    "title": "Understand an API Well Enough to Plan an Integration",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "tool-integration-planning",
+    "aiTool": "Claude",
+    "promptText": "Help me understand a tool's API well enough to plan an integration for my [BUSINESS TYPE], without being a developer. The tool is [TOOL NAME], here is what its API documentation says: [PASTE KEY PARTS OF THE DOCUMENTATION OR DESCRIBE IT], and what I want to do is [GOAL]. Explain in plain language what the API can and cannot do for my goal, how authentication works, any rate limits or costs, whether webhooks are available, and whether this is a job for a connector tool or a developer, plus what to put in a brief for a freelancer. Note that API documentation often lists capabilities that require a particular plan, partner approval, or developer accounts that are not available in every country, and API keys work like passwords that give full access, so they should never be shared in chat messages or stored in plain documents. Give me the API explanation.",
+    "description": "Read an API in plain language and decide who should build the link.",
+    "useCase": "Use this when a tool's API is the only way to connect it. Documented capabilities may require a specific plan, partner approval, or developer accounts unavailable in some countries, and API keys work like passwords with full access, so never share them in chat or plain documents.",
+    "variables": [
+      "BUSINESS TYPE",
+      "TOOL NAME",
+      "PASTE KEY PARTS OF THE DOCUMENTATION OR DESCRIBE IT",
+      "GOAL"
+    ],
+    "relatedPromptIds": [
+      "integ-native-vs-connector",
+      "integ-developer-brief",
+      "integ-access-offboarding"
+    ]
+  },
+  {
+    "id": "integ-developer-brief",
+    "title": "Write a Brief for a Developer to Build an Integration",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "tool-integration-planning",
+    "aiTool": "Gemini",
+    "promptText": "Help me write a clear brief to hire a developer to build an integration for my [BUSINESS TYPE]. The tools to connect are [TOOLS], what should happen is [TRIGGER, DATA, DIRECTION, AND TIMING], the volume is [E.G. RECORDS PER DAY], what should happen when something fails is [ERROR HANDLING EXPECTATIONS], and my budget and timeline are [BUDGET AND DEADLINE]. Write a brief covering the goal, exact data fields, examples, edge cases, security requirements, who owns the code and hosting, documentation and handover, and how I will test it before paying the final amount. Note that vague briefs lead to integrations that work in a demo but fail on real data, so including real examples and edge cases matters, and I should own the code, accounts, and hosting in my name with documentation, since an integration only one freelancer understands becomes a problem when they move on. Give me the developer brief.",
+    "description": "Brief a developer with real examples, edge cases, and ownership terms.",
+    "useCase": "Use this before hiring someone to build an integration. Vague briefs produce integrations that work in a demo but fail on real data, so include real examples and edge cases, and make sure you own the code, accounts, and hosting with documentation, since an integration only one freelancer understands becomes a problem.",
+    "variables": [
+      "BUSINESS TYPE",
+      "TOOLS",
+      "TRIGGER, DATA, DIRECTION, AND TIMING",
+      "E.G. RECORDS PER DAY",
+      "ERROR HANDLING EXPECTATIONS",
+      "BUDGET AND DEADLINE"
+    ],
+    "relatedPromptIds": [
+      "integ-api-basics",
+      "integ-test-and-rollback",
+      "integ-access-offboarding"
+    ]
+  },
+  {
+    "id": "integ-sync-conflicts",
+    "title": "Plan Sync Direction and Conflict Rules",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "tool-integration-planning",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me plan how two tools should sync data for my [BUSINESS TYPE]. The tools are [TOOL ONE AND TOOL TWO], the data is [E.G. CONTACTS, PRODUCTS, ORDERS, CALENDAR EVENTS], the fields involved are [FIELDS], and who edits the data in each tool is [WHO EDITS WHERE]. Decide whether the sync should be one way or two way, which tool wins when both change the same record, how deletions are handled, and how often it should sync. Note that two way sync sounds ideal but causes the most problems, like overwrites, loops where each tool keeps updating the other, and deleted records reappearing or disappearing everywhere, so one way sync from a clear master is safer whenever possible, and deletions in particular should not sync automatically until the setup is proven. Give me the sync rules.",
+    "description": "Set one or two way sync, conflict winners, and deletion rules.",
+    "useCase": "Use this before syncing data between two tools. Two way sync causes the most problems, like overwrites, update loops, and deleted records reappearing or vanishing everywhere, so one way sync from a clear master is safer, and deletions should not sync automatically until the setup is proven.",
+    "variables": [
+      "BUSINESS TYPE",
+      "TOOL ONE AND TOOL TWO",
+      "E.G. CONTACTS, PRODUCTS, ORDERS, CALENDAR EVENTS",
+      "FIELDS",
+      "WHO EDITS WHERE"
+    ],
+    "relatedPromptIds": [
+      "integ-source-of-truth",
+      "integ-data-flow-map",
+      "integ-test-and-rollback"
+    ]
+  },
+  {
+    "id": "integ-migration-plan",
+    "title": "Plan a Move From One Tool to Another",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "tool-integration-planning",
+    "aiTool": "Claude",
+    "promptText": "Help me plan moving my [BUSINESS TYPE] from [OLD TOOL] to [NEW TOOL]. The data to move is [E.G. CUSTOMERS, ORDERS, HISTORY, FILES, TEMPLATES, AUTOMATIONS], the integrations connected to the old tool are [CONNECTIONS], who uses it is [PEOPLE], and the deadline or renewal date is [DATE]. Give me a step by step migration plan covering what to export, cleaning data before import, mapping fields, rebuilding integrations and automations, a test with a small batch, a switch over date, and when to cancel the old tool. Note that migrations usually take longer than expected because automations, links, and templates connected to the old tool are easy to forget, history and attachments sometimes do not transfer at all, and cancelling the old tool too early can lose data that turns out to be needed, so keeping read access for a month or two after switching is a sensible safety margin. Give me the migration plan.",
+    "description": "Move to a new tool without losing data, links, or automations.",
+    "useCase": "Use this when switching tools. Migrations take longer than expected because connected automations, links, and templates are easy to forget, history and attachments sometimes do not transfer, and cancelling too early can lose needed data, so keep read access for a month or two after switching.",
+    "variables": [
+      "BUSINESS TYPE",
+      "OLD TOOL",
+      "NEW TOOL",
+      "E.G. CUSTOMERS, ORDERS, HISTORY, FILES, TEMPLATES, AUTOMATIONS",
+      "CONNECTIONS",
+      "PEOPLE",
+      "DATE"
+    ],
+    "relatedPromptIds": [
+      "integ-data-cleanup",
+      "integ-lock-in-exit",
+      "integ-test-and-rollback"
+    ]
+  },
+  {
+    "id": "integ-data-cleanup",
+    "title": "Clean Data Before Connecting or Importing It",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "tool-integration-planning",
+    "aiTool": "Gemini",
+    "promptText": "Help me clean data before I connect or import it into a new tool for my [BUSINESS TYPE]. The data is [E.G. CUSTOMER LIST, PRODUCT CATALOG, CONTACTS], here are its columns and a few sample rows: [PASTE SAMPLE], and the problems I know about are [E.G. DUPLICATES, MIXED DATE FORMATS, PHONE NUMBERS WITHOUT COUNTRY CODES, NAMES IN DIFFERENT SCRIPTS, EMPTY FIELDS]. Give me a cleanup checklist and specific spreadsheet steps or formulas for each problem, plus rules to keep the data clean going forward. Note that importing messy data spreads the mess into every connected tool, where it is harder to fix, so cleaning first saves time, and names and addresses in different scripts, like Khmer and English versions of the same customer, often create hidden duplicates that simple matching will not catch, so a manual review of likely matches is worth doing. Give me the cleanup plan.",
+    "description": "Fix duplicates, formats, and mixed scripts before importing data.",
+    "useCase": "Use this before any import or new integration. Messy data spreads into every connected tool where it is harder to fix, and names in different scripts, like Khmer and English versions of one customer, create hidden duplicates simple matching misses, so manually review likely matches.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. CUSTOMER LIST, PRODUCT CATALOG, CONTACTS",
+      "PASTE SAMPLE",
+      "E.G. DUPLICATES, MIXED DATE FORMATS, PHONE NUMBERS WITHOUT COUNTRY CODES, NAMES IN DIFFERENT SCRIPTS, EMPTY FIELDS"
+    ],
+    "relatedPromptIds": [
+      "integ-migration-plan",
+      "integ-sync-conflicts",
+      "integ-source-of-truth"
+    ]
+  },
+  {
+    "id": "integ-payment-integration",
+    "title": "Plan Payment Integrations for Your Market",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "tool-integration-planning",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me plan how payments connect to the rest of my tools at my [BUSINESS TYPE]. Where I am registered is [COUNTRY], where my customers are is [CUSTOMER COUNTRIES], the payment methods customers expect are [E.G. CARDS, LOCAL QR PAYMENTS, BANK APPS, MOBILE WALLETS, PAYPAL, CASH ON DELIVERY], and the tools payments must reach are [E.G. STORE, INVOICING, ACCOUNTING, CRM]. Compare payment providers available to businesses in my country, how each integrates with my tools, fees, payout times, and currencies, and suggest how to record payments that do not integrate automatically. Note that popular global providers are not available to businesses registered in every country, local QR and bank app payments are often what customers prefer but may have limited integrations, so some payments will need a manual or semi automated recording step, and provider availability and fees change, so current terms should be confirmed directly. Give me the payment integration plan.",
+    "description": "Match payment providers available in your country to your tools.",
+    "useCase": "Use this when setting up or changing how you get paid. Global providers are not available to businesses in every country, and local QR or bank app payments customers prefer may have limited integrations, so plan a recording step for those, and confirm current availability and fees directly.",
+    "variables": [
+      "BUSINESS TYPE",
+      "COUNTRY",
+      "CUSTOMER COUNTRIES",
+      "E.G. CARDS, LOCAL QR PAYMENTS, BANK APPS, MOBILE WALLETS, PAYPAL, CASH ON DELIVERY",
+      "E.G. STORE, INVOICING, ACCOUNTING, CRM"
+    ],
+    "relatedPromptIds": [
+      "integ-accounting-link",
+      "integ-new-tool-fit",
+      "integ-data-flow-map"
+    ]
+  },
+  {
+    "id": "integ-accounting-link",
+    "title": "Connect Sales Tools to Your Accounting",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "tool-integration-planning",
+    "aiTool": "Claude",
+    "promptText": "Help me plan how my sales tools connect to my accounting for my [BUSINESS TYPE]. Where sales happen is [E.G. STORE, MARKETPLACES, INVOICES, POINT OF SALE, CHAT ORDERS], my accounting tool is [E.G. XERO, QUICKBOOKS, WAVE, A SPREADSHEET, AN ACCOUNTANT], the currencies involved are [CURRENCIES], and my month end process now is [CURRENT PROCESS]. Suggest whether to sync each order, daily summaries, or payouts, how to handle fees, refunds, and currency conversion, and a monthly reconciliation routine. Note that syncing every order can flood the books and duplicate entries, while syncing only payouts hides fees and refunds, so many small businesses use daily or payout level summaries with fees recorded separately, and mixed currencies need a consistent exchange rate rule, so I should agree the approach with my accountant before automating. Give me the accounting integration plan.",
+    "description": "Decide how sales, fees, refunds, and currencies flow into the books.",
+    "useCase": "Use this before connecting your store or marketplaces to accounting. Syncing every order can flood the books and duplicate entries, while syncing only payouts hides fees and refunds, mixed currencies need a consistent rate rule, so agree the approach with your accountant first.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. STORE, MARKETPLACES, INVOICES, POINT OF SALE, CHAT ORDERS",
+      "E.G. XERO, QUICKBOOKS, WAVE, A SPREADSHEET, AN ACCOUNTANT",
+      "CURRENCIES",
+      "CURRENT PROCESS"
+    ],
+    "relatedPromptIds": [
+      "integ-payment-integration",
+      "integ-source-of-truth",
+      "integ-test-and-rollback"
+    ]
+  },
+  {
+    "id": "integ-access-offboarding",
+    "title": "Manage Logins, Permissions, and Offboarding Across Tools",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "tool-integration-planning",
+    "aiTool": "Gemini",
+    "promptText": "Help me manage who has access to which tools at my [BUSINESS TYPE]. The tools are [TOOLS], the people with access are [TEAM, FREELANCERS, AGENCIES, FAMILY], how logins are shared now is [E.G. SHARED PASSWORDS, INDIVIDUAL ACCOUNTS, A PASSWORD MANAGER], and the integrations that run on someone's personal login are [IF KNOWN]. Create an access table, recommend changes like individual accounts, a password manager, two factor login, and least access permissions, and write an offboarding checklist for when someone leaves. Note that shared passwords make it impossible to remove one person's access cleanly, and integrations connected through a departing person's account can stop working the day their access is removed, so connections should run on business owned accounts, and the offboarding checklist should include changing shared passwords and checking which automations depend on that person. Give me the access plan.",
+    "description": "Map who can access what and offboard people without breaking things.",
+    "useCase": "Use this once more than one person touches your tools. Shared passwords make removing one person's access impossible, and integrations on a departing person's account can break the day they leave, so run connections on business owned accounts and check automation dependencies when offboarding.",
+    "variables": [
+      "BUSINESS TYPE",
+      "TOOLS",
+      "TEAM, FREELANCERS, AGENCIES, FAMILY",
+      "E.G. SHARED PASSWORDS, INDIVIDUAL ACCOUNTS, A PASSWORD MANAGER",
+      "IF KNOWN"
+    ],
+    "relatedPromptIds": [
+      "integ-stack-inventory",
+      "integ-api-basics",
+      "integ-developer-brief"
+    ]
+  },
+  {
+    "id": "integ-test-and-rollback",
+    "title": "Test a New Integration and Plan a Rollback",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "tool-integration-planning",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me test a new integration and prepare a rollback plan for my [BUSINESS TYPE]. The integration connects [TOOLS] to do [WHAT IT DOES], the data affected is [DATA], and what would break if it went wrong is [IMPACT]. Give me a test plan with test records, edge cases, checks on both sides, a backup step before going live, a gradual rollout, signs that something is wrong, and exactly how to switch it off and restore data if needed. Note that integrations that write or overwrite data can damage many records quickly, so taking a backup or export before turning it on, starting with a small subset, and knowing in advance how to undo it turns a potential disaster into a minor fix. Give me the test and rollback plan.",
+    "description": "Test with a small subset, back up first, and know how to undo it.",
+    "useCase": "Use this before turning on any integration that writes data. Integrations that write or overwrite data can damage many records quickly, so back up first, start with a small subset, and know in advance how to undo it, which turns a potential disaster into a minor fix.",
+    "variables": [
+      "BUSINESS TYPE",
+      "TOOLS",
+      "WHAT IT DOES",
+      "DATA",
+      "IMPACT"
+    ],
+    "relatedPromptIds": [
+      "integ-sync-conflicts",
+      "integ-migration-plan",
+      "integ-developer-brief"
+    ]
+  },
+  {
+    "id": "integ-cost-consolidation",
+    "title": "Cut Tool Costs by Consolidating Your Stack",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "tool-integration-planning",
+    "aiTool": "Claude",
+    "promptText": "Help me reduce software costs by consolidating tools at my [BUSINESS TYPE]. My tools with costs and purposes are [PASTE YOUR TOOL INVENTORY], how much I actually use each is [USAGE NOTES], and my monthly software budget goal is [TARGET]. Identify overlapping tools, tools that could be replaced by features in ones I already pay for, cheaper plans that would still cover my needs, and annual versus monthly savings, then estimate total savings and the effort to switch. Note that consolidating saves money and reduces integrations to maintain, but switching tools costs time and can break workflows, so small savings may not be worth a big migration, and annual plans save money only if I am sure I will keep the tool for the full year. Give me the consolidation plan.",
+    "description": "Find overlapping tools and cheaper plans worth switching to.",
+    "useCase": "Use this when software bills creep up. Consolidating saves money and reduces integrations to maintain, but switching costs time and can break workflows, so small savings may not justify a big migration, and annual plans only save money if you will keep the tool all year.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE YOUR TOOL INVENTORY",
+      "USAGE NOTES",
+      "TARGET"
+    ],
+    "relatedPromptIds": [
+      "integ-stack-inventory",
+      "integ-migration-plan",
+      "integ-lock-in-exit"
+    ]
+  },
+  {
+    "id": "integ-lock-in-exit",
+    "title": "Plan Your Exit From Any Tool Before You Need It",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "tool-integration-planning",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan how I would leave each important tool if I needed to for my [BUSINESS TYPE]. The tools my business depends on are [CRITICAL TOOLS], what data each holds is [DATA], and the risks I worry about are [E.G. PRICE INCREASES, SHUTDOWN, ACCOUNT SUSPENSION, LOSING ACCESS FROM MY COUNTRY]. For each tool, describe how to export the data, what format it comes in, what would not transfer, a likely replacement, and a regular export routine to keep a current copy. Note that tools can raise prices, change terms, shut down, or restrict access by country with little warning, and some make exporting difficult or incomplete on purpose, so knowing the exit route in advance and keeping regular exports of essential data reduces the risk of being trapped. Give me the exit plan.",
+    "description": "Know how to export and replace every tool your business depends on.",
+    "useCase": "Use this for tools your business cannot run without. Tools can raise prices, change terms, shut down, or restrict access by country with little warning, and some make exports hard on purpose, so know each exit route in advance and keep regular exports of essential data.",
+    "variables": [
+      "BUSINESS TYPE",
+      "CRITICAL TOOLS",
+      "DATA",
+      "E.G. PRICE INCREASES, SHUTDOWN, ACCOUNT SUSPENSION, LOSING ACCESS FROM MY COUNTRY"
+    ],
+    "relatedPromptIds": [
+      "integ-migration-plan",
+      "integ-new-tool-fit",
+      "integ-cost-consolidation"
+    ]
+  },
+  {
+    "id": "integ-roadmap",
+    "title": "Build a Tool Integration Roadmap",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "tool-integration-planning",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me build a step by step integration roadmap for my [BUSINESS TYPE]. My current tools and data flows are [SUMMARY OR PASTE YOUR MAP], the biggest manual work and errors are [PAIN POINTS], my budget is [BUDGET], and my time or help available is [CAPACITY]. Prioritize integrations by time saved, error reduction, cost, and effort, group them into phases over the next few months, and note dependencies, like choosing a source of truth before syncing. Note that trying to connect everything at once creates a fragile web that is hard to fix when something breaks, so a few well tested integrations that remove the most manual work beat many half working ones, and each phase should be stable before starting the next. Give me the integration roadmap.",
+    "description": "Phase integrations by impact and effort, one stable step at a time.",
+    "useCase": "Use this to plan integrations over the coming months. Connecting everything at once creates a fragile web that is hard to fix, so a few well tested integrations removing the most manual work beat many half working ones, and each phase should be stable before the next.",
+    "variables": [
+      "BUSINESS TYPE",
+      "SUMMARY OR PASTE YOUR MAP",
+      "PAIN POINTS",
+      "BUDGET",
+      "CAPACITY"
+    ],
+    "relatedPromptIds": [
+      "integ-data-flow-map",
+      "integ-source-of-truth",
+      "integ-stack-inventory"
+    ]
   }
 ]
