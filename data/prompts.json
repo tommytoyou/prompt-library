@@ -48746,5 +48746,402 @@
       "cexp-analogy",
       "cexp-jargon-decoder"
     ]
+  },
+  {
+    "id": "prac-problem-set",
+    "title": "Generate a Practice Set That Gets Harder Step by Step",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "practice-exercises",
+    "aiTool": "Claude",
+    "promptText": "Create a practice set for [TOPIC OR SKILL]. My level is [LEVEL], what I just learned is [RECENT LESSON OR CONCEPTS], and the format I want is [E.G. WRITTEN PROBLEMS, SHORT ANSWER, MULTIPLE CHOICE, TASKS]. Give me ten exercises that start easy and get harder, with the last few applying the idea to unfamiliar situations, and put all answers and brief explanations at the end, separated clearly so I do not see them while working. Note that practice that is too easy feels good but builds little, and practice that is too hard is discouraging, so a gradual rise in difficulty keeps me in the zone where learning happens, and AI generated answers can occasionally contain mistakes, so if my answer disagrees with the key, it is worth checking which one is actually right. Give me the practice set.",
+    "description": "Get ten exercises rising in difficulty, with answers kept separate.",
+    "useCase": "Use this after learning any new topic. Practice that is too easy builds little and too hard discourages, so a gradual rise in difficulty keeps you learning, and AI answer keys can occasionally be wrong, so if your answer disagrees, check which one is actually right.",
+    "variables": [
+      "TOPIC OR SKILL",
+      "LEVEL",
+      "RECENT LESSON OR CONCEPTS",
+      "E.G. WRITTEN PROBLEMS, SHORT ANSWER, MULTIPLE CHOICE, TASKS"
+    ],
+    "relatedPromptIds": [
+      "prac-quick-drill",
+      "prac-mixed-practice",
+      "prac-hints-not-answers"
+    ]
+  },
+  {
+    "id": "prac-quick-drill",
+    "title": "Get a Quick Practice Drill",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "practice-exercises",
+    "aiTool": "Grok",
+    "promptText": "Give me a quick practice drill on [TOPIC] at [LEVEL] level. Give me five short questions or tasks I can do in under ten minutes, with answers listed separately at the bottom, no explanation. Give me the drill.",
+    "description": "Get five short practice questions for a ten minute session, fast.",
+    "useCase": "Use this for a quick daily practice session. Short regular drills keep skills fresh better than occasional long sessions, but check any answer that seems wrong to you, since quick generated answer keys can contain mistakes.",
+    "variables": [
+      "TOPIC",
+      "LEVEL"
+    ],
+    "relatedPromptIds": [
+      "prac-problem-set",
+      "prac-flashcards-from-notes",
+      "prac-timed-practice"
+    ]
+  },
+  {
+    "id": "prac-mixed-practice",
+    "title": "Create Mixed Practice Across Several Topics",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "practice-exercises",
+    "aiTool": "ChatGPT",
+    "promptText": "Create a mixed practice set covering several topics I have learned in [SUBJECT]. The topics are [LIST OF TOPICS], my level is [LEVEL], and the number of questions I want is [NUMBER]. Mix the questions in random order rather than grouping by topic, so I have to figure out which method or idea each question needs, and include answers with a note of which topic each one tested. Note that practicing one topic at a time feels smoother but in exams and real life problems do not come labeled, so mixed practice is harder in the moment yet builds the ability to recognize what each problem needs, and tracking which topics I miss most shows where to focus next. Give me the mixed practice set.",
+    "description": "Mix questions from several topics so you learn to pick the right method.",
+    "useCase": "Use this once you have learned several related topics. Practicing one topic at a time feels smoother, but real problems do not come labeled, so mixed practice is harder yet builds the ability to recognize what each problem needs, and tracking misses by topic shows where to focus.",
+    "variables": [
+      "SUBJECT",
+      "LIST OF TOPICS",
+      "LEVEL",
+      "NUMBER"
+    ],
+    "relatedPromptIds": [
+      "prac-problem-set",
+      "prac-error-spotting",
+      "prac-progress-log"
+    ]
+  },
+  {
+    "id": "prac-deliberate-weakness",
+    "title": "Design Deliberate Practice for a Specific Weakness",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "practice-exercises",
+    "aiTool": "Gemini",
+    "promptText": "Help me design deliberate practice for a specific weakness in [SKILL]. The weakness is [WHAT YOU STRUGGLE WITH, AS SPECIFIC AS POSSIBLE], examples of my mistakes are [EXAMPLES], and the time I can practice is [TIME PER DAY OR WEEK]. Break the weakness into its smallest parts, design focused exercises for each, describe how to get quick feedback on every attempt, and set a target that shows improvement. Note that general practice repeats what I can already do, while deliberate practice isolates the specific part I get wrong and repeats it with feedback, which feels harder and less enjoyable but improves skills much faster, and without feedback I can practice the same mistake until it becomes a habit. Give me the deliberate practice plan.",
+    "description": "Isolate one weakness and drill it with quick feedback on every attempt.",
+    "useCase": "Use this when one part of a skill keeps tripping you up. General practice repeats what you can already do, while deliberate practice isolates what you get wrong and repeats it with feedback, which feels harder but improves skills faster, and without feedback you can practice a mistake into a habit.",
+    "variables": [
+      "SKILL",
+      "WHAT YOU STRUGGLE WITH, AS SPECIFIC AS POSSIBLE",
+      "EXAMPLES",
+      "TIME PER DAY OR WEEK"
+    ],
+    "relatedPromptIds": [
+      "prac-error-spotting",
+      "prac-self-grading-rubric",
+      "prac-progress-log"
+    ]
+  },
+  {
+    "id": "prac-hints-not-answers",
+    "title": "Practice Problems With Hints Instead of Answers",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "practice-exercises",
+    "aiTool": "Claude",
+    "promptText": "Give me practice problems on [TOPIC] with a hint system instead of answers. My level is [LEVEL], and the number of problems I want is [NUMBER]. Give me one problem at a time, wait for my attempt, and if I am stuck or wrong, give me a small hint first, then a bigger hint, and only show the full solution if I ask, then move to the next problem. Note that seeing the answer too quickly takes away the struggle that makes learning stick, while being stuck too long is discouraging, so graded hints let me do as much of the thinking as possible myself, and checking my reasoning, not just my final answer, catches lucky guesses. Give me the first problem.",
+    "description": "Solve problems one at a time with graded hints before any solution.",
+    "useCase": "Use this when you want to work things out yourself. Seeing answers too quickly takes away the struggle that makes learning stick, while being stuck too long discourages, so graded hints let you do as much thinking as possible, and checking reasoning, not just answers, catches lucky guesses.",
+    "variables": [
+      "TOPIC",
+      "LEVEL",
+      "NUMBER"
+    ],
+    "relatedPromptIds": [
+      "prac-problem-set",
+      "prac-math-practice",
+      "prac-coding-challenges"
+    ]
+  },
+  {
+    "id": "prac-error-spotting",
+    "title": "Practice by Finding Mistakes in Worked Examples",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "practice-exercises",
+    "aiTool": "ChatGPT",
+    "promptText": "Create error spotting exercises for [TOPIC OR SKILL]. My level is [LEVEL], and the common mistakes people make in this area are [IF KNOWN]. Give me several worked examples, solutions, or pieces of writing or code that each contain one or more realistic mistakes, ask me to find and fix them, and give the answers separately with an explanation of why each mistake happens. Note that finding errors in someone else's work sharpens understanding in a different way from solving problems, because it forces me to check each step instead of following my own habits, and practicing on the mistakes beginners commonly make helps me catch them in my own work. Give me the error spotting exercises.",
+    "description": "Find and fix realistic mistakes planted in worked examples.",
+    "useCase": "Use this to sharpen your eye for errors. Finding mistakes in others' work forces you to check each step rather than follow your own habits, and practicing on common beginner mistakes helps you catch them in your own work.",
+    "variables": [
+      "TOPIC OR SKILL",
+      "LEVEL",
+      "IF KNOWN"
+    ],
+    "relatedPromptIds": [
+      "prac-mixed-practice",
+      "prac-deliberate-weakness",
+      "prac-writing-practice"
+    ]
+  },
+  {
+    "id": "prac-role-play",
+    "title": "Practice a Conversation Through Role Play",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "practice-exercises",
+    "aiTool": "Gemini",
+    "promptText": "Role play a conversation with me so I can practice [SITUATION, E.G. A JOB INTERVIEW, A SALES CALL, A SALARY NEGOTIATION, A DIFFICULT CLIENT, A CUSTOMER COMPLAINT, ASKING FOR A RAISE]. You play [THE OTHER PERSON AND THEIR ATTITUDE], the setting is [CONTEXT AND CULTURE], my goal is [WHAT YOU WANT TO ACHIEVE], and the difficulty should be [EASY, REALISTIC, TOUGH]. Stay in character, respond one turn at a time, and when I say stop, give me feedback on what worked, what to improve, and a better way to phrase my weakest moment. Note that rehearsing a difficult conversation makes the real one much less stressful, but a simulated person cannot fully predict a real one, so practicing a few different reactions, including tougher ones, prepares me better than a single run, and expectations around directness, politeness, and hierarchy differ by culture, which should shape the practice. Give me the first line of the role play.",
+    "description": "Rehearse interviews, sales, or tough conversations with feedback after.",
+    "useCase": "Use this before an important conversation. Rehearsing makes the real one less stressful, but a simulated person cannot fully predict a real one, so practice several reactions including tougher ones, and set the cultural context, since directness, politeness, and hierarchy expectations differ.",
+    "variables": [
+      "SITUATION, E.G. A JOB INTERVIEW, A SALES CALL, A SALARY NEGOTIATION, A DIFFICULT CLIENT, A CUSTOMER COMPLAINT, ASKING FOR A RAISE",
+      "THE OTHER PERSON AND THEIR ATTITUDE",
+      "CONTEXT AND CULTURE",
+      "WHAT YOU WANT TO ACHIEVE",
+      "EASY, REALISTIC, TOUGH"
+    ],
+    "relatedPromptIds": [
+      "prac-language-conversation",
+      "prac-speaking-practice",
+      "prac-case-scenarios"
+    ]
+  },
+  {
+    "id": "prac-language-conversation",
+    "title": "Practice Conversation in a Language You Are Learning",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "practice-exercises",
+    "aiTool": "Claude",
+    "promptText": "Practice a conversation with me in [LANGUAGE]. My level is [LEVEL], the situation is [E.G. ORDERING FOOD, AT THE MARKET, TALKING TO A NEIGHBOR, A WORK MEETING, A DOCTOR VISIT], and how I want corrections is [E.G. AFTER EACH MESSAGE, AT THE END, ONLY BIG MISTAKES]. Keep your language at my level, ask follow up questions to keep me talking, correct my mistakes the way I asked, and at the end list useful phrases and the mistakes I repeated. Note that text practice builds vocabulary and grammar but is different from speaking aloud and understanding real speech, so reading my answers out loud and practicing with real speakers is still needed, and AI can make mistakes or sound unnatural in less widely taught languages, so phrases should be checked with a native speaker where possible. Give me the first line.",
+    "description": "Hold a level appropriate conversation with corrections and useful phrases.",
+    "useCase": "Use this to practice a language between real conversations. Text practice builds vocabulary and grammar but differs from speaking and listening, so read answers aloud and still practice with real speakers, and AI can sound unnatural in less widely taught languages, so check phrases with a native speaker.",
+    "variables": [
+      "LANGUAGE",
+      "LEVEL",
+      "E.G. ORDERING FOOD, AT THE MARKET, TALKING TO A NEIGHBOR, A WORK MEETING, A DOCTOR VISIT",
+      "E.G. AFTER EACH MESSAGE, AT THE END, ONLY BIG MISTAKES"
+    ],
+    "relatedPromptIds": [
+      "prac-role-play",
+      "prac-flashcards-from-notes",
+      "prac-speaking-practice"
+    ]
+  },
+  {
+    "id": "prac-writing-practice",
+    "title": "Practice Writing With Prompts and Targeted Feedback",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "practice-exercises",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me practice writing [TYPE OF WRITING, E.G. ESSAYS, REPORTS, EMAILS, STORIES, EXAM ESSAYS, SOCIAL POSTS]. My level is [LEVEL], the skill I most want to improve is [E.G. STRUCTURE, CLARITY, GRAMMAR, PERSUASION, CONCISENESS], and the time I have per exercise is [MINUTES]. Give me a writing prompt, and when I submit my piece, give feedback focused on my target skill, with one or two specific examples from my text and a short rewritten sample of one weak part, without rewriting the whole thing. Note that feedback on everything at once is overwhelming and hard to act on, so focusing on one skill per round improves writing faster, and having my whole piece rewritten for me teaches less than seeing one weak part improved and then fixing the rest myself. Give me the first writing prompt.",
+    "description": "Write to a prompt and get focused feedback on one skill at a time.",
+    "useCase": "Use this to improve your writing steadily. Feedback on everything at once is overwhelming, so focusing on one skill per round improves writing faster, and having the whole piece rewritten teaches less than seeing one weak part improved and fixing the rest yourself.",
+    "variables": [
+      "TYPE OF WRITING, E.G. ESSAYS, REPORTS, EMAILS, STORIES, EXAM ESSAYS, SOCIAL POSTS",
+      "LEVEL",
+      "E.G. STRUCTURE, CLARITY, GRAMMAR, PERSUASION, CONCISENESS",
+      "MINUTES"
+    ],
+    "relatedPromptIds": [
+      "prac-self-grading-rubric",
+      "prac-error-spotting",
+      "prac-deliberate-weakness"
+    ]
+  },
+  {
+    "id": "prac-coding-challenges",
+    "title": "Get Coding Challenges at Your Level",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "practice-exercises",
+    "aiTool": "Gemini",
+    "promptText": "Give me coding challenges to practice [PROGRAMMING LANGUAGE OR TOPIC]. My level is [LEVEL], the concepts I want to practice are [E.G. LOOPS, FUNCTIONS, ARRAYS, APIS, SQL QUERIES, DATA STRUCTURES], and the kind of projects I care about are [INTERESTS]. Give me three challenges of increasing difficulty, each with a clear description, example inputs and expected outputs, and hints I can reveal, but no solution unless I ask, and review my code when I share it. Note that reading solutions feels like learning but writing the code myself, including getting errors and fixing them, is what builds real skill, challenges connected to real problems I care about stay motivating longer than abstract puzzles, and testing my code with the example inputs and a few tricky ones of my own catches most bugs. Give me the coding challenges.",
+    "description": "Get three coding challenges with examples and hints, solutions hidden.",
+    "useCase": "Use this to practice programming. Reading solutions feels like learning, but writing code yourself, including hitting and fixing errors, builds real skill, challenges tied to problems you care about stay motivating, and testing with example inputs plus tricky ones of your own catches most bugs.",
+    "variables": [
+      "PROGRAMMING LANGUAGE OR TOPIC",
+      "LEVEL",
+      "E.G. LOOPS, FUNCTIONS, ARRAYS, APIS, SQL QUERIES, DATA STRUCTURES",
+      "INTERESTS"
+    ],
+    "relatedPromptIds": [
+      "prac-hints-not-answers",
+      "prac-real-mini-projects",
+      "prac-error-spotting"
+    ]
+  },
+  {
+    "id": "prac-math-practice",
+    "title": "Practice Math Problems With Real Life Context",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "practice-exercises",
+    "aiTool": "Claude",
+    "promptText": "Create math practice problems on [MATH TOPIC, E.G. PERCENTAGES, FRACTIONS, ALGEBRA, STATISTICS, INTEREST CALCULATIONS]. The learner's level is [LEVEL OR GRADE], real situations that would make it meaningful are [E.G. SHOPPING, RUNNING A SMALL BUSINESS, COOKING, FARMING, TRAVEL, LOCAL CURRENCY], and the number of problems I want is [NUMBER]. Write word problems set in those situations, using local currency and realistic numbers, with step by step solutions listed separately. Note that math feels abstract until it is connected to real decisions like discounts, loans, or recipes, so local and familiar examples improve both motivation and understanding, word problems also practice the important skill of turning a situation into a calculation, and answers should be checked with a calculator, since generated solutions can contain arithmetic slips. Give me the math practice.",
+    "description": "Practice math through word problems set in familiar local situations.",
+    "useCase": "Use this for yourself, a student, or a child. Math feels abstract until tied to real decisions like discounts, loans, or recipes, so local examples with local currency help motivation and understanding, word problems practice turning situations into calculations, and check answers with a calculator.",
+    "variables": [
+      "MATH TOPIC, E.G. PERCENTAGES, FRACTIONS, ALGEBRA, STATISTICS, INTEREST CALCULATIONS",
+      "LEVEL OR GRADE",
+      "E.G. SHOPPING, RUNNING A SMALL BUSINESS, COOKING, FARMING, TRAVEL, LOCAL CURRENCY",
+      "NUMBER"
+    ],
+    "relatedPromptIds": [
+      "prac-hints-not-answers",
+      "prac-worksheet-for-students",
+      "prac-problem-set"
+    ]
+  },
+  {
+    "id": "prac-case-scenarios",
+    "title": "Practice Decisions With Business Case Scenarios",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "practice-exercises",
+    "aiTool": "ChatGPT",
+    "promptText": "Create business case scenarios for me to practice [SKILL, E.G. PROJECT MANAGEMENT, MARKETING STRATEGY, FINANCIAL DECISIONS, MANAGING PEOPLE, CUSTOMER SERVICE]. My level is [LEVEL], the industry or context I want is [INDUSTRY AND LOCATION], and the time per scenario is [MINUTES]. Write a short realistic scenario with a decision to make, the key facts and some missing information, then ask what I would do and why, and after I answer, discuss the strengths, risks, and alternatives of my choice. Note that real decisions rarely have one correct answer and usually involve trade offs and incomplete information, so the feedback should focus on the quality of my reasoning rather than whether I matched a model answer, and scenarios set in my own industry and region make the practice more transferable. Give me the first scenario.",
+    "description": "Make decisions in realistic cases and get feedback on your reasoning.",
+    "useCase": "Use this to build judgment in business or management. Real decisions rarely have one right answer and involve trade offs and missing information, so feedback should focus on the quality of your reasoning, and scenarios in your own industry and region transfer better.",
+    "variables": [
+      "SKILL, E.G. PROJECT MANAGEMENT, MARKETING STRATEGY, FINANCIAL DECISIONS, MANAGING PEOPLE, CUSTOMER SERVICE",
+      "LEVEL",
+      "INDUSTRY AND LOCATION",
+      "MINUTES"
+    ],
+    "relatedPromptIds": [
+      "prac-role-play",
+      "prac-real-mini-projects",
+      "prac-mixed-practice"
+    ]
+  },
+  {
+    "id": "prac-speaking-practice",
+    "title": "Practice Speeches and Presentations",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "practice-exercises",
+    "aiTool": "Gemini",
+    "promptText": "Help me practice speaking for [E.G. A PRESENTATION, A SPEECH CLUB, A PITCH, A TOAST, A CLASS, AN INTERVIEW ANSWER]. The topic and length are [TOPIC AND MINUTES], the audience is [AUDIENCE], and the area I want to improve is [E.G. STRUCTURE, OPENING, FILLER WORDS, NERVES, PACING, VOICE, IMPROMPTU SPEAKING]. Give me a set of short practice exercises for my target area, a practice routine for the days before, impromptu topics to answer on the spot, and a feedback checklist I can use when I record and watch myself. Note that reading notes silently is not real practice, speaking out loud and recording myself reveals habits I cannot notice otherwise, like fillers or rushing, practicing in front of even one person is closer to the real thing, and short impromptu drills build confidence faster than rehearsing one script many times. Give me the speaking practice plan.",
+    "description": "Practice speaking with drills, recordings, and a feedback checklist.",
+    "useCase": "Use this before presentations, pitches, or speech clubs. Reading notes silently is not real practice, recording yourself reveals habits like fillers or rushing, practicing in front of even one person is closer to the real thing, and short impromptu drills build confidence faster than rehearsing one script.",
+    "variables": [
+      "E.G. A PRESENTATION, A SPEECH CLUB, A PITCH, A TOAST, A CLASS, AN INTERVIEW ANSWER",
+      "TOPIC AND MINUTES",
+      "AUDIENCE",
+      "E.G. STRUCTURE, OPENING, FILLER WORDS, NERVES, PACING, VOICE, IMPROMPTU SPEAKING"
+    ],
+    "relatedPromptIds": [
+      "prac-role-play",
+      "prac-self-grading-rubric",
+      "prac-language-conversation"
+    ]
+  },
+  {
+    "id": "prac-flashcards-from-notes",
+    "title": "Turn Your Notes Into Practice Flashcards",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "practice-exercises",
+    "aiTool": "Claude",
+    "promptText": "Turn my notes into practice flashcards. Here are my notes: [PASTE NOTES], the subject is [SUBJECT], and the format I need is [E.G. QUESTION AND ANSWER, CLOZE DELETIONS, IMPORTABLE CSV FOR ANKI OR QUIZLET]. Create clear cards, one fact or idea per card, phrased as questions that make me recall rather than recognize, and flag anything in my notes that seems unclear or possibly wrong. Note that cards packed with several facts are hard to review and easy to half remember, so one idea per card works better, cards should be checked against my original materials since errors in notes or in the conversion get memorized too, and flashcards cover facts well but should be paired with practice that uses the ideas. Give me the flashcards.",
+    "description": "Convert notes into one idea per card recall questions.",
+    "useCase": "Use this to turn notes into review material quickly. Cards with several facts are hard to review, so one idea per card works better, check cards against original materials since errors get memorized too, and pair flashcards with practice that uses the ideas.",
+    "variables": [
+      "PASTE NOTES",
+      "SUBJECT",
+      "E.G. QUESTION AND ANSWER, CLOZE DELETIONS, IMPORTABLE CSV FOR ANKI OR QUIZLET"
+    ],
+    "relatedPromptIds": [
+      "prac-quick-drill",
+      "prac-language-conversation",
+      "prac-progress-log"
+    ]
+  },
+  {
+    "id": "prac-worksheet-for-students",
+    "title": "Create a Practice Worksheet for Students",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "practice-exercises",
+    "aiTool": "ChatGPT",
+    "promptText": "Create a practice worksheet for my students on [TOPIC]. The students' age or grade is [AGE OR GRADE], their language of learning is [LANGUAGE], the class size and setting are [SETTING, E.G. CLASSROOM, TUTORING, HOMEWORK], the time available is [MINUTES], and resources available are [E.G. PRINTED PAPER, WHITEBOARD ONLY, PHONES, NO PRINTER]. Write a worksheet with a short warm up, practice items that increase in difficulty, a challenge question for fast finishers, and simpler support items for those who struggle, plus an answer key for me. Note that students in one class are at different levels, so including both support and challenge items keeps everyone working, instructions should be short and clear, especially for younger learners or those learning in a second language, and the worksheet should work with the resources actually available, like being easy to copy on a board if printing is not possible. Give me the worksheet.",
+    "description": "Make a worksheet with warm up, support, and challenge items, plus a key.",
+    "useCase": "Use this for classes or tutoring sessions. Students are at different levels, so support and challenge items keep everyone working, instructions should be short and clear for young or second language learners, and the worksheet should fit your resources, like being easy to copy on a board if printing is not possible.",
+    "variables": [
+      "TOPIC",
+      "AGE OR GRADE",
+      "LANGUAGE",
+      "SETTING, E.G. CLASSROOM, TUTORING, HOMEWORK",
+      "MINUTES",
+      "E.G. PRINTED PAPER, WHITEBOARD ONLY, PHONES, NO PRINTER"
+    ],
+    "relatedPromptIds": [
+      "prac-math-practice",
+      "prac-problem-set",
+      "prac-self-grading-rubric"
+    ]
+  },
+  {
+    "id": "prac-real-mini-projects",
+    "title": "Practice a Skill Through Small Real Projects",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "practice-exercises",
+    "aiTool": "Gemini",
+    "promptText": "Suggest small real world projects to practice [SKILL]. My level is [LEVEL], the time I have per project is [HOURS], and people or situations around me that could benefit are [E.G. A FAMILY BUSINESS, A LOCAL SHOP, A SCHOOL, MY OWN JOB, A COMMUNITY GROUP]. Give me five mini projects, each with a goal, steps, what a finished result looks like, and how to get feedback from the person it is for. Note that real projects teach things exercises cannot, like unclear requirements, deadlines, and real users, and helping a local business or community group is often welcome and gives me portfolio material, but I should be clear about my level, agree on what I will deliver, and never put someone's real data or accounts at risk while practicing. Give me the mini project ideas.",
+    "description": "Practice a skill on small real projects for people around you.",
+    "useCase": "Use this to move from exercises to real work. Real projects teach unclear requirements, deadlines, and real users, and helping a local business or group is often welcome and builds a portfolio, but be clear about your level, agree what you will deliver, and never put real data or accounts at risk.",
+    "variables": [
+      "SKILL",
+      "LEVEL",
+      "HOURS",
+      "E.G. A FAMILY BUSINESS, A LOCAL SHOP, A SCHOOL, MY OWN JOB, A COMMUNITY GROUP"
+    ],
+    "relatedPromptIds": [
+      "prac-coding-challenges",
+      "prac-case-scenarios",
+      "prac-self-grading-rubric"
+    ]
+  },
+  {
+    "id": "prac-self-grading-rubric",
+    "title": "Create a Rubric to Grade Your Own Practice",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "practice-exercises",
+    "aiTool": "Claude",
+    "promptText": "Create a rubric I can use to grade my own practice work in [SKILL OR TASK TYPE]. My level is [LEVEL], the standard I am aiming for is [E.G. AN EXAM BAND, A CLIENT READY STANDARD, A JOB REQUIREMENT], and an example of my current work is [OPTIONAL SAMPLE]. Create a short rubric with four or five criteria, a description of beginner, developing, and strong for each, and a quick self check routine, and if I provided a sample, score it as an example. Note that self assessment is most useful when criteria are specific and observable, like each paragraph has one clear point, rather than vague, like good writing, people tend to rate their own work generously, so comparing against strong examples keeps me honest, and checking my self scores against outside feedback now and then shows whether my judgment is accurate. Give me the rubric.",
+    "description": "Build a specific self grading rubric and check it against outside feedback.",
+    "useCase": "Use this when nobody is available to mark your work. Self assessment works when criteria are specific and observable rather than vague, people rate their own work generously, so compare against strong examples, and check your scores against outside feedback now and then.",
+    "variables": [
+      "SKILL OR TASK TYPE",
+      "LEVEL",
+      "E.G. AN EXAM BAND, A CLIENT READY STANDARD, A JOB REQUIREMENT",
+      "OPTIONAL SAMPLE"
+    ],
+    "relatedPromptIds": [
+      "prac-writing-practice",
+      "prac-speaking-practice",
+      "prac-deliberate-weakness"
+    ]
+  },
+  {
+    "id": "prac-timed-practice",
+    "title": "Build Speed With Timed Practice",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "practice-exercises",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me build speed in [SKILL OR EXAM SECTION] with timed practice. The time limit I need to work within is [TIME LIMIT AND NUMBER OF QUESTIONS OR TASKS], my current speed is [CURRENT TIME OR SCORE], and my accuracy is [ACCURACY]. Create a timed practice plan that starts slightly slower than the target and tightens gradually, with sets of exercises, how to review mistakes made under time pressure, and strategies for when to skip and return to a question. Note that pushing for speed before accuracy is solid usually produces fast wrong answers, so accuracy should come first and speed second, time pressure reveals gaps that untimed practice hides, and knowing when to move on from a hard question often matters as much as raw speed in timed exams. Give me the timed practice plan.",
+    "description": "Tighten time limits gradually once accuracy is solid.",
+    "useCase": "Use this when you know the material but run out of time. Pushing speed before accuracy produces fast wrong answers, so build accuracy first, time pressure reveals gaps untimed practice hides, and knowing when to skip a hard question often matters as much as raw speed.",
+    "variables": [
+      "SKILL OR EXAM SECTION",
+      "TIME LIMIT AND NUMBER OF QUESTIONS OR TASKS",
+      "CURRENT TIME OR SCORE",
+      "ACCURACY"
+    ],
+    "relatedPromptIds": [
+      "prac-quick-drill",
+      "prac-mixed-practice",
+      "prac-progress-log"
+    ]
+  },
+  {
+    "id": "prac-progress-log",
+    "title": "Keep a Practice Log That Shows Improvement",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "practice-exercises",
+    "aiTool": "Gemini",
+    "promptText": "Help me set up a practice log for [SKILL]. How I practice is [TYPES OF PRACTICE AND FREQUENCY], what I can measure is [E.G. SCORES, TIME TAKEN, MISTAKES, ITEMS COMPLETED, RECORDINGS], and the tool I want to use is [E.G. A SPREADSHEET, A NOTEBOOK, A NOTES APP]. Design a simple log with the right columns, a weekly summary routine, and how to spot when I have plateaued and need to change the type of practice. Note that progress in a skill is often uneven and hard to notice day to day, so a log makes real improvement visible, which helps motivation, and a plateau where numbers stop improving usually means I need harder or different practice rather than more of the same, while logging should take a minute or two, or I will stop doing it. Give me the practice log setup.",
+    "description": "Log practice simply, review weekly, and spot plateaus.",
+    "useCase": "Use this to see your improvement over time. Progress is uneven and hard to notice day to day, so a log makes it visible and helps motivation, a plateau usually means you need harder or different practice rather than more of the same, and logging should take a minute or two or you will stop.",
+    "variables": [
+      "SKILL",
+      "TYPES OF PRACTICE AND FREQUENCY",
+      "E.G. SCORES, TIME TAKEN, MISTAKES, ITEMS COMPLETED, RECORDINGS",
+      "E.G. A SPREADSHEET, A NOTEBOOK, A NOTES APP"
+    ],
+    "relatedPromptIds": [
+      "prac-deliberate-weakness",
+      "prac-timed-practice",
+      "prac-mixed-practice"
+    ]
   }
 ]
