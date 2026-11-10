@@ -47189,5 +47189,395 @@
       "recur-task-tool-setup",
       "recur-template-builder"
     ]
+  },
+  {
+    "id": "skillmap-zero-to-goal",
+    "title": "Build a Skill Roadmap From Where You Are to Your Goal",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "skill-roadmaps",
+    "aiTool": "Claude",
+    "promptText": "Build me a learning roadmap for [SKILL]. My current level is [WHAT I CAN DO NOW], my goal is [WHAT I WANT TO BE ABLE TO DO, E.G. GET A JOB, FREELANCE, BUILD A PROJECT, PASS A TEST], my time available is [HOURS PER WEEK], my budget is [BUDGET], and my deadline, if any, is [DATE]. Break it into phases, each with what to learn, a small project that proves I can do it, rough time needed, and how to know I am ready to move on. Note that roadmaps usually underestimate how long things take, especially for beginners learning part time, so the timeline should be treated as a guide rather than a promise, and progress depends far more on building things and getting feedback than on finishing courses, so each phase should end with something I made rather than something I watched. Give me the skill roadmap.",
+    "description": "Map phases, proof projects, and readiness checks from now to your goal.",
+    "useCase": "Use this when starting any new skill. Roadmaps usually underestimate how long things take, especially part time, so treat the timeline as a guide, and progress depends more on building things and getting feedback than finishing courses, so end each phase with something you made.",
+    "variables": [
+      "SKILL",
+      "WHAT I CAN DO NOW",
+      "WHAT I WANT TO BE ABLE TO DO, E.G. GET A JOB, FREELANCE, BUILD A PROJECT, PASS A TEST",
+      "HOURS PER WEEK",
+      "BUDGET",
+      "DATE"
+    ],
+    "relatedPromptIds": [
+      "skillmap-quick-path",
+      "skillmap-assess-level",
+      "skillmap-proof-projects"
+    ]
+  },
+  {
+    "id": "skillmap-quick-path",
+    "title": "Get a Quick Learning Path for a Skill",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "skill-roadmaps",
+    "aiTool": "Grok",
+    "promptText": "Give me a quick learning path for [SKILL]. I am at [BEGINNER, SOME EXPERIENCE, INTERMEDIATE] level and want to [GOAL]. List the steps in order, each in one line with what to learn and one thing to build or practice, no explanation. Give me the path.",
+    "description": "Get an ordered list of what to learn and practice, fast.",
+    "useCase": "Use this to see the shape of a skill quickly. A short path shows where to start, but adapt it to your actual goal and time, since generic paths often include topics you will not need for what you want to do.",
+    "variables": [
+      "SKILL",
+      "BEGINNER, SOME EXPERIENCE, INTERMEDIATE",
+      "GOAL"
+    ],
+    "relatedPromptIds": [
+      "skillmap-zero-to-goal",
+      "skillmap-skill-tree",
+      "skillmap-limited-time"
+    ]
+  },
+  {
+    "id": "skillmap-assess-level",
+    "title": "Assess Your Real Current Skill Level",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "skill-roadmaps",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me honestly assess my current level in [SKILL] before I plan what to learn. What I have done with it so far is [EXPERIENCE, PROJECTS, COURSES], what I can do without help is [INDEPENDENT ABILITIES], and what I still need to look up or get help with is [GAPS]. Ask me a short set of practical questions or small tasks that would reveal my level, then summarize what I know well, what I know partly, and what I have not learned, and where my roadmap should start. Note that people often overrate skills they have studied but not used, and underrate skills they use every day without formal training, so judging by what I can actually do unaided is more accurate than counting courses completed, and starting slightly below my comfort level is better than skipping foundations I only partly know. Give me the skill assessment.",
+    "description": "Judge your level by what you can do unaided, not courses finished.",
+    "useCase": "Use this before choosing where a roadmap starts. People overrate skills they studied but never used and underrate ones they use daily without training, so judge by what you can do unaided, and starting slightly below your comfort level beats skipping half known foundations.",
+    "variables": [
+      "SKILL",
+      "EXPERIENCE, PROJECTS, COURSES",
+      "INDEPENDENT ABILITIES",
+      "GAPS"
+    ],
+    "relatedPromptIds": [
+      "skillmap-zero-to-goal",
+      "skillmap-gap-analysis",
+      "skillmap-skill-tree"
+    ]
+  },
+  {
+    "id": "skillmap-skill-tree",
+    "title": "Break a Big Skill Into a Tree of Smaller Skills",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "skill-roadmaps",
+    "aiTool": "Gemini",
+    "promptText": "Break [BIG SKILL, E.G. WEB DEVELOPMENT, DIGITAL MARKETING, DATA ANALYSIS, PUBLIC SPEAKING, PROJECT MANAGEMENT] into a tree of smaller skills for someone whose goal is [GOAL]. Show the main branches, the sub skills under each, which ones depend on others, which are essential for my goal and which are optional, and a sensible learning order. Note that big skills feel overwhelming because they are really dozens of smaller ones, so seeing the tree helps me focus, but trying to master every branch before doing real work is a trap, since most goals only need the essential branches to a working level, with the rest learned later when a real need appears. Give me the skill tree.",
+    "description": "Split a big skill into essential and optional sub skills with dependencies.",
+    "useCase": "Use this when a skill feels too big to start. Big skills are really dozens of smaller ones, so the tree helps you focus, but mastering every branch before real work is a trap, since most goals only need the essential branches to a working level, with the rest learned when needed.",
+    "variables": [
+      "BIG SKILL, E.G. WEB DEVELOPMENT, DIGITAL MARKETING, DATA ANALYSIS, PUBLIC SPEAKING, PROJECT MANAGEMENT",
+      "GOAL"
+    ],
+    "relatedPromptIds": [
+      "skillmap-quick-path",
+      "skillmap-assess-level",
+      "skillmap-zero-to-goal"
+    ]
+  },
+  {
+    "id": "skillmap-gap-analysis",
+    "title": "Find the Skill Gaps Between You and a Target Role",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "skill-roadmaps",
+    "aiTool": "Claude",
+    "promptText": "Help me find the gaps between my skills and a role I want. The target role is [ROLE], here are a few real job posts or freelance listings for it: [PASTE JOB POSTS OR KEY REQUIREMENTS], my current skills and experience are [YOUR SKILLS AND EXPERIENCE], and where I want to work is [E.G. LOCALLY, REMOTE FOR FOREIGN COMPANIES, FREELANCE PLATFORMS]. Compare them, list which requirements I already meet, which I partly meet, and which I lack, separate must haves from nice to haves, and suggest the fastest way to close the most important gaps. Note that job posts often list far more requirements than employers actually insist on, so the skills that appear across most posts matter more than any single long list, and transferable experience from other fields often counts more than people expect if I can describe it in the role's language. Give me the gap analysis.",
+    "description": "Compare your skills with real job posts and close the gaps that matter.",
+    "useCase": "Use this when aiming for a specific job or freelance role. Job posts often list more requirements than employers insist on, so skills appearing across most posts matter more than any single list, and transferable experience counts more than expected when described in the role's language.",
+    "variables": [
+      "ROLE",
+      "PASTE JOB POSTS OR KEY REQUIREMENTS",
+      "YOUR SKILLS AND EXPERIENCE",
+      "E.G. LOCALLY, REMOTE FOR FOREIGN COMPANIES, FREELANCE PLATFORMS"
+    ],
+    "relatedPromptIds": [
+      "skillmap-market-check",
+      "skillmap-career-switch",
+      "skillmap-assess-level"
+    ]
+  },
+  {
+    "id": "skillmap-market-check",
+    "title": "Check Which Skills Are Actually in Demand",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "skill-roadmaps",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me check whether the skills I plan to learn are actually in demand for what I want to do. The skills I am considering are [SKILLS], the kind of work I want is [E.G. LOCAL JOBS, REMOTE JOBS, FREELANCE CLIENTS, MY OWN BUSINESS], where I am based is [LOCATION], and evidence I have found is [E.G. JOB POSTS, FREELANCE LISTINGS, RATES, CONVERSATIONS]. Help me design a quick research method, like counting relevant postings and rates on a few platforms, interpret what I found, and rank the skills by demand, pay, competition, and fit with my strengths. Note that demand differs a lot between local and remote markets, and hype about a skill online does not always mean paid work is available, especially at the entry level where competition is high, so looking at real current postings and rates is more reliable than trend articles, and my information may be outdated, so the research should be fresh. Give me the demand check.",
+    "description": "Rank planned skills by real demand, pay, and competition.",
+    "useCase": "Use this before investing months in a skill. Demand differs a lot between local and remote markets, online hype does not always mean paid work, especially at entry level where competition is high, so real current postings and rates beat trend articles.",
+    "variables": [
+      "SKILLS",
+      "E.G. LOCAL JOBS, REMOTE JOBS, FREELANCE CLIENTS, MY OWN BUSINESS",
+      "LOCATION",
+      "E.G. JOB POSTS, FREELANCE LISTINGS, RATES, CONVERSATIONS"
+    ],
+    "relatedPromptIds": [
+      "skillmap-gap-analysis",
+      "skillmap-earn-while-learning",
+      "skillmap-certifications"
+    ]
+  },
+  {
+    "id": "skillmap-limited-time",
+    "title": "Build a Roadmap for a Few Hours a Week",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "skill-roadmaps",
+    "aiTool": "Gemini",
+    "promptText": "Build me a realistic roadmap to learn [SKILL] with very limited time. My available time is [E.G. THREE HOURS A WEEK, THIRTY MINUTES A DAY, WEEKENDS ONLY], my other commitments are [WORK, FAMILY, STUDY], my goal is [GOAL], and when I tend to have energy is [BEST TIMES]. Design a roadmap that fits that time, with weekly focus, short sessions that still make progress, and a plan for weeks when I miss sessions. Note that learning in small amounts works if it is consistent, but progress is slower than full time courses suggest, so the goal may need to be smaller or the timeline longer, and planning for missed weeks prevents the common pattern of falling behind once and quitting, while short sessions work best when each has one clear task decided in advance. Give me the limited time roadmap.",
+    "description": "Fit a skill roadmap into a few hours a week, with a plan for missed weeks.",
+    "useCase": "Use this if you are learning around work or family. Small amounts work if consistent, but progress is slower than full time courses suggest, so shrink the goal or extend the timeline, plan for missed weeks to avoid quitting after falling behind, and decide each short session's task in advance.",
+    "variables": [
+      "SKILL",
+      "E.G. THREE HOURS A WEEK, THIRTY MINUTES A DAY, WEEKENDS ONLY",
+      "WORK, FAMILY, STUDY",
+      "GOAL",
+      "BEST TIMES"
+    ],
+    "relatedPromptIds": [
+      "skillmap-quick-path",
+      "skillmap-review-adjust",
+      "skillmap-zero-to-goal"
+    ]
+  },
+  {
+    "id": "skillmap-proof-projects",
+    "title": "Plan Projects That Prove Each Stage of a Skill",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "skill-roadmaps",
+    "aiTool": "Claude",
+    "promptText": "Help me plan a series of projects that prove my progress in [SKILL]. My roadmap stages are [STAGES OR PASTE ROADMAP], my goal is [GOAL, E.G. JOB, CLIENTS, PERSONAL PROJECT], and topics or industries I care about are [INTERESTS]. For each stage, suggest one project that uses what I just learned, roughly how big it should be, what a good result looks like, and how to present it in a portfolio. Note that projects based on real problems, like a tool for a local business or my own needs, are more convincing to employers and clients than copies of tutorial projects, and finishing a small project well teaches more than abandoning a big ambitious one halfway, so each project should be scoped to finish in the time available. Give me the proof project plan.",
+    "description": "Plan one finishable, real world project per roadmap stage.",
+    "useCase": "Use this to make your learning visible. Projects solving real problems, like a tool for a local business, convince employers and clients more than tutorial copies, and finishing a small project well teaches more than abandoning a big one, so scope each to finish in the time available.",
+    "variables": [
+      "SKILL",
+      "STAGES OR PASTE ROADMAP",
+      "GOAL, E.G. JOB, CLIENTS, PERSONAL PROJECT",
+      "INTERESTS"
+    ],
+    "relatedPromptIds": [
+      "skillmap-zero-to-goal",
+      "skillmap-escape-tutorials",
+      "skillmap-earn-while-learning"
+    ]
+  },
+  {
+    "id": "skillmap-escape-tutorials",
+    "title": "Get Out of Endless Tutorials and Start Building",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "skill-roadmaps",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me stop watching tutorials and start building with [SKILL]. What I have studied so far is [COURSES, TUTORIALS, VIDEOS], how long I have been learning is [TIME], what I have actually built alone is [PROJECTS OR NOTHING YET], and what stops me from building is [E.G. NOT KNOWING WHERE TO START, FEAR OF DOING IT WRONG, GETTING STUCK]. Give me a plan to shift from following along to building independently, with a first small project, how to break it down, what to do when stuck, and a rule for when tutorials are allowed. Note that following a tutorial feels like progress but builds recognition rather than the ability to create from scratch, so getting stuck and working it out is where real learning happens, and a rule like only looking up the specific thing I am stuck on keeps learning tied to building. Give me the build first plan.",
+    "description": "Shift from following tutorials to building on your own.",
+    "useCase": "Use this if you have done many courses but cannot build alone. Following tutorials feels like progress but builds recognition rather than the ability to create, so getting stuck and working through it is where real learning happens, and only looking up what you are stuck on keeps learning tied to building.",
+    "variables": [
+      "SKILL",
+      "COURSES, TUTORIALS, VIDEOS",
+      "TIME",
+      "PROJECTS OR NOTHING YET",
+      "E.G. NOT KNOWING WHERE TO START, FEAR OF DOING IT WRONG, GETTING STUCK"
+    ],
+    "relatedPromptIds": [
+      "skillmap-proof-projects",
+      "skillmap-assess-level",
+      "skillmap-feedback-sources"
+    ]
+  },
+  {
+    "id": "skillmap-career-switch",
+    "title": "Plan a Skill Roadmap for a Career Change",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "skill-roadmaps",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan a skill roadmap for changing careers. My current field and experience are [CURRENT CAREER AND YEARS], the field I want to move into is [TARGET FIELD OR ROLE], my financial runway is [HOW LONG I CAN AFFORD A LOWER INCOME, IF AT ALL], my time to learn is [HOURS PER WEEK], and my location or remote preference is [LOCATION]. Build a roadmap that uses my existing strengths, identifies a bridge role or first paid work in the new field, and sets milestones for learning, building proof, and getting the first opportunity. Note that career changers often do better entering through a role that values their old experience, like a teacher moving into training design, rather than starting from zero, and quitting before having proof or income in the new field adds a lot of financial pressure, so overlapping the transition where possible is safer. Give me the career change roadmap.",
+    "description": "Use existing strengths and a bridge role to change careers safely.",
+    "useCase": "Use this if you are moving into a new field. Career changers often do better entering through a role that values their old experience, like a teacher moving into training design, and quitting before having proof or income in the new field adds financial pressure, so overlap the transition where possible.",
+    "variables": [
+      "CURRENT CAREER AND YEARS",
+      "TARGET FIELD OR ROLE",
+      "HOW LONG I CAN AFFORD A LOWER INCOME, IF AT ALL",
+      "HOURS PER WEEK",
+      "LOCATION"
+    ],
+    "relatedPromptIds": [
+      "skillmap-gap-analysis",
+      "skillmap-earn-while-learning",
+      "skillmap-market-check"
+    ]
+  },
+  {
+    "id": "skillmap-earn-while-learning",
+    "title": "Plan How to Earn While Learning a Skill",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "skill-roadmaps",
+    "aiTool": "Claude",
+    "promptText": "Help me plan how to start earning from [SKILL] while I am still learning it. My current level is [LEVEL], the kinds of paid work I could do are [IDEAS, E.G. SMALL FREELANCE GIGS, HELPING LOCAL BUSINESSES, TUTORING BEGINNERS, MICRO TASKS], where I am based is [LOCATION], and the platforms or networks available to me are [E.G. UPWORK, FIVERR, LOCAL FACEBOOK GROUPS, FRIENDS AND FAMILY BUSINESSES]. Suggest beginner friendly paid tasks matched to each stage of my learning, how to price them honestly, and how each one builds my portfolio. Note that small paid work teaches real skills like dealing with clients and deadlines that courses do not, but I should only take on work I can deliver, be honest about my level, and price accordingly, since overpromising as a beginner damages my reputation, and freelance platforms may have fees, country restrictions, or heavy competition at the entry level. Give me the earn while learning plan.",
+    "description": "Match honest, beginner friendly paid work to each learning stage.",
+    "useCase": "Use this to get paid experience early. Small paid jobs teach client handling and deadlines courses do not, but only take work you can deliver, be honest about your level, and price accordingly, while freelance platforms may have fees, country restrictions, or heavy entry level competition.",
+    "variables": [
+      "SKILL",
+      "LEVEL",
+      "IDEAS, E.G. SMALL FREELANCE GIGS, HELPING LOCAL BUSINESSES, TUTORING BEGINNERS, MICRO TASKS",
+      "LOCATION",
+      "E.G. UPWORK, FIVERR, LOCAL FACEBOOK GROUPS, FRIENDS AND FAMILY BUSINESSES"
+    ],
+    "relatedPromptIds": [
+      "skillmap-proof-projects",
+      "skillmap-market-check",
+      "skillmap-career-switch"
+    ]
+  },
+  {
+    "id": "skillmap-certifications",
+    "title": "Decide Whether a Certification Is Worth It",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "skill-roadmaps",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me decide whether a certification is worth pursuing as part of my roadmap. The certification is [NAME AND PROVIDER], its cost and time required are [COST AND STUDY TIME], my goal is [GOAL], the employers or clients I am targeting are [TARGET AUDIENCE AND LOCATION], and what I already have is [CURRENT CREDENTIALS AND EXPERIENCE]. Weigh how much the target audience actually values it, what it teaches beyond the credential, renewal costs, and alternatives like projects or portfolio work, then recommend whether to do it now, later, or not at all. Note that some certifications are required or strongly valued in certain fields and countries, while others are rarely checked and matter less than a portfolio, and renewal fees and continuing education requirements add ongoing costs, so asking people who hire in my target market is the most reliable test. Give me the certification decision.",
+    "description": "Weigh a certification's real value to your target employers or clients.",
+    "useCase": "Use this before paying for a certification. Some are required or highly valued in certain fields and countries, while others are rarely checked and matter less than a portfolio, renewals add ongoing costs, so asking people who hire in your target market is the most reliable test.",
+    "variables": [
+      "NAME AND PROVIDER",
+      "COST AND STUDY TIME",
+      "GOAL",
+      "TARGET AUDIENCE AND LOCATION",
+      "CURRENT CREDENTIALS AND EXPERIENCE"
+    ],
+    "relatedPromptIds": [
+      "skillmap-market-check",
+      "skillmap-budget-path",
+      "skillmap-gap-analysis"
+    ]
+  },
+  {
+    "id": "skillmap-budget-path",
+    "title": "Build a Low Cost Learning Path",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "skill-roadmaps",
+    "aiTool": "Gemini",
+    "promptText": "Build me a low cost learning path for [SKILL]. My budget is [AMOUNT OR FREE ONLY], my internet and device situation is [E.G. PHONE ONLY, SHARED LAPTOP, SLOW OR LIMITED DATA, RELIABLE WIFI], the languages I can learn in are [LANGUAGES], and my goal is [GOAL]. Suggest a path using free or cheap resources, like official documentation, open courses, libraries, community groups, and free tiers of tools, with what to pay for only if it is clearly worth it. Note that free resources are often enough to reach a solid level, but they lack structure and feedback, so pairing them with a study group or community helps, video heavy courses can be hard on slow or limited data, so text based or downloadable materials may suit better, and resource availability and prices change, so links should be checked before relying on them. Give me the low cost learning path.",
+    "description": "Learn with free and cheap resources suited to your device and data.",
+    "useCase": "Use this when money or bandwidth is tight. Free resources are often enough for a solid level but lack structure and feedback, so add a study group or community, video heavy courses are hard on slow or limited data, so prefer text or downloadable materials, and check that resources are still available.",
+    "variables": [
+      "SKILL",
+      "AMOUNT OR FREE ONLY",
+      "E.G. PHONE ONLY, SHARED LAPTOP, SLOW OR LIMITED DATA, RELIABLE WIFI",
+      "LANGUAGES",
+      "GOAL"
+    ],
+    "relatedPromptIds": [
+      "skillmap-certifications",
+      "skillmap-feedback-sources",
+      "skillmap-limited-time"
+    ]
+  },
+  {
+    "id": "skillmap-feedback-sources",
+    "title": "Find Mentors, Communities, and Feedback for Your Roadmap",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "skill-roadmaps",
+    "aiTool": "Claude",
+    "promptText": "Help me find sources of feedback and support for learning [SKILL]. My level is [LEVEL], where I am is [LOCATION], what I would most like feedback on is [E.G. MY PROJECTS, MY CODE, MY WRITING, MY SPEAKING, MY DESIGNS], and how comfortable I am asking for help is [COMFORT LEVEL]. Suggest where to find feedback, like online communities, local meetups, peer study partners, mentors, and paid reviews, how to ask for feedback in a way people want to answer, and how to use AI for feedback without relying on it alone. Note that feedback speeds up learning more than any course, but busy experts ignore vague requests, so a specific question with my work attached gets far better responses, and AI feedback is useful for quick checks but can miss what an experienced person would notice or be confidently wrong, so human feedback is still needed at key stages. Give me the feedback plan.",
+    "description": "Find mentors, peers, and communities, and ask for feedback well.",
+    "useCase": "Use this when learning alone feels slow. Feedback speeds learning more than any course, but experts ignore vague requests, so ask a specific question with your work attached, and AI feedback is useful for quick checks but can miss things or be confidently wrong, so get human feedback at key stages.",
+    "variables": [
+      "SKILL",
+      "LEVEL",
+      "LOCATION",
+      "E.G. MY PROJECTS, MY CODE, MY WRITING, MY SPEAKING, MY DESIGNS",
+      "COMFORT LEVEL"
+    ],
+    "relatedPromptIds": [
+      "skillmap-escape-tutorials",
+      "skillmap-budget-path",
+      "skillmap-review-adjust"
+    ]
+  },
+  {
+    "id": "skillmap-ai-skills",
+    "title": "Build a Roadmap for Using AI in Your Work",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "skill-roadmaps",
+    "aiTool": "ChatGPT",
+    "promptText": "Build me a roadmap for getting good at using AI tools in my work. My job or business is [WHAT YOU DO], the AI tools I have tried are [TOOLS AND HOW YOU USE THEM], what I want AI to help with is [E.G. WRITING, RESEARCH, CODING, DATA ANALYSIS, DESIGN, AUTOMATION, CUSTOMER SUPPORT], and my technical comfort is [LEVEL]. Create a staged roadmap from basic prompting to building reusable workflows and automations, with practice tasks drawn from my real work at each stage and a way to measure time saved. Note that AI tools change quickly, so learning durable skills like writing clear instructions, checking outputs, and knowing when not to use AI matters more than memorizing specific features, and AI output can be wrong in confident ways, so building the habit of verifying facts, numbers, and code is part of the skill, not an extra. Give me the AI skills roadmap.",
+    "description": "Progress from basic prompting to AI workflows using your real tasks.",
+    "useCase": "Use this to get practical value from AI tools. Tools change quickly, so durable skills like clear instructions, checking outputs, and knowing when not to use AI matter more than features, and AI can be confidently wrong, so verifying facts, numbers, and code is part of the skill.",
+    "variables": [
+      "WHAT YOU DO",
+      "TOOLS AND HOW YOU USE THEM",
+      "E.G. WRITING, RESEARCH, CODING, DATA ANALYSIS, DESIGN, AUTOMATION, CUSTOMER SUPPORT",
+      "LEVEL"
+    ],
+    "relatedPromptIds": [
+      "skillmap-zero-to-goal",
+      "skillmap-proof-projects",
+      "skillmap-team-upskilling"
+    ]
+  },
+  {
+    "id": "skillmap-language-roadmap",
+    "title": "Build a Roadmap for Learning a Language",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "skill-roadmaps",
+    "aiTool": "Gemini",
+    "promptText": "Build me a roadmap for learning [LANGUAGE]. My current level is [LEVEL], why I am learning is [E.G. DAILY LIFE WHERE I LIVE, WORK, FAMILY, TRAVEL, EXAMS], my native and other languages are [LANGUAGES I SPEAK], whether the language uses a different script is [YES OR NO], my time is [TIME PER WEEK], and access to native speakers is [E.G. NEIGHBORS, COWORKERS, ONLINE TUTORS, NONE]. Create stages focused on what I actually need, like speaking for daily life or reading for work, with practice routines, when to learn the script, and milestones I can test in real situations. Note that apps help with vocabulary but rarely build real conversation skills, so regular speaking with real people matters most for daily life goals, learning materials for less widely taught languages can be limited or inconsistent, and tones or a new script take patience, so progress in the first months may feel slow even when it is real. Give me the language roadmap.",
+    "description": "Plan language learning around real needs, speaking, and script.",
+    "useCase": "Use this when learning a language for life, work, or family. Apps help with vocabulary but rarely build conversation, so speaking with real people matters most, materials for less widely taught languages can be limited, and tones or a new script take patience, so slow early progress can still be real.",
+    "variables": [
+      "LANGUAGE",
+      "LEVEL",
+      "E.G. DAILY LIFE WHERE I LIVE, WORK, FAMILY, TRAVEL, EXAMS",
+      "LANGUAGES I SPEAK",
+      "YES OR NO",
+      "TIME PER WEEK",
+      "E.G. NEIGHBORS, COWORKERS, ONLINE TUTORS, NONE"
+    ],
+    "relatedPromptIds": [
+      "skillmap-limited-time",
+      "skillmap-feedback-sources",
+      "skillmap-review-adjust"
+    ]
+  },
+  {
+    "id": "skillmap-team-upskilling",
+    "title": "Build a Skill Roadmap for Your Team or Staff",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "skill-roadmaps",
+    "aiTool": "Claude",
+    "promptText": "Help me build a skill roadmap for people who work with me at my [BUSINESS TYPE]. The people and roles are [TEAM MEMBERS AND ROLES], the skills the business needs more of are [SKILLS], their current levels are [WHAT EACH CAN DO], the time and budget I can give for training are [TIME AND BUDGET], and the languages they learn best in are [LANGUAGES]. Create a roadmap per person or role, with learning on real work tasks, short training sessions, who can teach whom, and how to check progress. Note that people learn work skills fastest by doing real tasks with support rather than sitting through generic courses, training in their strongest language is far more effective, and staff are more motivated when the skill clearly helps them, like more responsibility or pay, so connecting the roadmap to their own goals matters as much as the business need. Give me the team skill roadmap.",
+    "description": "Plan staff skills through real tasks, peer teaching, and clear payoffs.",
+    "useCase": "Use this to build skills in your team. People learn work skills fastest by doing real tasks with support, training in their strongest language works far better, and staff are more motivated when the skill clearly helps them, like more responsibility or pay, so tie the roadmap to their goals too.",
+    "variables": [
+      "BUSINESS TYPE",
+      "TEAM MEMBERS AND ROLES",
+      "SKILLS",
+      "WHAT EACH CAN DO",
+      "TIME AND BUDGET",
+      "LANGUAGES"
+    ],
+    "relatedPromptIds": [
+      "skillmap-ai-skills",
+      "skillmap-skill-tree",
+      "skillmap-feedback-sources"
+    ]
+  },
+  {
+    "id": "skillmap-review-adjust",
+    "title": "Review and Adjust Your Skill Roadmap",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "skill-roadmaps",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me review and adjust my learning roadmap for [SKILL]. My original roadmap was [PASTE OR SUMMARIZE IT], what I have actually completed is [PROGRESS], where I am behind or stuck is [PROBLEMS], and anything that has changed is [E.G. NEW GOAL, LESS TIME, NEW JOB, NEW INTEREST]. Compare plan to reality, explain likely reasons for the gaps without judgment, and give me an updated roadmap with a realistic next month. Note that almost every roadmap needs changing once real learning begins, being behind usually means the plan was too ambitious rather than that I failed, and goals sometimes change for good reasons, so updating the plan is part of the process, while repeatedly restarting from the beginning is a pattern worth noticing and avoiding. Give me the roadmap review.",
+    "description": "Compare your plan with reality and reset a realistic next month.",
+    "useCase": "Use this every month or two while learning. Almost every roadmap needs changing once learning begins, being behind usually means the plan was too ambitious rather than failure, and goals change for good reasons, while repeatedly restarting from the beginning is a pattern worth avoiding.",
+    "variables": [
+      "SKILL",
+      "PASTE OR SUMMARIZE IT",
+      "PROGRESS",
+      "PROBLEMS",
+      "E.G. NEW GOAL, LESS TIME, NEW JOB, NEW INTEREST"
+    ],
+    "relatedPromptIds": [
+      "skillmap-limited-time",
+      "skillmap-zero-to-goal",
+      "skillmap-feedback-sources"
+    ]
   }
 ]
