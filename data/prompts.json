@@ -47579,5 +47579,392 @@
       "skillmap-zero-to-goal",
       "skillmap-feedback-sources"
     ]
+  },
+  {
+    "id": "cout-full-outline",
+    "title": "Create a Complete Course Outline",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "course-outlines",
+    "aiTool": "Claude",
+    "promptText": "Help me create a complete outline for a course on [TOPIC]. The learners are [WHO THEY ARE AND THEIR STARTING LEVEL], what they should be able to do by the end is [END RESULT], the format is [E.G. SELF PACED VIDEO, LIVE COHORT, IN PERSON CLASS, EMAIL COURSE], and the total length I have in mind is [HOURS OR WEEKS]. Organize it into modules and lessons, each with a learning objective, the key content, a practice activity, and an estimated time, and include a short welcome module and a final project. Note that most course creators include far too much content because they know the subject well, which overwhelms learners and lowers completion, so every lesson should earn its place by moving learners toward the end result, and outcomes should describe what learners can do, not just what they will know. Give me the course outline.",
+    "description": "Outline modules and lessons with objectives, practice, and timing.",
+    "useCase": "Use this when planning any course. Creators who know a subject well include too much, which overwhelms learners and lowers completion, so every lesson should move learners toward the end result, and outcomes should describe what learners can do, not just what they will know.",
+    "variables": [
+      "TOPIC",
+      "WHO THEY ARE AND THEIR STARTING LEVEL",
+      "END RESULT",
+      "E.G. SELF PACED VIDEO, LIVE COHORT, IN PERSON CLASS, EMAIL COURSE",
+      "HOURS OR WEEKS"
+    ],
+    "relatedPromptIds": [
+      "cout-quick-outline",
+      "cout-learning-objectives",
+      "cout-trim-scope"
+    ]
+  },
+  {
+    "id": "cout-quick-outline",
+    "title": "Get a Quick Course Outline",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "course-outlines",
+    "aiTool": "Grok",
+    "promptText": "Give me a quick course outline on [TOPIC] for [AUDIENCE]. The course should take about [LENGTH] and leave learners able to [OUTCOME]. List the modules with three to five lesson titles each, no explanation. Give me the outline.",
+    "description": "Get module and lesson titles for a course, fast.",
+    "useCase": "Use this to sketch a course idea in seconds. A quick outline helps you see the shape and decide whether to pursue it, but check it against what your learners actually need, since a generic outline often covers what is easy to teach rather than what matters most.",
+    "variables": [
+      "TOPIC",
+      "AUDIENCE",
+      "LENGTH",
+      "OUTCOME"
+    ],
+    "relatedPromptIds": [
+      "cout-full-outline",
+      "cout-validate-idea",
+      "cout-trim-scope"
+    ]
+  },
+  {
+    "id": "cout-validate-idea",
+    "title": "Validate a Course Idea Before Building It",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "course-outlines",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me check whether my course idea is worth building before I create the full course. The idea is [COURSE IDEA], who it is for is [TARGET LEARNERS], why I am qualified to teach it is [EXPERIENCE], competing courses or free content I know of are [ALTERNATIVES], and my audience or reach is [E.G. EMAIL LIST, SOCIAL FOLLOWING, STUDENTS, NONE]. Suggest quick, low cost ways to test demand, like talking to potential learners, a waitlist, a presale, or a short free workshop, plus questions to ask and what result would justify building. Note that many courses are built for months and then barely sell, because creators assume demand instead of checking it, free content on the same topic often already exists, so the course must offer something clearer, more practical, or more specific, and presales or paid pilots are stronger evidence than compliments or likes. Give me the validation plan.",
+    "description": "Test demand with conversations, waitlists, or a pilot before building.",
+    "useCase": "Use this before spending months making a course. Many courses barely sell because creators assume demand, free content on the topic often already exists, so yours must be clearer, more practical, or more specific, and presales or paid pilots are stronger evidence than compliments or likes.",
+    "variables": [
+      "COURSE IDEA",
+      "TARGET LEARNERS",
+      "EXPERIENCE",
+      "ALTERNATIVES",
+      "E.G. EMAIL LIST, SOCIAL FOLLOWING, STUDENTS, NONE"
+    ],
+    "relatedPromptIds": [
+      "cout-pilot-run",
+      "cout-learner-profile",
+      "cout-quick-outline"
+    ]
+  },
+  {
+    "id": "cout-learner-profile",
+    "title": "Define Your Learners Before Outlining",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "course-outlines",
+    "aiTool": "Gemini",
+    "promptText": "Help me define the learners for my course on [TOPIC] before I outline it. What I know about them is [AGE RANGE, JOB OR LIFE STAGE, LOCATION, LANGUAGE, PRIOR KNOWLEDGE], why they want to learn this is [MOTIVATIONS], what gets in their way is [E.G. TIME, MONEY, CONFIDENCE, DEVICES, LANGUAGE], and how they prefer to learn is [IF KNOWN]. Create a learner profile with their starting point, goals, constraints, likely misconceptions, and what would make them quit, then list what the outline must account for. Note that courses fail most often because they are pitched at the wrong level, too basic for some and too advanced for others, so being specific about who the course is for, and who it is not for, makes the outline sharper, and constraints like limited time or learning on a phone shape the design as much as the topic does. Give me the learner profile.",
+    "description": "Profile learners' level, goals, constraints, and quit points first.",
+    "useCase": "Use this before writing an outline. Courses fail most often by being pitched at the wrong level, so being specific about who the course is for, and who it is not for, sharpens the outline, and constraints like limited time or learning on a phone shape the design as much as the topic.",
+    "variables": [
+      "TOPIC",
+      "AGE RANGE, JOB OR LIFE STAGE, LOCATION, LANGUAGE, PRIOR KNOWLEDGE",
+      "MOTIVATIONS",
+      "E.G. TIME, MONEY, CONFIDENCE, DEVICES, LANGUAGE",
+      "IF KNOWN"
+    ],
+    "relatedPromptIds": [
+      "cout-learning-objectives",
+      "cout-validate-idea",
+      "cout-mobile-low-bandwidth"
+    ]
+  },
+  {
+    "id": "cout-learning-objectives",
+    "title": "Write Clear Learning Objectives for a Course",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "course-outlines",
+    "aiTool": "Claude",
+    "promptText": "Help me write clear learning objectives for my course on [TOPIC]. The learners are [AUDIENCE AND LEVEL], the overall goal is [WHAT THE COURSE SHOULD ACHIEVE], and my draft objectives are [YOUR DRAFT OBJECTIVES OR NONE YET]. Write one overall course outcome and objectives for each module, each starting with an action verb describing something learners can do and could be checked, and flag any that are vague. Note that objectives like understand marketing or learn about budgeting cannot be checked, so they do not guide what to teach or test, while objectives like write a one page marketing plan for a small shop make both the lessons and the assessments obvious, and too many objectives per module usually signals the module is trying to do too much. Give me the learning objectives.",
+    "description": "Turn vague goals into checkable, action based learning objectives.",
+    "useCase": "Use this to make your course focused and testable. Objectives like understand marketing cannot be checked, while write a one page marketing plan for a small shop makes lessons and assessments obvious, and too many objectives per module signals it is trying to do too much.",
+    "variables": [
+      "TOPIC",
+      "AUDIENCE AND LEVEL",
+      "WHAT THE COURSE SHOULD ACHIEVE",
+      "YOUR DRAFT OBJECTIVES OR NONE YET"
+    ],
+    "relatedPromptIds": [
+      "cout-full-outline",
+      "cout-assessments",
+      "cout-learner-profile"
+    ]
+  },
+  {
+    "id": "cout-sequence-modules",
+    "title": "Put Course Modules in the Best Order",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "course-outlines",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me put the modules and lessons of my course in the best order. The course is about [TOPIC], the current list of modules and lessons is [PASTE YOUR LIST], and the learners start at [STARTING LEVEL]. Reorder them so each lesson builds on the last, flag lessons that depend on something not yet taught, and suggest where to place an early quick win and where to put review points. Note that experts often teach in the order the subject is organized in textbooks, while learners usually progress faster when they get a small working result early and learn theory as it becomes needed, and an early win in the first lesson or two greatly reduces how many people drop out. Give me the reordered outline.",
+    "description": "Reorder lessons so each builds on the last, with an early quick win.",
+    "useCase": "Use this when your outline feels jumbled. Experts often teach in textbook order, while learners progress faster with a small working result early and theory as needed, and a quick win in the first lesson or two greatly reduces dropouts.",
+    "variables": [
+      "TOPIC",
+      "PASTE YOUR LIST",
+      "STARTING LEVEL"
+    ],
+    "relatedPromptIds": [
+      "cout-full-outline",
+      "cout-lesson-plan",
+      "cout-trim-scope"
+    ]
+  },
+  {
+    "id": "cout-lesson-plan",
+    "title": "Create a Detailed Plan for One Lesson",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "course-outlines",
+    "aiTool": "Gemini",
+    "promptText": "Help me create a detailed plan for one lesson in my course. The lesson topic is [LESSON TOPIC], its objective is [OBJECTIVE], the learners are [AUDIENCE AND LEVEL], the format is [E.G. RECORDED VIDEO, LIVE ONLINE, IN PERSON CLASS], and the length is [MINUTES]. Plan the lesson with a hook, a short explanation, a worked example, a practice activity, a quick check for understanding, and a summary with next steps, with timing for each part and any materials needed. Note that people lose focus during long uninterrupted explanations, especially in video, so breaking content into short pieces with something to do in between keeps attention, and the practice activity is where most learning happens, so it should get real time rather than being squeezed in at the end. Give me the lesson plan.",
+    "description": "Plan one lesson with a hook, example, practice, and check for understanding.",
+    "useCase": "Use this for each lesson you build. People lose focus during long explanations, especially video, so short pieces with something to do in between keep attention, and the practice activity is where most learning happens, so give it real time rather than squeezing it in at the end.",
+    "variables": [
+      "LESSON TOPIC",
+      "OBJECTIVE",
+      "AUDIENCE AND LEVEL",
+      "E.G. RECORDED VIDEO, LIVE ONLINE, IN PERSON CLASS",
+      "MINUTES"
+    ],
+    "relatedPromptIds": [
+      "cout-sequence-modules",
+      "cout-activities",
+      "cout-workshop"
+    ]
+  },
+  {
+    "id": "cout-activities",
+    "title": "Add Practice Activities to Every Module",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "course-outlines",
+    "aiTool": "Claude",
+    "promptText": "Help me add practice activities to each module of my course on [TOPIC]. The modules and objectives are [PASTE MODULES AND OBJECTIVES], the learners are [AUDIENCE], the format is [SELF PACED, LIVE, IN PERSON], and what learners can realistically do is [E.G. TIME PER WEEK, TOOLS THEY HAVE, WORKING ALONE OR IN GROUPS]. For each module, suggest one or two activities that make learners use the skill, with instructions, an example of a good result, and how they can check their own work. Note that a course without practice gives learners information but not ability, and activities based on their own real situation, like applying a lesson to their own business or job, are more motivating and memorable than invented exercises, while self paced learners need a way to check their work since nobody is there to give feedback. Give me the activities.",
+    "description": "Design practice tied to each module with examples and self checks.",
+    "useCase": "Use this to make your course build real ability. A course without practice gives information but not skill, activities based on learners' own real situation are more motivating than invented exercises, and self paced learners need a way to check their work since nobody gives feedback.",
+    "variables": [
+      "TOPIC",
+      "PASTE MODULES AND OBJECTIVES",
+      "AUDIENCE",
+      "SELF PACED, LIVE, IN PERSON",
+      "E.G. TIME PER WEEK, TOOLS THEY HAVE, WORKING ALONE OR IN GROUPS"
+    ],
+    "relatedPromptIds": [
+      "cout-lesson-plan",
+      "cout-assessments",
+      "cout-final-project"
+    ]
+  },
+  {
+    "id": "cout-assessments",
+    "title": "Plan Quizzes and Assessments That Match Your Objectives",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "course-outlines",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me plan assessments for my course on [TOPIC]. The learning objectives are [PASTE OBJECTIVES], whether learners need a grade or certificate is [YES OR NO, AND WHY], the format is [FORMAT], and who will check the work is [E.G. AUTOMATIC QUIZZES, ME, PEERS, NOBODY]. For each objective, suggest the best way to check it, like a quiz, a task, a project, or a reflection, with example questions or criteria, and keep the workload realistic for me to mark. Note that multiple choice quizzes check whether learners recognize correct answers but rarely whether they can do the skill, so practical tasks matter for skill based objectives, and if I personally mark work, the marking load grows with every learner, so clear checklists, peer review, or self assessment help a course scale. Give me the assessment plan.",
+    "description": "Match each objective to the right check without overloading marking.",
+    "useCase": "Use this to check learners actually gained the skill. Multiple choice checks recognition but rarely ability, so skill objectives need practical tasks, and personal marking grows with every learner, so clear checklists, peer review, or self assessment help the course scale.",
+    "variables": [
+      "TOPIC",
+      "PASTE OBJECTIVES",
+      "YES OR NO, AND WHY",
+      "FORMAT",
+      "E.G. AUTOMATIC QUIZZES, ME, PEERS, NOBODY"
+    ],
+    "relatedPromptIds": [
+      "cout-learning-objectives",
+      "cout-activities",
+      "cout-final-project"
+    ]
+  },
+  {
+    "id": "cout-final-project",
+    "title": "Design a Capstone Project for a Course",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "course-outlines",
+    "aiTool": "Gemini",
+    "promptText": "Help me design a final project for my course on [TOPIC]. The course outcome is [OUTCOME], the learners are [AUDIENCE], the time they can give the project is [HOURS], and how it will be reviewed is [E.G. BY ME, BY PEERS, SELF CHECK, NOT REVIEWED]. Design a project brief with the task, requirements, a step by step path, a checklist of what a strong result includes, and options for different interests or situations, plus how it builds across earlier modules. Note that a final project gives learners proof of what they can do, which is often the most valuable thing they take away, but a project that is too big becomes the point where many people quit, so building it in small parts throughout the course, rather than all at the end, raises completion. Give me the final project brief.",
+    "description": "Create a final project built in small parts across the course.",
+    "useCase": "Use this to give learners proof of their new skill. A final project is often the most valuable takeaway, but one that is too big becomes where people quit, so building it in small parts throughout the course rather than all at the end raises completion.",
+    "variables": [
+      "TOPIC",
+      "OUTCOME",
+      "AUDIENCE",
+      "HOURS",
+      "E.G. BY ME, BY PEERS, SELF CHECK, NOT REVIEWED"
+    ],
+    "relatedPromptIds": [
+      "cout-activities",
+      "cout-assessments",
+      "cout-full-outline"
+    ]
+  },
+  {
+    "id": "cout-trim-scope",
+    "title": "Trim an Overstuffed Course Outline",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "course-outlines",
+    "aiTool": "Claude",
+    "promptText": "Help me trim my course outline, which feels too big. The outline is [PASTE OUTLINE], the core outcome is [WHAT LEARNERS MUST BE ABLE TO DO], the learners' available time is [TIME PER WEEK AND TOTAL], and the parts I feel attached to are [FAVORITE SECTIONS]. Sort each lesson into essential for the outcome, helpful but optional, or cut, and suggest how to handle optional material, like a bonus section, a resource list, or a follow up course. Note that a shorter course that learners finish usually delivers more value and better reviews than a long one they abandon, creators tend to keep lessons that interest them rather than ones learners need, and cut material is not wasted, since it can become a second course, a newsletter, or bonus content. Give me the trimmed outline.",
+    "description": "Sort lessons into essential, optional, or cut to fit learners' time.",
+    "useCase": "Use this when your course is growing out of control. A shorter course that learners finish usually delivers more value and better reviews than a long one they abandon, creators keep lessons that interest them rather than ones learners need, and cut material can become a second course or bonus.",
+    "variables": [
+      "PASTE OUTLINE",
+      "WHAT LEARNERS MUST BE ABLE TO DO",
+      "TIME PER WEEK AND TOTAL",
+      "FAVORITE SECTIONS"
+    ],
+    "relatedPromptIds": [
+      "cout-full-outline",
+      "cout-sequence-modules",
+      "cout-expertise-to-course"
+    ]
+  },
+  {
+    "id": "cout-workshop",
+    "title": "Outline a Live Workshop",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "course-outlines",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me outline a live workshop on [TOPIC]. The participants are [AUDIENCE AND GROUP SIZE], the length is [E.G. 90 MINUTES, HALF DAY, FULL DAY], the setting is [ONLINE OR IN PERSON], and what participants should leave with is [TAKEAWAY, E.G. A FINISHED PLAN, A WORKING TEMPLATE, A NEW SKILL]. Create a run of show with timed segments, alternating short teaching with hands on work, plus breaks, a group activity, time for questions, and a closing with next steps. Note that live workshops are valuable because people do the work together and get help on the spot, so they should be mostly doing rather than listening, online participants lose attention faster than in person ones and need interaction every few minutes, and timings almost always run over, so building in a buffer and knowing what to cut keeps it on track. Give me the workshop outline.",
+    "description": "Plan a timed workshop that is mostly hands on work.",
+    "useCase": "Use this for live workshops online or in person. Their value is doing the work together with help on the spot, so keep them mostly hands on, online participants need interaction every few minutes, and timings almost always run over, so build a buffer and know what to cut.",
+    "variables": [
+      "TOPIC",
+      "AUDIENCE AND GROUP SIZE",
+      "E.G. 90 MINUTES, HALF DAY, FULL DAY",
+      "ONLINE OR IN PERSON",
+      "TAKEAWAY, E.G. A FINISHED PLAN, A WORKING TEMPLATE, A NEW SKILL"
+    ],
+    "relatedPromptIds": [
+      "cout-lesson-plan",
+      "cout-format-choice",
+      "cout-pilot-run"
+    ]
+  },
+  {
+    "id": "cout-email-course",
+    "title": "Outline a Short Email Course",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "course-outlines",
+    "aiTool": "Gemini",
+    "promptText": "Help me outline a short email course on [TOPIC]. The readers are [AUDIENCE], the number of emails I want is [E.G. FIVE, SEVEN, TEN], the sending schedule is [E.G. DAILY, EVERY OTHER DAY, WEEKLY], and the purpose is [E.G. STANDALONE PRODUCT, FREE LEAD MAGNET, ONBOARDING FOR A PRODUCT]. Outline each email with its subject line, one key idea, a small action to take, and a teaser for the next one, plus a final email with a clear next step. Note that email courses work best when each email teaches one idea that can be read and acted on in a few minutes, since longer lessons get saved for later and never read, and many readers will miss an email or join partway through, so each lesson should make sense on its own while still building toward the end goal. Give me the email course outline.",
+    "description": "Plan bite sized email lessons with one idea and action each.",
+    "useCase": "Use this for a free or paid email course. Each email should teach one idea readable and actionable in minutes, since longer lessons get saved and never read, and many readers miss emails or join partway, so each lesson should make sense on its own while building toward the goal.",
+    "variables": [
+      "TOPIC",
+      "AUDIENCE",
+      "E.G. FIVE, SEVEN, TEN",
+      "E.G. DAILY, EVERY OTHER DAY, WEEKLY",
+      "E.G. STANDALONE PRODUCT, FREE LEAD MAGNET, ONBOARDING FOR A PRODUCT"
+    ],
+    "relatedPromptIds": [
+      "cout-format-choice",
+      "cout-quick-outline",
+      "cout-expertise-to-course"
+    ]
+  },
+  {
+    "id": "cout-format-choice",
+    "title": "Choose the Right Course Format and Platform",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "course-outlines",
+    "aiTool": "Claude",
+    "promptText": "Help me choose the format and platform for my course on [TOPIC]. The learners are [AUDIENCE AND LOCATION], my strengths are [E.G. ON CAMERA, WRITING, LIVE TEACHING], my time to run it is [ONGOING TIME AVAILABLE], my budget is [BUDGET], and how I want to earn is [E.G. ONE TIME SALES, COHORTS, SUBSCRIPTIONS, FREE FOR LEAD GENERATION]. Compare formats like self paced video, live cohort, email course, text based course, in person class, or a mix, and suggest platform types, like course platforms, digital product stores, membership tools, or simple shared folders, covering cost, payment options for my learners, and effort. Note that self paced courses can be sold repeatedly but have low completion rates, live cohorts get better results but need my time every run, and some course platforms do not support payment methods or payouts used in every country, so checking that learners can actually pay and that I can receive the money comes before choosing on features. Give me the format recommendation.",
+    "description": "Pick a course format and platform that fit learners, payments, and your time.",
+    "useCase": "Use this before building your course. Self paced courses sell repeatedly but have low completion, live cohorts get better results but need your time every run, and some platforms do not support payments or payouts in every country, so check learners can pay and you can receive money first.",
+    "variables": [
+      "TOPIC",
+      "AUDIENCE AND LOCATION",
+      "E.G. ON CAMERA, WRITING, LIVE TEACHING",
+      "ONGOING TIME AVAILABLE",
+      "BUDGET",
+      "E.G. ONE TIME SALES, COHORTS, SUBSCRIPTIONS, FREE FOR LEAD GENERATION"
+    ],
+    "relatedPromptIds": [
+      "cout-workshop",
+      "cout-email-course",
+      "cout-mobile-low-bandwidth"
+    ]
+  },
+  {
+    "id": "cout-mobile-low-bandwidth",
+    "title": "Adapt a Course for Phone Learners and Slow Internet",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "course-outlines",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me adapt my course outline for learners who mainly use phones or have slow or limited internet. The course is [TOPIC AND OUTLINE], the learners are [AUDIENCE AND LOCATION], and their typical situation is [E.G. PHONE ONLY, PREPAID DATA, SHARED DEVICES, POWER CUTS]. Suggest changes like shorter lessons, downloadable materials, audio versions, low data video settings, text summaries, chat app delivery, and activities that work on a phone, and flag parts of the course that will not work well. Note that a course designed on a fast laptop connection can be almost unusable on a phone with limited data, long videos are expensive to stream, and tasks requiring desktop software exclude many learners, so offering lighter alternatives for each lesson widens who can actually finish, and testing the course on a basic phone with a slow connection reveals problems quickly. Give me the mobile friendly adaptations.",
+    "description": "Make a course work on phones, limited data, and shared devices.",
+    "useCase": "Use this if your learners mostly use phones or prepaid data. A course designed on a fast laptop can be almost unusable on limited data, long videos are costly to stream, and desktop only tasks exclude many learners, so offer lighter alternatives and test on a basic phone with a slow connection.",
+    "variables": [
+      "TOPIC AND OUTLINE",
+      "AUDIENCE AND LOCATION",
+      "E.G. PHONE ONLY, PREPAID DATA, SHARED DEVICES, POWER CUTS"
+    ],
+    "relatedPromptIds": [
+      "cout-learner-profile",
+      "cout-format-choice",
+      "cout-multilingual"
+    ]
+  },
+  {
+    "id": "cout-multilingual",
+    "title": "Plan a Course for Learners in More Than One Language",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "course-outlines",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan a course for learners who speak different languages. The course topic is [TOPIC], the languages involved are [E.G. ENGLISH AND KHMER, ENGLISH AND THAI, OTHERS], the learners' level in each is [LANGUAGE LEVELS], my own language abilities are [WHAT YOU SPEAK], and my budget for translation is [BUDGET]. Suggest whether to create separate versions, bilingual materials, subtitles, or a glossary, which parts to translate first, how to handle technical terms that have no common local equivalent, and how to check translation quality. Note that learners understand new concepts far better in their strongest language, but technical terms are often used in English even by local speakers, so a bilingual glossary is often more helpful than forcing translations, machine translation of teaching material can introduce errors that confuse beginners, and having a fluent speaker review key lessons is worth the cost. Give me the multilingual course plan.",
+    "description": "Plan versions, subtitles, or glossaries for multilingual learners.",
+    "useCase": "Use this when learners speak different languages. People grasp new concepts far better in their strongest language, but technical terms are often used in English even locally, so a bilingual glossary helps more than forced translations, and machine translated lessons need review by a fluent speaker.",
+    "variables": [
+      "TOPIC",
+      "E.G. ENGLISH AND KHMER, ENGLISH AND THAI, OTHERS",
+      "LANGUAGE LEVELS",
+      "WHAT YOU SPEAK",
+      "BUDGET"
+    ],
+    "relatedPromptIds": [
+      "cout-mobile-low-bandwidth",
+      "cout-learner-profile",
+      "cout-format-choice"
+    ]
+  },
+  {
+    "id": "cout-expertise-to-course",
+    "title": "Turn Your Expertise or Content Into a Course Outline",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "course-outlines",
+    "aiTool": "Claude",
+    "promptText": "Help me turn knowledge or content I already have into a course outline. What I have is [E.G. BLOG POSTS, VIDEOS, CLIENT WORK, TRAINING I GIVE AT WORK, YEARS OF EXPERIENCE], here is a summary or list: [PASTE TITLES, TOPICS, OR NOTES], and the learners I want to serve are [AUDIENCE]. Group my material into a logical course, show which pieces can be reused, what is missing for a complete learning path, and what needs to change from content into teaching. Note that existing content is a great starting point, but a collection of posts or videos is not a course, since a course needs a clear outcome, a deliberate order, and practice, so filling those gaps is the real work, and experience from real projects, including mistakes, often makes the most valuable lessons. Give me the course outline from my material.",
+    "description": "Reorganize existing content or experience into a real learning path.",
+    "useCase": "Use this if you already have blog posts, videos, or expertise. Existing content is a great start, but a collection of posts is not a course, since a course needs a clear outcome, deliberate order, and practice, and lessons from real projects, including mistakes, are often the most valuable.",
+    "variables": [
+      "E.G. BLOG POSTS, VIDEOS, CLIENT WORK, TRAINING I GIVE AT WORK, YEARS OF EXPERIENCE",
+      "PASTE TITLES, TOPICS, OR NOTES",
+      "AUDIENCE"
+    ],
+    "relatedPromptIds": [
+      "cout-trim-scope",
+      "cout-full-outline",
+      "cout-email-course"
+    ]
+  },
+  {
+    "id": "cout-pilot-run",
+    "title": "Run a Pilot Version of a Course and Revise It",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "course-outlines",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me plan a pilot run of my course and use the results to revise the outline. The course is [TOPIC AND OUTLINE], the pilot group I can recruit is [WHO AND HOW MANY], the pilot price or offer is [E.G. FREE, DISCOUNTED, FULL PRICE WITH EXTRA SUPPORT], and the format is [FORMAT]. Give me a pilot plan with what to deliver, what feedback to collect after each module, questions to ask, how to track where people get stuck or drop off, and how to turn the findings into outline changes. Note that a pilot reveals problems the creator cannot see, like lessons that are confusing, too long, or in the wrong order, but feedback from friends tends to be too kind, so watching what people actually complete and where they get stuck is more reliable than what they say, and a small paid pilot often gives more honest feedback than a free one. Give me the pilot plan.",
+    "description": "Run a small pilot and revise the outline based on where learners struggle.",
+    "useCase": "Use this before launching a course widely. A pilot reveals confusing, overlong, or misordered lessons the creator cannot see, but friends are too kind, so watching what people complete and where they get stuck beats what they say, and a small paid pilot often gives more honest feedback than a free one.",
+    "variables": [
+      "TOPIC AND OUTLINE",
+      "WHO AND HOW MANY",
+      "E.G. FREE, DISCOUNTED, FULL PRICE WITH EXTRA SUPPORT",
+      "FORMAT"
+    ],
+    "relatedPromptIds": [
+      "cout-validate-idea",
+      "cout-workshop",
+      "cout-trim-scope"
+    ]
   }
 ]
