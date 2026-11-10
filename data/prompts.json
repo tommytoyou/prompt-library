@@ -45651,5 +45651,380 @@
       "eauto-test-flows",
       "eauto-flow-map"
     ]
+  },
+  {
+    "id": "taskauto-by-role",
+    "title": "Find Automation Ideas for a Specific Role",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "task-automation-ideas",
+    "aiTool": "Claude",
+    "promptText": "Give me task automation ideas tailored to my role. My role is [E.G. FREELANCE DESIGNER, ONLINE SHOP OWNER, VIRTUAL ASSISTANT, CONSULTANT, TEACHER, SMALL AGENCY OWNER], a typical week includes [MAIN WEEKLY TASKS], the tools I already use are [TOOLS], and my comfort with technology is [LEVEL]. List ten ideas specific to this role, each with the task, how it could be automated, the tool to use, rough setup time, and time saved per week. Note that the best ideas for a role are often small repetitive tasks that feel too minor to fix, like renaming files or copying details between apps, and ideas that need many tools or advanced setup can cost more time than they save for a one person business, so starting with what my current tools already support is usually wisest. Give me the role specific ideas.",
+    "description": "Get ten automation ideas matched to your role and current tools.",
+    "useCase": "Use this to see what people in your role typically automate. The best wins are often tiny repetitive tasks that feel too minor to fix, and ideas needing many tools or advanced setup can cost more time than they save, so start with what your current tools already support.",
+    "variables": [
+      "E.G. FREELANCE DESIGNER, ONLINE SHOP OWNER, VIRTUAL ASSISTANT, CONSULTANT, TEACHER, SMALL AGENCY OWNER",
+      "MAIN WEEKLY TASKS",
+      "TOOLS",
+      "LEVEL"
+    ],
+    "relatedPromptIds": [
+      "taskauto-quick-list",
+      "taskauto-built-in-features",
+      "taskauto-weekly-log"
+    ]
+  },
+  {
+    "id": "taskauto-quick-list",
+    "title": "Get a Quick List of Tasks to Automate",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "task-automation-ideas",
+    "aiTool": "Grok",
+    "promptText": "List quick automation ideas for me. My work is [WHAT YOU DO], my tools are [TOOLS], and the task I hate most is [MOST ANNOYING TASK]. Give me eight ideas, each as one line with the task and the tool that automates it, starting with the one for the task I hate most, no explanation. Give me the ideas.",
+    "description": "Get eight one line automation ideas, starting with your most hated task.",
+    "useCase": "Use this when you want ideas in seconds. Starting with the task you hate most gives you the motivation to actually set it up, but pick one idea and finish it before trying others, since half built automations save nothing.",
+    "variables": [
+      "WHAT YOU DO",
+      "TOOLS",
+      "MOST ANNOYING TASK"
+    ],
+    "relatedPromptIds": [
+      "taskauto-by-role",
+      "taskauto-built-in-features",
+      "taskauto-text-expander"
+    ]
+  },
+  {
+    "id": "taskauto-weekly-log",
+    "title": "Log a Week of Tasks to Spot Automation Candidates",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "task-automation-ideas",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me turn a week of task notes into automation candidates. Here is my log of what I did this week: [PASTE YOUR TASK LOG WITH APPROXIMATE TIMES], my tools are [TOOLS], and my work is [WHAT YOU DO]. Group the tasks by type, find the ones that repeat with the same steps, estimate total weekly time for each, and rank which are worth automating, simplifying, delegating, or dropping. Note that people usually underestimate small repeated tasks and overestimate big rare ones, so a real log beats memory, and some tasks are better eliminated or simplified than automated, since automating a pointless task just makes it faster at being pointless. Give me the ranked candidates.",
+    "description": "Turn a real week of task notes into ranked automation candidates.",
+    "useCase": "Use this after tracking your tasks for a week. People underestimate small repeated tasks and overestimate big rare ones, so a real log beats memory, and some tasks are better dropped or simplified than automated, since automating a pointless task just makes it faster.",
+    "variables": [
+      "PASTE YOUR TASK LOG WITH APPROXIMATE TIMES",
+      "TOOLS",
+      "WHAT YOU DO"
+    ],
+    "relatedPromptIds": [
+      "taskauto-by-role",
+      "taskauto-spreadsheet",
+      "taskauto-personal-admin"
+    ]
+  },
+  {
+    "id": "taskauto-built-in-features",
+    "title": "Find Automation Features Already in Your Tools",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "task-automation-ideas",
+    "aiTool": "Gemini",
+    "promptText": "Help me find automation features already built into the tools I pay for. My tools are [E.G. GOOGLE WORKSPACE, MICROSOFT 365, NOTION, TRELLO, CANVA, SHOPIFY, ACCOUNTING SOFTWARE, MY EMAIL PLATFORM], my plan level on each is [PLANS], and the tasks I want to save time on are [TASKS]. For each tool, list built in automations, rules, templates, or recurring features that could handle my tasks, and how to turn them on. Note that many apps include rules, recurring tasks, templates, and simple automations that people never discover, which avoids paying for a separate automation tool, but some features are limited to higher plans, so I should check what my plan includes before relying on them, and menu names can differ between versions. Give me the built in automation list.",
+    "description": "Discover free automations hiding in the tools you already pay for.",
+    "useCase": "Use this before buying an automation tool. Many apps include rules, recurring tasks, and templates that people never discover, which avoids extra subscriptions, but some features need higher plans, so check what your plan includes before relying on them.",
+    "variables": [
+      "E.G. GOOGLE WORKSPACE, MICROSOFT 365, NOTION, TRELLO, CANVA, SHOPIFY, ACCOUNTING SOFTWARE, MY EMAIL PLATFORM",
+      "PLANS",
+      "TASKS"
+    ],
+    "relatedPromptIds": [
+      "taskauto-by-role",
+      "taskauto-spreadsheet",
+      "taskauto-recurring-reminders"
+    ]
+  },
+  {
+    "id": "taskauto-spreadsheet",
+    "title": "Automate Spreadsheet Tasks With Formulas and Scripts",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "task-automation-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me automate repetitive spreadsheet work in [GOOGLE SHEETS OR EXCEL]. The task I do by hand is [DESCRIBE THE MANUAL STEPS], my data looks like [COLUMNS AND A FEW SAMPLE ROWS], and how often I do it is [FREQUENCY]. Suggest the simplest way to automate it, starting with formulas, then features like filters, pivot tables, or data validation, and only then a script or macro, and give me the exact formula or code with plain explanations. Note that a well built formula is often enough and easier to maintain than a script, scripts and macros can break when columns move or when someone else edits the sheet, and anything that deletes or overwrites data should be tested on a copy of the sheet first. Give me the spreadsheet automation.",
+    "description": "Replace manual spreadsheet steps with formulas first, scripts only if needed.",
+    "useCase": "Use this when you repeat the same spreadsheet steps. A good formula is often enough and easier to maintain than a script, scripts break when columns move or others edit the sheet, and anything that deletes or overwrites data should be tested on a copy first.",
+    "variables": [
+      "GOOGLE SHEETS OR EXCEL",
+      "DESCRIBE THE MANUAL STEPS",
+      "COLUMNS AND A FEW SAMPLE ROWS",
+      "FREQUENCY"
+    ],
+    "relatedPromptIds": [
+      "taskauto-weekly-log",
+      "taskauto-report-generation",
+      "taskauto-built-in-features"
+    ]
+  },
+  {
+    "id": "taskauto-text-expander",
+    "title": "Save Typing With Text Expanders and Snippets",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "task-automation-ideas",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me set up text shortcuts for things I type repeatedly. What I type often is [E.G. ADDRESSES, PAYMENT DETAILS, EMAIL SIGN OFFS, STANDARD REPLIES, LINKS, PRODUCT DESCRIPTIONS], the devices and apps I use are [E.G. WINDOWS, MAC, IPHONE, ANDROID, CHROME], and the languages I type in are [LANGUAGES]. Suggest tools or built in features for text replacement on my devices, and write a set of snippets with short trigger codes. Note that text replacement is one of the fastest automations to set up and pays off immediately, but snippets containing bank details or passwords should be avoided or kept on secure devices only, and trigger codes should be unusual combinations, like a semicolon before a word, so they do not fire accidentally while typing normally. Give me the snippet set.",
+    "description": "Create text shortcuts for the phrases and details you type most.",
+    "useCase": "Use this to stop retyping the same things. Text replacement is fast to set up and pays off immediately, but avoid putting bank details or passwords in snippets on shared devices, and use unusual trigger codes so they do not fire accidentally while typing.",
+    "variables": [
+      "E.G. ADDRESSES, PAYMENT DETAILS, EMAIL SIGN OFFS, STANDARD REPLIES, LINKS, PRODUCT DESCRIPTIONS",
+      "E.G. WINDOWS, MAC, IPHONE, ANDROID, CHROME",
+      "LANGUAGES"
+    ],
+    "relatedPromptIds": [
+      "taskauto-quick-list",
+      "taskauto-phone-shortcuts",
+      "taskauto-document-generation"
+    ]
+  },
+  {
+    "id": "taskauto-phone-shortcuts",
+    "title": "Automate Tasks on Your Phone",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "task-automation-ideas",
+    "aiTool": "Gemini",
+    "promptText": "Help me automate tasks on my phone. My phone is [IPHONE OR ANDROID], what I do repeatedly on it is [E.G. SEND THE SAME MESSAGE, LOG EXPENSES, SAVE RECEIPTS, SET FOCUS MODES, SHARE LOCATION, POST PHOTOS], and the apps I use most are [APPS]. Suggest automations using built in tools like Shortcuts and automations on iPhone or routines and apps on Android, with step by step setup for the three most useful. Note that phone automations are especially valuable when most work happens on mobile, but some actions still need a tap to confirm for privacy and security reasons, and features and menu names vary between phone models and system versions, so steps may need small adjustments. Give me the phone automations.",
+    "description": "Set up Shortcuts or Android routines for repetitive phone tasks.",
+    "useCase": "Use this if much of your work happens on your phone. Phone automations are especially valuable for mobile first work, but some actions still need a confirm tap for privacy and security, and menus vary by model and system version, so steps may need small adjustments.",
+    "variables": [
+      "IPHONE OR ANDROID",
+      "E.G. SEND THE SAME MESSAGE, LOG EXPENSES, SAVE RECEIPTS, SET FOCUS MODES, SHARE LOCATION, POST PHOTOS",
+      "APPS"
+    ],
+    "relatedPromptIds": [
+      "taskauto-text-expander",
+      "taskauto-voice-to-tasks",
+      "taskauto-personal-admin"
+    ]
+  },
+  {
+    "id": "taskauto-voice-to-tasks",
+    "title": "Turn Voice Notes Into Tasks Automatically",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "task-automation-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me set up a system that turns voice notes into organized tasks and notes. How I record voice notes now is [E.G. PHONE RECORDER, CHAT APP VOICE MESSAGES TO MYSELF, A NOTES APP], where tasks should end up is [E.G. TODOIST, NOTION, TRELLO, GOOGLE TASKS, A SPREADSHEET], the languages I speak in are [LANGUAGES], and my automation tools are [TOOLS]. Suggest a workflow that transcribes, extracts tasks with due dates, and files them, plus a review habit. Note that capturing ideas by voice is fast, but transcription is less accurate with accents, mixed languages, or background noise, and AI extracted tasks may invent dates or miss details, so a quick daily review of what was created keeps the system trustworthy, and voice notes containing client information should go through services that fit my privacy needs. Give me the voice to task workflow.",
+    "description": "Transcribe voice notes and file the tasks they contain automatically.",
+    "useCase": "Use this if you think out loud or work on the move. Voice capture is fast, but transcription struggles with accents, mixed languages, and noise, and AI may invent dates or miss details, so review new tasks daily and route client information through services that fit your privacy needs.",
+    "variables": [
+      "E.G. PHONE RECORDER, CHAT APP VOICE MESSAGES TO MYSELF, A NOTES APP",
+      "E.G. TODOIST, NOTION, TRELLO, GOOGLE TASKS, A SPREADSHEET",
+      "LANGUAGES",
+      "TOOLS"
+    ],
+    "relatedPromptIds": [
+      "taskauto-phone-shortcuts",
+      "taskauto-meeting-tasks",
+      "taskauto-recurring-reminders"
+    ]
+  },
+  {
+    "id": "taskauto-meeting-tasks",
+    "title": "Automate Meeting Prep and Follow Up Tasks",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "task-automation-ideas",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me automate the routine tasks around meetings in my [BUSINESS TYPE]. The meetings I have are [E.G. CLIENT CALLS, SALES CALLS, TEAM CHECK INS], my calendar and video tools are [TOOLS], and what I do before and after each meeting is [CURRENT PREP AND FOLLOW UP STEPS]. Suggest automations like booking links, reminders with agendas, recording and transcription, AI summaries, and follow up tasks, and which steps should stay manual. Note that meeting tools can automate a lot, but recording or transcribing calls usually needs the other person's consent, which is required by law in some places and simply polite everywhere, and AI meeting summaries can misattribute who said what, so follow up emails based on them should be checked before sending. Give me the meeting automation plan.",
+    "description": "Automate booking, reminders, notes, and follow ups around meetings.",
+    "useCase": "Use this if meetings eat your admin time. Tools can automate a lot, but recording or transcribing calls usually needs consent, which some places require by law, and AI summaries can misattribute who said what, so check follow up emails based on them before sending.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. CLIENT CALLS, SALES CALLS, TEAM CHECK INS",
+      "TOOLS",
+      "CURRENT PREP AND FOLLOW UP STEPS"
+    ],
+    "relatedPromptIds": [
+      "taskauto-voice-to-tasks",
+      "taskauto-document-generation",
+      "taskauto-recurring-reminders"
+    ]
+  },
+  {
+    "id": "taskauto-document-generation",
+    "title": "Generate Documents Automatically From Templates",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "task-automation-ideas",
+    "aiTool": "Gemini",
+    "promptText": "Help me automatically generate documents I create repeatedly for my [BUSINESS TYPE]. The documents are [E.G. PROPOSALS, QUOTES, INVOICES, CONTRACTS, CERTIFICATES, REPORTS], where the details come from is [E.G. A FORM, A SPREADSHEET ROW, A CRM RECORD], my tools are [E.G. GOOGLE DOCS, WORD, A DOCUMENT TOOL, ZAPIER, MAKE], and the output needed is [E.G. PDF EMAILED TO THE CLIENT, SAVED TO A FOLDER]. Suggest a setup with a template, placeholders, and the automation steps. Note that document generation saves a lot of time on repetitive paperwork, but a mistake in the template repeats in every document, so the template should be checked carefully, and contracts or legal documents generated automatically still need a human read before sending, since a wrong name, price, or date can create real problems. Give me the document generation setup.",
+    "description": "Fill templates from forms or sheets to create documents automatically.",
+    "useCase": "Use this for proposals, quotes, invoices, or certificates you make often. It saves a lot of time, but a template mistake repeats in every document, so check it carefully, and auto generated contracts still need a human read, since a wrong name, price, or date creates real problems.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. PROPOSALS, QUOTES, INVOICES, CONTRACTS, CERTIFICATES, REPORTS",
+      "E.G. A FORM, A SPREADSHEET ROW, A CRM RECORD",
+      "E.G. GOOGLE DOCS, WORD, A DOCUMENT TOOL, ZAPIER, MAKE",
+      "E.G. PDF EMAILED TO THE CLIENT, SAVED TO A FOLDER"
+    ],
+    "relatedPromptIds": [
+      "taskauto-file-organization",
+      "taskauto-text-expander",
+      "taskauto-report-generation"
+    ]
+  },
+  {
+    "id": "taskauto-file-organization",
+    "title": "Automate File Naming and Organization",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "task-automation-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me automate how files are named and organized in my [BUSINESS TYPE]. Where files live is [E.G. GOOGLE DRIVE, DROPBOX, ONEDRIVE, MY COMPUTER], the kinds of files I handle are [E.G. CLIENT DELIVERABLES, INVOICES, PHOTOS, CONTRACTS, DOWNLOADS], and my current problem is [E.G. CANNOT FIND THINGS, MESSY DOWNLOADS FOLDER, INCONSISTENT NAMES]. Suggest a simple folder structure, a naming convention with dates first, and automations like folder rules, auto created client folders, and saving attachments automatically. Note that a clear naming convention does more than any tool, since automations only sort files well when names are predictable, and automatic moving or deleting can lose files if a rule is wrong, so rules should copy or move rather than delete, and backups should be in place before any cleanup. Give me the file organization system.",
+    "description": "Set a naming convention and folder rules that sort files automatically.",
+    "useCase": "Use this when you cannot find files. A clear naming convention does more than any tool, since automations only sort predictable names well, and wrong rules can lose files, so have rules move rather than delete, and make sure backups exist before any cleanup.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. GOOGLE DRIVE, DROPBOX, ONEDRIVE, MY COMPUTER",
+      "E.G. CLIENT DELIVERABLES, INVOICES, PHOTOS, CONTRACTS, DOWNLOADS",
+      "E.G. CANNOT FIND THINGS, MESSY DOWNLOADS FOLDER, INCONSISTENT NAMES"
+    ],
+    "relatedPromptIds": [
+      "taskauto-backups",
+      "taskauto-document-generation",
+      "taskauto-personal-admin"
+    ]
+  },
+  {
+    "id": "taskauto-backups",
+    "title": "Automate Backups of Business Data",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "task-automation-ideas",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me set up automatic backups for my [BUSINESS TYPE]. The data I cannot afford to lose is [E.G. CLIENT FILES, ACCOUNTING RECORDS, WEBSITE, EMAIL, PRODUCT PHOTOS, SPREADSHEETS], where it lives now is [LOCATIONS AND APPS], my budget is [BUDGET], and my internet reliability is [E.G. STABLE, FREQUENT OUTAGES, SLOW UPLOADS]. Suggest an automated backup plan following the idea of several copies in different places, which tools to use, how often each runs, and a simple restore test schedule. Note that cloud storage that syncs is not a true backup, since a deleted or corrupted file syncs everywhere too, website and store platforms may not back up my data in a way I can easily restore, and a backup that has never been test restored may not work when needed, while slow or unreliable internet may mean scheduling large backups overnight. Give me the backup plan.",
+    "description": "Set up automatic backups in several places and test restoring them.",
+    "useCase": "Use this before you lose something important. Syncing is not a true backup, since deletions and corruption sync too, platforms may not back up your data in a restorable way, and untested backups may fail, while slow internet may mean scheduling big backups overnight.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. CLIENT FILES, ACCOUNTING RECORDS, WEBSITE, EMAIL, PRODUCT PHOTOS, SPREADSHEETS",
+      "LOCATIONS AND APPS",
+      "BUDGET",
+      "E.G. STABLE, FREQUENT OUTAGES, SLOW UPLOADS"
+    ],
+    "relatedPromptIds": [
+      "taskauto-file-organization",
+      "taskauto-monitoring-alerts",
+      "taskauto-built-in-features"
+    ]
+  },
+  {
+    "id": "taskauto-monitoring-alerts",
+    "title": "Set Up Automatic Alerts for Things You Check Manually",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "task-automation-ideas",
+    "aiTool": "Gemini",
+    "promptText": "Help me replace things I check manually with automatic alerts for my [BUSINESS TYPE]. What I check regularly is [E.G. WEBSITE UP OR DOWN, COMPETITOR PRICES, MENTIONS OF MY BRAND, LOW STOCK, NEW REVIEWS, EXCHANGE RATES, JOB POSTINGS, DOMAIN EXPIRY], how often I check is [FREQUENCY], and how I want alerts is [EMAIL, CHAT APP, PHONE NOTIFICATION]. Suggest tools or methods for each, like uptime monitors, web alerts, store notifications, or RSS, and set thresholds so I only hear about what matters. Note that alerts save time only if they are rare and meaningful, too many quickly get ignored, which is worse than checking manually, and monitoring other websites automatically may be limited by their terms, so using official alerts, feeds, or notifications is safer than scraping. Give me the alert setup.",
+    "description": "Replace manual checks with a few meaningful automatic alerts.",
+    "useCase": "Use this for things you keep checking by hand. Alerts save time only if rare and meaningful, since too many get ignored, which is worse than checking manually, and auto monitoring other sites may break their terms, so prefer official alerts, feeds, or notifications over scraping.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. WEBSITE UP OR DOWN, COMPETITOR PRICES, MENTIONS OF MY BRAND, LOW STOCK, NEW REVIEWS, EXCHANGE RATES, JOB POSTINGS, DOMAIN EXPIRY",
+      "FREQUENCY",
+      "EMAIL, CHAT APP, PHONE NOTIFICATION"
+    ],
+    "relatedPromptIds": [
+      "taskauto-backups",
+      "taskauto-report-generation",
+      "taskauto-chat-bot"
+    ]
+  },
+  {
+    "id": "taskauto-report-generation",
+    "title": "Automate Weekly and Monthly Reports",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "task-automation-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me automate a report I put together by hand for my [BUSINESS TYPE]. The report is [WHAT IT IS AND WHO READS IT], the data comes from [SOURCES, E.G. STORE, ADS, ANALYTICS, SPREADSHEETS, ACCOUNTING], how often I make it is [FREQUENCY], and how long it takes now is [TIME]. Suggest how to pull the data automatically, build it in a dashboard or spreadsheet, and deliver it on a schedule, and which parts should stay manual, like written commentary. Note that automated reports save time but can quietly show wrong numbers if a data connection breaks or a source changes its definitions, so a quick sanity check of key figures each time is wise, and the commentary explaining why numbers changed is where human judgment adds the most value. Give me the report automation plan.",
+    "description": "Pull report data automatically and keep commentary human.",
+    "useCase": "Use this for reports that take hours to compile. Automation saves time but can silently show wrong numbers if a connection breaks or a source changes definitions, so sanity check key figures each time, and keep the commentary explaining why numbers changed, where your judgment matters most.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT IT IS AND WHO READS IT",
+      "SOURCES, E.G. STORE, ADS, ANALYTICS, SPREADSHEETS, ACCOUNTING",
+      "FREQUENCY",
+      "TIME"
+    ],
+    "relatedPromptIds": [
+      "taskauto-spreadsheet",
+      "taskauto-monitoring-alerts",
+      "taskauto-document-generation"
+    ]
+  },
+  {
+    "id": "taskauto-chat-bot",
+    "title": "Plan a Simple Chat Bot for Repetitive Questions",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "task-automation-ideas",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me plan a simple chat bot to handle repetitive messages for my [BUSINESS TYPE]. The channel is [E.G. TELEGRAM, FACEBOOK MESSENGER, WHATSAPP, WEBSITE CHAT, LINE], the questions customers ask repeatedly are [COMMON QUESTIONS], the languages they use are [LANGUAGES], and my technical comfort is [LEVEL]. Suggest whether to use built in auto replies, a menu based bot, or an AI bot, the tools for each, the conversation flow, and when the bot must hand off to me. Note that a simple menu or keyword bot answering a few common questions is often more reliable than a fully AI driven one, AI bots can give confident wrong answers about prices, stock, or policies, and customers get frustrated when they cannot reach a human, so a clear way to talk to a person should always be one tap away. Give me the chat bot plan.",
+    "description": "Choose and plan a chat bot that answers common questions and hands off.",
+    "useCase": "Use this if you answer the same chat messages all day. A simple menu or keyword bot is often more reliable than a fully AI one, AI bots can give confident wrong answers about prices or policies, and customers hate being unable to reach a human, so keep a person one tap away.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. TELEGRAM, FACEBOOK MESSENGER, WHATSAPP, WEBSITE CHAT, LINE",
+      "COMMON QUESTIONS",
+      "LANGUAGES",
+      "LEVEL"
+    ],
+    "relatedPromptIds": [
+      "taskauto-monitoring-alerts",
+      "taskauto-quick-list",
+      "taskauto-by-role"
+    ]
+  },
+  {
+    "id": "taskauto-recurring-reminders",
+    "title": "Automate Recurring Business Reminders and Deadlines",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "task-automation-ideas",
+    "aiTool": "Gemini",
+    "promptText": "Help me set up automatic reminders for recurring deadlines in my [BUSINESS TYPE]. The deadlines include [E.G. TAX FILINGS, LICENSE RENEWALS, DOMAIN AND HOSTING RENEWALS, SUBSCRIPTION RENEWALS, VISA OR PERMIT DATES, INSURANCE, CLIENT CONTRACT ENDS], where I keep track now is [CURRENT METHOD], and my calendar or task tool is [TOOL]. Create a list of recurring reminders with lead times, so I am reminded early enough to act, and suggest how to set them up. Note that the costliest missed deadlines are usually rare ones like annual renewals, which are easy to forget precisely because they happen once a year, and a single reminder on the day is often too late, so two reminders with enough lead time to gather documents or money work better, while dates for government filings should be confirmed each year, since they can change. Give me the reminder schedule.",
+    "description": "Set early reminders for renewals, filings, and other rare deadlines.",
+    "useCase": "Use this so annual deadlines never surprise you. The costliest misses are rare ones like yearly renewals, a reminder on the day is often too late, so set two with enough lead time to gather documents or money, and confirm government filing dates each year since they can change.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. TAX FILINGS, LICENSE RENEWALS, DOMAIN AND HOSTING RENEWALS, SUBSCRIPTION RENEWALS, VISA OR PERMIT DATES, INSURANCE, CLIENT CONTRACT ENDS",
+      "CURRENT METHOD",
+      "TOOL"
+    ],
+    "relatedPromptIds": [
+      "taskauto-personal-admin",
+      "taskauto-built-in-features",
+      "taskauto-meeting-tasks"
+    ]
+  },
+  {
+    "id": "taskauto-personal-admin",
+    "title": "Automate Personal Life Admin",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "task-automation-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me automate personal life admin so it stops eating my free time. The tasks I do regularly are [E.G. PAYING BILLS, TRACKING EXPENSES, GROCERY LISTS, FAMILY SCHEDULES, PRESCRIPTION REFILLS, HOME MAINTENANCE], the tools my household uses are [APPS AND DEVICES], and who else is involved is [E.G. PARTNER, FAMILY MEMBERS, NOBODY]. Suggest automations for each, like auto pay with alerts, shared lists, recurring calendar events, and expense tracking, plus which tasks are better kept manual. Note that auto pay saves effort but can hide rising bills or charges I no longer want, so a monthly review of what was paid matters, shared systems only work if everyone involved actually uses them, and some local bills or payments may not support automation at all, which is fine to leave as a simple monthly reminder. Give me the personal admin plan.",
+    "description": "Automate bills, lists, schedules, and household admin sensibly.",
+    "useCase": "Use this when life admin keeps creeping into your evenings. Auto pay saves effort but hides rising bills or unwanted charges, so review monthly, shared systems only work if everyone uses them, and local bills that cannot be automated are fine as a simple monthly reminder.",
+    "variables": [
+      "E.G. PAYING BILLS, TRACKING EXPENSES, GROCERY LISTS, FAMILY SCHEDULES, PRESCRIPTION REFILLS, HOME MAINTENANCE",
+      "APPS AND DEVICES",
+      "E.G. PARTNER, FAMILY MEMBERS, NOBODY"
+    ],
+    "relatedPromptIds": [
+      "taskauto-recurring-reminders",
+      "taskauto-phone-shortcuts",
+      "taskauto-weekly-log"
+    ]
+  },
+  {
+    "id": "taskauto-ai-agent-tasks",
+    "title": "Decide Which Tasks to Hand to an AI Agent",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "task-automation-ideas",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me decide which of my tasks could be handled by an AI agent or assistant that takes actions, not just answers questions. My work is [WHAT YOU DO], the tasks I am considering are [TASKS, E.G. RESEARCH, BOOKING, DATA ENTRY, EMAIL REPLIES, FILLING FORMS, UPDATING RECORDS], and the tools I have access to are [AI TOOLS AND APPS]. Sort the tasks into safe to hand off, hand off with my review, and keep doing myself, and suggest how to set up the first one. Note that AI agents can handle multi step tasks but still make mistakes, misread pages, or take actions I did not intend, so tasks that spend money, send messages to clients, delete data, or involve passwords and legal commitments should require my approval, and starting with low risk, easily checked tasks builds trust in what the agent can do. Give me the task sorting.",
+    "description": "Sort tasks into safe, supervised, or keep for an AI agent.",
+    "useCase": "Use this before giving an AI agent real work. Agents handle multi step tasks but still misread pages or take unintended actions, so anything spending money, messaging clients, deleting data, or involving passwords or legal commitments needs your approval, and starting with low risk tasks builds trust.",
+    "variables": [
+      "WHAT YOU DO",
+      "TASKS, E.G. RESEARCH, BOOKING, DATA ENTRY, EMAIL REPLIES, FILLING FORMS, UPDATING RECORDS",
+      "AI TOOLS AND APPS"
+    ],
+    "relatedPromptIds": [
+      "taskauto-by-role",
+      "taskauto-weekly-log",
+      "taskauto-report-generation"
+    ]
   }
 ]
