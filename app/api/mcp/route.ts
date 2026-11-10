@@ -188,7 +188,17 @@ function callTool(name: string, args: Record<string, unknown>, origin: string) {
   }
 }
 
-type RpcRequest = { jsonrpc: "2.0"; id?: string | number | null; method: string; params?: any };
+type RpcParams = {
+  protocolVersion?: string;
+  name?: string;
+  arguments?: Record<string, unknown>;
+};
+type RpcRequest = {
+  jsonrpc: "2.0";
+  id?: string | number | null;
+  method: string;
+  params?: RpcParams;
+};
 
 function handle(msg: RpcRequest, origin: string) {
   const { id, method, params } = msg;
@@ -199,7 +209,8 @@ function handle(msg: RpcRequest, origin: string) {
   switch (method) {
     case "initialize": {
       const requested = params?.protocolVersion;
-      const protocolVersion = SUPPORTED_VERSIONS.includes(requested) ? requested : SUPPORTED_VERSIONS[0];
+      const protocolVersion =
+        requested && SUPPORTED_VERSIONS.includes(requested) ? requested : SUPPORTED_VERSIONS[0];
       return ok({
         protocolVersion,
         capabilities: { tools: { listChanged: false } },
@@ -212,7 +223,7 @@ function handle(msg: RpcRequest, origin: string) {
     case "tools/list":
       return ok({ tools: TOOLS });
     case "tools/call": {
-      const result = callTool(params?.name, params?.arguments ?? {}, origin);
+      const result = callTool(params?.name ?? "", params?.arguments ?? {}, origin);
       if (!result) return err(-32602, `Unknown tool: ${params?.name}`);
       return ok(result);
     }
