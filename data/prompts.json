@@ -47966,5 +47966,394 @@
       "cout-workshop",
       "cout-trim-scope"
     ]
+  },
+  {
+    "id": "study-exam-countdown",
+    "title": "Build a Countdown Study Plan for an Exam",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "study-plans",
+    "aiTool": "Claude",
+    "promptText": "Build me a study plan for my upcoming exam. The exam is [EXAM OR SUBJECT], it is on [EXAM DATE], the topics covered are [TOPICS OR PASTE SYLLABUS], my confidence in each topic is [STRONG, OKAY, WEAK FOR EACH], and the time I can study is [HOURS PER DAY OR WEEK]. Create a day by day or week by week plan that covers every topic, gives more time to weak areas, includes regular review of earlier topics, and saves the final stretch for practice tests and revision rather than new material. Note that students often spend most of their time on topics they already like, so deliberately putting weak topics earlier, when there is still time to fix them, makes a big difference, and testing myself with practice questions is far more effective than rereading notes, which feels productive but builds little lasting memory. Give me the exam study plan.",
+    "description": "Plan every topic to the exam date, weak areas first, tests at the end.",
+    "useCase": "Use this when you have an exam date. Students spend most time on topics they already like, so put weak topics earlier while there is time to fix them, and testing yourself with practice questions is far more effective than rereading notes, which feels productive but builds little memory.",
+    "variables": [
+      "EXAM OR SUBJECT",
+      "EXAM DATE",
+      "TOPICS OR PASTE SYLLABUS",
+      "STRONG, OKAY, WEAK FOR EACH",
+      "HOURS PER DAY OR WEEK"
+    ],
+    "relatedPromptIds": [
+      "study-quick-plan",
+      "study-practice-tests",
+      "study-final-week"
+    ]
+  },
+  {
+    "id": "study-quick-plan",
+    "title": "Get a Quick Study Plan",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "study-plans",
+    "aiTool": "Grok",
+    "promptText": "Give me a quick study plan. I am studying [SUBJECT], I have [DAYS OR WEEKS] until [DEADLINE OR EXAM], and I can study [TIME PER DAY]. List what to study each day or week in short lines, with review days included, no explanation. Give me the plan.",
+    "description": "Get a simple day or week study schedule, fast.",
+    "useCase": "Use this when you need a plan right now. A quick schedule gets you started today, but adjust it after the first few days, since you will quickly see which topics need more time than a generic plan gives them.",
+    "variables": [
+      "SUBJECT",
+      "DAYS OR WEEKS",
+      "DEADLINE OR EXAM",
+      "TIME PER DAY"
+    ],
+    "relatedPromptIds": [
+      "study-exam-countdown",
+      "study-weekly-timetable",
+      "study-catch-up"
+    ]
+  },
+  {
+    "id": "study-weekly-timetable",
+    "title": "Fit a Study Timetable Around Work and Family",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "study-plans",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me create a weekly study timetable that fits around my life. My fixed commitments are [WORK HOURS, FAMILY DUTIES, OTHER COMMITMENTS], what I am studying is [COURSE OR SUBJECTS], the study hours needed per week are [HOURS], when I have the most energy is [BEST TIMES], and the places I can study are [LOCATIONS]. Build a realistic weekly timetable with specific study blocks, what to do in each, short sessions for low energy times, and a catch up slot. Note that plans packed into every free hour usually collapse within a couple of weeks, so leaving some rest and a weekly catch up slot makes the plan last longer, hard tasks belong in high energy times while review and flashcards suit tired or short gaps, and family members are more supportive when they know the schedule. Give me the weekly timetable.",
+    "description": "Schedule realistic study blocks around work and family, with a catch up slot.",
+    "useCase": "Use this if you study alongside work or family. Plans packed into every free hour collapse within weeks, so leave rest and a weekly catch up slot, put hard tasks in high energy times and review in short or tired gaps, and share the schedule with family so they can support it.",
+    "variables": [
+      "WORK HOURS, FAMILY DUTIES, OTHER COMMITMENTS",
+      "COURSE OR SUBJECTS",
+      "HOURS",
+      "BEST TIMES",
+      "LOCATIONS"
+    ],
+    "relatedPromptIds": [
+      "study-online-degree",
+      "study-quick-plan",
+      "study-burnout-prevention"
+    ]
+  },
+  {
+    "id": "study-from-syllabus",
+    "title": "Turn a Course Syllabus Into a Study Plan",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "study-plans",
+    "aiTool": "Gemini",
+    "promptText": "Help me turn my course syllabus into a semester study plan. Here is the syllabus: [PASTE SYLLABUS WITH DATES, READINGS, ASSIGNMENTS, AND EXAMS], the other courses or commitments I have are [OTHER LOAD], and my study time per week is [HOURS]. Map out every week with readings, assignment work broken into steps with start dates well before due dates, review sessions, and exam preparation, and flag weeks where several deadlines collide. Note that big assignments feel far away until they suddenly are not, so breaking them into steps with their own mini deadlines prevents last minute rushes, and weeks where deadlines from several courses overlap are where most students fall behind, so spotting them now lets me work ahead. Give me the semester study plan.",
+    "description": "Map a semester week by week, with assignments split into early steps.",
+    "useCase": "Use this at the start of a course or semester. Big assignments feel far away until suddenly they are not, so split them into steps with mini deadlines, and weeks where several courses' deadlines overlap are where most students fall behind, so spotting them now lets you work ahead.",
+    "variables": [
+      "PASTE SYLLABUS WITH DATES, READINGS, ASSIGNMENTS, AND EXAMS",
+      "OTHER LOAD",
+      "HOURS"
+    ],
+    "relatedPromptIds": [
+      "study-online-degree",
+      "study-exam-countdown",
+      "study-progress-tracker"
+    ]
+  },
+  {
+    "id": "study-spaced-repetition",
+    "title": "Set Up a Spaced Repetition Review Schedule",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "study-plans",
+    "aiTool": "Claude",
+    "promptText": "Help me set up spaced repetition for what I need to remember. What I am learning is [SUBJECT, E.G. VOCABULARY, FORMULAS, DEFINITIONS, MEDICAL TERMS, LAW CASES], how much material there is is [AMOUNT], my deadline, if any, is [DATE], and the tools I could use are [E.G. ANKI, QUIZLET, PAPER FLASHCARDS, A NOTES APP]. Explain how spaced repetition works in plain language, how to make good flashcards for my subject, a daily review routine, and how many new cards to add per day so reviews stay manageable. Note that spaced repetition is one of the most reliable ways to remember facts long term, but adding too many new cards at once creates a pile of reviews that becomes overwhelming, and flashcards work best for facts, while understanding concepts and solving problems still needs practice beyond cards. Give me the spaced repetition plan.",
+    "description": "Set up flashcards and a daily review routine that stays manageable.",
+    "useCase": "Use this for anything you must remember long term. Spaced repetition is one of the most reliable memory methods, but adding too many new cards at once creates an overwhelming review pile, and flashcards work for facts, while concepts and problem solving still need practice.",
+    "variables": [
+      "SUBJECT, E.G. VOCABULARY, FORMULAS, DEFINITIONS, MEDICAL TERMS, LAW CASES",
+      "AMOUNT",
+      "DATE",
+      "E.G. ANKI, QUIZLET, PAPER FLASHCARDS, A NOTES APP"
+    ],
+    "relatedPromptIds": [
+      "study-active-recall",
+      "study-exam-countdown",
+      "study-language-test"
+    ]
+  },
+  {
+    "id": "study-active-recall",
+    "title": "Replace Rereading With Active Recall",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "study-plans",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me change how I study [SUBJECT] from rereading to active recall. How I study now is [CURRENT METHOD, E.G. REREADING NOTES, HIGHLIGHTING, WATCHING LECTURES AGAIN], the material is [NOTES, TEXTBOOK, LECTURES], and the time per session is [MINUTES]. Give me a session routine using techniques like closing the book and writing what I remember, answering my own questions, explaining topics aloud, and practice problems, plus a way to turn my notes into questions. Note that rereading and highlighting feel effective because the material looks familiar, but familiarity is not the same as being able to recall it in an exam, so active recall feels harder and slower at first, which is actually a sign it is working, and checking answers afterward is essential so mistakes do not get memorized. Give me the active recall routine.",
+    "description": "Swap rereading for self testing and explaining, session by session.",
+    "useCase": "Use this if you reread notes but forget in exams. Rereading and highlighting feel effective because material looks familiar, but familiarity is not recall, so active recall feels harder at first, which means it is working, and always check answers so mistakes are not memorized.",
+    "variables": [
+      "SUBJECT",
+      "CURRENT METHOD, E.G. REREADING NOTES, HIGHLIGHTING, WATCHING LECTURES AGAIN",
+      "NOTES, TEXTBOOK, LECTURES",
+      "MINUTES"
+    ],
+    "relatedPromptIds": [
+      "study-spaced-repetition",
+      "study-practice-tests",
+      "study-ai-tutor"
+    ]
+  },
+  {
+    "id": "study-practice-tests",
+    "title": "Plan How to Use Practice Tests",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "study-plans",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan how to use practice tests for [EXAM]. The practice materials available are [E.G. PAST PAPERS, OFFICIAL PRACTICE TESTS, QUESTION BANKS, NONE YET], the exam date is [DATE], the exam format is [FORMAT, TIMING, AND SECTIONS], and my current scores are [IF KNOWN]. Create a plan for when to take practice tests, how to take them under real conditions, how to review mistakes by type, and how to adjust my studying based on results. Note that taking practice tests without reviewing why each answer was wrong wastes most of their value, so tracking mistakes by type, like careless errors, knowledge gaps, or running out of time, shows what to fix, and official practice materials match the real exam far better than unofficial ones, which can differ in style and difficulty. Give me the practice test plan.",
+    "description": "Schedule practice tests under real conditions and review mistakes by type.",
+    "useCase": "Use this in the weeks before an exam. Practice tests without reviewing why answers were wrong waste most of their value, so track mistakes by type, like careless errors, gaps, or timing, and official materials match the real exam far better than unofficial ones.",
+    "variables": [
+      "EXAM",
+      "E.G. PAST PAPERS, OFFICIAL PRACTICE TESTS, QUESTION BANKS, NONE YET",
+      "DATE",
+      "FORMAT, TIMING, AND SECTIONS",
+      "IF KNOWN"
+    ],
+    "relatedPromptIds": [
+      "study-exam-countdown",
+      "study-final-week",
+      "study-certification-plan"
+    ]
+  },
+  {
+    "id": "study-final-week",
+    "title": "Plan the Final Week Before an Exam",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "study-plans",
+    "aiTool": "Claude",
+    "promptText": "Help me plan the last week before my exam. The exam is [EXAM], it is on [DATE AND TIME], the topics I still feel weak on are [WEAK TOPICS], what I have already covered is [COVERED TOPICS], and my time each day is [HOURS]. Prioritize what to focus on, given that I cannot cover everything again, with a daily plan, practice under exam conditions, a lighter final day, and an exam day checklist covering sleep, food, travel, documents, and timing. Note that in the final days, learning large amounts of new material rarely pays off and staying up late to cram usually hurts performance more than it helps, so focusing on high value topics, practice questions, and getting enough sleep gives better results, and checking practical details like the exam location and required documents early prevents avoidable stress. Give me the final week plan.",
+    "description": "Prioritize high value topics, practice, and sleep in the last week.",
+    "useCase": "Use this when your exam is a week away. Cramming large amounts of new material rarely pays off and late nights usually hurt more than help, so focus on high value topics, practice questions, and sleep, and check practical details like the exam location and required documents early.",
+    "variables": [
+      "EXAM",
+      "DATE AND TIME",
+      "WEAK TOPICS",
+      "COVERED TOPICS",
+      "HOURS"
+    ],
+    "relatedPromptIds": [
+      "study-practice-tests",
+      "study-exam-countdown",
+      "study-catch-up"
+    ]
+  },
+  {
+    "id": "study-catch-up",
+    "title": "Make a Catch Up Plan When You Have Fallen Behind",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "study-plans",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me catch up on [COURSE OR SUBJECT] after falling behind. What I have missed is [MISSED WEEKS, READINGS, ASSIGNMENTS], upcoming deadlines are [DEADLINES], my available time is [HOURS PER WEEK], and why I fell behind is [REASON, E.G. WORK, ILLNESS, FAMILY, LOST MOTIVATION]. Sort the missed material into must do, should do, and can skip, create a catch up plan that keeps up with current work at the same time, and suggest who to contact, like an instructor, about extensions if needed. Note that trying to catch up on everything in order while new material keeps arriving usually makes me fall further behind, so keeping up with current work while catching up on the most important missed pieces works better, and instructors are often more flexible than students expect when asked early and honestly. Give me the catch up plan.",
+    "description": "Triage missed work and catch up without falling further behind.",
+    "useCase": "Use this when you are behind in a course. Catching up on everything in order while new material arrives usually puts you further behind, so stay current while catching up on the most important missed pieces, and instructors are often more flexible than expected when asked early and honestly.",
+    "variables": [
+      "COURSE OR SUBJECT",
+      "MISSED WEEKS, READINGS, ASSIGNMENTS",
+      "DEADLINES",
+      "HOURS PER WEEK",
+      "REASON, E.G. WORK, ILLNESS, FAMILY, LOST MOTIVATION"
+    ],
+    "relatedPromptIds": [
+      "study-quick-plan",
+      "study-burnout-prevention",
+      "study-from-syllabus"
+    ]
+  },
+  {
+    "id": "study-certification-plan",
+    "title": "Build a Study Plan for a Professional Certification",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "study-plans",
+    "aiTool": "Gemini",
+    "promptText": "Build me a study plan for the [CERTIFICATION] exam. The official exam content outline or domains are [PASTE OR DESCRIBE THE OUTLINE AND WEIGHTINGS], my relevant experience is [EXPERIENCE], the materials I have are [E.G. OFFICIAL GUIDE, PREP COURSE, QUESTION BANK], my target exam date is [DATE], and my study time is [HOURS PER WEEK]. Create a plan weighted by the exam's domains, with reading, practice questions, full mock exams, and a readiness check before booking or sitting the exam. Note that certification exams usually test applying concepts to scenarios rather than memorizing definitions, so practice questions matter as much as reading, the official exam outline is the best guide to what is tested and is updated periodically, so I should use the current version, and booking the exam only after hitting consistent practice scores avoids paying for a retake. Give me the certification study plan.",
+    "description": "Weight study by the official exam domains and check readiness first.",
+    "useCase": "Use this for professional certification exams. They usually test applying concepts to scenarios rather than definitions, so practice questions matter as much as reading, use the current official exam outline since it is updated, and book only after consistent practice scores to avoid paying for a retake.",
+    "variables": [
+      "CERTIFICATION",
+      "PASTE OR DESCRIBE THE OUTLINE AND WEIGHTINGS",
+      "EXPERIENCE",
+      "E.G. OFFICIAL GUIDE, PREP COURSE, QUESTION BANK",
+      "DATE",
+      "HOURS PER WEEK"
+    ],
+    "relatedPromptIds": [
+      "study-practice-tests",
+      "study-weekly-timetable",
+      "study-progress-tracker"
+    ]
+  },
+  {
+    "id": "study-language-test",
+    "title": "Build a Study Plan for an English Proficiency Test",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "study-plans",
+    "aiTool": "Claude",
+    "promptText": "Build me a study plan for the [E.G. IELTS, TOEFL, PTE, DUOLINGO ENGLISH TEST, OTHER LANGUAGE TEST] exam. The score I need is [TARGET SCORE AND FOR WHAT PURPOSE], my current level or practice score is [CURRENT LEVEL], my weakest sections are [E.G. WRITING, SPEAKING, LISTENING, READING], my test date is [DATE], and my study time is [HOURS PER WEEK]. Create a plan with section by section practice, how to get feedback on writing and speaking, timed practice, and test day preparation. Note that writing and speaking improve slowly and need feedback from someone fluent or a reliable scoring guide, since practicing alone can reinforce the same mistakes, test strategies help but cannot replace real language ability, and score requirements and test formats change, so the current official format and the exact score the school, employer, or visa office requires should be confirmed. Give me the language test study plan.",
+    "description": "Plan section practice, feedback, and timed tests for a language exam.",
+    "useCase": "Use this for IELTS, TOEFL, or similar tests. Writing and speaking improve slowly and need feedback from someone fluent, since practicing alone reinforces mistakes, strategies cannot replace real ability, and formats and score requirements change, so confirm the current format and exact score required.",
+    "variables": [
+      "E.G. IELTS, TOEFL, PTE, DUOLINGO ENGLISH TEST, OTHER LANGUAGE TEST",
+      "TARGET SCORE AND FOR WHAT PURPOSE",
+      "CURRENT LEVEL",
+      "E.G. WRITING, SPEAKING, LISTENING, READING",
+      "DATE",
+      "HOURS PER WEEK"
+    ],
+    "relatedPromptIds": [
+      "study-spaced-repetition",
+      "study-practice-tests",
+      "study-group-plan"
+    ]
+  },
+  {
+    "id": "study-online-degree",
+    "title": "Plan Study for an Online Degree While Working",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "study-plans",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me plan how to study for an online degree while working. The program is [PROGRAM, E.G. ONLINE MBA, BACHELOR'S DEGREE, MASTER'S], the courses I am taking this term are [COURSES AND WORKLOAD], my job and other commitments are [COMMITMENTS], my time zone versus the school's is [TIME ZONES], and the parts I struggle with are [E.G. DISCUSSION POSTS, GROUP PROJECTS, LIVE SESSIONS, READING LOAD]. Create a weekly routine covering readings, discussion posts, assignments, group work, and live sessions, and strategies for time zone differences and busy work weeks. Note that online programs require more self discipline than in person ones, because nobody notices when I fall behind until a deadline is missed, time zone differences can make group projects and live sessions difficult, so agreeing on communication early helps, and talking to instructors before a crunch week usually works out better than explaining after a missed deadline. Give me the online degree study plan.",
+    "description": "Build a weekly routine for online coursework, group work, and time zones.",
+    "useCase": "Use this if you study online while working. Online programs need more self discipline since nobody notices you falling behind until a deadline is missed, time zone gaps complicate group work and live sessions, so agree on communication early, and talk to instructors before a crunch week, not after.",
+    "variables": [
+      "PROGRAM, E.G. ONLINE MBA, BACHELOR'S DEGREE, MASTER'S",
+      "COURSES AND WORKLOAD",
+      "COMMITMENTS",
+      "TIME ZONES",
+      "E.G. DISCUSSION POSTS, GROUP PROJECTS, LIVE SESSIONS, READING LOAD"
+    ],
+    "relatedPromptIds": [
+      "study-weekly-timetable",
+      "study-from-syllabus",
+      "study-group-plan"
+    ]
+  },
+  {
+    "id": "study-child-plan",
+    "title": "Help a Child Build a Study Routine",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "study-plans",
+    "aiTool": "Gemini",
+    "promptText": "Help me support my child in building a study routine. The child's age and school level are [AGE AND GRADE], the subjects or skills they need help with are [SUBJECTS], how they learn best is [E.G. HANDS ON, TALKING IT THROUGH, VISUALS, SHORT BURSTS], their schedule includes [SCHOOL, TUTORING, ACTIVITIES, CHORES], and the language of their schooling is [LANGUAGE]. Suggest an age appropriate routine with session lengths, breaks, a place to study, how I can help without doing the work for them, and ways to keep it positive. Note that younger children concentrate for much shorter periods than adults, so short sessions with breaks and movement work better than long sittings, praise for effort and strategies builds motivation more than praise for being smart, and if a child struggles persistently despite good effort, talking with their teacher can help find out whether they need different support. Give me the child study routine.",
+    "description": "Set an age appropriate study routine with short sessions and support.",
+    "useCase": "Use this to help a child study at home. Younger children concentrate for much shorter periods, so short sessions with breaks and movement work better, praising effort and strategies builds motivation more than praising being smart, and persistent struggle despite effort is worth raising with their teacher.",
+    "variables": [
+      "AGE AND GRADE",
+      "SUBJECTS",
+      "E.G. HANDS ON, TALKING IT THROUGH, VISUALS, SHORT BURSTS",
+      "SCHOOL, TUTORING, ACTIVITIES, CHORES",
+      "LANGUAGE"
+    ],
+    "relatedPromptIds": [
+      "study-weekly-timetable",
+      "study-active-recall",
+      "study-environment"
+    ]
+  },
+  {
+    "id": "study-group-plan",
+    "title": "Organize a Study Group That Actually Helps",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "study-plans",
+    "aiTool": "Claude",
+    "promptText": "Help me organize a study group for [SUBJECT OR EXAM]. The members are [NUMBER AND THEIR LEVELS], we can meet [ONLINE OR IN PERSON, AND HOW OFTEN], the time zones or schedules involved are [AVAILABILITY], and our shared goal is [GOAL]. Create a plan with a session structure, roles like a rotating leader, preparation everyone does before each session, activities like quizzing each other and explaining topics, and simple ground rules. Note that study groups help when members come prepared and actively test and teach each other, but they easily become social chats or sessions where one person does all the explaining, so a clear structure and preparation rule matter, and groups of three to five usually work better than larger ones. Give me the study group plan.",
+    "description": "Structure a small study group around preparation and quizzing each other.",
+    "useCase": "Use this when studying with others. Groups help when members come prepared and test and teach each other, but easily become social chats or one person explaining everything, so use a clear structure and preparation rule, and keep groups to three to five people.",
+    "variables": [
+      "SUBJECT OR EXAM",
+      "NUMBER AND THEIR LEVELS",
+      "ONLINE OR IN PERSON, AND HOW OFTEN",
+      "AVAILABILITY",
+      "GOAL"
+    ],
+    "relatedPromptIds": [
+      "study-online-degree",
+      "study-active-recall",
+      "study-language-test"
+    ]
+  },
+  {
+    "id": "study-ai-tutor",
+    "title": "Use AI as a Study Partner Without Shortcutting Learning",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "study-plans",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me plan how to use AI tools in my studying for [SUBJECT] without shortcutting my learning. My course rules on AI use are [WHAT YOUR SCHOOL OR COURSE ALLOWS], what I want help with is [E.G. EXPLANATIONS, QUIZZING ME, FEEDBACK ON DRAFTS, PLANNING], and the tools I have are [AI TOOLS]. Suggest specific ways to use AI that build my understanding, like asking it to quiz me, explain a concept at my level, or critique my draft without rewriting it, and ways to avoid, plus how to check its answers. Note that having AI write answers or solve problems for me feels efficient but skips the thinking that creates learning, and can break academic integrity rules, AI explanations are sometimes wrong in ways that sound convincing, so checking against my course materials matters, and my school's specific policy on AI use takes priority over general advice. Give me the AI study plan.",
+    "description": "Use AI to quiz and critique you while following your course rules.",
+    "useCase": "Use this if you study with AI tools. Having AI write answers skips the thinking that creates learning and can break academic integrity rules, AI explanations can be convincingly wrong, so check against course materials, and your school's AI policy takes priority over general advice.",
+    "variables": [
+      "SUBJECT",
+      "WHAT YOUR SCHOOL OR COURSE ALLOWS",
+      "E.G. EXPLANATIONS, QUIZZING ME, FEEDBACK ON DRAFTS, PLANNING",
+      "AI TOOLS"
+    ],
+    "relatedPromptIds": [
+      "study-active-recall",
+      "study-spaced-repetition",
+      "study-online-degree"
+    ]
+  },
+  {
+    "id": "study-environment",
+    "title": "Set Up a Study Space and Beat Distractions",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "study-plans",
+    "aiTool": "Gemini",
+    "promptText": "Help me set up a better study environment and handle distractions. Where I study is [E.G. HOME, SHARED ROOM, CAFE, LIBRARY, WORKPLACE], my main distractions are [E.G. PHONE, NOISE, FAMILY, SOCIAL MEDIA, HEAT, INTERNET CUTS], my devices are [DEVICES], and when I study is [TIMES]. Suggest practical changes to my space, phone and app settings, routines to start a session quickly, and backup plans for noise, power, or internet problems. Note that willpower alone rarely beats a phone within reach, so physically moving it away or using focus settings works better than trying to ignore it, perfect study spaces are not necessary, a consistent spot and start routine matter more, and having offline materials ready means a power or internet cut does not end the session. Give me the study environment plan.",
+    "description": "Arrange your space, phone, and backups so sessions start and stay focused.",
+    "useCase": "Use this if you struggle to focus while studying. Willpower rarely beats a phone within reach, so move it away or use focus settings, a consistent spot and start routine matter more than a perfect space, and offline materials keep a power or internet cut from ending the session.",
+    "variables": [
+      "E.G. HOME, SHARED ROOM, CAFE, LIBRARY, WORKPLACE",
+      "E.G. PHONE, NOISE, FAMILY, SOCIAL MEDIA, HEAT, INTERNET CUTS",
+      "DEVICES",
+      "TIMES"
+    ],
+    "relatedPromptIds": [
+      "study-weekly-timetable",
+      "study-burnout-prevention",
+      "study-child-plan"
+    ]
+  },
+  {
+    "id": "study-burnout-prevention",
+    "title": "Build Rest Into a Demanding Study Plan",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "study-plans",
+    "aiTool": "Claude",
+    "promptText": "Help me adjust my study plan so it is sustainable and I do not burn out. My current plan is [PASTE OR DESCRIBE IT], how I am feeling is [E.G. TIRED, STRESSED, LOSING MOTIVATION, FINE BUT WORRIED], my sleep and rest look like [SLEEP AND BREAKS], and what I need to achieve is [GOAL AND DEADLINE]. Suggest changes like scheduled breaks, a rest day, realistic daily targets, and signs that I need to ease off, while still meeting my goal. Note that studying longer while exhausted produces less learning than shorter focused sessions after rest, since sleep is when much of memory forms, so cutting sleep to study usually backfires, and persistent exhaustion, low mood, or anxiety that does not lift with rest deserves attention and, if it continues, a conversation with a doctor or counselor. Give me the sustainable study plan.",
+    "description": "Add breaks, sleep, and realistic targets so studying stays sustainable.",
+    "useCase": "Use this when studying is wearing you down. Studying longer while exhausted produces less learning than shorter focused sessions after rest, cutting sleep usually backfires since sleep is when memory forms, and persistent exhaustion, low mood, or anxiety deserves a conversation with a doctor or counselor.",
+    "variables": [
+      "PASTE OR DESCRIBE IT",
+      "E.G. TIRED, STRESSED, LOSING MOTIVATION, FINE BUT WORRIED",
+      "SLEEP AND BREAKS",
+      "GOAL AND DEADLINE"
+    ],
+    "relatedPromptIds": [
+      "study-weekly-timetable",
+      "study-catch-up",
+      "study-environment"
+    ]
+  },
+  {
+    "id": "study-progress-tracker",
+    "title": "Track Study Progress and Adjust the Plan",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "study-plans",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me track my study progress and adjust my plan. My goal is [GOAL AND DEADLINE], my plan is [PASTE OR SUMMARIZE PLAN], what I have done so far is [SESSIONS COMPLETED, TOPICS COVERED, PRACTICE SCORES], and where I am struggling is [PROBLEMS]. Create a simple tracker I can update weekly, review my current progress against the plan, and suggest adjustments for the next two weeks. Note that tracking hours studied can be misleading, since time spent is not the same as progress, so practice scores and topics I can explain from memory are better signs, and a weekly check lets me adjust early instead of discovering in the last week that I am far behind. Give me the tracker and adjustments.",
+    "description": "Track real progress weekly and adjust before it is too late.",
+    "useCase": "Use this weekly while preparing for any goal. Hours studied can mislead, since time spent is not progress, so practice scores and topics you can explain from memory are better signs, and a weekly check lets you adjust early rather than discover in the last week that you are far behind.",
+    "variables": [
+      "GOAL AND DEADLINE",
+      "PASTE OR SUMMARIZE PLAN",
+      "SESSIONS COMPLETED, TOPICS COVERED, PRACTICE SCORES",
+      "PROBLEMS"
+    ],
+    "relatedPromptIds": [
+      "study-exam-countdown",
+      "study-certification-plan",
+      "study-catch-up"
+    ]
   }
 ]
