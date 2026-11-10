@@ -48355,5 +48355,396 @@
       "study-certification-plan",
       "study-catch-up"
     ]
+  },
+  {
+    "id": "cexp-at-my-level",
+    "title": "Explain a Concept at Exactly My Level",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "concept-explainers",
+    "aiTool": "Claude",
+    "promptText": "Explain [CONCEPT] to me at my level. What I already know about the subject is [YOUR BACKGROUND], why I need to understand it is [PURPOSE, E.G. A CLASS, WORK, A DECISION, CURIOSITY], and what confuses me about it is [WHAT YOU DO NOT GET]. Start with a one sentence summary, then a plain explanation, a concrete example, and how it connects to what I already know, then ask me one question to check I understood. Note that explanations pitched too high skip steps that feel obvious to experts, and ones pitched too low feel patronizing, so starting from what I actually know works best, and if part of the explanation simplifies the real idea, it should say so, since oversimplified explanations can create misunderstandings that are hard to undo later. Give me the explanation.",
+    "description": "Get a plain explanation built on what you already know, then a check question.",
+    "useCase": "Use this for any concept you need to understand. Explanations pitched too high skip steps experts find obvious and too low feel patronizing, so start from what you know, and ask for simplifications to be flagged, since oversimplified ideas create misunderstandings that are hard to undo.",
+    "variables": [
+      "CONCEPT",
+      "YOUR BACKGROUND",
+      "PURPOSE, E.G. A CLASS, WORK, A DECISION, CURIOSITY",
+      "WHAT YOU DO NOT GET"
+    ],
+    "relatedPromptIds": [
+      "cexp-quick-simple",
+      "cexp-layered",
+      "cexp-check-understanding"
+    ]
+  },
+  {
+    "id": "cexp-quick-simple",
+    "title": "Get a Quick Simple Explanation",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "concept-explainers",
+    "aiTool": "Grok",
+    "promptText": "Explain [CONCEPT] simply. Give me a three sentence explanation a curious twelve year old could follow, then one everyday example, no extra explanation. Give me the explanation.",
+    "description": "Get a three sentence explanation and an everyday example, fast.",
+    "useCase": "Use this to grasp the basic idea of something fast. A simple explanation gives you a foothold, but very short versions leave out important details, so follow up with a fuller explanation if you need to use the concept for work or study.",
+    "variables": [
+      "CONCEPT"
+    ],
+    "relatedPromptIds": [
+      "cexp-at-my-level",
+      "cexp-analogy",
+      "cexp-layered"
+    ]
+  },
+  {
+    "id": "cexp-analogy",
+    "title": "Explain a Concept Through an Analogy From My World",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "concept-explainers",
+    "aiTool": "ChatGPT",
+    "promptText": "Explain [CONCEPT] using an analogy from something I know well. My work, hobbies, or daily life involve [WHAT YOU KNOW WELL, E.G. COOKING, FARMING, RUNNING A SHOP, FOOTBALL, TEACHING, DRIVING], and the part of the concept I find hardest is [HARD PART]. Give me one or two analogies, show how each part of the analogy matches the concept, and then explain where the analogy breaks down. Note that analogies make abstract ideas click by linking them to familiar experience, but every analogy fails somewhere, and relying on it past that point leads to wrong conclusions, so knowing exactly where it stops matching is as important as the analogy itself. Give me the analogy explanation.",
+    "description": "Map a concept onto something you know well, including where it breaks.",
+    "useCase": "Use this when an abstract idea will not click. Analogies link new ideas to familiar experience, but every analogy fails somewhere and relying on it past that point leads to wrong conclusions, so knowing where it stops matching is as important as the analogy itself.",
+    "variables": [
+      "CONCEPT",
+      "WHAT YOU KNOW WELL, E.G. COOKING, FARMING, RUNNING A SHOP, FOOTBALL, TEACHING, DRIVING",
+      "HARD PART"
+    ],
+    "relatedPromptIds": [
+      "cexp-quick-simple",
+      "cexp-at-my-level",
+      "cexp-compare-concepts"
+    ]
+  },
+  {
+    "id": "cexp-layered",
+    "title": "Explain a Concept in Layers From Simple to Advanced",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "concept-explainers",
+    "aiTool": "Gemini",
+    "promptText": "Explain [CONCEPT] in layers, from simple to advanced. My goal is [WHY YOU NEED IT AND HOW DEEP YOU NEED TO GO]. Give me four levels: a one line summary, a plain explanation for a beginner, a more detailed explanation with correct terms, and an advanced view covering nuances, exceptions, or debates, and tell me which level I probably need for my goal. Note that learning in layers lets me stop at the depth I actually need rather than wading through everything, and each layer should correct or refine the simpler ones rather than contradict them, while the advanced layer may include areas where experts disagree, which should be marked as such rather than presented as settled. Give me the layered explanation.",
+    "description": "Explain a concept at four depths and say which one you need.",
+    "useCase": "Use this when you are not sure how deep to go. Layers let you stop at the depth you need, each should refine the simpler ones rather than contradict them, and the advanced layer may include areas where experts disagree, which should be marked rather than presented as settled.",
+    "variables": [
+      "CONCEPT",
+      "WHY YOU NEED IT AND HOW DEEP YOU NEED TO GO"
+    ],
+    "relatedPromptIds": [
+      "cexp-at-my-level",
+      "cexp-misconceptions",
+      "cexp-quick-simple"
+    ]
+  },
+  {
+    "id": "cexp-feynman-check",
+    "title": "Explain It Back and Get Your Gaps Found",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "concept-explainers",
+    "aiTool": "Claude",
+    "promptText": "I am going to explain [CONCEPT] in my own words, and I want you to find the gaps in my understanding. Here is my explanation: [YOUR EXPLANATION IN YOUR OWN WORDS], and the level I am studying at is [LEVEL]. Point out what I got right, anything wrong, anything vague where I used jargon instead of explaining, and important parts I left out, then ask me questions that target the weak spots. Note that explaining a concept simply in my own words is one of the best tests of real understanding, since gaps hide easily when I only read or listen, and vague phrases or borrowed jargon often signal the exact places I do not yet understand, so the feedback should be direct rather than overly encouraging. Give me the gap check.",
+    "description": "Explain a concept yourself and get direct feedback on the gaps.",
+    "useCase": "Use this to test whether you really understand something. Explaining simply in your own words is one of the best tests, since gaps hide when you only read or listen, and vague phrases or borrowed jargon often mark exactly what you do not understand, so ask for direct rather than gentle feedback.",
+    "variables": [
+      "CONCEPT",
+      "YOUR EXPLANATION IN YOUR OWN WORDS",
+      "LEVEL"
+    ],
+    "relatedPromptIds": [
+      "cexp-check-understanding",
+      "cexp-socratic",
+      "cexp-misconceptions"
+    ]
+  },
+  {
+    "id": "cexp-misconceptions",
+    "title": "Learn the Common Misconceptions About a Concept",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "concept-explainers",
+    "aiTool": "ChatGPT",
+    "promptText": "Tell me the most common misconceptions about [CONCEPT]. My level is [LEVEL] and the context I need it for is [CONTEXT]. For each misconception, explain what people wrongly believe, why it seems believable, what is actually true, and a quick way to tell the difference. Note that many concepts are learned wrong because the wrong version is simpler or matches everyday experience, and knowing the common mistakes in advance helps me avoid them and spot them in what I read, while some popular claims are oversimplified rather than completely wrong, so the explanation should be clear about which is which. Give me the misconceptions.",
+    "description": "See what people commonly get wrong and why it seems right.",
+    "useCase": "Use this before or after learning a concept. Many concepts are learned wrong because the wrong version is simpler or matches everyday experience, knowing common mistakes helps you avoid and spot them, and some claims are oversimplified rather than wrong, so ask which is which.",
+    "variables": [
+      "CONCEPT",
+      "LEVEL",
+      "CONTEXT"
+    ],
+    "relatedPromptIds": [
+      "cexp-layered",
+      "cexp-feynman-check",
+      "cexp-compare-concepts"
+    ]
+  },
+  {
+    "id": "cexp-worked-example",
+    "title": "Explain a Concept Through a Step by Step Worked Example",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "concept-explainers",
+    "aiTool": "Gemini",
+    "promptText": "Teach me [CONCEPT OR METHOD] through a worked example. My level is [LEVEL], a realistic situation I could apply it to is [YOUR SITUATION OR LET YOU CHOOSE], and where I usually get stuck is [STICKING POINT]. Walk through one complete example step by step, explaining why each step is taken, not just what to do, then give me a similar problem to try myself with the answer hidden at the end. Note that worked examples are one of the fastest ways to learn procedures, but following an example is easier than solving a problem alone, so trying a similar problem straight afterward is what turns understanding into skill, and explaining the reason for each step helps me handle problems that look a little different. Give me the worked example.",
+    "description": "Walk through one example with the why of each step, then try one yourself.",
+    "useCase": "Use this for methods, formulas, or procedures. Worked examples are one of the fastest ways to learn procedures, but following is easier than solving alone, so trying a similar problem straight after turns understanding into skill, and knowing why each step happens helps with problems that look different.",
+    "variables": [
+      "CONCEPT OR METHOD",
+      "LEVEL",
+      "YOUR SITUATION OR LET YOU CHOOSE",
+      "STICKING POINT"
+    ],
+    "relatedPromptIds": [
+      "cexp-math-formula",
+      "cexp-check-understanding",
+      "cexp-at-my-level"
+    ]
+  },
+  {
+    "id": "cexp-diagram",
+    "title": "Explain a Concept With a Diagram",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "concept-explainers",
+    "aiTool": "Claude",
+    "promptText": "Explain [CONCEPT] with a diagram. The concept involves [E.G. A PROCESS, A CYCLE, A HIERARCHY, CAUSE AND EFFECT, PARTS OF A SYSTEM, A COMPARISON], and the format I can use is [E.G. MERMAID CODE, A SIMPLE TEXT DIAGRAM, A DESCRIPTION I CAN DRAW BY HAND]. Create the diagram, then explain it piece by piece, and suggest how I could redraw it from memory to test myself. Note that diagrams make relationships and processes far easier to grasp than paragraphs, but a diagram with too many boxes and arrows becomes as confusing as the text it replaces, so showing the main structure clearly matters more than including every detail, and redrawing it from memory is an excellent way to check what I have actually learned. Give me the diagram explanation.",
+    "description": "Show a concept's structure in a clear diagram you can redraw from memory.",
+    "useCase": "Use this for processes, cycles, systems, or hierarchies. Diagrams make relationships far easier to grasp than paragraphs, but too many boxes and arrows confuse as much as text, so show the main structure clearly, and redraw it from memory to check what you learned.",
+    "variables": [
+      "CONCEPT",
+      "E.G. A PROCESS, A CYCLE, A HIERARCHY, CAUSE AND EFFECT, PARTS OF A SYSTEM, A COMPARISON",
+      "E.G. MERMAID CODE, A SIMPLE TEXT DIAGRAM, A DESCRIPTION I CAN DRAW BY HAND"
+    ],
+    "relatedPromptIds": [
+      "cexp-layered",
+      "cexp-compare-concepts",
+      "cexp-worked-example"
+    ]
+  },
+  {
+    "id": "cexp-compare-concepts",
+    "title": "Explain the Difference Between Two Similar Concepts",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "concept-explainers",
+    "aiTool": "ChatGPT",
+    "promptText": "Explain the difference between [CONCEPT A] and [CONCEPT B]. The context I am using them in is [CONTEXT], and why I keep mixing them up is [WHAT CONFUSES YOU]. Give me a one line difference, a comparison table of key features, an example where each applies, an example where people use the wrong one, and a memory trick to keep them apart. Note that similar concepts are confusing because they share most features, so focusing on the one or two features that actually separate them helps more than listing everything, and in some fields the terms are used loosely or differently by different people, which should be pointed out if it applies. Give me the comparison.",
+    "description": "Separate two easily confused concepts with examples and a memory trick.",
+    "useCase": "Use this when you keep mixing two terms up. Similar concepts share most features, so focusing on the one or two that separate them helps more than listing everything, and some fields use terms loosely or differently, which is worth knowing.",
+    "variables": [
+      "CONCEPT A",
+      "CONCEPT B",
+      "CONTEXT",
+      "WHAT CONFUSES YOU"
+    ],
+    "relatedPromptIds": [
+      "cexp-misconceptions",
+      "cexp-analogy",
+      "cexp-diagram"
+    ]
+  },
+  {
+    "id": "cexp-why-it-matters",
+    "title": "Explain Why a Concept Matters in Real Life",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "concept-explainers",
+    "aiTool": "Gemini",
+    "promptText": "Explain why [CONCEPT] matters and where it shows up in real life. My context is [E.G. STUDENT, SMALL BUSINESS OWNER, WORKER IN A SPECIFIC FIELD, PARENT], where I live is [LOCATION], and why I am learning it is [REASON]. Give me several real world situations where this concept affects outcomes, including some from my context, what goes wrong when people do not understand it, and one way I could use it this week. Note that concepts are easier to learn and remember when I can see how they affect real decisions, and examples from my own country or industry are more meaningful than generic ones, but the examples should be realistic rather than exaggerated, since overstating a concept's importance can mislead. Give me the real world explanation.",
+    "description": "See where a concept affects real decisions, in your own context.",
+    "useCase": "Use this when a concept feels pointless to learn. Concepts stick when you see how they affect real decisions, and examples from your own country or industry mean more than generic ones, but they should be realistic, since overstating a concept's importance can mislead.",
+    "variables": [
+      "CONCEPT",
+      "E.G. STUDENT, SMALL BUSINESS OWNER, WORKER IN A SPECIFIC FIELD, PARENT",
+      "LOCATION",
+      "REASON"
+    ],
+    "relatedPromptIds": [
+      "cexp-at-my-level",
+      "cexp-analogy",
+      "cexp-for-clients"
+    ]
+  },
+  {
+    "id": "cexp-math-formula",
+    "title": "Explain a Math Formula in Plain Language",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "concept-explainers",
+    "aiTool": "Claude",
+    "promptText": "Explain this formula or math concept in plain language: [FORMULA OR CONCEPT]. Where I encountered it is [E.G. A STATISTICS CLASS, A FINANCE REPORT, AN ENGINEERING PROBLEM, A SPREADSHEET], my math comfort level is [LEVEL], and what I need to do with it is [E.G. UNDERSTAND IT, CALCULATE WITH IT, EXPLAIN IT TO SOMEONE]. Explain what each symbol means, what the formula is really saying in words, why it is built that way, a worked example with real numbers, and common calculation mistakes. Note that formulas look intimidating mainly because of symbols, and translating them into a sentence often makes them obvious, but plugging numbers in without understanding what the result means leads to errors, so checking whether an answer is sensible is part of the skill, and for important calculations the result should be double checked rather than trusted from a single explanation. Give me the formula explanation.",
+    "description": "Translate a formula's symbols into words and work a real example.",
+    "useCase": "Use this when a formula looks intimidating. Formulas look scary mainly because of symbols, and putting them into a sentence often makes them obvious, but plugging in numbers without understanding the result causes errors, so check answers are sensible and double check important calculations.",
+    "variables": [
+      "FORMULA OR CONCEPT",
+      "E.G. A STATISTICS CLASS, A FINANCE REPORT, AN ENGINEERING PROBLEM, A SPREADSHEET",
+      "LEVEL",
+      "E.G. UNDERSTAND IT, CALCULATE WITH IT, EXPLAIN IT TO SOMEONE"
+    ],
+    "relatedPromptIds": [
+      "cexp-worked-example",
+      "cexp-diagram",
+      "cexp-check-understanding"
+    ]
+  },
+  {
+    "id": "cexp-explain-code",
+    "title": "Explain Code Line by Line",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "concept-explainers",
+    "aiTool": "ChatGPT",
+    "promptText": "Explain this code to me line by line: [PASTE CODE]. The language is [PROGRAMMING LANGUAGE], my experience level is [LEVEL], and what I want to understand is [E.G. WHAT IT DOES, WHY IT WORKS, HOW TO CHANGE IT, WHY IT FAILS]. Give me a short summary of what the whole thing does, then go through it section by section in plain language, explain any concepts it relies on, and point out anything confusing, risky, or likely to break. Note that understanding code I did not write, including code generated by AI, is essential before using it, since it may contain bugs, security problems, or assumptions that do not fit my situation, and explanations of code can themselves be wrong, so running it with test inputs is the real check. Give me the code explanation.",
+    "description": "Understand what code does, why, and where it might break.",
+    "useCase": "Use this for code you did not write, including AI generated code. Understand it before using it, since it may contain bugs, security problems, or assumptions that do not fit your situation, and explanations can be wrong too, so running it with test inputs is the real check.",
+    "variables": [
+      "PASTE CODE",
+      "PROGRAMMING LANGUAGE",
+      "LEVEL",
+      "E.G. WHAT IT DOES, WHY IT WORKS, HOW TO CHANGE IT, WHY IT FAILS"
+    ],
+    "relatedPromptIds": [
+      "cexp-worked-example",
+      "cexp-feynman-check",
+      "cexp-at-my-level"
+    ]
+  },
+  {
+    "id": "cexp-for-children",
+    "title": "Explain a Concept to Children",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "concept-explainers",
+    "aiTool": "Gemini",
+    "promptText": "Help me explain [CONCEPT] to children. Their age is [AGE OR GRADE], the setting is [E.G. CLASSROOM, TUTORING, AT HOME], the language I will use is [LANGUAGE], and the time I have is [MINUTES]. Give me a simple explanation in short sentences, a hands on activity or demonstration using everyday objects, a story or familiar example, questions to ask them, and how to tell if they understood. Note that young children understand best through doing, seeing, and touching rather than listening to explanations, so a simple demonstration often teaches more than words, the explanation should be simplified but not wrong, since children remember early explanations for a long time, and examples should come from their own daily life and surroundings. Give me the child friendly explanation.",
+    "description": "Teach a concept to children with a hands on activity and questions.",
+    "useCase": "Use this when teaching children or helping with homework. Young children learn best by doing, seeing, and touching, so a simple demonstration often beats words, explanations should be simplified but not wrong since children remember them a long time, and examples should come from their own daily life.",
+    "variables": [
+      "CONCEPT",
+      "AGE OR GRADE",
+      "E.G. CLASSROOM, TUTORING, AT HOME",
+      "LANGUAGE",
+      "MINUTES"
+    ],
+    "relatedPromptIds": [
+      "cexp-quick-simple",
+      "cexp-analogy",
+      "cexp-second-language"
+    ]
+  },
+  {
+    "id": "cexp-second-language",
+    "title": "Explain a Concept for Learners Studying in a Second Language",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "concept-explainers",
+    "aiTool": "Claude",
+    "promptText": "Explain [CONCEPT] for someone learning it in a second language. The learner's first language is [FIRST LANGUAGE], their level in the language of instruction is [E.G. BEGINNER, INTERMEDIATE, ADVANCED ENGLISH], the subject is [SUBJECT], and the key terms they must learn are [TERMS]. Use short, clear sentences and common words, explain each key term simply, give a glossary with the term in both languages where possible, include an example, and avoid idioms. Note that learners studying in a second language often understand the idea but get lost in complicated sentences or idioms, so simple language helps them focus on the concept itself, technical terms may not have a common translation, so explaining the meaning matters more than translating the word, and any translations should be checked by a fluent speaker, since machine translations of technical terms are often wrong. Give me the second language explanation.",
+    "description": "Explain in simple language with a bilingual glossary and no idioms.",
+    "useCase": "Use this for students learning in English or another second language. They often grasp the idea but get lost in complex sentences and idioms, technical terms may lack common translations, so explain meaning over translating words, and have a fluent speaker check translations of technical terms.",
+    "variables": [
+      "CONCEPT",
+      "FIRST LANGUAGE",
+      "E.G. BEGINNER, INTERMEDIATE, ADVANCED ENGLISH",
+      "SUBJECT",
+      "TERMS"
+    ],
+    "relatedPromptIds": [
+      "cexp-for-children",
+      "cexp-jargon-decoder",
+      "cexp-at-my-level"
+    ]
+  },
+  {
+    "id": "cexp-jargon-decoder",
+    "title": "Decode the Jargon in a Document",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "concept-explainers",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me understand the jargon in this text: [PASTE TEXT]. The field it comes from is [FIELD, E.G. LAW, MEDICINE, FINANCE, TECHNOLOGY, GOVERNMENT, ACADEMIA], why I am reading it is [PURPOSE], and my background is [BACKGROUND]. List the specialized terms with plain explanations, then rewrite the key passage in plain language and tell me what it actually means for me. Note that jargon often hides simple ideas behind technical words, but in legal, medical, or financial documents the exact wording can matter a great deal, so a plain language summary helps understanding but is not a substitute for professional advice when decisions or obligations depend on it. Give me the jargon decoded.",
+    "description": "Turn specialist terms into plain language and say what it means for you.",
+    "useCase": "Use this for dense documents full of technical terms. Jargon often hides simple ideas, but in legal, medical, or financial documents exact wording can matter a great deal, so a plain summary aids understanding but does not replace professional advice when decisions or obligations depend on it.",
+    "variables": [
+      "PASTE TEXT",
+      "FIELD, E.G. LAW, MEDICINE, FINANCE, TECHNOLOGY, GOVERNMENT, ACADEMIA",
+      "PURPOSE",
+      "BACKGROUND"
+    ],
+    "relatedPromptIds": [
+      "cexp-explain-research",
+      "cexp-second-language",
+      "cexp-compare-concepts"
+    ]
+  },
+  {
+    "id": "cexp-explain-research",
+    "title": "Explain a Research Paper in Plain Language",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "concept-explainers",
+    "aiTool": "Gemini",
+    "promptText": "Explain this research paper in plain language: [PASTE ABSTRACT, KEY SECTIONS, OR THE WHOLE PAPER]. My background is [BACKGROUND], and why I am reading it is [PURPOSE]. Summarize the question it asks, how the researchers studied it, what they found, how strong the evidence is, the limitations they mention, and what it does and does not prove. Note that headlines and summaries often overstate research findings, a single study rarely settles a question, and details like sample size, who was studied, and whether it shows correlation or causation change what the results mean, so the explanation should be careful not to claim more than the paper shows, and if only the abstract is provided, the summary will miss important details. Give me the research explanation.",
+    "description": "Understand a paper's question, method, findings, and limits.",
+    "useCase": "Use this when reading studies for school, work, or decisions. Headlines often overstate findings, one study rarely settles a question, and sample size, who was studied, and correlation versus causation change what results mean, and summaries from the abstract alone miss important details.",
+    "variables": [
+      "PASTE ABSTRACT, KEY SECTIONS, OR THE WHOLE PAPER",
+      "BACKGROUND",
+      "PURPOSE"
+    ],
+    "relatedPromptIds": [
+      "cexp-jargon-decoder",
+      "cexp-layered",
+      "cexp-misconceptions"
+    ]
+  },
+  {
+    "id": "cexp-socratic",
+    "title": "Learn a Concept Through Guided Questions",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "concept-explainers",
+    "aiTool": "Claude",
+    "promptText": "Teach me [CONCEPT] by asking me questions rather than telling me the answer. My current understanding is [WHAT YOU KNOW], my level is [LEVEL], and how much help I want is [E.G. HINTS ONLY, HINTS THEN ANSWERS IF I AM STUCK]. Ask one question at a time, wait for my answer, build on what I say, give a hint if I am stuck, and summarize what I worked out at the end. Note that working an idea out through guided questions takes longer than reading an explanation but leads to deeper understanding and better memory, because I build the reasoning myself, but it can become frustrating if I am stuck too long, so a hint after a couple of wrong attempts keeps it productive. Give me the first question.",
+    "description": "Work a concept out yourself through one question at a time.",
+    "useCase": "Use this when you want deep understanding, not just an answer. Guided questions take longer than reading but build deeper understanding and memory because you construct the reasoning, though being stuck too long frustrates, so a hint after a couple of wrong attempts keeps it productive.",
+    "variables": [
+      "CONCEPT",
+      "WHAT YOU KNOW",
+      "LEVEL",
+      "E.G. HINTS ONLY, HINTS THEN ANSWERS IF I AM STUCK"
+    ],
+    "relatedPromptIds": [
+      "cexp-feynman-check",
+      "cexp-check-understanding",
+      "cexp-worked-example"
+    ]
+  },
+  {
+    "id": "cexp-check-understanding",
+    "title": "Check Your Understanding After an Explanation",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "concept-explainers",
+    "aiTool": "ChatGPT",
+    "promptText": "Check whether I really understand [CONCEPT]. My level is [LEVEL], and the way I will need to use it is [E.G. EXAM, WORK TASK, TEACHING OTHERS, MAKING A DECISION]. Give me five questions that go beyond memorizing definitions, including applying it to a new situation, spotting an error, and explaining why, then mark my answers when I reply and explain what each wrong answer reveals. Note that feeling like I understand after reading an explanation is not the same as being able to use the idea, and questions that only ask me to repeat a definition can be answered without real understanding, so applying the concept to an unfamiliar example is the most honest test. Give me the understanding check.",
+    "description": "Test real understanding with application and error spotting questions.",
+    "useCase": "Use this right after learning something new. Feeling you understand after reading is not the same as being able to use the idea, and definition questions can be answered without real understanding, so applying the concept to an unfamiliar example is the most honest test.",
+    "variables": [
+      "CONCEPT",
+      "LEVEL",
+      "E.G. EXAM, WORK TASK, TEACHING OTHERS, MAKING A DECISION"
+    ],
+    "relatedPromptIds": [
+      "cexp-feynman-check",
+      "cexp-socratic",
+      "cexp-at-my-level"
+    ]
+  },
+  {
+    "id": "cexp-for-clients",
+    "title": "Explain a Technical Concept to a Client",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "concept-explainers",
+    "aiTool": "Gemini",
+    "promptText": "Help me explain [TECHNICAL CONCEPT] to a client who is not an expert. The client is [WHO THEY ARE AND THEIR BACKGROUND], why they need to understand it is [E.G. TO APPROVE A DECISION, UNDERSTAND A COST, AGREE TO A CHANGE, USE A TOOL], the channel is [E.G. MEETING, EMAIL, CHAT, SHORT VIDEO], and their language preference is [LANGUAGE]. Give me a short explanation focused on what it means for them, an analogy from their world, the decision or action needed, and answers to the questions they are likely to ask. Note that clients usually care about impact, cost, risk, and what they need to do, rather than how something works internally, so leading with that respects their time, and simplifying should never hide real risks or limitations, since a client who later discovers something important was glossed over loses trust. Give me the client explanation.",
+    "description": "Explain technical topics to clients in terms of impact and decisions.",
+    "useCase": "Use this when a client needs to understand something technical. Clients care about impact, cost, risk, and what they must do rather than how it works internally, so lead with that, and never let simplifying hide real risks, since clients who later discover something was glossed over lose trust.",
+    "variables": [
+      "TECHNICAL CONCEPT",
+      "WHO THEY ARE AND THEIR BACKGROUND",
+      "E.G. TO APPROVE A DECISION, UNDERSTAND A COST, AGREE TO A CHANGE, USE A TOOL",
+      "E.G. MEETING, EMAIL, CHAT, SHORT VIDEO",
+      "LANGUAGE"
+    ],
+    "relatedPromptIds": [
+      "cexp-why-it-matters",
+      "cexp-analogy",
+      "cexp-jargon-decoder"
+    ]
   }
 ]
