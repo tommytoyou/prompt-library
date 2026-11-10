@@ -49143,5 +49143,388 @@
       "prac-timed-practice",
       "prac-mixed-practice"
     ]
+  },
+  {
+    "id": "rescur-best-for-level",
+    "title": "Find the Best Learning Resources for Your Level",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "resource-curation",
+    "aiTool": "Claude",
+    "promptText": "Help me find the best resources to learn [SKILL OR TOPIC]. My level is [LEVEL], my goal is [GOAL], my budget is [BUDGET], how I learn best is [E.G. READING, VIDEO, HANDS ON, AUDIO, LIVE CLASSES], and the languages I can learn in are [LANGUAGES]. Suggest a short list of resource types and well known options for each stage, with why each fits me, what it costs, and what to use it for, and tell me which single resource to start with. Note that a few good resources used fully beat a long list never finished, AI suggestions can sometimes name courses, books, or links that are outdated or do not exist, so each one should be checked before I rely on it, and free official documentation or well known open courses are often as good as paid options at the start. Give me the curated resource list.",
+    "description": "Get a short, level matched resource list and one place to start.",
+    "useCase": "Use this when starting a new skill. A few good resources used fully beat a long list never finished, AI can name outdated or nonexistent resources, so check each before relying on it, and free official documentation or well known open courses are often as good as paid options early on.",
+    "variables": [
+      "SKILL OR TOPIC",
+      "LEVEL",
+      "GOAL",
+      "BUDGET",
+      "E.G. READING, VIDEO, HANDS ON, AUDIO, LIVE CLASSES",
+      "LANGUAGES"
+    ],
+    "relatedPromptIds": [
+      "rescur-quick-list",
+      "rescur-verify-ai-suggestions",
+      "rescur-roadmap-match"
+    ]
+  },
+  {
+    "id": "rescur-quick-list",
+    "title": "Get a Quick List of Learning Resources",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "resource-curation",
+    "aiTool": "Grok",
+    "promptText": "Give me a quick list of learning resources for [TOPIC] at [LEVEL] level. Include one book, one free course or website, one video or podcast source, and one community, each with a one line reason, no explanation. Give me the list.",
+    "description": "Get one book, course, video source, and community, fast.",
+    "useCase": "Use this to get started in seconds. A quick mixed list points you somewhere useful, but check that each resource exists, is current, and is available to you before buying or committing time.",
+    "variables": [
+      "TOPIC",
+      "LEVEL"
+    ],
+    "relatedPromptIds": [
+      "rescur-best-for-level",
+      "rescur-verify-ai-suggestions",
+      "rescur-free-only"
+    ]
+  },
+  {
+    "id": "rescur-verify-ai-suggestions",
+    "title": "Verify Resources Suggested by AI",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "resource-curation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me check whether the learning resources I was given are real, current, and worth using. The resources are [LIST OF BOOKS, COURSES, LINKS, OR AUTHORS], where they were suggested is [E.G. AN AI TOOL, A FORUM, A FRIEND, A SEARCH], and my topic and level are [TOPIC AND LEVEL]. Give me a checklist for verifying each one, like searching for the exact title and author, checking the publisher or platform, publication or update date, reviews from real learners, and whether a free sample exists, and flag any that look suspicious. Note that AI tools sometimes invent plausible book titles, authors, or course names that do not exist, or mix up details, and even real resources can be outdated, especially in fast changing fields like technology and marketing, so checking each one against the actual publisher or platform before buying or spending time protects me from wasted effort. Give me the verification checklist.",
+    "description": "Check that suggested books, courses, and links are real and current.",
+    "useCase": "Use this before buying or committing to any recommended resource. AI tools sometimes invent plausible titles, authors, or courses or mix up details, and real resources can be outdated in fast changing fields, so check each against the actual publisher or platform first.",
+    "variables": [
+      "LIST OF BOOKS, COURSES, LINKS, OR AUTHORS",
+      "E.G. AN AI TOOL, A FORUM, A FRIEND, A SEARCH",
+      "TOPIC AND LEVEL"
+    ],
+    "relatedPromptIds": [
+      "rescur-judge-quality",
+      "rescur-outdated-check",
+      "rescur-best-for-level"
+    ]
+  },
+  {
+    "id": "rescur-judge-quality",
+    "title": "Judge the Quality and Credibility of a Resource",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "resource-curation",
+    "aiTool": "Gemini",
+    "promptText": "Help me judge whether a learning resource is trustworthy and good quality. The resource is [TITLE, LINK, OR DESCRIPTION], the creator is [AUTHOR OR ORGANIZATION], what it claims to teach is [CLAIMS], and my topic is [TOPIC]. Give me criteria to evaluate it, like the creator's real expertise, whether claims are backed by evidence, how current it is, whether it sells something, how learners rate it, and whether it matches what other reliable sources say, then apply them to what I have shared. Note that confident, polished resources are not always accurate, popularity on social media is not proof of quality, and resources that promise fast results with little effort, especially about money or health, deserve extra caution, while a creator selling a product is not automatically untrustworthy but is a reason to look for independent confirmation. Give me the quality assessment.",
+    "description": "Evaluate a resource's expertise, evidence, currency, and motives.",
+    "useCase": "Use this for any course, book, or channel you are unsure about. Polished and popular resources are not always accurate, promises of fast results with little effort, especially about money or health, deserve extra caution, and a creator selling something is a reason to seek independent confirmation.",
+    "variables": [
+      "TITLE, LINK, OR DESCRIPTION",
+      "AUTHOR OR ORGANIZATION",
+      "CLAIMS",
+      "TOPIC"
+    ],
+    "relatedPromptIds": [
+      "rescur-verify-ai-suggestions",
+      "rescur-compare-courses",
+      "rescur-outdated-check"
+    ]
+  },
+  {
+    "id": "rescur-compare-courses",
+    "title": "Compare Two or Three Courses Before Paying",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "resource-curation",
+    "aiTool": "Claude",
+    "promptText": "Help me compare courses I am considering for [SKILL]. The options are [COURSE NAMES WITH LINKS, PRICES, AND DESCRIPTIONS], my goal is [GOAL], my level is [LEVEL], my time is [HOURS PER WEEK], and what matters most to me is [E.G. PRICE, PROJECTS, CERTIFICATE, INSTRUCTOR SUPPORT, COMMUNITY, LANGUAGE]. Compare them in a table on content, level, format, practice and projects, support, cost, refund policy, and reviews, then recommend one with reasons and questions to ask before buying. Note that course pages are marketing, so the syllabus, sample lessons, and recent reviews from real learners reveal more than headline promises, a course with fewer topics but real practice and feedback often beats a huge content library, and refund policies and payment options vary, so checking whether I can pay from my country and get a refund if it is wrong matters. Give me the course comparison.",
+    "description": "Compare courses on content, practice, support, cost, and refunds.",
+    "useCase": "Use this before paying for a course. Course pages are marketing, so syllabi, sample lessons, and recent real reviews reveal more, fewer topics with real practice and feedback often beat huge libraries, and check you can pay from your country and get a refund if it is wrong.",
+    "variables": [
+      "SKILL",
+      "COURSE NAMES WITH LINKS, PRICES, AND DESCRIPTIONS",
+      "GOAL",
+      "LEVEL",
+      "HOURS PER WEEK",
+      "E.G. PRICE, PROJECTS, CERTIFICATE, INSTRUCTOR SUPPORT, COMMUNITY, LANGUAGE"
+    ],
+    "relatedPromptIds": [
+      "rescur-judge-quality",
+      "rescur-free-only",
+      "rescur-best-for-level"
+    ]
+  },
+  {
+    "id": "rescur-free-only",
+    "title": "Curate a Free Only Learning Path",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "resource-curation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me curate only free resources to learn [SKILL]. My level is [LEVEL], my goal is [GOAL], and my device and internet situation is [E.G. PHONE ONLY, LAPTOP, LIMITED DATA, RELIABLE WIFI]. Suggest types of free resources and well known free options, like official documentation, open university courses, public library apps, free tiers of learning platforms, and active communities, arranged in a learning order, plus what free resources usually lack and how to make up for it. Note that free resources can take someone a long way, but they often lack structure, feedback, and accountability, so pairing them with a study group or a practice routine helps, some free courses charge only for certificates, which may not be needed, and availability of free offerings changes, so each should be checked before I plan around it. Give me the free learning path.",
+    "description": "Build a learning path from free resources and fill their usual gaps.",
+    "useCase": "Use this when your budget is zero. Free resources can take you far but lack structure, feedback, and accountability, so add a study group or practice routine, some free courses charge only for certificates you may not need, and free offerings change, so check each before planning around it.",
+    "variables": [
+      "SKILL",
+      "LEVEL",
+      "GOAL",
+      "E.G. PHONE ONLY, LAPTOP, LIMITED DATA, RELIABLE WIFI"
+    ],
+    "relatedPromptIds": [
+      "rescur-offline-resources",
+      "rescur-quick-list",
+      "rescur-compare-courses"
+    ]
+  },
+  {
+    "id": "rescur-offline-resources",
+    "title": "Find Resources That Work Offline or on Low Data",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "resource-curation",
+    "aiTool": "Gemini",
+    "promptText": "Help me find learning resources for [SKILL OR SUBJECT] that work offline or on very little data. My situation is [E.G. PREPAID DATA, SLOW INTERNET, FREQUENT POWER CUTS, LONG COMMUTES WITHOUT SIGNAL], my device is [DEVICE AND STORAGE SPACE], and my level is [LEVEL]. Suggest resource types and approaches, like downloadable PDFs and ebooks, apps with offline modes, downloaded podcasts and low resolution videos, printed materials, and how to download efficiently when I do have good connection. Note that many learning apps say they work offline but only for some features, so testing offline mode before relying on it avoids surprises, downloading on free wifi at a library or cafe saves data costs, and audio is often the most data efficient format for learning on the move. Give me the offline resource plan.",
+    "description": "Find downloadable and offline friendly resources for low data learning.",
+    "useCase": "Use this if data is expensive or connections are unreliable. Many apps claim offline support for only some features, so test offline mode first, download on free wifi at a library or cafe to save data, and audio is often the most data efficient format for learning on the move.",
+    "variables": [
+      "SKILL OR SUBJECT",
+      "E.G. PREPAID DATA, SLOW INTERNET, FREQUENT POWER CUTS, LONG COMMUTES WITHOUT SIGNAL",
+      "DEVICE AND STORAGE SPACE",
+      "LEVEL"
+    ],
+    "relatedPromptIds": [
+      "rescur-free-only",
+      "rescur-local-language",
+      "rescur-podcast-video-curation"
+    ]
+  },
+  {
+    "id": "rescur-local-language",
+    "title": "Find Learning Resources in Your Own Language",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "resource-curation",
+    "aiTool": "Claude",
+    "promptText": "Help me find learning resources for [SKILL OR SUBJECT] in [LANGUAGE, E.G. KHMER, THAI, VIETNAMESE, LAO, BURMESE, INDONESIAN]. The learner is [ME, MY STUDENTS, MY STAFF, MY CHILD], their level is [LEVEL], and their English level is [ENGLISH LEVEL]. Suggest where such resources are usually found, like local universities, government education sites, NGOs, local YouTube creators, Facebook groups, and translated editions, how to search effectively in that language, and how to combine local language resources with English ones when local options are limited. Note that resources in less widely used languages are often fewer and less up to date than English ones, so a mix of local language explanations for core concepts and English materials for depth often works well, quality varies a lot, so checking the creator's background matters, and I may not be able to verify every specific source suggested, so testing each one directly is important. Give me the local language resource plan.",
+    "description": "Locate resources in your language and blend them with English ones.",
+    "useCase": "Use this when learners do better in their own language. Resources in less widely used languages are fewer and older than English ones, so local explanations for core concepts plus English for depth works well, quality varies, so check creators, and test each suggested source directly.",
+    "variables": [
+      "SKILL OR SUBJECT",
+      "LANGUAGE, E.G. KHMER, THAI, VIETNAMESE, LAO, BURMESE, INDONESIAN",
+      "ME, MY STUDENTS, MY STAFF, MY CHILD",
+      "LEVEL",
+      "ENGLISH LEVEL"
+    ],
+    "relatedPromptIds": [
+      "rescur-offline-resources",
+      "rescur-for-students",
+      "rescur-for-team"
+    ]
+  },
+  {
+    "id": "rescur-reading-list",
+    "title": "Build an Ordered Reading List on a Topic",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "resource-curation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me build a reading list on [TOPIC]. My level is [LEVEL], my goal is [GOAL], how much time I have to read is [TIME PER WEEK], and the formats I can use are [E.G. PRINT, EBOOK, AUDIOBOOK, ARTICLES]. Suggest well known books or reading types in an order from foundational to advanced, with what each adds, which chapters matter most if time is short, and which ones to skip if I already know the basics. Note that the order of reading matters, since advanced books assume ideas from foundational ones, many books contain one or two essential chapters among filler, so reading selectively is fine, and book suggestions from AI should be checked for existence, edition, and author before buying, since titles and authors are occasionally mixed up. Give me the reading list.",
+    "description": "Order books from foundational to advanced, with key chapters noted.",
+    "useCase": "Use this when you want to read seriously on a topic. Order matters since advanced books assume foundational ideas, many books have one or two essential chapters among filler, so reading selectively is fine, and check suggested titles for existence, edition, and author before buying.",
+    "variables": [
+      "TOPIC",
+      "LEVEL",
+      "GOAL",
+      "TIME PER WEEK",
+      "E.G. PRINT, EBOOK, AUDIOBOOK, ARTICLES"
+    ],
+    "relatedPromptIds": [
+      "rescur-read-or-summary",
+      "rescur-verify-ai-suggestions",
+      "rescur-academic-sources"
+    ]
+  },
+  {
+    "id": "rescur-read-or-summary",
+    "title": "Decide Whether to Read the Full Book or a Summary",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "resource-curation",
+    "aiTool": "Gemini",
+    "promptText": "Help me decide whether a book is worth reading in full or whether a summary is enough. The book is [TITLE AND AUTHOR], why I am interested is [REASON], what I already know about the topic is [BACKGROUND], and my time is [TIME AVAILABLE]. Explain what kind of value the book offers, like a single big idea, detailed methods, stories and examples, or deep arguments, and recommend reading it fully, reading selected chapters, or using a summary, with what I would lose in each case. Note that summaries capture main ideas but lose the examples, nuance, and reasoning that make ideas stick and show how to apply them, so books about methods and skills usually reward full reading, while books built around one idea can often be understood from a summary, and summaries from AI or apps may misrepresent the author, so reading the key chapter myself is a good check. Give me the recommendation.",
+    "description": "Choose full reading, key chapters, or a summary for a specific book.",
+    "useCase": "Use this when your reading list is longer than your time. Summaries capture main ideas but lose the examples and reasoning that make them stick, so method and skill books reward full reading while one idea books may not, and summaries can misrepresent authors, so read the key chapter yourself.",
+    "variables": [
+      "TITLE AND AUTHOR",
+      "REASON",
+      "BACKGROUND",
+      "TIME AVAILABLE"
+    ],
+    "relatedPromptIds": [
+      "rescur-reading-list",
+      "rescur-information-diet",
+      "rescur-knowledge-library"
+    ]
+  },
+  {
+    "id": "rescur-podcast-video-curation",
+    "title": "Curate Videos, Channels, and Podcasts for Learning",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "resource-curation",
+    "aiTool": "Claude",
+    "promptText": "Help me curate video channels and podcasts for learning [TOPIC]. My level is [LEVEL], when I would watch or listen is [E.G. COMMUTE, GYM, EVENINGS, DURING CHORES], my data situation is [DATA LIMITS], and what I want out of them is [E.G. STRUCTURED LESSONS, INDUSTRY NEWS, EXPERT INTERVIEWS, TUTORIALS]. Suggest the types of channels and shows that fit each goal, how to spot good ones quickly, a small starting set to follow, and how to turn passive watching or listening into real learning. Note that video and podcast learning feels productive but is often passive, so taking a short note or trying one thing from each episode makes a big difference, recommendation algorithms push popular rather than accurate content, so actively choosing a few trusted creators beats endless browsing, and specific channel names should be checked since creators change focus or stop publishing. Give me the curated channel and podcast list.",
+    "description": "Pick a small set of trusted channels and shows and learn actively from them.",
+    "useCase": "Use this to learn from videos and podcasts. They feel productive but are often passive, so take a short note or try one thing from each episode, algorithms push popular rather than accurate content, so choose a few trusted creators, and check channels are still active.",
+    "variables": [
+      "TOPIC",
+      "LEVEL",
+      "E.G. COMMUTE, GYM, EVENINGS, DURING CHORES",
+      "DATA LIMITS",
+      "E.G. STRUCTURED LESSONS, INDUSTRY NEWS, EXPERT INTERVIEWS, TUTORIALS"
+    ],
+    "relatedPromptIds": [
+      "rescur-information-diet",
+      "rescur-offline-resources",
+      "rescur-judge-quality"
+    ]
+  },
+  {
+    "id": "rescur-academic-sources",
+    "title": "Find Reliable Academic and Primary Sources",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "resource-curation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me find reliable academic or primary sources on [TOPIC]. What I need them for is [E.G. AN ESSAY, A THESIS, A WORK REPORT, A DECISION, PERSONAL UNDERSTANDING], my access is [E.G. UNIVERSITY LIBRARY, NO SUBSCRIPTIONS, PUBLIC LIBRARY], and the level of detail I need is [LEVEL]. Explain where to search, like Google Scholar, open access repositories, government and international organization reports, and university library databases, how to find free legal copies of paywalled papers, how to judge a source's reliability, and how to keep track of citations. Note that I should not cite sources I have not read myself, AI tools sometimes produce citations with wrong details or for papers that do not exist, so every reference must be found and checked directly, and many papers have free versions on author pages or open repositories, while emailing an author for a copy is usually welcomed. Give me the source finding guide.",
+    "description": "Search academic and official sources and verify every citation directly.",
+    "useCase": "Use this for essays, reports, or important decisions. Never cite sources you have not read, AI tools sometimes produce wrong or nonexistent citations, so find and check every reference directly, and many paywalled papers have free versions on author pages or repositories, while emailing an author is usually welcomed.",
+    "variables": [
+      "TOPIC",
+      "E.G. AN ESSAY, A THESIS, A WORK REPORT, A DECISION, PERSONAL UNDERSTANDING",
+      "E.G. UNIVERSITY LIBRARY, NO SUBSCRIPTIONS, PUBLIC LIBRARY",
+      "LEVEL"
+    ],
+    "relatedPromptIds": [
+      "rescur-verify-ai-suggestions",
+      "rescur-reading-list",
+      "rescur-knowledge-library"
+    ]
+  },
+  {
+    "id": "rescur-outdated-check",
+    "title": "Check Whether a Resource Is Out of Date",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "resource-curation",
+    "aiTool": "Gemini",
+    "promptText": "Help me check whether a learning resource is still current. The resource is [TITLE, LINK, OR DESCRIPTION], when it was published or last updated is [DATE IF KNOWN], and the field is [FIELD, E.G. SOFTWARE, MARKETING, TAX RULES, MEDICINE, MATH, HISTORY]. Explain how fast this field changes, which parts of the resource are likely still valid and which may be outdated, signs of outdated content to look for, and how to fill in what has changed. Note that some fields like basic math or history change slowly, while software, platform features, marketing tactics, and laws can change within months, so a resource that is a few years old may still be fine for fundamentals but wrong on specific tools or rules, and my own knowledge of recent changes may also be limited, so checking the latest official sources is the safest way to confirm. Give me the currency check.",
+    "description": "Judge which parts of a resource still hold and which have aged.",
+    "useCase": "Use this before learning from older material. Math or history change slowly, while software, platforms, marketing, and laws can change within months, so an older resource may be fine for fundamentals but wrong on tools or rules, and checking the latest official sources is the safest confirmation.",
+    "variables": [
+      "TITLE, LINK, OR DESCRIPTION",
+      "DATE IF KNOWN",
+      "FIELD, E.G. SOFTWARE, MARKETING, TAX RULES, MEDICINE, MATH, HISTORY"
+    ],
+    "relatedPromptIds": [
+      "rescur-judge-quality",
+      "rescur-verify-ai-suggestions",
+      "rescur-academic-sources"
+    ]
+  },
+  {
+    "id": "rescur-knowledge-library",
+    "title": "Organize Your Saved Resources Into a Personal Library",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "resource-curation",
+    "aiTool": "Claude",
+    "promptText": "Help me organize the learning resources I have saved into a usable personal library. What I have saved is [E.G. BROWSER BOOKMARKS, SAVED POSTS, PDFS, VIDEO PLAYLISTS, NOTES, SCREENSHOTS], roughly how much is [AMOUNT], the topics I care about are [TOPICS], and the tool I want to use is [E.G. NOTION, OBSIDIAN, GOOGLE DRIVE, A SPREADSHEET, A NOTES APP]. Design a simple structure with topic folders or tags, a status like to read, in progress, and done, a short note field for why I saved it, and a routine to process new saves and clear out old ones. Note that saving resources feels like learning but most saved items are never opened again, so a library is only useful if I regularly review and use it, deleting or archiving anything I would not miss keeps it manageable, and a one line note on why I saved something makes it far easier to find and decide on later. Give me the library structure.",
+    "description": "Turn scattered saves into a tagged library with a review routine.",
+    "useCase": "Use this when bookmarks and saved posts pile up. Saving feels like learning but most saved items are never opened, so a library only helps if reviewed and used, archiving what you would not miss keeps it manageable, and a one line note on why you saved something makes later decisions easy.",
+    "variables": [
+      "E.G. BROWSER BOOKMARKS, SAVED POSTS, PDFS, VIDEO PLAYLISTS, NOTES, SCREENSHOTS",
+      "AMOUNT",
+      "TOPICS",
+      "E.G. NOTION, OBSIDIAN, GOOGLE DRIVE, A SPREADSHEET, A NOTES APP"
+    ],
+    "relatedPromptIds": [
+      "rescur-information-diet",
+      "rescur-read-or-summary",
+      "rescur-roadmap-match"
+    ]
+  },
+  {
+    "id": "rescur-information-diet",
+    "title": "Cut Information Overload to a Focused Learning Diet",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "resource-curation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me cut down the newsletters, channels, groups, and feeds I follow so I can actually learn. What I follow now is [LIST SUBSCRIPTIONS, CHANNELS, GROUPS, PODCASTS], my main learning goal right now is [GOAL], and the time I spend consuming content is [TIME PER DAY OR WEEK]. Sort them into keep, pause, and drop based on how well they serve my current goal, suggest a small focused set, and give me a routine for consuming them with intention. Note that following many sources creates a feeling of keeping up while leaving little time for practice, which is where skills actually grow, and most sources can be paused rather than lost, so trimming hard for my current goal and adding back later is low risk, while consuming content at set times rather than whenever notifications arrive protects focus. Give me the focused learning diet.",
+    "description": "Trim feeds and subscriptions to a small set that serves your goal.",
+    "useCase": "Use this when you follow too much and learn too little. Many sources create a feeling of keeping up while leaving little time for practice, where skills grow, most sources can be paused and added back later, so trim hard for your current goal, and consume at set times rather than on notifications.",
+    "variables": [
+      "LIST SUBSCRIPTIONS, CHANNELS, GROUPS, PODCASTS",
+      "GOAL",
+      "TIME PER DAY OR WEEK"
+    ],
+    "relatedPromptIds": [
+      "rescur-knowledge-library",
+      "rescur-podcast-video-curation",
+      "rescur-read-or-summary"
+    ]
+  },
+  {
+    "id": "rescur-for-students",
+    "title": "Curate Resources for Your Students",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "resource-curation",
+    "aiTool": "Gemini",
+    "promptText": "Help me curate learning resources for my students on [TOPIC]. The students are [AGE OR LEVEL AND LANGUAGE], what they can access is [E.G. SCHOOL COMPUTERS, THEIR OWN PHONES, LIMITED DATA, PRINTED COPIES ONLY], the purpose is [E.G. HOMEWORK SUPPORT, EXTENSION FOR ADVANCED STUDENTS, CATCH UP FOR STRUGGLING STUDENTS, EXAM REVIEW], and any school rules are [RULES ON APPS, VIDEO, OR AI USE]. Create a short, organized resource list grouped by purpose and level, with what each is for and instructions students can follow on their own, plus a note for parents if useful. Note that students rarely explore long lists, so a few well chosen resources with clear instructions get used far more, resources should be checked personally for accuracy, age appropriate content, and ads before sharing, and access differs a lot between students, so offering at least one option that works offline or on paper keeps it fair. Give me the student resource list.",
+    "description": "Share a short, checked, purpose grouped resource list with students.",
+    "useCase": "Use this when recommending resources to a class or tutees. Students rarely explore long lists, so a few well chosen resources with clear instructions get used more, check each personally for accuracy, age suitability, and ads, and include an offline or paper option so access stays fair.",
+    "variables": [
+      "TOPIC",
+      "AGE OR LEVEL AND LANGUAGE",
+      "E.G. SCHOOL COMPUTERS, THEIR OWN PHONES, LIMITED DATA, PRINTED COPIES ONLY",
+      "E.G. HOMEWORK SUPPORT, EXTENSION FOR ADVANCED STUDENTS, CATCH UP FOR STRUGGLING STUDENTS, EXAM REVIEW",
+      "RULES ON APPS, VIDEO, OR AI USE"
+    ],
+    "relatedPromptIds": [
+      "rescur-local-language",
+      "rescur-offline-resources",
+      "rescur-for-team"
+    ]
+  },
+  {
+    "id": "rescur-for-team",
+    "title": "Build a Learning Resource Hub for Your Team",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "resource-curation",
+    "aiTool": "Claude",
+    "promptText": "Help me build a learning resource hub for the people who work with me at my [BUSINESS TYPE]. The roles and skills they need are [ROLES AND SKILLS], their languages and levels are [LANGUAGES AND LEVELS], the tool for the hub is [E.G. NOTION, GOOGLE DRIVE, A SHARED DOCUMENT, A CHAT CHANNEL], and the budget for paid resources is [BUDGET]. Design a simple hub organized by role or skill, with a starter path for new people, internal guides and recordings alongside outside resources, an owner who keeps it updated, and a way for team members to suggest additions. Note that the most valuable resources for a team are often internal, like recorded explanations of how we do things and examples of good work, which outside courses cannot provide, a hub nobody maintains goes stale quickly, so a named owner and a quarterly review matter, and resources in each person's strongest language get used more. Give me the team resource hub plan.",
+    "description": "Create a maintained hub of internal and outside resources by role.",
+    "useCase": "Use this to help your team learn without you explaining everything. The most valuable team resources are often internal, like recordings of how you do things and examples of good work, an unmaintained hub goes stale, so name an owner and review quarterly, and resources in each person's strongest language get used more.",
+    "variables": [
+      "BUSINESS TYPE",
+      "ROLES AND SKILLS",
+      "LANGUAGES AND LEVELS",
+      "E.G. NOTION, GOOGLE DRIVE, A SHARED DOCUMENT, A CHAT CHANNEL",
+      "BUDGET"
+    ],
+    "relatedPromptIds": [
+      "rescur-for-students",
+      "rescur-knowledge-library",
+      "rescur-local-language"
+    ]
+  },
+  {
+    "id": "rescur-roadmap-match",
+    "title": "Match Resources to Each Stage of a Learning Roadmap",
+    "categoryId": "learning-and-skill-building",
+    "subcategoryId": "resource-curation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me match learning resources to each stage of my roadmap for [SKILL]. My roadmap stages are [PASTE STAGES OR SUMMARIZE], my budget is [BUDGET], my learning preferences are [PREFERENCES], and resources I already have are [EXISTING RESOURCES]. For each stage, assign one main resource, one practice source, and one place to get help or feedback, and note when to move to the next resource. Note that using one main resource per stage avoids the common trap of jumping between many courses that each restart from the basics, every stage needs a source of practice, not just explanation, and a resource that suited an earlier stage may become too basic later, so switching is part of the plan, while any specific resource suggested should be checked before I commit to it. Give me the resource to roadmap map.",
+    "description": "Assign one main resource, practice source, and help source per stage.",
+    "useCase": "Use this with any learning roadmap. One main resource per stage avoids jumping between courses that each restart from basics, every stage needs practice, not just explanation, and resources that suited earlier stages may become too basic, so switching is planned, while each suggestion should be checked first.",
+    "variables": [
+      "SKILL",
+      "PASTE STAGES OR SUMMARIZE",
+      "BUDGET",
+      "PREFERENCES",
+      "EXISTING RESOURCES"
+    ],
+    "relatedPromptIds": [
+      "rescur-best-for-level",
+      "rescur-knowledge-library",
+      "rescur-free-only"
+    ]
   }
 ]
