@@ -45268,5 +45268,388 @@
       "zm-document-automations",
       "zm-error-handling"
     ]
+  },
+  {
+    "id": "eauto-inbox-rules",
+    "title": "Set Up Inbox Filters and Rules",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "email-automation",
+    "aiTool": "Claude",
+    "promptText": "Help me set up filters and rules to organize my inbox automatically. My email app is [E.G. GMAIL, OUTLOOK, APPLE MAIL], the kinds of email I get are [E.G. CLIENT EMAILS, INVOICES, RECEIPTS, NEWSLETTERS, NOTIFICATIONS, PLATFORM ALERTS], roughly how many per day is [VOLUME], and what I miss most often is [WHAT GETS LOST]. Give me a short list of labels or folders and the exact filter rules for each, plus which emails should skip the inbox and which must always stay visible. Note that aggressive filters can hide important emails, like a client writing from a new address or a payment notice with an unusual subject, so rules should move only clearly predictable mail, like newsletters and receipts, and a quick weekly look at filtered folders catches anything sorted by mistake. Give me the inbox rules.",
+    "description": "Sort predictable email automatically while keeping important mail visible.",
+    "useCase": "Use this when your inbox is overflowing. Aggressive filters can hide a client writing from a new address or an unusual payment notice, so only move clearly predictable mail like newsletters and receipts, and glance at filtered folders weekly to catch mistakes.",
+    "variables": [
+      "E.G. GMAIL, OUTLOOK, APPLE MAIL",
+      "E.G. CLIENT EMAILS, INVOICES, RECEIPTS, NEWSLETTERS, NOTIFICATIONS, PLATFORM ALERTS",
+      "VOLUME",
+      "WHAT GETS LOST"
+    ],
+    "relatedPromptIds": [
+      "eauto-saved-replies",
+      "eauto-receipt-forwarding",
+      "eauto-ai-triage"
+    ]
+  },
+  {
+    "id": "eauto-quick-flow",
+    "title": "Get a Quick Email Automation Flow",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "email-automation",
+    "aiTool": "Grok",
+    "promptText": "Give me a quick email automation flow. My email platform is [PLATFORM], the trigger is [E.G. NEW SUBSCRIBER, PURCHASE, TAG ADDED, NO OPENS IN 60 DAYS], and the goal is [GOAL]. List the trigger, each email with its delay and one line purpose, and any conditions or exit rules, as a short numbered list, no explanation. Give me the flow.",
+    "description": "Get a trigger, emails, delays, and exit rules as a short list, fast.",
+    "useCase": "Use this to sketch an email automation quickly. A short outline gets you building right away, but add exit rules before turning it on, so people who already bought or replied stop getting emails meant for those who have not.",
+    "variables": [
+      "PLATFORM",
+      "E.G. NEW SUBSCRIBER, PURCHASE, TAG ADDED, NO OPENS IN 60 DAYS",
+      "GOAL"
+    ],
+    "relatedPromptIds": [
+      "eauto-flow-map",
+      "eauto-exit-rules",
+      "eauto-test-flows"
+    ]
+  },
+  {
+    "id": "eauto-choose-platform",
+    "title": "Choose an Email Marketing Platform",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "email-automation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me choose an email marketing platform for my [BUSINESS TYPE]. My list size now and in a year is [CURRENT AND EXPECTED SUBSCRIBERS], the automations I need are [E.G. WELCOME SERIES, TAGS, ABANDONED CART, SEGMENTS BY BEHAVIOR], my store or site platform is [E.G. SHOPIFY, WORDPRESS, CARRD, NONE], my monthly budget is [BUDGET], and the languages I send in are [LANGUAGES]. Compare options like Mailchimp, MailerLite, Brevo, Kit, and others on automation features, integrations, pricing as my list grows, and ease of use, then recommend one. Note that pricing changes often and many platforms charge by subscriber count, which can jump sharply as a list grows, free plans may limit automations or add branding, and some platforms restrict accounts or payment methods from certain countries, so checking current pricing and sign up eligibility from my country comes first. Give me the platform recommendation.",
+    "description": "Compare email platforms on automations, growth pricing, and eligibility.",
+    "useCase": "Use this before picking or switching email tools. Pricing changes often and many charge by subscriber count, which jumps as lists grow, free plans may limit automations, and some restrict accounts or payments from certain countries, so check current pricing and eligibility from your country first.",
+    "variables": [
+      "BUSINESS TYPE",
+      "CURRENT AND EXPECTED SUBSCRIBERS",
+      "E.G. WELCOME SERIES, TAGS, ABANDONED CART, SEGMENTS BY BEHAVIOR",
+      "E.G. SHOPIFY, WORDPRESS, CARRD, NONE",
+      "BUDGET",
+      "LANGUAGES"
+    ],
+    "relatedPromptIds": [
+      "eauto-deliverability-setup",
+      "eauto-flow-map",
+      "eauto-tagging-system"
+    ]
+  },
+  {
+    "id": "eauto-deliverability-setup",
+    "title": "Set Up Email Authentication for Deliverability",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "email-automation",
+    "aiTool": "Gemini",
+    "promptText": "Help me set up email authentication so my automated emails reach the inbox. My domain is registered with [DOMAIN REGISTRAR OR DNS HOST], my email marketing platform is [PLATFORM], my regular email provider is [E.G. GOOGLE WORKSPACE, ZOHO, MICROSOFT 365], and current problems are [E.G. EMAILS GOING TO SPAM, SENDING FROM A GMAIL ADDRESS, NONE YET]. Explain SPF, DKIM, and DMARC in plain language, what records I need for each service, the order to add them, and how to check they work. Note that major inbox providers now expect bulk senders to authenticate their domain, and sending marketing email from a free address like a Gmail account often lands in spam, but adding a second SPF record instead of merging into one is a common mistake that breaks it, and DMARC is best started in a monitoring mode before making it strict. Give me the authentication setup guide.",
+    "description": "Set up SPF, DKIM, and DMARC so automated emails land in the inbox.",
+    "useCase": "Use this before sending automated emails at any volume. Inbox providers expect bulk senders to authenticate, and sending from a free Gmail address often lands in spam, but adding a second SPF record instead of merging breaks it, and DMARC is best started in monitoring mode before going strict.",
+    "variables": [
+      "DOMAIN REGISTRAR OR DNS HOST",
+      "PLATFORM",
+      "E.G. GOOGLE WORKSPACE, ZOHO, MICROSOFT 365",
+      "E.G. EMAILS GOING TO SPAM, SENDING FROM A GMAIL ADDRESS, NONE YET"
+    ],
+    "relatedPromptIds": [
+      "eauto-choose-platform",
+      "eauto-list-hygiene",
+      "eauto-frequency-cap"
+    ]
+  },
+  {
+    "id": "eauto-flow-map",
+    "title": "Map All Your Email Automations in One Place",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "email-automation",
+    "aiTool": "Claude",
+    "promptText": "Help me map every email automation for my [BUSINESS TYPE] in one overview. The automations I have or plan are [E.G. WELCOME, ABANDONED CART, POST PURCHASE, REVIEW REQUEST, WIN BACK, BIRTHDAY], what triggers each is [TRIGGERS], and my email platform is [PLATFORM]. Create a map showing each flow, its trigger, number of emails, timing, exit conditions, and where a subscriber could end up in two flows at once, and flag gaps and overlaps. Note that flows built one at a time often overlap, so a new customer can get a welcome email, a cart reminder, and a review request on the same day, which feels spammy and raises unsubscribes, so seeing everything together and setting priority rules between flows prevents that. Give me the automation map.",
+    "description": "See every email flow, its triggers, and where they overlap.",
+    "useCase": "Use this once you have more than two email flows. Flows built one at a time overlap, so a new customer may get a welcome, cart reminder, and review request on the same day, which feels spammy, so seeing everything together and setting priority rules prevents it.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. WELCOME, ABANDONED CART, POST PURCHASE, REVIEW REQUEST, WIN BACK, BIRTHDAY",
+      "TRIGGERS",
+      "PLATFORM"
+    ],
+    "relatedPromptIds": [
+      "eauto-exit-rules",
+      "eauto-frequency-cap",
+      "eauto-quick-flow"
+    ]
+  },
+  {
+    "id": "eauto-exit-rules",
+    "title": "Set Exit Rules and Goals for Email Flows",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "email-automation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me set exit rules for my email automations at my [BUSINESS TYPE]. The flows are [LIST FLOWS AND THEIR GOALS], the actions my platform can detect are [E.G. PURCHASE, LINK CLICK, TAG ADDED, FORM SUBMITTED, REPLY], and the platform is [PLATFORM]. For each flow, define when a person should leave it early, what should happen next, and whether they can re-enter later. Note that a flow without exit rules keeps selling to people who already bought or reminding people who already acted, which looks careless and annoys good customers, and some platforms cannot detect replies or purchases from other systems without an integration, so I should check what my setup can actually detect. Give me the exit rules.",
+    "description": "Stop flows early when people buy, reply, or reach the goal.",
+    "useCase": "Use this to keep automations from embarrassing you. Flows without exit rules keep selling to people who already bought, which looks careless and annoys good customers, and some platforms cannot detect replies or outside purchases without an integration, so check what yours can detect.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST FLOWS AND THEIR GOALS",
+      "E.G. PURCHASE, LINK CLICK, TAG ADDED, FORM SUBMITTED, REPLY",
+      "PLATFORM"
+    ],
+    "relatedPromptIds": [
+      "eauto-flow-map",
+      "eauto-tagging-system",
+      "eauto-test-flows"
+    ]
+  },
+  {
+    "id": "eauto-tagging-system",
+    "title": "Design a Tagging and Segmentation System",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "email-automation",
+    "aiTool": "Gemini",
+    "promptText": "Help me design a tagging and segmentation system for my email list at my [BUSINESS TYPE]. How people join is [SIGN UP SOURCES], what I sell is [PRODUCTS OR SERVICES], the differences between subscribers that matter are [E.G. INTERESTS, CUSTOMER OR NOT, LANGUAGE, LOCATION, ENGAGEMENT], and my platform is [PLATFORM]. Give me a short list of tags or fields with clear naming, which automations apply them, and a few useful segments to build. Note that tags pile up quickly and become meaningless without naming rules, so a small set applied automatically is better than dozens added by hand, and collecting personal details like location or interests should match what subscribers were told when they signed up. Give me the tagging system.",
+    "description": "Create a small, automatically applied set of tags and useful segments.",
+    "useCase": "Use this before your list gets messy. Tags pile up and become meaningless without naming rules, so a small set applied automatically beats dozens added by hand, and personal details like location or interests should match what subscribers were told at sign up.",
+    "variables": [
+      "BUSINESS TYPE",
+      "SIGN UP SOURCES",
+      "PRODUCTS OR SERVICES",
+      "E.G. INTERESTS, CUSTOMER OR NOT, LANGUAGE, LOCATION, ENGAGEMENT",
+      "PLATFORM"
+    ],
+    "relatedPromptIds": [
+      "eauto-language-routing",
+      "eauto-exit-rules",
+      "eauto-list-hygiene"
+    ]
+  },
+  {
+    "id": "eauto-language-routing",
+    "title": "Send Automated Emails in Each Subscriber's Language",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "email-automation",
+    "aiTool": "Claude",
+    "promptText": "Help me set up email automations that send in each subscriber's preferred language for my [BUSINESS TYPE]. The languages are [E.G. ENGLISH, KHMER, THAI, VIETNAMESE, CHINESE], how I know a subscriber's language is [E.G. SIGN UP FORM CHOICE, SITE LANGUAGE, NOT YET COLLECTED], and my platform is [PLATFORM]. Explain how to capture the preference, how to route automations by language, how to handle unknowns, and what to check about fonts and display. Note that guessing language from country is unreliable, since many people prefer English or another language for business, so asking at sign up is best, some scripts like Khmer can display poorly in certain email apps or with unsupported fonts, so test sends on real phones matter, and machine translated emails should be checked by a fluent speaker before going live. Give me the language routing setup.",
+    "description": "Route automated emails by stated language and test non Latin scripts.",
+    "useCase": "Use this if you email customers in more than one language. Guessing language from country is unreliable, so ask at sign up, scripts like Khmer can display poorly in some email apps, so test on real phones, and have a fluent speaker check machine translations before going live.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. ENGLISH, KHMER, THAI, VIETNAMESE, CHINESE",
+      "E.G. SIGN UP FORM CHOICE, SITE LANGUAGE, NOT YET COLLECTED",
+      "PLATFORM"
+    ],
+    "relatedPromptIds": [
+      "eauto-tagging-system",
+      "eauto-send-time",
+      "eauto-test-flows"
+    ]
+  },
+  {
+    "id": "eauto-send-time",
+    "title": "Schedule Automated Emails by Time Zone",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "email-automation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me schedule automated emails so they arrive at sensible times for subscribers of my [BUSINESS TYPE]. Where my subscribers are is [COUNTRIES OR TIME ZONES], my platform is [PLATFORM], and the flows involved are [FLOWS]. Explain which emails should send immediately, which should wait for a good local time, how to set quiet hours, and what my platform can do with time zones. Note that transactional messages like receipts and password resets should always send immediately, while marketing and follow up emails arriving at three in the morning local time are more likely to be buried, and many platforms estimate time zones from location data that can be wrong, so a sensible default window is safer than precise optimization. Give me the send time plan.",
+    "description": "Send transactional email instantly and marketing at sensible local times.",
+    "useCase": "Use this if your subscribers span time zones. Receipts and password resets should always send immediately, while marketing emails landing at three in the morning get buried, and platforms often guess time zones wrongly, so a sensible default window beats precise optimization.",
+    "variables": [
+      "BUSINESS TYPE",
+      "COUNTRIES OR TIME ZONES",
+      "PLATFORM",
+      "FLOWS"
+    ],
+    "relatedPromptIds": [
+      "eauto-frequency-cap",
+      "eauto-language-routing",
+      "eauto-transactional-vs-marketing"
+    ]
+  },
+  {
+    "id": "eauto-frequency-cap",
+    "title": "Limit How Many Emails Each Person Gets",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "email-automation",
+    "aiTool": "Gemini",
+    "promptText": "Help me limit how many emails each subscriber receives from my [BUSINESS TYPE]. The automated flows and regular campaigns I send are [LIST WITH FREQUENCY], my platform supports [E.G. FREQUENCY CAPPING, SMART SENDING, MANUAL EXCLUSIONS, IF KNOWN], and my unsubscribe and spam complaint rates are [CURRENT RATES]. Suggest a weekly maximum, priority rules for when flows clash, and how to set them up. Note that when automations and campaigns are added separately, the most engaged customers often get the most emails and start unsubscribing, and spam complaints hurt deliverability for the whole list, so a sensible cap, with important messages like order updates exempt, protects both the relationship and inbox placement. Give me the frequency plan.",
+    "description": "Cap weekly emails per person and set priorities when flows clash.",
+    "useCase": "Use this when unsubscribes or complaints are rising. When flows and campaigns are added separately, your most engaged customers get the most emails and start leaving, and complaints hurt deliverability for everyone, so a sensible cap with order updates exempt protects both.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST WITH FREQUENCY",
+      "E.G. FREQUENCY CAPPING, SMART SENDING, MANUAL EXCLUSIONS, IF KNOWN",
+      "CURRENT RATES"
+    ],
+    "relatedPromptIds": [
+      "eauto-flow-map",
+      "eauto-send-time",
+      "eauto-deliverability-setup"
+    ]
+  },
+  {
+    "id": "eauto-list-hygiene",
+    "title": "Automate List Cleaning and Sunset Rules",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "email-automation",
+    "aiTool": "Claude",
+    "promptText": "Help me automate list cleaning for my email list at my [BUSINESS TYPE]. My list size is [SIZE], how engagement is tracked is [E.G. OPENS, CLICKS, PURCHASES], the share of subscribers who have not engaged in months is [IF KNOWN], and my platform is [PLATFORM]. Design an automated sunset rule, with a last chance email, how long to wait, and when to suppress or remove someone, plus how to handle bounces and spam complaints. Note that open tracking has become unreliable because some email apps open messages automatically, so clicks and purchases are better signs of real engagement, and keeping large numbers of inactive subscribers costs money on subscriber based pricing and can hurt deliverability, while removing people who still buy occasionally would lose real customers. Give me the list hygiene automation.",
+    "description": "Automatically suppress inactive subscribers after a last chance email.",
+    "useCase": "Use this when your list has many inactive subscribers. Open tracking is unreliable because some apps open emails automatically, so use clicks and purchases, and inactive subscribers cost money and hurt deliverability, but avoid removing people who still buy occasionally.",
+    "variables": [
+      "BUSINESS TYPE",
+      "SIZE",
+      "E.G. OPENS, CLICKS, PURCHASES",
+      "IF KNOWN",
+      "PLATFORM"
+    ],
+    "relatedPromptIds": [
+      "eauto-deliverability-setup",
+      "eauto-tagging-system",
+      "eauto-measure-flows"
+    ]
+  },
+  {
+    "id": "eauto-transactional-vs-marketing",
+    "title": "Separate Transactional and Marketing Emails",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "email-automation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me sort my automated emails into transactional and marketing for my [BUSINESS TYPE]. My automated emails are [LIST THEM, E.G. ORDER CONFIRMATION, SHIPPING UPDATE, PASSWORD RESET, WELCOME, CART REMINDER, REVIEW REQUEST, PROMOTIONS], the tools sending them are [PLATFORMS], and where my customers are is [COUNTRIES]. Classify each, explain what that means for consent and unsubscribe links, and suggest whether to send them from separate tools or addresses. Note that transactional emails like receipts can usually be sent without marketing consent, but adding promotions to them can turn them into marketing under some countries' rules, and sending both kinds from the same address means a spam problem with promotions can delay order confirmations, so many businesses separate them, while the exact rules depend on where customers are located. Give me the email classification.",
+    "description": "Classify automated emails and keep transactional ones protected.",
+    "useCase": "Use this to stay compliant and keep receipts arriving. Receipts can usually be sent without marketing consent, but adding promotions can turn them into marketing under some countries' rules, and sharing an address means spam problems can delay confirmations, so many businesses separate them.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST THEM, E.G. ORDER CONFIRMATION, SHIPPING UPDATE, PASSWORD RESET, WELCOME, CART REMINDER, REVIEW REQUEST, PROMOTIONS",
+      "PLATFORMS",
+      "COUNTRIES"
+    ],
+    "relatedPromptIds": [
+      "eauto-send-time",
+      "eauto-deliverability-setup",
+      "eauto-flow-map"
+    ]
+  },
+  {
+    "id": "eauto-saved-replies",
+    "title": "Create Saved Replies and Auto Responses",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "email-automation",
+    "aiTool": "Gemini",
+    "promptText": "Help me create saved replies and auto responses for the emails I answer repeatedly at my [BUSINESS TYPE]. The questions I answer most are [COMMON QUESTIONS], my email app is [E.G. GMAIL TEMPLATES, OUTLOOK QUICK PARTS, HELP DESK TOOL], my response time promise is [WHAT YOU PROMISE], and my tone is [YOUR TONE]. Write the saved replies with placeholders to personalize, an auto acknowledgment for new inquiries, and an out of office message. Note that saved replies save a lot of time, but sending one that clearly ignores the actual question frustrates people more than a slower personal reply, so each should have a spot to address their specific situation, and an auto acknowledgment should set a realistic response time rather than promising something I cannot keep. Give me the saved replies.",
+    "description": "Write reusable replies, an auto acknowledgment, and an out of office.",
+    "useCase": "Use this if you answer the same emails over and over. Saved replies save time, but one that ignores the actual question frustrates people more than a slower personal reply, so leave room to personalize, and set a realistic response time in auto acknowledgments.",
+    "variables": [
+      "BUSINESS TYPE",
+      "COMMON QUESTIONS",
+      "E.G. GMAIL TEMPLATES, OUTLOOK QUICK PARTS, HELP DESK TOOL",
+      "WHAT YOU PROMISE",
+      "YOUR TONE"
+    ],
+    "relatedPromptIds": [
+      "eauto-inbox-rules",
+      "eauto-ai-triage",
+      "eauto-quick-flow"
+    ]
+  },
+  {
+    "id": "eauto-ai-triage",
+    "title": "Use AI to Triage and Draft Email Replies",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "email-automation",
+    "aiTool": "Claude",
+    "promptText": "Help me design an AI assisted email triage process for my [BUSINESS TYPE]. The kinds of emails I get are [EMAIL TYPES AND VOLUME], the tools I use are [E.G. GMAIL, OUTLOOK, ZAPIER, MAKE, AN AI ASSISTANT], and what I want automated is [E.G. SORTING BY URGENCY, SUMMARIES, DRAFT REPLIES, EXTRACTING ORDER DETAILS]. Suggest categories, how the AI step should classify and draft, what stays as a draft for me to review, and what should never be sent automatically. Note that AI triage can cut inbox time a lot, but it can misread tone, miss urgency, or invent details in a draft, so anything going to clients or involving money, complaints, or legal matters should stay as a draft for my review, and sending client emails through an AI service should fit my privacy obligations and the provider's data terms. Give me the triage design.",
+    "description": "Sort email by urgency with AI and keep sensitive replies as drafts.",
+    "useCase": "Use this to spend less time in your inbox. AI triage cuts time a lot but can misread tone, miss urgency, or invent details, so keep client, money, complaint, or legal replies as drafts for review, and check that sending client email through an AI service fits your privacy obligations.",
+    "variables": [
+      "BUSINESS TYPE",
+      "EMAIL TYPES AND VOLUME",
+      "E.G. GMAIL, OUTLOOK, ZAPIER, MAKE, AN AI ASSISTANT",
+      "E.G. SORTING BY URGENCY, SUMMARIES, DRAFT REPLIES, EXTRACTING ORDER DETAILS"
+    ],
+    "relatedPromptIds": [
+      "eauto-inbox-rules",
+      "eauto-saved-replies",
+      "eauto-receipt-forwarding"
+    ]
+  },
+  {
+    "id": "eauto-receipt-forwarding",
+    "title": "Automate Receipts and Invoices From Email to Bookkeeping",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "email-automation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me automatically collect receipts and invoices from my email into my bookkeeping for my [BUSINESS TYPE]. Where receipts arrive is [EMAIL ADDRESS OR APP], my bookkeeping tool is [E.G. A SPREADSHEET, XERO, QUICKBOOKS, WAVE, NONE], the senders and formats are [E.G. PDF ATTACHMENTS, EMAIL BODY RECEIPTS, LOCAL BANK NOTIFICATIONS], and my automation tool is [ZAPIER, MAKE, BUILT IN FORWARDING, NONE]. Design an automation that labels, saves, and logs each receipt with date, vendor, amount, and currency. Note that receipt automations save hours at tax time, but they miss receipts that arrive by chat app, paper, or a different email address, and amounts extracted by AI or parsers can be wrong, especially with mixed currencies like riel and dollars, so a monthly check against bank statements is still needed. Give me the receipt automation.",
+    "description": "Label, save, and log emailed receipts into bookkeeping automatically.",
+    "useCase": "Use this to stop hunting for receipts at tax time. It saves hours but misses receipts by chat, paper, or other addresses, and extracted amounts can be wrong, especially with mixed currencies like riel and dollars, so still check monthly against bank statements.",
+    "variables": [
+      "BUSINESS TYPE",
+      "EMAIL ADDRESS OR APP",
+      "E.G. A SPREADSHEET, XERO, QUICKBOOKS, WAVE, NONE",
+      "E.G. PDF ATTACHMENTS, EMAIL BODY RECEIPTS, LOCAL BANK NOTIFICATIONS",
+      "ZAPIER, MAKE, BUILT IN FORWARDING, NONE"
+    ],
+    "relatedPromptIds": [
+      "eauto-inbox-rules",
+      "eauto-ai-triage",
+      "eauto-test-flows"
+    ]
+  },
+  {
+    "id": "eauto-date-triggered",
+    "title": "Set Up Birthday and Anniversary Emails",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "email-automation",
+    "aiTool": "Gemini",
+    "promptText": "Help me set up date triggered emails for my [BUSINESS TYPE], like birthdays, customer anniversaries, or renewal reminders. The dates I have or could collect are [E.G. BIRTHDAY, FIRST PURCHASE DATE, SUBSCRIPTION RENEWAL DATE], my platform is [PLATFORM], and what I could offer is [E.G. A SMALL GIFT, A DISCOUNT, JUST A THANK YOU]. Give me the setup steps, timing, and short email copy for each. Note that birthday emails often perform well, but asking for full birth dates can feel intrusive, so asking only for month and day, and saying why, is gentler, renewal reminders should be sent early enough that customers are never surprised by a charge, and date fields imported in different formats can trigger emails on the wrong day. Give me the date triggered emails.",
+    "description": "Automate birthday, anniversary, and renewal reminder emails.",
+    "useCase": "Use this to add personal touches automatically. Birthday emails perform well but full birth dates feel intrusive, so ask only for month and day, send renewal reminders early so nobody is surprised by a charge, and check date formats, since mixed formats trigger emails on the wrong day.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. BIRTHDAY, FIRST PURCHASE DATE, SUBSCRIPTION RENEWAL DATE",
+      "PLATFORM",
+      "E.G. A SMALL GIFT, A DISCOUNT, JUST A THANK YOU"
+    ],
+    "relatedPromptIds": [
+      "eauto-tagging-system",
+      "eauto-test-flows",
+      "eauto-flow-map"
+    ]
+  },
+  {
+    "id": "eauto-test-flows",
+    "title": "Test Email Automations Before Launch",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "email-automation",
+    "aiTool": "Claude",
+    "promptText": "Help me test an email automation before it goes live for my [BUSINESS TYPE]. The flow is [TRIGGER, EMAILS, DELAYS, CONDITIONS], my platform is [PLATFORM], and the personalization used is [E.G. FIRST NAME, PRODUCT NAME, LANGUAGE, DISCOUNT CODE]. Give me a test checklist covering triggers, delays, conditions, exit rules, personalization with missing data, links, discount codes, unsubscribe links, display on phones and in different email apps, and what to check in the first week live. Note that the most common mistakes are broken personalization like Hi blank, links pointing to the wrong page, expired discount codes, and conditions that send everyone down the same branch, and long delays make problems slow to spot, so using a test contact and shortened delays during testing catches them before real subscribers see them. Give me the test checklist.",
+    "description": "Check triggers, personalization, links, and codes before a flow goes live.",
+    "useCase": "Use this before turning on any email flow. Common mistakes are broken personalization like Hi blank, wrong links, expired codes, and conditions that send everyone the same way, and long delays hide problems, so test with a test contact and shortened delays first.",
+    "variables": [
+      "BUSINESS TYPE",
+      "TRIGGER, EMAILS, DELAYS, CONDITIONS",
+      "PLATFORM",
+      "E.G. FIRST NAME, PRODUCT NAME, LANGUAGE, DISCOUNT CODE"
+    ],
+    "relatedPromptIds": [
+      "eauto-exit-rules",
+      "eauto-language-routing",
+      "eauto-measure-flows"
+    ]
+  },
+  {
+    "id": "eauto-measure-flows",
+    "title": "Measure and Improve Email Automation Performance",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "email-automation",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me measure how my email automations perform at my [BUSINESS TYPE]. The data I have for each flow is [E.G. RECIPIENTS, CLICKS, CONVERSIONS, REVENUE, UNSUBSCRIBES, SPAM COMPLAINTS], the period is [TIMEFRAME], and my platform is [PLATFORM]. Compare flows, identify the strongest and weakest emails within each, and suggest one change to test per flow. Note that open rates are increasingly unreliable due to automatic opening by some email apps, so clicks, conversions, and unsubscribes give a truer picture, revenue attributed to emails is often overstated because some buyers would have purchased anyway, and changing several things at once makes it impossible to know what helped. Give me the automation performance review.",
+    "description": "Compare flows on clicks, conversions, and unsubscribes, then test one change.",
+    "useCase": "Use this every month or quarter. Open rates are unreliable due to automatic opening, so clicks, conversions, and unsubscribes give a truer picture, email revenue is often overstated since some would have bought anyway, and testing one change at a time shows what actually helped.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. RECIPIENTS, CLICKS, CONVERSIONS, REVENUE, UNSUBSCRIBES, SPAM COMPLAINTS",
+      "TIMEFRAME",
+      "PLATFORM"
+    ],
+    "relatedPromptIds": [
+      "eauto-list-hygiene",
+      "eauto-test-flows",
+      "eauto-flow-map"
+    ]
   }
 ]
