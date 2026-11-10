@@ -44877,5 +44877,396 @@
       "mkt-violation-appeal",
       "mkt-stock-sync"
     ]
+  },
+  {
+    "id": "zm-build-step-by-step",
+    "title": "Build a Zapier or Make Automation Step by Step",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "zapier-and-make-setups",
+    "aiTool": "Claude",
+    "promptText": "Walk me through building an automation in [ZAPIER OR MAKE] for my [BUSINESS TYPE]. What should start it is [THE TRIGGER, E.G. NEW FORM ENTRY, NEW ORDER, NEW EMAIL], what should happen next is [THE ACTIONS IN ORDER], the apps involved are [APPS], and my experience level is [BEGINNER, SOME EXPERIENCE, ADVANCED]. Give me numbered setup steps, including which trigger and action modules to choose, which fields to map, and how to test each step with real sample data before turning it on. Note that menus and module names in these tools change over time, so exact button labels may differ slightly from the steps, and testing with sample data that looks like real data catches most mapping mistakes, while turning on an untested automation can quietly send wrong emails or create duplicate records for days before anyone notices. Give me the setup walkthrough.",
+    "description": "Get numbered setup steps for one specific Zapier or Make automation.",
+    "useCase": "Use this when you know what you want automated but not how to build it. Menus change over time so labels may differ, and testing every step with realistic sample data catches most mapping mistakes, while an untested automation can quietly send wrong emails or create duplicates for days.",
+    "variables": [
+      "ZAPIER OR MAKE",
+      "BUSINESS TYPE",
+      "THE TRIGGER, E.G. NEW FORM ENTRY, NEW ORDER, NEW EMAIL",
+      "THE ACTIONS IN ORDER",
+      "APPS",
+      "BEGINNER, SOME EXPERIENCE, ADVANCED"
+    ],
+    "relatedPromptIds": [
+      "zm-test-before-live",
+      "zm-field-mapping",
+      "zm-choose-tool"
+    ]
+  },
+  {
+    "id": "zm-quick-recipe",
+    "title": "Get a Quick Automation Recipe",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "zapier-and-make-setups",
+    "aiTool": "Grok",
+    "promptText": "Give me a quick automation recipe. When [TRIGGER] happens in [APP ONE], I want [ACTION] to happen in [APP TWO]. Tell me the trigger, each action, and the key fields to map in Zapier or Make, as a short numbered list, no explanation. Give me the recipe.",
+    "description": "Get a short trigger, action, and field mapping list, fast.",
+    "useCase": "Use this when you need a simple two app automation fast. A short recipe gets you building right away, but test it with a sample record before turning it on, since a wrong field mapping can silently put data in the wrong place.",
+    "variables": [
+      "TRIGGER",
+      "APP ONE",
+      "ACTION",
+      "APP TWO"
+    ],
+    "relatedPromptIds": [
+      "zm-build-step-by-step",
+      "zm-test-before-live",
+      "zm-field-mapping"
+    ]
+  },
+  {
+    "id": "zm-choose-tool",
+    "title": "Choose Between Zapier, Make, and Alternatives",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "zapier-and-make-setups",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me choose an automation tool for my [BUSINESS TYPE]. The automations I need are [LIST WHAT YOU WANT TO AUTOMATE], the apps I use are [APPS], my estimated runs per month are [VOLUME], my monthly budget is [BUDGET], and my technical comfort is [LEVEL]. Compare Zapier, Make, and alternatives like n8n or built in automations in my existing apps, covering app support, pricing based on tasks or operations, ease of use, and handling of complex logic, then recommend one. Note that pricing models differ, Zapier mainly counts tasks while Make counts operations per module, so the same automation can cost very different amounts, prices and plan limits change often and should be checked on the current pricing pages, and sometimes the apps I already use have built in automations that cost nothing extra. Give me the tool recommendation.",
+    "description": "Compare Zapier, Make, n8n, and built in options on cost and fit.",
+    "useCase": "Use this before paying for an automation tool. Zapier mainly counts tasks while Make counts operations per module, so the same automation can cost very different amounts, prices change often, and the apps you already use may have free built in automations.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST WHAT YOU WANT TO AUTOMATE",
+      "APPS",
+      "VOLUME",
+      "BUDGET",
+      "LEVEL"
+    ],
+    "relatedPromptIds": [
+      "zm-estimate-usage-cost",
+      "zm-build-step-by-step",
+      "zm-missing-integration"
+    ]
+  },
+  {
+    "id": "zm-estimate-usage-cost",
+    "title": "Estimate Monthly Task or Operation Usage",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "zapier-and-make-setups",
+    "aiTool": "Gemini",
+    "promptText": "Help me estimate how many tasks or operations my automations will use per month in [ZAPIER OR MAKE]. My automations are [DESCRIBE EACH, WITH STEPS], how often each one triggers is [RUNS PER DAY OR MONTH], and my plan's limit is [PLAN LIMIT]. Estimate monthly usage for each automation, flag the ones that use the most, and suggest ways to reduce usage, like adding filters early or checking less often. Note that polling triggers, loops over many items, and steps that run even when nothing needs to happen can quietly use far more tasks or operations than expected, and going over a plan limit can pause automations or add charges, so placing filters right after the trigger and reviewing usage in the first week of running is wise. Give me the usage estimate.",
+    "description": "Estimate monthly tasks or operations and find what uses the most.",
+    "useCase": "Use this to avoid surprise bills or paused automations. Polling triggers, loops, and steps that run when nothing needs to happen quietly use far more than expected, and exceeding limits can pause automations or add charges, so filter early and review usage in the first week.",
+    "variables": [
+      "ZAPIER OR MAKE",
+      "DESCRIBE EACH, WITH STEPS",
+      "RUNS PER DAY OR MONTH",
+      "PLAN LIMIT"
+    ],
+    "relatedPromptIds": [
+      "zm-choose-tool",
+      "zm-filters-and-paths",
+      "zm-audit-automations"
+    ]
+  },
+  {
+    "id": "zm-field-mapping",
+    "title": "Map and Format Data Between Apps",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "zapier-and-make-setups",
+    "aiTool": "Claude",
+    "promptText": "Help me map and format data correctly between apps in my [ZAPIER OR MAKE] automation. The source app and sample data are [APP AND A SAMPLE RECORD], the destination app and its fields are [APP AND REQUIRED FIELDS], and the problems I am seeing are [E.G. WRONG DATE FORMAT, NAMES IN ONE FIELD, PHONE NUMBERS WITHOUT COUNTRY CODE, CURRENCY SYMBOLS, EMPTY FIELDS]. Tell me which field goes where, what formatting steps to add, and how to handle missing values. Note that most automation errors come from data that looks right but is in the wrong format, like dates in day month order versus month day order, phone numbers missing country codes, or numbers stored as text, and empty fields can break a step or create blank records, so setting defaults and formatting before the final step prevents most problems. Give me the mapping plan.",
+    "description": "Fix date, phone, name, and number formats between apps.",
+    "useCase": "Use this when data arrives in the wrong format. Most automation errors come from data that looks right but is formatted wrong, like day month versus month day dates, phones without country codes, or numbers as text, and empty fields break steps, so set defaults and format before the final step.",
+    "variables": [
+      "ZAPIER OR MAKE",
+      "APP AND A SAMPLE RECORD",
+      "APP AND REQUIRED FIELDS",
+      "E.G. WRONG DATE FORMAT, NAMES IN ONE FIELD, PHONE NUMBERS WITHOUT COUNTRY CODE, CURRENCY SYMBOLS, EMPTY FIELDS"
+    ],
+    "relatedPromptIds": [
+      "zm-build-step-by-step",
+      "zm-debug-failing",
+      "zm-dedupe-records"
+    ]
+  },
+  {
+    "id": "zm-filters-and-paths",
+    "title": "Add Filters, Paths, and Routers to an Automation",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "zapier-and-make-setups",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me add conditional logic to my automation in [ZAPIER OR MAKE]. The automation currently does [CURRENT STEPS], and I want different things to happen when [CONDITIONS, E.G. ORDER OVER A CERTAIN VALUE, A SPECIFIC FORM ANSWER, A COUNTRY, A TAG]. Explain whether to use filters, paths in Zapier, or routers and filters in Make, write out the exact conditions, and describe what happens to records that match none of them. Note that conditions that look obvious often fail on small differences like capital letters, extra spaces, or a number stored as text, and records that match no branch can silently disappear, so a fallback branch that notifies me about unmatched records is a simple safety net. Give me the conditional logic plan.",
+    "description": "Route records with filters and branches, plus a fallback for unmatched ones.",
+    "useCase": "Use this when different records need different handling. Conditions often fail on capital letters, extra spaces, or numbers stored as text, and records matching no branch can silently disappear, so add a fallback branch that notifies you about anything unmatched.",
+    "variables": [
+      "ZAPIER OR MAKE",
+      "CURRENT STEPS",
+      "CONDITIONS, E.G. ORDER OVER A CERTAIN VALUE, A SPECIFIC FORM ANSWER, A COUNTRY, A TAG"
+    ],
+    "relatedPromptIds": [
+      "zm-estimate-usage-cost",
+      "zm-error-handling",
+      "zm-field-mapping"
+    ]
+  },
+  {
+    "id": "zm-webhook-setup",
+    "title": "Connect an App Using Webhooks",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "zapier-and-make-setups",
+    "aiTool": "Gemini",
+    "promptText": "Help me connect an app to [ZAPIER OR MAKE] using webhooks for my [BUSINESS TYPE]. The app is [APP NAME], what it can send or receive is [WHAT THE APP'S WEBHOOK OR API DOCUMENTATION SAYS], and what I want to happen is [THE GOAL]. Explain in plain language how to set up the catch hook or custom webhook, how to send a test, how to read the incoming data, and how to secure it. Note that webhooks let me connect apps that do not have a ready made integration, but the webhook address works like a password, since anyone who has it can send data into my automation, so it should not be shared publicly, and checking a secret value or the sender where possible prevents fake submissions. Give me the webhook setup guide.",
+    "description": "Set up and secure a webhook for apps without a ready integration.",
+    "useCase": "Use this when an app has no ready made integration. Webhooks fill the gap, but the webhook address works like a password, since anyone who has it can send data into your automation, so keep it private and check a secret value or the sender where possible.",
+    "variables": [
+      "ZAPIER OR MAKE",
+      "BUSINESS TYPE",
+      "APP NAME",
+      "WHAT THE APP'S WEBHOOK OR API DOCUMENTATION SAYS",
+      "THE GOAL"
+    ],
+    "relatedPromptIds": [
+      "zm-missing-integration",
+      "zm-security-access",
+      "zm-build-step-by-step"
+    ]
+  },
+  {
+    "id": "zm-missing-integration",
+    "title": "Automate an App With No Integration",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "zapier-and-make-setups",
+    "aiTool": "Claude",
+    "promptText": "Help me automate something involving an app that has no Zapier or Make integration for my [BUSINESS TYPE]. The app is [APP, E.G. A LOCAL BANKING APP, A LOCAL DELIVERY SERVICE, A REGIONAL MARKETPLACE, AN OLD SYSTEM], what it can do is [E.G. SEND EMAIL NOTIFICATIONS, EXPORT CSV, HAS AN API, NONE OF THESE], and what I want automated is [THE GOAL]. Suggest workarounds in order of reliability, like webhooks, an API connection, parsing notification emails, scheduled spreadsheet imports, or a simple manual step, and how to set up the best one. Note that many local and regional tools have no integrations, so parsing their notification emails or importing exported files is often the practical route, but these break when the email or file layout changes, so the automation needs a check that alerts me when it stops finding data, and sometimes a five minute manual step is more reliable than a fragile workaround. Give me the workaround plan.",
+    "description": "Work around missing integrations with email parsing, exports, or APIs.",
+    "useCase": "Use this when a local bank, courier, or regional tool has no integration. Parsing notification emails or importing exports is often the practical route, but they break when layouts change, so add an alert for when data stops arriving, and sometimes a five minute manual step is more reliable.",
+    "variables": [
+      "BUSINESS TYPE",
+      "APP, E.G. A LOCAL BANKING APP, A LOCAL DELIVERY SERVICE, A REGIONAL MARKETPLACE, AN OLD SYSTEM",
+      "E.G. SEND EMAIL NOTIFICATIONS, EXPORT CSV, HAS AN API, NONE OF THESE",
+      "THE GOAL"
+    ],
+    "relatedPromptIds": [
+      "zm-webhook-setup",
+      "zm-choose-tool",
+      "zm-error-handling"
+    ]
+  },
+  {
+    "id": "zm-order-notifications",
+    "title": "Send New Order Alerts to Telegram or Chat",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "zapier-and-make-setups",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me set up an automation that sends new order or lead alerts to a chat app for my [BUSINESS TYPE]. The source is [E.G. SHOPIFY, WOOCOMMERCE, GOOGLE FORMS, TYPEFORM, A WEBSITE FORM], the chat app is [E.G. TELEGRAM, SLACK, DISCORD, MICROSOFT TEAMS], who should get the alerts is [PEOPLE OR GROUP], and the details each alert needs are [FIELDS TO INCLUDE]. Give me setup steps in [ZAPIER OR MAKE] and a clean message format. Note that chat alerts are one of the most useful simple automations for a small business, especially where teams already live in apps like Telegram, but alerts that include full customer addresses or phone numbers in a large group chat can expose personal data, so it is better to include only what each person needs and link to the full order instead. Give me the alert setup.",
+    "description": "Push new orders or leads into Telegram, Slack, or similar chats.",
+    "useCase": "Use this so you see new orders or leads instantly. Chat alerts are one of the most useful simple automations, especially where teams live in Telegram, but posting full addresses or phone numbers in a big group exposes personal data, so include only what is needed and link to the full order.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. SHOPIFY, WOOCOMMERCE, GOOGLE FORMS, TYPEFORM, A WEBSITE FORM",
+      "E.G. TELEGRAM, SLACK, DISCORD, MICROSOFT TEAMS",
+      "PEOPLE OR GROUP",
+      "FIELDS TO INCLUDE",
+      "ZAPIER OR MAKE"
+    ],
+    "relatedPromptIds": [
+      "zm-lead-to-sheet-crm",
+      "zm-security-access",
+      "zm-quick-recipe"
+    ]
+  },
+  {
+    "id": "zm-lead-to-sheet-crm",
+    "title": "Send Form Leads to a Sheet or CRM Automatically",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "zapier-and-make-setups",
+    "aiTool": "Gemini",
+    "promptText": "Help me automatically send new leads from [FORM OR SOURCE] into [GOOGLE SHEETS, AIRTABLE, OR CRM NAME] for my [BUSINESS TYPE]. The fields the form collects are [FIELDS], what should happen after a lead is saved is [E.G. WELCOME EMAIL, NOTIFY ME, ASSIGN TO SOMEONE, ADD A TAG], and whether leads can come in more than once is [YES OR NO]. Give me the automation steps in [ZAPIER OR MAKE], how to avoid duplicates, and how to record the lead source. Note that collecting leads automatically is only useful if I actually follow up, so a notification or task for each new lead matters as much as storing it, duplicates pile up fast without a check, and the form should tell people how their details will be used, in line with privacy rules where my leads are located. Give me the lead capture automation.",
+    "description": "Capture form leads into a sheet or CRM with source tracking and dedupe.",
+    "useCase": "Use this to stop copying leads by hand. Storing leads only helps if you follow up, so a notification or task per lead matters as much as saving it, duplicates pile up without a check, and your form should say how details are used under the privacy rules where leads are located.",
+    "variables": [
+      "FORM OR SOURCE",
+      "GOOGLE SHEETS, AIRTABLE, OR CRM NAME",
+      "BUSINESS TYPE",
+      "FIELDS",
+      "E.G. WELCOME EMAIL, NOTIFY ME, ASSIGN TO SOMEONE, ADD A TAG",
+      "YES OR NO",
+      "ZAPIER OR MAKE"
+    ],
+    "relatedPromptIds": [
+      "zm-dedupe-records",
+      "zm-order-notifications",
+      "zm-field-mapping"
+    ]
+  },
+  {
+    "id": "zm-dedupe-records",
+    "title": "Stop Automations From Creating Duplicates",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "zapier-and-make-setups",
+    "aiTool": "Claude",
+    "promptText": "Help me stop my [ZAPIER OR MAKE] automation from creating duplicate records. The automation is [DESCRIBE IT], where duplicates appear is [APP], what makes a record unique is [E.G. EMAIL, ORDER NUMBER, PHONE], and how often duplicates happen is [FREQUENCY]. Explain the likely causes, like re-triggering on updates, retries after errors, or the same person submitting twice, and give me a fix using a search step with find or create logic, a lookup, or a stored list of processed ids. Note that duplicates usually come from triggers that fire on updates as well as new records, or steps that retry after a timeout, and fixing the cause is better than cleaning up later, while the unique field I match on must be reliable, since emails with capital letters or spaces can look different to the automation. Give me the deduplication fix.",
+    "description": "Find why duplicates happen and add find or create logic to stop them.",
+    "useCase": "Use this when your sheet or CRM fills with duplicate records. They usually come from triggers firing on updates or steps retrying after timeouts, so fix the cause rather than cleaning later, and make sure the field you match on is reliable, since capital letters or spaces make emails look different.",
+    "variables": [
+      "ZAPIER OR MAKE",
+      "DESCRIBE IT",
+      "APP",
+      "E.G. EMAIL, ORDER NUMBER, PHONE",
+      "FREQUENCY"
+    ],
+    "relatedPromptIds": [
+      "zm-lead-to-sheet-crm",
+      "zm-debug-failing",
+      "zm-field-mapping"
+    ]
+  },
+  {
+    "id": "zm-ai-step",
+    "title": "Add an AI Step to an Automation",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "zapier-and-make-setups",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me add an AI step to my automation in [ZAPIER OR MAKE] for my [BUSINESS TYPE]. The automation currently does [CURRENT STEPS], and I want the AI to [E.G. SUMMARIZE EMAILS, CLASSIFY LEADS, DRAFT REPLIES, EXTRACT DATA FROM TEXT, TRANSLATE MESSAGES]. Write the prompt for the AI step, specify the exact output format so the next step can use it reliably, and suggest where a human should review before anything is sent. Note that AI steps can save a lot of time but sometimes produce wrong or oddly formatted answers, so asking for a fixed format like a single category word or structured fields makes the output dependable, anything sent to customers is safer as a draft for human review at first, and sending customer data to an AI service should follow my privacy obligations and the provider's data terms. Give me the AI step setup.",
+    "description": "Add a reliable AI step with fixed output and human review where needed.",
+    "useCase": "Use this to summarize, classify, extract, or draft inside an automation. AI steps sometimes give wrong or oddly formatted answers, so ask for a fixed output format, keep customer facing messages as drafts for review at first, and check privacy obligations before sending customer data to an AI service.",
+    "variables": [
+      "ZAPIER OR MAKE",
+      "BUSINESS TYPE",
+      "CURRENT STEPS",
+      "E.G. SUMMARIZE EMAILS, CLASSIFY LEADS, DRAFT REPLIES, EXTRACT DATA FROM TEXT, TRANSLATE MESSAGES"
+    ],
+    "relatedPromptIds": [
+      "zm-build-step-by-step",
+      "zm-error-handling",
+      "zm-security-access"
+    ]
+  },
+  {
+    "id": "zm-error-handling",
+    "title": "Add Error Handling and Alerts to Automations",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "zapier-and-make-setups",
+    "aiTool": "Gemini",
+    "promptText": "Help me make my [ZAPIER OR MAKE] automations fail safely for my [BUSINESS TYPE]. My key automations are [LIST THEM], which ones would cause real problems if they stopped is [CRITICAL AUTOMATIONS], and how I want to be alerted is [EMAIL, CHAT, SMS]. Suggest error handling for each, like error notifications, retry settings, error routes in Make, fallback steps, and a weekly check routine. Note that automations fail silently more often than people expect, for example when a password changes, an app disconnects, or a field is renamed, and the damage grows the longer nobody notices, so critical automations need an alert on failure and a simple way to see what was missed, while a weekly glance at the run history catches slow problems that alerts miss. Give me the error handling plan.",
+    "description": "Add failure alerts, retries, and a weekly check to critical automations.",
+    "useCase": "Use this for automations your business depends on. They fail silently when a password changes, an app disconnects, or a field is renamed, and damage grows the longer nobody notices, so add failure alerts and a way to see what was missed, plus a weekly look at run history.",
+    "variables": [
+      "ZAPIER OR MAKE",
+      "BUSINESS TYPE",
+      "LIST THEM",
+      "CRITICAL AUTOMATIONS",
+      "EMAIL, CHAT, SMS"
+    ],
+    "relatedPromptIds": [
+      "zm-debug-failing",
+      "zm-filters-and-paths",
+      "zm-audit-automations"
+    ]
+  },
+  {
+    "id": "zm-debug-failing",
+    "title": "Debug an Automation That Stopped Working",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "zapier-and-make-setups",
+    "aiTool": "Claude",
+    "promptText": "Help me fix an automation in [ZAPIER OR MAKE] that is not working. What it should do is [EXPECTED BEHAVIOR], what is actually happening is [WHAT YOU SEE], the error message or run history says [PASTE ERROR OR LOG], and what changed recently is [E.G. NEW FIELD, PASSWORD CHANGE, APP UPDATE, NOTHING I KNOW OF]. Walk me through the most likely causes in order, how to confirm each one, and the fix. Note that the most common causes are expired app connections, renamed or deleted fields, changed data formats, and hitting plan limits, so checking those first usually finds the problem fast, and replaying failed runs after the fix may be possible but can also send duplicate messages, so I should check what each replay will do before running it. Give me the debugging steps.",
+    "description": "Trace a broken automation to its cause and fix it safely.",
+    "useCase": "Use this when an automation stops or misbehaves. Common causes are expired connections, renamed fields, changed formats, and plan limits, so check those first, and replaying failed runs after the fix can send duplicate messages, so check what each replay will do first.",
+    "variables": [
+      "ZAPIER OR MAKE",
+      "EXPECTED BEHAVIOR",
+      "WHAT YOU SEE",
+      "PASTE ERROR OR LOG",
+      "E.G. NEW FIELD, PASSWORD CHANGE, APP UPDATE, NOTHING I KNOW OF"
+    ],
+    "relatedPromptIds": [
+      "zm-error-handling",
+      "zm-field-mapping",
+      "zm-dedupe-records"
+    ]
+  },
+  {
+    "id": "zm-test-before-live",
+    "title": "Test an Automation Before Turning It On",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "zapier-and-make-setups",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me write a test plan for my automation before it goes live. The automation is [DESCRIBE THE TRIGGER AND STEPS], who or what it affects is [E.G. CUSTOMERS GET EMAILS, RECORDS ARE CREATED, PAYMENTS ARE LOGGED], and the tool is [ZAPIER OR MAKE]. List test cases including normal records, missing fields, unusual characters or languages, duplicates, and records that should be filtered out, plus what result to expect for each. Note that most automations work on the first clean test record and fail on real data, like names in Khmer or Thai script, a missing phone number, or a very long message, and anything that emails or messages customers should be tested by sending to my own address first, since a mistake there reaches real people instantly. Give me the test plan.",
+    "description": "Test normal, missing, unusual, and duplicate records before going live.",
+    "useCase": "Use this before switching on any automation. Most work on a clean test record and fail on real data like non Latin script names, missing phone numbers, or very long messages, and anything that messages customers should be tested on your own address first, since mistakes reach real people instantly.",
+    "variables": [
+      "DESCRIBE THE TRIGGER AND STEPS",
+      "E.G. CUSTOMERS GET EMAILS, RECORDS ARE CREATED, PAYMENTS ARE LOGGED",
+      "ZAPIER OR MAKE"
+    ],
+    "relatedPromptIds": [
+      "zm-build-step-by-step",
+      "zm-debug-failing",
+      "zm-quick-recipe"
+    ]
+  },
+  {
+    "id": "zm-security-access",
+    "title": "Secure Automation Accounts and Connections",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "zapier-and-make-setups",
+    "aiTool": "Gemini",
+    "promptText": "Help me secure my automation setup in [ZAPIER OR MAKE] for my [BUSINESS TYPE]. The apps connected are [APPS AND WHOSE ACCOUNTS THEY USE], who has access to the automation account is [PEOPLE], the sensitive data that flows through is [E.G. CUSTOMER DETAILS, PAYMENTS, PASSWORDS], and how long the run history is kept is [IF KNOWN]. Give me a security checklist covering account ownership, two factor login, least access connections, shared folder permissions, data in logs, and what to do when someone leaves. Note that automations often run on one person's personal app logins, which breaks everything if they leave and gives broad access to everything that account can see, so using a business owned account, the narrowest permissions possible, and two factor login reduces risk, and run history can store customer data that should be cleared on a schedule. Give me the security checklist.",
+    "description": "Lock down automation accounts, connections, and stored run data.",
+    "useCase": "Use this once automations handle real customer or payment data. They often run on one person's personal logins, which breaks when they leave and grants broad access, so use business owned accounts, the narrowest permissions, and two factor login, and clear customer data from run history on a schedule.",
+    "variables": [
+      "ZAPIER OR MAKE",
+      "BUSINESS TYPE",
+      "APPS AND WHOSE ACCOUNTS THEY USE",
+      "PEOPLE",
+      "E.G. CUSTOMER DETAILS, PAYMENTS, PASSWORDS",
+      "IF KNOWN"
+    ],
+    "relatedPromptIds": [
+      "zm-webhook-setup",
+      "zm-document-automations",
+      "zm-ai-step"
+    ]
+  },
+  {
+    "id": "zm-document-automations",
+    "title": "Document Your Automations So Others Can Maintain Them",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "zapier-and-make-setups",
+    "aiTool": "Claude",
+    "promptText": "Help me document the automations running in my [BUSINESS TYPE]. My automations are [LIST EACH WITH ITS TRIGGER AND STEPS], the tools are [ZAPIER, MAKE, OTHERS], and who might need to maintain them is [E.G. ME IN SIX MONTHS, A VIRTUAL ASSISTANT, A CONTRACTOR]. Create a simple documentation template and fill it in for each automation, covering purpose, trigger, steps, connected accounts, owner, what breaks if it stops, and how to fix common failures. Note that undocumented automations become mysteries within months, even to the person who built them, and when something breaks, nobody knows what depends on what, so a one page summary per automation with clear names in the tool itself saves hours of detective work later. Give me the automation documentation.",
+    "description": "Write a one page summary for each automation and its dependencies.",
+    "useCase": "Use this once you have more than a few automations. Undocumented automations become mysteries within months, even to their builder, and when one breaks nobody knows what depends on it, so a one page summary per automation and clear names in the tool save hours later.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST EACH WITH ITS TRIGGER AND STEPS",
+      "ZAPIER, MAKE, OTHERS",
+      "E.G. ME IN SIX MONTHS, A VIRTUAL ASSISTANT, A CONTRACTOR"
+    ],
+    "relatedPromptIds": [
+      "zm-audit-automations",
+      "zm-security-access",
+      "zm-error-handling"
+    ]
+  },
+  {
+    "id": "zm-audit-automations",
+    "title": "Audit and Clean Up Existing Automations",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "zapier-and-make-setups",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me audit the automations in my [ZAPIER OR MAKE] account. Here is a list of what is running: [LIST AUTOMATIONS WITH LAST RUN DATE, MONTHLY TASKS OR OPERATIONS, AND STATUS], my plan and cost are [PLAN AND PRICE], and what my business currently needs is [CURRENT PRIORITIES]. Sort them into keep, fix, merge, or turn off, identify the biggest users of tasks or operations, and estimate the savings from cleaning up. Note that automation accounts collect forgotten automations that still run, cost money, and may send outdated messages to customers, and two automations doing overlapping jobs can cause duplicates, so turning off anything nobody can explain, after checking what depends on it, is usually a safe win. Give me the audit results.",
+    "description": "Sort automations into keep, fix, merge, or turn off, and cut costs.",
+    "useCase": "Use this every few months. Accounts collect forgotten automations that still run, cost money, and may send outdated messages, and overlapping ones cause duplicates, so turning off anything nobody can explain, after checking what depends on it, is usually a safe win.",
+    "variables": [
+      "ZAPIER OR MAKE",
+      "LIST AUTOMATIONS WITH LAST RUN DATE, MONTHLY TASKS OR OPERATIONS, AND STATUS",
+      "PLAN AND PRICE",
+      "CURRENT PRIORITIES"
+    ],
+    "relatedPromptIds": [
+      "zm-estimate-usage-cost",
+      "zm-document-automations",
+      "zm-error-handling"
+    ]
   }
 ]
