@@ -49911,5 +49911,394 @@
       "expt-subscription-tracker",
       "expt-spreadsheet"
     ]
+  },
+  {
+    "id": "cbuild-strategy",
+    "title": "Define the Purpose and Members of Your Community",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "community-building",
+    "aiTool": "Claude",
+    "promptText": "Help me define a clear community strategy for my [BUSINESS OR BRAND]. Who I want in the community is [TARGET MEMBERS], what they have in common is [SHARED INTEREST, PROBLEM, OR IDENTITY], what I want the community to achieve for them is [MEMBER BENEFIT], what I want it to achieve for my business is [BUSINESS GOAL], and the time I can give it is [HOURS PER WEEK]. Write a one paragraph purpose statement, who the community is for and not for, the main reasons members will return, and what success looks like after three and twelve months. Note that communities built mainly to sell to members usually stay quiet, because people join for each other and for help with their problem, not for the brand, so the member benefit has to come first, and communities need steady attention, especially early on, so the plan should fit the time I can actually give it. Give me the community strategy.",
+    "description": "Define who the community is for, why they return, and what success means.",
+    "useCase": "Use this before starting any group or community. Communities built mainly to sell stay quiet, since people join for each other and help with their problem, so put member benefit first, and communities need steady attention early on, so plan around the time you can actually give.",
+    "variables": [
+      "BUSINESS OR BRAND",
+      "TARGET MEMBERS",
+      "SHARED INTEREST, PROBLEM, OR IDENTITY",
+      "MEMBER BENEFIT",
+      "BUSINESS GOAL",
+      "HOURS PER WEEK"
+    ],
+    "relatedPromptIds": [
+      "cbuild-quick-ideas",
+      "cbuild-choose-platform",
+      "cbuild-first-members"
+    ]
+  },
+  {
+    "id": "cbuild-quick-ideas",
+    "title": "Get Quick Community Engagement Ideas",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "community-building",
+    "aiTool": "Grok",
+    "promptText": "Give me quick engagement ideas for my community. The community is about [TOPIC], the members are [WHO THEY ARE], and it lives on [PLATFORM]. List ten post or activity ideas that get members talking to each other, one line each, no explanation. Give me the ideas.",
+    "description": "Get ten one line ideas that get members talking, fast.",
+    "useCase": "Use this when your group needs a spark today. Quick ideas fill a gap, but the best ones are those that get members talking to each other rather than just to you, so pick ideas that invite members to share their own experience.",
+    "variables": [
+      "TOPIC",
+      "WHO THEY ARE",
+      "PLATFORM"
+    ],
+    "relatedPromptIds": [
+      "cbuild-conversation-starters",
+      "cbuild-weekly-rituals",
+      "cbuild-strategy"
+    ]
+  },
+  {
+    "id": "cbuild-choose-platform",
+    "title": "Choose the Right Platform for Your Community",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "community-building",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me choose a platform for my community. The members are [WHO THEY ARE AND WHERE THEY LIVE], the apps they already use daily are [E.G. FACEBOOK, TELEGRAM, WHATSAPP, LINE, DISCORD, LINKEDIN], what the community needs is [E.G. DISCUSSIONS, ANNOUNCEMENTS, EVENTS, FILE SHARING, PAID ACCESS, PRIVACY], and my budget is [BUDGET]. Compare options like Facebook Groups, Telegram groups or channels, WhatsApp communities, LINE OpenChat, Discord, and dedicated community platforms on fit for my members, features, moderation tools, ownership of member data, and cost, then recommend one. Note that the best platform is usually the one members already open every day, since asking people to install a new app loses many of them, but communities on free social platforms are subject to rule changes and algorithms I do not control, so keeping a separate way to reach members, like an email list, protects the community if the platform changes. Give me the platform recommendation.",
+    "description": "Pick a community platform based on where members already spend time.",
+    "useCase": "Use this before launching your community. The best platform is usually one members already open daily, since asking them to install a new app loses many, but free platforms change rules and algorithms you cannot control, so keep another way to reach members, like an email list.",
+    "variables": [
+      "WHO THEY ARE AND WHERE THEY LIVE",
+      "E.G. FACEBOOK, TELEGRAM, WHATSAPP, LINE, DISCORD, LINKEDIN",
+      "E.G. DISCUSSIONS, ANNOUNCEMENTS, EVENTS, FILE SHARING, PAID ACCESS, PRIVACY",
+      "BUDGET"
+    ],
+    "relatedPromptIds": [
+      "cbuild-strategy",
+      "cbuild-guidelines",
+      "cbuild-multilingual"
+    ]
+  },
+  {
+    "id": "cbuild-guidelines",
+    "title": "Write Community Guidelines People Will Follow",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "community-building",
+    "aiTool": "Gemini",
+    "promptText": "Help me write community guidelines for my [COMMUNITY NAME AND TOPIC]. The platform is [PLATFORM], the members are [WHO THEY ARE], the behavior I want to encourage is [E.G. HELPING EACH OTHER, SHARING PROGRESS, RESPECTFUL DEBATE], the problems I want to prevent are [E.G. SPAM, SELF PROMOTION, SCAMS, HARASSMENT, POLITICS, OFF TOPIC POSTS], and the languages used are [LANGUAGES]. Write short, friendly guidelines with a few clear rules, examples of what is and is not allowed, how promotion is handled, and what happens when rules are broken. Note that long lists of rules go unread, so five to eight clear rules with examples work better, rules are only as good as their enforcement, so I should only write ones I am willing to act on consistently, and giving members a permitted place for self promotion, like a weekly thread, reduces spam far more than banning it entirely. Give me the community guidelines.",
+    "description": "Write a few clear, enforceable rules with examples and consequences.",
+    "useCase": "Use this when starting or tidying up a community. Long rule lists go unread, so five to eight clear rules with examples work better, only write rules you will enforce consistently, and a permitted place for self promotion, like a weekly thread, reduces spam more than banning it.",
+    "variables": [
+      "COMMUNITY NAME AND TOPIC",
+      "PLATFORM",
+      "WHO THEY ARE",
+      "E.G. HELPING EACH OTHER, SHARING PROGRESS, RESPECTFUL DEBATE",
+      "E.G. SPAM, SELF PROMOTION, SCAMS, HARASSMENT, POLITICS, OFF TOPIC POSTS",
+      "LANGUAGES"
+    ],
+    "relatedPromptIds": [
+      "cbuild-moderation",
+      "cbuild-welcome-flow",
+      "cbuild-scam-safety"
+    ]
+  },
+  {
+    "id": "cbuild-welcome-flow",
+    "title": "Create a Welcome Flow for New Members",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "community-building",
+    "aiTool": "Claude",
+    "promptText": "Help me create a welcome experience for new members of my [COMMUNITY]. The platform is [PLATFORM], how people join is [E.G. OPEN JOIN, APPROVAL WITH QUESTIONS, INVITE ONLY, PAID], what new members should do first is [FIRST ACTIONS], and how many join per week is [NUMBER]. Write membership questions if relevant, a welcome message, a pinned start here post, an introduction prompt, and a simple way to welcome new members in batches. Note that people decide in their first few days whether a community is worth returning to, so a clear first step, like introducing themselves with a specific question, and a reply from someone real makes a big difference, while welcoming new members together once or twice a week is more sustainable than individual messages once the group grows. Give me the welcome flow.",
+    "description": "Give new members a clear first step and a real reply.",
+    "useCase": "Use this so new members do not join and disappear. People decide in their first few days whether to return, so a clear first step like an introduction with a specific question, and a reply from someone real, make a big difference, and batch welcomes once or twice a week are more sustainable as you grow.",
+    "variables": [
+      "COMMUNITY",
+      "PLATFORM",
+      "E.G. OPEN JOIN, APPROVAL WITH QUESTIONS, INVITE ONLY, PAID",
+      "FIRST ACTIONS",
+      "NUMBER"
+    ],
+    "relatedPromptIds": [
+      "cbuild-first-members",
+      "cbuild-guidelines",
+      "cbuild-conversation-starters"
+    ]
+  },
+  {
+    "id": "cbuild-first-members",
+    "title": "Get Your First Members and Early Activity",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "community-building",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me get the first members and early activity for my new community about [TOPIC]. The people I can invite personally are [E.G. CUSTOMERS, CLIENTS, FOLLOWERS, COLLEAGUES, STUDENTS, FRIENDS], my existing audience is [AUDIENCE SIZE AND CHANNELS], and the platform is [PLATFORM]. Give me a plan for the first month, with who to invite first, a personal invite message, how to seed early conversations, and what I should do daily to keep it alive. Note that an empty community discourages new members, so starting with a small group of people who genuinely care and inviting them personally works better than a big public launch, the founder has to do most of the posting and replying at first, and growth through members inviting friends only starts once the community already feels useful. Give me the first members plan.",
+    "description": "Invite a small, engaged first group personally and seed conversations.",
+    "useCase": "Use this when launching a new community. An empty community discourages newcomers, so start with a small group who care and invite them personally rather than a big public launch, expect to do most posting and replying at first, and members inviting friends only starts once it feels useful.",
+    "variables": [
+      "TOPIC",
+      "E.G. CUSTOMERS, CLIENTS, FOLLOWERS, COLLEAGUES, STUDENTS, FRIENDS",
+      "AUDIENCE SIZE AND CHANNELS",
+      "PLATFORM"
+    ],
+    "relatedPromptIds": [
+      "cbuild-welcome-flow",
+      "cbuild-strategy",
+      "cbuild-weekly-rituals"
+    ]
+  },
+  {
+    "id": "cbuild-weekly-rituals",
+    "title": "Create Weekly Rituals That Keep a Community Active",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "community-building",
+    "aiTool": "Gemini",
+    "promptText": "Help me create weekly rituals for my [COMMUNITY]. The members are [WHO THEY ARE], their goals are [MEMBER GOALS], the platform is [PLATFORM], and my time for running it is [HOURS PER WEEK]. Suggest a weekly schedule of recurring posts or activities, like a wins thread, a question of the week, a feedback thread, or a short live session, with a template for each and the best day and time for my members. Note that predictable rituals give members a reason to come back on certain days and reduce the effort of thinking up new posts, but rituals that nobody responds to should be dropped or changed rather than repeated, and timing should match when my members are actually free, which may be evenings or weekends depending on their work and time zones. Give me the weekly ritual plan.",
+    "description": "Set recurring weekly threads and activities with templates.",
+    "useCase": "Use this to keep a group active without new ideas every day. Predictable rituals give members a reason to return on set days and save you effort, but drop or change ones nobody responds to, and time them to when members are actually free, which may be evenings or weekends.",
+    "variables": [
+      "COMMUNITY",
+      "WHO THEY ARE",
+      "MEMBER GOALS",
+      "PLATFORM",
+      "HOURS PER WEEK"
+    ],
+    "relatedPromptIds": [
+      "cbuild-conversation-starters",
+      "cbuild-events",
+      "cbuild-quick-ideas"
+    ]
+  },
+  {
+    "id": "cbuild-conversation-starters",
+    "title": "Write Posts That Get Members Talking to Each Other",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "community-building",
+    "aiTool": "Claude",
+    "promptText": "Write conversation starter posts for my [COMMUNITY]. The topic is [TOPIC], the members are [WHO THEY ARE AND THEIR EXPERIENCE LEVELS], and the posts that worked well before were [EXAMPLES OR NONE YET]. Give me ten posts that invite members to share their own experiences, opinions, or questions, with a mix of easy ones anyone can answer and deeper ones, and suggest how I should reply to keep each thread going. Note that posts asking for simple, personal answers, like what was your biggest mistake when starting, get far more replies than broad questions like any thoughts, and the community grows stronger when members reply to each other rather than only to me, so tagging members who have relevant experience and stepping back once a thread is moving helps. Give me the conversation starters.",
+    "description": "Write easy and deeper prompts that get members replying to each other.",
+    "useCase": "Use this when posts get few replies. Simple, personal questions like what was your biggest mistake get far more replies than broad ones like any thoughts, and communities grow stronger when members reply to each other, so tag members with relevant experience and step back once a thread is moving.",
+    "variables": [
+      "COMMUNITY",
+      "TOPIC",
+      "WHO THEY ARE AND THEIR EXPERIENCE LEVELS",
+      "EXAMPLES OR NONE YET"
+    ],
+    "relatedPromptIds": [
+      "cbuild-quick-ideas",
+      "cbuild-weekly-rituals",
+      "cbuild-member-spotlight"
+    ]
+  },
+  {
+    "id": "cbuild-moderation",
+    "title": "Handle Conflict, Spam, and Rule Breakers",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "community-building",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me handle a moderation situation in my [COMMUNITY]. What happened is [DESCRIBE THE SITUATION, E.G. HEATED ARGUMENT, REPEATED SPAM, RUDE MEMBER, MISINFORMATION, A COMPLAINT ABOUT ME], the relevant rule is [GUIDELINE], the people involved are [MEMBERS AND THEIR HISTORY], and the platform's tools are [E.G. DELETE, MUTE, REMOVE, BAN, SLOW MODE]. Suggest a fair response, write any public and private messages needed, and give me a simple escalation ladder for similar cases in the future. Note that handling problems privately first usually calms things down, while public warnings can embarrass people and escalate conflict, but members watch how problems are handled, so leaving clear rule breaking alone damages trust, and consistent responses matter more than strict ones, since members notice when friends or big customers get special treatment. Give me the moderation response.",
+    "description": "Respond fairly to conflict or rule breaking with an escalation ladder.",
+    "useCase": "Use this when something goes wrong in your group. Handling problems privately first usually calms things, public warnings can escalate, but members watch how problems are handled, so ignoring clear rule breaking damages trust, and consistency matters more than strictness, since members notice special treatment.",
+    "variables": [
+      "COMMUNITY",
+      "DESCRIBE THE SITUATION, E.G. HEATED ARGUMENT, REPEATED SPAM, RUDE MEMBER, MISINFORMATION, A COMPLAINT ABOUT ME",
+      "GUIDELINE",
+      "MEMBERS AND THEIR HISTORY",
+      "E.G. DELETE, MUTE, REMOVE, BAN, SLOW MODE"
+    ],
+    "relatedPromptIds": [
+      "cbuild-guidelines",
+      "cbuild-moderators",
+      "cbuild-scam-safety"
+    ]
+  },
+  {
+    "id": "cbuild-scam-safety",
+    "title": "Protect Your Community From Scams and Fake Accounts",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "community-building",
+    "aiTool": "Gemini",
+    "promptText": "Help me protect my [COMMUNITY] from scams, fake accounts, and impersonation. The platform is [PLATFORM], the community size is [MEMBERS], problems we have seen are [E.G. FAKE ADMINS MESSAGING MEMBERS, INVESTMENT SCAMS, PHISHING LINKS, FAKE JOB OFFERS, BOTS], and the platform's security settings are [IF KNOWN]. Give me a protection plan with joining controls, settings to limit links or direct messages, a pinned warning post for members, how to spot fake accounts, and what to do when a scam is reported. Note that scammers often target community members by pretending to be the admin and messaging them privately, so telling members clearly that admins will never ask for money, passwords, or verification codes is one of the most effective protections, and fast removal of scam posts matters because members may trust anything posted inside a group they value. Give me the scam protection plan.",
+    "description": "Block fake accounts and scams, and warn members about admin impersonation.",
+    "useCase": "Use this if your group attracts scammers or bots. Scammers often impersonate admins in private messages, so telling members clearly that admins never ask for money, passwords, or codes is one of the best protections, and remove scam posts fast, since members trust what appears in a group they value.",
+    "variables": [
+      "COMMUNITY",
+      "PLATFORM",
+      "MEMBERS",
+      "E.G. FAKE ADMINS MESSAGING MEMBERS, INVESTMENT SCAMS, PHISHING LINKS, FAKE JOB OFFERS, BOTS",
+      "IF KNOWN"
+    ],
+    "relatedPromptIds": [
+      "cbuild-moderation",
+      "cbuild-guidelines",
+      "cbuild-moderators"
+    ]
+  },
+  {
+    "id": "cbuild-moderators",
+    "title": "Recruit and Support Volunteer Moderators",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "community-building",
+    "aiTool": "Claude",
+    "promptText": "Help me recruit and support volunteer moderators for my [COMMUNITY]. The community size and activity level are [SIZE AND ACTIVITY], the tasks I need help with are [E.G. APPROVING MEMBERS, REMOVING SPAM, WELCOMING, ANSWERING QUESTIONS, RUNNING EVENTS], the time zones members are in are [TIME ZONES], and what I can offer volunteers is [E.G. RECOGNITION, FREE ACCESS, SMALL PAYMENT, LEARNING OPPORTUNITIES]. Write a role description, an invitation message to likely candidates, a short moderator guide with how to handle common situations, and a way to check in with moderators regularly. Note that the best moderators are usually members who already help others without being asked, volunteers burn out if the role is vague or too demanding, so a clear scope and the option to step back matter, and moderators need to know they will be backed up when they make a reasonable call, or they stop acting. Give me the moderator plan.",
+    "description": "Invite helpful members to moderate with a clear role and backing.",
+    "useCase": "Use this when your community outgrows you. The best moderators already help others unprompted, volunteers burn out if the role is vague or too demanding, so set a clear scope and let them step back, and back them up when they make reasonable calls, or they stop acting.",
+    "variables": [
+      "COMMUNITY",
+      "SIZE AND ACTIVITY",
+      "E.G. APPROVING MEMBERS, REMOVING SPAM, WELCOMING, ANSWERING QUESTIONS, RUNNING EVENTS",
+      "TIME ZONES",
+      "E.G. RECOGNITION, FREE ACCESS, SMALL PAYMENT, LEARNING OPPORTUNITIES"
+    ],
+    "relatedPromptIds": [
+      "cbuild-moderation",
+      "cbuild-member-spotlight",
+      "cbuild-health-metrics"
+    ]
+  },
+  {
+    "id": "cbuild-member-spotlight",
+    "title": "Spotlight Members and Their Wins",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "community-building",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me create a member spotlight series for my [COMMUNITY]. The kinds of stories members have are [E.G. PROJECTS, PROGRESS, BUSINESS WINS, LESSONS LEARNED], how often I want to run it is [FREQUENCY], and the format is [E.G. TEXT POST, SHORT INTERVIEW, VIDEO, LIVE CHAT]. Write a short invitation for members to be featured, a set of interview questions, a post template, and how to get their permission and approval before posting. Note that spotlighting members shows that the community is about them rather than the brand, encourages others to participate, and creates content without me having to invent it, but members must agree to be featured and approve what is posted, especially if their names, photos, or business details appear, and featuring a variety of members, not just the most successful, keeps it encouraging for everyone. Give me the member spotlight series.",
+    "description": "Feature members' stories with permission and a simple template.",
+    "useCase": "Use this to celebrate members and fill your content calendar. Spotlights show the community is about members, encourage participation, and create content for you, but members must agree and approve posts with their names, photos, or business details, and featuring a variety of members keeps it encouraging.",
+    "variables": [
+      "COMMUNITY",
+      "E.G. PROJECTS, PROGRESS, BUSINESS WINS, LESSONS LEARNED",
+      "FREQUENCY",
+      "E.G. TEXT POST, SHORT INTERVIEW, VIDEO, LIVE CHAT"
+    ],
+    "relatedPromptIds": [
+      "cbuild-conversation-starters",
+      "cbuild-moderators",
+      "cbuild-community-to-customers"
+    ]
+  },
+  {
+    "id": "cbuild-events",
+    "title": "Plan Live Events for Your Community",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "community-building",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan live events for my [COMMUNITY]. The event types I am considering are [E.G. LIVE Q AND A, WORKSHOP, CO WORKING SESSION, GUEST EXPERT TALK, LOCAL MEETUP], the platform or venue is [PLATFORM OR LOCATION], the members' time zones and schedules are [AVAILABILITY], and how often I can run events is [FREQUENCY]. Give me a plan for one event with format, timing, an announcement post, reminder messages, a simple run of show, and how to share the recording or recap afterward. Note that many more people sign up for events than attend, so reminders shortly before the start help a lot, choosing a time that suits the majority matters more than suiting everyone, and recordings or short recaps let members in other time zones benefit, while in person meetups build much stronger bonds but need a safe, accessible venue and clear arrangements. Give me the event plan.",
+    "description": "Plan, announce, run, and recap a live community event.",
+    "useCase": "Use this to bring members together live. Many more people sign up than attend, so send reminders shortly before, choose a time that suits most rather than all, share recordings or recaps for other time zones, and in person meetups build stronger bonds but need a safe, accessible venue.",
+    "variables": [
+      "COMMUNITY",
+      "E.G. LIVE Q AND A, WORKSHOP, CO WORKING SESSION, GUEST EXPERT TALK, LOCAL MEETUP",
+      "PLATFORM OR LOCATION",
+      "AVAILABILITY",
+      "FREQUENCY"
+    ],
+    "relatedPromptIds": [
+      "cbuild-weekly-rituals",
+      "cbuild-member-spotlight",
+      "cbuild-revive-quiet"
+    ]
+  },
+  {
+    "id": "cbuild-health-metrics",
+    "title": "Measure Community Health Beyond Member Count",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "community-building",
+    "aiTool": "Claude",
+    "promptText": "Help me measure the health of my [COMMUNITY]. The data I can see is [E.G. MEMBER COUNT, ACTIVE MEMBERS, POSTS, COMMENTS, EVENT ATTENDANCE, PLATFORM INSIGHTS], the period is [TIMEFRAME], and my goals for the community are [GOALS]. Suggest a few meaningful health measures, like the share of active members, how many members post or reply rather than just read, whether members answer each other's questions, and retention of new members, then interpret my data and suggest one improvement. Note that total member count is the least useful number, since large quiet groups are common, most communities have many readers and few posters, which is normal, so the trend in active participation matters more, and a healthy sign is members helping each other without the founder having to step in. Give me the community health review.",
+    "description": "Track active participation and peer help, not just member count.",
+    "useCase": "Use this every month or quarter. Total member count is the least useful number since large quiet groups are common, most communities have many readers and few posters, which is normal, so track the trend in participation, and a healthy sign is members helping each other without you stepping in.",
+    "variables": [
+      "COMMUNITY",
+      "E.G. MEMBER COUNT, ACTIVE MEMBERS, POSTS, COMMENTS, EVENT ATTENDANCE, PLATFORM INSIGHTS",
+      "TIMEFRAME",
+      "GOALS"
+    ],
+    "relatedPromptIds": [
+      "cbuild-revive-quiet",
+      "cbuild-moderators",
+      "cbuild-strategy"
+    ]
+  },
+  {
+    "id": "cbuild-revive-quiet",
+    "title": "Revive a Quiet or Dying Community",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "community-building",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me revive my quiet community. The community is [TOPIC AND PLATFORM], it has [NUMBER] members, activity dropped when [WHEN AND ANY KNOWN REASON], what it was like at its best was [PAST ACTIVITY], and what I have tried is [ATTEMPTS]. Diagnose likely causes, like unclear purpose, too much promotion, no rituals, or members' needs changing, and give me a four week revival plan with a reset announcement, a few direct conversations with past active members, new rituals, and a decision point on whether to continue. Note that communities often go quiet when the founder stops showing up or when posts become mostly announcements, asking a handful of former active members directly what would bring them back gives better answers than a survey to everyone, and sometimes the honest choice is to merge, refocus, or close the community gracefully rather than keep it on life support. Give me the revival plan.",
+    "description": "Diagnose why a group went quiet and run a four week revival.",
+    "useCase": "Use this when your group has gone silent. Communities often go quiet when the founder stops showing up or posts become announcements, asking a few former active members directly beats surveying everyone, and sometimes merging, refocusing, or closing gracefully is more honest than keeping it on life support.",
+    "variables": [
+      "TOPIC AND PLATFORM",
+      "NUMBER",
+      "WHEN AND ANY KNOWN REASON",
+      "PAST ACTIVITY",
+      "ATTEMPTS"
+    ],
+    "relatedPromptIds": [
+      "cbuild-health-metrics",
+      "cbuild-weekly-rituals",
+      "cbuild-strategy"
+    ]
+  },
+  {
+    "id": "cbuild-community-to-customers",
+    "title": "Turn Community Members Into Customers Without Spamming",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "community-building",
+    "aiTool": "Gemini",
+    "promptText": "Help me introduce my products or services to my community without damaging it. The community is [COMMUNITY AND MEMBERS], what I sell is [PRODUCTS OR SERVICES], how I have promoted so far is [CURRENT APPROACH], and how members have reacted is [REACTIONS]. Suggest a balance of value and promotion, appropriate ways to mention offers, like clearly labeled announcements, member only discounts, or answering questions where my product genuinely helps, and how often to promote. Note that members accept occasional, clearly labeled promotion from a founder who consistently helps them, but constant selling drives people away quickly, offers that solve problems members have been discussing feel helpful rather than pushy, and promoting my own product while banning others from promoting theirs can feel unfair unless the rules say so openly. Give me the community promotion plan.",
+    "description": "Promote offers occasionally and clearly while keeping trust.",
+    "useCase": "Use this when your community is also part of your business. Members accept occasional, clearly labeled promotion from a founder who consistently helps, but constant selling drives them away, offers solving problems members discuss feel helpful, and promoting yourself while banning others feels unfair unless rules say so.",
+    "variables": [
+      "COMMUNITY AND MEMBERS",
+      "PRODUCTS OR SERVICES",
+      "CURRENT APPROACH",
+      "REACTIONS"
+    ],
+    "relatedPromptIds": [
+      "cbuild-paid-community",
+      "cbuild-member-spotlight",
+      "cbuild-strategy"
+    ]
+  },
+  {
+    "id": "cbuild-paid-community",
+    "title": "Plan a Paid Community or Membership",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "community-building",
+    "aiTool": "Claude",
+    "promptText": "Help me plan a paid community or membership. The topic is [TOPIC], the people it is for are [TARGET MEMBERS AND LOCATION], what members would get that they cannot get free is [VALUE, E.G. EXPERT ACCESS, COURSES, EVENTS, PEER GROUP, RESOURCES], my existing audience is [AUDIENCE], and the payment methods my members can use are [PAYMENT OPTIONS]. Suggest pricing options, what to include at launch, a platform and payment setup that works for my members, a way to test demand before building, and how to keep members renewing. Note that people pay for communities that deliver clear, ongoing value, like expert access or accountability, rather than access to a chat alone, recurring payments can be hard to set up for members in some countries or without international cards, so offering local payment options or longer prepaid periods may be needed, and a paid community needs more consistent effort than a free one, since members notice when value drops. Give me the paid community plan.",
+    "description": "Plan pricing, value, and local payment options for a paid community.",
+    "useCase": "Use this if you want to charge for community access. People pay for clear ongoing value like expert access or accountability, not just a chat, recurring payments can be hard without international cards in some countries, so offer local options or prepaid periods, and paid communities need more consistent effort.",
+    "variables": [
+      "TOPIC",
+      "TARGET MEMBERS AND LOCATION",
+      "VALUE, E.G. EXPERT ACCESS, COURSES, EVENTS, PEER GROUP, RESOURCES",
+      "AUDIENCE",
+      "PAYMENT OPTIONS"
+    ],
+    "relatedPromptIds": [
+      "cbuild-community-to-customers",
+      "cbuild-choose-platform",
+      "cbuild-health-metrics"
+    ]
+  },
+  {
+    "id": "cbuild-multilingual",
+    "title": "Run a Community Across Several Languages",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "community-building",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me run a community where members speak different languages. The languages are [E.G. ENGLISH, KHMER, THAI, VIETNAMESE, CHINESE], the share of members using each is [ROUGH SPLIT], the platform is [PLATFORM], and my own languages are [WHAT YOU SPEAK]. Suggest whether to use one shared space, separate language channels, or bilingual posts, how to handle announcements and rules in each language, how to involve bilingual members as helpers, and how to avoid any group feeling left out. Note that members participate much more when they can write in their strongest language, but splitting into many small language groups can leave each one too quiet, so the right structure depends on the size of each group, automatic translation helps but can cause misunderstandings, especially with humor or sensitive topics, and bilingual members who bridge groups are extremely valuable and worth recognizing. Give me the multilingual community plan.",
+    "description": "Structure a community for several languages without splitting it too thin.",
+    "useCase": "Use this if members speak different languages. People participate more in their strongest language, but too many small language groups leave each one quiet, automatic translation can misfire on humor or sensitive topics, and bilingual members who bridge groups are extremely valuable and worth recognizing.",
+    "variables": [
+      "E.G. ENGLISH, KHMER, THAI, VIETNAMESE, CHINESE",
+      "ROUGH SPLIT",
+      "PLATFORM",
+      "WHAT YOU SPEAK"
+    ],
+    "relatedPromptIds": [
+      "cbuild-choose-platform",
+      "cbuild-guidelines",
+      "cbuild-moderators"
+    ]
   }
 ]
