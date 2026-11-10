@@ -44083,5 +44083,390 @@
       "revreq-chat-app-request",
       "revreq-measure-results"
     ]
+  },
+  {
+    "id": "bxs-find-pairs-in-orders",
+    "title": "Find Bundle Ideas Hidden in Your Order Data",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "bundle-and-cross-sell-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me find bundle and cross sell ideas from my past orders at my [BUSINESS TYPE]. Here is my order data or a summary of it: [PASTE ORDERS WITH ITEMS PER ORDER, OR DESCRIBE COMMON COMBINATIONS], my number of orders in this data is [ORDER COUNT], and my product list is [PRODUCTS]. Identify products that are often bought together, products often bought soon after each other, and the strongest bundle or add on ideas, ranked by how often they occur. Note that pairs that show up only a handful of times can be coincidence, so patterns from a small number of orders should be treated as ideas to test rather than proven facts, and what customers actually buy together is usually a better guide than what I assume goes together. Give me the bundle opportunities from my orders.",
+    "description": "Spot products customers already buy together in your order history.",
+    "useCase": "Use this before inventing bundles. What customers actually buy together is a better guide than assumptions, but pairs seen only a few times can be coincidence, so treat patterns from small order counts as ideas to test rather than proven facts.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE ORDERS WITH ITEMS PER ORDER, OR DESCRIBE COMMON COMBINATIONS",
+      "ORDER COUNT",
+      "PRODUCTS"
+    ],
+    "relatedPromptIds": [
+      "bxs-complement-map",
+      "bxs-margin-check",
+      "bxs-measure-bundles"
+    ]
+  },
+  {
+    "id": "bxs-quick-ideas",
+    "title": "Get Quick Bundle Ideas for Your Shop",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "bundle-and-cross-sell-ideas",
+    "aiTool": "Grok",
+    "promptText": "Give me quick bundle ideas for my shop. I sell [YOUR MAIN PRODUCTS], my typical customer is [WHO BUYS], and my price range is [PRICE RANGE]. List eight bundle or add on ideas, each with a catchy name and one line on why it fits, no explanation beyond that. Give me the bundle ideas.",
+    "description": "Get eight named bundle ideas in one line each, fast.",
+    "useCase": "Use this to get a starting list fast. A quick set of named ideas helps you pick one or two to try this week, but check each against your margins and stock before launching, since a bundle that sells well at a loss is worse than no bundle.",
+    "variables": [
+      "YOUR MAIN PRODUCTS",
+      "WHO BUYS",
+      "PRICE RANGE"
+    ],
+    "relatedPromptIds": [
+      "bxs-find-pairs-in-orders",
+      "bxs-bundle-names",
+      "bxs-margin-check"
+    ]
+  },
+  {
+    "id": "bxs-complement-map",
+    "title": "Map Complementary Products and Accessories",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "bundle-and-cross-sell-ideas",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me map which products naturally go with each item in my [BUSINESS TYPE] catalog. My products are [PRODUCT LIST], what customers do with them is [HOW THEY ARE USED], and products I could add or source easily are [POSSIBLE NEW ITEMS]. For each main product, list items customers need to use it, items that make it better, and items that replace it when it runs out, and flag gaps where I could add a product. Note that the best cross sells solve a problem the customer will actually face, like the batteries, case, or refill they will need, while random suggestions of popular items feel pushy and get ignored, and adding new products just for bundles only makes sense if they also sell on their own or move without discounting. Give me the complement map.",
+    "description": "Map what customers need, want, and reorder alongside each product.",
+    "useCase": "Use this to plan cross sells across your catalog. The best ones solve a problem the customer will face, like a refill or case they will need, while random popular items feel pushy, and new products added only for bundles should also be able to sell on their own.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRODUCT LIST",
+      "HOW THEY ARE USED",
+      "POSSIBLE NEW ITEMS"
+    ],
+    "relatedPromptIds": [
+      "bxs-find-pairs-in-orders",
+      "bxs-cart-addon",
+      "bxs-starter-kit"
+    ]
+  },
+  {
+    "id": "bxs-starter-kit",
+    "title": "Create a Beginner Starter Kit Bundle",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "bundle-and-cross-sell-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me design a starter kit bundle for beginners at my [BUSINESS TYPE]. The hobby or need my products serve is [E.G. COFFEE BREWING, SKINCARE, ART SUPPLIES, GARDENING], what beginners usually struggle with is [COMMON BEGINNER PROBLEMS], and my relevant products and costs are [PRODUCTS AND COSTS]. Suggest what goes in the kit, what to leave out, a price, and a short description that tells beginners exactly what they get and why. Note that starter kits sell well because they remove the confusion of choosing, but stuffing them with filler items to raise the value hurts trust once beginners realize they did not need half of it, so a smaller kit of genuinely useful items, plus a simple guide on how to use it, usually earns better reviews and repeat purchases. Give me the starter kit plan.",
+    "description": "Build a focused beginner kit without filler items.",
+    "useCase": "Use this if your products serve a hobby or routine. Starter kits sell because they remove the confusion of choosing, but filler items hurt trust once beginners realize they did not need them, so a smaller kit of useful items with a simple guide earns better reviews and repeat purchases.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. COFFEE BREWING, SKINCARE, ART SUPPLIES, GARDENING",
+      "COMMON BEGINNER PROBLEMS",
+      "PRODUCTS AND COSTS"
+    ],
+    "relatedPromptIds": [
+      "bxs-complement-map",
+      "bxs-margin-check",
+      "bxs-bundle-names"
+    ]
+  },
+  {
+    "id": "bxs-gift-sets",
+    "title": "Plan Gift Sets for Holidays and Festivals",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "bundle-and-cross-sell-ideas",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan gift set bundles for upcoming occasions for my [BUSINESS TYPE]. The occasions that matter to my customers are [E.G. LUNAR NEW YEAR, KHMER NEW YEAR, PCHUM BEN, EID, DIWALI, CHRISTMAS, WEDDINGS, BIRTHDAYS], my products are [PRODUCTS], packaging options I can get are [PACKAGING], and my customers' gift budgets are [BUDGET RANGES]. Suggest gift sets at a few price points, with packaging ideas, gifting customs to respect, and when to start promoting each. Note that gifting customs differ a lot between cultures, like colors, numbers, or items considered unlucky or inappropriate, so sets should be checked against local customs for each occasion, and gift sets usually need to be listed weeks before the occasion with clear delivery cutoff dates, since late arrival ruins the whole purpose. Give me the gift set plan.",
+    "description": "Plan culturally fitting gift sets with clear delivery cutoffs.",
+    "useCase": "Use this ahead of holidays and festivals your customers celebrate. Gifting customs differ by culture, including colors, numbers, and unlucky items, so check sets against local customs, and list them weeks ahead with clear delivery cutoffs, since a late gift ruins the purpose.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. LUNAR NEW YEAR, KHMER NEW YEAR, PCHUM BEN, EID, DIWALI, CHRISTMAS, WEDDINGS, BIRTHDAYS",
+      "PRODUCTS",
+      "PACKAGING",
+      "BUDGET RANGES"
+    ],
+    "relatedPromptIds": [
+      "bxs-bundle-names",
+      "bxs-margin-check",
+      "bxs-starter-kit"
+    ]
+  },
+  {
+    "id": "bxs-cart-addon",
+    "title": "Choose Add On Suggestions for the Cart Page",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "bundle-and-cross-sell-ideas",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me choose which add on products to suggest in the cart or checkout of my [BUSINESS TYPE]. My main products and typical cart contents are [TYPICAL CARTS], low priced items I sell are [SMALL ITEMS AND PRICES], and my store platform supports [E.G. CART UPSELL APP, PRODUCT RECOMMENDATIONS, MANUAL SELECTION]. Suggest a short list of add ons for common carts, rules for which to show, and short labels for each suggestion. Note that cart suggestions work best when they are cheap, relevant, and quick to add without leaving the cart, while showing too many choices or expensive items at checkout can distract people and cause them to abandon, so two or three relevant suggestions usually beat a long carousel. Give me the cart add on plan.",
+    "description": "Pick two or three cheap, relevant add ons to show in the cart.",
+    "useCase": "Use this to raise order value at checkout. Cart suggestions work best when cheap, relevant, and quick to add, while too many choices or expensive items can distract buyers and cause abandonment, so two or three relevant suggestions usually beat a long carousel.",
+    "variables": [
+      "BUSINESS TYPE",
+      "TYPICAL CARTS",
+      "SMALL ITEMS AND PRICES",
+      "E.G. CART UPSELL APP, PRODUCT RECOMMENDATIONS, MANUAL SELECTION"
+    ],
+    "relatedPromptIds": [
+      "bxs-complement-map",
+      "bxs-free-shipping-threshold",
+      "bxs-post-purchase-crosssell"
+    ]
+  },
+  {
+    "id": "bxs-free-shipping-threshold",
+    "title": "Use a Free Shipping Threshold to Lift Order Value",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "bundle-and-cross-sell-ideas",
+    "aiTool": "Gemini",
+    "promptText": "Help me set a free delivery threshold and the add on items that help customers reach it for my [BUSINESS TYPE]. My average order value is [AOV], my delivery cost per order by area is [DELIVERY COSTS], my margins are [MARGINS], and how customers currently feel about delivery fees is [WHAT YOU HEAR]. Suggest a threshold, a list of small items that fill the gap, and the message to show in the cart. Note that a threshold set a little above the current average order value often encourages people to add one more item, but if it is too high people give up and if delivery costs vary a lot by area, a single threshold can lose money on remote orders, so it may need different rules by region, and the cost of free delivery must come out of the extra margin from the add ons. Give me the threshold plan.",
+    "description": "Set a free delivery threshold with gap filling add ons that still profit.",
+    "useCase": "Use this to raise average order value. A threshold slightly above your current average often prompts one more item, but too high and people give up, and where delivery costs vary a lot by area, one threshold can lose money on remote orders, so the add on margin must cover the free delivery.",
+    "variables": [
+      "BUSINESS TYPE",
+      "AOV",
+      "DELIVERY COSTS",
+      "MARGINS",
+      "WHAT YOU HEAR"
+    ],
+    "relatedPromptIds": [
+      "bxs-cart-addon",
+      "bxs-margin-check",
+      "bxs-measure-bundles"
+    ]
+  },
+  {
+    "id": "bxs-margin-check",
+    "title": "Check a Bundle Is Actually Profitable",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "bundle-and-cross-sell-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me check whether a bundle idea makes money for my [BUSINESS TYPE]. The bundle contains [ITEMS], each item's cost and normal price are [COSTS AND PRICES], the bundle price I am considering is [BUNDLE PRICE], extra packaging or handling cost is [EXTRA COSTS], payment and platform fees are [FEES], and delivery cost is [DELIVERY]. Calculate profit per bundle compared with selling the items separately, the break even bundle price, and how many extra sales the bundle needs to be worth it. Note that a bundle that sells well can still lose money once discounts, fees, packaging, and heavier shipping are included, and if most bundle buyers would have bought the main item anyway at full price, the discount is a cost rather than a gain, so the real question is whether the bundle creates extra sales. Give me the bundle profit check.",
+    "description": "Calculate bundle profit after discounts, fees, packaging, and shipping.",
+    "useCase": "Use this before launching any bundle. A bundle that sells well can still lose money after discounts, fees, packaging, and heavier shipping, and if buyers would have bought the main item at full price anyway, the discount is a cost, so check that it creates extra sales.",
+    "variables": [
+      "BUSINESS TYPE",
+      "ITEMS",
+      "COSTS AND PRICES",
+      "BUNDLE PRICE",
+      "EXTRA COSTS",
+      "FEES",
+      "DELIVERY"
+    ],
+    "relatedPromptIds": [
+      "bxs-find-pairs-in-orders",
+      "bxs-measure-bundles",
+      "bxs-slow-stock-bundle"
+    ]
+  },
+  {
+    "id": "bxs-slow-stock-bundle",
+    "title": "Move Slow Stock With Honest Bundles",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "bundle-and-cross-sell-ideas",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me use bundles to move slow selling stock at my [BUSINESS TYPE]. The slow items are [SLOW ITEMS, QUANTITIES, AND COSTS], my best sellers are [BEST SELLERS], and any expiry or season limits are [DATES OR CONDITIONS]. Suggest bundles that pair slow items with products customers want, where the slow item adds real value, and the wording to describe them honestly. Note that pairing slow stock with popular products can clear it without heavy discounting, but stuffing unwanted or near expiry items into bundles without saying so leads to complaints and bad reviews, so expiry dates and older versions should be disclosed, and sometimes a straightforward clearance sale is more honest and faster. Give me the slow stock bundle ideas.",
+    "description": "Pair slow stock with best sellers and disclose expiry or older versions.",
+    "useCase": "Use this when stock is piling up. Pairing slow items with popular products can clear them without heavy discounts, but hiding unwanted or near expiry items in bundles brings complaints, so disclose expiry and older versions, and sometimes a plain clearance sale is more honest and faster.",
+    "variables": [
+      "BUSINESS TYPE",
+      "SLOW ITEMS, QUANTITIES, AND COSTS",
+      "BEST SELLERS",
+      "DATES OR CONDITIONS"
+    ],
+    "relatedPromptIds": [
+      "bxs-margin-check",
+      "bxs-mix-and-match",
+      "bxs-bundle-names"
+    ]
+  },
+  {
+    "id": "bxs-mix-and-match",
+    "title": "Set Up a Mix and Match Offer",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "bundle-and-cross-sell-ideas",
+    "aiTool": "Gemini",
+    "promptText": "Help me design a mix and match offer, like any three for a set price, for my [BUSINESS TYPE]. The products that could be included are [ELIGIBLE PRODUCTS AND PRICES], my costs are [COSTS], my store platform can handle [E.G. AUTOMATIC DISCOUNTS, BUNDLE APPS, MANUAL ORDERS], and the offer I am thinking of is [E.G. BUY 3 FOR X, BUY 2 GET 10 PERCENT OFF]. Suggest which items to include, the offer structure, the price, and how to explain it simply on the product pages. Note that mix and match works well for products with many flavors, colors, or scents because customers enjoy choosing, but including items with very different costs can mean people pick only the most expensive ones and margins shrink, so eligible items should have similar costs or be grouped into tiers. Give me the mix and match plan.",
+    "description": "Design a pick any few offer that keeps margins safe.",
+    "useCase": "Use this for products with many flavors, colors, or scents. Customers enjoy choosing, but if eligible items have very different costs, people pick the most expensive and margins shrink, so include items with similar costs or group them into tiers.",
+    "variables": [
+      "BUSINESS TYPE",
+      "ELIGIBLE PRODUCTS AND PRICES",
+      "COSTS",
+      "E.G. AUTOMATIC DISCOUNTS, BUNDLE APPS, MANUAL ORDERS",
+      "E.G. BUY 3 FOR X, BUY 2 GET 10 PERCENT OFF"
+    ],
+    "relatedPromptIds": [
+      "bxs-margin-check",
+      "bxs-slow-stock-bundle",
+      "bxs-quick-ideas"
+    ]
+  },
+  {
+    "id": "bxs-refill-replenish",
+    "title": "Plan Refill and Replenishment Cross Sells",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "bundle-and-cross-sell-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me plan reorder and refill cross sells for consumable products at my [BUSINESS TYPE]. The consumables are [PRODUCTS], how long each usually lasts is [TYPICAL USAGE TIME], and the channels I can reach customers on are [EMAIL, CHAT APPS, SMS]. Suggest a reminder schedule, refill bundles like a three month supply, and a short reminder message for each product. Note that a reminder timed to when the product is likely running out feels genuinely helpful, while one sent too early feels like spam, and usage varies between customers, so it is better to base timing on each customer's own reorder history once there is enough of it, and any subscription option should be easy to pause or cancel. Give me the refill plan.",
+    "description": "Time refill reminders and multi month bundles to real usage.",
+    "useCase": "Use this for anything customers use up. A reminder timed to when the product is running out feels helpful while an early one feels like spam, usage varies, so base timing on each customer's own reorder history once you have it, and keep any subscription easy to pause or cancel.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRODUCTS",
+      "TYPICAL USAGE TIME",
+      "EMAIL, CHAT APPS, SMS"
+    ],
+    "relatedPromptIds": [
+      "bxs-post-purchase-crosssell",
+      "bxs-complement-map",
+      "bxs-measure-bundles"
+    ]
+  },
+  {
+    "id": "bxs-post-purchase-crosssell",
+    "title": "Plan Cross Sells After the First Purchase",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "bundle-and-cross-sell-ideas",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me plan which products to suggest to customers after their first purchase from my [BUSINESS TYPE]. Common first purchases are [FIRST PURCHASE PRODUCTS], what customers often buy next is [IF KNOWN], and the channels I can use are [E.G. ORDER CONFIRMATION, FOLLOW UP EMAIL, CHAT, PACKAGE INSERT]. For each common first purchase, suggest the best next product, when to suggest it, and why it helps the customer. Note that the best time to suggest a related product is usually after the customer has received and used the first one, since suggesting more before they know if they like it can feel greedy, and suggestions based on what they bought are far more welcome than generic best sellers. Give me the post purchase cross sell plan.",
+    "description": "Match each first purchase to the right next product and timing.",
+    "useCase": "Use this to turn first time buyers into repeat customers. Suggesting the next product after they have used the first feels helpful, while suggesting more before they know if they like it feels greedy, and suggestions tied to what they bought beat generic best sellers.",
+    "variables": [
+      "BUSINESS TYPE",
+      "FIRST PURCHASE PRODUCTS",
+      "IF KNOWN",
+      "E.G. ORDER CONFIRMATION, FOLLOW UP EMAIL, CHAT, PACKAGE INSERT"
+    ],
+    "relatedPromptIds": [
+      "bxs-refill-replenish",
+      "bxs-cart-addon",
+      "bxs-find-pairs-in-orders"
+    ]
+  },
+  {
+    "id": "bxs-digital-bundle",
+    "title": "Bundle Digital Products Into Packs",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "bundle-and-cross-sell-ideas",
+    "aiTool": "Gemini",
+    "promptText": "Help me create bundles from my digital products at my [BUSINESS TYPE]. My products and prices are [E.G. TEMPLATES, EBOOKS, PRESETS, COURSES, PROMPT PACKS], which sell best are [BEST SELLERS], and who buys them is [CUSTOMER TYPES]. Suggest bundles grouped by customer goal, like a complete set for a specific job, with prices and short descriptions of what problem each bundle solves. Note that digital bundles cost nothing extra to deliver, which makes deep discounts tempting, but bundling everything into one cheap mega pack can reduce what people pay for individual items and train customers to wait for the bundle, so goal based bundles with a fair discount usually work better than all you can eat packs. Give me the digital bundle plan.",
+    "description": "Group digital products into goal based packs with fair discounts.",
+    "useCase": "Use this for templates, ebooks, presets, prompt packs, or courses. Digital bundles cost nothing to deliver, which tempts deep discounts, but one cheap mega pack can undercut individual sales and train customers to wait, so goal based bundles with a fair discount usually work better.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. TEMPLATES, EBOOKS, PRESETS, COURSES, PROMPT PACKS",
+      "BEST SELLERS",
+      "CUSTOMER TYPES"
+    ],
+    "relatedPromptIds": [
+      "bxs-bundle-names",
+      "bxs-margin-check",
+      "bxs-good-better-best"
+    ]
+  },
+  {
+    "id": "bxs-good-better-best",
+    "title": "Build Good, Better, and Best Bundle Tiers",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "bundle-and-cross-sell-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me build three bundle tiers for my main product at my [BUSINESS TYPE]. The main product is [PRODUCT AND PRICE], items that could be added are [ADD ON ITEMS AND COSTS], and what different customers want is [E.G. BASIC USE, BETTER RESULTS, EVERYTHING INCLUDED]. Suggest what goes in each tier, prices, tier names, and how to display them side by side. Note that tiers help customers choose and many pick the middle option, but the difference between tiers must be genuinely useful rather than padding, and a top tier priced only to make the middle look cheap can backfire if customers notice, so each tier should be something I am happy for people to buy. Give me the tier plan.",
+    "description": "Create three honest bundle tiers around a main product.",
+    "useCase": "Use this to give buyers simple choices. Tiers help customers decide and many pick the middle, but differences between tiers must be genuinely useful, and a top tier priced only to make the middle look cheap can backfire, so every tier should be one you are happy to sell.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRODUCT AND PRICE",
+      "ADD ON ITEMS AND COSTS",
+      "E.G. BASIC USE, BETTER RESULTS, EVERYTHING INCLUDED"
+    ],
+    "relatedPromptIds": [
+      "bxs-starter-kit",
+      "bxs-digital-bundle",
+      "bxs-margin-check"
+    ]
+  },
+  {
+    "id": "bxs-bundle-names",
+    "title": "Name and Describe Your Bundles",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "bundle-and-cross-sell-ideas",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me name and describe bundles for my [BUSINESS TYPE]. The bundles are [LIST BUNDLES AND CONTENTS], my brand voice is [YOUR TONE], and the languages I sell in are [LANGUAGES]. For each bundle, give me a few name options, a one line summary of who it is for, a short description listing exactly what is included, and the savings stated accurately. Note that a clear name that says who the bundle is for, like the beginner kit or the travel set, usually sells better than a clever name nobody understands, names should be checked in each language so they do not sound odd when translated, and any savings shown must match the real current prices of the items. Give me the bundle names and descriptions.",
+    "description": "Write clear bundle names, contents lists, and accurate savings.",
+    "useCase": "Use this when listing new bundles. A name that says who it is for usually beats a clever one nobody understands, names should be checked in each language you sell in, and savings shown must match the real current prices of the items.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST BUNDLES AND CONTENTS",
+      "YOUR TONE",
+      "LANGUAGES"
+    ],
+    "relatedPromptIds": [
+      "bxs-gift-sets",
+      "bxs-starter-kit",
+      "bxs-quick-ideas"
+    ]
+  },
+  {
+    "id": "bxs-marketplace-bundles",
+    "title": "Set Up Bundles on a Marketplace",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "bundle-and-cross-sell-ideas",
+    "aiTool": "Gemini",
+    "promptText": "Help me set up bundles on [MARKETPLACE] for my [BUSINESS TYPE]. The bundle I want to sell is [BUNDLE CONTENTS], the marketplace's bundle or combo features I know about are [E.G. BUNDLE DEALS, ADD ON DEALS, COMBO LISTINGS, NONE], and my stock is managed by [HOW YOU TRACK INVENTORY]. Explain the options for listing it, how to keep stock counts correct across the bundle and single items, and what to check in the marketplace's rules. Note that marketplaces often have their own bundle or add on deal features that are easier and more visible than a separate listing, but each handles fees and stock differently, and selling the same item as a single and inside a bundle can cause overselling if stock is not linked, so I should check the current seller rules and test with small quantities first. Give me the marketplace bundle setup.",
+    "description": "List bundles on a marketplace without overselling linked stock.",
+    "useCase": "Use this if you sell on Shopee, Lazada, Amazon, Etsy, or similar. Built in bundle or add on deal features are often easier and more visible than separate listings, but fees and stock work differently, and selling an item alone and in a bundle can oversell if stock is not linked, so test small first.",
+    "variables": [
+      "MARKETPLACE",
+      "BUSINESS TYPE",
+      "BUNDLE CONTENTS",
+      "E.G. BUNDLE DEALS, ADD ON DEALS, COMBO LISTINGS, NONE",
+      "HOW YOU TRACK INVENTORY"
+    ],
+    "relatedPromptIds": [
+      "bxs-margin-check",
+      "bxs-bundle-names",
+      "bxs-mix-and-match"
+    ]
+  },
+  {
+    "id": "bxs-service-addon",
+    "title": "Pair Products With Services or Support",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "bundle-and-cross-sell-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me pair services with the products sold by my [BUSINESS TYPE]. My products are [PRODUCTS], services I could realistically offer are [E.G. SETUP, INSTALLATION, GIFT WRAPPING, ENGRAVING, A SHORT CONSULTATION, EXTENDED SUPPORT], how much time each takes me is [TIME PER SERVICE], and my capacity is [HOURS AVAILABLE PER WEEK]. Suggest which services to offer as add ons, pricing, and how to describe them. Note that service add ons can earn high margins and set a small shop apart, but they use my time, which does not scale like products, so pricing must reflect real time spent and the number offered must fit my capacity, and anything promised, like setup within a set time, has to be something I can deliver every time. Give me the service add on plan.",
+    "description": "Add paid services like setup or engraving that fit your real capacity.",
+    "useCase": "Use this to raise order value with services. Add ons like setup or engraving can earn high margins and set a small shop apart, but they use your time, which does not scale, so price for real time, cap them to your capacity, and only promise what you can deliver every time.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRODUCTS",
+      "E.G. SETUP, INSTALLATION, GIFT WRAPPING, ENGRAVING, A SHORT CONSULTATION, EXTENDED SUPPORT",
+      "TIME PER SERVICE",
+      "HOURS AVAILABLE PER WEEK"
+    ],
+    "relatedPromptIds": [
+      "bxs-good-better-best",
+      "bxs-cart-addon",
+      "bxs-margin-check"
+    ]
+  },
+  {
+    "id": "bxs-measure-bundles",
+    "title": "Measure Whether Bundles and Cross Sells Work",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "bundle-and-cross-sell-ideas",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me measure whether my bundles and cross sells are improving my [BUSINESS TYPE]. The data I have is [E.G. AVERAGE ORDER VALUE BEFORE AND AFTER, BUNDLE SALES, ADD ON TAKE RATE, MARGIN PER ORDER, SINGLE ITEM SALES], the period covered is [TIMEFRAME], and other changes in that time were [E.G. SALES, SEASONS, ADS]. Calculate the change in order value and profit per order, how often add ons are taken, and whether single item sales dropped, and recommend what to keep, change, or drop. Note that a higher average order value means little if profit per order fell because of discounts, and bundles can simply replace single item sales rather than add new ones, while seasons and promotions can distort a before and after comparison, so profit per order and total profit matter more than bundle sales alone. Give me the bundle performance analysis.",
+    "description": "Check bundles raise profit per order, not just order value.",
+    "useCase": "Use this a month or two after launching bundles. Higher order value means little if profit per order fell because of discounts, bundles may just replace single item sales, and seasons can distort comparisons, so judge by profit per order and total profit rather than bundle sales alone.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. AVERAGE ORDER VALUE BEFORE AND AFTER, BUNDLE SALES, ADD ON TAKE RATE, MARGIN PER ORDER, SINGLE ITEM SALES",
+      "TIMEFRAME",
+      "E.G. SALES, SEASONS, ADS"
+    ],
+    "relatedPromptIds": [
+      "bxs-margin-check",
+      "bxs-find-pairs-in-orders",
+      "bxs-free-shipping-threshold"
+    ]
   }
 ]
