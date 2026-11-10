@@ -46801,5 +46801,393 @@
       "integ-source-of-truth",
       "integ-stack-inventory"
     ]
+  },
+  {
+    "id": "recur-template-builder",
+    "title": "Turn a Repeating Process Into a Reusable Template",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "recurring-process-templates",
+    "aiTool": "Claude",
+    "promptText": "Help me turn a process I repeat into a reusable template for my [BUSINESS TYPE]. The process is [PROCESS NAME], how often it happens is [FREQUENCY], here is how I did it last time: [DESCRIBE THE STEPS], and the tool where I want the template is [E.G. NOTION, TRELLO, ASANA, CLICKUP, GOOGLE DOCS, A PAPER CHECKLIST]. Create a template with a checklist of steps in order, the owner and rough time for each, inputs needed before starting, a definition of done, and a short notes section to record what changed this time. Note that a recurring template only saves time if it is short enough to actually use, so it should list the steps that are easy to forget rather than explaining every obvious action, and updating it right after each run, while problems are fresh, is what keeps it accurate. Give me the recurring template.",
+    "description": "Convert a repeated process into a short checklist template you will use.",
+    "useCase": "Use this for anything you do on a regular schedule. A template only saves time if short enough to use, so list the steps that are easy to forget rather than every obvious action, and update it right after each run, while problems are fresh, to keep it accurate.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PROCESS NAME",
+      "FREQUENCY",
+      "DESCRIBE THE STEPS",
+      "E.G. NOTION, TRELLO, ASANA, CLICKUP, GOOGLE DOCS, A PAPER CHECKLIST"
+    ],
+    "relatedPromptIds": [
+      "recur-quick-checklist",
+      "recur-task-tool-setup",
+      "recur-cadence-calendar"
+    ]
+  },
+  {
+    "id": "recur-quick-checklist",
+    "title": "Get a Quick Recurring Checklist",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "recurring-process-templates",
+    "aiTool": "Grok",
+    "promptText": "Give me a quick recurring checklist. The task is [RECURRING TASK], I do it every [FREQUENCY], and my business is [BUSINESS TYPE]. List ten or fewer steps in order as short checkbox items, no explanation. Give me the checklist.",
+    "description": "Get a short checkbox list for any recurring task, fast.",
+    "useCase": "Use this when you need a checklist right now. A short generic list gets you started, but adjust it after the first real run, since your own business will have steps a generic checklist misses.",
+    "variables": [
+      "RECURRING TASK",
+      "FREQUENCY",
+      "BUSINESS TYPE"
+    ],
+    "relatedPromptIds": [
+      "recur-template-builder",
+      "recur-weekly-ops-review",
+      "recur-daily-open-close"
+    ]
+  },
+  {
+    "id": "recur-cadence-calendar",
+    "title": "Build a Calendar of All Recurring Business Tasks",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "recurring-process-templates",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me build one calendar of every recurring task in my [BUSINESS TYPE]. The recurring work I know of is [LIST DAILY, WEEKLY, MONTHLY, QUARTERLY, AND YEARLY TASKS], the people involved are [WHO DOES WHAT], and busy periods I should avoid are [E.G. HOLIDAYS, PEAK SEASONS, PERSONAL COMMITMENTS]. Organize them by frequency with suggested days, estimated time, and owner, spread the load so no single week is overloaded, and flag anything that is easy to forget. Note that recurring tasks tend to pile up at month end and year end, which creates stressful crunch periods, so spreading them across the month helps, and seeing everything in one place often reveals tasks that are no longer needed or could be done less often. Give me the cadence calendar.",
+    "description": "Lay out every daily to yearly task and spread the load evenly.",
+    "useCase": "Use this to see all your recurring work in one place. Tasks pile up at month and year end, creating crunch periods, so spreading them across the month helps, and seeing everything together often reveals tasks no longer needed or that could be done less often.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST DAILY, WEEKLY, MONTHLY, QUARTERLY, AND YEARLY TASKS",
+      "WHO DOES WHAT",
+      "E.G. HOLIDAYS, PEAK SEASONS, PERSONAL COMMITMENTS"
+    ],
+    "relatedPromptIds": [
+      "recur-task-tool-setup",
+      "recur-template-builder",
+      "recur-annual-admin"
+    ]
+  },
+  {
+    "id": "recur-task-tool-setup",
+    "title": "Set Up Recurring Templates in Your Task Tool",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "recurring-process-templates",
+    "aiTool": "Gemini",
+    "promptText": "Help me set up recurring process templates in [TASK TOOL, E.G. ASANA, TRELLO, CLICKUP, NOTION, TODOIST, MICROSOFT PLANNER, GOOGLE TASKS] for my [BUSINESS TYPE]. The recurring processes are [PROCESSES AND FREQUENCIES], each has these steps: [STEPS OR PASTE TEMPLATES], and who should be assigned is [OWNERS]. Explain how to create the template, make it repeat automatically, set due dates relative to the start, assign owners, and get reminders, using my tool's features. Note that task tools handle recurrence differently, some repeat a single task while others can copy a whole checklist or project, and some features are only on paid plans, so the setup may need a workaround, and recurring tasks that keep appearing but never get done are a sign the frequency or the process itself needs rethinking. Give me the task tool setup.",
+    "description": "Make process templates repeat automatically with owners and due dates.",
+    "useCase": "Use this to stop recreating the same checklists. Task tools handle recurrence differently, some repeat single tasks while others copy whole checklists, and some features need paid plans, while recurring tasks that keep appearing undone signal the frequency or process needs rethinking.",
+    "variables": [
+      "TASK TOOL, E.G. ASANA, TRELLO, CLICKUP, NOTION, TODOIST, MICROSOFT PLANNER, GOOGLE TASKS",
+      "BUSINESS TYPE",
+      "PROCESSES AND FREQUENCIES",
+      "STEPS OR PASTE TEMPLATES",
+      "OWNERS"
+    ],
+    "relatedPromptIds": [
+      "recur-template-builder",
+      "recur-cadence-calendar",
+      "recur-improve-templates"
+    ]
+  },
+  {
+    "id": "recur-daily-open-close",
+    "title": "Create Daily Opening and Closing Checklists",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "recurring-process-templates",
+    "aiTool": "Claude",
+    "promptText": "Help me create daily start of day and end of day checklists for my [BUSINESS TYPE]. The business runs [E.G. ONLINE ONLY, A SHOP, A CAFE, A HOME STUDIO, A SERVICE BUSINESS], what must happen every day is [DAILY ESSENTIALS, E.G. CHECK ORDERS, REPLY TO MESSAGES, COUNT CASH, BACK UP FILES, LOCK UP], and who opens and closes is [PEOPLE]. Write two short checklists, one to start the day and one to end it, ordered so the most important items come first. Note that daily checklists work best when they take a few minutes and focus on things that cause real trouble if missed, like unanswered orders, cash differences, or unlocked doors, and a checklist that grows too long gets skipped, so trimming it to the essentials keeps people actually using it. Give me the daily checklists.",
+    "description": "Write short start and end of day checklists of the essentials.",
+    "useCase": "Use this for anything that must happen every day. Daily checklists work best when they take minutes and focus on things causing real trouble if missed, like unanswered orders or cash differences, and a checklist that grows too long gets skipped, so keep it to essentials.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. ONLINE ONLY, A SHOP, A CAFE, A HOME STUDIO, A SERVICE BUSINESS",
+      "DAILY ESSENTIALS, E.G. CHECK ORDERS, REPLY TO MESSAGES, COUNT CASH, BACK UP FILES, LOCK UP",
+      "PEOPLE"
+    ],
+    "relatedPromptIds": [
+      "recur-weekly-ops-review",
+      "recur-quick-checklist",
+      "recur-inventory-count"
+    ]
+  },
+  {
+    "id": "recur-weekly-ops-review",
+    "title": "Create a Weekly Business Operations Review",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "recurring-process-templates",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me create a weekly operations review template for my [BUSINESS TYPE]. The numbers I can check weekly are [E.G. SALES, ORDERS, LEADS, CASH IN BANK, OVERDUE INVOICES, OPEN SUPPORT TICKETS], the areas I want to review are [E.G. SALES, DELIVERY, MARKETING, FINANCE, ADMIN], and how long I can spend is [TIME]. Create a short review agenda with the key numbers, questions to ask, decisions to make, and a section for next week's top priorities. Note that a weekly review is useful only if it leads to decisions, so a few key numbers and questions like what is stuck and what needs attention beat a long report nobody acts on, and it is different from personal weekly planning, since it looks at how the business is running rather than my own task list. Give me the weekly operations review.",
+    "description": "Review key business numbers weekly and turn them into decisions.",
+    "useCase": "Use this to check how the business is running each week. A review only helps if it leads to decisions, so a few key numbers and questions like what is stuck beat a long report nobody acts on, and it looks at the business rather than your personal task list.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. SALES, ORDERS, LEADS, CASH IN BANK, OVERDUE INVOICES, OPEN SUPPORT TICKETS",
+      "E.G. SALES, DELIVERY, MARKETING, FINANCE, ADMIN",
+      "TIME"
+    ],
+    "relatedPromptIds": [
+      "recur-monthly-close",
+      "recur-daily-open-close",
+      "recur-quarterly-review"
+    ]
+  },
+  {
+    "id": "recur-monthly-close",
+    "title": "Create a Monthly Bookkeeping Close Routine",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "recurring-process-templates",
+    "aiTool": "Gemini",
+    "promptText": "Help me create a monthly bookkeeping close routine for my [BUSINESS TYPE]. My accounting setup is [E.G. XERO, QUICKBOOKS, WAVE, A SPREADSHEET, AN ACCOUNTANT DOES IT], my income comes through [E.G. BANK TRANSFERS, CARDS, MARKETPLACES, CASH, PAYMENT APPS], the currencies I deal with are [CURRENCIES], and what my accountant needs from me is [IF KNOWN]. Write a step by step checklist for the first days of each month, covering collecting receipts, matching bank transactions, chasing unpaid invoices, recording cash, checking marketplace payouts against sales, and sending what the accountant needs. Note that doing this monthly takes far less time than sorting a whole year at tax time, cash and mixed currency transactions are where records most often go wrong, so they need a consistent rule, and tax deadlines and record keeping rules depend on my country, so my accountant should confirm the routine fits local requirements. Give me the monthly close routine.",
+    "description": "Close the books monthly with receipts, matching, cash, and payouts.",
+    "useCase": "Use this to keep your books tidy month by month. It takes far less time than sorting a whole year at tax time, cash and mixed currency transactions are where records most often go wrong, so use a consistent rule, and confirm with your accountant that the routine fits local requirements.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. XERO, QUICKBOOKS, WAVE, A SPREADSHEET, AN ACCOUNTANT DOES IT",
+      "E.G. BANK TRANSFERS, CARDS, MARKETPLACES, CASH, PAYMENT APPS",
+      "CURRENCIES",
+      "IF KNOWN"
+    ],
+    "relatedPromptIds": [
+      "recur-invoicing-run",
+      "recur-weekly-ops-review",
+      "recur-annual-admin"
+    ]
+  },
+  {
+    "id": "recur-invoicing-run",
+    "title": "Create a Monthly Invoicing and Collection Run",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "recurring-process-templates",
+    "aiTool": "Claude",
+    "promptText": "Help me create a recurring invoicing run for my [BUSINESS TYPE]. How I bill clients is [E.G. MONTHLY RETAINERS, HOURLY, MILESTONES, SUBSCRIPTIONS], my invoicing tool is [TOOL], my payment terms are [TERMS], and the payment methods clients use are [METHODS, INCLUDING CROSS BORDER IF ANY]. Write a checklist for each billing cycle covering gathering billable work, creating and checking invoices, sending them, recording payments, and following up on late ones at set intervals. Note that invoicing on the same day each cycle trains clients to expect it and improves cash flow, mistakes in hours or amounts damage trust more than a short delay, so a quick check before sending matters, and cross border payments can arrive with fees deducted or delayed, so recording the amount actually received, not just the invoice amount, keeps records accurate. Give me the invoicing run.",
+    "description": "Invoice on a fixed day, check before sending, and record what arrives.",
+    "useCase": "Use this if you bill clients regularly. Invoicing on the same day each cycle trains clients and improves cash flow, errors in hours or amounts damage trust more than a short delay, and cross border payments can arrive with fees deducted, so record what actually arrived.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. MONTHLY RETAINERS, HOURLY, MILESTONES, SUBSCRIPTIONS",
+      "TOOL",
+      "TERMS",
+      "METHODS, INCLUDING CROSS BORDER IF ANY"
+    ],
+    "relatedPromptIds": [
+      "recur-monthly-close",
+      "recur-contractor-payments",
+      "recur-client-maintenance"
+    ]
+  },
+  {
+    "id": "recur-contractor-payments",
+    "title": "Create a Recurring Contractor Payment Routine",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "recurring-process-templates",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me create a recurring routine for paying freelancers and contractors at my [BUSINESS TYPE]. The people I pay are [CONTRACTORS AND WHERE THEY ARE BASED], how they invoice me is [E.G. INVOICES, TIMESHEETS, PLATFORM MILESTONES], how I pay them is [E.G. BANK TRANSFER, WISE, PAYPAL, PLATFORM, LOCAL PAYMENT APP], and my pay schedule is [SCHEDULE]. Write a checklist covering collecting and checking invoices, approving work, paying, recording fees and exchange rates, saving records, and confirming receipt. Note that paying on a predictable schedule keeps good freelancers loyal, transfer fees and exchange rates should be agreed in advance so nobody is surprised by a smaller amount, and records of who was paid what and why may be needed for taxes in my country, so keeping invoices and payment confirmations together each cycle saves a scramble later. Give me the contractor payment routine.",
+    "description": "Pay contractors on schedule and record fees, rates, and proof.",
+    "useCase": "Use this if you pay freelancers regularly. Predictable payment keeps good freelancers loyal, transfer fees and exchange rates should be agreed in advance so nobody gets a surprise, and records of who was paid what may be needed for taxes, so keep invoices and confirmations together each cycle.",
+    "variables": [
+      "BUSINESS TYPE",
+      "CONTRACTORS AND WHERE THEY ARE BASED",
+      "E.G. INVOICES, TIMESHEETS, PLATFORM MILESTONES",
+      "E.G. BANK TRANSFER, WISE, PAYPAL, PLATFORM, LOCAL PAYMENT APP",
+      "SCHEDULE"
+    ],
+    "relatedPromptIds": [
+      "recur-invoicing-run",
+      "recur-monthly-close",
+      "recur-security-review"
+    ]
+  },
+  {
+    "id": "recur-inventory-count",
+    "title": "Create a Recurring Stock Count Routine",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "recurring-process-templates",
+    "aiTool": "Gemini",
+    "promptText": "Help me create a recurring stock count routine for my [BUSINESS TYPE]. The number of products and variants I carry is [COUNT], where stock is stored is [LOCATIONS], how I track stock now is [E.G. STORE SYSTEM, SPREADSHEET, MARKETPLACE STOCK, MEMORY], and the problems I have are [E.G. OVERSELLING, MISSING ITEMS, EXPIRED STOCK]. Suggest a counting schedule, like counting a few fast moving items weekly and everything less often, plus a checklist for counting, recording differences, investigating large gaps, and updating every sales channel. Note that full counts are tiring and easy to postpone, so rotating partial counts of the most important items are more sustainable, differences between the system and the shelf should be investigated rather than simply corrected, since they often point to theft, damage, or recording mistakes, and stock with expiry dates needs its own check. Give me the stock count routine.",
+    "description": "Rotate partial stock counts and investigate gaps instead of just fixing them.",
+    "useCase": "Use this if you hold physical stock. Full counts are tiring and easy to postpone, so rotating partial counts of key items is more sustainable, gaps between system and shelf should be investigated since they often point to theft, damage, or mistakes, and expiring stock needs its own check.",
+    "variables": [
+      "BUSINESS TYPE",
+      "COUNT",
+      "LOCATIONS",
+      "E.G. STORE SYSTEM, SPREADSHEET, MARKETPLACE STOCK, MEMORY",
+      "E.G. OVERSELLING, MISSING ITEMS, EXPIRED STOCK"
+    ],
+    "relatedPromptIds": [
+      "recur-daily-open-close",
+      "recur-weekly-ops-review",
+      "recur-monthly-close"
+    ]
+  },
+  {
+    "id": "recur-content-batch",
+    "title": "Create a Recurring Content Production Routine",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "recurring-process-templates",
+    "aiTool": "Claude",
+    "promptText": "Help me create a recurring routine for producing content in batches for my [BUSINESS TYPE]. The content I publish is [E.G. SOCIAL POSTS, BLOG ARTICLES, NEWSLETTERS, VIDEOS, PODCASTS], how often each goes out is [FREQUENCY], the tools I use are [TOOLS], and the time I can give it is [HOURS PER WEEK OR MONTH]. Design a repeating production cycle covering planning, writing or recording, editing, design, scheduling, and checking results, with which steps happen on which day and a checklist for each stage. Note that batching similar work, like writing several posts in one session, is usually faster than switching tasks every day, but a schedule that depends on long uninterrupted blocks fails as soon as a busy week arrives, so building in a small buffer of ready content protects consistency, and checking results on a set day keeps the routine improving rather than just repeating. Give me the content production routine.",
+    "description": "Set a repeating batch cycle for planning, making, and scheduling content.",
+    "useCase": "Use this to publish consistently without daily scrambling. Batching similar work is usually faster than switching daily, but schedules relying on long uninterrupted blocks fail in busy weeks, so keep a small buffer of ready content, and review results on a set day so the routine keeps improving.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. SOCIAL POSTS, BLOG ARTICLES, NEWSLETTERS, VIDEOS, PODCASTS",
+      "FREQUENCY",
+      "TOOLS",
+      "HOURS PER WEEK OR MONTH"
+    ],
+    "relatedPromptIds": [
+      "recur-cadence-calendar",
+      "recur-template-builder",
+      "recur-website-maintenance"
+    ]
+  },
+  {
+    "id": "recur-website-maintenance",
+    "title": "Create a Monthly Website Maintenance Checklist",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "recurring-process-templates",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me create a monthly maintenance checklist for my website at my [BUSINESS TYPE]. The site is built with [E.G. WORDPRESS, SHOPIFY, WIX, SQUARESPACE, A STATIC SITE, CUSTOM CODE], what it does is [E.G. SHOP, BOOKINGS, LEAD FORMS, BLOG], and who looks after it is [ME, A DEVELOPER, NOBODY YET]. Write a monthly checklist covering backups, updates, security, broken links, forms and checkout testing, speed, domain and hosting renewal dates, and content that needs refreshing, plus a quick quarterly add on. Note that sites often break silently, like a contact form that stops sending or a checkout that fails on mobile, and nobody notices until sales drop, so actually submitting a test form and order each month is the most valuable step, while updates on self hosted sites like WordPress should come after a backup, since updates occasionally break things. Give me the website maintenance checklist.",
+    "description": "Back up, update, and test forms and checkout every month.",
+    "useCase": "Use this to keep your site from breaking silently. Contact forms that stop sending or mobile checkouts that fail often go unnoticed until sales drop, so submit a test form and order monthly, and back up before updates on self hosted sites like WordPress, since updates occasionally break things.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. WORDPRESS, SHOPIFY, WIX, SQUARESPACE, A STATIC SITE, CUSTOM CODE",
+      "E.G. SHOP, BOOKINGS, LEAD FORMS, BLOG",
+      "ME, A DEVELOPER, NOBODY YET"
+    ],
+    "relatedPromptIds": [
+      "recur-security-review",
+      "recur-client-maintenance",
+      "recur-annual-admin"
+    ]
+  },
+  {
+    "id": "recur-client-maintenance",
+    "title": "Create a Recurring Service Template for Retainer Clients",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "recurring-process-templates",
+    "aiTool": "Gemini",
+    "promptText": "Help me create a recurring service template for my retainer or maintenance clients at my [BUSINESS TYPE]. The ongoing service I provide is [E.G. WEBSITE CARE, BOOKKEEPING, SOCIAL MEDIA MANAGEMENT, IT SUPPORT, CONSULTING], what is included each month is [SCOPE], the number of clients is [COUNT], and how I report to them is [REPORTING METHOD]. Create a monthly checklist per client covering the included work, checks, a short report, the invoice, and a note of anything out of scope to discuss, plus a way to track all clients at once. Note that retainer work slowly expands when extra requests are quietly absorbed, so logging out of scope requests each month makes it easy to discuss pricing, and a short regular report showing what was done helps clients see value in work that is otherwise invisible, which matters most when they decide whether to renew. Give me the retainer service template.",
+    "description": "Deliver, report, and invoice retainer work on a repeatable monthly cycle.",
+    "useCase": "Use this if you have monthly retainer clients. Retainer work quietly expands when extra requests are absorbed, so log out of scope requests to discuss pricing, and a short monthly report shows the value of otherwise invisible work, which matters most when clients decide whether to renew.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. WEBSITE CARE, BOOKKEEPING, SOCIAL MEDIA MANAGEMENT, IT SUPPORT, CONSULTING",
+      "SCOPE",
+      "COUNT",
+      "REPORTING METHOD"
+    ],
+    "relatedPromptIds": [
+      "recur-invoicing-run",
+      "recur-website-maintenance",
+      "recur-weekly-ops-review"
+    ]
+  },
+  {
+    "id": "recur-security-review",
+    "title": "Create a Recurring Security and Subscription Review",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "recurring-process-templates",
+    "aiTool": "Claude",
+    "promptText": "Help me create a recurring review of security and subscriptions for my [BUSINESS TYPE]. The accounts and tools I rely on are [KEY ACCOUNTS AND TOOLS], who has access is [PEOPLE], how I pay for subscriptions is [PAYMENT METHODS], and how often I want to do this is [E.G. MONTHLY, QUARTERLY]. Write a checklist covering who still needs access, removing old users, checking two factor login on key accounts, reviewing password manager alerts, checking connected apps, cancelling unused subscriptions, and spotting unexpected charges. Note that access and subscriptions quietly accumulate, former freelancers keep logins and forgotten trials turn into paid plans, so a short regular review catches both security risks and wasted money, and checking the card or bank statement line by line is often the fastest way to find subscriptions nobody remembers. Give me the security and subscription review.",
+    "description": "Regularly remove old access, check two factor login, and cancel unused tools.",
+    "useCase": "Use this every month or quarter. Former freelancers keep logins and forgotten trials turn into paid plans, so a short regular review catches both security risks and wasted money, and reading the card or bank statement line by line is the fastest way to find forgotten subscriptions.",
+    "variables": [
+      "BUSINESS TYPE",
+      "KEY ACCOUNTS AND TOOLS",
+      "PEOPLE",
+      "PAYMENT METHODS",
+      "E.G. MONTHLY, QUARTERLY"
+    ],
+    "relatedPromptIds": [
+      "recur-website-maintenance",
+      "recur-contractor-payments",
+      "recur-annual-admin"
+    ]
+  },
+  {
+    "id": "recur-quarterly-review",
+    "title": "Create a Quarterly Business Review Template",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "recurring-process-templates",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me create a quarterly business review template for my [BUSINESS TYPE]. The goals I set for this period were [GOALS], the numbers I track are [KEY METRICS], the main areas of the business are [AREAS], and who takes part is [ME ALONE, PARTNER, TEAM]. Create a template with a results versus goals section, what worked and what did not, customer and market changes, financial health, a list of things to stop, start, or continue, and next quarter's three priorities. Note that a quarterly review is the right moment to question bigger decisions, like whether a product, channel, or client type is worth continuing, which weekly reviews rarely do, and limiting the outcome to a few priorities keeps the next quarter focused, while comparing against the same quarter last year can matter more than the previous quarter for seasonal businesses. Give me the quarterly review template.",
+    "description": "Review the quarter against goals and pick three priorities for the next.",
+    "useCase": "Use this at the end of each quarter. It is the right time to question bigger decisions, like whether a product, channel, or client type is worth continuing, keeping outcomes to a few priorities focuses the next quarter, and seasonal businesses should compare with the same quarter last year.",
+    "variables": [
+      "BUSINESS TYPE",
+      "GOALS",
+      "KEY METRICS",
+      "AREAS",
+      "ME ALONE, PARTNER, TEAM"
+    ],
+    "relatedPromptIds": [
+      "recur-weekly-ops-review",
+      "recur-annual-admin",
+      "recur-cadence-calendar"
+    ]
+  },
+  {
+    "id": "recur-annual-admin",
+    "title": "Create a Yearly Business Admin and Reset Checklist",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "recurring-process-templates",
+    "aiTool": "Gemini",
+    "promptText": "Help me create a yearly admin and reset checklist for my [BUSINESS TYPE]. Where the business is registered is [COUNTRY], the annual obligations I know of are [E.G. TAX FILINGS, LICENSE OR PATENT RENEWALS, REGISTRATION RENEWALS, INSURANCE, DOMAIN RENEWALS, CONTRACT RENEWALS, PRICE REVIEWS], and when my business year ends is [YEAR END]. Write a checklist organized by month or by before and after year end, covering legal and tax obligations, renewals, pricing review, contract and terms updates, archiving records, and planning for next year. Note that yearly tasks are the easiest to forget because they come around so rarely, missing a government filing or license renewal can bring fines, and deadlines and requirements vary by country and can change, so I should confirm them each year with my accountant or the relevant authority rather than relying on last year's dates. Give me the yearly admin checklist.",
+    "description": "List yearly filings, renewals, and reviews around your year end.",
+    "useCase": "Use this before your business year ends. Yearly tasks are the easiest to forget, missing a filing or license renewal can bring fines, and deadlines vary by country and change, so confirm them each year with your accountant or the relevant authority rather than relying on last year's dates.",
+    "variables": [
+      "BUSINESS TYPE",
+      "COUNTRY",
+      "E.G. TAX FILINGS, LICENSE OR PATENT RENEWALS, REGISTRATION RENEWALS, INSURANCE, DOMAIN RENEWALS, CONTRACT RENEWALS, PRICE REVIEWS",
+      "YEAR END"
+    ],
+    "relatedPromptIds": [
+      "recur-quarterly-review",
+      "recur-monthly-close",
+      "recur-cadence-calendar"
+    ]
+  },
+  {
+    "id": "recur-handover-ready",
+    "title": "Make Recurring Templates Ready for Someone Else to Run",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "recurring-process-templates",
+    "aiTool": "Claude",
+    "promptText": "Help me make my recurring process templates usable by someone else at my [BUSINESS TYPE]. The template is [PASTE THE TEMPLATE], who will take it over is [E.G. ASSISTANT, NEW HIRE, FREELANCER, FAMILY MEMBER IN AN EMERGENCY], their experience is [THEIR LEVEL], and the tools and logins they will need are [TOOLS]. Rewrite the template so a newcomer can run it without asking me, adding links, where to find things, what good looks like, what to do if something looks wrong, and when to contact me. Note that templates written by the person who does the work skip steps that seem obvious to them, so having the new person run it once while noting every question is the best way to find gaps, and sensitive steps involving money or customer data may need limits on what the newcomer can do alone. Give me the handover ready template.",
+    "description": "Rewrite a recurring template so a newcomer can run it alone.",
+    "useCase": "Use this before delegating a recurring task. Templates written by the person doing the work skip obvious steps, so have the newcomer run it once while noting every question, and steps involving money or customer data may need limits on what the newcomer can do alone.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THE TEMPLATE",
+      "E.G. ASSISTANT, NEW HIRE, FREELANCER, FAMILY MEMBER IN AN EMERGENCY",
+      "THEIR LEVEL",
+      "TOOLS"
+    ],
+    "relatedPromptIds": [
+      "recur-template-builder",
+      "recur-improve-templates",
+      "recur-task-tool-setup"
+    ]
+  },
+  {
+    "id": "recur-improve-templates",
+    "title": "Review and Improve Your Recurring Templates",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "recurring-process-templates",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me review and improve my recurring process templates at my [BUSINESS TYPE]. The templates are [LIST OR PASTE THEM], how often each is actually completed on time is [COMPLETION NOTES], and recurring problems are [E.G. STEPS SKIPPED, TAKES TOO LONG, OUTDATED TOOLS, MISTAKES STILL HAPPEN]. For each template, suggest what to cut, what to add, what to automate, whether the frequency is right, and whether it is still needed at all. Note that templates drift out of date as tools and the business change, so steps that are always skipped are either unnecessary or badly explained, and a template that is always late may need a different frequency, owner, or time slot rather than more reminders, while a review every few months keeps the whole set useful. Give me the template review.",
+    "description": "Cut, update, automate, or retire recurring templates that have drifted.",
+    "useCase": "Use this every few months. Templates drift as tools and the business change, steps always skipped are either unnecessary or badly explained, and a template that is always late may need a different frequency, owner, or time slot rather than more reminders.",
+    "variables": [
+      "BUSINESS TYPE",
+      "LIST OR PASTE THEM",
+      "COMPLETION NOTES",
+      "E.G. STEPS SKIPPED, TAKES TOO LONG, OUTDATED TOOLS, MISTAKES STILL HAPPEN"
+    ],
+    "relatedPromptIds": [
+      "recur-handover-ready",
+      "recur-task-tool-setup",
+      "recur-template-builder"
+    ]
   }
 ]
