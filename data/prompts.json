@@ -46026,5 +46026,389 @@
       "taskauto-weekly-log",
       "taskauto-report-generation"
     ]
+  },
+  {
+    "id": "wfmap-current-process",
+    "title": "Map a Process Exactly as It Works Today",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "workflow-mapping",
+    "aiTool": "Claude",
+    "promptText": "Help me map one of my processes exactly as it works today at my [BUSINESS TYPE]. The process is [PROCESS NAME, E.G. HANDLING A NEW ORDER, ONBOARDING A CLIENT, PUBLISHING A POST], it starts when [THE STARTING EVENT] and ends when [THE END RESULT], and here is a rough description of what happens: [DESCRIBE THE STEPS, WHO DOES THEM, AND WHICH TOOLS]. Turn this into a numbered step list with the person responsible, tool used, time taken, and waiting time for each step, and mark unclear spots I should check. Note that the first map should show what really happens, including workarounds, waiting, and steps people skip, rather than how the process is supposed to work, because improving an imaginary process fixes nothing, and the people who actually do the work usually know steps the owner does not. Give me the current process map.",
+    "description": "Document a process as it really runs, including workarounds and waits.",
+    "useCase": "Use this before trying to improve or automate anything. The first map should show what really happens, including workarounds, waiting, and skipped steps, since improving an imaginary process fixes nothing, and the people doing the work often know steps the owner does not.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PROCESS NAME, E.G. HANDLING A NEW ORDER, ONBOARDING A CLIENT, PUBLISHING A POST",
+      "THE STARTING EVENT",
+      "THE END RESULT",
+      "DESCRIBE THE STEPS, WHO DOES THEM, AND WHICH TOOLS"
+    ],
+    "relatedPromptIds": [
+      "wfmap-interview-questions",
+      "wfmap-find-bottlenecks",
+      "wfmap-flowchart-code"
+    ]
+  },
+  {
+    "id": "wfmap-quick-outline",
+    "title": "Get a Quick Workflow Outline",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "workflow-mapping",
+    "aiTool": "Grok",
+    "promptText": "Give me a quick workflow outline. The process is [PROCESS], it starts with [START] and ends with [END], and the people involved are [PEOPLE OR ROLES]. List the main steps in order with who does each, as a short numbered list, and flag the two steps most likely to cause delays, no explanation. Give me the outline.",
+    "description": "Get a numbered workflow with owners and likely delay points, fast.",
+    "useCase": "Use this to get a first draft of any process fast. A quick outline gives you something to react to, but check it with the people who actually do the work, since a generic outline misses the real workarounds and waiting that slow things down.",
+    "variables": [
+      "PROCESS",
+      "START",
+      "END",
+      "PEOPLE OR ROLES"
+    ],
+    "relatedPromptIds": [
+      "wfmap-current-process",
+      "wfmap-flowchart-code",
+      "wfmap-find-bottlenecks"
+    ]
+  },
+  {
+    "id": "wfmap-interview-questions",
+    "title": "Interview People to Capture How Work Really Gets Done",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "workflow-mapping",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me prepare questions to interview the people who do a process at my [BUSINESS TYPE], so I can map it accurately. The process is [PROCESS], the people involved are [ROLES, E.G. ASSISTANT, PACKER, FREELANCER, PARTNER], and what I already know is [WHAT YOU KNOW]. Write interview questions that uncover the real steps, workarounds, waiting, common problems, and exceptions, plus tips for running the conversation. Note that people often describe the ideal version of their work or leave out steps that feel obvious to them, so asking them to walk through the last real example works better than asking how it usually goes, and they will only mention problems honestly if they feel the goal is to fix the process, not to judge them. Give me the interview guide.",
+    "description": "Ask the right questions to uncover real steps and workarounds.",
+    "useCase": "Use this when someone else does the work you want to map. People describe the ideal version or skip obvious steps, so ask them to walk through the last real example, and they will only share problems honestly if the goal is clearly fixing the process, not judging them.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PROCESS",
+      "ROLES, E.G. ASSISTANT, PACKER, FREELANCER, PARTNER",
+      "WHAT YOU KNOW"
+    ],
+    "relatedPromptIds": [
+      "wfmap-current-process",
+      "wfmap-exceptions",
+      "wfmap-swimlane"
+    ]
+  },
+  {
+    "id": "wfmap-flowchart-code",
+    "title": "Turn a Process Into a Flowchart Diagram",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "workflow-mapping",
+    "aiTool": "Claude",
+    "promptText": "Turn this process into a flowchart I can paste into a diagram tool. The process steps are [PASTE YOUR STEP LIST], the decision points are [WHERE THE PROCESS BRANCHES AND THE CONDITIONS], and the tool I will use is [E.G. MERMAID IN NOTION OR GITHUB, DRAW.IO, LUCIDCHART, WHIMSICAL, MIRO]. Write the flowchart in Mermaid syntax, using clear start and end points, diamond shapes for decisions, and short labels, and explain how to import or recreate it in my tool. Note that flowcharts become unreadable when every small detail is included, so it is better to show the main path clearly and move detailed instructions into notes or a separate document, and each decision should have every outcome drawn, since missing branches are where processes usually break. Give me the flowchart.",
+    "description": "Convert a step list into Mermaid flowchart code with clear decisions.",
+    "useCase": "Use this to visualize any process. Flowcharts become unreadable with every detail included, so show the main path clearly and move details to notes, and draw every outcome of each decision, since missing branches are where processes usually break.",
+    "variables": [
+      "PASTE YOUR STEP LIST",
+      "WHERE THE PROCESS BRANCHES AND THE CONDITIONS",
+      "E.G. MERMAID IN NOTION OR GITHUB, DRAW.IO, LUCIDCHART, WHIMSICAL, MIRO"
+    ],
+    "relatedPromptIds": [
+      "wfmap-swimlane",
+      "wfmap-current-process",
+      "wfmap-quick-outline"
+    ]
+  },
+  {
+    "id": "wfmap-swimlane",
+    "title": "Build a Swimlane Map Showing Who Does What",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "workflow-mapping",
+    "aiTool": "Gemini",
+    "promptText": "Help me build a swimlane map for a process at my [BUSINESS TYPE] that involves several people or teams. The process is [PROCESS], the people, roles, or outside parties involved are [E.G. ME, ASSISTANT, CLIENT, SUPPLIER, COURIER, ACCOUNTANT], and the steps are [STEPS WITH WHO DOES EACH]. Lay out each role as a lane, place each step in the right lane, show every handoff between lanes, and describe how to draw it in [DIAGRAM TOOL]. Note that most delays and mistakes happen at handoffs, when work passes from one person to another and nobody is sure it arrived or who owns the next step, so a swimlane map makes these visible, and including the client and outside parties shows where I am waiting on others rather than on my own team. Give me the swimlane map.",
+    "description": "Lay out each role as a lane and make every handoff visible.",
+    "useCase": "Use this when several people, clients, or suppliers are involved. Most delays and mistakes happen at handoffs, when nobody is sure work arrived or who owns the next step, and including clients and outside parties shows where you are waiting on others rather than your own team.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PROCESS",
+      "E.G. ME, ASSISTANT, CLIENT, SUPPLIER, COURIER, ACCOUNTANT",
+      "STEPS WITH WHO DOES EACH",
+      "DIAGRAM TOOL"
+    ],
+    "relatedPromptIds": [
+      "wfmap-handoffs",
+      "wfmap-flowchart-code",
+      "wfmap-raci"
+    ]
+  },
+  {
+    "id": "wfmap-find-bottlenecks",
+    "title": "Find the Bottlenecks in a Workflow",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "workflow-mapping",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me find the bottlenecks in a workflow at my [BUSINESS TYPE]. Here is the mapped process with times: [PASTE STEPS WITH WORK TIME AND WAITING TIME FOR EACH], the volume that goes through it is [E.G. ORDERS PER DAY, CLIENTS PER MONTH], and the complaints or delays I notice are [SYMPTOMS]. Identify where work piles up, which step limits overall speed, and what is causing it, then suggest fixes in order of impact. Note that the slowest point is often waiting rather than working, like approvals, client replies, or one person who must touch every job, and speeding up steps that are not the bottleneck does not make the whole process faster, so the fix should target the single constraint first. Give me the bottleneck analysis.",
+    "description": "Find the one step limiting speed, often waiting rather than working.",
+    "useCase": "Use this when work moves slowly or piles up. The slowest point is often waiting, like approvals, client replies, or one person who touches every job, and speeding up non bottleneck steps does not make the whole process faster, so target the single constraint first.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE STEPS WITH WORK TIME AND WAITING TIME FOR EACH",
+      "E.G. ORDERS PER DAY, CLIENTS PER MONTH",
+      "SYMPTOMS"
+    ],
+    "relatedPromptIds": [
+      "wfmap-cycle-time",
+      "wfmap-current-process",
+      "wfmap-simplify-steps"
+    ]
+  },
+  {
+    "id": "wfmap-handoffs",
+    "title": "Fix Messy Handoffs Between People",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "workflow-mapping",
+    "aiTool": "Claude",
+    "promptText": "Help me fix the handoffs in a workflow at my [BUSINESS TYPE]. The handoffs that cause trouble are [E.G. SALES TO DELIVERY, ME TO MY ASSISTANT, DESIGNER TO CLIENT, ORDERS TO PACKING], what goes wrong is [E.G. MISSING INFORMATION, NOBODY KNOWS IT IS THEIR TURN, WORK SITS UNNOTICED], and the tools we use to pass work along are [TOOLS]. For each handoff, define what must be included, who confirms receipt, where it is recorded, and how long it may wait, and suggest a simple checklist or template. Note that handoffs fail mostly because information lives in someone's head or a chat thread, so a short standard checklist of what must be passed on prevents most problems, and a clear signal that the next person has accepted the work stops tasks from falling into the gap between two people. Give me the handoff fixes.",
+    "description": "Define what passes, who accepts it, and how long it may wait.",
+    "useCase": "Use this when work gets lost between people. Handoffs fail mostly because information lives in someone's head or a chat thread, so a short checklist of what must be passed on prevents most problems, and a clear signal that the next person accepted the work stops tasks falling into the gap.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. SALES TO DELIVERY, ME TO MY ASSISTANT, DESIGNER TO CLIENT, ORDERS TO PACKING",
+      "E.G. MISSING INFORMATION, NOBODY KNOWS IT IS THEIR TURN, WORK SITS UNNOTICED",
+      "TOOLS"
+    ],
+    "relatedPromptIds": [
+      "wfmap-swimlane",
+      "wfmap-raci",
+      "wfmap-async-team"
+    ]
+  },
+  {
+    "id": "wfmap-raci",
+    "title": "Clarify Who Owns Each Step With a RACI Chart",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "workflow-mapping",
+    "aiTool": "Gemini",
+    "promptText": "Help me create a RACI chart for a workflow at my [BUSINESS TYPE]. The process steps are [STEPS], the people or roles involved are [ROLES], and the confusion we have now is [E.G. TWO PEOPLE DOING THE SAME THING, NOBODY APPROVING, TOO MANY PEOPLE CONSULTED]. For each step, mark who is Responsible for doing it, who is Accountable for the result, who must be Consulted, and who should be Informed, as a table, and flag problems like steps with no owner or too many approvers. Note that each step should have exactly one accountable person, since shared accountability usually means nobody acts, and consulting too many people slows everything down, while in a very small business one person may hold most roles, which is fine as long as it is clear. Give me the RACI chart.",
+    "description": "Assign one clear owner per step and trim excess approvers.",
+    "useCase": "Use this when people are unsure who owns what. Each step needs exactly one accountable person, since shared accountability usually means nobody acts, consulting too many people slows everything, and in a tiny business one person holding most roles is fine as long as it is clear.",
+    "variables": [
+      "BUSINESS TYPE",
+      "STEPS",
+      "ROLES",
+      "E.G. TWO PEOPLE DOING THE SAME THING, NOBODY APPROVING, TOO MANY PEOPLE CONSULTED"
+    ],
+    "relatedPromptIds": [
+      "wfmap-swimlane",
+      "wfmap-handoffs",
+      "wfmap-approval-flow"
+    ]
+  },
+  {
+    "id": "wfmap-exceptions",
+    "title": "Map Exceptions and Edge Cases in a Process",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "workflow-mapping",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me map the exceptions in a process at my [BUSINESS TYPE]. The normal process is [MAIN STEPS], and the unusual situations that come up are [E.G. RUSH ORDERS, MISSING PAYMENT, CLIENT CHANGES THE BRIEF, ITEM OUT OF STOCK, WRONG ADDRESS, REFUND REQUESTS]. For each exception, describe how to spot it, what should happen, who decides, and how it rejoins the main process, and identify which exceptions are frequent enough to deserve their own standard procedure. Note that processes are usually designed for the normal case, while most time and stress goes into exceptions handled differently every time, so documenting the common ones prevents repeated scrambling, and any automation must handle them too, since an automation that only works for the normal case creates new problems. Give me the exception map.",
+    "description": "Document how unusual cases are spotted, handled, and rejoined.",
+    "useCase": "Use this when a process breaks on unusual cases. Processes are designed for the normal case while most stress goes into exceptions handled differently each time, so documenting common ones prevents scrambling, and automations must handle them too or they create new problems.",
+    "variables": [
+      "BUSINESS TYPE",
+      "MAIN STEPS",
+      "E.G. RUSH ORDERS, MISSING PAYMENT, CLIENT CHANGES THE BRIEF, ITEM OUT OF STOCK, WRONG ADDRESS, REFUND REQUESTS"
+    ],
+    "relatedPromptIds": [
+      "wfmap-interview-questions",
+      "wfmap-future-state",
+      "wfmap-order-fulfillment"
+    ]
+  },
+  {
+    "id": "wfmap-simplify-steps",
+    "title": "Simplify a Workflow Before Automating It",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "workflow-mapping",
+    "aiTool": "Claude",
+    "promptText": "Help me simplify a workflow at my [BUSINESS TYPE] before I automate it. The current steps are [PASTE THE MAPPED STEPS], the purpose of the process is [WHAT IT MUST ACHIEVE], and any rules or requirements I must keep are [E.G. LEGAL, CLIENT, OR PLATFORM REQUIREMENTS]. For each step, ask whether it can be eliminated, combined with another, done at the same time as another, or simplified, and give me a leaner version of the process. Note that many steps exist because of a problem that happened once long ago, or because nobody questioned them, and automating a cluttered process just makes the clutter run faster, so removing unnecessary steps first usually saves more time than automation itself, while steps that protect money, legal compliance, or quality should be kept even if they seem slow. Give me the simplified workflow.",
+    "description": "Cut, combine, or simplify steps before automating anything.",
+    "useCase": "Use this before automating a process. Many steps exist because of a one time problem long ago, and automating clutter just runs it faster, so removing unnecessary steps first usually saves more time than automation itself, while steps protecting money, compliance, or quality should stay.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THE MAPPED STEPS",
+      "WHAT IT MUST ACHIEVE",
+      "E.G. LEGAL, CLIENT, OR PLATFORM REQUIREMENTS"
+    ],
+    "relatedPromptIds": [
+      "wfmap-future-state",
+      "wfmap-find-bottlenecks",
+      "wfmap-automation-points"
+    ]
+  },
+  {
+    "id": "wfmap-future-state",
+    "title": "Design the Improved Future Workflow",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "workflow-mapping",
+    "aiTool": "Gemini",
+    "promptText": "Help me design an improved version of a workflow at my [BUSINESS TYPE]. The current process is [CURRENT STEPS AND PROBLEMS], my goals for the new process are [E.G. FASTER DELIVERY, FEWER ERRORS, LESS OF MY TIME, BETTER CLIENT EXPERIENCE], my constraints are [BUDGET, TOOLS, PEOPLE, SKILLS], and changes I am already considering are [IDEAS]. Design the future process step by step, show what changes from today, estimate the time saved, and give me a rollout plan that changes a few things at a time. Note that changing everything at once makes it hard to tell what helped and can disrupt clients if something goes wrong, so running the new process on a small number of jobs first and keeping the old way available until it works is safer, and people need to know why the process is changing or they slip back into old habits. Give me the future workflow and rollout plan.",
+    "description": "Design an improved process and roll it out a few changes at a time.",
+    "useCase": "Use this after mapping and simplifying a process. Changing everything at once hides what helped and can disrupt clients, so pilot the new process on a few jobs and keep the old way until it works, and explain why things are changing or people slip back into old habits.",
+    "variables": [
+      "BUSINESS TYPE",
+      "CURRENT STEPS AND PROBLEMS",
+      "E.G. FASTER DELIVERY, FEWER ERRORS, LESS OF MY TIME, BETTER CLIENT EXPERIENCE",
+      "BUDGET, TOOLS, PEOPLE, SKILLS",
+      "IDEAS"
+    ],
+    "relatedPromptIds": [
+      "wfmap-simplify-steps",
+      "wfmap-automation-points",
+      "wfmap-exceptions"
+    ]
+  },
+  {
+    "id": "wfmap-automation-points",
+    "title": "Mark Which Workflow Steps to Automate",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "workflow-mapping",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me mark which steps in a mapped workflow at my [BUSINESS TYPE] should be automated. The workflow is [PASTE THE STEPS WITH TIMES AND OWNERS], my tools are [TOOLS], and my automation skills are [LEVEL]. Label each step as automate, assist with a template or checklist, or keep human, explain why, and estimate the setup effort and time saved for each automation. Note that steps that involve judgment, relationships, or handling unusual situations usually work better with a template or checklist than full automation, steps with clear rules and consistent data are the best candidates, and a workflow map with automation points marked also shows where an automation could fail without anyone noticing. Give me the marked workflow.",
+    "description": "Label each step as automate, assist, or keep human, with effort estimates.",
+    "useCase": "Use this to connect a workflow map to automation. Steps needing judgment, relationships, or unusual handling work better with a template than full automation, rule based steps with consistent data are the best candidates, and the marked map also shows where automations could fail unnoticed.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PASTE THE STEPS WITH TIMES AND OWNERS",
+      "TOOLS",
+      "LEVEL"
+    ],
+    "relatedPromptIds": [
+      "wfmap-future-state",
+      "wfmap-simplify-steps",
+      "wfmap-cycle-time"
+    ]
+  },
+  {
+    "id": "wfmap-cycle-time",
+    "title": "Measure How Long a Workflow Takes End to End",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "workflow-mapping",
+    "aiTool": "Claude",
+    "promptText": "Help me measure how long a workflow takes from start to finish at my [BUSINESS TYPE]. The workflow is [PROCESS], the data I have or can collect is [E.G. TIMESTAMPS FROM ORDERS, PROJECT TOOL DATES, EMAIL DATES, MANUAL NOTES], and the period is [TIMEFRAME]. Show me how to calculate total time, working time versus waiting time, and the spread between fast and slow cases, and suggest a simple way to keep tracking it. Note that averages hide the problem cases, so looking at the slowest jobs often teaches more than the typical one, waiting time is usually far larger than working time, and measuring only what is easy to track can be misleading, so a few weeks of simple manual notes may give a truer picture than a dashboard built on incomplete data. Give me the cycle time analysis.",
+    "description": "Measure total, working, and waiting time across fast and slow cases.",
+    "useCase": "Use this to know whether changes actually speed things up. Averages hide problem cases, so the slowest jobs often teach more, waiting time is usually far larger than working time, and a few weeks of simple manual notes may be truer than a dashboard built on incomplete data.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PROCESS",
+      "E.G. TIMESTAMPS FROM ORDERS, PROJECT TOOL DATES, EMAIL DATES, MANUAL NOTES",
+      "TIMEFRAME"
+    ],
+    "relatedPromptIds": [
+      "wfmap-find-bottlenecks",
+      "wfmap-automation-points",
+      "wfmap-future-state"
+    ]
+  },
+  {
+    "id": "wfmap-client-journey",
+    "title": "Map a Service Client's Journey From Inquiry to Completion",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "workflow-mapping",
+    "aiTool": "Gemini",
+    "promptText": "Help me map the full workflow for a service client at my [BUSINESS TYPE], from first inquiry to final delivery and follow up. My service is [WHAT YOU DO FOR CLIENTS], how clients find and contact me is [CHANNELS], my current steps are [INQUIRY, PROPOSAL, CONTRACT, PAYMENT, KICKOFF, DELIVERY, REVISIONS, CLOSE, AS YOU DO THEM], and where things go wrong is [PROBLEMS]. Map each stage with what I do, what the client does, what they receive, and how long each stage takes, and point out gaps where clients wait without hearing from me. Note that clients judge the experience by the gaps as much as by the work, so silent waiting periods often cause anxiety and extra messages, and a short automatic update or clear timeline at each stage reduces that, while unclear steps around revisions and payment cause most disputes. Give me the client journey map.",
+    "description": "Map every stage of a service client's experience and its silent gaps.",
+    "useCase": "Use this if you deliver services to clients. Clients judge the experience by the gaps as much as the work, so silent waits cause anxiety and extra messages, and a short update or clear timeline at each stage helps, while unclear revision and payment steps cause most disputes.",
+    "variables": [
+      "BUSINESS TYPE",
+      "WHAT YOU DO FOR CLIENTS",
+      "CHANNELS",
+      "INQUIRY, PROPOSAL, CONTRACT, PAYMENT, KICKOFF, DELIVERY, REVISIONS, CLOSE, AS YOU DO THEM",
+      "PROBLEMS"
+    ],
+    "relatedPromptIds": [
+      "wfmap-approval-flow",
+      "wfmap-handoffs",
+      "wfmap-current-process"
+    ]
+  },
+  {
+    "id": "wfmap-order-fulfillment",
+    "title": "Map an Order Fulfillment Workflow",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "workflow-mapping",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me map my order fulfillment workflow at my [BUSINESS TYPE], from order to delivery. Where orders come from is [E.G. WEBSITE, MARKETPLACES, CHAT ORDERS, PHONE], how payment is confirmed is [E.G. ONLINE PAYMENT, BANK TRANSFER CHECK, CASH ON DELIVERY], how I pick, pack, and ship is [CURRENT STEPS], the couriers I use are [COURIERS], and common problems are [E.G. WRONG ITEMS, LATE DISPATCH, MISSED CHAT ORDERS, UNPAID COD]. Map each step, mark error prone points, and suggest checks and simple tools to reduce mistakes. Note that orders arriving through several channels, especially chat orders and manual payment checks like bank transfer screenshots, are where things get missed, so bringing every order into one list before packing is usually the biggest improvement, and cash on delivery needs its own step to track collected money from couriers. Give me the fulfillment workflow map.",
+    "description": "Map orders from every channel through payment, packing, and delivery.",
+    "useCase": "Use this if you ship physical products. Orders from several channels, especially chat orders and bank transfer screenshot checks, are where things get missed, so pulling every order into one list before packing is usually the biggest win, and cash on delivery needs its own step to track courier collections.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. WEBSITE, MARKETPLACES, CHAT ORDERS, PHONE",
+      "E.G. ONLINE PAYMENT, BANK TRANSFER CHECK, CASH ON DELIVERY",
+      "CURRENT STEPS",
+      "COURIERS",
+      "E.G. WRONG ITEMS, LATE DISPATCH, MISSED CHAT ORDERS, UNPAID COD"
+    ],
+    "relatedPromptIds": [
+      "wfmap-exceptions",
+      "wfmap-find-bottlenecks",
+      "wfmap-automation-points"
+    ]
+  },
+  {
+    "id": "wfmap-approval-flow",
+    "title": "Streamline Review and Approval Steps",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "workflow-mapping",
+    "aiTool": "Claude",
+    "promptText": "Help me streamline review and approval steps in a workflow at my [BUSINESS TYPE]. The things that need approval are [E.G. CLIENT DESIGNS, CONTENT BEFORE POSTING, EXPENSES, QUOTES, REFUNDS], who approves now is [APPROVERS], how approvals are requested is [E.G. EMAIL, CHAT, A TOOL], and the delays I see are [TYPICAL WAIT TIMES AND PROBLEMS]. Suggest which approvals can be removed or replaced with clear rules, a standard way to request approval with everything the approver needs, deadlines with a default if nobody responds, and a limit on revision rounds where relevant. Note that approval steps are one of the most common causes of delay, and many exist out of habit rather than need, so a clear rule like refunds under a set amount need no approval can remove a lot of waiting, while client approvals need agreed deadlines and revision limits, ideally written into the agreement. Give me the approval flow.",
+    "description": "Remove unneeded approvals and set deadlines and limits for the rest.",
+    "useCase": "Use this when work waits on sign offs. Approvals are a top cause of delay and many exist out of habit, so clear rules like refunds under a set amount need no approval remove waiting, while client approvals need agreed deadlines and revision limits, ideally written into the agreement.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. CLIENT DESIGNS, CONTENT BEFORE POSTING, EXPENSES, QUOTES, REFUNDS",
+      "APPROVERS",
+      "E.G. EMAIL, CHAT, A TOOL",
+      "TYPICAL WAIT TIMES AND PROBLEMS"
+    ],
+    "relatedPromptIds": [
+      "wfmap-raci",
+      "wfmap-client-journey",
+      "wfmap-find-bottlenecks"
+    ]
+  },
+  {
+    "id": "wfmap-async-team",
+    "title": "Map Workflows for a Remote Team Across Time Zones",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "workflow-mapping",
+    "aiTool": "Gemini",
+    "promptText": "Help me map a workflow for a remote team working across time zones at my [BUSINESS TYPE]. The people and their locations or time zones are [TEAM AND TIME ZONES], the process is [PROCESS], our tools are [E.G. SLACK, TELEGRAM, ASANA, TRELLO, NOTION, GOOGLE DRIVE], and the problems we have are [E.G. WAITING A FULL DAY FOR ANSWERS, MISSED MESSAGES, DUPLICATE WORK]. Map the workflow with handoffs timed around working hours, define where updates and decisions are recorded, and suggest how to reduce waiting caused by time differences. Note that a question asked at the end of one person's day can cost a full day if the answer arrives while they sleep, so handoffs should include everything needed to continue without asking, decisions should live in a shared place rather than scattered chat messages, and overlapping hours, even one or two, are valuable for anything needing discussion. Give me the remote workflow map.",
+    "description": "Time handoffs around working hours and record decisions in one place.",
+    "useCase": "Use this if your team or freelancers work in different time zones. A question at the end of someone's day can cost a full day, so handoffs should include everything needed to continue without asking, decisions should live in one shared place, and even one or two overlapping hours are valuable.",
+    "variables": [
+      "BUSINESS TYPE",
+      "TEAM AND TIME ZONES",
+      "PROCESS",
+      "E.G. SLACK, TELEGRAM, ASANA, TRELLO, NOTION, GOOGLE DRIVE",
+      "E.G. WAITING A FULL DAY FOR ANSWERS, MISSED MESSAGES, DUPLICATE WORK"
+    ],
+    "relatedPromptIds": [
+      "wfmap-handoffs",
+      "wfmap-swimlane",
+      "wfmap-raci"
+    ]
+  },
+  {
+    "id": "wfmap-process-inventory",
+    "title": "List and Prioritize All Your Business Processes",
+    "categoryId": "automation-and-workflows",
+    "subcategoryId": "workflow-mapping",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me list all the processes in my [BUSINESS TYPE] and decide which to map first. What my business does day to day is [DESCRIBE OPERATIONS], the people involved are [TEAM OR JUST ME], and the biggest pains right now are [PROBLEMS]. Create an inventory of processes grouped into areas like sales, delivery, customer service, finance, and admin, and score each on how often it runs, how painful or error prone it is, and how much it matters to clients or revenue, then recommend the top three to map first. Note that trying to map every process at once usually stalls, so starting with a few frequent and painful ones gives quick, visible results, and processes that only live in one person's head deserve priority, since the business is at risk if that person is unavailable. Give me the process inventory.",
+    "description": "List every process and pick the three most worth mapping first.",
+    "useCase": "Use this before mapping anything. Trying to map every process at once usually stalls, so start with a few frequent, painful ones for quick results, and prioritize processes that live only in one person's head, since the business is at risk if that person is unavailable.",
+    "variables": [
+      "BUSINESS TYPE",
+      "DESCRIBE OPERATIONS",
+      "TEAM OR JUST ME",
+      "PROBLEMS"
+    ],
+    "relatedPromptIds": [
+      "wfmap-current-process",
+      "wfmap-quick-outline",
+      "wfmap-interview-questions"
+    ]
   }
 ]
