@@ -50300,5 +50300,384 @@
       "cbuild-guidelines",
       "cbuild-moderators"
     ]
+  },
+  {
+    "id": "vpi-idea-bank",
+    "title": "Build a Bank of Shareable Post Ideas for Your Niche",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "viral-post-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me build a bank of post ideas with real potential to be shared in my niche. My niche is [NICHE], my audience is [WHO THEY ARE AND WHERE], the platforms I post on are [PLATFORMS], my strengths are [E.G. EXPERTISE, HUMOR, STORYTELLING, DESIGN, ON CAMERA], and posts that did well before were [EXAMPLES OR NONE YET]. Give me twenty ideas across types that tend to get shared, like useful saves, relatable moments, surprising facts, strong opinions, transformations, and stories, each with a one line angle and why someone would share it. Note that no idea is guaranteed to go viral, since reach depends on timing, platform algorithms, and luck as well as quality, so the realistic goal is to raise the odds by posting things people want to save, send to a friend, or respond to, and ideas grounded in my real experience usually outperform generic ones copied from other accounts. Give me the idea bank.",
+    "description": "Generate twenty shareable post ideas across proven post types.",
+    "useCase": "Use this when you want posts with more reach potential. No idea is guaranteed to go viral since reach depends on timing, algorithms, and luck, so aim to raise the odds with posts people save, send to friends, or respond to, and ideas from your real experience usually beat generic copied ones.",
+    "variables": [
+      "NICHE",
+      "WHO THEY ARE AND WHERE",
+      "PLATFORMS",
+      "E.G. EXPERTISE, HUMOR, STORYTELLING, DESIGN, ON CAMERA",
+      "EXAMPLES OR NONE YET"
+    ],
+    "relatedPromptIds": [
+      "vpi-quick-ideas",
+      "vpi-reverse-engineer",
+      "vpi-test-and-learn"
+    ]
+  },
+  {
+    "id": "vpi-quick-ideas",
+    "title": "Get Quick Post Ideas With Share Potential",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "viral-post-ideas",
+    "aiTool": "Grok",
+    "promptText": "Give me quick post ideas with share potential. My niche is [NICHE], my platform is [PLATFORM], and my audience is [AUDIENCE]. List ten ideas, each as a one line post concept with its format, no explanation. Give me the ideas.",
+    "description": "Get ten one line post concepts with formats, fast.",
+    "useCase": "Use this when you need something to post today. Quick concepts beat a blank page, but pick the ones you can make with real substance from your own experience, since thin posts built only to chase reach rarely get shared.",
+    "variables": [
+      "NICHE",
+      "PLATFORM",
+      "AUDIENCE"
+    ],
+    "relatedPromptIds": [
+      "vpi-idea-bank",
+      "vpi-save-worthy",
+      "vpi-relatable"
+    ]
+  },
+  {
+    "id": "vpi-reverse-engineer",
+    "title": "Figure Out Why a Post Went Viral",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "viral-post-ideas",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me understand why a post performed so well. The post is [DESCRIBE OR PASTE THE POST, INCLUDING FORMAT, HOOK, AND TOPIC], the account and audience are [WHO POSTED IT AND THEIR AUDIENCE SIZE], the results were [E.G. VIEWS, SHARES, SAVES, COMMENTS], and my niche is [YOUR NICHE]. Break down the likely reasons, like the hook, emotion, timing, format, usefulness, or controversy, separate what I can learn from what was luck or the account's existing audience, and suggest how to apply the lessons to my own content without copying it. Note that big posts often succeed partly because of factors that cannot be repeated, like timing or an account's existing following, so copying one post rarely produces the same result, while the underlying principle, like a surprising angle or a strong shareable takeaway, can be adapted to my own voice and topic. Give me the breakdown.",
+    "description": "Separate repeatable lessons from luck in a high performing post.",
+    "useCase": "Use this when you see a post blow up. Big posts often succeed partly through timing or an account's existing following, so copying one rarely repeats the result, while the underlying principle, like a surprising angle or shareable takeaway, can be adapted to your own voice and topic.",
+    "variables": [
+      "DESCRIBE OR PASTE THE POST, INCLUDING FORMAT, HOOK, AND TOPIC",
+      "WHO POSTED IT AND THEIR AUDIENCE SIZE",
+      "E.G. VIEWS, SHARES, SAVES, COMMENTS",
+      "YOUR NICHE"
+    ],
+    "relatedPromptIds": [
+      "vpi-remix-best",
+      "vpi-idea-bank",
+      "vpi-trend-adapt"
+    ]
+  },
+  {
+    "id": "vpi-save-worthy",
+    "title": "Create Save Worthy Educational Post Ideas",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "viral-post-ideas",
+    "aiTool": "Gemini",
+    "promptText": "Give me ideas for educational posts people will save and share in my niche, [NICHE]. My expertise is [WHAT YOU KNOW WELL], my audience's biggest problems are [AUDIENCE PROBLEMS], and the formats I can make are [E.G. CAROUSELS, SHORT VIDEOS, INFOGRAPHICS, THREADS, CHECKLISTS]. Suggest ten ideas like checklists, step by step guides, mistakes to avoid, templates, and cheat sheets, each with a title, what it covers, and the format. Note that posts people save are usually practical and specific, something they will want to use again later, which signals value to many platform algorithms, but the advice must be accurate, since a widely shared post with a mistake spreads that mistake and damages credibility, and specific beats broad, so seven pricing mistakes for new cafes outperforms tips for business. Give me the save worthy ideas.",
+    "description": "Plan practical checklists, guides, and cheat sheets people save.",
+    "useCase": "Use this to build reach with useful content. Saved posts are practical and specific, something people will use again, which signals value to many algorithms, but advice must be accurate since shared mistakes damage credibility, and specific beats broad, like pricing mistakes for new cafes over tips for business.",
+    "variables": [
+      "NICHE",
+      "WHAT YOU KNOW WELL",
+      "AUDIENCE PROBLEMS",
+      "E.G. CAROUSELS, SHORT VIDEOS, INFOGRAPHICS, THREADS, CHECKLISTS"
+    ],
+    "relatedPromptIds": [
+      "vpi-myth-busting",
+      "vpi-series",
+      "vpi-quick-ideas"
+    ]
+  },
+  {
+    "id": "vpi-relatable",
+    "title": "Come Up With Relatable Post Ideas",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "viral-post-ideas",
+    "aiTool": "Claude",
+    "promptText": "Give me relatable post ideas for my audience in [NICHE]. My audience is [WHO THEY ARE, WHAT THEIR DAYS LOOK LIKE, WHERE THEY LIVE], the everyday frustrations and small joys they experience are [EXAMPLES IF KNOWN], and my tone is [E.G. WARM, FUNNY, DRY, HONEST]. Suggest ten ideas based on shared experiences, like moments everyone in this group knows, expectations versus reality, or things only this audience would understand, each with a short description and format. Note that relatable posts get shared because people see themselves in them and tag friends who would understand, but humor that relies on stereotypes about groups of people, nationalities, or genders can alienate part of the audience and backfire, so the strongest relatable content comes from specific shared situations rather than generalizations about people. Give me the relatable ideas.",
+    "description": "Turn shared everyday moments in your niche into relatable posts.",
+    "useCase": "Use this to make posts people tag friends in. Relatable posts spread because people see themselves and tag friends, but humor relying on stereotypes about groups, nationalities, or genders can alienate and backfire, so the strongest relatable content comes from specific shared situations rather than generalizations.",
+    "variables": [
+      "NICHE",
+      "WHO THEY ARE, WHAT THEIR DAYS LOOK LIKE, WHERE THEY LIVE",
+      "EXAMPLES IF KNOWN",
+      "E.G. WARM, FUNNY, DRY, HONEST"
+    ],
+    "relatedPromptIds": [
+      "vpi-behind-the-scenes",
+      "vpi-local-moments",
+      "vpi-quick-ideas"
+    ]
+  },
+  {
+    "id": "vpi-strong-opinion",
+    "title": "Share Strong Opinions Without Rage Bait",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "viral-post-ideas",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me find strong but honest opinions to post about in my niche, [NICHE]. My genuine views that differ from common advice are [YOUR CONTRARIAN VIEWS], my experience behind them is [EXPERIENCE], and my audience is [AUDIENCE]. Turn each into a post idea with a clear stance, the reasoning and evidence, a fair acknowledgment of the other side, and a question that invites thoughtful replies. Note that posts with a clear point of view get more engagement than neutral ones, but deliberately provoking anger with exaggerated or false claims, known as rage bait, may bring short term reach while attracting the wrong audience and damaging trust, so the opinion should be one I actually hold and can defend, and I should be ready to engage respectfully with people who disagree. Give me the opinion post ideas.",
+    "description": "Turn genuine contrarian views into defensible, discussion worthy posts.",
+    "useCase": "Use this to post with a clear point of view. Posts with a stance outperform neutral ones, but rage bait with exaggerated or false claims may bring short term reach while attracting the wrong audience and damaging trust, so post opinions you hold and can defend, and engage respectfully with disagreement.",
+    "variables": [
+      "NICHE",
+      "YOUR CONTRARIAN VIEWS",
+      "EXPERIENCE",
+      "AUDIENCE"
+    ],
+    "relatedPromptIds": [
+      "vpi-myth-busting",
+      "vpi-idea-bank",
+      "vpi-reverse-engineer"
+    ]
+  },
+  {
+    "id": "vpi-myth-busting",
+    "title": "Create Myth Busting Post Ideas",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "viral-post-ideas",
+    "aiTool": "Gemini",
+    "promptText": "Give me myth busting post ideas for my niche, [NICHE]. Common beliefs in my field that I think are wrong or oversimplified are [MYTHS YOU HAVE NOTICED], my expertise is [EXPERTISE], and my audience is [AUDIENCE]. For each myth, give me a post idea with the myth, what is actually true, the evidence or experience behind it, and a practical takeaway, and flag any where the evidence is mixed. Note that myth busting posts get shared because people enjoy learning they were wrong about something, or correcting others, but I need to be sure I am right, with real evidence or clear experience, since a confident wrong correction spreads misinformation and damages credibility, and some topics are genuinely debated, so presenting them as settled would be misleading. Give me the myth busting ideas.",
+    "description": "Correct common beliefs with evidence and practical takeaways.",
+    "useCase": "Use this to share expertise in a way people pass on. Myth busting spreads because people enjoy learning they were wrong or correcting others, but be sure you are right with real evidence or experience, since confident wrong corrections spread misinformation, and do not present debated topics as settled.",
+    "variables": [
+      "NICHE",
+      "MYTHS YOU HAVE NOTICED",
+      "EXPERTISE",
+      "AUDIENCE"
+    ],
+    "relatedPromptIds": [
+      "vpi-save-worthy",
+      "vpi-strong-opinion",
+      "vpi-surprising-data"
+    ]
+  },
+  {
+    "id": "vpi-surprising-data",
+    "title": "Turn Surprising Facts and Data Into Posts",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "viral-post-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me turn surprising facts or data into posts for my niche, [NICHE]. The data I have is [E.G. MY OWN BUSINESS NUMBERS, CUSTOMER SURVEY RESULTS, PUBLIC STATISTICS, RESEARCH FINDINGS], my audience is [AUDIENCE], and the format I prefer is [E.G. A SINGLE STRIKING NUMBER, A CHART, A CAROUSEL, A SHORT VIDEO]. Suggest post ideas built around the most surprising or useful findings, with a headline, how to present the number clearly, what it means for my audience, and the source to cite. Note that surprising numbers spread quickly, which is exactly why they must be accurate and sourced, since out of context or misread statistics are a major source of misinformation, my own original data, even from a small survey, can be more interesting than widely repeated stats, as long as I am honest about sample size, and any statistic I am unsure about should be checked against the original source before posting. Give me the data post ideas.",
+    "description": "Present surprising numbers clearly, with sources and honest context.",
+    "useCase": "Use this when you have interesting numbers. Surprising figures spread fast, so they must be accurate and sourced, since out of context stats are a major source of misinformation, your own original data can be more interesting than repeated stats if you are honest about sample size, and check unsure figures at the source.",
+    "variables": [
+      "NICHE",
+      "E.G. MY OWN BUSINESS NUMBERS, CUSTOMER SURVEY RESULTS, PUBLIC STATISTICS, RESEARCH FINDINGS",
+      "AUDIENCE",
+      "E.G. A SINGLE STRIKING NUMBER, A CHART, A CAROUSEL, A SHORT VIDEO"
+    ],
+    "relatedPromptIds": [
+      "vpi-myth-busting",
+      "vpi-save-worthy",
+      "vpi-behind-the-scenes"
+    ]
+  },
+  {
+    "id": "vpi-transformation",
+    "title": "Create Before and After Transformation Posts",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "viral-post-ideas",
+    "aiTool": "ChatGPT",
+    "promptText": "Give me before and after post ideas for my [BUSINESS OR NICHE]. The transformations I can show are [E.G. A ROOM, A DESIGN, A WEBSITE, A GARDEN, A SKILL, A CLIENT RESULT, MY OWN PROGRESS], the formats I can make are [E.G. SIDE BY SIDE PHOTOS, TIME LAPSE VIDEO, CAROUSEL], and my audience is [AUDIENCE]. Suggest ten ideas with how to structure each, like the problem, the process, and the result, and what details make it convincing. Note that transformations are compelling because people love seeing change and process, but edited or exaggerated before and after images damage trust if discovered, client results need the client's permission to share, and results in areas like health, fitness, beauty, or money should not imply that everyone will get the same outcome, which can also break platform advertising rules. Give me the transformation post ideas.",
+    "description": "Show honest before, process, and after stories with permission.",
+    "useCase": "Use this if your work produces visible change. Transformations are compelling because people love seeing change and process, but edited or exaggerated images damage trust if discovered, client results need permission, and health, beauty, or money results should not imply everyone gets the same outcome.",
+    "variables": [
+      "BUSINESS OR NICHE",
+      "E.G. A ROOM, A DESIGN, A WEBSITE, A GARDEN, A SKILL, A CLIENT RESULT, MY OWN PROGRESS",
+      "E.G. SIDE BY SIDE PHOTOS, TIME LAPSE VIDEO, CAROUSEL",
+      "AUDIENCE"
+    ],
+    "relatedPromptIds": [
+      "vpi-behind-the-scenes",
+      "vpi-series",
+      "vpi-idea-bank"
+    ]
+  },
+  {
+    "id": "vpi-behind-the-scenes",
+    "title": "Find Behind the Scenes Moments Worth Posting",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "viral-post-ideas",
+    "aiTool": "Gemini",
+    "promptText": "Help me find behind the scenes moments in my [BUSINESS OR WORK] that would make interesting posts. What I do day to day is [DAILY WORK], parts that outsiders rarely see are [E.G. HOW PRODUCTS ARE MADE, PACKING ORDERS, SOURCING AT MARKETS, MISTAKES AND FIXES, A DAY IN THE LIFE], and my comfort with showing myself on camera is [COMFORT LEVEL]. Suggest twelve post ideas from my actual work, with what to film or photograph and what story to tell. Note that people are curious about processes they never see, so ordinary parts of my work can be fascinating to outsiders, showing real mistakes and problems often builds more connection than polished highlights, but I should avoid showing customer details, staff who have not agreed to appear, or confidential supplier and pricing information. Give me the behind the scenes ideas.",
+    "description": "Turn ordinary parts of your work into curiosity driven posts.",
+    "useCase": "Use this when you think your work is too ordinary to post. People are curious about processes they never see, real mistakes often build more connection than polished highlights, but avoid showing customer details, staff who have not agreed to appear, or confidential supplier and pricing information.",
+    "variables": [
+      "BUSINESS OR WORK",
+      "DAILY WORK",
+      "E.G. HOW PRODUCTS ARE MADE, PACKING ORDERS, SOURCING AT MARKETS, MISTAKES AND FIXES, A DAY IN THE LIFE",
+      "COMFORT LEVEL"
+    ],
+    "relatedPromptIds": [
+      "vpi-transformation",
+      "vpi-relatable",
+      "vpi-local-moments"
+    ]
+  },
+  {
+    "id": "vpi-local-moments",
+    "title": "Create Posts Around Local Festivals and Cultural Moments",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "viral-post-ideas",
+    "aiTool": "Claude",
+    "promptText": "Give me post ideas tied to local festivals and cultural moments for my [BUSINESS OR NICHE]. Where my audience lives is [COUNTRY OR CITY], upcoming occasions are [E.G. WATER FESTIVAL, KHMER NEW YEAR, PCHUM BEN, LUNAR NEW YEAR, SONGKRAN, NATIONAL HOLIDAYS, LOCAL EVENTS], and my audience is [AUDIENCE]. Suggest post ideas for each occasion that connect naturally to my business, with timing, format, and anything to be careful about. Note that posts tied to moments everyone is experiencing at the same time get shared widely because they feel timely and shared, but religious and memorial occasions call for respect rather than sales pushes, using cultural symbols or traditions in a way that feels careless or mocking can cause real offense, and posting a day or two before an occasion often works better than on the day, when feeds are crowded. Give me the cultural moment post ideas.",
+    "description": "Tie posts to local festivals respectfully and on good timing.",
+    "useCase": "Use this ahead of holidays and festivals. Posts tied to shared moments spread because they feel timely, but religious and memorial occasions call for respect rather than sales pushes, careless use of cultural symbols can offend, and posting a day or two before often beats posting on the crowded day itself.",
+    "variables": [
+      "BUSINESS OR NICHE",
+      "COUNTRY OR CITY",
+      "E.G. WATER FESTIVAL, KHMER NEW YEAR, PCHUM BEN, LUNAR NEW YEAR, SONGKRAN, NATIONAL HOLIDAYS, LOCAL EVENTS",
+      "AUDIENCE"
+    ],
+    "relatedPromptIds": [
+      "vpi-trend-adapt",
+      "vpi-relatable",
+      "vpi-behind-the-scenes"
+    ]
+  },
+  {
+    "id": "vpi-trend-adapt",
+    "title": "Decide Whether and How to Join a Trend",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "viral-post-ideas",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me decide whether to join a trend and how to adapt it. The trend is [DESCRIBE THE TREND, FORMAT, OR SOUND], where I saw it is [PLATFORM], how long it has been around is [IF KNOWN], my niche and brand are [NICHE AND BRAND], and my audience is [AUDIENCE]. Assess whether it fits my brand and audience, whether it is still early enough to be worth joining, and give me two or three ways to adapt it to my niche with a real point rather than just copying it. Note that trends can bring a burst of reach but fade within days, so speed matters, joining a trend that does not fit my brand or audience can bring views from people who will never become customers, and some trending sounds or formats carry copyright restrictions or originated from sensitive events, so checking the origin and whether the sound is licensed for business accounts avoids problems. Give me the trend assessment.",
+    "description": "Check a trend's fit and freshness, then adapt it with a real point.",
+    "useCase": "Use this when you spot a trend. Trends bring bursts of reach but fade within days, so speed matters, poorly fitting trends bring views from people who never become customers, and some sounds carry copyright limits for business accounts or originate from sensitive events, so check before using them.",
+    "variables": [
+      "DESCRIBE THE TREND, FORMAT, OR SOUND",
+      "PLATFORM",
+      "IF KNOWN",
+      "NICHE AND BRAND",
+      "AUDIENCE"
+    ],
+    "relatedPromptIds": [
+      "vpi-local-moments",
+      "vpi-reverse-engineer",
+      "vpi-collab-ideas"
+    ]
+  },
+  {
+    "id": "vpi-participation",
+    "title": "Create Challenge and Participation Post Ideas",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "viral-post-ideas",
+    "aiTool": "Gemini",
+    "promptText": "Give me ideas for posts that invite my audience to participate in my niche, [NICHE]. My audience is [AUDIENCE], the platform is [PLATFORM], and what I could offer participants is [E.G. FEATURES, FEEDBACK, SMALL PRIZES, NOTHING BUT FUN]. Suggest ideas like challenges, fill in the blank posts, show your setup prompts, polls with a twist, or user submissions, each with clear rules and how I will feature or respond to entries. Note that participation posts spread because each entry reaches the participant's own followers, but they only work if joining is easy and quick, giveaways and contests often have legal rules and platform policies that differ by country, so prizes need clear terms, and features or reposts of participants' content should only happen with their agreement. Give me the participation post ideas.",
+    "description": "Invite easy participation that spreads through each entrant's audience.",
+    "useCase": "Use this to get your audience creating with you. Participation spreads because each entry reaches the participant's followers, but only if joining is easy and quick, contests and giveaways have country specific legal rules and platform policies, so set clear terms, and only repost entries with agreement.",
+    "variables": [
+      "NICHE",
+      "AUDIENCE",
+      "PLATFORM",
+      "E.G. FEATURES, FEEDBACK, SMALL PRIZES, NOTHING BUT FUN"
+    ],
+    "relatedPromptIds": [
+      "vpi-collab-ideas",
+      "vpi-relatable",
+      "vpi-series"
+    ]
+  },
+  {
+    "id": "vpi-collab-ideas",
+    "title": "Plan Collaboration Posts for Wider Reach",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "viral-post-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me plan collaboration posts with other creators or businesses. My niche and audience are [NICHE AND AUDIENCE], possible partners are [E.G. COMPLEMENTARY BUSINESSES, CREATORS IN MY NICHE, LOCAL BRANDS], the platform features I can use are [E.G. COLLAB POSTS, DUETS, STITCHES, LIVE TOGETHER, TAKEOVERS], and my audience size is [SIZE]. Suggest ten collaboration ideas with the format, what each partner brings, and how both audiences benefit, plus a short outreach message to a potential partner. Note that collaborations expose each partner to a new but related audience, which often brings more relevant followers than chasing broad virality, partners of similar size and with overlapping but not competing audiences tend to work best, and paid or sponsored collaborations usually need to be disclosed under platform rules and advertising laws. Give me the collaboration ideas.",
+    "description": "Plan collab posts that introduce you to related audiences.",
+    "useCase": "Use this to reach new but relevant audiences. Collaborations expose each partner to a related audience, often bringing more relevant followers than broad virality, similar sized partners with overlapping but non competing audiences work best, and paid collaborations usually need disclosure under platform rules and advertising laws.",
+    "variables": [
+      "NICHE AND AUDIENCE",
+      "E.G. COMPLEMENTARY BUSINESSES, CREATORS IN MY NICHE, LOCAL BRANDS",
+      "E.G. COLLAB POSTS, DUETS, STITCHES, LIVE TOGETHER, TAKEOVERS",
+      "SIZE"
+    ],
+    "relatedPromptIds": [
+      "vpi-participation",
+      "vpi-trend-adapt",
+      "vpi-idea-bank"
+    ]
+  },
+  {
+    "id": "vpi-series",
+    "title": "Turn a Strong Idea Into a Post Series",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "viral-post-ideas",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me turn a strong post idea into a recurring series. The idea or post that worked is [THE IDEA OR POST AND ITS RESULTS], my niche is [NICHE], the platform is [PLATFORM], and how often I can post is [FREQUENCY]. Design a series with a name, a consistent format, a list of the first ten episodes or parts, how each part links to the others, and how to tell whether it is still working. Note that a series gives people a reason to follow rather than just view one post, since they want the next part, and a consistent format makes creating content faster, but series that keep going after interest fades can drag the account down, so watching whether each part still performs and ending it on a high note is better than running it forever. Give me the series plan.",
+    "description": "Build a named, recurring series from an idea that worked.",
+    "useCase": "Use this after a post performs well. A series gives people a reason to follow rather than view one post, and a consistent format speeds creation, but series that continue after interest fades drag the account down, so watch each part's performance and end on a high note.",
+    "variables": [
+      "THE IDEA OR POST AND ITS RESULTS",
+      "NICHE",
+      "PLATFORM",
+      "FREQUENCY"
+    ],
+    "relatedPromptIds": [
+      "vpi-remix-best",
+      "vpi-save-worthy",
+      "vpi-transformation"
+    ]
+  },
+  {
+    "id": "vpi-remix-best",
+    "title": "Remix Your Best Performing Posts Into New Ideas",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "viral-post-ideas",
+    "aiTool": "Gemini",
+    "promptText": "Help me create new post ideas from my best performing posts. Here are my top posts with their results: [PASTE POSTS OR DESCRIPTIONS WITH VIEWS, SHARES, SAVES, COMMENTS], my niche is [NICHE], and my platforms are [PLATFORMS]. Find what the top posts have in common, then suggest ten new ideas that reuse the winning elements with new topics, angles, or formats, plus which old posts could be updated and reposted. Note that my own past results are the most reliable guide to what my specific audience responds to, more than general advice, reposting a strong post after some months often reaches people who missed it, and repeating exactly the same post too often can tire my audience, so changing the angle or format keeps it fresh. Give me the remix ideas.",
+    "description": "Reuse what made your top posts work with new topics and formats.",
+    "useCase": "Use this when you are short of ideas. Your own past results are the most reliable guide to what your audience responds to, reposting a strong post after some months reaches people who missed it, and repeating the same post too often tires your audience, so vary the angle or format.",
+    "variables": [
+      "PASTE POSTS OR DESCRIPTIONS WITH VIEWS, SHARES, SAVES, COMMENTS",
+      "NICHE",
+      "PLATFORMS"
+    ],
+    "relatedPromptIds": [
+      "vpi-reverse-engineer",
+      "vpi-series",
+      "vpi-test-and-learn"
+    ]
+  },
+  {
+    "id": "vpi-test-and-learn",
+    "title": "Test Post Ideas and Learn What Spreads",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "viral-post-ideas",
+    "aiTool": "Claude",
+    "promptText": "Help me set up a simple system to test post ideas and learn what spreads with my audience. My niche is [NICHE], my platforms are [PLATFORMS], how often I post is [FREQUENCY], and the metrics I can see are [E.G. VIEWS, REACH, SHARES, SAVES, COMMENTS, FOLLOWS, PROFILE VISITS]. Design a four week test plan with idea types to try, one thing to vary at a time, a simple tracking sheet, which metrics show shareability, and how to decide what to do more of. Note that single posts are noisy, a post can flop or explode for reasons unrelated to quality, so patterns across several posts of the same type are more trustworthy than any one result, shares and saves are usually better signs of content people value than views or likes alone, and changing many things at once makes it impossible to tell what made the difference. Give me the test plan.",
+    "description": "Test post types for four weeks and learn from patterns, not single posts.",
+    "useCase": "Use this to stop guessing what works. Single posts are noisy and can flop or explode regardless of quality, so patterns across several posts of one type are more trustworthy, shares and saves show value better than views or likes, and changing many things at once hides what made the difference.",
+    "variables": [
+      "NICHE",
+      "PLATFORMS",
+      "FREQUENCY",
+      "E.G. VIEWS, REACH, SHARES, SAVES, COMMENTS, FOLLOWS, PROFILE VISITS"
+    ],
+    "relatedPromptIds": [
+      "vpi-remix-best",
+      "vpi-reach-reality",
+      "vpi-idea-bank"
+    ]
+  },
+  {
+    "id": "vpi-reach-reality",
+    "title": "Plan for What Happens After a Post Goes Viral",
+    "categoryId": "social-media-growth",
+    "subcategoryId": "viral-post-ideas",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me prepare for a post going viral so it actually helps my [BUSINESS OR GOAL]. What I sell or want people to do is [OFFER OR GOAL], my profile and links currently show [PROFILE SETUP], my capacity is [E.G. HOW MANY ORDERS OR MESSAGES I CAN HANDLE], and my worries are [E.G. NEGATIVE COMMENTS, WRONG AUDIENCE, BEING OVERWHELMED]. Give me a checklist covering profile and link updates, a pinned post for new visitors, saved replies for common questions, how to handle a flood of comments including negative ones, and how to turn short term attention into followers or customers. Note that viral attention often brings many viewers who are not the target audience and will never buy, so a big spike in views can produce little business, negative or hostile comments come with large reach and are easier to handle with a plan, and the most lasting value usually comes from giving new visitors a clear next step, like following for a series or joining an email list. Give me the viral readiness plan.",
+    "description": "Prepare your profile, replies, and next steps for a sudden spike.",
+    "useCase": "Use this before chasing viral reach. Viral attention brings many viewers outside your target audience, so a spike can produce little business, hostile comments come with big reach and are easier with a plan, and lasting value comes from giving new visitors a clear next step like following a series or joining an email list.",
+    "variables": [
+      "BUSINESS OR GOAL",
+      "OFFER OR GOAL",
+      "PROFILE SETUP",
+      "E.G. HOW MANY ORDERS OR MESSAGES I CAN HANDLE",
+      "E.G. NEGATIVE COMMENTS, WRONG AUDIENCE, BEING OVERWHELMED"
+    ],
+    "relatedPromptIds": [
+      "vpi-test-and-learn",
+      "vpi-strong-opinion",
+      "vpi-series"
+    ]
   }
 ]
