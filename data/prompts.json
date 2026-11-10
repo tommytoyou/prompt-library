@@ -44468,5 +44468,414 @@
       "bxs-find-pairs-in-orders",
       "bxs-free-shipping-threshold"
     ]
+  },
+  {
+    "id": "mkt-choose-marketplace",
+    "title": "Choose Which Marketplaces to Sell On",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "marketplace-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me decide which online marketplaces to sell on for my [BUSINESS TYPE]. What I sell is [PRODUCTS AND PRICE RANGE], where I am based is [YOUR COUNTRY], where my buyers are is [TARGET COUNTRIES], the marketplaces I am considering are [E.G. SHOPEE, LAZADA, TIKTOK SHOP, AMAZON, ETSY, EBAY, FACEBOOK MARKETPLACE], and my time and budget are [CAPACITY]. Compare them on audience fit, seller registration requirements for my country, fees, delivery and payout options, competition, and effort, then recommend where to start. Note that not every marketplace accepts sellers from every country or pays out to every bank, so eligibility should be checked before anything else, and starting with one marketplace done well usually beats spreading thin across several, while relying on one platform entirely carries the risk of rule changes or account suspension. Give me the marketplace comparison.",
+    "description": "Compare marketplaces on fit, eligibility, fees, payouts, and effort.",
+    "useCase": "Use this before opening marketplace stores. Not every marketplace accepts sellers or pays out in every country, so check eligibility first, and one marketplace done well usually beats spreading thin, though relying on one platform entirely carries rule change and suspension risk.",
+    "variables": [
+      "BUSINESS TYPE",
+      "PRODUCTS AND PRICE RANGE",
+      "YOUR COUNTRY",
+      "TARGET COUNTRIES",
+      "E.G. SHOPEE, LAZADA, TIKTOK SHOP, AMAZON, ETSY, EBAY, FACEBOOK MARKETPLACE",
+      "CAPACITY"
+    ],
+    "relatedPromptIds": [
+      "mkt-fee-calculator",
+      "mkt-platform-dependence",
+      "mkt-cross-border"
+    ]
+  },
+  {
+    "id": "mkt-quick-fixes",
+    "title": "Get Quick Marketplace Store Fixes",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "marketplace-optimization",
+    "aiTool": "Grok",
+    "promptText": "Give me quick fixes for my marketplace store. I sell on [MARKETPLACE], my products are [WHAT YOU SELL], and my main problem is [E.G. LOW VIEWS, LOW SALES, LOW RATING, SLOW REPLIES]. List the seven fastest changes I can make this week to improve results, each in one line, no explanation. Give me the quick fixes.",
+    "description": "Get seven fast changes to improve a marketplace store this week.",
+    "useCase": "Use this when your marketplace store is stuck and you want action fast. A short list of quick changes gets you moving, but check each against the marketplace's current rules and features, since they change often and differ between countries.",
+    "variables": [
+      "MARKETPLACE",
+      "WHAT YOU SELL",
+      "E.G. LOW VIEWS, LOW SALES, LOW RATING, SLOW REPLIES"
+    ],
+    "relatedPromptIds": [
+      "mkt-store-health",
+      "mkt-shop-audit",
+      "mkt-chat-response"
+    ]
+  },
+  {
+    "id": "mkt-fee-calculator",
+    "title": "Calculate Real Profit After Marketplace Fees",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "marketplace-optimization",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me calculate my real profit per sale on [MARKETPLACE] for my [BUSINESS TYPE]. The product price is [PRICE], my product cost is [COST], the fees I know of are [E.G. COMMISSION, TRANSACTION FEE, PAYMENT FEE, SERVICE FEE, CAMPAIGN FEE], shipping I pay or subsidize is [SHIPPING], packaging is [PACKAGING COST], ad spend per sale is [AD COST], and my return rate is [RETURN RATE]. Calculate net profit per sale and margin, show which costs hurt most, and the minimum price that keeps me profitable. Note that marketplace fees are often stacked in several layers that are easy to miss, campaign participation and free shipping programs can add extra fees, and returns and ad spend often turn an apparently profitable product into a loss, so I should check the marketplace's current fee page for my country and category rather than relying on old figures. Give me the profit calculation.",
+    "description": "Work out net profit per sale after every layer of marketplace fees.",
+    "useCase": "Use this for every product before you price it on a marketplace. Fees stack in layers that are easy to miss, campaign and free shipping programs add more, and returns and ads often turn a profitable looking product into a loss, so check the current fee page for your country and category.",
+    "variables": [
+      "MARKETPLACE",
+      "BUSINESS TYPE",
+      "PRICE",
+      "COST",
+      "E.G. COMMISSION, TRANSACTION FEE, PAYMENT FEE, SERVICE FEE, CAMPAIGN FEE",
+      "SHIPPING",
+      "PACKAGING COST",
+      "AD COST",
+      "RETURN RATE"
+    ],
+    "relatedPromptIds": [
+      "mkt-choose-marketplace",
+      "mkt-mega-sale-prep",
+      "mkt-ads-plan"
+    ]
+  },
+  {
+    "id": "mkt-store-health",
+    "title": "Improve Seller Performance and Account Health",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "marketplace-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me improve my seller performance on [MARKETPLACE] for my [BUSINESS TYPE]. My current metrics are [E.G. CHAT RESPONSE RATE, LATE SHIPMENT RATE, CANCELLATION RATE, RETURN RATE, RATING, ANY WARNINGS OR PENALTY POINTS], and how I handle orders now is [YOUR PROCESS]. Explain which metrics most affect my visibility and account safety, identify the weakest ones, and give me a practical routine to improve them. Note that marketplaces often quietly reduce the visibility of shops with slow replies, late shipping, or high cancellations, and repeated problems can lead to penalties or suspension, so these metrics matter as much as the listings, and simple habits like checking chats at set times and only listing stock I actually have usually fix most issues. Give me the account health plan.",
+    "description": "Fix the seller metrics that quietly limit visibility and risk penalties.",
+    "useCase": "Use this if your shop gets warnings or low visibility. Marketplaces often quietly demote shops with slow replies, late shipping, or high cancellations, and repeat problems can bring suspension, so these metrics matter as much as listings, and simple habits like set chat times and listing only real stock fix most issues.",
+    "variables": [
+      "MARKETPLACE",
+      "BUSINESS TYPE",
+      "E.G. CHAT RESPONSE RATE, LATE SHIPMENT RATE, CANCELLATION RATE, RETURN RATE, RATING, ANY WARNINGS OR PENALTY POINTS",
+      "YOUR PROCESS"
+    ],
+    "relatedPromptIds": [
+      "mkt-chat-response",
+      "mkt-stock-sync",
+      "mkt-violation-appeal"
+    ]
+  },
+  {
+    "id": "mkt-chat-response",
+    "title": "Write Fast Replies for Marketplace Buyer Chats",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "marketplace-optimization",
+    "aiTool": "Gemini",
+    "promptText": "Help me write saved replies for buyer chats on [MARKETPLACE] for my [BUSINESS TYPE]. The questions buyers ask most are [E.G. IS IT IN STOCK, DELIVERY TIME, SIZE, ORIGINAL OR NOT, DISCOUNT, COD], my products are [WHAT YOU SELL], and the languages buyers use are [LANGUAGES]. Write short, friendly replies for each common question in each language, plus an auto reply for when I am offline. Note that fast replies help both sales and the shop's response rate metric, but canned replies that do not answer the actual question frustrate buyers, so each one should be easy to personalize, and many marketplaces forbid moving buyers to outside chat apps or payment, so replies should keep the conversation and the sale on the platform. Give me the saved replies.",
+    "description": "Prepare quick chat replies in each buyer language that keep sales on platform.",
+    "useCase": "Use this to keep chat response rates high. Fast replies help sales and your response metric, but canned answers that miss the question frustrate buyers, and many marketplaces forbid moving buyers to outside chat or payment, so keep the conversation and the sale on the platform.",
+    "variables": [
+      "MARKETPLACE",
+      "BUSINESS TYPE",
+      "E.G. IS IT IN STOCK, DELIVERY TIME, SIZE, ORIGINAL OR NOT, DISCOUNT, COD",
+      "WHAT YOU SELL",
+      "LANGUAGES"
+    ],
+    "relatedPromptIds": [
+      "mkt-store-health",
+      "mkt-returns-disputes",
+      "mkt-quick-fixes"
+    ]
+  },
+  {
+    "id": "mkt-mega-sale-prep",
+    "title": "Prepare for a Marketplace Mega Sale Event",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "marketplace-optimization",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me prepare for an upcoming marketplace sale event on [MARKETPLACE] for my [BUSINESS TYPE]. The event is [E.G. 9.9, 10.10, 11.11, 12.12, PAYDAY SALE, BLACK FRIDAY], it starts on [DATE], my products and margins are [PRODUCTS AND MARGINS], my stock levels are [STOCK], and my packing capacity per day is [ORDERS PER DAY]. Give me a countdown checklist covering whether to join the official campaign, pricing and vouchers, stock, packing supplies, chat coverage, and shipping after the rush. Note that campaign participation often requires a minimum discount and sometimes extra fees, so joining can increase sales while shrinking profit, and the bigger risk for small shops is overselling or shipping late after a spike, which damages account metrics for weeks, so I should only commit to what I can pack and ship on time. Give me the sale event checklist.",
+    "description": "Plan for 11.11, 12.12, and similar sales without overselling.",
+    "useCase": "Use this a few weeks before a big marketplace sale. Campaigns often require minimum discounts and extra fees, so they can raise sales while shrinking profit, and the bigger risk is overselling or shipping late after the spike, which hurts account metrics for weeks, so only commit to what you can ship on time.",
+    "variables": [
+      "MARKETPLACE",
+      "BUSINESS TYPE",
+      "E.G. 9.9, 10.10, 11.11, 12.12, PAYDAY SALE, BLACK FRIDAY",
+      "DATE",
+      "PRODUCTS AND MARGINS",
+      "STOCK",
+      "ORDERS PER DAY"
+    ],
+    "relatedPromptIds": [
+      "mkt-voucher-strategy",
+      "mkt-fee-calculator",
+      "mkt-stock-sync"
+    ]
+  },
+  {
+    "id": "mkt-voucher-strategy",
+    "title": "Plan Shop Vouchers and Discounts",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "marketplace-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me plan shop vouchers and discounts on [MARKETPLACE] for my [BUSINESS TYPE]. My average order value is [AOV], my margins are [MARGINS], the voucher types available are [E.G. SHOP VOUCHER, FOLLOWER VOUCHER, MINIMUM SPEND VOUCHER, FREE SHIPPING VOUCHER], and my goal is [E.G. MORE FOLLOWERS, HIGHER ORDER VALUE, FIRST SALES, CLEARING STOCK]. Suggest which vouchers to run, amounts, minimum spend levels, limits, and timing. Note that vouchers help buyers choose one shop over another, but running constant discounts trains buyers never to pay full price and eats margin, so vouchers should have a clear purpose, a minimum spend that raises order value, and usage limits, and marketplace funded vouchers in campaigns are different from ones I pay for myself. Give me the voucher plan.",
+    "description": "Run vouchers with a clear goal, minimum spend, and limits.",
+    "useCase": "Use this to plan marketplace discounts. Vouchers help buyers pick your shop, but constant discounts train buyers never to pay full price, so give each voucher a clear purpose, a minimum spend that raises order value, and usage limits, and know which ones the marketplace funds and which you pay for.",
+    "variables": [
+      "MARKETPLACE",
+      "BUSINESS TYPE",
+      "AOV",
+      "MARGINS",
+      "E.G. SHOP VOUCHER, FOLLOWER VOUCHER, MINIMUM SPEND VOUCHER, FREE SHIPPING VOUCHER",
+      "E.G. MORE FOLLOWERS, HIGHER ORDER VALUE, FIRST SALES, CLEARING STOCK"
+    ],
+    "relatedPromptIds": [
+      "mkt-mega-sale-prep",
+      "mkt-fee-calculator",
+      "mkt-new-shop-first-sales"
+    ]
+  },
+  {
+    "id": "mkt-ads-plan",
+    "title": "Plan Marketplace Ads on a Small Budget",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "marketplace-optimization",
+    "aiTool": "Gemini",
+    "promptText": "Help me plan in marketplace ads on [MARKETPLACE] for my [BUSINESS TYPE]. My daily ad budget is [BUDGET], my products and margins are [PRODUCTS AND MARGINS], my best sellers are [BEST SELLERS], and my current ad results are [IF ANY: SPEND, SALES, ROAS]. Suggest which products to advertise, starting bids or settings, the break even return on ad spend for each product, and when to pause or scale. Note that ads amplify listings that already convert, so advertising a product with weak photos, few reviews, or a high price usually wastes money, and the break even return on ad spend depends on each product's margin, so a campaign can show sales while losing money overall, which means checking profit after ad cost weekly is essential. Give me the ads plan.",
+    "description": "Advertise proven products with break even return on ad spend in mind.",
+    "useCase": "Use this before spending on marketplace ads. Ads amplify listings that already convert, so advertising weak listings wastes money, and break even return on ad spend depends on each product's margin, so a campaign can show sales while losing money, which means checking profit after ad cost weekly.",
+    "variables": [
+      "MARKETPLACE",
+      "BUSINESS TYPE",
+      "BUDGET",
+      "PRODUCTS AND MARGINS",
+      "BEST SELLERS",
+      "IF ANY: SPEND, SALES, ROAS"
+    ],
+    "relatedPromptIds": [
+      "mkt-fee-calculator",
+      "mkt-competitor-scan",
+      "mkt-shop-audit"
+    ]
+  },
+  {
+    "id": "mkt-competitor-scan",
+    "title": "Scan Competitors on a Marketplace",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "marketplace-optimization",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me analyze competing shops on [MARKETPLACE] for my [BUSINESS TYPE]. Here is what I noted about the top competitors: [PASTE THEIR PRICES, RATINGS, SALES COUNTS, SHIPPING, VOUCHERS, PHOTOS, REVIEW COMPLAINTS], and my own shop details are [YOUR PRICES, RATING, SHIPPING, STRENGTHS]. Compare us, find gaps I can fill, and suggest how to stand out without simply cutting price. Note that sales counts and ratings shown on marketplaces can be inflated or include old sales, and racing to the lowest price usually only helps the shop with the lowest costs, so competing on faster delivery, better photos, clearer information, bundles, or fixing the complaints in competitors' reviews is often a stronger position for a small seller. Give me the competitor scan.",
+    "description": "Compare rival shops and find ways to stand out besides price.",
+    "useCase": "Use this to see where you can win on a marketplace. Displayed sales counts and ratings can be inflated, and racing to the lowest price usually only helps the lowest cost shop, so faster delivery, better photos, bundles, or fixing complaints in rivals' reviews is often stronger for small sellers.",
+    "variables": [
+      "MARKETPLACE",
+      "BUSINESS TYPE",
+      "PASTE THEIR PRICES, RATINGS, SALES COUNTS, SHIPPING, VOUCHERS, PHOTOS, REVIEW COMPLAINTS",
+      "YOUR PRICES, RATING, SHIPPING, STRENGTHS"
+    ],
+    "relatedPromptIds": [
+      "mkt-shop-audit",
+      "mkt-ads-plan",
+      "mkt-choose-marketplace"
+    ]
+  },
+  {
+    "id": "mkt-shop-audit",
+    "title": "Audit Your Whole Marketplace Shop",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "marketplace-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me audit my whole shop on [MARKETPLACE] for my [BUSINESS TYPE]. My shop details are [NUMBER OF PRODUCTS, CATEGORIES, RATING, FOLLOWERS, MONTHLY ORDERS], my shop page has [E.G. BANNER, CATEGORIES, FEATURED PRODUCTS, DESCRIPTION], my metrics are [VIEWS, CONVERSION, RESPONSE RATE, SHIPPING TIMES], and my biggest concern is [MAIN CONCERN]. Review the shop as a whole, covering the storefront, product range, pricing, metrics, vouchers, and policies, and give me a prioritized list of improvements. Note that individual listings can be strong while the shop still underperforms because of slow shipping, a confusing storefront, or too many weak products dragging down overall metrics, and removing or fixing poor products is sometimes worth more than adding new ones. Give me the shop audit.",
+    "description": "Review the storefront, range, metrics, and policies as a whole.",
+    "useCase": "Use this when individual listings look fine but the shop underperforms. Slow shipping, a confusing storefront, or too many weak products can drag down overall metrics, and removing or fixing poor products is sometimes worth more than adding new ones.",
+    "variables": [
+      "MARKETPLACE",
+      "BUSINESS TYPE",
+      "NUMBER OF PRODUCTS, CATEGORIES, RATING, FOLLOWERS, MONTHLY ORDERS",
+      "E.G. BANNER, CATEGORIES, FEATURED PRODUCTS, DESCRIPTION",
+      "VIEWS, CONVERSION, RESPONSE RATE, SHIPPING TIMES",
+      "MAIN CONCERN"
+    ],
+    "relatedPromptIds": [
+      "mkt-store-health",
+      "mkt-competitor-scan",
+      "mkt-quick-fixes"
+    ]
+  },
+  {
+    "id": "mkt-new-shop-first-sales",
+    "title": "Get First Sales in a New Marketplace Shop",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "marketplace-optimization",
+    "aiTool": "Gemini",
+    "promptText": "Help me get the first sales in my new shop on [MARKETPLACE] for my [BUSINESS TYPE]. My products are [WHAT YOU SELL], my starting budget is [BUDGET], my existing audience outside the marketplace is [E.G. FACEBOOK PAGE, FRIENDS, CUSTOMERS FROM A PHYSICAL SHOP, NONE], and what the marketplace offers new sellers is [E.G. NEW SELLER PROGRAM, FREE SHIPPING SUPPORT, IF KNOWN]. Give me a first month plan with realistic steps, like new seller programs, a small launch voucher, directing existing customers to the shop, and fast shipping to earn early ratings. Note that new shops with no sales or ratings start with low visibility, which is frustrating, but buying fake orders or reviews to look established is banned and often detected, so the honest path of a few real early buyers, fast shipping, and good service is slower but builds a shop that lasts. Give me the first sales plan.",
+    "description": "Get honest first orders and ratings in a brand new marketplace shop.",
+    "useCase": "Use this when opening a new marketplace shop. New shops start with low visibility, but buying fake orders or reviews is banned and often detected, so a few real early buyers, a small launch voucher, new seller programs, and fast shipping build a shop that lasts.",
+    "variables": [
+      "MARKETPLACE",
+      "BUSINESS TYPE",
+      "WHAT YOU SELL",
+      "BUDGET",
+      "E.G. FACEBOOK PAGE, FRIENDS, CUSTOMERS FROM A PHYSICAL SHOP, NONE",
+      "E.G. NEW SELLER PROGRAM, FREE SHIPPING SUPPORT, IF KNOWN"
+    ],
+    "relatedPromptIds": [
+      "mkt-voucher-strategy",
+      "mkt-store-health",
+      "mkt-choose-marketplace"
+    ]
+  },
+  {
+    "id": "mkt-fulfillment-options",
+    "title": "Compare Self Shipping and Marketplace Fulfillment",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "marketplace-optimization",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me compare shipping orders myself with using the marketplace's fulfillment service on [MARKETPLACE] for my [BUSINESS TYPE]. My monthly orders are [ORDER VOLUME], my products are [SIZE, WEIGHT, AND FRAGILITY], my current shipping cost and speed are [CURRENT SHIPPING], the fulfillment program's fees I know of are [STORAGE, PICK AND PACK, INBOUND FEES], and my time spent packing is [HOURS PER WEEK]. Compare cost per order, delivery speed, visibility benefits, cash tied up in stock, and risks, then recommend an approach. Note that marketplace fulfillment can bring faster delivery and better visibility, but storage fees on slow moving stock, inbound shipping costs, and the cash locked in warehouse inventory can outweigh the benefits for a small seller, so it often makes sense to start with only my fastest sellers. Give me the fulfillment comparison.",
+    "description": "Weigh marketplace fulfillment fees and speed against shipping yourself.",
+    "useCase": "Use this when packing takes too long or delivery is slow. Marketplace fulfillment can speed delivery and boost visibility, but storage fees on slow stock, inbound shipping, and cash locked in inventory can outweigh it for small sellers, so start with only your fastest sellers.",
+    "variables": [
+      "MARKETPLACE",
+      "BUSINESS TYPE",
+      "ORDER VOLUME",
+      "SIZE, WEIGHT, AND FRAGILITY",
+      "CURRENT SHIPPING",
+      "STORAGE, PICK AND PACK, INBOUND FEES",
+      "HOURS PER WEEK"
+    ],
+    "relatedPromptIds": [
+      "mkt-fee-calculator",
+      "mkt-stock-sync",
+      "mkt-cross-border"
+    ]
+  },
+  {
+    "id": "mkt-stock-sync",
+    "title": "Keep Stock in Sync Across Channels",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "marketplace-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me keep stock counts accurate across all the places I sell for my [BUSINESS TYPE]. The channels I sell on are [E.G. SHOPEE, LAZADA, TIKTOK SHOP, OWN SITE, FACEBOOK, PHYSICAL SHOP], my number of products and variants is [COUNT], how I track stock now is [E.G. SPREADSHEET, MEMORY, INVENTORY APP], and how often I oversell is [FREQUENCY]. Suggest a simple system that fits my size, from a shared spreadsheet routine to an inventory sync tool, with steps to set it up and a buffer rule to avoid overselling. Note that overselling forces cancellations, which hurt marketplace metrics and buyer trust, and sync tools cost money and sometimes lag, so a small seller can start with a daily spreadsheet routine and a safety buffer of one or two units per channel, moving to a tool once order volume makes manual tracking unreliable. Give me the stock sync system.",
+    "description": "Prevent overselling across channels with a system that fits your size.",
+    "useCase": "Use this if you sell in more than one place. Overselling forces cancellations that hurt marketplace metrics and trust, and sync tools cost money and can lag, so start with a daily spreadsheet routine and a small safety buffer per channel, moving to a tool once volume makes manual tracking unreliable.",
+    "variables": [
+      "BUSINESS TYPE",
+      "E.G. SHOPEE, LAZADA, TIKTOK SHOP, OWN SITE, FACEBOOK, PHYSICAL SHOP",
+      "COUNT",
+      "E.G. SPREADSHEET, MEMORY, INVENTORY APP",
+      "FREQUENCY"
+    ],
+    "relatedPromptIds": [
+      "mkt-store-health",
+      "mkt-mega-sale-prep",
+      "mkt-fulfillment-options"
+    ]
+  },
+  {
+    "id": "mkt-returns-disputes",
+    "title": "Handle Marketplace Returns and Disputes",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "marketplace-optimization",
+    "aiTool": "Gemini",
+    "promptText": "Help me handle a return or dispute on [MARKETPLACE] for my [BUSINESS TYPE]. What the buyer claims is [THE CLAIM, E.G. DAMAGED, WRONG ITEM, NOT AS DESCRIBED, NOT RECEIVED], my evidence is [E.G. PACKING PHOTOS OR VIDEO, TRACKING, LISTING DETAILS], the order value is [VALUE], and the deadline to respond is [DEADLINE]. Suggest whether to accept, offer a partial refund, or dispute, write a calm reply to the buyer and a clear response to the marketplace, and list evidence habits to adopt going forward. Note that marketplaces often side with buyers when sellers lack evidence, so recording a short video while packing high value orders is one of the best protections, and fighting a small claim can cost more in time and ratings than simply refunding, while a pattern of the same complaint usually points to a listing or packaging problem worth fixing. Give me the dispute response.",
+    "description": "Decide whether to refund or dispute, and respond with evidence.",
+    "useCase": "Use this when a buyer opens a return or dispute. Marketplaces often side with buyers when sellers lack evidence, so packing videos for high value orders protect you, fighting small claims can cost more than refunding, and repeated complaints usually point to a listing or packaging problem.",
+    "variables": [
+      "MARKETPLACE",
+      "BUSINESS TYPE",
+      "THE CLAIM, E.G. DAMAGED, WRONG ITEM, NOT AS DESCRIBED, NOT RECEIVED",
+      "E.G. PACKING PHOTOS OR VIDEO, TRACKING, LISTING DETAILS",
+      "VALUE",
+      "DEADLINE"
+    ],
+    "relatedPromptIds": [
+      "mkt-chat-response",
+      "mkt-store-health",
+      "mkt-violation-appeal"
+    ]
+  },
+  {
+    "id": "mkt-violation-appeal",
+    "title": "Respond to a Policy Violation or Suspension",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "marketplace-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me respond to a policy notice on [MARKETPLACE] for my [BUSINESS TYPE]. The notice says [PASTE THE NOTICE], the listing or action it concerns is [WHAT IT RELATES TO], what I believe happened is [YOUR UNDERSTANDING], and my evidence is [ANY DOCUMENTS, INVOICES, PHOTOS]. Help me understand what the notice actually requires, whether an appeal makes sense, and write a short, factual appeal or corrective action plan. Note that appeals work best when they are calm, specific, admit any real mistake, and explain concretely what has been changed to prevent it again, while angry or vague appeals are often rejected, and some violations like counterfeit or restricted items are treated very seriously, so if the notice involves legal issues or large sums, getting proper advice is wise. Give me the appeal or action plan.",
+    "description": "Understand a policy notice and write a calm, specific appeal.",
+    "useCase": "Use this when you get a listing removal, warning, or suspension. Appeals work best when calm, specific, admitting any real mistake, and explaining what changed, while angry or vague ones are often rejected, and counterfeit or restricted item cases are serious enough to seek proper advice.",
+    "variables": [
+      "MARKETPLACE",
+      "BUSINESS TYPE",
+      "PASTE THE NOTICE",
+      "WHAT IT RELATES TO",
+      "YOUR UNDERSTANDING",
+      "ANY DOCUMENTS, INVOICES, PHOTOS"
+    ],
+    "relatedPromptIds": [
+      "mkt-store-health",
+      "mkt-returns-disputes",
+      "mkt-platform-dependence"
+    ]
+  },
+  {
+    "id": "mkt-live-selling",
+    "title": "Plan Livestream Selling on a Marketplace",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "marketplace-optimization",
+    "aiTool": "ChatGPT",
+    "promptText": "Help me plan livestream selling on [E.G. TIKTOK SHOP, SHOPEE LIVE, LAZADA LIVE, FACEBOOK LIVE] for my [BUSINESS TYPE]. My products are [WHAT YOU SELL], my experience on camera is [EXPERIENCE LEVEL], the language I will present in is [LANGUAGE], and the time I can commit is [HOURS PER WEEK]. Give me a first stream plan with a run of show, products to feature, live only offers, how to handle comments, and equipment basics. Note that livestream selling can work very well in Southeast Asian markets, but early streams often have very few viewers, so consistency over weeks matters more than any single stream, and offers announced live must match what buyers actually get at checkout, while any claims about products, especially health or beauty, must be accurate and allowed under the platform's rules. Give me the livestream plan.",
+    "description": "Plan a first sales livestream with a run of show and live offers.",
+    "useCase": "Use this to start selling by livestream. It can work very well in Southeast Asian markets, but early streams often have few viewers, so consistency over weeks matters more than one stream, live offers must match checkout, and product claims, especially health or beauty, must be accurate and allowed.",
+    "variables": [
+      "E.G. TIKTOK SHOP, SHOPEE LIVE, LAZADA LIVE, FACEBOOK LIVE",
+      "BUSINESS TYPE",
+      "WHAT YOU SELL",
+      "EXPERIENCE LEVEL",
+      "LANGUAGE",
+      "HOURS PER WEEK"
+    ],
+    "relatedPromptIds": [
+      "mkt-voucher-strategy",
+      "mkt-new-shop-first-sales",
+      "mkt-chat-response"
+    ]
+  },
+  {
+    "id": "mkt-cross-border",
+    "title": "Expand to Cross Border Marketplace Selling",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "marketplace-optimization",
+    "aiTool": "Gemini",
+    "promptText": "Help me assess selling to other countries through marketplaces for my [BUSINESS TYPE]. Where I am based is [YOUR COUNTRY], the countries I am considering are [TARGET COUNTRIES], my products are [WHAT YOU SELL], the cross border programs I know of are [E.G. SHOPEE CROSS BORDER, LAZADA GLOBAL, AMAZON GLOBAL SELLING, ETSY], and my experience with exports is [EXPERIENCE]. Outline the eligibility checks, shipping and customs considerations, restricted product risks, pricing in local currency, language needs, and returns handling, then suggest a low risk first step. Note that cross border selling adds customs duties, longer delivery times, harder returns, and product rules that differ by country, and some marketplaces only allow cross border sellers from certain countries, so the rules for both my country and the target country should be checked, and testing a few products in one country first limits the downside. Give me the cross border plan.",
+    "description": "Check eligibility, customs, and returns before selling across borders.",
+    "useCase": "Use this before selling to other countries through marketplaces. Cross border sales add customs duties, slower delivery, harder returns, and country specific product rules, and some programs only accept sellers from certain countries, so check both countries' rules and test a few products in one country first.",
+    "variables": [
+      "BUSINESS TYPE",
+      "YOUR COUNTRY",
+      "TARGET COUNTRIES",
+      "WHAT YOU SELL",
+      "E.G. SHOPEE CROSS BORDER, LAZADA GLOBAL, AMAZON GLOBAL SELLING, ETSY",
+      "EXPERIENCE"
+    ],
+    "relatedPromptIds": [
+      "mkt-choose-marketplace",
+      "mkt-fulfillment-options",
+      "mkt-fee-calculator"
+    ]
+  },
+  {
+    "id": "mkt-platform-dependence",
+    "title": "Reduce Dependence on a Single Marketplace",
+    "categoryId": "ecommerce-and-online-selling",
+    "subcategoryId": "marketplace-optimization",
+    "aiTool": "Claude",
+    "promptText": "Help me reduce the risk of depending on one marketplace for my [BUSINESS TYPE]. The share of my sales from [MARKETPLACE] is [PERCENTAGE], my other channels are [E.G. OWN SITE, SOCIAL MEDIA, CHAT ORDERS, PHYSICAL SHOP, NONE], and what worries me is [E.G. FEE INCREASES, SUSPENSION, ALGORITHM CHANGES]. Suggest practical steps to build a second channel and keep customer relationships within the rules, plus a basic plan for what to do if my account were suspended tomorrow. Note that marketplaces bring traffic but own the customer relationship, and many forbid using order data to contact buyers outside the platform, so building a following through legitimate means like social media, a website, and package inserts where allowed is safer than scraping buyer details, and keeping records of listings, photos, and finances outside the platform makes recovery faster. Give me the dependence reduction plan.",
+    "description": "Build a second channel and a backup plan without breaking platform rules.",
+    "useCase": "Use this if most of your sales come from one marketplace. Marketplaces own the customer relationship and many forbid contacting buyers outside the platform, so build a following through social media, a website, and allowed inserts, and keep listing, photo, and finance records outside the platform for faster recovery.",
+    "variables": [
+      "BUSINESS TYPE",
+      "MARKETPLACE",
+      "PERCENTAGE",
+      "E.G. OWN SITE, SOCIAL MEDIA, CHAT ORDERS, PHYSICAL SHOP, NONE",
+      "E.G. FEE INCREASES, SUSPENSION, ALGORITHM CHANGES"
+    ],
+    "relatedPromptIds": [
+      "mkt-choose-marketplace",
+      "mkt-violation-appeal",
+      "mkt-stock-sync"
+    ]
   }
 ]
